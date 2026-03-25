@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receta Médica Virtual - Perú</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    :root {
+      --color-primary: #20A0B0;
+      --color-primary-hover: #1D9DA8;
+      --color-bg: #f5f5f5;
+      --color-surface: #ffffff;
+      --color-text: #1f2121;
+      --color-text-secondary: #626c71;
+      --color-border: rgba(94, 82, 64, 0.2);
+      --color-error: #C0152F;
+      --color-success: #21808D;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      padding: 16px;
+      line-height: 1.5;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .header {
+      background: var(--color-surface);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+
+    .subtitle { color: var(--color-text-secondary); font-size: 14px; }
+
+    .card {
+      background: var(--color-surface);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group { margin-bottom: 16px; position: relative; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 6px;
+    }
+
+    .required { color: var(--color-error); }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      background: var(--color-surface);
+      color: var(--color-text);
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    textarea { resize: vertical; min-height: 80px; font-family: inherit; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .form-row, .form-row-3 { grid-template-columns: 1fr; }
+    }
+
+    .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary { background: var(--color-primary); color: white; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+    }
+    .btn-secondary:hover { background: rgba(0, 0, 0, 0.03); }
+
+    .btn-small { padding: 8px 14px; font-size: 13px; }
+
+    .btn-block { width: 100%; }
+
+    .medication-item {
+      background: rgba(33, 128, 141, 0.08);
+      border: 1px solid rgba(33, 128, 141, 0.2);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .medication-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .medication-name { font-weight: 600; font-size: 15px; color: var(--color-text); }
+
+    .btn-remove {
+      background: var(--color-error);
+      color: white;
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+    .btn-remove:hover { background: #A0112A; }
+
+    .medication-details {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 32px;
+      color: var(--color-text-secondary);
+    }
+
+    .actions { display: flex; gap: 12px; margin-top: 24px; }
+
+    .alert {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .alert-error {
+      background: rgba(192, 21, 47, 0.1);
+      color: var(--color-error);
+      border: 1px solid rgba(192, 21, 47, 0.2);
+    }
+
+    .alert-success {
+      background: rgba(33, 128, 141, 0.1);
+      color: var(--color-success);
+      border: 1px solid rgba(33, 128, 141, 0.2);
+    }
+
+    .suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      max-height: 250px;
+      overflow-y: auto;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .suggestion-item {
+      padding: 8px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .suggestion-item:hover { background: #f0f4f5; }
+
+    .suggestion-item small {
+      color: var(--color-text-secondary);
+      display: block;
+    }
+
+    .hint-text {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 Receta Médica Virtual</h1>
+    <p class="subtitle">Genera recetas médicas profesionales en formato PDF desde tu celular</p>
+  </div>
+
+  <div id="alertContainer"></div>
+
+  <!-- Datos del Médico -->
+  <div class="card">
+    <h2 class="section-title">👨‍⚕️ Datos del Médico Prescriptor</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombres y Apellidos <span class="required">*</span></label>
+        <input type="text" id="medicoNombre">
+      </div>
+      <div class="form-group">
+        <label>CMP <span class="required">*</span></label>
+        <input type="text" id="medicoCMP">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Especialidad</label>
+      <input type="text" id="medicoEspecialidad">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" id="medicoTelefono">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="medicoEmail">
+      </div>
+    </div>
+  </div>
+
+  <!-- Datos del Paciente -->
+  <div class="card">
+    <h2 class="section-title">👤 Datos del Paciente</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombres y Apellidos <span class="required">*</span></label>
+        <input type="text" id="pacienteNombre" placeholder="Nombre completo">
+      </div>
+      <div class="form-group">
+        <label>DNI</label>
+        <input type="text" id="pacienteDNI" placeholder="12345678">
+      </div>
+    </div>
+    <div class="form-row-3">
+      <div class="form-group">
+        <label>Edad <span class="required">*</span></label>
+        <input type="number" id="pacienteEdad" placeholder="35">
+      </div>
+      <div class="form-group">
+        <label>Sexo</label>
+        <select id="pacienteSexo">
+          <option value="">Seleccionar</option>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Fecha de Atención <span class="required">*</span></label>
+        <input type="date" id="fechaAtencion">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Hora de Atención</label>
+        <input type="time" id="horaAtencion">
+      </div>
+    </div>
+
+    <!-- Diagnóstico + filtros -->
+    <div class="form-group">
+      <label>Diagnóstico (CIE-10)</label>
+      <input type="text" id="diagnostico" placeholder="Escribe código o diagnóstico...">
+
+      <div class="form-row" style="margin-top:8px;">
+        <div class="form-group">
+          <label>Filtrar por sistema</label>
+          <select id="filtroDxSistema">
+            <option value="">Todos</option>
+            <option value="Respiratorio">Respiratorio</option>
+            <option value="Cardiovascular">Cardiovascular</option>
+            <option value="Metabólico">Metabólico / Endocrino</option>
+            <option value="Músculo-esquelético">Músculo-esquelético</option>
+            <option value="Genitourinario">Genitourinario / Urología</option>
+            <option value="Ginecología">Ginecología / Obstetricia</option>
+            <option value="Digestivo">Digestivo</option>
+            <option value="Neurología">Neurología / Sueño</option>
+            <option value="Dermatología">Dermatología</option>
+            <option value="Salud mental">Salud mental / Adicciones</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Prevención">Prevención / Cribados</option>
+            <option value="Síntomas generales">Síntomas generales</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Filtrar por tipo</label>
+          <select id="filtroDxTipo">
+            <option value="">Todos</option>
+            <option value="agudo">Agudo / infección</option>
+            <option value="crónico">Crónico</option>
+            <option value="síntoma">Síntoma / hallazgo</option>
+            <option value="prevención">Prevención / seguimiento</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="cie10Suggestions" class="suggestions" style="display:none;"></div>
+      <div id="diagnosticoHint" class="hint-text"></div>
+    </div>
+  </div>
+	  <!-- Medicamentos -->
+  <div class="card">
+    <h2 class="section-title">💊 Agregar Medicamento</h2>
+
+    <div class="form-group">
+      <label>Buscar medicamento (DCI, marca, ATC o vía)</label>
+      <input type="text" id="buscadorMedicamento" placeholder="Ej.: Sertralina, Haloperidol, N06AB, IM...">
+      <div class="hint-text">
+        Escribe al menos 3 caracteres para ver sugerencias; se mostrarán posibles marcas peruanas dentro de cada resultado.
+      </div>
+      <div id="medicamentoSuggestions" class="suggestions" style="display:none;"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Nombre del Medicamento (DCI) <span class="required">*</span></label>
+      <input type="text" id="medicamentoNombre" placeholder="Paracetamol">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Presentación/Concentración <span class="required">*</span></label>
+        <input type="text" id="medicamentoPresentacion" placeholder="500 mg tabletas, 1 g/2 mL ampolla, etc.">
+      </div>
+      <div class="form-group">
+        <label>Cantidad <span class="required">*</span></label>
+        <input type="text" id="medicamentoCantidad" placeholder="20 tabletas, 3 ampollas, 1 frasco, etc.">
+      </div>
+    </div>
+    <div class="form-row-3">
+      <div class="form-group">
+        <label>Dosis <span class="required">*</span></label>
+        <input type="text" id="medicamentoDosis" placeholder="500 mg, 1 g, 10 UI, etc.">
+      </div>
+      <div class="form-group">
+        <label>Frecuencia <span class="required">*</span></label>
+        <select id="medicamentoFrecuencia">
+          <option value="">Seleccionar</option>
+          <option value="Cada 4 horas">Cada 4 horas</option>
+          <option value="Cada 6 horas">Cada 6 horas</option>
+          <option value="Cada 8 horas">Cada 8 horas</option>
+          <option value="Cada 12 horas">Cada 12 horas</option>
+          <option value="Cada 24 horas">Cada 24 horas (1 vez al día)</option>
+          <option value="2 veces al día">2 veces al día</option>
+          <option value="3 veces al día">3 veces al día</option>
+          <option value="Según necesidad">Según necesidad (PRN)</option>
+          <option value="Dosis única">Dosis única</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Duración <span class="required">*</span></label>
+        <input type="text" id="medicamentoDuracion" placeholder="7 (días), 1 (dosis única), etc.">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Vía de Administración <span class="required">*</span></label>
+        <select id="medicamentoVia">
+          <option value="">Seleccionar</option>
+          <option value="Vía oral">Vía oral (VO)</option>
+          <option value="Vía sublingual">Vía sublingual (SL)</option>
+          <option value="Vía intramuscular">Vía intramuscular (IM)</option>
+          <option value="Vía intravenosa">Vía intravenosa (IV)</option>
+          <option value="Vía subcutánea">Vía subcutánea (SC)</option>
+          <option value="Vía tópica">Vía tópica</option>
+          <option value="Vía oftálmica">Vía oftálmica</option>
+          <option value="Vía ótica">Vía ótica</option>
+          <option value="Vía nasal">Vía nasal</option>
+          <option value="Vía rectal">Vía rectal</option>
+          <option value="Vía vaginal">Vía vaginal</option>
+          <option value="Inhalatoria">Inhalatoria</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Indicaciones Especiales</label>
+        <input type="text" id="medicamentoIndicaciones" placeholder="Diluir en 100 mL SF, administrar lento, tomar con alimentos, etc.">
+      </div>
+    </div>
+    <button class="btn btn-primary btn-block" onclick="agregarMedicamento()">
+      ➕ Agregar Medicamento
+    </button>
+  </div>
+
+  <!-- Exámenes auxiliares -->
+  <div class="card">
+    <h2 class="section-title">🧪 Exámenes auxiliares / Apoyo diagnóstico</h2>
+
+    <div class="form-group">
+      <label>Filtrar por tipo</label>
+      <select id="filtroExamenTipo">
+        <option value="">Todos</option>
+        <option value="Laboratorio">Laboratorio</option>
+        <option value="Imagen (Rx)">Imagen (Rx)</option>
+        <option value="Imagen (Ecografía)">Imagen (Ecografía)</option>
+        <option value="Imagen (TC)">Imagen (TC)</option>
+        <option value="Imagen (RM)">Imagen (RM)</option>
+        <option value="Imagen (Mamografía)">Imagen (Mamografía)</option>
+        <option value="Imagen (DEXA)">Imagen (DEXA)</option>
+        <option value="Funcional">Funcional</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Buscar examen auxiliar</label>
+      <input type="text" id="buscadorExamen" placeholder="Ej.: Hemograma, PCR, Urocultivo, Hemocultivos...">
+      <div class="hint-text">
+        Escribe al menos 3 caracteres para ver sugerencias de exámenes.
+      </div>
+      <div id="examenSuggestions" class="suggestions" style="display:none;"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Nombre del examen <span class="required">*</span></label>
+      <input type="text" id="examenNombre" placeholder="Ej.: Hemograma completo, Urocultivo, Hemocultivos seriados">
+    </div>
+
+    <button class="btn btn-primary btn-block" onclick="agregarExamen()">
+      ➕ Agregar Examen auxiliar
+    </button>
+  </div>
+
+  <!-- Lista de Medicamentos -->
+  <div class="card">
+    <h2 class="section-title">📝 Medicamentos en la Receta</h2>
+    <div id="listaMedicamentos">
+      <div class="empty-state">
+        No hay medicamentos agregados. Agrega al menos uno para generar la receta.
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista de Exámenes -->
+  <div class="card">
+    <h2 class="section-title">📄 Exámenes auxiliares solicitados</h2>
+    <div id="listaExamenes">
+      <div class="empty-state">
+        No hay exámenes auxiliares agregados.
+      </div>
+    </div>
+  </div>
+
+  <!-- Indicaciones Generales -->
+  <div class="card">
+    <h2 class="section-title">📌 Indicaciones Generales</h2>
+    <div class="form-group">
+      <label>Recomendaciones adicionales al paciente</label>
+      <textarea id="indicacionesGenerales" placeholder="Reposo relativo, abundantes líquidos, control en 7 días..."></textarea>
+      <div class="hint-text">
+        Puedes usar las sugerencias de tratamiento de los diagnósticos como guía y adaptarlas al caso.
+      </div>
+    </div>
+  </div>
+
+  <!-- Acciones -->
+  <div class="card">
+    <div class="actions">
+      <button class="btn btn-primary btn-block" onclick="generarPDF()">
+        📄 Generar Receta PDF
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+const { jsPDF } = window.jspdf;
+let medicamentos = [];
+let examenes = [];
+
+const watermarkImage = "";
+const firmaImage = "";
+
+/* ========= CATALOGO CIE-10 (resumido y ampliado) ========= */
+
+const cie10Data = [
+  // RESPIRATORIO / INFECCIOSO
+  { codigo: "J00", descripcion: "Nasofaringitis aguda (resfriado común)", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J02.9", descripcion: "Faringitis aguda, no especificada", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J03.9", descripcion: "Amigdalitis aguda, no especificada", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J06.9", descripcion: "Infección aguda de vías respiratorias superiores, no especificada", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J18.9", descripcion: "Neumonía, organismo no especificado", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J20.9", descripcion: "Bronquitis aguda, no especificada", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J21.9", descripcion: "Bronquiolitis aguda, no especificada", grupo: "Respiratorio / Infeccioso (pediatría)",
+    sistema: "Respiratorio", tipo: "agudo" },
+  { codigo: "J45.909", descripcion: "Asma, no especificada, no complicada", grupo: "Respiratorio crónico",
+    sistema: "Respiratorio", tipo: "crónico" },
+  { codigo: "U07.1", descripcion: "COVID-19, virus identificado", grupo: "Respiratorio / Infeccioso",
+    sistema: "Respiratorio", tipo: "agudo" },
+
+  // CARDIOVASCULAR
+  { codigo: "I10", descripcion: "Hipertensión esencial (primaria)", grupo: "Cardiovascular",
+    sistema: "Cardiovascular", tipo: "crónico" },
+  { codigo: "I20.9", descripcion: "Angina de pecho, no especificada", grupo: "Cardiovascular",
+    sistema: "Cardiovascular", tipo: "crónico" },
+  { codigo: "I25.10", descripcion: "Cardiopatía isquémica crónica sin angina", grupo: "Cardiovascular",
+    sistema: "Cardiovascular", tipo: "crónico" },
+  { codigo: "I50.9", descripcion: "Insuficiencia cardiaca, no especificada", grupo: "Cardiovascular",
+    sistema: "Cardiovascular", tipo: "crónico" },
+
+  // METABÓLICO / ENDOCRINO
+  { codigo: "E11.9", descripcion: "Diabetes mellitus tipo 2 sin complicaciones", grupo: "Metabólico / Endocrino",
+    sistema: "Metabólico", tipo: "crónico" },
+  { codigo: "E10.9", descripcion: "Diabetes mellitus tipo 1 sin complicaciones", grupo: "Metabólico / Endocrino",
+    sistema: "Metabólico", tipo: "crónico" },
+  { codigo: "E78.5", descripcion: "Hiperlipidemia, no especificada", grupo: "Metabólico / Endocrino",
+    sistema: "Metabólico", tipo: "crónico" },
+  { codigo: "E03.9", descripcion: "Hipotiroidismo, no especificado", grupo: "Metabólico / Endocrino",
+    sistema: "Metabólico", tipo: "crónico" },
+  { codigo: "E55.9", descripcion: "Deficiencia de vitamina D, no especificada", grupo: "Metabólico / Nutrición",
+    sistema: "Metabólico", tipo: "crónico" },
+  { codigo: "E66.9", descripcion: "Obesidad, no especificada", grupo: "Metabólico / Nutrición",
+    sistema: "Metabólico", tipo: "crónico" },
+
+  // DIGESTIVO / INFECCIOSO
+  { codigo: "A09.9", descripcion: "Gastroenteritis y colitis infecciosa, no especificada", grupo: "Digestivo / Infeccioso",
+    sistema: "Digestivo", tipo: "agudo" },
+  { codigo: "K52.9", descripcion: "Gastroenteritis y colitis no infecciosa, no especificada", grupo: "Digestivo",
+    sistema: "Digestivo", tipo: "agudo" },
+  { codigo: "K21.9", descripcion: "Enfermedad por reflujo gastroesofágico sin esofagitis", grupo: "Digestivo",
+    sistema: "Digestivo", tipo: "crónico" },
+  { codigo: "R10.9", descripcion: "Dolor abdominal, no especificado", grupo: "Digestivo / Síntomas",
+    sistema: "Digestivo", tipo: "síntoma" },
+
+  // MUSCULO-ESQUELÉTICO
+  { codigo: "M54.50", descripcion: "Lumbalgia baja, no especificada", grupo: "Músculo-esquelético / Columna",
+    sistema: "Músculo-esquelético", tipo: "agudo" },
+  { codigo: "M54.2", descripcion: "Cervicalgia (dolor de cuello)", grupo: "Músculo-esquelético / Columna",
+    sistema: "Músculo-esquelético", tipo: "agudo" },
+  { codigo: "M79.60", descripcion: "Dolor en extremidad, no especificado", grupo: "Músculo-esquelético",
+    sistema: "Músculo-esquelético", tipo: "síntoma" },
+
+  // GENITOURINARIO / ITU
+  { codigo: "N39.0", descripcion: "Infección del tracto urinario, sitio no especificado", grupo: "Genitourinario / ITU",
+    sistema: "Genitourinario", tipo: "agudo" },
+  { codigo: "N30.00", descripcion: "Cistitis aguda sin hematuria", grupo: "Genitourinario / ITU baja",
+    sistema: "Genitourinario", tipo: "agudo" },
+  { codigo: "N10", descripcion: "Pielonefritis aguda", grupo: "Genitourinario / ITU alta",
+    sistema: "Genitourinario", tipo: "agudo" },
+  { codigo: "N40.1", descripcion: "Hiperplasia benigna de próstata con síntomas urinarios", grupo: "Genitourinario / Próstata",
+    sistema: "Genitourinario", tipo: "crónico" },
+
+  // GINECOLOGÍA / OBSTETRICIA (resumen)
+  { codigo: "N76.0", descripcion: "Vaginitis aguda", grupo: "Ginecología / Infeccioso",
+    sistema: "Ginecología", tipo: "agudo" },
+  { codigo: "B37.3", descripcion: "Candidiasis vulvovaginal", grupo: "Ginecología / Infeccioso",
+    sistema: "Ginecología", tipo: "agudo" },
+  { codigo: "N92.0", descripcion: "Menstruación excesiva y frecuente, regular", grupo: "Ginecología / Sangrado anormal",
+    sistema: "Ginecología", tipo: "crónico" },
+  { codigo: "N91.2", descripcion: "Amenorrea secundaria, no especificada", grupo: "Ginecología / Menstruación",
+    sistema: "Ginecología", tipo: "crónico" },
+  { codigo: "D25.9", descripcion: "Leiomioma del útero, no especificado (miomatosis)", grupo: "Ginecología / Útero",
+    sistema: "Ginecología", tipo: "crónico" },
+  { codigo: "Z34.8", descripcion: "Vigilancia de otros embarazos normales", grupo: "Obstetricia / Control prenatal",
+    sistema: "Ginecología", tipo: "prevención" },
+  { codigo: "O20.0", descripcion: "Amenaza de aborto", grupo: "Obstetricia / Aborto temprano",
+    sistema: "Ginecología", tipo: "agudo" },
+
+  // PSIQUIATRÍA
+  { codigo: "F32.9", descripcion: "Episodio depresivo, no especificado", grupo: "Salud mental / Depresión",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F33.9", descripcion: "Trastorno depresivo recurrente, no especificado", grupo: "Salud mental / Depresión",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F41.1", descripcion: "Trastorno de ansiedad generalizada", grupo: "Salud mental / Ansiedad",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F41.9", descripcion: "Trastorno de ansiedad, no especificado", grupo: "Salud mental / Ansiedad",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F43.20", descripcion: "Trastorno de adaptación, no especificado", grupo: "Salud mental / Adaptación",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F10.20", descripcion: "Trastorno por consumo de alcohol, dependencia, no complicado", grupo: "Salud mental / Sustancias",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F17.210", descripcion: "Dependencia de nicotina, cigarrillos, no complicada", grupo: "Salud mental / Sustancias",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F20.0", descripcion: "Esquizofrenia paranoide", grupo: "Salud mental / Psicosis",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F23.9", descripcion: "Psicosis aguda y transitoria, no especificada", grupo: "Salud mental / Psicosis aguda",
+    sistema: "Salud mental", tipo: "agudo" },
+  { codigo: "F51.0", descripcion: "Insomnio no orgánico", grupo: "Salud mental / Sueño",
+    sistema: "Salud mental", tipo: "crónico" },
+  { codigo: "F03.9", descripcion: "Demencia, no especificada", grupo: "Salud mental / Neurocognitivo",
+    sistema: "Salud mental", tipo: "crónico" },
+
+  // INFECCIOSO SISTÉMICO / SEPSIS
+  { codigo: "A41.9", descripcion: "Sepsis, no especificada", grupo: "Infeccioso sistémico / Sepsis",
+    sistema: "Síntomas generales", tipo: "agudo" },
+
+  // SÍNTOMAS GENERALES / PREVENCIÓN
+  { codigo: "R07.9", descripcion: "Dolor torácico, no especificado", grupo: "Síntomas generales / Cardiopulmonar",
+    sistema: "Síntomas generales", tipo: "síntoma" },
+  { codigo: "R50.9", descripcion: "Fiebre, no especificada", grupo: "Síntomas generales",
+    sistema: "Síntomas generales", tipo: "síntoma" },
+  { codigo: "Z00.00", descripcion: "Examen médico general de adulto, sin hallazgos anormales", grupo: "Prevención",
+    sistema: "Prevención", tipo: "prevención" },
+  { codigo: "Z23", descripcion: "Encuentro para inmunización", grupo: "Prevención",
+    sistema: "Prevención", tipo: "prevención" }
+];
+
+/* ========= CATALOGO DE MEDICAMENTOS (incluye psiquiátricos, ATC, dosisMg) ========= */
+
+const medicamentosData = [
+  // Analgésicos / AINE orales
+  { dci: "Paracetamol", presentacion: "500 mg tabletas", via: "Vía oral",
+    grupo: "Analgésico / Antipirético",
+    atc: "N02BE01",
+    dosisMg: 500,
+    marcas: ["Panadol","Tylenol","Genérico"] },
+  { dci: "Ibuprofeno", presentacion: "400 mg tabletas", via: "Vía oral",
+    grupo: "AINE",
+    atc: "M01AE01",
+    dosisMg: 400,
+    marcas: ["Advil","Motrin","Genérico","Dolofén"] },
+
+  // Antibiótico ejemplo
+  { dci: "Amoxicilina", presentacion: "500 mg cápsulas", via: "Vía oral",
+    grupo: "Penicilina de amplio espectro",
+    atc: "J01CA04",
+    dosisMg: 500,
+    marcas: ["Velamox","Clamoxin","Genérico"] },
+
+  // Respiratorio
+  { dci: "Salbutamol", presentacion: "Inhalador 100 mcg/dosis", via: "Inhalatoria",
+    grupo: "Broncodilatador beta-2",
+    atc: "R03AC02",
+    marcas: ["Ventolin","Aerolin","Salburex"] },
+
+  // Cardiometabólicos
+  { dci: "Losartán", presentacion: "50 mg tabletas", via: "Vía oral",
+    grupo: "Antihipertensivo (ARA-II)",
+    atc: "C09CA01",
+    dosisMg: 50,
+    marcas: ["Cozaar","Losapress","Genérico"] },
+  { dci: "Metformina", presentacion: "850 mg tabletas", via: "Vía oral",
+    grupo: "Biguanida",
+    atc: "A10BA02",
+    dosisMg: 850,
+    marcas: ["Glucophage","Metforal","Genérico"] },
+
+  /* PSIQUIÁTRICOS – Antidepresivos ISRS */
+  { dci: "Fluoxetina", presentacion: "20 mg cápsulas", via: "Vía oral",
+    grupo: "Antidepresivo ISRS",
+    atc: "N06AB03",
+    dosisMg: 20,
+    marcas: ["Prozac","Fluxan","Genérico"] },
+  { dci: "Sertralina", presentacion: "50 mg tabletas", via: "Vía oral",
+    grupo: "Antidepresivo ISRS",
+    atc: "N06AB06",
+    dosisMg: 50,
+    marcas: ["Zoloft","Genérico"] },
+  { dci: "Citalopram", presentacion: "20 mg tabletas", via: "Vía oral",
+    grupo: "Antidepresivo ISRS",
+    atc: "N06AB04",
+    dosisMg: 20,
+    marcas: ["Celexa","Genérico"] },
+
+  /* ISRN / Otros AD */
+  { dci: "Venlafaxina", presentacion: "75 mg cápsulas LP", via: "Vía oral",
+    grupo: "Antidepresivo ISRN",
+    atc: "N06AX16",
+    dosisMg: 75,
+    marcas: ["Effexor XR","Genérico"] },
+  { dci: "Duloxetina", presentacion: "60 mg cápsulas", via: "Vía oral",
+    grupo: "Antidepresivo ISRN",
+    atc: "N06AX21",
+    dosisMg: 60,
+    marcas: ["Cymbalta","Genérico"] },
+  { dci: "Mirtazapina", presentacion: "30 mg tabletas", via: "Vía oral",
+    grupo: "Antidepresivo NaSSA",
+    atc: "N06AX11",
+    dosisMg: 30,
+    marcas: ["Remeron","Genérico"] },
+  { dci: "Amitriptilina", presentacion: "25 mg tabletas", via: "Vía oral",
+    grupo: "Antidepresivo tricíclico",
+    atc: "N06AA09",
+    dosisMg: 25,
+    marcas: ["Tryptanol","Genérico"] },
+
+  /* Ansiolíticos / Benzodiacepinas */
+  { dci: "Diazepam", presentacion: "5 mg tabletas", via: "Vía oral",
+    grupo: "Benzodiacepina (ansiolítico / sedante)",
+    atc: "N05BA01",
+    dosisMg: 5,
+    marcas: ["Valium","Genérico"] },
+  { dci: "Alprazolam", presentacion: "0.5 mg tabletas", via: "Vía oral",
+    grupo: "Benzodiacepina (ansiolítico)",
+    atc: "N05BA12",
+    dosisMg: 0.5,
+    marcas: ["Xanax","Tafil","Genérico"] },
+  { dci: "Clonazepam", presentacion: "0.5 mg tabletas", via: "Vía oral",
+    grupo: "Benzodiacepina (ansiolítico / anticonvulsivante)",
+    atc: "N03AE01",
+    dosisMg: 0.5,
+    marcas: ["Rivotril","Genérico"] },
+  { dci: "Buspirona", presentacion: "10 mg tabletas", via: "Vía oral",
+    grupo: "Ansiolítico no benzodiacepínico",
+    atc: "N05BE01",
+    dosisMg: 10,
+    marcas: ["Buspar","Genérico"] },
+
+  /* Estabilizadores del ánimo */
+  { dci: "Carbonato de litio", presentacion: "300 mg tabletas", via: "Vía oral",
+    grupo: "Estabilizador del ánimo",
+    atc: "N05AN01",
+    dosisMg: 300,
+    marcas: ["Lithobid","Genérico"] },
+  { dci: "Valproato de sodio", presentacion: "500 mg tabletas LP", via: "Vía oral",
+    grupo: "Antiepiléptico / estabilizador del ánimo",
+    atc: "N03AG01",
+    dosisMg: 500,
+    marcas: ["Depakote","Genérico"] },
+
+  /* Antipsicóticos típicos y atípicos */
+  { dci: "Haloperidol", presentacion: "5 mg tabletas", via: "Vía oral",
+    grupo: "Antipsicótico típico",
+    atc: "N05AD01",
+    dosisMg: 5,
+    marcas: ["Haldol","Genérico"] },
+  { dci: "Risperidona", presentacion: "2 mg tabletas", via: "Vía oral",
+    grupo: "Antipsicótico atípico",
+    atc: "N05AX08",
+    dosisMg: 2,
+    marcas: ["Risperdal","Genérico"] },
+  { dci: "Quetiapina", presentacion: "100 mg tabletas", via: "Vía oral",
+    grupo: "Antipsicótico atípico",
+    atc: "N05AH04",
+    dosisMg: 100,
+    marcas: ["Seroquel","Genérico"] },
+  { dci: "Olanzapina", presentacion: "10 mg tabletas", via: "Vía oral",
+    grupo: "Antipsicótico atípico",
+    atc: "N05AH03",
+    dosisMg: 10,
+    marcas: ["Zyprexa","Genérico"] }
+];
+
+/* ========= CATALOGO DE EXÁMENES (incluye infecciones) ========= */
+
+const examenesCatalogo = [
+  // Infecciones respiratorias
+  { nombre: "Hemograma completo (CBC)", tipo: "Laboratorio", grupo: "Hematología / Infeccioso",
+    indicacionesSug: "Ayuno no estricto; valorar leucocitosis y respuesta inflamatoria." },
+  { nombre: "Proteína C reactiva (PCR)", tipo: "Laboratorio", grupo: "Inflamación / Infeccioso",
+    indicacionesSug: "Ayuno no estricto; útil para diferenciar infección bacteriana de viral." },
+  { nombre: "Velocidad de sedimentación globular (VSG)", tipo: "Laboratorio", grupo: "Inflamación / Infeccioso",
+    indicacionesSug: "Ayuno relativo; interpretar junto a clínica y otros marcadores." },
+  { nombre: "Hisopado nasofaríngeo para panel respiratorio (PCR)", tipo: "Laboratorio", grupo: "Respiratorio / Infeccioso",
+    indicacionesSug: "Tomar antes de antivirales; técnica adecuada de hisopado." },
+  { nombre: "Hisopado nasofaríngeo para SARS-CoV-2 (PCR/antígeno)", tipo: "Laboratorio", grupo: "Respiratorio / Infeccioso",
+    indicacionesSug: "Tomar en fase aguda; no requiere ayuno; usar EPP." },
+
+  // ITU
+  { nombre: "Examen completo de orina (EGO)", tipo: "Laboratorio", grupo: "Urinario / Infeccioso",
+    indicacionesSug: "Orina de chorro medio, primera de la mañana, higiene previa." },
+  { nombre: "Urocultivo con antibiograma", tipo: "Laboratorio", grupo: "Urinario / Infeccioso",
+    indicacionesSug: "Antes de antibiótico o tras suspensión; muestra estéril de chorro medio." },
+  { nombre: "Nitrógeno ureico (BUN) y creatinina sérica", tipo: "Laboratorio", grupo: "Metabolismo / Riñón",
+    indicacionesSug: "Ayuno relativo; valorar función renal en ITU complicada o sepsis." },
+
+  // Gastrointestinal infeccioso
+  { nombre: "Coprocultivo con antibiograma", tipo: "Laboratorio", grupo: "Digestivo / Infeccioso",
+    indicacionesSug: "Heces frescas; diarrea con fiebre, sangre o prolongada." },
+  { nombre: "Parasitológico seriado de heces (3 muestras)", tipo: "Laboratorio", grupo: "Digestivo / Infeccioso",
+    indicacionesSug: "Recolectar en días alternos; evitar laxantes y contraste baritado." },
+  { nombre: "Toxina de Clostridioides difficile en heces", tipo: "Laboratorio", grupo: "Digestivo / Infeccioso",
+    indicacionesSug: "Diarrea asociada a antibióticos u hospitalización; no heces formadas." },
+
+  // Piel y partes blandas
+  { nombre: "Cultivo de exudado de piel y partes blandas con antibiograma", tipo: "Laboratorio", grupo: "Dermatología / Infeccioso",
+    indicacionesSug: "Tomar de fondo de la lesión tras limpieza suave." },
+  { nombre: "Tinción de Gram de exudado", tipo: "Laboratorio", grupo: "Dermatología / Infeccioso",
+    indicacionesSug: "Orientar germen (Gram+ vs Gram-) para terapia empírica." },
+
+  // Sepsis
+  { nombre: "Hemocultivos seriados (2–3 pares)", tipo: "Laboratorio", grupo: "Infeccioso sistémico / Sepsis",
+    indicacionesSug: "Antes de antibiótico, sitios y tiempos distintos, técnica aséptica." },
+  { nombre: "Lactato sérico", tipo: "Laboratorio", grupo: "Infeccioso sistémico / Sepsis",
+    indicacionesSug: "Fundamental en valoración de sepsis y choque séptico." },
+  { nombre: "Perfil metabólico básico (BMP)", tipo: "Laboratorio", grupo: "Metabolismo / Infeccioso sistémico",
+    indicacionesSug: "Ayuno 8 h; electrolitos y función renal." },
+  { nombre: "Gasometría arterial o venosa", tipo: "Laboratorio", grupo: "Infeccioso sistémico / Crítico",
+    indicacionesSug: "Pacientes con compromiso respiratorio o hemodinámico." }
+];
+
+/* ========= INICIALIZACIÓN ========= */
+
+function inicializarFormulario() {
+  const fechaAtencionInput = document.getElementById('fechaAtencion');
+  const horaAtencionInput = document.getElementById('horaAtencion');
+  const medicoNombreInput = document.getElementById('medicoNombre');
+  const medicoCMPInput = document.getElementById('medicoCMP');
+  const medicoEspecialidadInput = document.getElementById('medicoEspecialidad');
+  const medicoTelefonoInput = document.getElementById('medicoTelefono');
+  const medicoEmailInput = document.getElementById('medicoEmail');
+
+  if (fechaAtencionInput) {
+    fechaAtencionInput.valueAsDate = new Date();
+  }
+
+  if (horaAtencionInput) {
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2,'0');
+    const mm = String(now.getMinutes()).padStart(2,'0');
+    horaAtencionInput.value = `${hh}:${mm}`;
+  }
+
+  if (medicoNombreInput)      medicoNombreInput.value      = 'Dr. Lester Rodríguez Lázaro';
+  if (medicoCMPInput)         medicoCMPInput.value         = '63834';
+  if (medicoEspecialidadInput)medicoEspecialidadInput.value= 'Médico Cirujano';
+  if (medicoTelefonoInput)    medicoTelefonoInput.value    = '969758908';
+  if (medicoEmailInput)       medicoEmailInput.value       = 'patricio0214@gmail.com';
+}
+
+if (document.readyState !== 'loading') {
+  inicializarFormulario();
+} else {
+  document.addEventListener('DOMContentLoaded', inicializarFormulario);
+}
+function mostrarAlerta(mensaje, tipo='error'){
+  const c=document.getElementById('alertContainer');
+  const a=document.createElement('div');
+  a.className=`alert alert-${tipo}`;
+  a.textContent=mensaje;
+  c.appendChild(a);
+  setTimeout(()=>a.remove(),5000);
+}
+
+/* ====== Buscador CIE-10 con filtros ====== */
+
+const diagnosticoInput = document.getElementById('diagnostico');
+const cie10Suggestions = document.getElementById('cie10Suggestions');
+const diagnosticoHint = document.getElementById('diagnosticoHint');
+const filtroDxSistema = document.getElementById('filtroDxSistema');
+const filtroDxTipo = document.getElementById('filtroDxTipo');
+
+function actualizarSugerenciasDx(){
+  const term = diagnosticoInput.value.trim().toLowerCase();
+  const sisSel = filtroDxSistema.value;
+  const tipoSel = filtroDxTipo.value;
+
+  if (term.length < 2 && !sisSel && !tipoSel) {
+    cie10Suggestions.style.display = 'none';
+    cie10Suggestions.innerHTML = '';
+    diagnosticoHint.textContent = '';
+    return;
+  }
+
+  const matches = cie10Data.filter(dx => {
+    const coincideTexto =
+      !term ||
+      dx.codigo.toLowerCase().includes(term) ||
+      dx.descripcion.toLowerCase().includes(term) ||
+      (dx.grupo && dx.grupo.toLowerCase().includes(term));
+
+    const coincideSistema =
+      !sisSel ||
+      (dx.sistema && dx.sistema.toLowerCase().includes(sisSel.toLowerCase()));
+
+    const coincideTipo =
+      !tipoSel ||
+      (dx.tipo && dx.tipo === tipoSel);
+
+    return coincideTexto && coincideSistema && coincideTipo;
+  }).slice(0,50);
+
+  if (!matches.length) {
+    cie10Suggestions.style.display = 'none';
+    cie10Suggestions.innerHTML = '';
+    diagnosticoHint.textContent = '';
+    return;
+  }
+
+  cie10Suggestions.innerHTML = matches.map(dx => `
+    <div class="suggestion-item" data-codigo="${dx.codigo}">
+      <strong>${dx.codigo}</strong> - ${dx.descripcion}
+      <small>${dx.grupo || ''}${dx.sistema ? ' | ' + dx.sistema : ''}${dx.tipo ? ' | ' + dx.tipo : ''}</small>
+    </div>
+  `).join('');
+
+  cie10Suggestions.style.display = 'block';
+}
+
+diagnosticoInput.addEventListener('input', actualizarSugerenciasDx);
+filtroDxSistema.addEventListener('change', actualizarSugerenciasDx);
+filtroDxTipo.addEventListener('change', actualizarSugerenciasDx);
+
+cie10Suggestions.addEventListener('click', e => {
+  const item = e.target.closest('.suggestion-item');
+  if (!item) return;
+  const codigo = item.dataset.codigo;
+  const dx = cie10Data.find(x => x.codigo === codigo);
+  if (!dx) return;
+
+  diagnosticoInput.value = `${dx.codigo} - ${dx.descripcion}`;
+  cie10Suggestions.style.display = 'none';
+  cie10Suggestions.innerHTML = '';
+  diagnosticoHint.textContent = dx.tratamiento ? 'Tratamiento sugerido: ' + dx.tratamiento : '';
+});
+
+document.addEventListener('click', e => {
+  if (!cie10Suggestions.contains(e.target) &&
+      e.target !== diagnosticoInput &&
+      e.target !== filtroDxSistema &&
+      e.target !== filtroDxTipo) {
+    cie10Suggestions.style.display = 'none';
+  }
+});
+
+/* ====== Autocompletado mejorado para todo el catálogo de medicamentos ====== */
+
+const buscadorMedicamento = document.getElementById('buscadorMedicamento');
+const medicamentoSuggestions = document.getElementById('medicamentoSuggestions');
+
+const marcasPeru = [
+  "Panadol","Velamox","Clamoxin","Augmentin","Zitromax","Ciproxina",
+  "Cozaar","Metforal","Voltaren","Apronax","Rocephin","Ventolin",
+  "Losapress","Lipitor","Zoloft","Dalacin C","Flagyl"
+];
+
+function esMarcaPeru(nombreMarca){
+  return marcasPeru.some(m => m.toLowerCase() === nombreMarca.toLowerCase());
+}
+
+/**
+ * Ranking:
+ *  4 = DCI empieza con el término
+ *  3 = alguna palabra de la presentación empieza con el término
+ *  2 = DCI contiene el término
+ *  1 = match en marca, ATC, grupo o vía
+ * -1 = sin coincidencia
+ */
+function calcularScoreMedicamento(m, term){
+  const t = term.toLowerCase();
+  const dci = m.dci.toLowerCase();
+  const present = (m.presentacion || '').toLowerCase();
+  const via = (m.via || '').toLowerCase();
+  const grupo = (m.grupo || '').toLowerCase();
+  const atc = (m.atc || '').toLowerCase();
+  const marcas = (m.marcas || []).map(x => x.toLowerCase());
+
+  let score = -1;
+
+  if (dci.startsWith(t)) score = Math.max(score, 4);
+
+  if (score < 4) {
+    const palabrasPres = present.split(/\s+/);
+    if (palabrasPres.some(p => p.startsWith(t))) {
+      score = Math.max(score, 3);
+    }
+  }
+
+  if (score < 3 && dci.includes(t)) {
+    score = Math.max(score, 2);
+  }
+
+  if (score < 2) {
+    if (
+      marcas.some(nombre => nombre.includes(t)) ||
+      atc.includes(t) ||
+      via.includes(t) ||
+      grupo.includes(t)
+    ) {
+      score = Math.max(score, 1);
+    }
+  }
+
+  return score;
+}
+
+function obtenerSugerenciasMedicamentos(term){
+  const t = term.trim().toLowerCase();
+  if (t.length < 3) return [];
+
+  const candidatos = medicamentosData
+    .map(m => ({ m, score: calcularScoreMedicamento(m, t) }))
+    .filter(x => x.score >= 0);
+
+  candidatos.sort((a,b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    const cmpDCI = a.m.dci.localeCompare(b.m.dci, 'es');
+    if (cmpDCI !== 0) return cmpDCI;
+    return (a.m.presentacion || '').localeCompare(b.m.presentacion || '', 'es');
+  });
+
+  return candidatos.slice(0,50).map(x => x.m);
+}
+
+function renderizarSugerenciasMedicamentos(lista){
+  if (!lista.length) {
+    medicamentoSuggestions.style.display = 'none';
+    medicamentoSuggestions.innerHTML = '';
+    return;
+  }
+
+  medicamentoSuggestions.innerHTML = lista.map(m => {
+    const marcas = m.marcas || [];
+    const marcasPE = marcas.filter(esMarcaPeru);
+    const marcasNoPE = marcas.filter(x => !esMarcaPeru(x));
+
+    const lineaMarcasPE = marcasPE.length
+      ? `<small><strong>Perú:</strong> ${marcasPE.join(', ')}</small>`
+      : '';
+
+    const lineaMarcasNoPE = marcasNoPE.length
+      ? `<small>Otras marcas: ${marcasNoPE.join(', ')}</small>`
+      : '';
+
+    const lineaATC = m.atc ? `<small>ATC: ${m.atc}</small>` : '';
+    const lineaDosis = typeof m.dosisMg === 'number'
+      ? `<small>Dosis referencia: ${m.dosisMg} mg</small>`
+      : '';
+
+    return `
+      <div class="suggestion-item"
+           data-dci="${m.dci}"
+           data-presentacion="${m.presentacion}"
+           data-via="${m.via || ''}"
+           data-marcas="${(m.marcas||[]).join(', ')}">
+        <strong>${m.dci}</strong> - ${m.presentacion}
+        <small>${m.grupo || ''} | ${m.via || ''}</small>
+        ${lineaATC}
+        ${lineaDosis}
+        ${lineaMarcasPE}
+        ${lineaMarcasNoPE}
+      </div>
+    `;
+  }).join('');
+
+  medicamentoSuggestions.style.display = 'block';
+}
+
+function actualizarSugerenciasMedicamentos(){
+  const term = buscadorMedicamento.value;
+  if (term.trim().length < 3) {
+    medicamentoSuggestions.style.display = 'none';
+    medicamentoSuggestions.innerHTML = '';
+    return;
+  }
+  const sugerencias = obtenerSugerenciasMedicamentos(term);
+  renderizarSugerenciasMedicamentos(sugerencias);
+}
+
+buscadorMedicamento.addEventListener('input', actualizarSugerenciasMedicamentos);
+
+medicamentoSuggestions.addEventListener('click', e => {
+  const item = e.target.closest('.suggestion-item');
+  if (!item) return;
+
+  const dci = item.dataset.dci;
+  const presentacion = item.dataset.presentacion;
+  const via = item.dataset.via;
+  const marcas = item.dataset.marcas;
+
+  document.getElementById('medicamentoNombre').value = dci;
+  document.getElementById('medicamentoPresentacion').value = presentacion;
+
+  if (via) {
+    const selectVia = document.getElementById('medicamentoVia');
+    for (let i=0;i<selectVia.options.length;i++){
+      if (selectVia.options[i].text.includes(via) || selectVia.options[i].value.includes(via)){
+        selectVia.selectedIndex=i;
+        break;
+      }
+    }
+  }
+
+  if (!document.getElementById('medicamentoIndicaciones').value && marcas) {
+    document.getElementById('medicamentoIndicaciones').placeholder =
+      `Marcas sugeridas: ${marcas}`;
+  }
+
+  buscadorMedicamento.value = `${dci} (${presentacion})`;
+  medicamentoSuggestions.style.display = 'none';
+  medicamentoSuggestions.innerHTML = '';
+});
+
+document.addEventListener('click', e => {
+  if (!medicamentoSuggestions.contains(e.target) && e.target !== buscadorMedicamento) {
+    medicamentoSuggestions.style.display = 'none';
+  }
+});
+
+/* ====== Buscador de exámenes con filtro por tipo y sugerencias desde 3 caracteres ====== */
+
+const buscadorExamen = document.getElementById('buscadorExamen');
+const examenSuggestions = document.getElementById('examenSuggestions');
+const filtroExamenTipo = document.getElementById('filtroExamenTipo');
+
+function actualizarSugerenciasExamenes(){
+  const term = buscadorExamen.value.trim().toLowerCase();
+  const tipoSel = filtroExamenTipo.value;
+
+  if (term.length < 3 && !tipoSel) {
+    examenSuggestions.style.display = 'none';
+    examenSuggestions.innerHTML = '';
+    return;
+  }
+
+  const matches = examenesCatalogo.filter(ex => {
+    const coincideTexto =
+      !term || ex.nombre.toLowerCase().includes(term);
+    const coincideTipo = !tipoSel || ex.tipo === tipoSel;
+    return coincideTexto && coincideTipo;
+  }).slice(0,50);
+
+  if (!matches.length) {
+    examenSuggestions.style.display = 'none';
+    examenSuggestions.innerHTML = '';
+    return;
+  }
+
+  examenSuggestions.innerHTML = matches.map(ex => `
+    <div class="suggestion-item"
+         data-nombre="${ex.nombre}">
+      <strong>${ex.nombre}</strong>
+      <small>${ex.tipo || ''}</small>
+    </div>
+  `).join('');
+
+  examenSuggestions.style.display = 'block';
+}
+
+buscadorExamen.addEventListener('input', actualizarSugerenciasExamenes);
+filtroExamenTipo.addEventListener('change', actualizarSugerenciasExamenes);
+
+examenSuggestions.addEventListener('click', e => {
+  const item = e.target.closest('.suggestion-item');
+  if (!item) return;
+
+  const nombre = item.dataset.nombre;
+  document.getElementById('examenNombre').value = nombre;
+  buscadorExamen.value = nombre;
+  examenSuggestions.style.display = 'none';
+  examenSuggestions.innerHTML = '';
+});
+
+document.addEventListener('click', e => {
+  if (!examenSuggestions.contains(e.target) &&
+      e.target !== buscadorExamen &&
+      e.target !== filtroExamenTipo) {
+    examenSuggestions.style.display = 'none';
+  }
+});
+
+/* ====== Gestión de medicamentos y exámenes ====== */
+
+function agregarMedicamento(){
+  const nombre=document.getElementById('medicamentoNombre').value.trim();
+  const presentacion=document.getElementById('medicamentoPresentacion').value.trim();
+  const cantidad=document.getElementById('medicamentoCantidad').value.trim();
+  const dosis=document.getElementById('medicamentoDosis').value.trim();
+  const frecuencia=document.getElementById('medicamentoFrecuencia').value;
+  let duracion=document.getElementById('medicamentoDuracion').value.trim();
+  const via=document.getElementById('medicamentoVia').value;
+  const indicaciones=document.getElementById('medicamentoIndicaciones').value.trim();
+
+  if(!nombre||!presentacion||!cantidad||!dosis||!frecuencia||!duracion||!via){
+    mostrarAlerta('Por favor, completa todos los campos obligatorios del medicamento.');
+    return;
+  }
+
+  if(duracion && !isNaN(duracion)){
+    const n = Number(duracion);
+    duracion = n === 1 ? `${n} día` : `${n} días`;
+  }
+
+  medicamentos.push({id:Date.now(),nombre,presentacion,cantidad,dosis,frecuencia,duracion,via,indicaciones});
+  actualizarListaMedicamentos();
+  limpiarFormularioMedicamento();
+  mostrarAlerta('Medicamento agregado correctamente','success');
+}
+
+function eliminarMedicamento(id){
+  medicamentos=medicamentos.filter(m=>m.id!==id);
+  actualizarListaMedicamentos();
+}
+
+function actualizarListaMedicamentos(){
+  const lista=document.getElementById('listaMedicamentos');
+  if(!medicamentos.length){
+    lista.innerHTML='<div class="empty-state">No hay medicamentos agregados. Agrega al menos uno para generar la receta.</div>';
+    return;
+  }
+  lista.innerHTML=medicamentos.map(m=>`
+    <div class="medication-item">
+      <div class="medication-header">
+        <div class="medication-name">${m.nombre}</div>
+        <button class="btn btn-remove btn-small" onclick="eliminarMedicamento(${m.id})">Eliminar</button>
+      </div>
+      <div class="medication-details">
+        <strong>Presentación:</strong> ${m.presentacion} | <strong>Cantidad:</strong> ${m.cantidad}<br>
+        <strong>Posología:</strong> ${m.dosis}, ${m.frecuencia}, ${m.duracion}, ${m.via}
+        ${m.indicaciones?`<br><strong>Indicaciones:</strong> ${m.indicaciones}`:''}
+      </div>
+    </div>`).join('');
+}
+
+function limpiarFormularioMedicamento(){
+  buscadorMedicamento.value='';
+  document.getElementById('medicamentoNombre').value='';
+  document.getElementById('medicamentoPresentacion').value='';
+  document.getElementById('medicamentoCantidad').value='';
+  document.getElementById('medicamentoDosis').value='';
+  document.getElementById('medicamentoFrecuencia').value='';
+  document.getElementById('medicamentoDuracion').value='';
+  document.getElementById('medicamentoVia').value='';
+  document.getElementById('medicamentoIndicaciones').value='';
+  document.getElementById('medicamentoIndicaciones').placeholder='Diluir en 100 mL SF, administrar lento, tomar con alimentos, etc.';
+}
+
+function agregarExamen(){
+  const nombre = document.getElementById('examenNombre').value.trim();
+  if (!nombre) {
+    mostrarAlerta('Ingresa al menos el nombre del examen auxiliar.');
+    return;
+  }
+
+  examenes.push({id:Date.now(),nombre});
+  actualizarListaExamenes();
+  limpiarFormularioExamen();
+  mostrarAlerta('Examen auxiliar agregado correctamente','success');
+}
+
+function eliminarExamen(id){
+  examenes = examenes.filter(e => e.id !== id);
+  actualizarListaExamenes();
+}
+
+function actualizarListaExamenes(){
+  const lista = document.getElementById('listaExamenes');
+  if (!examenes.length) {
+    lista.innerHTML = '<div class="empty-state">No hay exámenes auxiliares agregados.</div>';
+    return;
+  }
+  lista.innerHTML = examenes.map(e => `
+    <div class="medication-item">
+      <div class="medication-header">
+        <div class="medication-name">${e.nombre}</div>
+        <button class="btn btn-remove btn-small" onclick="eliminarExamen(${e.id})">Eliminar</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function limpiarFormularioExamen(){
+  buscadorExamen.value = '';
+  document.getElementById('examenNombre').value = '';
+}
+
+/* ====== Validación y generación de PDF ====== */
+
+function validarFormulario(){
+  const medicoNombre=document.getElementById('medicoNombre').value.trim();
+  const medicoCMP=document.getElementById('medicoCMP').value.trim();
+  const pacienteNombre=document.getElementById('pacienteNombre').value.trim();
+  const pacienteEdad=document.getElementById('pacienteEdad').value.trim();
+  const fechaAtencion=document.getElementById('fechaAtencion').value;
+
+  if(!medicoNombre||!medicoCMP){mostrarAlerta('Completa los datos del médico (Nombre y CMP).');return false;}
+  if(!pacienteNombre||!pacienteEdad||!fechaAtencion){mostrarAlerta('Completa los datos del paciente (Nombre, Edad y Fecha).');return false;}
+  if(!medicamentos.length && !examenes.length){
+    mostrarAlerta('Debes agregar al menos un medicamento o un examen auxiliar.');
+    return false;
+  }
+  return true;
+}
+
+function agregarWatermark(doc){
+  if(!watermarkImage) return;
+  const pageCount=doc.internal.getNumberOfPages();
+  const pageWidth=doc.internal.pageSize.getWidth();
+  const pageHeight=doc.internal.pageSize.getHeight();
+  for(let i=1;i<=pageCount;i++){
+    doc.setPage(i);
+    const w=80;
+    const h=130;
+    const x=(pageWidth-w)/2+10;
+    const y=(pageHeight-h)/2-10;
+    try{
+      doc.addImage(watermarkImage,'PNG',x,y,w,h);
+    }catch(e){}
+  }
+}
+
+function generarPDF(){
+  if(!validarFormulario())return;
+
+  const doc=new jsPDF();
+  const pageWidth=doc.internal.pageSize.getWidth();
+  const pageHeight=doc.internal.pageSize.getHeight();
+  const margin=15;
+  let yPos=20;
+
+  doc.setDrawColor(180,190,210);
+  doc.setLineWidth(0.5);
+  doc.rect(margin-5,10,pageWidth-2*(margin-5),pageHeight-20);
+
+  doc.setTextColor(32,160,176);
+  doc.setFontSize(20);
+  doc.setFont(undefined,'bold');
+  doc.text('RECETA MÉDICA',pageWidth/2,yPos,{align:'center'});
+  doc.setTextColor(0,0,0);
+  yPos+=12;
+
+  doc.setFontSize(12);
+  const contacto=[];
+  const telefono=document.getElementById('medicoTelefono').value.trim();
+  const email=document.getElementById('medicoEmail').value.trim();
+  if(telefono)contacto.push(`Tel: ${telefono}`);
+  if(email)contacto.push(`Email: ${email}`);
+  if(contacto.length){
+    doc.setFont(undefined,'normal');
+    doc.text(contacto.join(' | '),margin,yPos);
+    yPos+=9;
+  }else{
+    yPos+=4;
+  }
+
+  doc.setDrawColor(0,0,0);
+  doc.line(margin,yPos,pageWidth-margin,yPos);
+  yPos+=10;
+
+  doc.setFont(undefined,'bold');
+  doc.setFontSize(13);
+  doc.text('MÉDICO PRESCRIPTOR:',margin,yPos); 
+  yPos+=7;
+
+  doc.setFont(undefined,'normal');
+  doc.setFontSize(12);
+  const medicoNombre=document.getElementById('medicoNombre').value;
+  const cmp=document.getElementById('medicoCMP').value.trim();
+  const especialidad=document.getElementById('medicoEspecialidad').value.trim();
+  doc.text(medicoNombre,margin,yPos); 
+  yPos+=6;
+  let cred=`CMP: ${cmp}`; 
+  if(especialidad)cred+=` | ${especialidad}`;
+  doc.text(cred,margin,yPos); 
+  yPos+=10;
+
+  doc.setFont(undefined,'bold');
+  doc.setFontSize(13);
+  doc.text('DATOS DEL PACIENTE:',margin,yPos); 
+  yPos+=7;
+
+  doc.setFont(undefined,'normal');
+  doc.setFontSize(12);
+  const pacienteNombre=document.getElementById('pacienteNombre').value;
+  const pacienteEdad=document.getElementById('pacienteEdad').value;
+  const pacienteDNI=document.getElementById('pacienteDNI').value.trim();
+  const pacienteSexo=document.getElementById('pacienteSexo').value;
+  const horaAtencion=document.getElementById('horaAtencion').value;
+  doc.text(`Paciente: ${pacienteNombre}`,margin,yPos); 
+  yPos+=6;
+
+  let datos=`Edad: ${pacienteEdad} años`;
+  if(pacienteSexo)datos+=` | Sexo: ${pacienteSexo}`;
+  if(pacienteDNI)datos+=` | DNI: ${pacienteDNI}`;
+  doc.text(datos,margin,yPos); 
+  yPos+=6;
+
+  const fechaAtencion=document.getElementById('fechaAtencion').value;
+  const fechaFormateada=new Date(fechaAtencion+'T00:00:00').toLocaleDateString('es-PE',{year:'numeric',month:'long',day:'numeric'});
+  let lineaFecha=`Fecha de atención: ${fechaFormateada}`;
+  if(horaAtencion){
+    lineaFecha+=` | Hora: ${horaAtencion}`;
+  }
+  doc.text(lineaFecha,margin,yPos); 
+  yPos+=6;
+
+  const diagnostico=document.getElementById('diagnostico').value.trim();
+  if(diagnostico){
+    const dxLines=doc.splitTextToSize(`Diagnóstico: ${diagnostico}`,pageWidth-2*margin);
+    doc.text(dxLines,margin,yPos);
+    yPos+=dxLines.length*6;
+  }
+  yPos+=8;
+
+  if (medicamentos.length) {
+    doc.setFont(undefined,'bold');
+    doc.setFontSize(14);
+    doc.text('Rp/', margin, yPos);
+    yPos += 9;
+
+    doc.setFontSize(12);
+    const colMedicX = margin;
+    const colIndicX = pageWidth / 2 + 2;
+
+    doc.text('Medicamentos', colMedicX, yPos);
+    doc.text('Indicaciones', colIndicX, yPos);
+    yPos += 6;
+
+    doc.setDrawColor(0,0,0);
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPos, pageWidth - margin, yPos);
+    yPos += 6;
+
+    doc.setFont(undefined,'normal');
+
+    medicamentos.forEach((m, index) => {
+      const textoMedicamento = `${index + 1}. ${m.nombre} (${m.presentacion}) - Cant.: ${m.cantidad}`;
+      const textoPosologia = `${m.dosis}, ${m.frecuencia}, ${m.duracion}, ${m.via}${m.indicaciones ? `. Indicaciones: ${m.indicaciones}` : ''}`;
+
+      const medLines = doc.splitTextToSize(textoMedicamento, (pageWidth / 2) - margin - 4);
+      const indLines = doc.splitTextToSize(textoPosologia, (pageWidth / 2) - margin - 4);
+      const lineCount = Math.max(medLines.length, indLines.length);
+      const blockHeight = lineCount * 6 + 2;
+
+      if (yPos + blockHeight > pageHeight - 60) {
+        doc.addPage();
+        yPos = 20;
+        doc.setDrawColor(180,190,210);
+        doc.setLineWidth(0.5);
+        doc.rect(margin-5,10,pageWidth-2*(margin-5),pageHeight-20);
+
+        doc.setFont(undefined,'bold');
+        doc.setFontSize(14);
+        doc.text('Rp/', margin, yPos);
+        yPos += 9;
+
+        doc.setFontSize(12);
+        doc.text('Medicamentos', colMedicX, yPos);
+        doc.text('Indicaciones', colIndicX, yPos);
+        yPos += 6;
+        doc.setDrawColor(0,0,0);
+        doc.setLineWidth(0.2);
+        doc.line(margin, yPos, pageWidth - margin, yPos);
+        yPos += 6;
+        doc.setFont(undefined,'normal');
+      }
+
+      doc.text(medLines, colMedicX, yPos);
+      doc.text(indLines, colIndicX, yPos);
+      yPos += blockHeight;
+    });
+
+    yPos += 10;
+  }
+
+  if (examenes.length) {
+    if (yPos > pageHeight - 60) {
+      doc.addPage();
+      yPos = 20;
+      doc.setDrawColor(180,190,210);
+      doc.setLineWidth(0.5);
+      doc.rect(margin-5,10,pageWidth-2*(margin-5),pageHeight-20);
+    }
+
+    doc.setFont(undefined,'bold');
+    doc.setFontSize(13);
+    doc.text('Exámenes auxiliares / Apoyo diagnóstico:', margin, yPos);
+    yPos += 7;
+
+    doc.setFont(undefined,'normal');
+    doc.setFontSize(12);
+
+    examenes.forEach((e, index) => {
+      const texto = `${index + 1}. ${e.nombre}`;
+      const lines = doc.splitTextToSize(texto, pageWidth - 2 * margin);
+      const blockHeight = lines.length * 6 + 2;
+
+      if (yPos + blockHeight > pageHeight - 60) {
+        doc.addPage();
+        yPos = 20;
+        doc.setDrawColor(180,190,210);
+        doc.setLineWidth(0.5);
+        doc.rect(margin-5,10,pageWidth-2*(margin-5),pageHeight-20);
+        doc.setFont(undefined,'bold');
+        doc.setFontSize(13);
+        doc.text('Exámenes auxiliares / Apoyo diagnóstico (cont.):', margin, yPos);
+        yPos += 7;
+        doc.setFont(undefined,'normal');
+        doc.setFontSize(12);
+      }
+
+      doc.text(lines, margin, yPos);
+      yPos += blockHeight;
+    });
+
+    yPos += 8;
+  }
+
+  const indicacionesGenerales = document.getElementById('indicacionesGenerales').value.trim();
+  if (indicacionesGenerales) {
+    if (yPos > pageHeight - 60) {
+      doc.addPage();
+      yPos = 20;
+      doc.setDrawColor(180,190,210);
+      doc.setLineWidth(0.5);
+      doc.rect(margin-5,10,pageWidth-2*(margin-5),pageHeight-20);
+    }
+    doc.setFont(undefined,'bold');
+    doc.setFontSize(13);
+    doc.text('Indicaciones generales:', margin, yPos);
+    yPos += 7;
+    doc.setFont(undefined,'normal');
+    doc.setFontSize(12);
+    const indiLines = doc.splitTextToSize(indicacionesGenerales, pageWidth - 2 * margin);
+    doc.text(indiLines, margin, yPos);
+    yPos += indiLines.length * 6;
+  }
+
+  if (yPos < pageHeight - 40) {
+    yPos = pageHeight - 40;
+  }
+  doc.setDrawColor(0,0,0);
+  doc.line(pageWidth/2 - 30, yPos, pageWidth/2 + 30, yPos);
+  yPos += 6;
+  doc.setFont(undefined,'bold');
+  doc.text(medicoNombre, pageWidth/2, yPos, { align: 'center' });
+  yPos += 6;
+  doc.setFont(undefined,'normal');
+  doc.text(cred, pageWidth/2, yPos, { align: 'center' });
+  yPos += 8;
+
+  const fechaAtencionVal=document.getElementById('fechaAtencion').value;
+  const horaAtencionVal=document.getElementById('horaAtencion').value;
+  let fechaHoraFirma = '';
+  if (fechaAtencionVal) {
+    const f = new Date(fechaAtencionVal + 'T' + (horaAtencionVal || '00:00') + ':00');
+    fechaHoraFirma = f.toLocaleString('es-PE', {
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit'
+    });
+  } else {
+    const ahora = new Date();
+    fechaHoraFirma = ahora.toLocaleString('es-PE', {
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  doc.setFontSize(9);
+  doc.setTextColor(80);
+  doc.text(
+    `Firmado digitalmente en la fecha y hora: ${fechaHoraFirma}`,
+    pageWidth/2,
+    yPos,
+    { align: 'center' }
+  );
+  doc.setTextColor(0,0,0);
+
+  agregarWatermark(doc);
+  doc.save(`Receta_${pacienteNombre.replace(/\s+/g,'_')}.pdf`);
+}
+</script>
+</body>
+</html>
