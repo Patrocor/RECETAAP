@@ -51,6 +51,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
   min-height: 36px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 48px;
+  height: 38px;
+  border-radius: 10px;
+  flex: none;
+  background: #d7e4f0;
+}
+
 .wordmark {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 22px;

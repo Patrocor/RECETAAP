@@ -318,7 +318,12 @@ function header() {
     el("div", { class: "top-row" }, [
       onBack ? el("button", { type: "button", class: "icon-btn", "aria-label": "Volver", onclick: onBack }, ["←"]) : null,
       el("div", {}, [
-        screen === "inicio" ? el("div", { class: "wordmark", text: "RecetAPP" }) : el("h1", { text: title }),
+        screen === "inicio"
+          ? el("div", { class: "brand" }, [
+            el("img", { class: "logo", src: "logo.svg", alt: "LR" }),
+            el("div", { class: "wordmark", text: "RecetAPP" }),
+          ])
+          : el("h1", { text: title }),
         kicker ? el("p", { class: "step-label", text: kicker }) : null,
       ]),
     ]),
