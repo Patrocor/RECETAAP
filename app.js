@@ -54,24 +54,22 @@ const VIAS = [
   "Vía nasal",
   "Vía rectal",
   "Vía vaginal",
+  "Vía vaginal/oral",
+  "Vía transdérmica",
+  "Vía intratecal",
+  "Vía tópica capilar",
+  "Vía infiltrativa",
+  "Vía espinal / epidural",
+  "Vía epidural",
+  "Vía inhalatoria",
+  "Vía intradérmica",
   "Inhalatoria",
+  "Implante subdérmico",
+  "Dispositivo intrauterino",
 ];
 
-const SISTEMAS = [
-  "Respiratorio",
-  "Cardiovascular",
-  "Metabólico",
-  "Músculo-esquelético",
-  "Genitourinario",
-  "Ginecología",
-  "Digestivo",
-  "Neurología",
-  "Dermatología",
-  "Salud mental",
-  "Pediatría",
-  "Prevención",
-  "Síntomas generales",
-];
+const SISTEMAS = [...new Set(cie10Data.map((dx) => dx.sistema).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, "es"));
 
 const TIPOS = [
   { id: "agudo", label: "Agudo" },
@@ -80,16 +78,7 @@ const TIPOS = [
   { id: "prevención", label: "Prevención" },
 ];
 
-const TIPOS_EXAMEN = [
-  "Laboratorio",
-  "Imagen (Rx)",
-  "Imagen (Ecografía)",
-  "Imagen (TC)",
-  "Imagen (RM)",
-  "Imagen (Mamografía)",
-  "Imagen (DEXA)",
-  "Funcional",
-];
+const TIPOS_EXAMEN = ["Laboratorio", "Imágenes", "Procedimientos"];
 
 const MARCAS_PERU = [
   "Panadol", "Velamox", "Clamoxin", "Augmentin", "Zitromax", "Ciproxina",
@@ -577,12 +566,6 @@ function viewDiagnostico() {
     saveDraft();
     goto("diagnostico");
   }));
-  section.append(chipRow(TIPOS.map((tipo) => tipo.label), labelTipo(draft.filtroTipo), (label) => {
-    const found = TIPOS.find((tipo) => tipo.label === label);
-    draft.filtroTipo = draft.filtroTipo === found.id ? "" : found.id;
-    saveDraft();
-    goto("diagnostico");
-  }));
   const search = el("input", {
     id: "dx-query",
     type: "text",
@@ -821,10 +804,6 @@ function chipRow(labels, current, onPick) {
   }, [label])));
 }
 
-function labelTipo(id) {
-  return TIPOS.find((tipo) => tipo.id === id)?.label || "";
-}
-
 function medCard(med) {
   return el("article", { class: "item" }, [
     el("div", { class: "item-top" }, [
@@ -986,14 +965,14 @@ function paintExamSuggestions() {
     return;
   }
   const matches = examenesCatalogo.filter((ex) => {
-    const text = !term || ex.nombre.toLowerCase().includes(term);
+    const text = !term || [ex.nombre, ex.alias, ex.grupo].some((value) => String(value || "").toLowerCase().includes(term));
     const tipo = !draft.filtroExamen || ex.tipo === draft.filtroExamen;
     return text && tipo;
   }).slice(0, 12);
   box.replaceChildren(...matches.map((ex) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: ex.nombre }),
-      el("small", { text: ex.tipo || "" }),
+      el("small", { text: [ex.tipo, ex.grupo, ex.alias && ex.alias !== ex.nombre ? ex.alias : ""].filter(Boolean).join(" · ") }),
     ]);
     button.addEventListener("click", () => {
       examNombre = cleanText(ex.nombre, 160);
