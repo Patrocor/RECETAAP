@@ -139,8 +139,13 @@ function emptyMedForm() {
 let perfil = loadPerfil();
 let draft = loadDraft();
 let screen = "login";
+let panel = "paciente";
+let filtrosAbiertos = false;
+let detalleMed = false;
 let cuenta = null;
 let accesos = [];
+let adminAbierto = "";
+let adminQuery = "";
 let loginUsuario = "";
 let loginClave = "";
 let composer = null;
@@ -295,6 +300,9 @@ function header() {
   let onBack = null;
   if (screen === "login") {
     title = "RecetAPP";
+  } else if (screen === "receta") {
+    title = "Receta";
+    onBack = () => goto("inicio");
   } else if (screen === "admin") {
     title = "Admin";
     onBack = () => goto("inicio");
@@ -348,6 +356,17 @@ function header() {
 
 function footer() {
   if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
+  if (screen === "receta") {
+    const agregando = composer === "med" || composer === "exam";
+    return el("footer", { class: "footer" }, [
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy,
+        onclick: composer === "med" ? commitMed : composer === "exam" ? commitExam : generarPDF,
+      }, [agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF")]),
+    ]);
+  }
   if (screen === "login") {
     return el("footer", { class: "footer" }, [
       el("button", { type: "button", class: "btn", disabled: busy, onclick: enviarLogin }, [busy ? "Ingresando…" : "Ingresar"]),
@@ -378,6 +397,7 @@ function footer() {
 function view() {
   if (screen === "login") return viewLogin();
   if (screen === "admin") return viewAdmin();
+  if (screen === "receta") return viewBoard();
   if (screen === "inicio") return viewInicio();
   if (screen === "perfil") return viewPerfil();
   if (screen === "listo") return viewListo();
@@ -454,44 +474,94 @@ async function enviarLogin() {
 }
 
 function viewAdmin() {
-  const lista = accesos.length
-    ? accesos.map((item) => {
-      const vence = el("input", {
-        type: "date",
-        value: item.exp_at ? String(item.exp_at).slice(0, 10) : "",
-      });
-      return el("article", { class: "item" }, [
-        el("div", { class: "item-top" }, [
-          el("h3", { text: item.nombre || item.username }),
+  const consulta = adminQuery.trim().toLowerCase();
+  const visibles = accesos.filter((item) => {
+    const texto = `${item.nombre || ""} ${item.username || ""}`.toLowerCase();
+    return !consulta || texto.includes(consulta);
+  }).slice(0, 4);
+  const buscar = el("input", {
+    id: "admin-q",
+    type: "search",
+    value: adminQuery,
+    maxlength: "40",
+    autocomplete: "off",
+    placeholder: "",
+  });
+  buscar.addEventListener("input", () => {
+    adminQuery = cleanText(buscar.value, 40);
+    render();
+    document.getElementById("admin-q")?.focus();
+  });
+  const filas = visibles.map((item) => {
+    const abierto = adminAbierto === item.id;
+    const vence = el("input", {
+      type: "date",
+      value: item.exp_at ? String(item.exp_at).slice(0, 10) : "",
+    });
+    return el("section", { class: abierto ? "fold is-open" : "fold" }, [
+      el("button", {
+        type: "button",
+        class: "fold-head",
+        "aria-expanded": abierto ? "true" : "false",
+        onclick: () => {
+          adminAbierto = abierto ? "" : item.id;
+          render();
+        },
+      }, [
+        el("span", { class: "fold-title", text: item.nombre || item.username }),
+        el("span", { class: "fold-sum", text: item.active === false ? "Suspendido" : item.username }),
+        el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+      ]),
+      el("div", { class: "fold-body" }, [
+        el("div", { class: "fold-inner stack" }, abierto ? [
           el("button", {
             type: "button",
             class: item.active === false ? "link" : "text-danger",
             onclick: () => cambiarAcceso(item, { active: item.active === false }),
           }, [item.active === false ? "Activar" : "Suspender"]),
-        ]),
-        el("p", { class: "muted", text: item.username }),
-        el("label", { class: "field", text: "Vence" }, [vence]),
-        el("button", {
-          type: "button",
-          class: "add-btn",
-          onclick: () => cambiarAcceso(item, { exp_at: vence.value ? new Date(`${vence.value}T23:59:59`).toISOString() : null }),
-        }, ["Guardar"]),
-      ]);
-    })
-    : [el("p", { class: "muted", text: "Sin accesos" })];
+          el("label", { class: "field", text: "Vence" }, [vence]),
+          el("button", {
+            type: "button",
+            class: "add-btn",
+            onclick: () => cambiarAcceso(item, { exp_at: vence.value ? new Date(`${vence.value}T23:59:59`).toISOString() : null }),
+          }, ["Guardar"]),
+        ] : []),
+      ]),
+    ]);
+  });
+  const nuevoAbierto = adminAbierto === "nuevo";
   const usuario = el("input", { id: "nuevo-usuario", type: "text", maxlength: "40", autocomplete: "off" });
   const nombre = el("input", { id: "nuevo-nombre", type: "text", maxlength: "120", autocomplete: "name" });
   const clave = el("input", { id: "nuevo-clave", type: "password", maxlength: "80", autocomplete: "new-password" });
-  const vence = el("input", { id: "nuevo-vence", type: "date" });
-  return el("section", { class: "screen stack" }, [
+  const venceNuevo = el("input", { id: "nuevo-vence", type: "date" });
+  return el("div", { class: "board" }, [
     errorSlot(),
-    ...lista,
-    el("h2", { text: "Nuevo" }),
-    el("label", { class: "field", text: "Usuario" }, [usuario]),
-    el("label", { class: "field", text: "Nombre" }, [nombre]),
-    el("label", { class: "field", text: "Contraseña" }, [clave]),
-    el("label", { class: "field", text: "Vence" }, [vence]),
-    el("button", { type: "button", class: "add-btn", onclick: agregarAcceso }, ["Agregar"]),
+    el("label", { class: "field", text: "Buscar" }, [buscar]),
+    ...filas,
+    accesos.length ? null : el("p", { class: "muted", text: "Sin accesos" }),
+    el("section", { class: nuevoAbierto ? "fold is-open" : "fold" }, [
+      el("button", {
+        type: "button",
+        class: "fold-head",
+        "aria-expanded": nuevoAbierto ? "true" : "false",
+        onclick: () => {
+          adminAbierto = nuevoAbierto ? "" : "nuevo";
+          render();
+        },
+      }, [
+        el("span", { class: "fold-title", text: "Nuevo" }),
+        el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+      ]),
+      el("div", { class: "fold-body" }, [
+        el("div", { class: "fold-inner stack" }, nuevoAbierto ? [
+          el("label", { class: "field", text: "Usuario" }, [usuario]),
+          el("label", { class: "field", text: "Nombre" }, [nombre]),
+          el("label", { class: "field", text: "Contraseña" }, [clave]),
+          el("label", { class: "field", text: "Vence" }, [venceNuevo]),
+          el("button", { type: "button", class: "add-btn", onclick: agregarAcceso }, ["Agregar"]),
+        ] : []),
+      ]),
+    ]),
   ]);
 }
 
@@ -586,7 +656,7 @@ function viewInicio() {
       el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
     ]));
   }
-  return el("section", { class: "screen stack" }, blocks);
+  return el("section", { class: "screen stack home" }, blocks);
 }
 
 function viewPerfil() {
@@ -603,7 +673,6 @@ function viewPerfil() {
 function viewPaciente() {
   const gente = loadPacientes();
   const section = el("section", { class: "screen stack" }, [
-    errorSlot(),
     field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
       const exactos = gente.filter((paciente) => paciente.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase());
@@ -728,7 +797,7 @@ function paintPacSuggestions() {
       vistos.add(clave);
       const yaEsta = paciente.nombre === draft.pacienteNombre && paciente.dni === draft.pacienteDNI && paciente.edad === draft.pacienteEdad;
       return !yaEsta;
-    });
+    }).slice(0, 2);
   box.replaceChildren(...matches.map((paciente) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: paciente.nombre }),
@@ -744,13 +813,28 @@ function paintPacSuggestions() {
 
 function viewDiagnostico() {
   const section = el("section", { class: "screen stack" }, [
-    errorSlot(),
+    el("button", {
+      type: "button",
+      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        filtrosAbiertos = !filtrosAbiertos;
+        goto("diagnostico");
+      },
+    }, ["Filtros"]),
   ]);
-  section.append(chipRow(SISTEMAS, draft.filtroSistema, (value) => {
-    draft.filtroSistema = draft.filtroSistema === value ? "" : value;
-    saveDraft();
-    goto("diagnostico");
-  }));
+  if (filtrosAbiertos) {
+    const sistema = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...SISTEMAS.map((nombre) => el("option", { value: nombre, text: nombre })),
+    ]);
+    sistema.value = draft.filtroSistema;
+    sistema.addEventListener("change", () => {
+      draft.filtroSistema = SISTEMAS.includes(sistema.value) ? sistema.value : "";
+      saveDraft();
+      paintDxSuggestions();
+    });
+    section.append(el("label", { class: "field", text: "Sistema" }, [sistema]));
+  }
   const search = el("input", {
     id: "dx-query",
     type: "text",
@@ -788,7 +872,6 @@ function viewMedicamentos() {
     ? draft.medicamentos.map(medCard)
     : [el("p", { class: "muted", text: "Sin medicamentos" })];
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     ...list,
     el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]),
   ]);
@@ -796,7 +879,6 @@ function viewMedicamentos() {
 
 function viewMedComposer() {
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     (() => {
       const input = el("input", {
         id: "med-q",
@@ -813,21 +895,35 @@ function viewMedComposer() {
       return el("label", { class: "field", text: "Buscar" }, [input]);
     })(),
     el("div", { id: "med-suggest", class: "suggestions" }),
+    el("button", {
+      type: "button",
+      class: detalleMed ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        detalleMed = !detalleMed;
+        goto("medicamentos");
+      },
+    }, ["Detalle"]),
+    ...(detalleMed ? [
     medInput("Nombre", "med-nombre", "nombre", "Paracetamol"),
-    medInput("Presentación", "med-presentacion", "presentacion", "500 mg tabletas"),
     el("div", { class: "two" }, [
-      medInput("Cantidad", "med-cantidad", "cantidad", "20 tabletas"),
-      medInput("Dosis", "med-dosis", "dosis", "500 mg"),
+      medInput("Presentación", "med-presentacion", "presentacion", "500 mg"),
+      medInput("Cantidad", "med-cantidad", "cantidad", "20"),
     ]),
-    selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
-      medForm.frecuencia = value;
-      syncCantidad();
-    }),
-    medInput("Duración", "med-duracion", "duracion", "7"),
-    selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
-      medForm.via = value;
-    }),
+    el("div", { class: "two" }, [
+      medInput("Dosis", "med-dosis", "dosis", "500 mg"),
+      medInput("Duración", "med-duracion", "duracion", "7"),
+    ]),
+    el("div", { class: "two" }, [
+      selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
+        medForm.frecuencia = value;
+        syncCantidad();
+      }),
+      selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
+        medForm.via = value;
+      }),
+    ]),
     medInput("Indicaciones", "med-indicaciones", "indicaciones", "Con alimentos"),
+    ] : []),
   ]);
 }
 
@@ -836,7 +932,6 @@ function viewExamenes() {
     ? draft.examenes.map(examCard)
     : [el("p", { class: "muted", text: "Sin exámenes" })];
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     ...list,
     el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]),
   ]);
@@ -844,16 +939,28 @@ function viewExamenes() {
 
 function viewExamComposer() {
   const section = el("section", { class: "screen stack" }, [
-    errorSlot(),
+    el("button", {
+      type: "button",
+      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        filtrosAbiertos = !filtrosAbiertos;
+        goto("examenes");
+      },
+    }, ["Filtros"]),
   ]);
-  section.append(chipRow(TIPOS_EXAMEN, draft.filtroExamen, (value) => {
-    draft.filtroExamen = draft.filtroExamen === value ? "" : value;
-    saveDraft();
-    paintExamSuggestions();
-    section.querySelectorAll(".chips button").forEach((button) => {
-      button.classList.toggle("is-on", button.textContent === draft.filtroExamen);
+  if (filtrosAbiertos) {
+    const tipo = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...TIPOS_EXAMEN.map((nombre) => el("option", { value: nombre, text: nombre })),
+    ]);
+    tipo.value = draft.filtroExamen;
+    tipo.addEventListener("change", () => {
+      draft.filtroExamen = TIPOS_EXAMEN.includes(tipo.value) ? tipo.value : "";
+      saveDraft();
+      paintExamSuggestions();
     });
-  }));
+    section.append(el("label", { class: "field", text: "Tipo" }, [tipo]));
+  }
   const search = el("input", {
     id: "exam-q",
     type: "search",
@@ -895,7 +1002,6 @@ function viewIndicaciones() {
     saveDraft();
   });
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
     el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
@@ -926,7 +1032,7 @@ function viewRevision() {
 }
 
 function viewListo() {
-  return el("section", { class: "screen" }, [
+  return el("section", { class: "screen stack home" }, [
     el("div", { class: "success-mark", text: "✓" }),
     el("button", { type: "button", class: "cta", onclick: startNew }, [
       el("span", { class: "cta-title", text: "Nueva receta" }),
@@ -1045,7 +1151,7 @@ function paintDxSuggestions() {
     const sistema = !draft.filtroSistema || String(dx.sistema || "").toLowerCase().includes(draft.filtroSistema.toLowerCase());
     const tipo = !draft.filtroTipo || dx.tipo === draft.filtroTipo;
     return text && sistema && tipo;
-  }).slice(0, 12);
+  }).slice(0, 2);
   box.replaceChildren(...matches.map((dx) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${dx.codigo} — ${dx.descripcion}` }),
@@ -1086,7 +1192,7 @@ function paintMedSuggestions() {
     .map((med) => ({ med, score: scoreMed(med, term) }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score || a.med.dci.localeCompare(b.med.dci, "es"))
-    .slice(0, 12)
+    .slice(0, 2)
     .map((item) => item.med);
   box.replaceChildren(...matches.map((med) => {
     const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
@@ -1153,7 +1259,7 @@ function paintExamSuggestions() {
     const text = !term || [ex.nombre, ex.alias, ex.grupo].some((value) => String(value || "").toLowerCase().includes(term));
     const tipo = !draft.filtroExamen || ex.tipo === draft.filtroExamen;
     return text && tipo;
-  }).slice(0, 12);
+  }).slice(0, 2);
   box.replaceChildren(...matches.map((ex) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: ex.nombre }),
@@ -1177,6 +1283,7 @@ function openComposer(kind) {
   if (kind === "med") {
     medForm = emptyMedForm();
     cantidadManual = false;
+    detalleMed = false;
   }
   if (kind === "exam") {
     examQuery = "";
@@ -1302,11 +1409,86 @@ function resume() {
   goto(WIZARD.some((step) => step.id === draft.screen) ? draft.screen : "paciente");
 }
 
+function resumenPaso(id) {
+  if (id === "paciente") return draft.pacienteNombre || "Sin paciente";
+  if (id === "diagnostico") return draft.diagnostico || "Sin diagnóstico";
+  if (id === "medicamentos") return draft.medicamentos.length ? String(draft.medicamentos.length) : "Ninguno";
+  if (id === "examenes") return draft.examenes.length ? String(draft.examenes.length) : "Ninguno";
+  return draft.indicacionesGenerales ? "Listas" : "Vacías";
+}
+
+function cuerpoPaso(id) {
+  if (id === "paciente") return viewPaciente();
+  if (id === "diagnostico") return viewDiagnostico();
+  if (id === "medicamentos") return composer === "med" ? viewMedComposer() : viewMedicamentos();
+  if (id === "examenes") return composer === "exam" ? viewExamComposer() : viewExamenes();
+  return viewIndicaciones();
+}
+
+function abrirPanel(id) {
+  if (panel === "paciente" && id !== "paciente") rememberPaciente();
+  if (panel !== id) {
+    filtrosAbiertos = false;
+    if (id !== "medicamentos") detalleMed = false;
+    if (id !== "medicamentos" && id !== "examenes") composer = null;
+  }
+  panel = panel === id ? "" : id;
+  if (!panel) composer = null;
+  if (panel === "indicaciones" && !draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+  }
+  draft.screen = panel || "paciente";
+  saveDraft();
+  render();
+}
+
+function fold(id, titulo) {
+  const abierto = panel === id;
+  return el("section", { class: abierto ? "fold is-open" : "fold" }, [
+    el("button", {
+      type: "button",
+      class: "fold-head",
+      "aria-expanded": abierto ? "true" : "false",
+      onclick: () => abrirPanel(id),
+    }, [
+      el("span", { class: "fold-title", text: titulo }),
+      el("span", { class: "fold-sum", text: resumenPaso(id) }),
+      el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+    ]),
+    el("div", { class: "fold-body" }, [
+      el("div", { class: "fold-inner" }, abierto ? [cuerpoPaso(id)] : []),
+    ]),
+  ]);
+}
+
+function viewBoard() {
+  return el("div", { class: "board" }, [
+    errorSlot(),
+    fold("paciente", "Paciente"),
+    fold("diagnostico", "Diagnóstico"),
+    fold("medicamentos", "Medicamentos"),
+    fold("examenes", "Exámenes"),
+    fold("indicaciones", "Indicaciones"),
+  ]);
+}
+
 function goto(id) {
   formError = "";
-  if (id !== "medicamentos" && id !== "examenes") composer = null;
+  if (WIZARD.some((step) => step.id === id)) {
+    if (id !== "medicamentos" && id !== "examenes") composer = null;
+    if (panel === "paciente" && id !== "paciente") rememberPaciente();
+    panel = id === "revision" ? "indicaciones" : id;
+    if (panel === "indicaciones" && !draft.indicacionesGenerales.trim()) {
+      draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+    }
+    screen = "receta";
+    draft.screen = panel;
+    saveDraft();
+    render();
+    return;
+  }
+  composer = null;
   screen = id;
-  if (WIZARD.some((step) => step.id === id)) saveDraft();
   render();
 }
 
