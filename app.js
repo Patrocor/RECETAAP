@@ -698,6 +698,7 @@ function viewPaciente() {
       pintarResumen("paciente");
     }
     paintPacSuggestions();
+    if (/^\d{8}$/.test(draft.pacienteDNI)) consultarNombre(draft.pacienteDNI);
   };
   const dni = field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", alCambiarDni, { autocomplete: "on", name: "dni", inputmode: "numeric", maxlength: "8", list: "lista-dni" });
   dni.querySelector("input").addEventListener("change", () => alCambiarDni(dni.querySelector("input")));
@@ -792,6 +793,31 @@ function rememberPaciente() {
     return paciente.nombre.toLowerCase() !== entry.nombre.toLowerCase();
   });
   localStorage.setItem(PACIENTES_KEY, JSON.stringify([entry, ...resto].slice(0, 80)));
+}
+
+const consultasDni = new Map();
+
+function consultarNombre(dni) {
+  let pendiente = consultasDni.get(dni);
+  if (!pendiente) {
+    pendiente = fetch(`/api/dni?numero=${encodeURIComponent(dni)}`)
+      .then(async (respuesta) => {
+        if (!respuesta.ok) return "";
+        const data = await respuesta.json();
+        return cleanText(data?.nombre, 120);
+      })
+      .catch(() => "")
+      .finally(() => consultasDni.delete(dni));
+    consultasDni.set(dni, pendiente);
+  }
+  pendiente.then((nombre) => {
+    if (!nombre || draft.pacienteDNI !== dni) return;
+    draft.pacienteNombre = nombre;
+    const nodo = document.getElementById("paciente-nombre");
+    if (nodo) nodo.value = nombre;
+    saveDraft();
+    pintarResumen("paciente");
+  });
 }
 
 function applyPaciente(paciente) {

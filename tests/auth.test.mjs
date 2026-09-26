@@ -20,7 +20,14 @@ test("el acceso vencido o suspendido no entra", () => {
 test("la página puede hablar con el acceso y no interpreta HTML", () => {
   const page = readFileSync(new URL("../index.html", import.meta.url), "utf8");
   const auth = readFileSync(new URL("../auth.js", import.meta.url), "utf8");
-  assert.match(page, /connect-src [^;]*https:\/\/cwavdcpvcqlkyasezrzs\.supabase\.co/);
+  assert.match(page, /connect-src 'self' https:\/\/cwavdcpvcqlkyasezrzs\.supabase\.co/);
+  const consulta = readFileSync(new URL("../api/dni.js", import.meta.url), "utf8");
+  const app = readFileSync(new URL("../app.js", import.meta.url), "utf8");
+  assert.match(consulta, /process\.env\.DECOLECTA_TOKEN/);
+  assert.match(consulta, /api\.decolecta\.com\/v1\/reniec\/dni/);
+  assert.equal(/Bearer [A-Za-z0-9._\-]{20,}/.test(consulta), false);
+  assert.match(app, /\/api\/dni\?numero=/);
+  assert.equal(app.includes("api.decolecta.com"), false);
   assert.equal(auth.includes("innerHTML"), false);
   assert.equal(auth.includes("__ANON_KEY__"), false);
 });

@@ -6,6 +6,7 @@ import {
   dosisReferencia,
   buscarPacientes,
   pacientePorDni,
+  nombreDesdeReniec,
   indicacionesAutomaticas,
   unidadDe,
 } from "../automatizar.js";
@@ -34,6 +35,18 @@ test("el DNI y el nombre recuperan al paciente guardado", () => {
   assert.equal(buscarPacientes(lista, "1234")[0].dni, "12345678");
   assert.equal(buscarPacientes(lista, "ram")[0].nombre, "Luis Ramos");
   assert.equal(buscarPacientes(lista, "a").length, 0);
+});
+
+test("el nombre oficial sale de la consulta por DNI", () => {
+  assert.equal(nombreDesdeReniec({
+    first_name: "ROXANA KARINA",
+    first_last_name: "DELGADO",
+    second_last_name: "HUAMANI",
+    full_name: "DELGADO HUAMANI ROXANA KARINA",
+    document_number: "46027897",
+  }), "Delgado Huamani Roxana Karina");
+  assert.equal(nombreDesdeReniec({ first_name: "ANA", first_last_name: "PÉREZ" }), "Pérez Ana");
+  assert.equal(nombreDesdeReniec(null), "");
 });
 
 test("las indicaciones se arman con lo ya recetado", () => {

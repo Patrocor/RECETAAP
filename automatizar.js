@@ -53,6 +53,20 @@ export function buscarPacientes(lista, query) {
   }).slice(0, 8);
 }
 
+export function nombreDesdeReniec(data) {
+  if (!data || typeof data !== "object") return "";
+  const partes = [data.first_last_name, data.second_last_name, data.first_name]
+    .map((parte) => String(parte || "").trim())
+    .filter(Boolean);
+  const texto = String(data.full_name || "").trim() || partes.join(" ");
+  return texto
+    .toLocaleLowerCase("es")
+    .replace(/(^|[\s'-])(\p{L})/gu, (_, sep, letra) => sep + letra.toLocaleUpperCase("es"))
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 120);
+}
+
 export function pacientePorDni(lista, dni) {
   if (!/^\d{8}$/.test(String(dni || ""))) return null;
   return (lista || []).find((paciente) => paciente.dni === dni) || null;
