@@ -284,7 +284,7 @@ function header() {
   let kicker = "";
   let onBack = null;
   if (screen === "perfil") {
-    title = "Tu perfil";
+    title = "Perfil";
     onBack = () => leavePerfil(false);
   } else if (screen === "listo") {
     title = "Listo";
@@ -293,7 +293,7 @@ function header() {
     if (composer === "med") title = "Medicamento";
     else if (composer === "exam") title = "Examen";
     else title = WIZARD[index].titulo;
-    kicker = `Paso ${index + 1} de ${WIZARD.length}`;
+    kicker = `${index + 1} / ${WIZARD.length}`;
     onBack = () => {
       if (composer) {
         composer = null;
@@ -331,16 +331,16 @@ function footer() {
   let label = "Continuar";
   let action = next;
   if (screen === "perfil") {
-    label = "Guardar perfil";
+    label = "Guardar";
     action = savePerfilFromForm;
   } else if (composer === "med") {
-    label = "Agregar a la receta";
+    label = "Agregar";
     action = commitMed;
   } else if (composer === "exam") {
-    label = "Agregar examen";
+    label = "Agregar";
     action = commitExam;
   } else if (screen === "examenes" && !draft.examenes.length) label = "Omitir";
-  else if (screen === "indicaciones") label = "Revisar receta";
+  else if (screen === "indicaciones") label = "Revisar";
   else if (screen === "revision") {
     label = busy ? "Generando…" : "Generar PDF";
     action = generarPDF;
@@ -377,41 +377,34 @@ function showError(message) {
 
 function viewInicio() {
   const blocks = [
-    el("p", { class: "eyebrow", text: "Consultorio" }),
-    el("h2", { text: "Una receta, un paso a la vez" }),
-    el("p", { class: "lede", text: "Arma la atención como una visita: paciente, diagnóstico y tratamiento. El PDF se descarga en este dispositivo." }),
     el("button", { type: "button", class: "profile-row", onclick: () => openPerfil("inicio") }, [
       el("div", { class: "avatar", text: initials(perfil.nombre) }),
       el("div", {}, [
-        el("div", { class: "profile-name", text: perfil.nombre || "Completa tu perfil" }),
-        el("div", { class: "profile-sub", text: perfil.cmp ? `CMP ${perfil.cmp}` : "Nombre y CMP salen en la receta" }),
+        el("div", { class: "profile-name", text: perfil.nombre || "Perfil" }),
+        perfil.cmp ? el("div", { class: "profile-sub", text: `CMP ${perfil.cmp}` }) : null,
       ]),
       el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
     ]),
     el("button", { type: "button", class: "cta", onclick: startNew }, [
-      el("span", { class: "cta-kicker", text: "Nueva atención" }),
-      el("span", { class: "cta-title", text: "Crear receta" }),
-      el("span", { class: "cta-sub", text: "Seis pasos cortos, con revisión al final" }),
+      el("span", { class: "cta-title", text: "Nueva receta" }),
     ]),
   ];
   if (hasMeaningfulDraft()) {
     blocks.push(el("button", { type: "button", class: "secondary-card", onclick: resume }, [
       el("div", {}, [
-        el("div", { class: "profile-name", text: "Continuar borrador" }),
-        el("div", { class: "profile-sub", text: draft.pacienteNombre || "Paciente sin nombre" }),
+        el("div", { class: "profile-name", text: "Borrador" }),
+        draft.pacienteNombre ? el("div", { class: "profile-sub", text: draft.pacienteNombre }) : null,
       ]),
       el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
     ]));
   }
-  return el("section", { class: "screen" }, blocks);
+  return el("section", { class: "screen stack" }, blocks);
 }
 
 function viewPerfil() {
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Quién prescribe" }),
-    el("p", { class: "lede", text: "Se guarda solo en este navegador. No queda escrito en la aplicación." }),
-    field("Nombre", "p-nombre", perfil.nombre, "text", "Dra. Ana Pérez"),
+    field("Nombre", "p-nombre", perfil.nombre, "text", ""),
     field("CMP", "p-cmp", perfil.cmp, "text", "12345"),
     field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general"),
     field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111"),
@@ -422,19 +415,17 @@ function viewPerfil() {
 function viewPaciente() {
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "¿A quién atiendes?" }),
-    el("p", { class: "lede", text: "Estos datos quedan en el borrador de esta pestaña, no en el perfil." }),
-    field("Nombre del paciente", "paciente-nombre", draft.pacienteNombre, "text", "Nombre y apellidos", (input) => {
+    field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
       saveDraft();
     }),
-    field("DNI", "paciente-dni", draft.pacienteDNI, "text", "8 dígitos, opcional", (input) => {
+    field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", (input) => {
       draft.pacienteDNI = onlyDigits(input.value, 8);
       input.value = draft.pacienteDNI;
       saveDraft();
     }),
     el("div", { class: "two" }, [
-      field("Edad", "paciente-edad", draft.pacienteEdad, "text", "Años", (input) => {
+      field("Edad", "paciente-edad", draft.pacienteEdad, "text", "", (input) => {
         draft.pacienteEdad = onlyDigits(input.value, 3);
         input.value = draft.pacienteEdad;
         saveDraft();
@@ -472,10 +463,8 @@ function sexButton(value, label) {
 }
 
 function viewDiagnostico() {
-  const section = el("section", { class: "screen" }, [
+  const section = el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Diagnóstico" }),
-    el("p", { class: "lede", text: "Busca por código o por nombre. Puedes seguir sin elegirlo." }),
   ]);
   section.append(chipRow(SISTEMAS, draft.filtroSistema, (value) => {
     draft.filtroSistema = draft.filtroSistema === value ? "" : value;
@@ -492,7 +481,7 @@ function viewDiagnostico() {
     id: "dx-query",
     type: "text",
     value: draft.dxQuery,
-    placeholder: "Código o diagnóstico",
+    placeholder: "",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -506,7 +495,7 @@ function viewDiagnostico() {
   if (draft.diagnostico) {
     section.append(el("article", { class: "item" }, [
       el("div", { class: "item-top" }, [
-        el("h3", { text: "Elegido" }),
+        el("h3", { text: "Diagnóstico" }),
         el("button", { type: "button", class: "text-danger", onclick: () => {
           draft.diagnostico = "";
           saveDraft();
@@ -523,26 +512,23 @@ function viewDiagnostico() {
 function viewMedicamentos() {
   const list = draft.medicamentos.length
     ? draft.medicamentos.map(medCard)
-    : [el("p", { class: "lede", text: "Todavía no hay medicamentos. Puedes agregar uno o pasar a exámenes." })];
+    : [el("p", { class: "muted", text: "Sin medicamentos" })];
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Tratamiento" }),
     ...list,
-    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar medicamento"]),
+    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]),
   ]);
 }
 
 function viewMedComposer() {
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Buscar y anotar" }),
-    el("p", { class: "lede", text: "Escribe al menos 3 letras. Las marcas son una referencia, no una receta automática." }),
     (() => {
       const input = el("input", {
         id: "med-q",
         type: "search",
         value: medForm.q,
-        placeholder: "DCI, marca o ATC",
+        placeholder: "",
         maxlength: "80",
         autocomplete: "off",
       });
@@ -573,19 +559,17 @@ function viewMedComposer() {
 function viewExamenes() {
   const list = draft.examenes.length
     ? draft.examenes.map(examCard)
-    : [el("p", { class: "lede", text: "Opcional. Agrega apoyo diagnóstico o continúa a las indicaciones." })];
+    : [el("p", { class: "muted", text: "Sin exámenes" })];
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Apoyo diagnóstico" }),
     ...list,
-    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar examen"]),
+    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]),
   ]);
 }
 
 function viewExamComposer() {
   const section = el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Examen auxiliar" }),
   ]);
   section.append(chipRow(TIPOS_EXAMEN, draft.filtroExamen, (value) => {
     draft.filtroExamen = draft.filtroExamen === value ? "" : value;
@@ -599,7 +583,7 @@ function viewExamComposer() {
     id: "exam-q",
     type: "search",
     value: examQuery,
-    placeholder: "Hemograma, urocultivo…",
+    placeholder: "",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -619,7 +603,7 @@ function viewExamComposer() {
   nombre.addEventListener("input", () => {
     examNombre = cleanText(nombre.value, 160);
   });
-  section.append(el("label", { class: "field", text: "Nombre del examen" }, [nombre]));
+  section.append(el("label", { class: "field", text: "Examen" }, [nombre]));
   queueMicrotask(paintExamSuggestions);
   return section;
 }
@@ -628,7 +612,7 @@ function viewIndicaciones() {
   const area = el("textarea", {
     id: "indicaciones",
     maxlength: "800",
-    placeholder: "Reposo, líquidos, control…",
+    placeholder: "",
   });
   area.value = draft.indicacionesGenerales;
   area.addEventListener("input", () => {
@@ -637,9 +621,7 @@ function viewIndicaciones() {
   });
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Qué debe hacer el paciente" }),
-    el("p", { class: "lede", text: "Indicaciones generales, aparte de la posología de cada medicamento." }),
-    el("label", { class: "field", text: "Recomendaciones" }, [area]),
+    el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
 }
 
@@ -647,38 +629,34 @@ function viewRevision() {
   const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "No indicado";
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    el("h2", { text: "Revisa antes de generar" }),
-    el("p", { class: "lede", text: "El PDF es un documento local. No lleva firma digital: queda un espacio para firmarlo." }),
     reviewBlock("Médico", "perfil", [
-      perfil.nombre || "Falta el nombre",
-      perfil.cmp ? `CMP ${perfil.cmp}` : "Falta el CMP",
+      perfil.nombre || "—",
+      perfil.cmp ? `CMP ${perfil.cmp}` : "—",
     ]),
     reviewBlock("Paciente", "paciente", [
-      draft.pacienteNombre || "Sin nombre",
+      draft.pacienteNombre || "—",
       `Edad ${draft.pacienteEdad || "—"} · ${sexo}`,
-      `${draft.fechaAtencion || "Sin fecha"}${draft.horaAtencion ? ` · ${draft.horaAtencion}` : ""}`,
+      `${draft.fechaAtencion || "—"}${draft.horaAtencion ? ` · ${draft.horaAtencion}` : ""}`,
     ]),
-    reviewBlock("Diagnóstico", "diagnostico", [draft.diagnostico || "Sin diagnóstico"]),
+    reviewBlock("Diagnóstico", "diagnostico", [draft.diagnostico || "—"]),
     reviewBlock("Medicamentos", "medicamentos", draft.medicamentos.length
       ? draft.medicamentos.map((med) => `${med.nombre} — ${med.dosis}, ${med.frecuencia}`)
-      : ["Sin medicamentos"]),
+      : ["—"]),
     reviewBlock("Exámenes", "examenes", draft.examenes.length
       ? draft.examenes.map((ex) => ex.nombre)
-      : ["Sin exámenes"]),
-    reviewBlock("Indicaciones", "indicaciones", [draft.indicacionesGenerales || "Sin indicaciones generales"]),
+      : ["—"]),
+    reviewBlock("Indicaciones", "indicaciones", [draft.indicacionesGenerales || "—"]),
   ]);
 }
 
 function viewListo() {
   return el("section", { class: "screen" }, [
     el("div", { class: "success-mark", text: "✓" }),
-    el("h2", { text: "PDF descargado" }),
-    el("p", { class: "lede", text: "El archivo quedó en este dispositivo. La atención de este paciente se cerró en la pestaña." }),
     el("button", { type: "button", class: "cta", onclick: startNew }, [
-      el("span", { class: "cta-title", text: "Otra receta" }),
+      el("span", { class: "cta-title", text: "Nueva receta" }),
     ]),
     el("button", { type: "button", class: "secondary-card", onclick: () => goto("inicio") }, [
-      el("div", { class: "profile-name", text: "Volver al inicio" }),
+      el("div", { class: "profile-name", text: "Inicio" }),
     ]),
   ]);
 }
@@ -1002,7 +980,7 @@ function leavePerfil() {
 
 async function startNew() {
   if (hasMeaningfulDraft()) {
-    const ok = await ask("¿Empezar de nuevo?", "Se descartará el borrador de esta pestaña.", "Empezar");
+    const ok = await ask("Borrador", "Se descartará.", "Empezar");
     if (!ok) return;
   }
   draft = emptyDraft();
