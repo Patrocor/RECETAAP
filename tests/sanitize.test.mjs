@@ -47,6 +47,10 @@ test("la interfaz no interpreta HTML ni afirma una firma digital", () => {
   assert.equal(app.includes("Firmado digitalmente"), false);
   assert.equal(page.includes("Firmado digitalmente"), false);
   assert.equal(page.includes("integrity="), true);
+  const dni = app.indexOf('field("DNI", "paciente-dni"');
+  const nombre = app.indexOf('field("Nombre", "paciente-nombre"');
+  assert.equal(dni > 0 && dni < nombre, true);
+  assert.equal(app.includes("HC: ${draft.pacienteDNI}"), true);
 });
 
 test("el nombre de archivo no arrastra rutas ni marcas", () => {

@@ -9,8 +9,24 @@ import {
   perfilListo,
   fileSlug,
 } from "./sanitize.js";
+import {
+  buscarPacientes,
+  calcularCantidad,
+  dosisReferencia,
+  indicacionesAutomaticas,
+  pacientePorDni,
+} from "./automatizar.js";
+import {
+  actualizarAcceso,
+  crearAcceso,
+  cuentaGuardada,
+  entrar,
+  listarAccesos,
+  salir,
+} from "./auth.js";
 
 const PERFIL_KEY = "recetapp.perfil";
+const PACIENTES_KEY = "recetapp.pacientes";
 const DRAFT_KEY = "recetapp.borrador";
 
 const WIZARD = [
@@ -46,24 +62,22 @@ const VIAS = [
   "Vía nasal",
   "Vía rectal",
   "Vía vaginal",
+  "Vía vaginal/oral",
+  "Vía transdérmica",
+  "Vía intratecal",
+  "Vía tópica capilar",
+  "Vía infiltrativa",
+  "Vía espinal / epidural",
+  "Vía epidural",
+  "Vía inhalatoria",
+  "Vía intradérmica",
   "Inhalatoria",
+  "Implante subdérmico",
+  "Dispositivo intrauterino",
 ];
 
-const SISTEMAS = [
-  "Respiratorio",
-  "Cardiovascular",
-  "Metabólico",
-  "Músculo-esquelético",
-  "Genitourinario",
-  "Ginecología",
-  "Digestivo",
-  "Neurología",
-  "Dermatología",
-  "Salud mental",
-  "Pediatría",
-  "Prevención",
-  "Síntomas generales",
-];
+const SISTEMAS = [...new Set(cie10Data.map((dx) => dx.sistema).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, "es"));
 
 const TIPOS = [
   { id: "agudo", label: "Agudo" },
@@ -72,16 +86,7 @@ const TIPOS = [
   { id: "prevención", label: "Prevención" },
 ];
 
-const TIPOS_EXAMEN = [
-  "Laboratorio",
-  "Imagen (Rx)",
-  "Imagen (Ecografía)",
-  "Imagen (TC)",
-  "Imagen (RM)",
-  "Imagen (Mamografía)",
-  "Imagen (DEXA)",
-  "Funcional",
-];
+const TIPOS_EXAMEN = ["Laboratorio", "Imágenes", "Procedimientos"];
 
 const MARCAS_PERU = [
   "Panadol", "Velamox", "Clamoxin", "Augmentin", "Zitromax", "Ciproxina",
@@ -133,9 +138,20 @@ function emptyMedForm() {
 
 let perfil = loadPerfil();
 let draft = loadDraft();
-let screen = "inicio";
+let screen = "login";
+let panel = "paciente";
+let enfocarDni = false;
+let filtrosAbiertos = false;
+let detalleMed = false;
+let cuenta = null;
+let accesos = [];
+let adminAbierto = "";
+let adminQuery = "";
+let loginUsuario = "";
+let loginClave = "";
 let composer = null;
 let medForm = emptyMedForm();
+let cantidadManual = false;
 let examQuery = "";
 let examNombre = "";
 let dialog = null;
@@ -283,7 +299,15 @@ function header() {
   let title = "RecetAPP";
   let kicker = "";
   let onBack = null;
-  if (screen === "perfil") {
+  if (screen === "login") {
+    title = "RecetAPP";
+  } else if (screen === "receta") {
+    title = "Receta";
+    onBack = () => goto("inicio");
+  } else if (screen === "admin") {
+    title = "Admin";
+    onBack = () => goto("inicio");
+  } else if (screen === "perfil") {
     title = "Perfil";
     onBack = () => leavePerfil(false);
   } else if (screen === "listo") {
@@ -318,7 +342,7 @@ function header() {
     el("div", { class: "top-row" }, [
       onBack ? el("button", { type: "button", class: "icon-btn", "aria-label": "Volver", onclick: onBack }, ["←"]) : null,
       el("div", {}, [
-        screen === "inicio"
+        screen === "inicio" || screen === "login"
           ? el("div", { class: "brand" }, [
             el("img", { class: "logo", src: "logo.svg", alt: "LR" }),
             el("div", { class: "wordmark", text: "RecetAPP" }),
@@ -332,7 +356,23 @@ function header() {
 }
 
 function footer() {
-  if (screen === "inicio" || screen === "listo") return null;
+  if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
+  if (screen === "receta") {
+    const agregando = composer === "med" || composer === "exam";
+    return el("footer", { class: "footer" }, [
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy,
+        onclick: composer === "med" ? commitMed : composer === "exam" ? commitExam : generarPDF,
+      }, [agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF")]),
+    ]);
+  }
+  if (screen === "login") {
+    return el("footer", { class: "footer" }, [
+      el("button", { type: "button", class: "btn", disabled: busy, onclick: enviarLogin }, [busy ? "Ingresando…" : "Ingresar"]),
+    ]);
+  }
   let label = "Continuar";
   let action = next;
   if (screen === "perfil") {
@@ -356,6 +396,9 @@ function footer() {
 }
 
 function view() {
+  if (screen === "login") return viewLogin();
+  if (screen === "admin") return viewAdmin();
+  if (screen === "receta") return viewBoard();
   if (screen === "inicio") return viewInicio();
   if (screen === "perfil") return viewPerfil();
   if (screen === "listo") return viewListo();
@@ -380,6 +423,210 @@ function showError(message) {
   node.textContent = formError;
 }
 
+function viewLogin() {
+  const usuario = el("input", {
+    id: "login-usuario",
+    type: "text",
+    name: "username",
+    autocomplete: "username",
+    autocapitalize: "none",
+    spellcheck: "false",
+    maxlength: "40",
+    value: loginUsuario,
+  });
+  usuario.addEventListener("input", () => {
+    loginUsuario = cleanText(usuario.value, 40);
+  });
+  const clave = el("input", {
+    id: "login-clave",
+    type: "password",
+    name: "password",
+    autocomplete: "current-password",
+    maxlength: "80",
+    value: loginClave,
+  });
+  clave.addEventListener("input", () => {
+    loginClave = clave.value.slice(0, 80);
+  });
+  return el("section", { class: "screen stack" }, [
+    errorSlot(),
+    el("label", { class: "field", text: "Usuario" }, [usuario]),
+    el("label", { class: "field", text: "Contraseña" }, [clave]),
+  ]);
+}
+
+async function enviarLogin() {
+  if (busy) return;
+  busy = true;
+  showError("");
+  render();
+  const resultado = await entrar(loginUsuario, loginClave);
+  busy = false;
+  if (!resultado.ok) {
+    loginClave = "";
+    showError(resultado.error);
+    render();
+    return;
+  }
+  cuenta = resultado.cuenta;
+  loginClave = "";
+  screen = "inicio";
+  render();
+}
+
+function viewAdmin() {
+  const consulta = adminQuery.trim().toLowerCase();
+  const visibles = accesos.filter((item) => {
+    const texto = `${item.nombre || ""} ${item.username || ""}`.toLowerCase();
+    return !consulta || texto.includes(consulta);
+  }).slice(0, 4);
+  const buscar = el("input", {
+    id: "admin-q",
+    type: "search",
+    value: adminQuery,
+    maxlength: "40",
+    autocomplete: "off",
+    placeholder: "",
+  });
+  buscar.addEventListener("input", () => {
+    adminQuery = cleanText(buscar.value, 40);
+    render();
+    document.getElementById("admin-q")?.focus();
+  });
+  const filas = visibles.map((item) => {
+    const abierto = adminAbierto === item.id;
+    const vence = el("input", {
+      type: "date",
+      value: item.exp_at ? String(item.exp_at).slice(0, 10) : "",
+    });
+    return el("section", { class: abierto ? "fold is-open" : "fold" }, [
+      el("button", {
+        type: "button",
+        class: "fold-head",
+        "aria-expanded": abierto ? "true" : "false",
+        onclick: () => {
+          adminAbierto = abierto ? "" : item.id;
+          render();
+        },
+      }, [
+        el("span", { class: "fold-title", text: item.nombre || item.username }),
+        el("span", { class: "fold-sum", text: item.active === false ? "Suspendido" : item.username }),
+        el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+      ]),
+      el("div", { class: "fold-body" }, [
+        el("div", { class: "fold-inner stack" }, abierto ? [
+          el("button", {
+            type: "button",
+            class: item.active === false ? "link" : "text-danger",
+            onclick: () => cambiarAcceso(item, { active: item.active === false }),
+          }, [item.active === false ? "Activar" : "Suspender"]),
+          el("label", { class: "field", text: "Vence" }, [vence]),
+          el("button", {
+            type: "button",
+            class: "add-btn",
+            onclick: () => cambiarAcceso(item, { exp_at: vence.value ? new Date(`${vence.value}T23:59:59`).toISOString() : null }),
+          }, ["Guardar"]),
+        ] : []),
+      ]),
+    ]);
+  });
+  const nuevoAbierto = adminAbierto === "nuevo";
+  const usuario = el("input", { id: "nuevo-usuario", type: "text", maxlength: "40", autocomplete: "off" });
+  const nombre = el("input", { id: "nuevo-nombre", type: "text", maxlength: "120", autocomplete: "name" });
+  const clave = el("input", { id: "nuevo-clave", type: "password", maxlength: "80", autocomplete: "new-password" });
+  const venceNuevo = el("input", { id: "nuevo-vence", type: "date" });
+  return el("div", { class: "board" }, [
+    errorSlot(),
+    el("label", { class: "field", text: "Buscar" }, [buscar]),
+    ...filas,
+    accesos.length ? null : el("p", { class: "muted", text: "Sin accesos" }),
+    el("section", { class: nuevoAbierto ? "fold is-open" : "fold" }, [
+      el("button", {
+        type: "button",
+        class: "fold-head",
+        "aria-expanded": nuevoAbierto ? "true" : "false",
+        onclick: () => {
+          adminAbierto = nuevoAbierto ? "" : "nuevo";
+          render();
+        },
+      }, [
+        el("span", { class: "fold-title", text: "Nuevo" }),
+        el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+      ]),
+      el("div", { class: "fold-body" }, [
+        el("div", { class: "fold-inner stack" }, nuevoAbierto ? [
+          el("label", { class: "field", text: "Usuario" }, [usuario]),
+          el("label", { class: "field", text: "Nombre" }, [nombre]),
+          el("label", { class: "field", text: "Contraseña" }, [clave]),
+          el("label", { class: "field", text: "Vence" }, [venceNuevo]),
+          el("button", { type: "button", class: "add-btn", onclick: agregarAcceso }, ["Agregar"]),
+        ] : []),
+      ]),
+    ]),
+  ]);
+}
+
+async function cambiarAcceso(item, cambios) {
+  if (busy) return;
+  busy = true;
+  render();
+  try {
+    await actualizarAcceso(item.id, cambios);
+    accesos = await listarAccesos();
+    showError("");
+  } catch (error) {
+    showError(error.message || "No se pudo guardar.");
+  } finally {
+    busy = false;
+    if (screen === "admin") render();
+  }
+}
+
+async function agregarAcceso() {
+  if (busy) return;
+  busy = true;
+  render();
+  try {
+    await crearAcceso({
+      usuario: document.getElementById("nuevo-usuario")?.value || "",
+      nombre: document.getElementById("nuevo-nombre")?.value || "",
+      password: document.getElementById("nuevo-clave")?.value || "",
+      vence: document.getElementById("nuevo-vence")?.value
+        ? new Date(`${document.getElementById("nuevo-vence").value}T23:59:59`).toISOString()
+        : null,
+    });
+    accesos = await listarAccesos();
+    showError("");
+  } catch (error) {
+    showError(error.message || "No se pudo crear.");
+  } finally {
+    busy = false;
+    if (screen === "admin") render();
+  }
+}
+
+async function abrirAdmin() {
+  accesos = [];
+  screen = "admin";
+  formError = "";
+  render();
+  try {
+    accesos = await listarAccesos();
+  } catch (error) {
+    showError(error.message || "No se pudo cargar.");
+  }
+  if (screen === "admin") render();
+}
+
+async function salirDeLaApp() {
+  await salir();
+  cuenta = null;
+  loginUsuario = "";
+  loginClave = "";
+  screen = "login";
+  render();
+}
+
 function viewInicio() {
   const blocks = [
     el("button", { type: "button", class: "profile-row", onclick: () => openPerfil("inicio") }, [
@@ -393,6 +640,13 @@ function viewInicio() {
     el("button", { type: "button", class: "cta", onclick: startNew }, [
       el("span", { class: "cta-title", text: "Nueva receta" }),
     ]),
+    cuenta?.isAdmin ? el("button", { type: "button", class: "secondary-card", onclick: abrirAdmin }, [
+      el("div", { class: "profile-name", text: "Admin" }),
+      el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
+    ]) : null,
+    el("button", { type: "button", class: "secondary-card", onclick: salirDeLaApp }, [
+      el("div", { class: "profile-name", text: "Salir" }),
+    ]),
   ];
   if (hasMeaningfulDraft()) {
     blocks.push(el("button", { type: "button", class: "secondary-card", onclick: resume }, [
@@ -403,47 +657,77 @@ function viewInicio() {
       el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
     ]));
   }
-  return el("section", { class: "screen stack" }, blocks);
+  return el("section", { class: "screen stack home" }, blocks);
 }
 
 function viewPerfil() {
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    field("Nombre", "p-nombre", perfil.nombre, "text", ""),
-    field("CMP", "p-cmp", perfil.cmp, "text", "12345"),
-    field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general"),
-    field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111"),
-    field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe"),
+    field("Nombre", "p-nombre", perfil.nombre, "text", "", null, { autocomplete: "name", name: "name" }),
+    field("CMP", "p-cmp", perfil.cmp, "text", "12345", null, { autocomplete: "on", name: "cmp" }),
+    field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general", null, { autocomplete: "organization-title", name: "organization-title" }),
+    field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111", null, { autocomplete: "tel", name: "tel", inputmode: "tel" }),
+    field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe", null, { autocomplete: "email", name: "email" }),
   ]);
 }
 
 function viewPaciente() {
-  return el("section", { class: "screen stack" }, [
-    errorSlot(),
+  const gente = loadPacientes();
+  const alCambiarDni = (input) => {
+    const previo = pacientePorDni(gente, draft.pacienteDNI);
+    draft.pacienteDNI = onlyDigits(input.value, 8);
+    input.value = draft.pacienteDNI;
+    const conocido = pacientePorDni(gente, draft.pacienteDNI);
+    if (conocido) {
+      applyPaciente(conocido);
+    } else if (previo && draft.pacienteNombre === previo.nombre && draft.pacienteEdad === previo.edad && draft.pacienteSexo === (previo.sexo || "")) {
+      draft.pacienteNombre = "";
+      draft.pacienteEdad = "";
+      draft.pacienteSexo = "";
+      const nombre = document.getElementById("paciente-nombre");
+      const edad = document.getElementById("paciente-edad");
+      if (nombre) nombre.value = "";
+      if (edad) edad.value = "";
+      document.querySelectorAll("[data-sexo]").forEach((button) => {
+        button.classList.toggle("is-on", button.getAttribute("data-sexo") === "");
+      });
+      saveDraft();
+      pintarResumen("paciente");
+    } else {
+      saveDraft();
+      pintarResumen("paciente");
+    }
+    paintPacSuggestions();
+    if (/^\d{8}$/.test(draft.pacienteDNI)) consultarNombre(draft.pacienteDNI);
+  };
+  const dni = field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", alCambiarDni, { autocomplete: "on", name: "dni", inputmode: "numeric", maxlength: "8", list: "lista-dni" });
+  dni.querySelector("input").addEventListener("change", () => alCambiarDni(dni.querySelector("input")));
+  const section = el("section", { class: "screen stack" }, [
+    dni,
+    el("div", { id: "pac-suggest", class: "suggestions" }),
     field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
+      const exactos = gente.filter((paciente) => paciente.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase());
+      if (exactos.length === 1) applyPaciente(exactos[0]);
       saveDraft();
-    }),
-    field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", (input) => {
-      draft.pacienteDNI = onlyDigits(input.value, 8);
-      input.value = draft.pacienteDNI;
-      saveDraft();
-    }),
+      pintarResumen("paciente");
+      paintPacSuggestions();
+    }, { autocomplete: "name", name: "name", list: "lista-nombres" }),
     el("div", { class: "two" }, [
       field("Edad", "paciente-edad", draft.pacienteEdad, "text", "", (input) => {
         draft.pacienteEdad = onlyDigits(input.value, 3);
         input.value = draft.pacienteEdad;
         saveDraft();
-      }),
+      }, { autocomplete: "on", name: "edad", inputmode: "numeric", maxlength: "3" }),
       field("Fecha", "paciente-fecha", draft.fechaAtencion, "date", "", (input) => {
         draft.fechaAtencion = input.value;
         saveDraft();
-      }),
+      }, { autocomplete: "on", name: "fecha" }),
     ]),
     field("Hora", "paciente-hora", draft.horaAtencion, "time", "", (input) => {
       draft.horaAtencion = input.value;
       saveDraft();
-    }),
+    }, { autocomplete: "on", name: "hora" }),
     el("div", {}, [
       el("div", { class: "profile-name", text: "Sexo" }),
       el("div", { class: "segment", role: "group", "aria-label": "Sexo" }, [
@@ -452,13 +736,27 @@ function viewPaciente() {
         sexButton("F", "Femenino"),
       ]),
     ]),
+    el("datalist", { id: "lista-dni" }, gente.filter((paciente) => paciente.dni).map((paciente) => (
+      el("option", { value: paciente.dni, label: paciente.nombre })
+    ))),
+    el("datalist", { id: "lista-nombres" }, gente.map((paciente) => (
+      el("option", { value: paciente.nombre, label: paciente.dni || "" })
+    ))),
   ]);
+  queueMicrotask(() => {
+    paintPacSuggestions();
+    if (!enfocarDni) return;
+    enfocarDni = false;
+    document.getElementById("paciente-dni")?.focus();
+  });
+  return section;
 }
 
 function sexButton(value, label) {
   return el("button", {
     type: "button",
     class: draft.pacienteSexo === value ? "is-on" : "",
+    "data-sexo": value,
     onclick: () => {
       draft.pacienteSexo = value;
       saveDraft();
@@ -467,21 +765,137 @@ function sexButton(value, label) {
   }, [label]);
 }
 
+function loadPacientes() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PACIENTES_KEY) || "[]");
+    if (!Array.isArray(raw)) return [];
+    return raw.map((item) => ({
+      nombre: cleanText(item?.nombre, 120),
+      dni: onlyDigits(item?.dni, 8),
+      edad: onlyDigits(item?.edad, 3),
+      sexo: ["M", "F"].includes(item?.sexo) ? item.sexo : "",
+    })).filter((item) => item.nombre).slice(0, 80);
+  } catch {
+    return [];
+  }
+}
+
+function rememberPaciente() {
+  if (!draft.pacienteNombre) return;
+  const entry = {
+    nombre: draft.pacienteNombre,
+    dni: draft.pacienteDNI,
+    edad: draft.pacienteEdad,
+    sexo: draft.pacienteSexo,
+  };
+  const resto = loadPacientes().filter((paciente) => {
+    if (entry.dni && paciente.dni === entry.dni) return false;
+    return paciente.nombre.toLowerCase() !== entry.nombre.toLowerCase();
+  });
+  localStorage.setItem(PACIENTES_KEY, JSON.stringify([entry, ...resto].slice(0, 80)));
+}
+
+const consultasDni = new Map();
+
+function consultarNombre(dni) {
+  let pendiente = consultasDni.get(dni);
+  if (!pendiente) {
+    pendiente = fetch(`/api/dni?numero=${encodeURIComponent(dni)}`)
+      .then(async (respuesta) => {
+        if (!respuesta.ok) return "";
+        const data = await respuesta.json();
+        return cleanText(data?.nombre, 120);
+      })
+      .catch(() => "")
+      .finally(() => consultasDni.delete(dni));
+    consultasDni.set(dni, pendiente);
+  }
+  pendiente.then((nombre) => {
+    if (!nombre || draft.pacienteDNI !== dni) return;
+    draft.pacienteNombre = nombre;
+    const nodo = document.getElementById("paciente-nombre");
+    if (nodo) nodo.value = nombre;
+    saveDraft();
+    pintarResumen("paciente");
+  });
+}
+
+function applyPaciente(paciente) {
+  draft.pacienteNombre = paciente.nombre;
+  draft.pacienteDNI = paciente.dni;
+  draft.pacienteEdad = paciente.edad;
+  draft.pacienteSexo = paciente.sexo || "";
+  const assign = (id, value) => {
+    const node = document.getElementById(id);
+    if (node) node.value = value;
+  };
+  assign("paciente-nombre", draft.pacienteNombre);
+  assign("paciente-dni", draft.pacienteDNI);
+  assign("paciente-edad", draft.pacienteEdad);
+  document.querySelectorAll("[data-sexo]").forEach((button) => {
+    button.classList.toggle("is-on", button.getAttribute("data-sexo") === draft.pacienteSexo);
+  });
+  saveDraft();
+  pintarResumen("paciente");
+}
+
+function pintarResumen(id) {
+  if (panel !== id) return;
+  const sum = document.querySelector(".fold.is-open .fold-sum");
+  if (sum) sum.textContent = resumenPaso(id);
+}
+
+function paintPacSuggestions() {
+  const box = document.getElementById("pac-suggest");
+  if (!box) return;
+  const nombre = document.getElementById("paciente-nombre")?.value || "";
+  const dni = document.getElementById("paciente-dni")?.value || "";
+  const vistos = new Set();
+  const matches = [...buscarPacientes(loadPacientes(), nombre), ...buscarPacientes(loadPacientes(), dni)]
+    .filter((paciente) => {
+      const clave = `${paciente.dni}|${paciente.nombre}`;
+      if (vistos.has(clave)) return false;
+      vistos.add(clave);
+      const yaEsta = paciente.nombre === draft.pacienteNombre && paciente.dni === draft.pacienteDNI && paciente.edad === draft.pacienteEdad;
+      return !yaEsta;
+    }).slice(0, 2);
+  box.replaceChildren(...matches.map((paciente) => {
+    const button = el("button", { type: "button", class: "suggestion" }, [
+      el("strong", { text: paciente.dni || paciente.nombre }),
+      el("small", { text: [paciente.dni ? paciente.nombre : "", paciente.edad ? `${paciente.edad} años` : "", paciente.sexo].filter(Boolean).join(" · ") }),
+    ]);
+    button.addEventListener("click", () => {
+      applyPaciente(paciente);
+      paintPacSuggestions();
+    });
+    return button;
+  }));
+}
+
 function viewDiagnostico() {
   const section = el("section", { class: "screen stack" }, [
-    errorSlot(),
+    el("button", {
+      type: "button",
+      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        filtrosAbiertos = !filtrosAbiertos;
+        goto("diagnostico");
+      },
+    }, ["Filtros"]),
   ]);
-  section.append(chipRow(SISTEMAS, draft.filtroSistema, (value) => {
-    draft.filtroSistema = draft.filtroSistema === value ? "" : value;
-    saveDraft();
-    goto("diagnostico");
-  }));
-  section.append(chipRow(TIPOS.map((tipo) => tipo.label), labelTipo(draft.filtroTipo), (label) => {
-    const found = TIPOS.find((tipo) => tipo.label === label);
-    draft.filtroTipo = draft.filtroTipo === found.id ? "" : found.id;
-    saveDraft();
-    goto("diagnostico");
-  }));
+  if (filtrosAbiertos) {
+    const sistema = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...SISTEMAS.map((nombre) => el("option", { value: nombre, text: nombre })),
+    ]);
+    sistema.value = draft.filtroSistema;
+    sistema.addEventListener("change", () => {
+      draft.filtroSistema = SISTEMAS.includes(sistema.value) ? sistema.value : "";
+      saveDraft();
+      paintDxSuggestions();
+    });
+    section.append(el("label", { class: "field", text: "Sistema" }, [sistema]));
+  }
   const search = el("input", {
     id: "dx-query",
     type: "text",
@@ -519,7 +933,6 @@ function viewMedicamentos() {
     ? draft.medicamentos.map(medCard)
     : [el("p", { class: "muted", text: "Sin medicamentos" })];
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     ...list,
     el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]),
   ]);
@@ -527,7 +940,6 @@ function viewMedicamentos() {
 
 function viewMedComposer() {
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     (() => {
       const input = el("input", {
         id: "med-q",
@@ -544,20 +956,35 @@ function viewMedComposer() {
       return el("label", { class: "field", text: "Buscar" }, [input]);
     })(),
     el("div", { id: "med-suggest", class: "suggestions" }),
+    el("button", {
+      type: "button",
+      class: detalleMed ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        detalleMed = !detalleMed;
+        goto("medicamentos");
+      },
+    }, ["Detalle"]),
+    ...(detalleMed ? [
     medInput("Nombre", "med-nombre", "nombre", "Paracetamol"),
-    medInput("Presentación", "med-presentacion", "presentacion", "500 mg tabletas"),
     el("div", { class: "two" }, [
-      medInput("Cantidad", "med-cantidad", "cantidad", "20 tabletas"),
-      medInput("Dosis", "med-dosis", "dosis", "500 mg"),
+      medInput("Presentación", "med-presentacion", "presentacion", "500 mg"),
+      medInput("Cantidad", "med-cantidad", "cantidad", "20"),
     ]),
-    selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
-      medForm.frecuencia = value;
-    }),
-    medInput("Duración", "med-duracion", "duracion", "7"),
-    selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
-      medForm.via = value;
-    }),
+    el("div", { class: "two" }, [
+      medInput("Dosis", "med-dosis", "dosis", "500 mg"),
+      medInput("Duración", "med-duracion", "duracion", "7"),
+    ]),
+    el("div", { class: "two" }, [
+      selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
+        medForm.frecuencia = value;
+        syncCantidad();
+      }),
+      selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
+        medForm.via = value;
+      }),
+    ]),
     medInput("Indicaciones", "med-indicaciones", "indicaciones", "Con alimentos"),
+    ] : []),
   ]);
 }
 
@@ -566,7 +993,6 @@ function viewExamenes() {
     ? draft.examenes.map(examCard)
     : [el("p", { class: "muted", text: "Sin exámenes" })];
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
     ...list,
     el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]),
   ]);
@@ -574,16 +1000,28 @@ function viewExamenes() {
 
 function viewExamComposer() {
   const section = el("section", { class: "screen stack" }, [
-    errorSlot(),
+    el("button", {
+      type: "button",
+      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        filtrosAbiertos = !filtrosAbiertos;
+        goto("examenes");
+      },
+    }, ["Filtros"]),
   ]);
-  section.append(chipRow(TIPOS_EXAMEN, draft.filtroExamen, (value) => {
-    draft.filtroExamen = draft.filtroExamen === value ? "" : value;
-    saveDraft();
-    paintExamSuggestions();
-    section.querySelectorAll(".chips button").forEach((button) => {
-      button.classList.toggle("is-on", button.textContent === draft.filtroExamen);
+  if (filtrosAbiertos) {
+    const tipo = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...TIPOS_EXAMEN.map((nombre) => el("option", { value: nombre, text: nombre })),
+    ]);
+    tipo.value = draft.filtroExamen;
+    tipo.addEventListener("change", () => {
+      draft.filtroExamen = TIPOS_EXAMEN.includes(tipo.value) ? tipo.value : "";
+      saveDraft();
+      paintExamSuggestions();
     });
-  }));
+    section.append(el("label", { class: "field", text: "Tipo" }, [tipo]));
+  }
   const search = el("input", {
     id: "exam-q",
     type: "search",
@@ -625,7 +1063,7 @@ function viewIndicaciones() {
     saveDraft();
   });
   return el("section", { class: "screen stack" }, [
-    errorSlot(),
+    el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
     el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
 }
@@ -639,6 +1077,7 @@ function viewRevision() {
       perfil.cmp ? `CMP ${perfil.cmp}` : "—",
     ]),
     reviewBlock("Paciente", "paciente", [
+      draft.pacienteDNI ? `HC ${draft.pacienteDNI}` : "HC —",
       draft.pacienteNombre || "—",
       `Edad ${draft.pacienteEdad || "—"} · ${sexo}`,
       `${draft.fechaAtencion || "—"}${draft.horaAtencion ? ` · ${draft.horaAtencion}` : ""}`,
@@ -655,7 +1094,7 @@ function viewRevision() {
 }
 
 function viewListo() {
-  return el("section", { class: "screen" }, [
+  return el("section", { class: "screen stack home" }, [
     el("div", { class: "success-mark", text: "✓" }),
     el("button", { type: "button", class: "cta", onclick: startNew }, [
       el("span", { class: "cta-title", text: "Nueva receta" }),
@@ -666,14 +1105,17 @@ function viewListo() {
   ]);
 }
 
-function field(label, id, value, type, placeholder, onInput) {
+function field(label, id, value, type, placeholder, onInput, extra = {}) {
   const input = el("input", {
     id,
     type,
+    name: extra.name || id,
     value: value ?? "",
     placeholder,
-    autocomplete: id.startsWith("paciente") ? "off" : "on",
-    maxlength: type === "email" ? "120" : "120",
+    autocomplete: extra.autocomplete || "on",
+    inputmode: extra.inputmode,
+    maxlength: extra.maxlength || (type === "email" ? "120" : "120"),
+    list: extra.list,
   });
   if (onInput) input.addEventListener("input", () => onInput(input));
   return el("label", { class: "field", text: label }, [input]);
@@ -691,6 +1133,8 @@ function medInput(label, id, key, placeholder) {
   input.addEventListener("input", () => {
     const max = key === "indicaciones" ? 240 : key === "nombre" ? 120 : 80;
     medForm[key] = cleanText(input.value, max);
+    if (key === "cantidad") cantidadManual = true;
+    if (key === "duracion" || key === "presentacion") syncCantidad();
   });
   return el("label", { class: "field", text: label }, [input]);
 }
@@ -711,10 +1155,6 @@ function chipRow(labels, current, onPick) {
     class: label === current ? "is-on" : "",
     onclick: () => onPick(label),
   }, [label])));
-}
-
-function labelTipo(id) {
-  return TIPOS.find((tipo) => tipo.id === id)?.label || "";
 }
 
 function medCard(med) {
@@ -773,7 +1213,7 @@ function paintDxSuggestions() {
     const sistema = !draft.filtroSistema || String(dx.sistema || "").toLowerCase().includes(draft.filtroSistema.toLowerCase());
     const tipo = !draft.filtroTipo || dx.tipo === draft.filtroTipo;
     return text && sistema && tipo;
-  }).slice(0, 12);
+  }).slice(0, 2);
   box.replaceChildren(...matches.map((dx) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${dx.codigo} — ${dx.descripcion}` }),
@@ -814,13 +1254,13 @@ function paintMedSuggestions() {
     .map((med) => ({ med, score: scoreMed(med, term) }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score || a.med.dci.localeCompare(b.med.dci, "es"))
-    .slice(0, 12)
+    .slice(0, 2)
     .map((item) => item.med);
   box.replaceChildren(...matches.map((med) => {
     const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${med.dci} — ${med.presentacion}` }),
-      el("small", { text: [med.grupo, med.via, med.atc ? `ATC ${med.atc}` : ""].filter(Boolean).join(" · ") }),
+      el("small", { text: [med.grupo, med.via, dosisReferencia(med), med.atc ? `ATC ${med.atc}` : ""].filter(Boolean).join(" · ") }),
       peru.length ? el("small", { text: `Perú: ${peru.join(", ")}` }) : null,
     ]);
     button.addEventListener("click", () => applyMed(med));
@@ -832,7 +1272,10 @@ function applyMed(med) {
   medForm.nombre = cleanText(med.dci, 120);
   medForm.presentacion = cleanText(med.presentacion, 80);
   medForm.via = VIAS.find((via) => via === med.via) || "";
+  medForm.dosis = dosisReferencia(med) || medForm.dosis;
   medForm.q = cleanText(`${med.dci} (${med.presentacion})`, 80);
+  cantidadManual = false;
+  const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
   const assign = (id, value) => {
     const node = document.getElementById(id);
     if (node) node.value = value;
@@ -841,8 +1284,29 @@ function applyMed(med) {
   assign("med-nombre", medForm.nombre);
   assign("med-presentacion", medForm.presentacion);
   assign("med-via", medForm.via);
+  assign("med-dosis", medForm.dosis);
+  const notas = document.getElementById("med-indicaciones");
+  if (notas && peru.length) notas.placeholder = `Marcas: ${peru.join(", ")}`;
+  syncCantidad();
   const box = document.getElementById("med-suggest");
   if (box) box.replaceChildren();
+}
+
+function syncCantidad() {
+  if (cantidadManual) return;
+  const cantidad = calcularCantidad(medForm.presentacion, medForm.frecuencia, medForm.duracion);
+  if (!cantidad && !medForm.cantidad) return;
+  medForm.cantidad = cantidad;
+  const node = document.getElementById("med-cantidad");
+  if (node) node.value = cantidad;
+}
+
+function completarIndicaciones(area) {
+  const texto = indicacionesAutomaticas(draft);
+  if (!texto) return;
+  draft.indicacionesGenerales = texto;
+  if (area) area.value = texto;
+  saveDraft();
 }
 
 function paintExamSuggestions() {
@@ -854,14 +1318,14 @@ function paintExamSuggestions() {
     return;
   }
   const matches = examenesCatalogo.filter((ex) => {
-    const text = !term || ex.nombre.toLowerCase().includes(term);
+    const text = !term || [ex.nombre, ex.alias, ex.grupo].some((value) => String(value || "").toLowerCase().includes(term));
     const tipo = !draft.filtroExamen || ex.tipo === draft.filtroExamen;
     return text && tipo;
-  }).slice(0, 12);
+  }).slice(0, 2);
   box.replaceChildren(...matches.map((ex) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: ex.nombre }),
-      el("small", { text: ex.tipo || "" }),
+      el("small", { text: [ex.tipo, ex.grupo, ex.alias && ex.alias !== ex.nombre ? ex.alias : ""].filter(Boolean).join(" · ") }),
     ]);
     button.addEventListener("click", () => {
       examNombre = cleanText(ex.nombre, 160);
@@ -878,7 +1342,11 @@ function paintExamSuggestions() {
 
 function openComposer(kind) {
   showError("");
-  if (kind === "med") medForm = emptyMedForm();
+  if (kind === "med") {
+    medForm = emptyMedForm();
+    cantidadManual = false;
+    detalleMed = false;
+  }
   if (kind === "exam") {
     examQuery = "";
     examNombre = "";
@@ -947,7 +1415,11 @@ function next() {
       showError(error);
       return;
     }
+    rememberPaciente();
     saveDraft();
+  }
+  if (screen === "examenes" && !draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
   }
   const index = wizardIndex();
   if (index < 0 || index >= WIZARD.length - 1) return;
@@ -990,6 +1462,7 @@ async function startNew() {
   }
   draft = emptyDraft();
   composer = null;
+  enfocarDni = true;
   saveDraft();
   goto("paciente");
 }
@@ -999,11 +1472,90 @@ function resume() {
   goto(WIZARD.some((step) => step.id === draft.screen) ? draft.screen : "paciente");
 }
 
+function resumenPaso(id) {
+  if (id === "paciente") return draft.pacienteNombre || draft.pacienteDNI || "Sin paciente";
+  if (id === "diagnostico") return draft.diagnostico || "Sin diagnóstico";
+  if (id === "medicamentos") return draft.medicamentos.length ? String(draft.medicamentos.length) : "Ninguno";
+  if (id === "examenes") return draft.examenes.length ? String(draft.examenes.length) : "Ninguno";
+  return draft.indicacionesGenerales ? "Listas" : "Vacías";
+}
+
+function cuerpoPaso(id) {
+  if (id === "paciente") return viewPaciente();
+  if (id === "diagnostico") return viewDiagnostico();
+  if (id === "medicamentos") return composer === "med" ? viewMedComposer() : viewMedicamentos();
+  if (id === "examenes") return composer === "exam" ? viewExamComposer() : viewExamenes();
+  return viewIndicaciones();
+}
+
+function abrirPanel(id) {
+  if (panel === "paciente" && id !== "paciente") rememberPaciente();
+  const estaba = screen === "receta" && panel === "paciente";
+  if (panel !== id) {
+    filtrosAbiertos = false;
+    if (id !== "medicamentos") detalleMed = false;
+    if (id !== "medicamentos" && id !== "examenes") composer = null;
+  }
+  panel = panel === id ? "" : id;
+  if (panel === "paciente" && !estaba) enfocarDni = true;
+  if (!panel) composer = null;
+  if (panel === "indicaciones" && !draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+  }
+  draft.screen = panel || "paciente";
+  saveDraft();
+  render();
+}
+
+function fold(id, titulo) {
+  const abierto = panel === id;
+  return el("section", { class: abierto ? "fold is-open" : "fold" }, [
+    el("button", {
+      type: "button",
+      class: "fold-head",
+      "aria-expanded": abierto ? "true" : "false",
+      onclick: () => abrirPanel(id),
+    }, [
+      el("span", { class: "fold-title", text: titulo }),
+      el("span", { class: "fold-sum", text: resumenPaso(id) }),
+      el("span", { class: "fold-chev", "aria-hidden": "true", text: "›" }),
+    ]),
+    el("div", { class: "fold-body" }, [
+      el("div", { class: "fold-inner" }, abierto ? [cuerpoPaso(id)] : []),
+    ]),
+  ]);
+}
+
+function viewBoard() {
+  return el("div", { class: "board" }, [
+    errorSlot(),
+    fold("paciente", "Paciente"),
+    fold("diagnostico", "Diagnóstico"),
+    fold("medicamentos", "Medicamentos"),
+    fold("examenes", "Exámenes"),
+    fold("indicaciones", "Indicaciones"),
+  ]);
+}
+
 function goto(id) {
   formError = "";
-  if (id !== "medicamentos" && id !== "examenes") composer = null;
+  if (WIZARD.some((step) => step.id === id)) {
+    if (id !== "medicamentos" && id !== "examenes") composer = null;
+    const estaba = screen === "receta" && panel === "paciente";
+    if (panel === "paciente" && id !== "paciente") rememberPaciente();
+    panel = id === "revision" ? "indicaciones" : id;
+    if (panel === "paciente" && !estaba) enfocarDni = true;
+    if (panel === "indicaciones" && !draft.indicacionesGenerales.trim()) {
+      draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+    }
+    screen = "receta";
+    draft.screen = panel;
+    saveDraft();
+    render();
+    return;
+  }
+  composer = null;
   screen = id;
-  if (WIZARD.some((step) => step.id === id)) saveDraft();
   render();
 }
 
@@ -1058,6 +1610,10 @@ function generarPDF() {
     showError("Agrega al menos un medicamento o un examen.");
     return;
   }
+  if (!draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+  }
+  rememberPaciente();
   const jsPDF = window.jspdf?.jsPDF;
   if (!jsPDF) {
     showError("No se pudo cargar el generador de PDF.");
@@ -1111,7 +1667,7 @@ function generarPDF() {
     const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "";
     let datos = `Edad: ${draft.pacienteEdad} años`;
     if (sexo) datos += ` | Sexo: ${sexo}`;
-    if (draft.pacienteDNI) datos += ` | DNI: ${draft.pacienteDNI}`;
+    if (draft.pacienteDNI) datos += ` | HC: ${draft.pacienteDNI}`;
     y = writeLine(doc, datos, margin, y, width);
     const fecha = new Date(`${draft.fechaAtencion}T00:00:00`).toLocaleDateString("es-PE", {
       year: "numeric", month: "long", day: "numeric",
@@ -1188,4 +1744,13 @@ function generarPDF() {
   }
 }
 
-render();
+async function boot() {
+  render();
+  const guardada = await cuentaGuardada();
+  if (!guardada) return;
+  cuenta = guardada;
+  screen = "inicio";
+  render();
+}
+
+boot();

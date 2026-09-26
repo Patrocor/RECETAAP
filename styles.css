@@ -15,7 +15,7 @@
 
 * { box-sizing: border-box; }
 
-html, body { margin: 0; height: 100%; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
 
 body {
   background: #0e1428;
@@ -25,21 +25,23 @@ body {
 button, input, select, textarea { font: inherit; color: inherit; }
 
 .app {
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .shell {
   position: relative;
   max-width: 440px;
-  min-height: 100dvh;
+  height: 100dvh;
   margin: 0 auto;
   background: var(--bg);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .top {
-  padding: calc(14px + env(safe-area-inset-top)) 16px 12px;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 8px;
   background: var(--ink);
   color: white;
 }
@@ -118,8 +120,133 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .main {
   flex: 1;
-  overflow: auto;
-  padding: 18px 16px 24px;
+  min-height: 0;
+  overflow: hidden;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main > .screen,
+.main > .board {
+  flex: 1;
+  min-height: 0;
+}
+
+.screen {
+  animation: rise 220ms ease;
+}
+
+.board {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fold {
+  flex: none;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  min-height: 0;
+}
+
+.fold.is-open {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fold-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fold-title { font-weight: 700; }
+.fold-sum {
+  margin-left: auto;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 450;
+  max-width: 52%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fold-chev {
+  color: var(--ink-soft);
+}
+
+.fold.is-open .fold-chev { animation: chev-open 220ms ease; transform: rotate(90deg); }
+
+.fold-body {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.fold.is-open .fold-body {
+  grid-template-rows: 1fr;
+  animation: unfold 220ms ease;
+}
+
+.fold-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.fold.is-open .fold-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 4px;
+  animation: rise 220ms ease;
+}
+
+.fold.is-open .screen {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  animation: none;
+}
+
+.fold.is-open .stack { gap: 4px; }
+.fold.is-open input,
+.fold.is-open select,
+.fold.is-open textarea { padding: 6px 10px; }
+.fold.is-open .add-btn { padding: 6px 10px; }
+
+.home {
+  flex: 1;
+  min-height: 0;
+  justify-content: center;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes unfold {
+  from { grid-template-rows: 0fr; }
+  to { grid-template-rows: 1fr; }
+}
+
+@keyframes chev-open {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen, .fold-body, .fold-chev, .fold-inner, .home > * { animation: none; transition: none; }
 }
 
 .screen h2 {
@@ -161,10 +288,18 @@ button, input, select, textarea { font: inherit; color: inherit; }
   gap: 12px;
   background: var(--card);
   border-radius: 16px;
-  padding: 14px;
+  padding: 12px 14px;
   box-shadow: var(--shadow);
-  margin-bottom: 12px;
 }
+
+.home > * {
+  animation: rise 280ms ease both;
+}
+
+.home > *:nth-child(2) { animation-delay: 40ms; }
+.home > *:nth-child(3) { animation-delay: 80ms; }
+.home > *:nth-child(4) { animation-delay: 120ms; }
+.home > *:nth-child(5) { animation-delay: 160ms; }
 
 .cta {
   display: flex;
@@ -173,8 +308,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   background: var(--accent);
   color: white;
   border-radius: 18px;
-  padding: 18px;
-  margin: 8px 0 12px;
+  padding: 14px 16px;
   box-shadow: 0 12px 24px rgba(47, 75, 158, 0.28);
 }
 
@@ -205,20 +339,22 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .profile-sub, .muted { color: var(--ink-soft); font-size: 13px; }
 .chev { margin-left: auto; color: var(--ink-soft); font-size: 22px; }
 
-.stack { display: flex; flex-direction: column; gap: 12px; }
+.stack { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
 
-label.field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 650; }
+label.field { display: flex; flex-direction: column; gap: 3px; font-size: 12px; font-weight: 650; }
 
 input, select, textarea {
   width: 100%;
   border: 1px solid var(--line);
   background: white;
   border-radius: 12px;
-  padding: 12px 12px;
+  padding: 7px 10px;
   font-weight: 450;
 }
 
-textarea { min-height: 140px; resize: vertical; }
+textarea { min-height: 0; height: 72px; resize: none; }
+
+.fold.is-open textarea { flex: 1; height: auto; }
 
 input:focus, select:focus, textarea:focus {
   outline: 2px solid rgba(47, 75, 158, 0.35);
@@ -239,7 +375,7 @@ input:focus, select:focus, textarea:focus {
   border: 0;
   background: transparent;
   border-radius: 10px;
-  padding: 10px 6px;
+  padding: 7px 4px;
   cursor: pointer;
   color: var(--ink-soft);
 }
@@ -251,10 +387,9 @@ input:focus, select:focus, textarea:focus {
 
 .chips {
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  margin: 0 0 8px;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
 }
 
 .chips button, .link, .text-danger, .add-btn {
@@ -281,28 +416,28 @@ input:focus, select:focus, textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 8px;
+  overflow: hidden;
 }
 
 .suggestion {
   text-align: left;
   border: 0;
   background: white;
-  border-radius: 14px;
-  padding: 10px 12px;
+  border-radius: 12px;
+  padding: 6px 10px;
   box-shadow: var(--shadow);
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .suggestion small { color: var(--ink-soft); }
 
 .item, .review {
   background: white;
-  border-radius: 16px;
-  padding: 14px;
+  border-radius: 14px;
+  padding: 8px 10px;
   box-shadow: var(--shadow);
 }
 
@@ -321,24 +456,32 @@ input:focus, select:focus, textarea:focus {
 
 .add-btn {
   border-radius: 14px;
-  padding: 14px;
+  padding: 8px 12px;
   border: 1px dashed rgba(47, 75, 158, 0.45);
   color: var(--accent);
   font-weight: 700;
   background: rgba(47, 75, 158, 0.05);
 }
 
+.add-btn.is-on {
+  background: var(--ink);
+  color: white;
+  border-style: solid;
+}
+
 .banner {
   background: #fff1f2;
   color: var(--danger);
   border-radius: 12px;
-  padding: 10px 12px;
-  margin: 0 0 12px;
-  font-size: 14px;
+  padding: 8px 10px;
+  margin: 0;
+  font-size: 13px;
 }
 
+.banner[hidden] { display: none; }
+
 .footer {
-  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
   background: white;
   border-top: 1px solid var(--line);
 }
@@ -347,7 +490,7 @@ input:focus, select:focus, textarea:focus {
   width: 100%;
   border: 0;
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 12px 16px;
   background: var(--accent);
   color: white;
   font-weight: 700;

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/dni.js": {
+      "maxDuration": 10
+    }
+  }
+}
