@@ -9,8 +9,16 @@ import {
   perfilListo,
   fileSlug,
 } from "./sanitize.js";
+import {
+  buscarPacientes,
+  calcularCantidad,
+  dosisReferencia,
+  indicacionesAutomaticas,
+  pacientePorDni,
+} from "./automatizar.js";
 
 const PERFIL_KEY = "recetapp.perfil";
+const PACIENTES_KEY = "recetapp.pacientes";
 const DRAFT_KEY = "recetapp.borrador";
 
 const WIZARD = [
@@ -136,6 +144,7 @@ let draft = loadDraft();
 let screen = "inicio";
 let composer = null;
 let medForm = emptyMedForm();
+let cantidadManual = false;
 let examQuery = "";
 let examNombre = "";
 let dialog = null;
@@ -409,41 +418,49 @@ function viewInicio() {
 function viewPerfil() {
   return el("section", { class: "screen stack" }, [
     errorSlot(),
-    field("Nombre", "p-nombre", perfil.nombre, "text", ""),
-    field("CMP", "p-cmp", perfil.cmp, "text", "12345"),
-    field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general"),
-    field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111"),
-    field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe"),
+    field("Nombre", "p-nombre", perfil.nombre, "text", "", null, { autocomplete: "name", name: "name" }),
+    field("CMP", "p-cmp", perfil.cmp, "text", "12345", null, { autocomplete: "on", name: "cmp" }),
+    field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general", null, { autocomplete: "organization-title", name: "organization-title" }),
+    field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111", null, { autocomplete: "tel", name: "tel", inputmode: "tel" }),
+    field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe", null, { autocomplete: "email", name: "email" }),
   ]);
 }
 
 function viewPaciente() {
-  return el("section", { class: "screen stack" }, [
+  const gente = loadPacientes();
+  const section = el("section", { class: "screen stack" }, [
     errorSlot(),
     field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
+      const exactos = gente.filter((paciente) => paciente.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase());
+      if (exactos.length === 1) applyPaciente(exactos[0]);
       saveDraft();
-    }),
+      paintPacSuggestions();
+    }, { autocomplete: "name", name: "name", list: "lista-nombres" }),
     field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", (input) => {
       draft.pacienteDNI = onlyDigits(input.value, 8);
       input.value = draft.pacienteDNI;
+      const conocido = pacientePorDni(gente, draft.pacienteDNI);
+      if (conocido) applyPaciente(conocido);
       saveDraft();
-    }),
+      paintPacSuggestions();
+    }, { autocomplete: "on", name: "dni", inputmode: "numeric", maxlength: "8", list: "lista-dni" }),
+    el("div", { id: "pac-suggest", class: "suggestions" }),
     el("div", { class: "two" }, [
       field("Edad", "paciente-edad", draft.pacienteEdad, "text", "", (input) => {
         draft.pacienteEdad = onlyDigits(input.value, 3);
         input.value = draft.pacienteEdad;
         saveDraft();
-      }),
+      }, { autocomplete: "on", name: "edad", inputmode: "numeric", maxlength: "3" }),
       field("Fecha", "paciente-fecha", draft.fechaAtencion, "date", "", (input) => {
         draft.fechaAtencion = input.value;
         saveDraft();
-      }),
+      }, { autocomplete: "on", name: "fecha" }),
     ]),
     field("Hora", "paciente-hora", draft.horaAtencion, "time", "", (input) => {
       draft.horaAtencion = input.value;
       saveDraft();
-    }),
+    }, { autocomplete: "on", name: "hora" }),
     el("div", {}, [
       el("div", { class: "profile-name", text: "Sexo" }),
       el("div", { class: "segment", role: "group", "aria-label": "Sexo" }, [
@@ -452,19 +469,103 @@ function viewPaciente() {
         sexButton("F", "Femenino"),
       ]),
     ]),
+    el("datalist", { id: "lista-dni" }, gente.filter((paciente) => paciente.dni).map((paciente) => (
+      el("option", { value: paciente.dni, label: paciente.nombre })
+    ))),
+    el("datalist", { id: "lista-nombres" }, gente.map((paciente) => (
+      el("option", { value: paciente.nombre, label: paciente.dni || "" })
+    ))),
   ]);
+  queueMicrotask(paintPacSuggestions);
+  return section;
 }
 
 function sexButton(value, label) {
   return el("button", {
     type: "button",
     class: draft.pacienteSexo === value ? "is-on" : "",
+    "data-sexo": value,
     onclick: () => {
       draft.pacienteSexo = value;
       saveDraft();
       goto("paciente");
     },
   }, [label]);
+}
+
+function loadPacientes() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PACIENTES_KEY) || "[]");
+    if (!Array.isArray(raw)) return [];
+    return raw.map((item) => ({
+      nombre: cleanText(item?.nombre, 120),
+      dni: onlyDigits(item?.dni, 8),
+      edad: onlyDigits(item?.edad, 3),
+      sexo: ["M", "F"].includes(item?.sexo) ? item.sexo : "",
+    })).filter((item) => item.nombre).slice(0, 80);
+  } catch {
+    return [];
+  }
+}
+
+function rememberPaciente() {
+  if (!draft.pacienteNombre) return;
+  const entry = {
+    nombre: draft.pacienteNombre,
+    dni: draft.pacienteDNI,
+    edad: draft.pacienteEdad,
+    sexo: draft.pacienteSexo,
+  };
+  const resto = loadPacientes().filter((paciente) => {
+    if (entry.dni && paciente.dni === entry.dni) return false;
+    return paciente.nombre.toLowerCase() !== entry.nombre.toLowerCase();
+  });
+  localStorage.setItem(PACIENTES_KEY, JSON.stringify([entry, ...resto].slice(0, 80)));
+}
+
+function applyPaciente(paciente) {
+  draft.pacienteNombre = paciente.nombre;
+  draft.pacienteDNI = paciente.dni;
+  draft.pacienteEdad = paciente.edad;
+  draft.pacienteSexo = paciente.sexo || "";
+  const assign = (id, value) => {
+    const node = document.getElementById(id);
+    if (node) node.value = value;
+  };
+  assign("paciente-nombre", draft.pacienteNombre);
+  assign("paciente-dni", draft.pacienteDNI);
+  assign("paciente-edad", draft.pacienteEdad);
+  document.querySelectorAll("[data-sexo]").forEach((button) => {
+    button.classList.toggle("is-on", button.getAttribute("data-sexo") === draft.pacienteSexo);
+  });
+  saveDraft();
+}
+
+function paintPacSuggestions() {
+  const box = document.getElementById("pac-suggest");
+  if (!box) return;
+  const nombre = document.getElementById("paciente-nombre")?.value || "";
+  const dni = document.getElementById("paciente-dni")?.value || "";
+  const vistos = new Set();
+  const matches = [...buscarPacientes(loadPacientes(), nombre), ...buscarPacientes(loadPacientes(), dni)]
+    .filter((paciente) => {
+      const clave = `${paciente.dni}|${paciente.nombre}`;
+      if (vistos.has(clave)) return false;
+      vistos.add(clave);
+      const yaEsta = paciente.nombre === draft.pacienteNombre && paciente.dni === draft.pacienteDNI && paciente.edad === draft.pacienteEdad;
+      return !yaEsta;
+    });
+  box.replaceChildren(...matches.map((paciente) => {
+    const button = el("button", { type: "button", class: "suggestion" }, [
+      el("strong", { text: paciente.nombre }),
+      el("small", { text: [paciente.dni, paciente.edad ? `${paciente.edad} años` : "", paciente.sexo].filter(Boolean).join(" · ") }),
+    ]);
+    button.addEventListener("click", () => {
+      applyPaciente(paciente);
+      paintPacSuggestions();
+    });
+    return button;
+  }));
 }
 
 function viewDiagnostico() {
@@ -552,6 +653,7 @@ function viewMedComposer() {
     ]),
     selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
       medForm.frecuencia = value;
+      syncCantidad();
     }),
     medInput("Duración", "med-duracion", "duracion", "7"),
     selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
@@ -626,6 +728,7 @@ function viewIndicaciones() {
   });
   return el("section", { class: "screen stack" }, [
     errorSlot(),
+    el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
     el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
 }
@@ -666,14 +769,17 @@ function viewListo() {
   ]);
 }
 
-function field(label, id, value, type, placeholder, onInput) {
+function field(label, id, value, type, placeholder, onInput, extra = {}) {
   const input = el("input", {
     id,
     type,
+    name: extra.name || id,
     value: value ?? "",
     placeholder,
-    autocomplete: id.startsWith("paciente") ? "off" : "on",
-    maxlength: type === "email" ? "120" : "120",
+    autocomplete: extra.autocomplete || "on",
+    inputmode: extra.inputmode,
+    maxlength: extra.maxlength || (type === "email" ? "120" : "120"),
+    list: extra.list,
   });
   if (onInput) input.addEventListener("input", () => onInput(input));
   return el("label", { class: "field", text: label }, [input]);
@@ -691,6 +797,8 @@ function medInput(label, id, key, placeholder) {
   input.addEventListener("input", () => {
     const max = key === "indicaciones" ? 240 : key === "nombre" ? 120 : 80;
     medForm[key] = cleanText(input.value, max);
+    if (key === "cantidad") cantidadManual = true;
+    if (key === "duracion" || key === "presentacion") syncCantidad();
   });
   return el("label", { class: "field", text: label }, [input]);
 }
@@ -820,7 +928,7 @@ function paintMedSuggestions() {
     const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${med.dci} — ${med.presentacion}` }),
-      el("small", { text: [med.grupo, med.via, med.atc ? `ATC ${med.atc}` : ""].filter(Boolean).join(" · ") }),
+      el("small", { text: [med.grupo, med.via, dosisReferencia(med), med.atc ? `ATC ${med.atc}` : ""].filter(Boolean).join(" · ") }),
       peru.length ? el("small", { text: `Perú: ${peru.join(", ")}` }) : null,
     ]);
     button.addEventListener("click", () => applyMed(med));
@@ -832,7 +940,10 @@ function applyMed(med) {
   medForm.nombre = cleanText(med.dci, 120);
   medForm.presentacion = cleanText(med.presentacion, 80);
   medForm.via = VIAS.find((via) => via === med.via) || "";
+  medForm.dosis = dosisReferencia(med) || medForm.dosis;
   medForm.q = cleanText(`${med.dci} (${med.presentacion})`, 80);
+  cantidadManual = false;
+  const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
   const assign = (id, value) => {
     const node = document.getElementById(id);
     if (node) node.value = value;
@@ -841,8 +952,29 @@ function applyMed(med) {
   assign("med-nombre", medForm.nombre);
   assign("med-presentacion", medForm.presentacion);
   assign("med-via", medForm.via);
+  assign("med-dosis", medForm.dosis);
+  const notas = document.getElementById("med-indicaciones");
+  if (notas && peru.length) notas.placeholder = `Marcas: ${peru.join(", ")}`;
+  syncCantidad();
   const box = document.getElementById("med-suggest");
   if (box) box.replaceChildren();
+}
+
+function syncCantidad() {
+  if (cantidadManual) return;
+  const cantidad = calcularCantidad(medForm.presentacion, medForm.frecuencia, medForm.duracion);
+  if (!cantidad && !medForm.cantidad) return;
+  medForm.cantidad = cantidad;
+  const node = document.getElementById("med-cantidad");
+  if (node) node.value = cantidad;
+}
+
+function completarIndicaciones(area) {
+  const texto = indicacionesAutomaticas(draft);
+  if (!texto) return;
+  draft.indicacionesGenerales = texto;
+  if (area) area.value = texto;
+  saveDraft();
 }
 
 function paintExamSuggestions() {
@@ -878,7 +1010,10 @@ function paintExamSuggestions() {
 
 function openComposer(kind) {
   showError("");
-  if (kind === "med") medForm = emptyMedForm();
+  if (kind === "med") {
+    medForm = emptyMedForm();
+    cantidadManual = false;
+  }
   if (kind === "exam") {
     examQuery = "";
     examNombre = "";
@@ -947,7 +1082,11 @@ function next() {
       showError(error);
       return;
     }
+    rememberPaciente();
     saveDraft();
+  }
+  if (screen === "examenes" && !draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
   }
   const index = wizardIndex();
   if (index < 0 || index >= WIZARD.length - 1) return;
@@ -1058,6 +1197,10 @@ function generarPDF() {
     showError("Agrega al menos un medicamento o un examen.");
     return;
   }
+  if (!draft.indicacionesGenerales.trim()) {
+    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
+  }
+  rememberPaciente();
   const jsPDF = window.jspdf?.jsPDF;
   if (!jsPDF) {
     showError("No se pudo cargar el generador de PDF.");
