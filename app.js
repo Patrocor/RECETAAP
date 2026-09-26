@@ -16,6 +16,14 @@ import {
   indicacionesAutomaticas,
   pacientePorDni,
 } from "./automatizar.js";
+import {
+  actualizarAcceso,
+  crearAcceso,
+  cuentaGuardada,
+  entrar,
+  listarAccesos,
+  salir,
+} from "./auth.js";
 
 const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
@@ -130,7 +138,11 @@ function emptyMedForm() {
 
 let perfil = loadPerfil();
 let draft = loadDraft();
-let screen = "inicio";
+let screen = "login";
+let cuenta = null;
+let accesos = [];
+let loginUsuario = "";
+let loginClave = "";
 let composer = null;
 let medForm = emptyMedForm();
 let cantidadManual = false;
@@ -281,7 +293,12 @@ function header() {
   let title = "RecetAPP";
   let kicker = "";
   let onBack = null;
-  if (screen === "perfil") {
+  if (screen === "login") {
+    title = "RecetAPP";
+  } else if (screen === "admin") {
+    title = "Admin";
+    onBack = () => goto("inicio");
+  } else if (screen === "perfil") {
     title = "Perfil";
     onBack = () => leavePerfil(false);
   } else if (screen === "listo") {
@@ -316,7 +333,7 @@ function header() {
     el("div", { class: "top-row" }, [
       onBack ? el("button", { type: "button", class: "icon-btn", "aria-label": "Volver", onclick: onBack }, ["←"]) : null,
       el("div", {}, [
-        screen === "inicio"
+        screen === "inicio" || screen === "login"
           ? el("div", { class: "brand" }, [
             el("img", { class: "logo", src: "logo.svg", alt: "LR" }),
             el("div", { class: "wordmark", text: "RecetAPP" }),
@@ -330,7 +347,12 @@ function header() {
 }
 
 function footer() {
-  if (screen === "inicio" || screen === "listo") return null;
+  if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
+  if (screen === "login") {
+    return el("footer", { class: "footer" }, [
+      el("button", { type: "button", class: "btn", disabled: busy, onclick: enviarLogin }, [busy ? "Ingresando…" : "Ingresar"]),
+    ]);
+  }
   let label = "Continuar";
   let action = next;
   if (screen === "perfil") {
@@ -354,6 +376,8 @@ function footer() {
 }
 
 function view() {
+  if (screen === "login") return viewLogin();
+  if (screen === "admin") return viewAdmin();
   if (screen === "inicio") return viewInicio();
   if (screen === "perfil") return viewPerfil();
   if (screen === "listo") return viewListo();
@@ -378,6 +402,160 @@ function showError(message) {
   node.textContent = formError;
 }
 
+function viewLogin() {
+  const usuario = el("input", {
+    id: "login-usuario",
+    type: "text",
+    name: "username",
+    autocomplete: "username",
+    autocapitalize: "none",
+    spellcheck: "false",
+    maxlength: "40",
+    value: loginUsuario,
+  });
+  usuario.addEventListener("input", () => {
+    loginUsuario = cleanText(usuario.value, 40);
+  });
+  const clave = el("input", {
+    id: "login-clave",
+    type: "password",
+    name: "password",
+    autocomplete: "current-password",
+    maxlength: "80",
+    value: loginClave,
+  });
+  clave.addEventListener("input", () => {
+    loginClave = clave.value.slice(0, 80);
+  });
+  return el("section", { class: "screen stack" }, [
+    errorSlot(),
+    el("label", { class: "field", text: "Usuario" }, [usuario]),
+    el("label", { class: "field", text: "Contraseña" }, [clave]),
+  ]);
+}
+
+async function enviarLogin() {
+  if (busy) return;
+  busy = true;
+  showError("");
+  render();
+  const resultado = await entrar(loginUsuario, loginClave);
+  busy = false;
+  if (!resultado.ok) {
+    loginClave = "";
+    showError(resultado.error);
+    render();
+    return;
+  }
+  cuenta = resultado.cuenta;
+  loginClave = "";
+  screen = "inicio";
+  render();
+}
+
+function viewAdmin() {
+  const lista = accesos.length
+    ? accesos.map((item) => {
+      const vence = el("input", {
+        type: "date",
+        value: item.exp_at ? String(item.exp_at).slice(0, 10) : "",
+      });
+      return el("article", { class: "item" }, [
+        el("div", { class: "item-top" }, [
+          el("h3", { text: item.nombre || item.username }),
+          el("button", {
+            type: "button",
+            class: item.active === false ? "link" : "text-danger",
+            onclick: () => cambiarAcceso(item, { active: item.active === false }),
+          }, [item.active === false ? "Activar" : "Suspender"]),
+        ]),
+        el("p", { class: "muted", text: item.username }),
+        el("label", { class: "field", text: "Vence" }, [vence]),
+        el("button", {
+          type: "button",
+          class: "add-btn",
+          onclick: () => cambiarAcceso(item, { exp_at: vence.value ? new Date(`${vence.value}T23:59:59`).toISOString() : null }),
+        }, ["Guardar"]),
+      ]);
+    })
+    : [el("p", { class: "muted", text: "Sin accesos" })];
+  const usuario = el("input", { id: "nuevo-usuario", type: "text", maxlength: "40", autocomplete: "off" });
+  const nombre = el("input", { id: "nuevo-nombre", type: "text", maxlength: "120", autocomplete: "name" });
+  const clave = el("input", { id: "nuevo-clave", type: "password", maxlength: "80", autocomplete: "new-password" });
+  const vence = el("input", { id: "nuevo-vence", type: "date" });
+  return el("section", { class: "screen stack" }, [
+    errorSlot(),
+    ...lista,
+    el("h2", { text: "Nuevo" }),
+    el("label", { class: "field", text: "Usuario" }, [usuario]),
+    el("label", { class: "field", text: "Nombre" }, [nombre]),
+    el("label", { class: "field", text: "Contraseña" }, [clave]),
+    el("label", { class: "field", text: "Vence" }, [vence]),
+    el("button", { type: "button", class: "add-btn", onclick: agregarAcceso }, ["Agregar"]),
+  ]);
+}
+
+async function cambiarAcceso(item, cambios) {
+  if (busy) return;
+  busy = true;
+  render();
+  try {
+    await actualizarAcceso(item.id, cambios);
+    accesos = await listarAccesos();
+    showError("");
+  } catch (error) {
+    showError(error.message || "No se pudo guardar.");
+  } finally {
+    busy = false;
+    if (screen === "admin") render();
+  }
+}
+
+async function agregarAcceso() {
+  if (busy) return;
+  busy = true;
+  render();
+  try {
+    await crearAcceso({
+      usuario: document.getElementById("nuevo-usuario")?.value || "",
+      nombre: document.getElementById("nuevo-nombre")?.value || "",
+      password: document.getElementById("nuevo-clave")?.value || "",
+      vence: document.getElementById("nuevo-vence")?.value
+        ? new Date(`${document.getElementById("nuevo-vence").value}T23:59:59`).toISOString()
+        : null,
+    });
+    accesos = await listarAccesos();
+    showError("");
+  } catch (error) {
+    showError(error.message || "No se pudo crear.");
+  } finally {
+    busy = false;
+    if (screen === "admin") render();
+  }
+}
+
+async function abrirAdmin() {
+  accesos = [];
+  screen = "admin";
+  formError = "";
+  render();
+  try {
+    accesos = await listarAccesos();
+  } catch (error) {
+    showError(error.message || "No se pudo cargar.");
+  }
+  if (screen === "admin") render();
+}
+
+async function salirDeLaApp() {
+  await salir();
+  cuenta = null;
+  loginUsuario = "";
+  loginClave = "";
+  screen = "login";
+  render();
+}
+
 function viewInicio() {
   const blocks = [
     el("button", { type: "button", class: "profile-row", onclick: () => openPerfil("inicio") }, [
@@ -390,6 +568,13 @@ function viewInicio() {
     ]),
     el("button", { type: "button", class: "cta", onclick: startNew }, [
       el("span", { class: "cta-title", text: "Nueva receta" }),
+    ]),
+    cuenta?.isAdmin ? el("button", { type: "button", class: "secondary-card", onclick: abrirAdmin }, [
+      el("div", { class: "profile-name", text: "Admin" }),
+      el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
+    ]) : null,
+    el("button", { type: "button", class: "secondary-card", onclick: salirDeLaApp }, [
+      el("div", { class: "profile-name", text: "Salir" }),
     ]),
   ];
   if (hasMeaningfulDraft()) {
@@ -1310,4 +1495,13 @@ function generarPDF() {
   }
 }
 
-render();
+async function boot() {
+  render();
+  const guardada = await cuentaGuardada();
+  if (!guardada) return;
+  cuenta = guardada;
+  screen = "inicio";
+  render();
+}
+
+boot();
