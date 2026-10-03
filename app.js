@@ -19,8 +19,8 @@ import {
 import {
   actualizarAcceso,
   crearAcceso,
-  cuentaGuardada,
   entrar,
+  leerSesion,
   listarAccesos,
   salir,
 } from "./auth.js";
@@ -504,10 +504,17 @@ function viewLogin() {
   clave.addEventListener("input", () => {
     loginClave = clave.value.slice(0, 80);
   });
+  clave.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") enviarLogin();
+  });
+  queueMicrotask(() => {
+    document.getElementById(loginUsuario ? "login-clave" : "login-usuario")?.focus();
+  });
   return el("section", { class: "screen desk" }, [
     el("div", { class: "desk-hero" }, [
       deskMark(),
       el("p", { class: "desk-date", text: fechaEscritorio() }),
+      el("h1", { class: "desk-name", text: "Acceso" }),
     ]),
     el("div", { class: "desk-card stack" }, [
       errorSlot(),
@@ -1970,11 +1977,10 @@ function generarPDF() {
 }
 
 async function boot() {
-  render();
-  const guardada = await cuentaGuardada();
-  if (!guardada) return;
-  cuenta = guardada;
-  screen = "inicio";
+  const sesion = leerSesion();
+  const nombre = String(sesion?.email || "").split("@")[0];
+  if (/^[a-z0-9._-]{3,40}$/.test(nombre)) loginUsuario = nombre;
+  screen = "login";
   render();
 }
 

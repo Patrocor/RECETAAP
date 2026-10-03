@@ -28,6 +28,8 @@ test("la página puede hablar con el acceso y no interpreta HTML", () => {
   assert.equal(/Bearer [A-Za-z0-9._\-]{20,}/.test(consulta), false);
   assert.match(app, /\/api\/dni\?numero=/);
   assert.equal(app.includes("api.decolecta.com"), false);
+  assert.equal(app.includes("cuentaGuardada"), false);
+  assert.match(app, /text: "Acceso"/);
   assert.equal(auth.includes("innerHTML"), false);
   assert.equal(auth.includes("__ANON_KEY__"), false);
 });
