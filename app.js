@@ -25,6 +25,7 @@ import {
   salir,
 } from "./auth.js";
 import { claveEspecialidad, crearLogo } from "./marcas.js";
+import { frasesRecomendadas } from "./recomendaciones.js";
 
 const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
@@ -213,7 +214,6 @@ let draft = loadDraft();
 let screen = "login";
 let panel = "paciente";
 let enfocarDni = false;
-let detalleMed = false;
 let cuenta = null;
 let accesos = [];
 let adminAbierto = "";
@@ -1206,14 +1206,12 @@ function quitarMedicamentoActual() {
     saveDraft();
     medEditId = null;
     medForm = emptyMedForm();
-    detalleMed = false;
     cambiandoMed = false;
     composer = null;
     goto("medicamentos");
     return;
   }
   medForm = emptyMedForm();
-  detalleMed = false;
   cambiandoMed = false;
   goto("medicamentos");
 }
@@ -1296,27 +1294,6 @@ function viewMedComposer() {
     }));
     section.append(diasField());
     section.append(cantidadField());
-    section.append(el("button", {
-      type: "button",
-      class: detalleMed ? "add-btn is-on" : "add-btn",
-      onclick: () => {
-        detalleMed = !detalleMed;
-        goto("medicamentos");
-      },
-    }, ["Detalle"]));
-    if (detalleMed) {
-      if (!opciones.length) {
-        section.append(medInput("Nombre", "med-nombre", "nombre", ""));
-        section.append(medInput("Presentación", "med-presentacion", "presentacion", ""));
-      }
-      section.append(el("div", { class: "two" }, [
-        medInput("Dosis", "med-dosis", "dosis", ""),
-        selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
-          medForm.via = value;
-        }),
-      ]));
-      section.append(medInput("Indicaciones", "med-indicaciones", "indicaciones", ""));
-    }
   }
   queueMicrotask(paintMedSuggestions);
   return section;
@@ -1389,6 +1366,17 @@ function viewExamComposer() {
   return section;
 }
 
+let recomendacionQuery = "";
+
+function agregarRecomendacion(area, frase) {
+  const actual = draft.indicacionesGenerales.trim();
+  if (actual.includes(frase)) return;
+  const unido = actual ? `${actual}\n${frase}` : frase;
+  draft.indicacionesGenerales = cleanMultiline(unido, 800);
+  area.value = draft.indicacionesGenerales;
+  saveDraft();
+}
+
 function viewIndicaciones() {
   const area = el("textarea", {
     id: "indicaciones",
@@ -1400,14 +1388,48 @@ function viewIndicaciones() {
     draft.indicacionesGenerales = cleanMultiline(area.value, 800);
     saveDraft();
   });
+  const buscar = el("input", {
+    id: "rec-q",
+    type: "search",
+    value: recomendacionQuery,
+    placeholder: "Con alimentos, ayunas, sueño",
+    maxlength: "80",
+    autocomplete: "off",
+  });
+  buscar.addEventListener("input", () => {
+    recomendacionQuery = cleanText(buscar.value, 80);
+    pintarRecomendaciones(area);
+  });
+  const lista = el("div", { id: "rec-list", class: "chips recs" });
+  queueMicrotask(() => pintarRecomendaciones(area));
   return el("section", { class: "screen stack" }, [
     el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
     field("Control", "proximo-control", draft.proximoControl, "date", "", (input) => {
       draft.proximoControl = /^\d{4}-\d{2}-\d{2}$/.test(input.value) ? input.value : "";
       saveDraft();
     }),
+    el("label", { class: "field", text: "Recomendaciones" }, [buscar]),
+    lista,
     el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
+}
+
+function pintarRecomendaciones(area) {
+  const lista = document.getElementById("rec-list");
+  if (!lista) return;
+  const frases = frasesRecomendadas(draft.medicamentos, recomendacionQuery);
+  lista.replaceChildren(...frases.map((frase) => {
+    const puesta = draft.indicacionesGenerales.includes(frase);
+    const button = el("button", {
+      type: "button",
+      class: puesta ? "is-on" : "",
+      onclick: () => {
+        agregarRecomendacion(area, frase);
+        pintarRecomendaciones(area);
+      },
+    }, [frase]);
+    return button;
+  }));
 }
 
 function viewRevision() {
@@ -1461,23 +1483,6 @@ function field(label, id, value, type, placeholder, onInput, extra = {}) {
     list: extra.list,
   });
   if (onInput) input.addEventListener("input", () => onInput(input));
-  return el("label", { class: "field", text: label }, [input]);
-}
-
-function medInput(label, id, key, placeholder) {
-  const input = el("input", {
-    id,
-    type: "text",
-    value: medForm[key],
-    placeholder,
-    maxlength: "120",
-    autocomplete: "off",
-  });
-  input.addEventListener("input", () => {
-    const max = key === "indicaciones" ? 240 : key === "nombre" ? 120 : 80;
-    medForm[key] = cleanText(input.value, max);
-    if (key === "presentacion") syncCantidad();
-  });
   return el("label", { class: "field", text: label }, [input]);
 }
 
@@ -1824,7 +1829,6 @@ function editarMed(med) {
     indicaciones: med.indicaciones || "",
   };
   medEditId = med.id;
-  detalleMed = Boolean(med.indicaciones);
   cambiandoMed = false;
   showError("");
   composer = "med";
@@ -1845,7 +1849,6 @@ function openComposer(kind) {
   if (kind === "med") {
     medForm = emptyMedForm();
     medEditId = null;
-    detalleMed = false;
     cambiandoMed = false;
   }
   if (kind === "exam") {
@@ -2006,7 +2009,6 @@ function abrirPanel(id) {
   if (panel === "paciente" && id !== "paciente") rememberPaciente();
   const estaba = screen === "receta" && panel === "paciente";
   if (panel !== id) {
-    if (id !== "medicamentos") detalleMed = false;
     if (id !== "medicamentos" && id !== "examenes") composer = null;
   }
   panel = panel === id ? "" : id;
