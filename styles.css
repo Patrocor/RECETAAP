@@ -745,6 +745,10 @@ svg.logo {
   overflow: visible;
 }
 
+.shell-flow .fold.is-open .fold-body { display: block; }
+
+.shell-flow .fold.is-open .fold-inner { min-height: auto; }
+
 .shell-flow .cta {
   background: #123652;
   box-shadow: 0 16px 32px rgba(18, 54, 82, 0.2);
@@ -1232,6 +1236,54 @@ input:focus, select:focus, textarea:focus {
   color: white;
   border-style: solid;
 }
+
+.item-top > div:first-child { min-width: 0; flex: 1; }
+
+.item-actions { display: flex; gap: 6px; }
+
+.ico {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.icon-act,
+.icon-add {
+  border: 0;
+  color: #123652;
+  background: #eef3f8;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.icon-act {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.icon-act.is-danger {
+  color: var(--danger);
+  background: #fff1f2;
+}
+
+.icon-add {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.btn.has-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.has-icon .ico { width: 26px; height: 26px; }
+
+.elegido .field { margin-top: 8px; }
 
 .banner {
   background: #fff1f2;

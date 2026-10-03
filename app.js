@@ -222,8 +222,11 @@ let loginUsuario = "";
 let loginClave = "";
 let composer = null;
 let medForm = emptyMedForm();
+let medEditId = null;
+let cambiandoMed = false;
 let examQuery = "";
 let examNombre = "";
+let examEditId = null;
 let dialog = null;
 let dialogResolver = null;
 let busy = false;
@@ -248,6 +251,54 @@ function el(tag, attrs = {}, children = []) {
     node.append(child.nodeType ? child : document.createTextNode(String(child)));
   }
   return node;
+}
+
+function icono(nombre) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("class", "ico");
+  svg.setAttribute("aria-hidden", "true");
+  const trazo = (d) => {
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", d);
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "currentColor");
+    path.setAttribute("stroke-width", "1.8");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("stroke-linejoin", "round");
+    svg.append(path);
+  };
+  if (nombre === "plus") trazo("M12 5v14M5 12h14");
+  else if (nombre === "check") trazo("M5 12.5 9.5 17 19 7");
+  else if (nombre === "pencil") {
+    trazo("M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3z");
+    trazo("M13.5 6.5l4 4");
+  } else {
+    trazo("M5 7h14");
+    trazo("M9 7V5h6v2");
+    trazo("M7 7l1 13h8l1-13");
+  }
+  return svg;
+}
+
+function iconBtn(nombre, label, onclick, extra = "") {
+  return el("button", {
+    type: "button",
+    class: `icon-act${extra ? ` ${extra}` : ""}`,
+    "aria-label": label,
+    title: label,
+    onclick,
+  }, [icono(nombre)]);
+}
+
+function botonMas(label, onclick) {
+  return el("button", {
+    type: "button",
+    class: "icon-add",
+    "aria-label": label,
+    title: label,
+    onclick,
+  }, [icono("plus")]);
 }
 
 function loadPerfil() {
@@ -436,14 +487,16 @@ function footer() {
   if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
   if (screen === "receta") {
     const agregando = composer === "med" || composer === "exam";
-    return el("footer", { class: "footer" }, [
-      el("button", {
-        type: "button",
-        class: "btn",
-        disabled: busy,
-        onclick: composer === "med" ? commitMed : composer === "exam" ? commitExam : generarPDF,
-      }, [agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF")]),
-    ]);
+    const button = el("button", {
+      type: "button",
+      class: agregando ? "btn has-icon" : "btn",
+      disabled: busy,
+      "aria-label": agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF"),
+      onclick: composer === "med" ? commitMed : composer === "exam" ? commitExam : generarPDF,
+    });
+    if (agregando) button.append(icono("check"));
+    else button.textContent = busy ? "Generando…" : "Generar PDF";
+    return el("footer", { class: "footer" }, [button]);
   }
   if (screen === "login") return null;
   let label = "Continuar";
@@ -463,9 +516,17 @@ function footer() {
     label = busy ? "Generando…" : "Generar PDF";
     action = generarPDF;
   }
-  return el("footer", { class: "footer" }, [
-    el("button", { type: "button", class: label === "Omitir" ? "btn ghost" : "btn", disabled: busy, onclick: action }, [label]),
-  ]);
+  const confirmar = label === "Agregar";
+  const button = el("button", {
+    type: "button",
+    class: label === "Omitir" ? "btn ghost" : confirmar ? "btn has-icon" : "btn",
+    disabled: busy,
+    "aria-label": label,
+    onclick: action,
+  });
+  if (confirmar) button.append(icono("check"));
+  else button.textContent = label;
+  return el("footer", { class: "footer" }, [button]);
 }
 
 function view() {
@@ -1103,15 +1164,20 @@ function viewDiagnostico() {
   if (draft.diagnostico) {
     section.append(el("article", { class: "item" }, [
       el("div", { class: "item-top" }, [
-        el("h3", { text: "Diagnóstico" }),
-        el("button", { type: "button", class: "text-danger", onclick: () => {
-          draft.diagnostico = "";
-          draft.cie10 = "";
-          saveDraft();
-          goto("diagnostico");
-        } }, ["Quitar"]),
+        el("div", {}, [
+          el("h3", { text: draft.diagnostico }),
+          draft.cie10 ? el("p", { class: "muted", text: draft.cie10 }) : null,
+        ]),
+        el("div", { class: "item-actions" }, [
+          iconBtn("pencil", "Cambiar", () => document.getElementById("dx-query")?.focus()),
+          iconBtn("trash", "Quitar", () => {
+            draft.diagnostico = "";
+            draft.cie10 = "";
+            saveDraft();
+            goto("diagnostico");
+          }, "is-danger"),
+        ]),
       ]),
-      el("p", { text: [draft.cie10, draft.diagnostico].filter(Boolean).join(" — ") }),
     ]));
   }
   queueMicrotask(paintDxSuggestions);
@@ -1121,7 +1187,7 @@ function viewDiagnostico() {
 function vacioLista(texto, onclick) {
   return el("div", { class: "empty" }, [
     el("p", { text: texto }),
-    el("button", { type: "button", class: "add-btn", onclick }, ["Agregar"]),
+    botonMas("Agregar", onclick),
   ]);
 }
 
@@ -1130,7 +1196,68 @@ function viewMedicamentos() {
   return el("section", { class: "screen stack" }, [
     items.length ? null : vacioLista("Todavía no hay medicamentos.", () => openComposer("med")),
     ...items,
-    items.length ? el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]) : null,
+    items.length ? botonMas("Agregar medicamento", () => openComposer("med")) : null,
+  ]);
+}
+
+function quitarMedicamentoActual() {
+  if (medEditId) {
+    draft.medicamentos = draft.medicamentos.filter((item) => item.id !== medEditId);
+    saveDraft();
+    medEditId = null;
+    medForm = emptyMedForm();
+    detalleMed = false;
+    cambiandoMed = false;
+    composer = null;
+    goto("medicamentos");
+    return;
+  }
+  medForm = emptyMedForm();
+  detalleMed = false;
+  cambiandoMed = false;
+  goto("medicamentos");
+}
+
+function medicamentoElegido(opciones) {
+  let presentacion = null;
+  if (opciones.length > 1) {
+    const select = el("select", { id: "med-presentacion" }, opciones.map((med) => (
+      el("option", { value: med.presentacion, text: `${med.presentacion} · ${med.via}` })
+    )));
+    select.value = opciones.some((med) => med.presentacion === medForm.presentacion) ? medForm.presentacion : opciones[0].presentacion;
+    if (select.value !== medForm.presentacion) {
+      const elegido = opciones.find((med) => med.presentacion === select.value);
+      if (elegido) elegirPresentacion(elegido);
+    }
+    select.addEventListener("change", () => {
+      const elegido = opciones.find((med) => med.presentacion === select.value);
+      if (!elegido) return;
+      elegirPresentacion(elegido);
+      const dosis = document.getElementById("med-dosis");
+      const via = document.getElementById("med-via");
+      if (dosis) dosis.value = medForm.dosis;
+      if (via) via.value = medForm.via;
+      const ficha = document.getElementById("med-ficha");
+      if (ficha) ficha.textContent = [medForm.presentacion, medForm.via].filter(Boolean).join(" · ");
+    });
+    presentacion = el("label", { class: "field", text: "Presentación" }, [select]);
+  }
+  return el("article", { class: "item elegido" }, [
+    el("div", { class: "item-top" }, [
+      el("div", {}, [
+        el("h3", { text: medForm.nombre }),
+        opciones.length > 1 ? null : el("p", { id: "med-ficha", class: "muted", text: [medForm.presentacion, medForm.via].filter(Boolean).join(" · ") }),
+      ]),
+      el("div", { class: "item-actions" }, [
+        iconBtn("pencil", "Cambiar", () => {
+          cambiandoMed = true;
+          goto("medicamentos");
+          queueMicrotask(() => document.getElementById("med-q")?.focus());
+        }),
+        iconBtn("trash", "Quitar", quitarMedicamentoActual, "is-danger"),
+      ]),
+    ]),
+    presentacion,
   ]);
 }
 
@@ -1154,60 +1281,42 @@ function viewMedComposer() {
     medForm.q = cleanText(buscar.value, 80);
     paintMedSuggestions();
   });
-  const section = el("section", { class: "screen stack" }, [
-    el("label", { class: "field search-anchor", text: "Buscar" }, [
+  const section = el("section", { class: "screen stack" });
+  if (!medForm.nombre || cambiandoMed) {
+    section.append(el("label", { class: "field search-anchor", text: "Buscar" }, [
       buscar,
       el("div", { id: "med-suggest", class: "suggestions" }),
-    ]),
-  ]);
-  if (opciones.length) {
-    const select = el("select", { id: "med-presentacion" }, opciones.map((med) => (
-      el("option", { value: med.presentacion, text: med.presentacion })
-    )));
-    select.value = opciones.some((med) => med.presentacion === medForm.presentacion) ? medForm.presentacion : opciones[0].presentacion;
-    if (select.value !== medForm.presentacion) {
-      const elegido = opciones.find((med) => med.presentacion === select.value);
-      if (elegido) elegirPresentacion(elegido);
-    }
-    select.addEventListener("change", () => {
-      const elegido = opciones.find((med) => med.presentacion === select.value);
-      if (!elegido) return;
-      elegirPresentacion(elegido);
-      const dosis = document.getElementById("med-dosis");
-      const via = document.getElementById("med-via");
-      if (dosis) dosis.value = medForm.dosis;
-      if (via) via.value = medForm.via;
-    });
-    section.append(el("label", { class: "field", text: "Presentación" }, [select]));
+    ]));
   }
-  section.append(el("div", { class: "two" }, [
-    diasField(),
-    selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
+  if (medForm.nombre) {
+    section.append(medicamentoElegido(opciones));
+    section.append(selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
       medForm.frecuencia = FRECUENCIAS.includes(value) ? value : "";
       syncCantidad();
-    }),
-  ]));
-  section.append(cantidadField());
-  section.append(el("button", {
-    type: "button",
-    class: detalleMed ? "add-btn is-on" : "add-btn",
-    onclick: () => {
-      detalleMed = !detalleMed;
-      goto("medicamentos");
-    },
-  }, ["Detalle"]));
-  if (detalleMed) {
-    if (!opciones.length) {
-      section.append(medInput("Nombre", "med-nombre", "nombre", ""));
-      section.append(medInput("Presentación", "med-presentacion", "presentacion", ""));
+    }));
+    section.append(diasField());
+    section.append(cantidadField());
+    section.append(el("button", {
+      type: "button",
+      class: detalleMed ? "add-btn is-on" : "add-btn",
+      onclick: () => {
+        detalleMed = !detalleMed;
+        goto("medicamentos");
+      },
+    }, ["Detalle"]));
+    if (detalleMed) {
+      if (!opciones.length) {
+        section.append(medInput("Nombre", "med-nombre", "nombre", ""));
+        section.append(medInput("Presentación", "med-presentacion", "presentacion", ""));
+      }
+      section.append(el("div", { class: "two" }, [
+        medInput("Dosis", "med-dosis", "dosis", ""),
+        selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
+          medForm.via = value;
+        }),
+      ]));
+      section.append(medInput("Indicaciones", "med-indicaciones", "indicaciones", ""));
     }
-    section.append(el("div", { class: "two" }, [
-      medInput("Dosis", "med-dosis", "dosis", ""),
-      selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
-        medForm.via = value;
-      }),
-    ]));
-    section.append(medInput("Indicaciones", "med-indicaciones", "indicaciones", ""));
   }
   queueMicrotask(paintMedSuggestions);
   return section;
@@ -1218,7 +1327,7 @@ function viewExamenes() {
   return el("section", { class: "screen stack" }, [
     items.length ? null : vacioLista("Todavía no hay exámenes.", () => openComposer("exam")),
     ...items,
-    items.length ? el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]) : null,
+    items.length ? botonMas("Agregar examen", () => openComposer("exam")) : null,
   ]);
 }
 
@@ -1240,17 +1349,42 @@ function viewExamComposer() {
     search,
     el("div", { id: "exam-suggest", class: "suggestions" }),
   ]));
-  const nombre = el("input", {
-    id: "exam-nombre",
-    type: "text",
-    value: examNombre,
-    maxlength: "160",
-    autocomplete: "off",
-  });
-  nombre.addEventListener("input", () => {
-    examNombre = cleanText(nombre.value, 160);
-  });
-  section.append(el("label", { class: "field", text: "Examen" }, [nombre]));
+  if (examNombre) {
+    const nombre = el("input", {
+      id: "exam-nombre",
+      type: "text",
+      value: examNombre,
+      maxlength: "160",
+      autocomplete: "off",
+    });
+    nombre.addEventListener("input", () => {
+      examNombre = cleanText(nombre.value, 160);
+    });
+    section.append(el("article", { class: "item elegido" }, [
+      el("div", { class: "item-top" }, [
+        el("h3", { text: "Examen elegido" }),
+        el("div", { class: "item-actions" }, [
+          iconBtn("pencil", "Cambiar", () => nombre.focus()),
+          iconBtn("trash", "Quitar", () => {
+            if (examEditId) {
+              draft.examenes = draft.examenes.filter((item) => item.id !== examEditId);
+              saveDraft();
+              examEditId = null;
+              examNombre = "";
+              examQuery = "";
+              composer = null;
+              goto("examenes");
+              return;
+            }
+            examNombre = "";
+            examQuery = "";
+            goto("examenes");
+          }, "is-danger"),
+        ]),
+      ]),
+      el("label", { class: "field", text: "Nombre" }, [nombre]),
+    ]));
+  }
   queueMicrotask(paintExamSuggestions);
   return section;
 }
@@ -1369,11 +1503,14 @@ function medCard(med) {
   return el("article", { class: "item" }, [
     el("div", { class: "item-top" }, [
       el("h3", { text: med.nombre }),
-      el("button", { type: "button", class: "text-danger", onclick: () => {
-        draft.medicamentos = draft.medicamentos.filter((item) => item.id !== med.id);
-        saveDraft();
-        goto("medicamentos");
-      } }, ["Quitar"]),
+      el("div", { class: "item-actions" }, [
+        iconBtn("pencil", "Editar", () => editarMed(med)),
+        iconBtn("trash", "Quitar", () => {
+          draft.medicamentos = draft.medicamentos.filter((item) => item.id !== med.id);
+          saveDraft();
+          goto("medicamentos");
+        }, "is-danger"),
+      ]),
     ]),
     el("p", { text: `${med.presentacion} · ${med.cantidad}` }),
     el("p", { class: "muted", text: `${med.dosis}, ${med.frecuencia}, ${med.duracion}, ${med.via}` }),
@@ -1385,11 +1522,14 @@ function examCard(ex) {
   return el("article", { class: "item" }, [
     el("div", { class: "item-top" }, [
       el("h3", { text: ex.nombre }),
-      el("button", { type: "button", class: "text-danger", onclick: () => {
-        draft.examenes = draft.examenes.filter((item) => item.id !== ex.id);
-        saveDraft();
-        goto("examenes");
-      } }, ["Quitar"]),
+      el("div", { class: "item-actions" }, [
+        iconBtn("pencil", "Editar", () => editarExamen(ex)),
+        iconBtn("trash", "Quitar", () => {
+          draft.examenes = draft.examenes.filter((item) => item.id !== ex.id);
+          saveDraft();
+          goto("examenes");
+        }, "is-danger"),
+      ]),
     ]),
   ]);
 }
@@ -1399,10 +1539,10 @@ function reviewBlock(title, stepId, lines) {
   return el("section", { class: visibles.length ? "review" : "review is-empty" }, [
     el("div", { class: "review-top" }, [
       el("h2", { text: title }),
-      el("button", { type: "button", class: "link", onclick: () => {
+      iconBtn("pencil", visibles.length ? "Editar" : "Completar", () => {
         if (stepId === "perfil") openPerfil("revision");
         else goto(stepId);
-      } }, [visibles.length ? "Editar" : "Completar"]),
+      }),
     ]),
     ...(visibles.length ? visibles.map((line) => el("p", { text: line })) : [el("p", { class: "muted", text: "Sin datos" })]),
   ]);
@@ -1564,6 +1704,7 @@ function elegirPresentacion(med) {
 function applyMed(med) {
   medForm.nombre = cleanText(med.dci, 120);
   medForm.q = "";
+  cambiandoMed = false;
   elegirPresentacion(med);
   goto("medicamentos");
 }
@@ -1659,12 +1800,8 @@ function paintExamSuggestions() {
     ]);
     button.addEventListener("click", () => {
       examNombre = cleanText(ex.nombre, 160);
-      examQuery = examNombre;
-      const nombre = document.getElementById("exam-nombre");
-      const query = document.getElementById("exam-q");
-      if (nombre) nombre.value = examNombre;
-      if (query) query.value = examQuery;
-      box.replaceChildren();
+      examQuery = "";
+      goto("examenes");
     });
     return button;
   });
@@ -1672,15 +1809,49 @@ function paintExamSuggestions() {
   box.replaceChildren(...nodes);
 }
 
+function editarMed(med) {
+  const dias = String(med.duracion || "").match(/^(\d+)/);
+  medForm = {
+    q: "",
+    nombre: med.nombre,
+    presentacion: med.presentacion,
+    cantidad: med.cantidad,
+    dosis: med.dosis,
+    frecuencia: med.frecuencia,
+    dias: dias ? dias[1] : "",
+    duracion: med.duracion,
+    via: med.via,
+    indicaciones: med.indicaciones || "",
+  };
+  medEditId = med.id;
+  detalleMed = Boolean(med.indicaciones);
+  cambiandoMed = false;
+  showError("");
+  composer = "med";
+  goto("medicamentos");
+}
+
+function editarExamen(ex) {
+  examEditId = ex.id;
+  examNombre = ex.nombre;
+  examQuery = "";
+  showError("");
+  composer = "exam";
+  goto("examenes");
+}
+
 function openComposer(kind) {
   showError("");
   if (kind === "med") {
     medForm = emptyMedForm();
+    medEditId = null;
     detalleMed = false;
+    cambiandoMed = false;
   }
   if (kind === "exam") {
     examQuery = "";
     examNombre = "";
+    examEditId = null;
   }
   composer = kind;
   render();
@@ -1696,7 +1867,7 @@ function commitMed() {
   if (!medForm.dosis) medForm.dosis = dosisReferencia({ presentacion: medForm.presentacion }) || cleanText(medForm.presentacion, 40);
   syncCantidad();
   const med = sanitizeMed({
-    id: Date.now(),
+    id: medEditId || Date.now(),
     nombre: medForm.nombre,
     presentacion: medForm.presentacion,
     cantidad: medForm.cantidad,
@@ -1713,19 +1884,25 @@ function commitMed() {
     else showError("Revisa la presentación, la dosis y la vía.");
     return;
   }
-  draft.medicamentos.push(med);
+  if (medEditId) draft.medicamentos = draft.medicamentos.map((item) => item.id === med.id ? med : item);
+  else draft.medicamentos.push(med);
+  medEditId = null;
+  cambiandoMed = false;
   composer = null;
   saveDraft();
   goto("medicamentos");
 }
 
 function commitExam() {
-  const nombre = cleanText(examNombre, 160);
+  const nombre = cleanText(examNombre || examQuery, 160);
   if (!nombre) {
     showError("Escribe el nombre del examen.");
     return;
   }
-  draft.examenes.push({ id: Date.now(), nombre });
+  const examen = { id: examEditId || Date.now(), nombre };
+  if (examEditId) draft.examenes = draft.examenes.map((item) => item.id === examen.id ? examen : item);
+  else draft.examenes.push(examen);
+  examEditId = null;
   composer = null;
   examNombre = "";
   examQuery = "";
