@@ -794,18 +794,21 @@ function viewPaciente() {
     if (/^\d{8}$/.test(draft.pacienteDNI)) consultarNombre(draft.pacienteDNI);
   };
   const dni = field("DNI", "paciente-dni", draft.pacienteDNI, "text", "", alCambiarDni, { autocomplete: "on", name: "dni", inputmode: "numeric", maxlength: "8", list: "lista-dni" });
+  dni.classList.add("search-anchor");
+  dni.append(el("div", { id: "pac-suggest", class: "suggestions" }));
   dni.querySelector("input").addEventListener("change", () => alCambiarDni(dni.querySelector("input")));
-  const section = el("section", { class: "screen stack" }, [
-    dni,
-    el("div", { id: "pac-suggest", class: "suggestions" }),
-    field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
+  const nombrePaciente = field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
       const exactos = gente.filter((paciente) => paciente.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase());
       if (exactos.length === 1) applyPaciente(exactos[0]);
       saveDraft();
       pintarResumen("paciente");
       paintPacSuggestions();
-    }, { autocomplete: "name", name: "name", list: "lista-nombres" }),
+    }, { autocomplete: "name", name: "name", list: "lista-nombres" });
+  nombrePaciente.classList.add("search-anchor");
+  const section = el("section", { class: "screen stack" }, [
+    dni,
+    nombrePaciente,
     el("div", { class: "two" }, [
       field("Edad", "paciente-edad", draft.pacienteEdad, "text", "", (input) => {
         draft.pacienteEdad = onlyDigits(input.value, 3);
@@ -941,6 +944,7 @@ function pintarResumen(id) {
 function paintPacSuggestions() {
   const box = document.getElementById("pac-suggest");
   if (!box) return;
+  anclarLista(box);
   const nombre = document.getElementById("paciente-nombre")?.value || "";
   const dni = document.getElementById("paciente-dni")?.value || "";
   const vistos = new Set();
@@ -1026,8 +1030,10 @@ function viewDiagnostico() {
     saveDraft();
     paintDxSuggestions();
   });
-  section.append(el("label", { class: "field", text: "Buscar" }, [search]));
-  section.append(el("div", { id: "dx-suggest", class: "suggestions" }));
+  section.append(el("label", { class: "field search-anchor", text: "Buscar" }, [
+    search,
+    el("div", { id: "dx-suggest", class: "suggestions" }),
+  ]));
   if (draft.diagnostico) {
     section.append(el("article", { class: "item" }, [
       el("div", { class: "item-top" }, [
@@ -1077,8 +1083,10 @@ function viewMedComposer() {
     paintMedSuggestions();
   });
   const section = el("section", { class: "screen stack" }, [
-    el("label", { class: "field", text: "Buscar" }, [buscar]),
-    el("div", { id: "med-suggest", class: "suggestions" }),
+    el("label", { class: "field search-anchor", text: "Buscar" }, [
+      buscar,
+      el("div", { id: "med-suggest", class: "suggestions" }),
+    ]),
   ]);
   if (opciones.length) {
     const select = el("select", { id: "med-presentacion" }, opciones.map((med) => (
@@ -1179,8 +1187,10 @@ function viewExamComposer() {
     examQuery = cleanText(search.value, 80);
     paintExamSuggestions();
   });
-  section.append(el("label", { class: "field", text: "Buscar" }, [search]));
-  section.append(el("div", { id: "exam-suggest", class: "suggestions" }));
+  section.append(el("label", { class: "field search-anchor", text: "Buscar" }, [
+    search,
+    el("div", { id: "exam-suggest", class: "suggestions" }),
+  ]));
   const nombre = el("input", {
     id: "exam-nombre",
     type: "text",
@@ -1357,9 +1367,16 @@ function subtiposVisibles() {
   )).map((dx) => dx.subtipo).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 }
 
+function anclarLista(box) {
+  const campo = document.activeElement?.closest?.(".search-anchor");
+  if (!box || !campo || box.parentElement === campo) return;
+  campo.append(box);
+}
+
 function paintDxSuggestions() {
   const box = document.getElementById("dx-suggest");
   if (!box) return;
+  anclarLista(box);
   const term = (draft.dxQuery || "").trim().toLowerCase();
   const filtrado = Boolean(draft.filtroSistema || draft.filtroTipo || draft.filtroSubtipo);
   if (term.length < 2 && !filtrado) {
@@ -1407,6 +1424,7 @@ function scoreMed(med, term) {
 function paintMedSuggestions() {
   const box = document.getElementById("med-suggest");
   if (!box) return;
+  anclarLista(box);
   const term = medForm.q.trim().toLowerCase();
   if (term.length < 3) {
     box.replaceChildren();
@@ -1499,6 +1517,7 @@ function completarIndicaciones(area) {
 function paintExamSuggestions() {
   const box = document.getElementById("exam-suggest");
   if (!box) return;
+  anclarLista(box);
   const term = examQuery.trim().toLowerCase();
   if (term.length < 3 && !draft.filtroExamen) {
     box.replaceChildren();

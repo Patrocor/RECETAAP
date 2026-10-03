@@ -717,6 +717,8 @@ svg.logo {
 .shell-flow .main { overflow: auto; }
 
 .shell-flow .fold.is-open,
+.shell-flow .fold.is-open .fold-body,
+.shell-flow .fold.is-open .fold-inner,
 .shell-flow .fold.is-open .screen {
   flex: none;
   overflow: visible;
@@ -798,9 +800,12 @@ svg.logo {
   padding: 18px 0 10px;
 }
 
-.shell-flow .main > .screen.stack,
-.shell-flow .main > .board {
+.shell-flow .main > .screen.stack {
   justify-content: safe center;
+}
+
+.shell-flow .main > .board {
+  justify-content: flex-start;
 }
 
 .shell-flow .footer {
@@ -1060,6 +1065,23 @@ input:focus, select:focus, textarea:focus {
   color: white;
   border-color: var(--ink);
 }
+
+.search-anchor {
+  position: relative;
+  z-index: 3;
+}
+
+.search-anchor .suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 4;
+  max-height: min(240px, 40vh);
+  overflow: auto;
+}
+
+.search-anchor .suggestions:empty { display: none; }
 
 .suggestions {
   display: flex;
