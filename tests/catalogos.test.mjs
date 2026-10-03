@@ -30,4 +30,16 @@ test("los catálogos conservan el tamaño de la versión anterior", () => {
   assert.equal(porCodigo.get("A97.0").subtipo, "dengue");
   assert.equal(porCodigo.get("F32.2").severidad, "grave");
   assert.equal(new Set(cie10Data.map((dx) => dx.codigo)).size, cie10Data.length);
+  assert.equal(porCodigo.get("J14").subtipo, "neumonía");
+  assert.equal(porCodigo.get("J15.4").subtipo, "neumonía");
+  assert.equal(porCodigo.get("J18.8").descripcion, "Otras neumonías de microorganismo no especificado");
+  assert.equal(porCodigo.get("J12.82").descripcion, "Neumonía por COVID-19");
+  assert.match(porCodigo.get("A48.1").descripcion, /Neumonía por Legionella/);
+  assert.match(porCodigo.get("J18.9").alias, /comunitaria/);
+  assert.match(porCodigo.get("I10").alias, /hta/);
+  assert.match(porCodigo.get("E11.9").alias, /dm2/);
+  assert.ok(cie10Data.filter((dx) => /neumon/i.test(`${dx.descripcion} ${dx.alias || ""}`)).length >= 45);
+  assert.equal(porCodigo.get("J45.21").tipo, "agudo");
+  assert.equal(porCodigo.get("E11.65").subtipo, "diabetes");
+  assert.equal(porCodigo.get("N18.31").severidad, "estadio 3a");
 });

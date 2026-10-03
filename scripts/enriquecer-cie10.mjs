@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { cie10Data } from "../catalogos.js";
+import { VARIANTES } from "./variantes-cie10.mjs";
 
 const SISTEMA = {
   "Salud mental": "Salud Mental",
@@ -517,7 +518,7 @@ function severidadDe(descripcion, codigo = "") {
   if (/\bleves?\b/.test(texto)) return "leve";
   const etapa = texto.match(/\betapa\s*([1-5])\b/);
   if (etapa) return `etapa ${etapa[1]}`;
-  const estadio = texto.match(/\bestadio\s*(i{1,3}v?|[1-5])\b/);
+  const estadio = texto.match(/\bestadio\s*(i{1,3}v?|[1-5][ab]?)\b/);
   if (estadio) return `estadio ${estadio[1]}`;
   const grado = texto.match(/\bgrado\s*(i{1,3}v?|[1-4])\b/);
   if (grado) return `grado ${grado[1]}`;
@@ -741,6 +742,7 @@ function familiaDe(codigo) {
 
 function subtipoDe(codigo, descripcion) {
   const texto = descripcion.toLowerCase();
+  if (/^J1[2-8]/.test(codigo) || /^P23/.test(codigo) || /^J69/.test(codigo) || /neumon/.test(texto)) return "neumonía";
   if (/bacter|estreptoc|estafiloc|gonococ|bacilo|\bcoli\b|sepsis|imp[eé]tigo|mycoplasma/.test(texto)) return "bacteriano";
   if (codigo.startsWith("U07") || /covid/.test(texto)) return "covid";
   if (codigo.startsWith("A90") || codigo.startsWith("A91") || codigo.startsWith("A97") || /dengue/.test(texto)) return "dengue";
@@ -801,7 +803,7 @@ function tipoDe(codigo, descripcion) {
   if (codigo.startsWith("C") || /^D[0-4]/.test(codigo)) return "neoplásico";
   if (/^E1[0-4]/.test(codigo) && /cetoacidosis|coma|hipogl/.test(texto)) return "agudo sobre crónico";
   if (codigo.startsWith("J44.0") || codigo.startsWith("J44.1")) return "agudo sobre crónico";
-  if (codigo.startsWith("J46") || /^J0/.test(codigo) || /^J1/.test(codigo) || /^J2[0-2]/.test(codigo)) return "agudo";
+  if (codigo.startsWith("J46") || /^J0/.test(codigo) || /^J1/.test(codigo) || /^J2[0-2]/.test(codigo) || /^J69/.test(codigo) || /^J85/.test(codigo) || /^J9[03]/.test(codigo)) return "agudo";
   if (codigo.startsWith("J3") || codigo.startsWith("J4")) return "crónico";
   if (codigo.startsWith("A") || codigo.startsWith("B") || codigo.startsWith("U07")) {
     if (codigo.startsWith("B18") || /^B2[0-4]/.test(codigo) || /^A1[5-9]/.test(codigo)) return "crónico";
@@ -818,10 +820,124 @@ function tipoDe(codigo, descripcion) {
   return "otro";
 }
 
+const PRECISION = new Map([
+  ["A48.1", "Neumonía por Legionella (enfermedad de los legionarios)"],
+  ["B59", "Neumonía por Pneumocystis jirovecii"],
+]);
+
+const ALIAS_EXACTO = {
+  "J18.9": "comunitaria adquirida en la comunidad nac",
+  "J15.9": "bacteriana comunitaria",
+  "J15.8": "nosocomial intrahospitalaria",
+  "J15.7": "atípica",
+  "J16.0": "atípica clamidia",
+  "J16.8": "atípica",
+  "J69.0": "aspirativa",
+  "J69.1": "aspirativa lipoidea",
+  "J69.8": "aspirativa",
+  "J12.82": "covid coronavirus",
+  "J12.81": "sars coronavirus",
+  "J12.8": "covid coronavirus sars",
+  "J18.2": "encamado hipostática",
+  "J18.1": "lobar",
+  "J18.0": "bronconeumonía",
+  "J13": "neumococo neumocócica",
+  "I10": "hta hipertensión arterial presión alta",
+  "E11.9": "dm2 diabetes tipo 2",
+  "E10.9": "dm1 diabetes tipo 1",
+  "J45.9": "asma bronquial",
+  "J46": "crisis asmática estado asmático",
+  "J44.1": "epoc exacerbado crisis",
+  "J44.9": "epoc enfermedad pulmonar obstructiva crónica",
+  "N39.0": "itu ivu infección urinaria",
+  "N10": "pielonefritis itu alta",
+  "N30.0": "cistitis itu baja",
+  "G43.9": "jaqueca",
+  "K21.9": "erge reflujo",
+  "M54.5": "lumbalgia dolor lumbar",
+  "E78.0": "colesterol dislipidemia",
+  "F41.9": "ansiedad",
+  "L20.9": "eccema",
+  "U07.1": "covid coronavirus",
+  "J06.9": "resfrío gripe catarro ivas",
+  "J00": "resfriado catarro",
+  "J02.9": "dolor de garganta",
+  "J03.9": "anginas",
+  "H10.9": "ojo rojo",
+  "R51": "dolor de cabeza",
+  "I50.9": "ic falla cardíaca",
+  "I48.9": "fa fibrilación auricular",
+  "I20.9": "angina de pecho",
+  "I21.9": "iam infarto",
+  "I63.9": "acv stroke",
+  "I64": "acv stroke",
+  "N40": "hpb próstata",
+  "N18.9": "erc insuficiencia renal",
+  "B86": "sarna",
+  "A09": "diarrea gastroenteritis",
+};
+
+const ALIAS_PREFIJO = [
+  [/^J1[2-8]|^P23|^J69/, "neumonía"],
+  [/^J45|^J46/, "asma bronquial"],
+  [/^J44/, "epoc enfermedad pulmonar obstructiva crónica"],
+  [/^E10/, "diabetes tipo 1 dm1"],
+  [/^E11/, "diabetes tipo 2 dm2"],
+  [/^E1[2-4]/, "diabetes"],
+  [/^I1[0-5]/, "hipertensión hta"],
+  [/^I50/, "insuficiencia cardíaca"],
+  [/^I48/, "fibrilación auricular"],
+  [/^I21/, "infarto iam"],
+  [/^I63|^I64/, "acv stroke"],
+  [/^G43/, "migraña jaqueca"],
+  [/^G40/, "epilepsia convulsión"],
+  [/^N39\.0|^N30|^N10|^N11/, "itu infección urinaria"],
+  [/^K29/, "gastritis"],
+  [/^K21/, "reflujo erge"],
+  [/^K80/, "colelitiasis cálculos"],
+  [/^F3[2-3]/, "depresión"],
+  [/^F41/, "ansiedad"],
+  [/^L20|^L30/, "dermatitis eccema"],
+  [/^L50/, "urticaria ronchas"],
+  [/^L70/, "acné"],
+  [/^M1[5-9]/, "artrosis"],
+  [/^M0[5-6]|^M08/, "artritis reumatoide"],
+  [/^M10/, "gota"],
+  [/^M54/, "lumbago lumbalgia"],
+  [/^H10/, "conjuntivitis"],
+  [/^H6[5-6]/, "otitis"],
+  [/^J0[0-6]/, "resfrío catarro"],
+  [/^A9[017]|^A90|^A91/, "dengue"],
+  [/^E03/, "hipotiroidismo"],
+  [/^E05/, "hipertiroidismo"],
+  [/^E78/, "colesterol dislipidemia"],
+  [/^E66/, "obesidad sobrepeso"],
+  [/^N18/, "enfermedad renal crónica erc"],
+  [/^U07|^J12\.8/, "covid coronavirus"],
+];
+
+function aliasDe(codigo, descripcion) {
+  const partes = [];
+  if (ALIAS_EXACTO[codigo]) partes.push(ALIAS_EXACTO[codigo]);
+  for (const [regla, texto] of ALIAS_PREFIJO) {
+    if (regla.test(codigo)) partes.push(texto);
+  }
+  const desc = descripcion.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const vistosAlias = new Set();
+  const palabras = [];
+  for (const palabra of partes.join(" ").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(/\s+/)) {
+    if (!palabra || desc.includes(palabra) || vistosAlias.has(palabra)) continue;
+    vistosAlias.add(palabra);
+    palabras.push(palabra);
+  }
+  return palabras.join(" ");
+}
+
 function enriquecer(dx) {
-  const descripcion = String(dx.descripcion || "").replace(/\s+/g, " ").trim();
+  const descripcion = String(PRECISION.get(dx.codigo) || dx.descripcion || "").replace(/\s+/g, " ").trim();
   const sistema = sistemaDe(dx.codigo, dx.sistema);
-  return {
+  const alias = aliasDe(dx.codigo, descripcion);
+  const fila = {
     codigo: dx.codigo,
     descripcion,
     grupo: familia(descripcion, sistema),
@@ -830,16 +946,22 @@ function enriquecer(dx) {
     subtipo: subtipoDe(dx.codigo, descripcion),
     severidad: severidadDe(descripcion, dx.codigo),
   };
+  if (alias) fila.alias = alias;
+  return fila;
 }
 
+const CODIGO_OK = /^[A-Z][0-9]{2}(?:\.[0-9A-Z]{1,4})?$/;
 const vistos = new Set(cie10Data.map((dx) => dx.codigo));
 const unidos = cie10Data.map(enriquecer);
 let agregados = 0;
-for (const [codigo, descripcion, sistema] of COMPLEMENTO) {
-  if (vistos.has(codigo)) continue;
-  vistos.add(codigo);
-  unidos.push(enriquecer({ codigo, descripcion, sistema }));
-  agregados += 1;
+for (const lote of [COMPLEMENTO, VARIANTES]) {
+  for (const [codigo, descripcion, sistema] of lote) {
+    if (!CODIGO_OK.test(codigo)) throw new Error(`Código CIE-10 no válido: ${codigo}`);
+    if (vistos.has(codigo)) continue;
+    vistos.add(codigo);
+    unidos.push(enriquecer({ codigo, descripcion, sistema }));
+    agregados += 1;
+  }
 }
 unidos.sort((a, b) => a.sistema.localeCompare(b.sistema, "es") || a.codigo.localeCompare(b.codigo, "es"));
 

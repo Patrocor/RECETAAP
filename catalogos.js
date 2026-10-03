@@ -150,7 +150,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hta arterial presion alta"
   },
   {
     "codigo": "I11.0",
@@ -159,7 +160,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I11.9",
@@ -168,7 +170,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I12.0",
@@ -177,7 +180,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I12.9",
@@ -186,7 +190,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I13.0",
@@ -195,7 +200,18 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
+  },
+  {
+    "codigo": "I13.1",
+    "descripcion": "Enfermedad cardíaca y renal hipertensiva con insuficiencia renal",
+    "grupo": "Enfermedad cardíaca y renal hipertensiva con",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hipertensivo",
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I13.10",
@@ -204,7 +220,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "nefropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension"
   },
   {
     "codigo": "I13.2",
@@ -213,7 +230,18 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertension hta"
+  },
+  {
+    "codigo": "I13.9",
+    "descripcion": "Enfermedad cardíaca y renal hipertensiva no especificada",
+    "grupo": "Enfermedad cardíaca y renal hipertensiva",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hipertensivo",
+    "severidad": "",
+    "alias": "hipertension hta"
   },
   {
     "codigo": "I15.0",
@@ -222,7 +250,38 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hta"
+  },
+  {
+    "codigo": "I15.1",
+    "descripcion": "Hipertensión secundaria a otros trastornos renales",
+    "grupo": "Hipertensión secundaria a otros trastornos",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hipertensivo",
+    "severidad": "",
+    "alias": "hta"
+  },
+  {
+    "codigo": "I15.2",
+    "descripcion": "Hipertensión secundaria a trastornos endocrinos",
+    "grupo": "Hipertensión secundaria a trastornos",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hipertensivo",
+    "severidad": "",
+    "alias": "hta"
+  },
+  {
+    "codigo": "I15.8",
+    "descripcion": "Otra hipertensión secundaria",
+    "grupo": "Otra hipertensión secundaria",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hipertensivo",
+    "severidad": "",
+    "alias": "hta"
   },
   {
     "codigo": "I15.9",
@@ -231,7 +290,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "hipertensivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hta"
   },
   {
     "codigo": "I20.0",
@@ -276,7 +336,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "iam"
   },
   {
     "codigo": "I21.01",
@@ -285,7 +346,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "infarto"
   },
   {
     "codigo": "I21.09",
@@ -294,7 +356,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "infarto"
   },
   {
     "codigo": "I21.1",
@@ -303,7 +366,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "iam"
   },
   {
     "codigo": "I21.19",
@@ -312,7 +376,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "infarto"
   },
   {
     "codigo": "I21.2",
@@ -321,7 +386,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "iam"
   },
   {
     "codigo": "I21.3",
@@ -348,7 +414,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "agudo",
     "subtipo": "isquémico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "iam"
   },
   {
     "codigo": "I22.9",
@@ -365,6 +432,15 @@ export const cie10Data = [
     "grupo": "Cardiopatía isquémica",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
+    "subtipo": "isquémico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.0",
+    "descripcion": "Enfermedad cardiovascular aterosclerótica",
+    "grupo": "Enfermedad cardiovascular aterosclerótica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
     "subtipo": "isquémico",
     "severidad": ""
   },
@@ -408,6 +484,15 @@ export const cie10Data = [
     "codigo": "I25.5",
     "descripcion": "Miocardiopatía isquémica",
     "grupo": "Miocardiopatía isquémica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "isquémico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.6",
+    "descripcion": "Isquemia miocárdica silenciosa",
+    "grupo": "Isquemia miocárdica silenciosa",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "isquémico",
@@ -780,7 +865,8 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "arrítmico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "fibrilacion"
   },
   {
     "codigo": "I48.9",
@@ -789,12 +875,22 @@ export const cie10Data = [
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "arrítmico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "fa"
   },
   {
     "codigo": "I48.91",
     "descripcion": "Fibrilación auricular crónica/longstanding",
     "grupo": "Fibrilación auricular /longstanding",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "arrítmico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.0",
+    "descripcion": "Fibrilación y aleteo ventricular",
+    "grupo": "Fibrilación y aleteo ventricular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "arrítmico",
@@ -822,6 +918,15 @@ export const cie10Data = [
     "codigo": "I49.5",
     "descripcion": "Síndrome del nodo sinusal enfermo",
     "grupo": "Síndrome del nodo sinusal enfermo",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "arrítmico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.8",
+    "descripcion": "Otras arritmias cardíacas especificadas",
+    "grupo": "Otras arritmias cardíacas especificadas",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "arrítmico",
@@ -873,6 +978,33 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "I50.21",
+    "descripcion": "Insuficiencia cardíaca sistólica aguda",
+    "grupo": "Insuficiencia cardíaca sistólica",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.22",
+    "descripcion": "Insuficiencia cardíaca sistólica crónica",
+    "grupo": "Insuficiencia cardíaca sistólica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.23",
+    "descripcion": "Insuficiencia cardíaca sistólica aguda sobre crónica",
+    "grupo": "Insuficiencia cardíaca sistólica sobre",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
     "codigo": "I50.3",
     "descripcion": "Insuficiencia cardíaca diastólica",
     "grupo": "Insuficiencia cardíaca diastólica",
@@ -891,13 +1023,68 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "I50.31",
+    "descripcion": "Insuficiencia cardíaca diastólica aguda",
+    "grupo": "Insuficiencia cardíaca diastólica",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.32",
+    "descripcion": "Insuficiencia cardíaca diastólica crónica",
+    "grupo": "Insuficiencia cardíaca diastólica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.33",
+    "descripcion": "Insuficiencia cardíaca diastólica aguda sobre crónica",
+    "grupo": "Insuficiencia cardíaca diastólica sobre",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.41",
+    "descripcion": "Insuficiencia cardíaca combinada aguda",
+    "grupo": "Insuficiencia cardíaca combinada",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.42",
+    "descripcion": "Insuficiencia cardíaca combinada crónica",
+    "grupo": "Insuficiencia cardíaca combinada",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.43",
+    "descripcion": "Insuficiencia cardíaca combinada aguda sobre crónica",
+    "grupo": "Insuficiencia cardíaca combinada sobre",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "insuficiencia cardíaca",
+    "severidad": ""
+  },
+  {
     "codigo": "I50.9",
     "descripcion": "Insuficiencia cardíaca no especificada",
     "grupo": "Insuficiencia cardíaca",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "insuficiencia cardíaca",
-    "severidad": ""
+    "severidad": "",
+    "alias": "falla"
   },
   {
     "codigo": "I51.5",
@@ -1026,6 +1213,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "I80.1",
+    "descripcion": "Flebitis y tromboflebitis de la vena femoral",
+    "grupo": "Flebitis y tromboflebitis de la vena femoral",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "venoso",
+    "severidad": ""
+  },
+  {
     "codigo": "I80.2",
     "descripcion": "Trombosis venosa profunda de miembros inferiores",
     "grupo": "Trombosis venosa profunda de miembros",
@@ -1065,6 +1261,15 @@ export const cie10Data = [
     "codigo": "I83.1",
     "descripcion": "Várices de miembros inferiores con inflamación",
     "grupo": "Várices de miembros inferiores con inflamación",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "venoso",
+    "severidad": ""
+  },
+  {
+    "codigo": "I83.2",
+    "descripcion": "Várices de miembros inferiores con úlcera e inflamación",
+    "grupo": "Várices de miembros inferiores con úlcera e",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
     "subtipo": "venoso",
@@ -1746,13 +1951,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "L20.0",
+    "descripcion": "Dermatitis atópica, prurigo de Besnier",
+    "grupo": "Dermatitis atópica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": "",
+    "alias": "eccema"
+  },
+  {
     "codigo": "L20.8",
     "descripcion": "Otras dermatitis atopicas",
     "grupo": "Otras dermatitis atopicas",
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "alérgico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "eccema"
   },
   {
     "codigo": "L20.9",
@@ -1761,7 +1977,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "alérgico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "eccema"
   },
   {
     "codigo": "L21.0",
@@ -1812,6 +2029,15 @@ export const cie10Data = [
     "codigo": "L23.3",
     "descripcion": "Dermatitis alergica de contacto por medicamentos topicos",
     "grupo": "Dermatitis alergica de contacto por",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L23.5",
+    "descripcion": "Dermatitis alérgica de contacto por productos químicos",
+    "grupo": "Dermatitis alérgica de contacto por productos",
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "alérgico",
@@ -1905,7 +2131,18 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatitis",
-    "severidad": ""
+    "severidad": "",
+    "alias": "eccema"
+  },
+  {
+    "codigo": "L30.1",
+    "descripcion": "Dishidrosis",
+    "grupo": "Dishidrosis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatitis",
+    "severidad": "",
+    "alias": "dermatitis eccema"
   },
   {
     "codigo": "L30.4",
@@ -1914,7 +2151,18 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatitis",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dermatitis eccema"
+  },
+  {
+    "codigo": "L30.5",
+    "descripcion": "Pitiriasis alba",
+    "grupo": "Pitiriasis alba",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatitis",
+    "severidad": "",
+    "alias": "dermatitis eccema"
   },
   {
     "codigo": "L30.8",
@@ -1923,7 +2171,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatitis",
-    "severidad": ""
+    "severidad": "",
+    "alias": "eccema"
   },
   {
     "codigo": "L30.9",
@@ -2022,7 +2271,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "agudo",
     "subtipo": "alérgico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.1",
@@ -2031,7 +2281,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.2",
@@ -2040,7 +2291,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.3",
@@ -2049,7 +2301,18 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
+  },
+  {
+    "codigo": "L50.5",
+    "descripcion": "Urticaria colinérgica",
+    "grupo": "Urticaria colinérgica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "urticaria",
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.6",
@@ -2058,7 +2321,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.8",
@@ -2067,7 +2331,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L50.9",
@@ -2076,7 +2341,8 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "agudo",
     "subtipo": "urticaria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ronchas"
   },
   {
     "codigo": "L51.0",
@@ -2697,7 +2963,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "esofágico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "erge"
   },
   {
     "codigo": "K21.9",
@@ -2706,7 +2973,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "esofágico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "erge"
   },
   {
     "codigo": "K22.1",
@@ -2742,6 +3010,15 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "agudo",
     "subtipo": "ulceroso",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.2",
+    "descripcion": "Úlcera gástrica aguda con hemorragia y perforación",
+    "grupo": "Úlcera gástrica con hemorragia y perforación",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
     "severidad": ""
   },
   {
@@ -2808,6 +3085,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K26.1",
+    "descripcion": "Úlcera duodenal aguda con perforación",
+    "grupo": "Úlcera duodenal con perforación",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "ulceroso",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.2",
+    "descripcion": "Úlcera duodenal aguda con hemorragia y perforación",
+    "grupo": "Úlcera duodenal con hemorragia y perforación",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
     "codigo": "K26.3",
     "descripcion": "Ulcera duodenal aguda sin hemorragia ni perforacion",
     "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
@@ -2835,6 +3130,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K26.6",
+    "descripcion": "Úlcera duodenal crónica con hemorragia y perforación",
+    "grupo": "Úlcera duodenal con hemorragia y perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
     "codigo": "K26.7",
     "descripcion": "Ulcera duodenal cronica sin hemorragia ni perforacion",
     "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
@@ -2853,6 +3157,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K27.0",
+    "descripcion": "Úlcera péptica aguda con hemorragia",
+    "grupo": "Úlcera péptica con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K27.1",
+    "descripcion": "Úlcera péptica aguda con perforación",
+    "grupo": "Úlcera péptica con perforación",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "ulceroso",
+    "severidad": ""
+  },
+  {
     "codigo": "K27.3",
     "descripcion": "Úlcera péptica aguda sin hemorragia ni perforación",
     "grupo": "Úlcera péptica sin hemorragia ni perforación",
@@ -2860,6 +3182,24 @@ export const cie10Data = [
     "tipo": "agudo",
     "subtipo": "ulceroso",
     "severidad": "sin complicación"
+  },
+  {
+    "codigo": "K27.4",
+    "descripcion": "Úlcera péptica crónica con hemorragia",
+    "grupo": "Úlcera péptica con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K27.5",
+    "descripcion": "Úlcera péptica crónica con perforación",
+    "grupo": "Úlcera péptica con perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "ulceroso",
+    "severidad": ""
   },
   {
     "codigo": "K27.7",
@@ -2976,7 +3316,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "gástrico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "gastritis"
   },
   {
     "codigo": "K29.9",
@@ -2985,7 +3326,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "gástrico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "gastritis"
   },
   {
     "codigo": "K30",
@@ -3003,6 +3345,24 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "gástrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.0",
+    "descripcion": "Apendicitis aguda con peritonitis generalizada",
+    "grupo": "Apendicitis con peritonitis generalizada",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "apendicular",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.1",
+    "descripcion": "Apendicitis aguda con absceso peritoneal",
+    "grupo": "Apendicitis con absceso peritoneal",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -3339,6 +3699,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K57.1",
+    "descripcion": "Enfermedad diverticular del intestino delgado sin perforación ni absceso",
+    "grupo": "Enfermedad diverticular del intestino delgado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
     "codigo": "K57.2",
     "descripcion": "Diverticulitis del colon con perforacion y absceso",
     "grupo": "Diverticulitis del colon con perforacion y",
@@ -3360,6 +3729,15 @@ export const cie10Data = [
     "codigo": "K57.30",
     "descripcion": "Enfermedad diverticular intestino grueso sin perforación",
     "grupo": "Enfermedad diverticular intestino grueso sin",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.5",
+    "descripcion": "Enfermedad diverticular del intestino sin perforación ni absceso",
+    "grupo": "Enfermedad diverticular del intestino sin",
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "intestinal",
@@ -3396,6 +3774,24 @@ export const cie10Data = [
     "codigo": "K58.1",
     "descripcion": "Síndrome de intestino irritable con estreñimiento",
     "grupo": "Síndrome de intestino irritable con",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
+    "codigo": "K58.2",
+    "descripcion": "Síndrome de intestino irritable mixto",
+    "grupo": "Síndrome de intestino irritable mixto",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
+    "codigo": "K58.8",
+    "descripcion": "Otro síndrome de intestino irritable",
+    "grupo": "Otro síndrome de intestino irritable",
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "intestinal",
@@ -3573,9 +3969,27 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K70.2",
+    "descripcion": "Fibrosis hepática alcohólica",
+    "grupo": "Fibrosis hepática alcohólica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hepático",
+    "severidad": ""
+  },
+  {
     "codigo": "K70.3",
     "descripcion": "Cirrosis hepatica alcoholica",
     "grupo": "Cirrosis hepatica alcoholica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hepático",
+    "severidad": ""
+  },
+  {
+    "codigo": "K70.4",
+    "descripcion": "Insuficiencia hepática alcohólica",
+    "grupo": "Insuficiencia hepática alcohólica",
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "hepático",
@@ -3687,7 +4101,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "agudo",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K80.00",
@@ -3696,7 +4111,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "agudo",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K80.1",
@@ -3705,7 +4121,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K80.2",
@@ -3714,7 +4131,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K80.20",
@@ -3723,7 +4141,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "agudo",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K80.3",
@@ -3732,7 +4151,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colelitiasis calculos"
   },
   {
     "codigo": "K80.4",
@@ -3741,7 +4161,8 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colelitiasis calculos"
   },
   {
     "codigo": "K80.5",
@@ -3750,7 +4171,28 @@ export const cie10Data = [
     "sistema": "Digestivo",
     "tipo": "crónico",
     "subtipo": "biliar",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colelitiasis calculos"
+  },
+  {
+    "codigo": "K80.6",
+    "descripcion": "Colelitiasis de vesícula y vía biliar con colecistitis",
+    "grupo": "Colelitiasis de vesícula y vía biliar con",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "biliar",
+    "severidad": "",
+    "alias": "calculos"
+  },
+  {
+    "codigo": "K80.8",
+    "descripcion": "Otras colelitiasis",
+    "grupo": "Otras colelitiasis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "biliar",
+    "severidad": "",
+    "alias": "calculos"
   },
   {
     "codigo": "K81.0",
@@ -3798,6 +4240,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "K85.0",
+    "descripcion": "Pancreatitis aguda idiopática",
+    "grupo": "Pancreatitis idiopática",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "pancreático",
+    "severidad": ""
+  },
+  {
     "codigo": "K85.1",
     "descripcion": "Pancreatitis aguda biliar",
     "grupo": "Pancreatitis biliar",
@@ -3810,6 +4261,24 @@ export const cie10Data = [
     "codigo": "K85.2",
     "descripcion": "Pancreatitis aguda inducida por alcohol",
     "grupo": "Pancreatitis inducida por alcohol",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "pancreático",
+    "severidad": ""
+  },
+  {
+    "codigo": "K85.3",
+    "descripcion": "Pancreatitis aguda inducida por fármacos",
+    "grupo": "Pancreatitis inducida por fármacos",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "pancreático",
+    "severidad": ""
+  },
+  {
+    "codigo": "K85.8",
+    "descripcion": "Otras pancreatitis agudas",
+    "grupo": "Otras pancreatitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
     "subtipo": "pancreático",
@@ -3993,7 +4462,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "tiroideo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipotiroidismo"
   },
   {
     "codigo": "E03.5",
@@ -4002,7 +4472,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "tiroideo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipotiroidismo"
   },
   {
     "codigo": "E03.8",
@@ -4074,7 +4545,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "tiroideo",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "hipertiroidismo"
   },
   {
     "codigo": "E05.1",
@@ -4092,7 +4564,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "tiroideo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertiroidismo"
   },
   {
     "codigo": "E05.2",
@@ -4110,7 +4583,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "tiroideo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hipertiroidismo"
   },
   {
     "codigo": "E05.9",
@@ -4194,13 +4668,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "E10.0",
+    "descripcion": "Diabetes mellitus tipo 1 con coma",
+    "grupo": "Diabetes mellitus tipo 1 con coma",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm1"
+  },
+  {
     "codigo": "E10.1",
     "descripcion": "Diabetes mellitus tipo 1 con cetoacidosis",
     "grupo": "Diabetes mellitus tipo 1 con cetoacidosis",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.10",
@@ -4209,7 +4694,18 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm1"
+  },
+  {
+    "codigo": "E10.11",
+    "descripcion": "Diabetes mellitus tipo 1 con cetoacidosis y coma",
+    "grupo": "Diabetes mellitus tipo 1 con cetoacidosis y",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.2",
@@ -4218,7 +4714,18 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
+  },
+  {
+    "codigo": "E10.21",
+    "descripcion": "Diabetes mellitus tipo 1 con nefropatía diabética",
+    "grupo": "Diabetes mellitus tipo 1 con nefropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "nefropático",
+    "severidad": "",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.3",
@@ -4227,7 +4734,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.4",
@@ -4236,7 +4744,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.40",
@@ -4245,7 +4754,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "neuropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm1"
   },
   {
     "codigo": "E10.5",
@@ -4254,7 +4764,18 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
+  },
+  {
+    "codigo": "E10.51",
+    "descripcion": "Diabetes mellitus tipo 1 con angiopatía periférica",
+    "grupo": "Diabetes mellitus tipo 1 con angiopatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.6",
@@ -4263,7 +4784,18 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm1"
+  },
+  {
+    "codigo": "E10.65",
+    "descripcion": "Diabetes mellitus tipo 1 con hiperglucemia",
+    "grupo": "Diabetes mellitus tipo 1 con hiperglucemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.7",
@@ -4272,7 +4804,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.8",
@@ -4281,7 +4814,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm1"
   },
   {
     "codigo": "E10.9",
@@ -4290,7 +4824,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "sin complicación"
+    "severidad": "sin complicación",
+    "alias": "dm1"
   },
   {
     "codigo": "E11.0",
@@ -4299,7 +4834,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.1",
@@ -4308,7 +4844,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.2",
@@ -4317,7 +4854,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "nefropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.21",
@@ -4326,7 +4864,28 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "nefropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm2"
+  },
+  {
+    "codigo": "E11.22",
+    "descripcion": "Diabetes mellitus tipo 2 con enfermedad renal crónica",
+    "grupo": "Diabetes mellitus tipo 2 con enfermedad renal",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.29",
+    "descripcion": "Diabetes mellitus tipo 2 con otra complicación renal",
+    "grupo": "Diabetes mellitus tipo 2 con otra",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.3",
@@ -4335,7 +4894,28 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "retinopatía",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.31",
+    "descripcion": "Diabetes mellitus tipo 2 con retinopatía no proliferativa",
+    "grupo": "Diabetes mellitus tipo 2 con retinopatía no",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "retinopatía",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.32",
+    "descripcion": "Diabetes mellitus tipo 2 con retinopatía proliferativa",
+    "grupo": "Diabetes mellitus tipo 2 con retinopatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "retinopatía",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.36",
@@ -4344,7 +4924,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "retinopatía",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm2"
   },
   {
     "codigo": "E11.4",
@@ -4353,7 +4934,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "neuropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.40",
@@ -4362,7 +4944,38 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "neuropático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm2"
+  },
+  {
+    "codigo": "E11.41",
+    "descripcion": "Diabetes mellitus tipo 2 con mononeuropatía",
+    "grupo": "Diabetes mellitus tipo 2 con mononeuropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "neuropático",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.42",
+    "descripcion": "Diabetes mellitus tipo 2 con polineuropatía diabética",
+    "grupo": "Diabetes mellitus tipo 2 con polineuropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "neuropático",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.43",
+    "descripcion": "Diabetes mellitus tipo 2 con neuropatía autonómica",
+    "grupo": "Diabetes mellitus tipo 2 con neuropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "neuropático",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.5",
@@ -4371,7 +4984,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.51",
@@ -4380,7 +4994,28 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "diabetes dm2"
+  },
+  {
+    "codigo": "E11.52",
+    "descripcion": "Diabetes mellitus tipo 2 con gangrena",
+    "grupo": "Diabetes mellitus tipo 2 con gangrena",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.59",
+    "descripcion": "Diabetes mellitus tipo 2 con otra complicación circulatoria",
+    "grupo": "Diabetes mellitus tipo 2 con otra",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.6",
@@ -4389,7 +5024,38 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "pie diabético",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.61",
+    "descripcion": "Diabetes mellitus tipo 2 con artropatía diabética",
+    "grupo": "Diabetes mellitus tipo 2 con artropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.62",
+    "descripcion": "Diabetes mellitus tipo 2 con complicaciones cutáneas",
+    "grupo": "Diabetes mellitus tipo 2 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "con complicación",
+    "alias": "dm2"
+  },
+  {
+    "codigo": "E11.621",
+    "descripcion": "Diabetes mellitus tipo 2 con úlcera del pie",
+    "grupo": "Diabetes mellitus tipo 2 con úlcera del pie",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.649",
@@ -4398,7 +5064,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm2"
   },
   {
     "codigo": "E11.65",
@@ -4407,7 +5074,18 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": ""
+    "severidad": "",
+    "alias": "diabetes dm2"
+  },
+  {
+    "codigo": "E11.69",
+    "descripcion": "Diabetes mellitus tipo 2 con otra complicación especificada",
+    "grupo": "Diabetes mellitus tipo 2 con otra",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "diabetes",
+    "severidad": "",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.7",
@@ -4416,7 +5094,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.8",
@@ -4425,7 +5104,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "con complicación"
+    "severidad": "con complicación",
+    "alias": "dm2"
   },
   {
     "codigo": "E11.9",
@@ -4434,7 +5114,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "diabetes",
-    "severidad": "sin complicación"
+    "severidad": "sin complicación",
+    "alias": "dm2"
   },
   {
     "codigo": "E12.9",
@@ -5028,7 +5709,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.01",
@@ -5037,7 +5719,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.09",
@@ -5046,7 +5729,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.1",
@@ -5055,7 +5739,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.2",
@@ -5064,7 +5749,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.8",
@@ -5073,7 +5759,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E66.9",
@@ -5082,7 +5769,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "vih",
-    "severidad": ""
+    "severidad": "",
+    "alias": "sobrepeso"
   },
   {
     "codigo": "E78.0",
@@ -5091,7 +5779,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dislipidemia"
   },
   {
     "codigo": "E78.00",
@@ -5100,7 +5789,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dislipidemia"
   },
   {
     "codigo": "E78.1",
@@ -5109,7 +5799,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.2",
@@ -5118,7 +5809,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.3",
@@ -5127,7 +5819,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.4",
@@ -5136,7 +5829,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.5",
@@ -5145,7 +5839,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.6",
@@ -5154,7 +5849,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.8",
@@ -5163,7 +5859,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E78.9",
@@ -5172,7 +5869,8 @@ export const cie10Data = [
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
     "subtipo": "metabólico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "colesterol dislipidemia"
   },
   {
     "codigo": "E79.0",
@@ -5712,7 +6410,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "agudo",
     "subtipo": "túbulo-intersticial",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu alta infeccion urinaria"
   },
   {
     "codigo": "N11.0",
@@ -5721,7 +6420,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "obstructivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N11.1",
@@ -5730,7 +6430,18 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "obstructivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
+  },
+  {
+    "codigo": "N11.8",
+    "descripcion": "Otras nefritis tubulointersticiales crónicas",
+    "grupo": "Otras nefritis tubulointersticiales",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "túbulo-intersticial",
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N11.9",
@@ -5739,7 +6450,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "túbulo-intersticial",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N12",
@@ -5763,6 +6475,15 @@ export const cie10Data = [
     "codigo": "N13.3",
     "descripcion": "Otras hidronefrosis y las no especificadas",
     "grupo": "Otras hidronefrosis y las",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "túbulo-intersticial",
+    "severidad": ""
+  },
+  {
+    "codigo": "N13.6",
+    "descripcion": "Pionefrosis",
+    "grupo": "Pionefrosis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "túbulo-intersticial",
@@ -5793,7 +6514,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": "estadio 1"
+    "severidad": "estadio 1",
+    "alias": "erc"
   },
   {
     "codigo": "N18.2",
@@ -5802,7 +6524,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": "estadio 2"
+    "severidad": "estadio 2",
+    "alias": "erc"
   },
   {
     "codigo": "N18.3",
@@ -5811,7 +6534,28 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": "estadio 3"
+    "severidad": "estadio 3",
+    "alias": "erc"
+  },
+  {
+    "codigo": "N18.31",
+    "descripcion": "Enfermedad renal crónica estadio 3a",
+    "grupo": "Enfermedad renal estadio 3a",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "renal",
+    "severidad": "estadio 3a",
+    "alias": "erc"
+  },
+  {
+    "codigo": "N18.32",
+    "descripcion": "Enfermedad renal crónica estadio 3b",
+    "grupo": "Enfermedad renal estadio 3b",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "renal",
+    "severidad": "estadio 3b",
+    "alias": "erc"
   },
   {
     "codigo": "N18.4",
@@ -5820,7 +6564,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": "estadio 4"
+    "severidad": "estadio 4",
+    "alias": "erc"
   },
   {
     "codigo": "N18.5",
@@ -5829,7 +6574,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": "estadio 5"
+    "severidad": "estadio 5",
+    "alias": "erc"
   },
   {
     "codigo": "N18.9",
@@ -5838,7 +6584,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "renal",
-    "severidad": ""
+    "severidad": "",
+    "alias": "erc insuficiencia"
   },
   {
     "codigo": "N19",
@@ -5928,7 +6675,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "agudo",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu baja infeccion urinaria"
   },
   {
     "codigo": "N30.00",
@@ -5937,7 +6685,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "agudo",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.1",
@@ -5946,7 +6695,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.10",
@@ -5955,7 +6705,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.2",
@@ -5964,7 +6715,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.3",
@@ -5973,7 +6725,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.4",
@@ -5982,7 +6735,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.9",
@@ -5991,7 +6745,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N30.91",
@@ -6000,7 +6755,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu infeccion urinaria"
   },
   {
     "codigo": "N32.8",
@@ -6045,7 +6801,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "vesical",
-    "severidad": ""
+    "severidad": "",
+    "alias": "itu ivu"
   },
   {
     "codigo": "N39.3",
@@ -6081,7 +6838,8 @@ export const cie10Data = [
     "sistema": "Genitourinario",
     "tipo": "crónico",
     "subtipo": "prostático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "hpb"
   },
   {
     "codigo": "N40.0",
@@ -6480,6 +7238,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "N80.2",
+    "descripcion": "Endometriosis de la trompa de Falopio",
+    "grupo": "Endometriosis de la trompa de Falopio",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "endometriosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "N80.3",
+    "descripcion": "Endometriosis del peritoneo pélvico",
+    "grupo": "Endometriosis del peritoneo pélvico",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "endometriosis",
+    "severidad": ""
+  },
+  {
     "codigo": "N80.9",
     "descripcion": "Endometriosis no especificada",
     "grupo": "Endometriosis",
@@ -6708,6 +7484,15 @@ export const cie10Data = [
     "codigo": "N92.1",
     "descripcion": "Menstruación excesiva y frecuente con ciclo irregular",
     "grupo": "Menstruación excesiva y frecuente con ciclo",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "menstrual",
+    "severidad": ""
+  },
+  {
+    "codigo": "N92.2",
+    "descripcion": "Menstruación excesiva en la pubertad",
+    "grupo": "Menstruación excesiva en la pubertad",
     "sistema": "Ginecología",
     "tipo": "crónico",
     "subtipo": "menstrual",
@@ -6966,6 +7751,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "D50.8",
+    "descripcion": "Otras anemias por deficiencia de hierro",
+    "grupo": "Otras anemias por deficiencia de hierro",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "carencial",
+    "severidad": ""
+  },
+  {
     "codigo": "D50.9",
     "descripcion": "Anemia por deficiencia de hierro, no especificada",
     "grupo": "Anemia por deficiencia de hierro",
@@ -7185,6 +7979,15 @@ export const cie10Data = [
     "codigo": "D63.8",
     "descripcion": "Anemia en otras enfermedades crónicas",
     "grupo": "Anemia en otras enfermedades",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "anemia",
+    "severidad": ""
+  },
+  {
+    "codigo": "D64.8",
+    "descripcion": "Otras anemias especificadas",
+    "grupo": "Otras anemias especificadas",
     "sistema": "Hematología",
     "tipo": "crónico",
     "subtipo": "anemia",
@@ -7794,6 +8597,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "A15.1",
+    "descripcion": "Tuberculosis pulmonar confirmada por cultivo",
+    "grupo": "Tuberculosis pulmonar confirmada por cultivo",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "tuberculosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "A15.2",
+    "descripcion": "Tuberculosis pulmonar confirmada por histología",
+    "grupo": "Tuberculosis pulmonar confirmada por",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "tuberculosis",
+    "severidad": ""
+  },
+  {
     "codigo": "A15.3",
     "descripcion": "Tuberculosis del pulmón, confirmada por medios no especificados",
     "grupo": "Tuberculosis del pulmón",
@@ -7821,12 +8642,39 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "A16.0",
+    "descripcion": "Tuberculosis pulmonar con baciloscopia y cultivo negativos",
+    "grupo": "Tuberculosis pulmonar con baciloscopia y",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A16.1",
+    "descripcion": "Tuberculosis pulmonar sin examen bacteriológico",
+    "grupo": "Tuberculosis pulmonar sin examen",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
     "codigo": "A16.2",
     "descripcion": "Tuberculosis del pulmón, sin confirmación bacteriológica",
     "grupo": "Tuberculosis del pulmón",
     "sistema": "Infecciosas",
     "tipo": "crónico",
     "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A16.5",
+    "descripcion": "Pleuritis tuberculosa sin confirmación",
+    "grupo": "Pleuritis tuberculosa sin confirmación",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -8200,11 +9048,11 @@ export const cie10Data = [
   },
   {
     "codigo": "A48.1",
-    "descripcion": "Enfermedad de los legionarios",
-    "grupo": "Enfermedad de los legionarios",
+    "descripcion": "Neumonía por Legionella (enfermedad de los legionarios)",
+    "grupo": "Neumonía por Legionella",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -8622,9 +9470,36 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "B00.2",
+    "descripcion": "Gingivoestomatitis herpética",
+    "grupo": "Gingivoestomatitis herpética",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "exantemático",
+    "severidad": ""
+  },
+  {
     "codigo": "B00.9",
     "descripcion": "Infección por virus del herpes, no especificada",
     "grupo": "Infección por virus del herpes",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B01.0",
+    "descripcion": "Meningitis por varicela",
+    "grupo": "Meningitis por varicela",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B01.8",
+    "descripcion": "Varicela con otras complicaciones",
+    "grupo": "Varicela con otras complicaciones",
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
@@ -8638,6 +9513,33 @@ export const cie10Data = [
     "tipo": "agudo",
     "subtipo": "viral",
     "severidad": "sin complicación"
+  },
+  {
+    "codigo": "B02.0",
+    "descripcion": "Encefalitis por herpes zóster",
+    "grupo": "Encefalitis por herpes zóster",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B02.7",
+    "descripcion": "Herpes zóster diseminado",
+    "grupo": "Herpes zóster diseminado",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B02.8",
+    "descripcion": "Herpes zóster con otras complicaciones",
+    "grupo": "Herpes zóster con otras complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
     "codigo": "B02.9",
@@ -8823,6 +9725,42 @@ export const cie10Data = [
     "codigo": "B25.9",
     "descripcion": "Enfermedad por citomegalovirus, no especificada",
     "grupo": "Enfermedad por citomegalovirus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B26.0",
+    "descripcion": "Orquitis por parotiditis",
+    "grupo": "Orquitis por parotiditis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B26.1",
+    "descripcion": "Meningitis por parotiditis",
+    "grupo": "Meningitis por parotiditis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B26.3",
+    "descripcion": "Pancreatitis por parotiditis",
+    "grupo": "Pancreatitis por parotiditis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B26.8",
+    "descripcion": "Parotiditis con otras complicaciones",
+    "grupo": "Parotiditis con otras complicaciones",
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
@@ -9172,11 +10110,11 @@ export const cie10Data = [
   },
   {
     "codigo": "B59",
-    "descripcion": "Neumocistosis (Pneumocystis jirovecii)",
-    "grupo": "Neumocistosis",
+    "descripcion": "Neumonía por Pneumocystis jirovecii",
+    "grupo": "Neumonía por Pneumocystis jirovecii",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "protozoario",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -9402,7 +10340,8 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "covid",
-    "severidad": ""
+    "severidad": "",
+    "alias": "coronavirus"
   },
   {
     "codigo": "U07.2",
@@ -9411,7 +10350,8 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "covid",
-    "severidad": ""
+    "severidad": "",
+    "alias": "coronavirus"
   },
   {
     "codigo": "G56.00",
@@ -9474,7 +10414,18 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artritis inflamatoria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "artritis reumatoide"
+  },
+  {
+    "codigo": "M05.1",
+    "descripcion": "Enfermedad reumatoide del pulmón",
+    "grupo": "Enfermedad reumatoide del pulmón",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": "",
+    "alias": "artritis"
   },
   {
     "codigo": "M05.3",
@@ -9522,9 +10473,29 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "M06.1",
+    "descripcion": "Enfermedad de Still del adulto",
+    "grupo": "Enfermedad de Still del adulto",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": "",
+    "alias": "artritis reumatoide"
+  },
+  {
     "codigo": "M06.4",
     "descripcion": "Poliartropatía inflamatoria",
     "grupo": "Poliartropatía inflamatoria",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": "",
+    "alias": "artritis reumatoide"
+  },
+  {
+    "codigo": "M06.8",
+    "descripcion": "Otras artritis reumatoides especificadas",
+    "grupo": "Otras artritis reumatoides especificadas",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artritis inflamatoria",
@@ -9582,7 +10553,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artritis inflamatoria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "reumatoide"
   },
   {
     "codigo": "M08.9",
@@ -9591,12 +10563,22 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artritis inflamatoria",
-    "severidad": ""
+    "severidad": "",
+    "alias": "reumatoide"
   },
   {
     "codigo": "M10.0",
     "descripcion": "Gota idiopática",
     "grupo": "Gota idiopática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.2",
+    "descripcion": "Gota inducida por fármacos",
+    "grupo": "Gota inducida por fármacos",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artritis inflamatoria",
@@ -9630,6 +10612,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "M13.0",
+    "descripcion": "Poliartritis no especificada",
+    "grupo": "Poliartritis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": ""
+  },
+  {
     "codigo": "M13.9",
     "descripcion": "Artritis no especificada",
     "grupo": "Artritis",
@@ -9642,6 +10633,15 @@ export const cie10Data = [
     "codigo": "M15.0",
     "descripcion": "Artrosis primaria generalizada",
     "grupo": "Artrosis primaria generalizada",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M15.4",
+    "descripcion": "Artrosis erosiva",
+    "grupo": "Artrosis erosiva",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artrosis",
@@ -9675,6 +10675,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "M16.4",
+    "descripcion": "Coxartrosis bilateral postraumática",
+    "grupo": "Coxartrosis bilateral postraumática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M16.5",
+    "descripcion": "Coxartrosis postraumática",
+    "grupo": "Coxartrosis postraumática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
     "codigo": "M16.9",
     "descripcion": "Coxartrosis no especificada",
     "grupo": "Coxartrosis",
@@ -9702,6 +10720,42 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "M17.2",
+    "descripcion": "Gonartrosis bilateral postraumática",
+    "grupo": "Gonartrosis bilateral postraumática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.3",
+    "descripcion": "Gonartrosis postraumática",
+    "grupo": "Gonartrosis postraumática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.4",
+    "descripcion": "Gonartrosis secundaria bilateral",
+    "grupo": "Gonartrosis secundaria bilateral",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.5",
+    "descripcion": "Gonartrosis secundaria",
+    "grupo": "Gonartrosis secundaria",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
     "codigo": "M17.9",
     "descripcion": "Gonartrosis no especificada",
     "grupo": "Gonartrosis",
@@ -9723,6 +10777,24 @@ export const cie10Data = [
     "codigo": "M19.0",
     "descripcion": "Artrosis primaria de otras articulaciones",
     "grupo": "Artrosis primaria de otras articulaciones",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M19.1",
+    "descripcion": "Artrosis postraumática de otras articulaciones",
+    "grupo": "Artrosis postraumática de otras articulaciones",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "artrosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "M19.2",
+    "descripcion": "Artrosis secundaria de otras articulaciones",
+    "grupo": "Artrosis secundaria de otras articulaciones",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "artrosis",
@@ -10179,6 +11251,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "M51.16",
+    "descripcion": "Trastorno de disco lumbar con radiculopatía",
+    "grupo": "Trastorno de disco lumbar con radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "columna",
+    "severidad": ""
+  },
+  {
     "codigo": "M51.17",
     "descripcion": "Hernia discal lumbar con radiculopatía",
     "grupo": "Hernia discal lumbar con radiculopatía",
@@ -10200,6 +11281,15 @@ export const cie10Data = [
     "codigo": "M51.3",
     "descripcion": "Otra degeneración especificada de disco intervertebral",
     "grupo": "Otra degeneración especificada de disco",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "columna",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.9",
+    "descripcion": "Trastorno de disco intervertebral no especificado",
+    "grupo": "Trastorno de disco intervertebral",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
@@ -10230,7 +11320,28 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
+  },
+  {
+    "codigo": "M54.16",
+    "descripcion": "Radiculopatía lumbar",
+    "grupo": "Radiculopatía lumbar",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "columna",
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
+  },
+  {
+    "codigo": "M54.17",
+    "descripcion": "Radiculopatía lumbosacra",
+    "grupo": "Radiculopatía lumbosacra",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "columna",
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
   },
   {
     "codigo": "M54.2",
@@ -10239,7 +11350,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
   },
   {
     "codigo": "M54.3",
@@ -10248,7 +11360,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
   },
   {
     "codigo": "M54.4",
@@ -10257,7 +11370,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbalgia"
   },
   {
     "codigo": "M54.5",
@@ -10266,7 +11380,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbalgia dolor lumbar"
   },
   {
     "codigo": "M54.50",
@@ -10275,7 +11390,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago"
   },
   {
     "codigo": "M54.6",
@@ -10284,7 +11400,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
   },
   {
     "codigo": "M54.9",
@@ -10293,7 +11410,8 @@ export const cie10Data = [
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
     "subtipo": "columna",
-    "severidad": ""
+    "severidad": "",
+    "alias": "lumbago lumbalgia"
   },
   {
     "codigo": "M60.9",
@@ -11031,7 +12149,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.009",
@@ -11040,7 +12159,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.1",
@@ -11049,7 +12169,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.109",
@@ -11058,7 +12179,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.2",
@@ -11067,7 +12189,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.3",
@@ -11076,7 +12199,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.311",
@@ -11085,7 +12209,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.4",
@@ -11094,7 +12219,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.5",
@@ -11103,7 +12229,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "epilepsia convulsion"
   },
   {
     "codigo": "G40.6",
@@ -11112,7 +12239,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "epilepsia convulsion"
   },
   {
     "codigo": "G40.7",
@@ -11121,7 +12249,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "epilepsia convulsion"
   },
   {
     "codigo": "G40.8",
@@ -11130,7 +12259,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.9",
@@ -11139,7 +12269,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G40.909",
@@ -11148,7 +12279,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "epiléptico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "convulsion"
   },
   {
     "codigo": "G41.0",
@@ -11184,7 +12316,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.009",
@@ -11193,7 +12326,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.1",
@@ -11202,7 +12336,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.109",
@@ -11211,7 +12346,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.2",
@@ -11220,7 +12356,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "migrana jaqueca"
   },
   {
     "codigo": "G43.3",
@@ -11229,7 +12366,18 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
+  },
+  {
+    "codigo": "G43.4",
+    "descripcion": "Migraña hemipléjica",
+    "grupo": "Migraña hemipléjica",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "cefalea",
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.8",
@@ -11238,7 +12386,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.9",
@@ -11247,7 +12396,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.909",
@@ -11256,7 +12406,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G43.A0",
@@ -11265,7 +12416,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "recurrente",
     "subtipo": "cefalea",
-    "severidad": ""
+    "severidad": "",
+    "alias": "jaqueca"
   },
   {
     "codigo": "G44.0",
@@ -11304,6 +12456,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "G44.3",
+    "descripcion": "Cefalea crónica postraumática",
+    "grupo": "Cefalea postraumática",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "cefalea",
+    "severidad": ""
+  },
+  {
     "codigo": "G44.309",
     "descripcion": "Cefalea post-traumática NE",
     "grupo": "Cefalea post-traumática NE",
@@ -11331,6 +12492,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "G44.8",
+    "descripcion": "Otros síndromes de cefalea especificados",
+    "grupo": "Otros síndromes de cefalea especificados",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "cefalea",
+    "severidad": ""
+  },
+  {
     "codigo": "G45.0",
     "descripcion": "Síndrome arterial vertebrobasilar",
     "grupo": "Síndrome arterial vertebrobasilar",
@@ -11349,9 +12519,27 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "G45.3",
+    "descripcion": "Amaurosis fugaz",
+    "grupo": "Amaurosis fugaz",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": ""
+  },
+  {
     "codigo": "G45.4",
     "descripcion": "Amnesia global transitoria",
     "grupo": "Amnesia global transitoria",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "G45.8",
+    "descripcion": "Otras isquemias cerebrales transitorias",
+    "grupo": "Otras isquemias cerebrales transitorias",
     "sistema": "Neurología",
     "tipo": "agudo",
     "subtipo": "cerebrovascular",
@@ -12006,13 +13194,74 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "I63.0",
+    "descripcion": "Infarto cerebral por trombosis de arterias precerebrales",
+    "grupo": "Infarto cerebral por trombosis de arterias",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
+    "codigo": "I63.1",
+    "descripcion": "Infarto cerebral por embolia de arterias precerebrales",
+    "grupo": "Infarto cerebral por embolia de arterias",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
+    "codigo": "I63.3",
+    "descripcion": "Infarto cerebral por trombosis de arterias cerebrales",
+    "grupo": "Infarto cerebral por trombosis de arterias",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
+    "codigo": "I63.4",
+    "descripcion": "Infarto cerebral por embolia de arterias cerebrales",
+    "grupo": "Infarto cerebral por embolia de arterias",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
+    "codigo": "I63.5",
+    "descripcion": "Infarto cerebral por oclusión de arterias cerebrales",
+    "grupo": "Infarto cerebral por oclusión de arterias",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
+    "codigo": "I63.8",
+    "descripcion": "Otros infartos cerebrales",
+    "grupo": "Otros infartos cerebrales",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
+    "severidad": "",
+    "alias": "acv stroke"
+  },
+  {
     "codigo": "I63.9",
     "descripcion": "Infarto cerebral (ACV isquémico) no especificado",
     "grupo": "Infarto cerebral",
     "sistema": "Neurología",
     "tipo": "agudo",
     "subtipo": "cerebrovascular",
-    "severidad": ""
+    "severidad": "",
+    "alias": "stroke"
   },
   {
     "codigo": "I64",
@@ -12021,7 +13270,8 @@ export const cie10Data = [
     "sistema": "Neurología",
     "tipo": "agudo",
     "subtipo": "hemorrágico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "stroke"
   },
   {
     "codigo": "I65.2",
@@ -12036,6 +13286,15 @@ export const cie10Data = [
     "codigo": "I67.1",
     "descripcion": "Aneurisma cerebral sin ruptura",
     "grupo": "Aneurisma cerebral sin ruptura",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "cerebrovascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I67.4",
+    "descripcion": "Encefalopatía hipertensiva",
+    "grupo": "Encefalopatía hipertensiva",
     "sistema": "Neurología",
     "tipo": "crónico",
     "subtipo": "cerebrovascular",
@@ -12324,6 +13583,15 @@ export const cie10Data = [
     "codigo": "O21.1",
     "descripcion": "Hiperémesis gravídica con trastornos metabólicos",
     "grupo": "Hiperémesis gravídica con trastornos",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hiperémesis",
+    "severidad": ""
+  },
+  {
+    "codigo": "O21.9",
+    "descripcion": "Hiperémesis gravídica no especificada",
+    "grupo": "Hiperémesis gravídica",
     "sistema": "Obstetricia",
     "tipo": "agudo",
     "subtipo": "hiperémesis",
@@ -12888,6 +14156,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "O80.1",
+    "descripcion": "Parto único espontáneo en presentación podálica",
+    "grupo": "Parto único espontáneo en presentación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "parto",
+    "severidad": ""
+  },
+  {
     "codigo": "O80.9",
     "descripcion": "Parto único espontáneo sin otra especificación",
     "grupo": "Parto único espontáneo sin otra especificación",
@@ -13380,7 +14657,8 @@ export const cie10Data = [
     "sistema": "Oftalmología",
     "tipo": "crónico",
     "subtipo": "conjuntival",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ojo rojo"
   },
   {
     "codigo": "H11.0",
@@ -16146,9 +17424,54 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J38.1",
+    "descripcion": "Pólipo de las cuerdas vocales",
+    "grupo": "Pólipo de las cuerdas vocales",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "faríngeo",
+    "severidad": ""
+  },
+  {
+    "codigo": "J38.2",
+    "descripcion": "Nódulos de las cuerdas vocales",
+    "grupo": "Nódulos de las cuerdas vocales",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "faríngeo",
+    "severidad": ""
+  },
+  {
     "codigo": "B01.2",
     "descripcion": "Neumonía debida a varicela",
     "grupo": "Neumonía debida a varicela",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "B05.2",
+    "descripcion": "Sarampión complicado con neumonía",
+    "grupo": "Sarampión complicado con neumonía",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "B05.3",
+    "descripcion": "Sarampión complicado con otitis media",
+    "grupo": "Sarampión complicado con otitis media",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B05.8",
+    "descripcion": "Sarampión con otras complicaciones",
+    "grupo": "Sarampión con otras complicaciones",
     "sistema": "Pediatría",
     "tipo": "agudo",
     "subtipo": "viral",
@@ -16209,6 +17532,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J21.1",
+    "descripcion": "Bronquiolitis aguda por metapneumovirus humano",
+    "grupo": "Bronquiolitis por metapneumovirus humano",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
     "codigo": "J21.8",
     "descripcion": "Bronquiolitis aguda debida a otros virus especificados",
     "grupo": "Bronquiolitis debida a otros virus",
@@ -16243,6 +17575,16 @@ export const cie10Data = [
     "tipo": "crónico",
     "subtipo": "dermatitis",
     "severidad": ""
+  },
+  {
+    "codigo": "M08.4",
+    "descripcion": "Artritis juvenil pauciarticular",
+    "grupo": "Artritis juvenil pauciarticular",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "artritis inflamatoria",
+    "severidad": "",
+    "alias": "reumatoide"
   },
   {
     "codigo": "P07.10",
@@ -16551,12 +17893,84 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "P23.0",
+    "descripcion": "Neumonía congénita por virus",
+    "grupo": "Neumonía congénita por virus",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.1",
+    "descripcion": "Neumonía congénita por clamidia",
+    "grupo": "Neumonía congénita por clamidia",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.2",
+    "descripcion": "Neumonía congénita por estafilococo",
+    "grupo": "Neumonía congénita por estafilococo",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.3",
+    "descripcion": "Neumonía congénita por estreptococo del grupo B",
+    "grupo": "Neumonía congénita por estreptococo del grupo",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.4",
+    "descripcion": "Neumonía congénita por Escherichia coli",
+    "grupo": "Neumonía congénita por Escherichia coli",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.5",
+    "descripcion": "Neumonía congénita por Pseudomonas",
+    "grupo": "Neumonía congénita por Pseudomonas",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.6",
+    "descripcion": "Neumonía congénita por otras bacterias",
+    "grupo": "Neumonía congénita por otras bacterias",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.8",
+    "descripcion": "Neumonía congénita por otros organismos",
+    "grupo": "Neumonía congénita por otros organismos",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
     "codigo": "P23.9",
     "descripcion": "Neumonía congénita no especificada",
     "grupo": "Neumonía congénita",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17079,7 +18493,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "catarro resfrio"
   },
   {
     "codigo": "J01.0",
@@ -17088,7 +18503,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.00",
@@ -17097,7 +18513,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.1",
@@ -17106,7 +18523,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.10",
@@ -17115,7 +18533,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.2",
@@ -17124,7 +18543,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.3",
@@ -17133,7 +18553,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.4",
@@ -17142,7 +18563,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.40",
@@ -17151,7 +18573,18 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
+  },
+  {
+    "codigo": "J01.8",
+    "descripcion": "Otras sinusitis agudas",
+    "grupo": "Otras sinusitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "vía aérea alta",
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J01.9",
@@ -17160,7 +18593,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J02.0",
@@ -17169,7 +18603,18 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "bacteriano",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
+  },
+  {
+    "codigo": "J02.8",
+    "descripcion": "Faringitis aguda por otros microorganismos especificados",
+    "grupo": "Faringitis por otros microorganismos",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "vía aérea alta",
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J02.9",
@@ -17178,7 +18623,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dolor de garganta resfrio catarro"
   },
   {
     "codigo": "J03.0",
@@ -17187,7 +18633,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "bacteriano",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J03.00",
@@ -17196,7 +18643,18 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "bacteriano",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
+  },
+  {
+    "codigo": "J03.8",
+    "descripcion": "Amigdalitis aguda por otros microorganismos especificados",
+    "grupo": "Amigdalitis por otros microorganismos",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "vía aérea alta",
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J03.9",
@@ -17205,7 +18663,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "anginas resfrio catarro"
   },
   {
     "codigo": "J04.0",
@@ -17214,7 +18673,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J04.1",
@@ -17223,7 +18683,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J04.2",
@@ -17232,7 +18693,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J05.0",
@@ -17241,7 +18703,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "obstructivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J05.1",
@@ -17250,7 +18713,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J06.0",
@@ -17259,7 +18723,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J06.8",
@@ -17268,7 +18733,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio catarro"
   },
   {
     "codigo": "J06.9",
@@ -17277,7 +18743,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "vía aérea alta",
-    "severidad": ""
+    "severidad": "",
+    "alias": "resfrio gripe catarro ivas"
   },
   {
     "codigo": "J09",
@@ -17294,7 +18761,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "influenza",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17303,7 +18770,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "influenza",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17321,7 +18788,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "influenza",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17339,7 +18806,7 @@ export const cie10Data = [
     "grupo": "Neumonía por adenovirus",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17348,7 +18815,7 @@ export const cie10Data = [
     "grupo": "Neumonía por virus sincitial respiratorio",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17357,7 +18824,7 @@ export const cie10Data = [
     "grupo": "Neumonía por virus parainfluenza",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "influenza",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17366,7 +18833,7 @@ export const cie10Data = [
     "grupo": "Neumonía por metapneumovirus humano",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17375,8 +18842,39 @@ export const cie10Data = [
     "grupo": "Neumonía por otros virus",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
-    "severidad": ""
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "covid coronavirus"
+  },
+  {
+    "codigo": "J12.81",
+    "descripcion": "Neumonía por coronavirus asociado al SARS",
+    "grupo": "Neumonía por coronavirus asociado al SARS",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "covid"
+  },
+  {
+    "codigo": "J12.82",
+    "descripcion": "Neumonía por COVID-19",
+    "grupo": "Neumonía por COVID-19",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "coronavirus"
+  },
+  {
+    "codigo": "J12.89",
+    "descripcion": "Otra neumonía viral",
+    "grupo": "Otra neumonía viral",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "covid coronavirus"
   },
   {
     "codigo": "J12.9",
@@ -17384,7 +18882,7 @@ export const cie10Data = [
     "grupo": "Neumonía viral",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17394,7 +18892,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "neumonía",
-    "severidad": ""
+    "severidad": "",
+    "alias": "neumococo neumococica"
   },
   {
     "codigo": "J14",
@@ -17402,7 +18901,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Haemophilus influenzae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "influenza",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17429,7 +18928,7 @@ export const cie10Data = [
     "grupo": "Neumonía por estafilococo",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17438,7 +18937,16 @@ export const cie10Data = [
     "grupo": "Neumonía por estreptococo del grupo B",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.4",
+    "descripcion": "Neumonía por otros estreptococos",
+    "grupo": "Neumonía por otros estreptococos",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17447,7 +18955,16 @@ export const cie10Data = [
     "grupo": "Neumonía por Escherichia coli",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.6",
+    "descripcion": "Neumonía por otras bacterias gramnegativas",
+    "grupo": "Neumonía por otras bacterias gramnegativas",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17456,8 +18973,18 @@ export const cie10Data = [
     "grupo": "Neumonía por Mycoplasma pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
+    "subtipo": "neumonía",
     "severidad": ""
+  },
+  {
+    "codigo": "J15.8",
+    "descripcion": "Otras neumonías bacterianas",
+    "grupo": "Otras neumonías bacterianas",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "nosocomial intrahospitalaria"
   },
   {
     "codigo": "J15.9",
@@ -17465,13 +18992,34 @@ export const cie10Data = [
     "grupo": "Neumonía bacteriana",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "bacteriano",
-    "severidad": ""
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "comunitaria"
   },
   {
     "codigo": "J16.0",
     "descripcion": "Neumonía por clamidias",
     "grupo": "Neumonía por clamidias",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "atipica"
+  },
+  {
+    "codigo": "J16.8",
+    "descripcion": "Neumonía por otros microorganismos infecciosos especificados",
+    "grupo": "Neumonía por otros microorganismos",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "atipica"
+  },
+  {
+    "codigo": "J17",
+    "descripcion": "Neumonía en enfermedades clasificadas en otra parte",
+    "grupo": "Neumonía en enfermedades clasificadas en otra",
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "neumonía",
@@ -17502,6 +19050,16 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "encamado"
+  },
+  {
+    "codigo": "J18.8",
+    "descripcion": "Otras neumonías de microorganismo no especificado",
+    "grupo": "Otras neumonías de microorganismo",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17511,7 +19069,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "neumonía",
-    "severidad": ""
+    "severidad": "",
+    "alias": "comunitaria adquirida en la comunidad nac"
   },
   {
     "codigo": "J20.0",
@@ -17519,7 +19078,43 @@ export const cie10Data = [
     "grupo": "Bronquitis por Mycoplasma pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.1",
+    "descripcion": "Bronquitis aguda por Haemophilus influenzae",
+    "grupo": "Bronquitis por Haemophilus influenzae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "influenza",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.2",
+    "descripcion": "Bronquitis aguda por estreptococo",
+    "grupo": "Bronquitis por estreptococo",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
     "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.3",
+    "descripcion": "Bronquitis aguda por virus Coxsackie",
+    "grupo": "Bronquitis por virus Coxsackie",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.4",
+    "descripcion": "Bronquitis aguda por virus parainfluenza",
+    "grupo": "Bronquitis por virus parainfluenza",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -17529,6 +19124,33 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.6",
+    "descripcion": "Bronquitis aguda por rinovirus",
+    "grupo": "Bronquitis por rinovirus",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.7",
+    "descripcion": "Bronquitis aguda por virus Echo",
+    "grupo": "Bronquitis por virus Echo",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.8",
+    "descripcion": "Bronquitis aguda por otros microorganismos especificados",
+    "grupo": "Bronquitis por otros microorganismos",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bronquial",
     "severidad": ""
   },
   {
@@ -17694,6 +19316,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J32.8",
+    "descripcion": "Otras sinusitis crónicas",
+    "grupo": "Otras sinusitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "rinosinusal",
+    "severidad": ""
+  },
+  {
     "codigo": "J32.9",
     "descripcion": "Sinusitis crónica no especificada",
     "grupo": "Sinusitis",
@@ -17793,6 +19424,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J37.1",
+    "descripcion": "Laringotraqueítis crónica",
+    "grupo": "Laringotraqueítis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "faríngeo",
+    "severidad": ""
+  },
+  {
     "codigo": "J38.3",
     "descripcion": "Otras enfermedades de cuerdas vocales",
     "grupo": "Otras enfermedades de cuerdas vocales",
@@ -17847,6 +19487,33 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J43.1",
+    "descripcion": "Enfisema panlobular",
+    "grupo": "Enfisema panlobular",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "enfisema",
+    "severidad": ""
+  },
+  {
+    "codigo": "J43.2",
+    "descripcion": "Enfisema centrilobular",
+    "grupo": "Enfisema centrilobular",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "enfisema",
+    "severidad": ""
+  },
+  {
+    "codigo": "J43.8",
+    "descripcion": "Otros enfisemas",
+    "grupo": "Otros enfisemas",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "enfisema",
+    "severidad": ""
+  },
+  {
     "codigo": "J43.9",
     "descripcion": "Enfisema pulmonar no especificado",
     "grupo": "Enfisema pulmonar",
@@ -17862,7 +19529,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "epoc",
-    "severidad": ""
+    "severidad": "",
+    "alias": "enfermedad pulmonar obstructiva cronica"
   },
   {
     "codigo": "J44.1",
@@ -17871,7 +19539,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "epoc",
-    "severidad": ""
+    "severidad": "",
+    "alias": "exacerbado crisis enfermedad pulmonar obstructiva cronica"
   },
   {
     "codigo": "J44.8",
@@ -17880,7 +19549,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "epoc",
-    "severidad": ""
+    "severidad": "",
+    "alias": "epoc"
   },
   {
     "codigo": "J44.9",
@@ -17889,7 +19559,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "epoc",
-    "severidad": ""
+    "severidad": "",
+    "alias": "enfermedad pulmonar obstructiva cronica"
   },
   {
     "codigo": "J45.0",
@@ -17898,7 +19569,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "alérgico",
-    "severidad": ""
+    "severidad": "",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.1",
@@ -17907,7 +19579,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.20",
@@ -17916,7 +19589,28 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": "leve"
+    "severidad": "leve",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.21",
+    "descripcion": "Asma leve intermitente con exacerbación aguda",
+    "grupo": "Asma intermitente con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "asmático",
+    "severidad": "leve",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.22",
+    "descripcion": "Asma leve intermitente con estado asmático",
+    "grupo": "Asma intermitente con estado asmático",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "asmático",
+    "severidad": "leve",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.30",
@@ -17925,7 +19619,28 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": "leve"
+    "severidad": "leve",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.31",
+    "descripcion": "Asma leve persistente con exacerbación aguda",
+    "grupo": "Asma persistente con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "asmático",
+    "severidad": "leve",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.32",
+    "descripcion": "Asma leve persistente con estado asmático",
+    "grupo": "Asma persistente con estado asmático",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "asmático",
+    "severidad": "leve",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.40",
@@ -17934,7 +19649,28 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": "moderado"
+    "severidad": "moderado",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.41",
+    "descripcion": "Asma moderada persistente con exacerbación aguda",
+    "grupo": "Asma persistente con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "asmático",
+    "severidad": "moderado",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.42",
+    "descripcion": "Asma moderada persistente con estado asmático",
+    "grupo": "Asma persistente con estado asmático",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "asmático",
+    "severidad": "moderado",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.50",
@@ -17943,7 +19679,28 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.51",
+    "descripcion": "Asma severa persistente con exacerbación aguda",
+    "grupo": "Asma persistente con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "asmático",
+    "severidad": "grave",
+    "alias": "bronquial"
+  },
+  {
+    "codigo": "J45.52",
+    "descripcion": "Asma severa persistente con estado asmático",
+    "grupo": "Asma persistente con estado asmático",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "asmático",
+    "severidad": "grave",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.8",
@@ -17952,7 +19709,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.9",
@@ -17961,7 +19719,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": ""
+    "severidad": "",
+    "alias": "bronquial"
   },
   {
     "codigo": "J45.909",
@@ -17970,7 +19729,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "asmático",
-    "severidad": "sin complicación"
+    "severidad": "sin complicación",
+    "alias": "bronquial"
   },
   {
     "codigo": "J46",
@@ -17979,7 +19739,8 @@ export const cie10Data = [
     "sistema": "Respiratorio",
     "tipo": "agudo",
     "subtipo": "asmático",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "bronquial"
   },
   {
     "codigo": "J47",
@@ -17996,6 +19757,24 @@ export const cie10Data = [
     "grupo": "Bronquiectasias con infección",
     "sistema": "Respiratorio",
     "tipo": "agudo",
+    "subtipo": "bronquiectasia",
+    "severidad": ""
+  },
+  {
+    "codigo": "J47.1",
+    "descripcion": "Bronquiectasia con exacerbación aguda",
+    "grupo": "Bronquiectasia con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bronquiectasia",
+    "severidad": ""
+  },
+  {
+    "codigo": "J47.9",
+    "descripcion": "Bronquiectasia no especificada",
+    "grupo": "Bronquiectasia",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
     "subtipo": "bronquiectasia",
     "severidad": ""
   },
@@ -18041,7 +19820,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por hipersensibilidad",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "intersticial",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -18050,7 +19829,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por inhalación de gases",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "intersticial",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -18058,9 +19837,29 @@ export const cie10Data = [
     "descripcion": "Neumonía aspirativa por alimento o vómito",
     "grupo": "Neumonía aspirativa por alimento o vómito",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
-    "subtipo": "intersticial",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
+  },
+  {
+    "codigo": "J69.1",
+    "descripcion": "Neumonía por aspiración de aceites y esencias",
+    "grupo": "Neumonía por aspiración de aceites y esencias",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "aspirativa lipoidea"
+  },
+  {
+    "codigo": "J69.8",
+    "descripcion": "Neumonía por aspiración de otros sólidos y líquidos",
+    "grupo": "Neumonía por aspiración de otros sólidos y",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": "",
+    "alias": "aspirativa"
   },
   {
     "codigo": "J70.0",
@@ -18068,7 +19867,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por radiación",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "intersticial",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -18117,12 +19916,30 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J85.0",
+    "descripcion": "Gangrena y necrosis del pulmón",
+    "grupo": "Gangrena y necrosis del pulmón",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J85.1",
+    "descripcion": "Absceso pulmonar con neumonía",
+    "grupo": "Absceso pulmonar con neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
     "codigo": "J85.2",
     "descripcion": "Absceso pulmonar sin neumonía",
     "grupo": "Absceso pulmonar sin neumonía",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -18139,7 +19956,7 @@ export const cie10Data = [
     "descripcion": "Derrame pleural no clasificado en otra parte",
     "grupo": "Derrame pleural no clasificado en otra parte",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
+    "tipo": "agudo",
     "subtipo": "pleural",
     "severidad": ""
   },
@@ -18148,7 +19965,7 @@ export const cie10Data = [
     "descripcion": "Neumotórax espontáneo a tensión",
     "grupo": "Neumotórax espontáneo a tensión",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
+    "tipo": "agudo",
     "subtipo": "pleural",
     "severidad": ""
   },
@@ -18157,7 +19974,7 @@ export const cie10Data = [
     "descripcion": "Neumotórax espontáneo",
     "grupo": "Neumotórax espontáneo",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
+    "tipo": "agudo",
     "subtipo": "pleural",
     "severidad": ""
   },
@@ -18166,7 +19983,7 @@ export const cie10Data = [
     "descripcion": "Neumotórax no especificado",
     "grupo": "Neumotórax",
     "sistema": "Respiratorio",
-    "tipo": "crónico",
+    "tipo": "agudo",
     "subtipo": "pleural",
     "severidad": ""
   },
@@ -18198,6 +20015,24 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J96.01",
+    "descripcion": "Insuficiencia respiratoria aguda con hipoxia",
+    "grupo": "Insuficiencia respiratoria con hipoxia",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.02",
+    "descripcion": "Insuficiencia respiratoria aguda con hipercapnia",
+    "grupo": "Insuficiencia respiratoria con hipercapnia",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
     "codigo": "J96.1",
     "descripcion": "Insuficiencia respiratoria crónica",
     "grupo": "Insuficiencia respiratoria",
@@ -18207,9 +20042,54 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "J96.10",
+    "descripcion": "Insuficiencia respiratoria crónica",
+    "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.11",
+    "descripcion": "Insuficiencia respiratoria crónica con hipoxia",
+    "grupo": "Insuficiencia respiratoria con hipoxia",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
     "codigo": "J96.9",
     "descripcion": "Insuficiencia respiratoria no especificada",
     "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.90",
+    "descripcion": "Insuficiencia respiratoria no especificada",
+    "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J98.1",
+    "descripcion": "Colapso pulmonar",
+    "grupo": "Colapso pulmonar",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J98.4",
+    "descripcion": "Otros trastornos del pulmón",
+    "grupo": "Otros trastornos del pulmón",
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "respiratorio",
@@ -18495,6 +20375,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "F17.1",
+    "descripcion": "Uso nocivo de tabaco",
+    "grupo": "Uso nocivo de tabaco",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "por sustancia",
+    "severidad": ""
+  },
+  {
     "codigo": "F17.2",
     "descripcion": "Síndrome de dependencia de tabaco",
     "grupo": "Síndrome de dependencia de tabaco",
@@ -18507,6 +20396,15 @@ export const cie10Data = [
     "codigo": "F17.210",
     "descripcion": "Dependencia al tabaco NE",
     "grupo": "Dependencia al tabaco NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "por sustancia",
+    "severidad": ""
+  },
+  {
+    "codigo": "F17.3",
+    "descripcion": "Abstinencia de tabaco",
+    "grupo": "Abstinencia de tabaco",
     "sistema": "Salud Mental",
     "tipo": "crónico",
     "subtipo": "por sustancia",
@@ -18717,7 +20615,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "agudo",
     "subtipo": "afectivo",
-    "severidad": "leve"
+    "severidad": "leve",
+    "alias": "depresion"
   },
   {
     "codigo": "F32.1",
@@ -18726,7 +20625,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "agudo",
     "subtipo": "afectivo",
-    "severidad": "moderado"
+    "severidad": "moderado",
+    "alias": "depresion"
   },
   {
     "codigo": "F32.2",
@@ -18735,7 +20635,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "agudo",
     "subtipo": "afectivo",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "depresion"
   },
   {
     "codigo": "F32.3",
@@ -18744,7 +20645,18 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "agudo",
     "subtipo": "afectivo",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "depresion"
+  },
+  {
+    "codigo": "F32.8",
+    "descripcion": "Otros episodios depresivos",
+    "grupo": "Otros episodios depresivos",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "afectivo",
+    "severidad": "",
+    "alias": "depresion"
   },
   {
     "codigo": "F32.9",
@@ -18753,7 +20665,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "agudo",
     "subtipo": "afectivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "depresion"
   },
   {
     "codigo": "F33.0",
@@ -18762,7 +20675,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "recurrente",
     "subtipo": "afectivo",
-    "severidad": "leve"
+    "severidad": "leve",
+    "alias": "depresion"
   },
   {
     "codigo": "F33.1",
@@ -18771,7 +20685,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "recurrente",
     "subtipo": "afectivo",
-    "severidad": "moderado"
+    "severidad": "moderado",
+    "alias": "depresion"
   },
   {
     "codigo": "F33.2",
@@ -18780,7 +20695,18 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "recurrente",
     "subtipo": "afectivo",
-    "severidad": "grave"
+    "severidad": "grave",
+    "alias": "depresion"
+  },
+  {
+    "codigo": "F33.3",
+    "descripcion": "Trastorno depresivo recurrente, episodio grave con síntomas psicóticos",
+    "grupo": "Trastorno depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "afectivo",
+    "severidad": "grave",
+    "alias": "depresion"
   },
   {
     "codigo": "F33.4",
@@ -18789,7 +20715,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "recurrente",
     "subtipo": "afectivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "depresion"
   },
   {
     "codigo": "F33.9",
@@ -18798,7 +20725,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "recurrente",
     "subtipo": "afectivo",
-    "severidad": ""
+    "severidad": "",
+    "alias": "depresion"
   },
   {
     "codigo": "F34.0",
@@ -18870,7 +20798,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "crónico",
     "subtipo": "ansioso",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ansiedad"
   },
   {
     "codigo": "F41.1",
@@ -18888,7 +20817,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "crónico",
     "subtipo": "ansioso",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ansiedad"
   },
   {
     "codigo": "F41.3",
@@ -18897,7 +20827,8 @@ export const cie10Data = [
     "sistema": "Salud Mental",
     "tipo": "crónico",
     "subtipo": "ansioso",
-    "severidad": ""
+    "severidad": "",
+    "alias": "ansiedad"
   },
   {
     "codigo": "F41.8",
@@ -19015,6 +20946,24 @@ export const cie10Data = [
     "tipo": "crónico",
     "subtipo": "ansioso",
     "severidad": ""
+  },
+  {
+    "codigo": "F43.8",
+    "descripcion": "Otras reacciones al estrés grave",
+    "grupo": "Otras reacciones al estrés",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "ansioso",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F43.9",
+    "descripcion": "Reacción al estrés grave no especificada",
+    "grupo": "Reacción al estrés",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "ansioso",
+    "severidad": "grave"
   },
   {
     "codigo": "F44.0",
@@ -20088,6 +22037,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "R50.0",
+    "descripcion": "Fiebre con escalofrío",
+    "grupo": "Fiebre con escalofrío",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "general",
+    "severidad": ""
+  },
+  {
     "codigo": "R50.9",
     "descripcion": "Fiebre no especificada (fiebre de origen desconocido)",
     "grupo": "Fiebre",
@@ -20103,7 +22061,8 @@ export const cie10Data = [
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
     "subtipo": "general",
-    "severidad": ""
+    "severidad": "",
+    "alias": "dolor de cabeza"
   },
   {
     "codigo": "R51.9",

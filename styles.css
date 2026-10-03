@@ -1077,11 +1077,18 @@ input:focus, select:focus, textarea:focus {
   right: 0;
   top: calc(100% + 4px);
   z-index: 4;
-  max-height: min(240px, 40vh);
+  max-height: min(360px, 52vh);
   overflow: auto;
 }
 
 .search-anchor .suggestions:empty { display: none; }
+
+.suggest-more {
+  margin: 0;
+  padding: 8px 12px 10px;
+  color: #5c6b7a;
+  font-size: 12px;
+}
 
 .suggestions {
   display: flex;

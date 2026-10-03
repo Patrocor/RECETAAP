@@ -109,6 +109,72 @@ function etiquetaTipo(id) {
   return TIPOS.find((tipo) => tipo.id === id)?.label || "";
 }
 
+function sinAcento(texto) {
+  return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function puntajeDiagnostico(dx, term) {
+  if (!term) return 1;
+  const t = sinAcento(term);
+  const desc = sinAcento(dx.descripcion);
+  const alias = sinAcento(dx.alias);
+  const grupo = sinAcento(dx.grupo);
+  const sub = sinAcento(dx.subtipo);
+  const tipo = sinAcento(etiquetaTipo(dx.tipo));
+  const codigo = sinAcento(dx.codigo);
+  const seguro = t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (new RegExp(`\\bsin\\s+${seguro}`).test(desc)) return 40;
+  const palabras = desc.split(/[^a-z0-9]+/).filter(Boolean);
+  const compuesta = palabras.some((word) => /^(bronco|hipo)/.test(word) && word.endsWith(t));
+  const empieza = desc.startsWith(t) || palabras.some((word) => word === t || word.startsWith(t)) || compuesta;
+  const especifica = /\bpor\b|\bdebida\b/.test(desc) && !/aspirativ|atipic/.test(desc);
+  if (empieza && !especifica) return 100;
+  if (empieza) return 92;
+  if (new RegExp(`(?:^|[^a-z0-9])${seguro}`).test(desc)) return 60;
+  const enAlias = alias.split(/[^a-z0-9]+/).some((word) => word === t || word.startsWith(t));
+  if (enAlias) return 45;
+  const borde = new RegExp(`(?:^|[^a-z0-9])${seguro}`);
+  if (borde.test(grupo) || borde.test(sub)) return 30;
+  if (codigo.startsWith(t) || tipo.includes(t)) return 15;
+  return -1;
+}
+
+function detalleDiagnostico(dx) {
+  const d = sinAcento(dx.descripcion);
+  let peso = d.length;
+  if (/no especificad/.test(d)) peso -= 40;
+  if (/\b(lobar|bronconeumon\w*|aspirativ\w*|atipic\w*|bacterian\w*|viral|congenit\w*)\b/.test(d)) peso -= 12;
+  if (/\bpor\b|\bdebida\b/.test(d)) peso += 28;
+  return peso;
+}
+
+function ordenarDiagnosticos(items) {
+  const altos = items.filter((item) => item.score >= 80);
+  const base = altos.length ? altos : items;
+  const cuentas = new Map();
+  for (const item of base) {
+    const cap = item.dx.codigo[0];
+    cuentas.set(cap, (cuentas.get(cap) || 0) + 1);
+  }
+  let dominante = "";
+  let mejor = 0;
+  for (const [cap, n] of cuentas) {
+    if (n > mejor) {
+      dominante = cap;
+      mejor = n;
+    }
+  }
+  return items.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    const detalle = detalleDiagnostico(a.dx) - detalleDiagnostico(b.dx);
+    if (detalle) return detalle;
+    const ap = a.dx.codigo[0] === dominante ? 0 : 1;
+    const bp = b.dx.codigo[0] === dominante ? 0 : 1;
+    if (ap !== bp) return ap - bp;
+    return a.dx.codigo.localeCompare(b.dx.codigo, "es");
+  });
+}
+
 const TIPOS_EXAMEN = ["Laboratorio", "Imágenes", "Procedimientos"];
 
 const MARCAS_PERU = [
@@ -1383,14 +1449,18 @@ function paintDxSuggestions() {
     box.replaceChildren();
     return;
   }
-  const matches = cie10Data.filter((dx) => {
-    const text = term.length < 2 || [dx.codigo, dx.descripcion, dx.grupo, dx.subtipo, etiquetaTipo(dx.tipo)].some((value) => String(value || "").toLowerCase().includes(term));
+  const ranked = ordenarDiagnosticos(cie10Data.flatMap((dx) => {
     const sistema = !draft.filtroSistema || dx.sistema === draft.filtroSistema;
     const tipo = !draft.filtroTipo || dx.tipo === draft.filtroTipo;
     const subtipo = !draft.filtroSubtipo || dx.subtipo === draft.filtroSubtipo;
-    return text && sistema && tipo && subtipo;
-  }).slice(0, 2);
-  box.replaceChildren(...matches.map((dx) => {
+    if (!sistema || !tipo || !subtipo) return [];
+    const score = puntajeDiagnostico(dx, term.length < 2 ? "" : term);
+    return score < 0 ? [] : [{ dx, score }];
+  }));
+  const matches = ranked.slice(0, 24);
+  const resto = ranked.length - matches.length;
+  const nodes = matches.map((item) => {
+    const dx = item.dx;
     const curso = etiquetaTipo(dx.tipo);
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${dx.codigo} — ${dx.descripcion}` }),
@@ -1405,7 +1475,9 @@ function paintDxSuggestions() {
       goto("diagnostico");
     });
     return button;
-  }));
+  });
+  if (resto > 0) nodes.push(el("p", { class: "suggest-more", text: `${resto} coincidencias más. Escribe el tipo para afinar.` }));
+  box.replaceChildren(...nodes);
 }
 
 function scoreMed(med, term) {
