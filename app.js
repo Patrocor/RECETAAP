@@ -29,6 +29,7 @@ import { claveEspecialidad, crearLogo } from "./marcas.js";
 const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
 const DRAFT_KEY = "recetapp.borrador";
+const ULTIMA_KEY = "recetapp.ultima";
 
 const WIZARD = [
   { id: "paciente", titulo: "Paciente" },
@@ -463,7 +464,7 @@ function footer() {
     action = generarPDF;
   }
   return el("footer", { class: "footer" }, [
-    el("button", { type: "button", class: "btn", disabled: busy, onclick: action }, [label]),
+    el("button", { type: "button", class: label === "Omitir" ? "btn ghost" : "btn", disabled: busy, onclick: action }, [label]),
   ]);
 }
 
@@ -501,6 +502,16 @@ function fechaEscritorio() {
     day: "numeric",
     month: "short",
   }).replace(/\./g, "").replace(/,/g, "");
+}
+
+function fechaLegible(iso) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || "")) return "";
+  const [anio, mes, dia] = iso.split("-").map(Number);
+  return new Date(anio, mes - 1, dia).toLocaleDateString("es-PE", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).replace(/\./g, "").replace(/ de /g, " ");
 }
 
 function deskMark(animado = false) {
@@ -758,13 +769,75 @@ async function salirDeLaApp() {
   render();
 }
 
+function leerUltima() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(ULTIMA_KEY) || "null");
+    if (!raw || typeof raw !== "object") return null;
+    const entrada = {
+      nombre: cleanText(raw.nombre, 120),
+      dni: onlyDigits(raw.dni, 8),
+      edad: onlyDigits(raw.edad, 3),
+      sexo: ["M", "F"].includes(raw.sexo) ? raw.sexo : "",
+      diagnostico: cleanText(raw.diagnostico, 180),
+      cuando: /^\d{4}-\d{2}-\d{2}$/.test(raw.cuando || "") ? raw.cuando : "",
+    };
+    return entrada.nombre || entrada.diagnostico ? entrada : null;
+  } catch {
+    return null;
+  }
+}
+
+function guardarUltima() {
+  localStorage.setItem(ULTIMA_KEY, JSON.stringify({
+    nombre: draft.pacienteNombre,
+    dni: draft.pacienteDNI,
+    edad: draft.pacienteEdad,
+    sexo: draft.pacienteSexo,
+    diagnostico: [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "),
+    cuando: draft.fechaAtencion || todayISO(),
+  }));
+}
+
+async function repetirPaciente(entrada) {
+  if (hasMeaningfulDraft()) {
+    const ok = await ask("Borrador", "Se descartará.", "Empezar");
+    if (!ok) return;
+  }
+  draft = emptyDraft();
+  draft.pacienteNombre = entrada.nombre;
+  draft.pacienteDNI = entrada.dni;
+  draft.pacienteEdad = entrada.edad;
+  draft.pacienteSexo = entrada.sexo;
+  composer = null;
+  saveDraft();
+  goto("paciente");
+}
+
+function tarjetaReceta(etiqueta, nombre, detalle, onclick) {
+  return el("button", { type: "button", class: "desk-draft", onclick }, [
+    el("span", { class: "desk-draft-label", text: etiqueta }),
+    el("span", { class: "desk-draft-copy" }, [
+      el("span", { class: "desk-draft-name", text: nombre }),
+      detalle ? el("span", { class: "desk-draft-sub", text: detalle }) : null,
+    ]),
+  ]);
+}
+
 function viewInicio() {
   const meta = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join(" · ");
+  const ultima = leerUltima();
+  const detalleBorrador = [draft.pacienteNombre || "Sin paciente", draft.diagnostico].filter(Boolean).join(" · ");
+  const detalleUltima = [fechaLegible(ultima?.cuando), ultima?.diagnostico].filter(Boolean).join(" · ");
   const rail = [
     el("button", { type: "button", onclick: () => openPerfil("inicio") }, ["Perfil"]),
     cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, ["Admin"]) : null,
     el("button", { type: "button", onclick: salirDeLaApp }, ["Salir"]),
   ];
+  const seguimiento = hasMeaningfulDraft()
+    ? tarjetaReceta("Borrador", detalleBorrador, "", resume)
+    : ultima
+      ? tarjetaReceta("Última receta", ultima.nombre || "Paciente", detalleUltima, () => repetirPaciente(ultima))
+      : null;
   return el("section", { class: "screen desk desk-home" }, [
     el("div", { class: "desk-hero" }, [
       el("div", { class: "desk-hero-inner" }, [
@@ -781,10 +854,7 @@ function viewInicio() {
         el("button", { type: "button", class: "desk-primary", onclick: startNew }, [
           el("span", { text: "Nueva receta" }),
         ]),
-        hasMeaningfulDraft() ? el("button", { type: "button", class: "desk-draft", onclick: resume }, [
-          el("span", { class: "desk-draft-label", text: "Borrador" }),
-          el("span", { class: "desk-draft-name", text: draft.pacienteNombre || "Sin paciente" }),
-        ]) : null,
+        seguimiento,
         el("nav", { class: "desk-rail", "aria-label": "Cuenta" }, rail),
       ]),
     ]),
@@ -835,7 +905,7 @@ function viewPaciente() {
   dni.classList.add("search-anchor");
   dni.append(el("div", { id: "pac-suggest", class: "suggestions" }));
   dni.querySelector("input").addEventListener("change", () => alCambiarDni(dni.querySelector("input")));
-  const nombrePaciente = field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "", (input) => {
+  const nombrePaciente = field("Nombre", "paciente-nombre", draft.pacienteNombre, "text", "Nombre y apellido", (input) => {
       draft.pacienteNombre = cleanText(input.value, 120);
       const exactos = gente.filter((paciente) => paciente.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase());
       if (exactos.length === 1) applyPaciente(exactos[0]);
@@ -1017,7 +1087,7 @@ function viewDiagnostico() {
     id: "dx-query",
     type: "text",
     value: draft.dxQuery,
-    placeholder: "",
+    placeholder: "Asma, neumonía, HTA",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -1048,13 +1118,19 @@ function viewDiagnostico() {
   return section;
 }
 
+function vacioLista(texto, onclick) {
+  return el("div", { class: "empty" }, [
+    el("p", { text: texto }),
+    el("button", { type: "button", class: "add-btn", onclick }, ["Agregar"]),
+  ]);
+}
+
 function viewMedicamentos() {
-  const list = draft.medicamentos.length
-    ? draft.medicamentos.map(medCard)
-    : [el("p", { class: "muted", text: "Sin medicamentos" })];
+  const items = draft.medicamentos.map(medCard);
   return el("section", { class: "screen stack" }, [
-    ...list,
-    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]),
+    items.length ? null : vacioLista("Todavía no hay medicamentos.", () => openComposer("med")),
+    ...items,
+    items.length ? el("button", { type: "button", class: "add-btn", onclick: () => openComposer("med") }, ["Agregar"]) : null,
   ]);
 }
 
@@ -1070,7 +1146,7 @@ function viewMedComposer() {
     id: "med-q",
     type: "search",
     value: medForm.q,
-    placeholder: "",
+    placeholder: "Diclofenaco, ampolla",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -1138,12 +1214,11 @@ function viewMedComposer() {
 }
 
 function viewExamenes() {
-  const list = draft.examenes.length
-    ? draft.examenes.map(examCard)
-    : [el("p", { class: "muted", text: "Sin exámenes" })];
+  const items = draft.examenes.map(examCard);
   return el("section", { class: "screen stack" }, [
-    ...list,
-    el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]),
+    items.length ? null : vacioLista("Todavía no hay exámenes.", () => openComposer("exam")),
+    ...items,
+    items.length ? el("button", { type: "button", class: "add-btn", onclick: () => openComposer("exam") }, ["Agregar"]) : null,
   ]);
 }
 
@@ -1153,7 +1228,7 @@ function viewExamComposer() {
     id: "exam-q",
     type: "search",
     value: examQuery,
-    placeholder: "",
+    placeholder: "Hemograma, TAC, EKG",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -1184,7 +1259,7 @@ function viewIndicaciones() {
   const area = el("textarea", {
     id: "indicaciones",
     maxlength: "800",
-    placeholder: "",
+    placeholder: "Reposo, hidratación, signos de alarma",
   });
   area.value = draft.indicacionesGenerales;
   area.addEventListener("input", () => {
@@ -1202,30 +1277,28 @@ function viewIndicaciones() {
 }
 
 function viewRevision() {
-  const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "No indicado";
+  const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "";
+  const edad = draft.pacienteEdad ? `${draft.pacienteEdad} años` : "";
+  const cuando = [fechaLegible(draft.fechaAtencion), draft.horaAtencion].filter(Boolean).join(" · ");
   return el("section", { class: "screen stack" }, [
     errorSlot(),
     reviewBlock("Médico", "perfil", [
-      perfil.nombre || "—",
-      perfil.cmp ? `CMP ${perfil.cmp}` : "—",
+      perfil.nombre,
+      perfil.cmp ? `CMP ${perfil.cmp}` : "",
     ]),
-    reviewBlock("Paciente", "paciente", [
-      draft.pacienteDNI ? `HC: ${draft.pacienteDNI}` : "HC —",
-      draft.pacienteNombre || "—",
-      `Edad ${draft.pacienteEdad || "—"} · ${sexo}`,
-      `${draft.fechaAtencion || "—"}${draft.horaAtencion ? ` · ${draft.horaAtencion}` : ""}`,
-    ]),
+    reviewBlock("Paciente", "paciente", draft.pacienteNombre || draft.pacienteDNI ? [
+      draft.pacienteNombre,
+      draft.pacienteDNI ? `HC: ${draft.pacienteDNI}` : "",
+      [edad, sexo].filter(Boolean).join(" · "),
+      cuando,
+    ] : []),
     reviewBlock("Diagnóstico", "diagnostico", [
-      [draft.cie10, draft.diagnostico].filter(Boolean).join(" — ") || "—",
-      draft.proximoControl ? `Control ${draft.proximoControl}` : "",
-    ].filter(Boolean)),
-    reviewBlock("Medicamentos", "medicamentos", draft.medicamentos.length
-      ? draft.medicamentos.map((med) => `${med.nombre} — ${med.cantidad}, ${med.frecuencia}`)
-      : ["—"]),
-    reviewBlock("Exámenes", "examenes", draft.examenes.length
-      ? draft.examenes.map((ex) => ex.nombre)
-      : ["—"]),
-    reviewBlock("Indicaciones", "indicaciones", [draft.indicacionesGenerales || "—"]),
+      [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "),
+      draft.proximoControl ? `Control ${fechaLegible(draft.proximoControl)}` : "",
+    ]),
+    reviewBlock("Medicamentos", "medicamentos", draft.medicamentos.map((med) => `${med.nombre} — ${med.cantidad}, ${med.frecuencia}`)),
+    reviewBlock("Exámenes", "examenes", draft.examenes.map((ex) => ex.nombre)),
+    reviewBlock("Indicaciones", "indicaciones", [draft.indicacionesGenerales]),
   ]);
 }
 
@@ -1322,15 +1395,16 @@ function examCard(ex) {
 }
 
 function reviewBlock(title, stepId, lines) {
-  return el("section", { class: "review" }, [
+  const visibles = lines.map((line) => String(line || "").trim()).filter(Boolean);
+  return el("section", { class: visibles.length ? "review" : "review is-empty" }, [
     el("div", { class: "review-top" }, [
       el("h2", { text: title }),
       el("button", { type: "button", class: "link", onclick: () => {
         if (stepId === "perfil") openPerfil("revision");
         else goto(stepId);
-      } }, ["Editar"]),
+      } }, [visibles.length ? "Editar" : "Completar"]),
     ]),
-    ...lines.map((line) => el("p", { text: line })),
+    ...(visibles.length ? visibles.map((line) => el("p", { text: line })) : [el("p", { class: "muted", text: "Sin datos" })]),
   ]);
 }
 
@@ -1358,9 +1432,12 @@ function paintDxSuggestions() {
   const nodes = matches.map((item) => {
     const dx = item.dx;
     const curso = etiquetaTipo(dx.tipo);
+    const sistemas = new Set(matches.map((item) => item.dx.sistema));
+    const nota = [dx.severidad, sistemas.size > 1 ? dx.sistema : ""].filter(Boolean).join(" · ");
     const button = el("button", { type: "button", class: "suggestion" }, [
-      el("strong", { text: `${dx.codigo} — ${dx.descripcion}` }),
-      el("small", { text: [curso, dx.subtipo, dx.severidad, dx.sistema].filter(Boolean).join(" · ") }),
+      el("span", { class: "sug-code", text: dx.codigo }),
+      el("strong", { text: dx.descripcion }),
+      nota ? el("small", { text: nota }) : null,
     ]);
     button.addEventListener("click", () => {
       const extra = curso && !dx.descripcion.toLowerCase().includes(curso.toLowerCase()) ? ` (${curso})` : "";
@@ -1466,12 +1543,9 @@ function paintMedSuggestions() {
   const matches = ranked.slice(0, 16);
   const resto = ranked.length - matches.length;
   const nodes = matches.map(({ med }) => {
-    const total = presentacionesDe(med.dci).length;
-    const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
     const button = el("button", { type: "button", class: "suggestion" }, [
-      el("strong", { text: `${med.dci} — ${med.presentacion}` }),
-      el("small", { text: [total > 1 ? `${total} presentaciones` : "", med.via, dosisReferencia(med)].filter(Boolean).join(" · ") }),
-      peru.length ? el("small", { text: `Perú: ${peru.join(", ")}` }) : null,
+      el("strong", { text: med.dci }),
+      el("small", { text: med.presentacion }),
     ]);
     button.addEventListener("click", () => applyMed(med));
     return button;
@@ -1578,9 +1652,10 @@ function paintExamSuggestions() {
   const matches = ranked.slice(0, 16);
   const resto = ranked.length - matches.length;
   const nodes = matches.map(({ ex }) => {
+    const alias = String(ex.alias || "").split(",")[0].trim();
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: ex.nombre }),
-      el("small", { text: [ex.tipo, ex.grupo, ex.alias && ex.alias !== ex.nombre ? ex.alias : ""].filter(Boolean).join(" · ") }),
+      el("small", { text: alias && alias !== ex.nombre ? alias : ex.grupo }),
     ]);
     button.addEventListener("click", () => {
       examNombre = cleanText(ex.nombre, 160);
@@ -2061,6 +2136,7 @@ function generarPDF() {
     });
     doc.text(`Generado localmente el ${generado}. Este PDF no incluye firma digital.`, 105, 294.6, { align: "center" });
     doc.save(`Receta_${fileSlug(draft.pacienteNombre)}.pdf`);
+    guardarUltima();
     draft = emptyDraft();
     composer = null;
     sessionStorage.removeItem(DRAFT_KEY);
