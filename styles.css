@@ -260,6 +260,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin: 0 auto;
 }
 
+.shell-desk .desk.desk-home {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
 .main-desk {
   padding: 0;
   background: transparent;
@@ -558,6 +568,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 svg.logo {
   display: block;
+  width: 48px;
+  height: auto;
+  aspect-ratio: 171 / 136;
   overflow: visible;
 }
 
@@ -671,6 +684,16 @@ svg.logo {
   .desk-lock .logo-ekg-pulse {
     opacity: 0;
   }
+
+  .mark-pulse,
+  .mark-joint,
+  .mark-breath,
+  .mark-bob,
+  .mark-bone,
+  .mark-pupil,
+  .mark-signal {
+    animation: none;
+  }
 }
 
 .shell-desk .footer {
@@ -689,6 +712,186 @@ svg.logo {
 
 .shell-desk .desk-lock .btn {
   width: 100%;
+}
+
+.shell-flow .main { overflow: auto; }
+
+.shell-flow .fold.is-open,
+.shell-flow .fold.is-open .screen {
+  flex: none;
+  overflow: visible;
+}
+
+.shell-flow .cta {
+  background: #123652;
+  box-shadow: 0 16px 32px rgba(18, 54, 82, 0.2);
+  min-height: 64px;
+  justify-content: center;
+}
+
+.shell-flow .success-mark { margin: 0 auto 4px; }
+
+.desk-home .desk-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: calc(18px + env(safe-area-inset-top)) 0 20px;
+}
+
+.desk-home .desk-hero-inner,
+.desk-home .desk-id {
+  text-align: center;
+}
+
+.desk-home .desk-mark {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.desk-home .desk-panel {
+  align-items: center;
+  background: #f4f7fb;
+  padding: 8px 0 calc(12px + env(safe-area-inset-bottom));
+}
+
+.desk-home-actions {
+  width: min(560px, calc(100% - 48px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.desk-home .desk-primary {
+  width: 100%;
+  margin-top: 0;
+}
+
+.shell-flow {
+  max-width: none;
+  width: 100%;
+  background: #f4f7fb;
+}
+
+.shell-flow .top {
+  background:
+    radial-gradient(80% 140% at 100% 0%, rgba(215, 228, 240, 0.28), transparent 62%),
+    #123652;
+  padding: calc(14px + env(safe-area-inset-top)) 0 12px;
+}
+
+.shell-flow .top-row,
+.shell-flow .progress,
+.shell-flow .main,
+.shell-flow .footer .btn {
+  width: min(560px, calc(100% - 48px));
+}
+
+.shell-flow .top-row,
+.shell-flow .progress {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shell-flow .main {
+  margin: 0 auto;
+  padding: 18px 0 10px;
+}
+
+.shell-flow .main > .screen.stack,
+.shell-flow .main > .board {
+  justify-content: safe center;
+}
+
+.shell-flow .footer {
+  display: flex;
+  justify-content: center;
+  background: #f4f7fb;
+  border-top: 0;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+}
+
+.shell-flow .footer .btn {
+  min-height: 52px;
+  border-radius: 16px;
+  background: #123652;
+}
+
+.shell-flow input,
+.shell-flow select {
+  min-height: 48px;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+
+.shell-flow textarea {
+  min-height: 140px;
+  height: auto;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+
+.shell-flow .dialog-back { align-items: center; }
+
+.shell-flow .dialog {
+  width: min(440px, calc(100% - 32px));
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.mark-pulse,
+.mark-joint,
+.mark-breath,
+.mark-bob,
+.mark-bone {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mark-pulse { animation: heart-beat 1.8s ease-in-out infinite; }
+.mark-joint { animation: joint-flex 2.8s ease-in-out infinite; }
+.mark-breath { animation: breath 2.8s ease-in-out infinite; }
+.mark-bob { animation: mark-bob 2.4s ease-in-out infinite; }
+.mark-bone { animation: bone-tilt 3.2s ease-in-out infinite; }
+
+.mark-pupil {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pupil 3s ease-in-out infinite;
+}
+
+.mark-signal {
+  stroke-dasharray: 18 82;
+  animation: ekg-run 1.4s linear infinite;
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  18% { transform: scale(1.06); }
+  32% { transform: scale(1); }
+  46% { transform: scale(1.04); }
+}
+
+@keyframes joint-flex {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(14deg); }
+}
+
+@keyframes breath {
+  50% { transform: scale(1.06); }
+}
+
+@keyframes mark-bob {
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes bone-tilt {
+  50% { transform: rotate(7deg); }
+}
+
+@keyframes pupil {
+  0%, 100% { transform: translateX(-3px); }
+  50% { transform: translateX(4px); }
 }
 
 .screen h2 {

@@ -24,6 +24,7 @@ import {
   listarAccesos,
   salir,
 } from "./auth.js";
+import { claveEspecialidad, crearLogo } from "./marcas.js";
 
 const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
@@ -325,7 +326,7 @@ function initials(nombre) {
 
 function render() {
   const escritorio = screen === "inicio" || screen === "login";
-  const shell = el("div", { class: escritorio ? "shell shell-desk" : "shell" }, [
+  const shell = el("div", { class: escritorio ? "shell shell-desk" : "shell shell-flow" }, [
     escritorio ? null : header(),
     el("main", { class: escritorio ? "main main-desk" : "main" }, [view()]),
     footer(),
@@ -382,13 +383,9 @@ function header() {
   return el("header", { class: "top" }, [
     el("div", { class: "top-row" }, [
       onBack ? el("button", { type: "button", class: "icon-btn", "aria-label": "Volver", onclick: onBack }, ["←"]) : null,
+      crearLogo(claveEspecialidad(perfil.especialidad)),
       el("div", {}, [
-        screen === "inicio" || screen === "login"
-          ? el("div", { class: "brand" }, [
-            el("img", { class: "logo", src: "logo.svg", alt: "LR" }),
-            el("div", { class: "wordmark", text: "RecetAPP" }),
-          ])
-          : el("h1", { text: title }),
+        el("h1", { text: title }),
         kicker ? el("p", { class: "step-label", text: kicker }) : null,
       ]),
     ]),
@@ -468,52 +465,9 @@ function fechaEscritorio() {
   }).replace(/\./g, "").replace(/,/g, "");
 }
 
-const SVG_NS = "http://www.w3.org/2000/svg";
-const EKG_TRAZO = "M 4 71.33 H 112.73 l 5 -2.5 l 6 -28 l 7 46 l 6 -18 H 163.12 l 0 12";
-const MONOGRAMA = "M56.5078125 37.5625 45.1875 38.984375V103.296875H59.625Q71.2734375 103.296875 76.7421875 102.203125L80.1328125 86.9453125H83.6875L82.703125 108.0H25.2265625V105.1015625L34.6328125 103.625V38.984375L25.2265625 37.5625V34.6640625H56.5078125Z M105.6015625 75.84375V103.625L116.703125 105.1015625V108.0H86.3515625V105.1015625L95.046875 103.625V38.984375L85.640625 37.5625V34.6640625H117.3046875Q131.0859375 34.6640625 137.6484375 39.3125Q144.2109375 43.9609375 144.2109375 54.2421875Q144.2109375 61.5703125 140.21875 66.90234375Q136.2265625 72.234375 129.171875 74.3125L149.0234375 103.625L156.953125 105.1015625V108.0H139.3984375L118.78125 75.84375ZM133.328125 55.0078125Q133.328125 46.640625 129.25390625 43.11328125Q125.1796875 39.5859375 114.953125 39.5859375H105.6015625V70.921875H115.28125Q125.0703125 70.921875 129.19921875 67.28515625Q133.328125 63.6484375 133.328125 55.0078125Z";
-
-function svg(tag, attrs = {}, children = []) {
-  const node = document.createElementNS(SVG_NS, tag);
-  for (const [key, value] of Object.entries(attrs)) {
-    if (value == null || value === false) continue;
-    node.setAttribute(key, String(value));
-  }
-  for (const child of [].concat(children)) {
-    if (child) node.append(child);
-  }
-  return node;
-}
-
-function trazoEkg(clase, trazo) {
-  return svg("path", {
-    class: clase,
-    d: EKG_TRAZO,
-    fill: "none",
-    stroke: trazo,
-    "stroke-width": clase === "logo-ekg-pulse" ? "4" : "2.8",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    pathLength: "100",
-  });
-}
-
-function logoAnimado() {
-  return svg("svg", {
-    class: "logo",
-    viewBox: "0 0 171 136",
-    role: "img",
-    "aria-label": "LR",
-  }, [
-    svg("rect", { width: "171", height: "136", rx: "26", fill: "#D7E4F0" }),
-    svg("path", { fill: "#123652", d: MONOGRAMA }),
-    trazoEkg("logo-ekg", "#123652"),
-    trazoEkg("logo-ekg-pulse", "#e8f6ff"),
-  ]);
-}
-
 function deskMark(animado = false) {
   return el("div", { class: "desk-mark" }, [
-    animado ? logoAnimado() : el("img", { class: "logo", src: "logo.svg", alt: "" }),
+    crearLogo(claveEspecialidad(perfil.especialidad), animado),
     el("div", { class: "wordmark", text: "RecetAPP" }),
   ]);
 }
@@ -773,24 +727,29 @@ function viewInicio() {
     cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, ["Admin"]) : null,
     el("button", { type: "button", onclick: salirDeLaApp }, ["Salir"]),
   ];
-  return el("section", { class: "screen desk" }, [
+  return el("section", { class: "screen desk desk-home" }, [
     el("div", { class: "desk-hero" }, [
-      deskMark(),
-      el("button", { type: "button", class: "desk-id", onclick: () => openPerfil("inicio") }, [
-        el("p", { class: "desk-date", text: fechaEscritorio() }),
-        el("h1", { class: "desk-name", text: perfil.nombre || "Perfil" }),
-        meta ? el("p", { class: "desk-meta", text: meta }) : null,
+      el("div", { class: "desk-hero-inner" }, [
+        deskMark(),
+        el("button", { type: "button", class: "desk-id", onclick: () => openPerfil("inicio") }, [
+          el("p", { class: "desk-date", text: fechaEscritorio() }),
+          el("h1", { class: "desk-name", text: perfil.nombre || "Perfil" }),
+          meta ? el("p", { class: "desk-meta", text: meta }) : null,
+        ]),
       ]),
     ]),
-    el("button", { type: "button", class: "desk-primary", onclick: startNew }, [
-      el("span", { text: "Nueva receta" }),
+    el("div", { class: "desk-panel" }, [
+      el("div", { class: "desk-home-actions" }, [
+        el("button", { type: "button", class: "desk-primary", onclick: startNew }, [
+          el("span", { text: "Nueva receta" }),
+        ]),
+        hasMeaningfulDraft() ? el("button", { type: "button", class: "desk-draft", onclick: resume }, [
+          el("span", { class: "desk-draft-label", text: "Borrador" }),
+          el("span", { class: "desk-draft-name", text: draft.pacienteNombre || "Sin paciente" }),
+        ]) : null,
+        el("nav", { class: "desk-rail", "aria-label": "Cuenta" }, rail),
+      ]),
     ]),
-    hasMeaningfulDraft() ? el("button", { type: "button", class: "desk-draft", onclick: resume }, [
-      el("span", { class: "desk-draft-label", text: "Borrador" }),
-      el("span", { class: "desk-draft-name", text: draft.pacienteNombre || "Sin paciente" }),
-    ]) : null,
-    el("div", { class: "desk-spacer" }),
-    el("nav", { class: "desk-rail", "aria-label": "Cuenta" }, rail),
   ]);
 }
 
