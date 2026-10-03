@@ -82,9 +82,31 @@ const SISTEMAS = [...new Set(cie10Data.map((dx) => dx.sistema).filter(Boolean))]
 const TIPOS = [
   { id: "agudo", label: "Agudo" },
   { id: "crónico", label: "Crónico" },
+  { id: "agudo sobre crónico", label: "Agudo sobre crónico" },
+  { id: "recurrente", label: "Recurrente" },
+  { id: "congénito", label: "Congénito" },
+  { id: "traumático", label: "Traumático" },
+  { id: "neoplásico", label: "Neoplásico" },
   { id: "síntoma", label: "Síntoma" },
   { id: "prevención", label: "Prevención" },
 ];
+
+const SUBTIPOS = [...new Set(cie10Data.map((dx) => dx.subtipo).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, "es"));
+
+const ALIAS_SISTEMA = {
+  "Salud mental": "Salud Mental",
+  "Músculo-esquelético": "Musculoesquelético",
+  "Infeccioso": "Infecciosas",
+  "Neoplasias": "Oncología",
+  "Metabólico": "Endocrino/Metabólico",
+  "Traumatología": "Traumatismos",
+  "Síntomas generales": "Síntomas y Signos",
+};
+
+function etiquetaTipo(id) {
+  return TIPOS.find((tipo) => tipo.id === id)?.label || "";
+}
 
 const TIPOS_EXAMEN = ["Laboratorio", "Imágenes", "Procedimientos"];
 
@@ -115,6 +137,7 @@ function emptyDraft() {
     dxQuery: "",
     filtroSistema: "",
     filtroTipo: "",
+    filtroSubtipo: "",
     medicamentos: [],
     examenes: [],
     filtroExamen: "",
@@ -228,8 +251,10 @@ function loadDraft() {
     base.horaAtencion = /^\d{2}:\d{2}$/.test(raw.horaAtencion || "") ? raw.horaAtencion : base.horaAtencion;
     base.diagnostico = cleanText(raw.diagnostico, 180);
     base.dxQuery = cleanText(raw.dxQuery, 80);
-    base.filtroSistema = SISTEMAS.includes(raw.filtroSistema) ? raw.filtroSistema : "";
+    const sistemaGuardado = ALIAS_SISTEMA[raw.filtroSistema] || raw.filtroSistema;
+    base.filtroSistema = SISTEMAS.includes(sistemaGuardado) ? sistemaGuardado : "";
     base.filtroTipo = TIPOS.some((t) => t.id === raw.filtroTipo) ? raw.filtroTipo : "";
+    base.filtroSubtipo = SUBTIPOS.includes(raw.filtroSubtipo) ? raw.filtroSubtipo : "";
     base.filtroExamen = TIPOS_EXAMEN.includes(raw.filtroExamen) ? raw.filtroExamen : "";
     base.indicacionesGenerales = cleanMultiline(raw.indicacionesGenerales, 800);
     base.medicamentos = Array.isArray(raw.medicamentos) ? raw.medicamentos.map(sanitizeMed).filter(Boolean).slice(0, 30) : [];
@@ -891,10 +916,34 @@ function viewDiagnostico() {
     sistema.value = draft.filtroSistema;
     sistema.addEventListener("change", () => {
       draft.filtroSistema = SISTEMAS.includes(sistema.value) ? sistema.value : "";
+      if (draft.filtroSubtipo && !subtiposVisibles().includes(draft.filtroSubtipo)) draft.filtroSubtipo = "";
+      saveDraft();
+      goto("diagnostico");
+    });
+    section.append(el("label", { class: "field", text: "Sistema" }, [sistema]));
+    const tipo = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...TIPOS.map((item) => el("option", { value: item.id, text: item.label })),
+    ]);
+    tipo.value = draft.filtroTipo;
+    tipo.addEventListener("change", () => {
+      draft.filtroTipo = TIPOS.some((item) => item.id === tipo.value) ? tipo.value : "";
+      if (draft.filtroSubtipo && !subtiposVisibles().includes(draft.filtroSubtipo)) draft.filtroSubtipo = "";
+      saveDraft();
+      goto("diagnostico");
+    });
+    section.append(el("label", { class: "field", text: "Tipo" }, [tipo]));
+    const subtipo = el("select", {}, [
+      el("option", { value: "", text: "Todos" }),
+      ...subtiposVisibles().map((nombre) => el("option", { value: nombre, text: nombre })),
+    ]);
+    subtipo.value = draft.filtroSubtipo;
+    subtipo.addEventListener("change", () => {
+      draft.filtroSubtipo = subtiposVisibles().includes(subtipo.value) ? subtipo.value : "";
       saveDraft();
       paintDxSuggestions();
     });
-    section.append(el("label", { class: "field", text: "Sistema" }, [sistema]));
+    section.append(el("label", { class: "field", text: "Subtipo" }, [subtipo]));
   }
   const search = el("input", {
     id: "dx-query",
@@ -1199,28 +1248,38 @@ function reviewBlock(title, stepId, lines) {
   ]);
 }
 
+function subtiposVisibles() {
+  return [...new Set(cie10Data.filter((dx) => (
+    (!draft.filtroSistema || dx.sistema === draft.filtroSistema)
+    && (!draft.filtroTipo || dx.tipo === draft.filtroTipo)
+  )).map((dx) => dx.subtipo).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+}
+
 function paintDxSuggestions() {
   const box = document.getElementById("dx-suggest");
   if (!box) return;
   const term = (draft.dxQuery || "").trim().toLowerCase();
-  const filtrado = Boolean(draft.filtroSistema || draft.filtroTipo);
+  const filtrado = Boolean(draft.filtroSistema || draft.filtroTipo || draft.filtroSubtipo);
   if (term.length < 2 && !filtrado) {
     box.replaceChildren();
     return;
   }
   const matches = cie10Data.filter((dx) => {
-    const text = term.length < 2 || [dx.codigo, dx.descripcion, dx.grupo].some((value) => String(value || "").toLowerCase().includes(term));
-    const sistema = !draft.filtroSistema || String(dx.sistema || "").toLowerCase().includes(draft.filtroSistema.toLowerCase());
+    const text = term.length < 2 || [dx.codigo, dx.descripcion, dx.grupo, dx.subtipo, etiquetaTipo(dx.tipo)].some((value) => String(value || "").toLowerCase().includes(term));
+    const sistema = !draft.filtroSistema || dx.sistema === draft.filtroSistema;
     const tipo = !draft.filtroTipo || dx.tipo === draft.filtroTipo;
-    return text && sistema && tipo;
+    const subtipo = !draft.filtroSubtipo || dx.subtipo === draft.filtroSubtipo;
+    return text && sistema && tipo && subtipo;
   }).slice(0, 2);
   box.replaceChildren(...matches.map((dx) => {
+    const curso = etiquetaTipo(dx.tipo);
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${dx.codigo} — ${dx.descripcion}` }),
-      el("small", { text: [dx.grupo, dx.sistema, dx.tipo].filter(Boolean).join(" · ") }),
+      el("small", { text: [curso, dx.subtipo, dx.severidad, dx.sistema].filter(Boolean).join(" · ") }),
     ]);
     button.addEventListener("click", () => {
-      draft.diagnostico = cleanText(`${dx.codigo} - ${dx.descripcion}`, 180);
+      const extra = curso && !dx.descripcion.toLowerCase().includes(curso.toLowerCase()) ? ` (${curso})` : "";
+      draft.diagnostico = cleanText(`${dx.codigo} - ${dx.descripcion}${extra}`, 180);
       draft.dxQuery = "";
       saveDraft();
       goto("diagnostico");

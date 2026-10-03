@@ -1,13851 +1,21216 @@
 export const cie10Data = [
   {
+    "codigo": "G45.9",
+    "descripcion": "Ataque isquémico transitorio (AIT)",
+    "grupo": "Ataque isquémico transitorio",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
     "codigo": "I00",
     "descripcion": "Fiebre reumática sin mención de complicación cardíaca",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Fiebre reumática sin mención de complicación",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I01.0",
     "descripcion": "Pericarditis reumática aguda",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Pericarditis reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I01.1",
     "descripcion": "Endocarditis reumática aguda",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Endocarditis reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I01.2",
     "descripcion": "Miocarditis reumática aguda",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Miocarditis reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I02.9",
     "descripcion": "Corea reumática sin complicación cardíaca",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Corea reumática sin complicación cardíaca",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
   },
   {
     "codigo": "I05.0",
     "descripcion": "Estenosis mitral reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Estenosis mitral reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I05.1",
     "descripcion": "Insuficiencia mitral reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Insuficiencia mitral reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I05.2",
     "descripcion": "Estenosis mitral con insuficiencia",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Estenosis mitral con insuficiencia",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I05.9",
     "descripcion": "Enfermedad valvular mitral reumática no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Enfermedad valvular mitral reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I06.0",
     "descripcion": "Estenosis aórtica reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Estenosis aórtica reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I06.1",
     "descripcion": "Insuficiencia aórtica reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Insuficiencia aórtica reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I06.2",
     "descripcion": "Estenosis aórtica reumática con insuficiencia",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Estenosis aórtica reumática con insuficiencia",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I07.0",
     "descripcion": "Estenosis tricuspídea reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Estenosis tricuspídea reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I07.1",
     "descripcion": "Insuficiencia tricuspídea reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Insuficiencia tricuspídea reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I08.0",
     "descripcion": "Trastorno de las válvulas mitral y aórtica",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Trastorno de las válvulas mitral y aórtica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I09.9",
     "descripcion": "Enfermedad reumática del corazón no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Enfermedad reumática del corazón",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I10",
     "descripcion": "Hipertensión esencial (primaria)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Hipertensión esencial",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I11.0",
     "descripcion": "Cardiopatía hipertensiva con insuficiencia cardíaca",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Cardiopatía hipertensiva con insuficiencia",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I11.9",
     "descripcion": "Cardiopatía hipertensiva sin insuficiencia cardíaca",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Cardiopatía hipertensiva sin insuficiencia",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I12.0",
     "descripcion": "Enfermedad renal hipertensiva con insuficiencia renal",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Enfermedad renal hipertensiva con",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I12.9",
     "descripcion": "Enfermedad renal hipertensiva sin insuficiencia renal",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Enfermedad renal hipertensiva sin",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I13.0",
     "descripcion": "Enfermedad cardiorrenal hipertensiva con falla cardíaca",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I13.2",
-    "descripcion": "Enfermedad cardiorrenal hipertensiva con falla cardíaca y renal",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I15.0",
-    "descripcion": "Hipertensión renovascular",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I15.9",
-    "descripcion": "Hipertensión secundaria no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I20.0",
-    "descripcion": "Angina inestable",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I20.1",
-    "descripcion": "Angina de pecho con espasmo documentado (angina variante)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I20.8",
-    "descripcion": "Angina de pecho estable",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I20.9",
-    "descripcion": "Angina de pecho no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.0",
-    "descripcion": "Infarto agudo de miocardio transmural de pared anterior",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.1",
-    "descripcion": "Infarto agudo de miocardio transmural de pared inferior",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.2",
-    "descripcion": "Infarto agudo de miocardio transmural de otros sitios",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.3",
-    "descripcion": "Infarto agudo de miocardio transmural no especificado (IAMCEST)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.4",
-    "descripcion": "Infarto agudo de miocardio subendocárdico (IAMSEST)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I21.9",
-    "descripcion": "Infarto agudo de miocardio no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I22.9",
-    "descripcion": "Infarto de miocardio recurrente de sitio no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I24.9",
-    "descripcion": "Cardiopatía isquémica aguda no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I25.1",
-    "descripcion": "Enfermedad aterosclerótica del corazón",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I25.2",
-    "descripcion": "Infarto antiguo de miocardio",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I25.5",
-    "descripcion": "Miocardiopatía isquémica",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I25.9",
-    "descripcion": "Cardiopatía isquémica crónica no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I26.0",
-    "descripcion": "Embolia pulmonar con cor pulmonale agudo",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I26.9",
-    "descripcion": "Embolia pulmonar sin cor pulmonale agudo",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I27.0",
-    "descripcion": "Hipertensión pulmonar primaria",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I27.2",
-    "descripcion": "Hipertensión pulmonar secundaria",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I27.9",
-    "descripcion": "Enfermedad cardiopulmonar crónica no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I30.0",
-    "descripcion": "Pericarditis aguda idiopática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I30.9",
-    "descripcion": "Pericarditis aguda no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I31.3",
-    "descripcion": "Derrame pericárdico no inflamatorio",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I33.0",
-    "descripcion": "Endocarditis infecciosa aguda y subaguda",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I34.0",
-    "descripcion": "Insuficiencia mitral no reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I34.1",
-    "descripcion": "Prolapso de la válvula mitral",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I35.0",
-    "descripcion": "Estenosis de la válvula aórtica no reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I35.1",
-    "descripcion": "Insuficiencia de la válvula aórtica no reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I35.2",
-    "descripcion": "Estenosis aórtica con insuficiencia no reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I36.1",
-    "descripcion": "Insuficiencia tricuspídea no reumática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I38",
-    "descripcion": "Endocarditis de válvula no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I40.9",
-    "descripcion": "Miocarditis aguda no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I42.0",
-    "descripcion": "Miocardiopatía dilatada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I42.1",
-    "descripcion": "Miocardiopatía hipertrófica obstructiva",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I42.2",
-    "descripcion": "Miocardiopatía hipertrófica no obstructiva",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I42.5",
-    "descripcion": "Miocardiopatía restrictiva",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I42.9",
-    "descripcion": "Miocardiopatía no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I44.0",
-    "descripcion": "Bloqueo auriculoventricular de primer grado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I44.1",
-    "descripcion": "Bloqueo auriculoventricular de segundo grado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I44.2",
-    "descripcion": "Bloqueo auriculoventricular completo (tercer grado)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I44.7",
-    "descripcion": "Bloqueo de rama izquierda no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I45.1",
-    "descripcion": "Bloqueo de rama derecha",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I45.6",
-    "descripcion": "Síndrome de preexcitación (Wolff-Parkinson-White)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I46.0",
-    "descripcion": "Paro cardíaco con resucitación exitosa",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I46.9",
-    "descripcion": "Paro cardíaco no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I47.1",
-    "descripcion": "Taquicardia supraventricular",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I47.2",
-    "descripcion": "Taquicardia ventricular",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I48.0",
-    "descripcion": "Fibrilación auricular paroxística",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I48.1",
-    "descripcion": "Fibrilación auricular persistente",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I48.2",
-    "descripcion": "Fibrilación auricular crónica (permanente)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I48.3",
-    "descripcion": "Aleteo (flutter) auricular típico",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I48.9",
-    "descripcion": "Fibrilación y aleteo auricular no especificados",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I49.1",
-    "descripcion": "Extrasístoles auriculares",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I49.3",
-    "descripcion": "Extrasístoles ventriculares",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I49.5",
-    "descripcion": "Síndrome del nodo sinusal enfermo",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I49.9",
-    "descripcion": "Arritmia cardíaca no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "R00.1",
-    "descripcion": "Bradicardia no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I50.0",
-    "descripcion": "Insuficiencia cardíaca congestiva",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I50.1",
-    "descripcion": "Insuficiencia cardíaca izquierda",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I50.2",
-    "descripcion": "Insuficiencia cardíaca sistólica",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I50.3",
-    "descripcion": "Insuficiencia cardíaca diastólica",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I50.9",
-    "descripcion": "Insuficiencia cardíaca no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I51.7",
-    "descripcion": "Cardiomegalia",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I60.9",
-    "descripcion": "Hemorragia subaracnoidea no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I61.9",
-    "descripcion": "Hemorragia intracerebral no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I63.9",
-    "descripcion": "Infarto cerebral (ACV isquémico) no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I64",
-    "descripcion": "ACV no especificado como hemorrágico o isquémico",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "G45.9",
-    "descripcion": "Ataque isquémico transitorio (AIT)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I65.2",
-    "descripcion": "Oclusión y estenosis de la arteria carótida",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I67.1",
-    "descripcion": "Aneurisma cerebral sin ruptura",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I67.9",
-    "descripcion": "Enfermedad cerebrovascular no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I69.1",
-    "descripcion": "Secuelas de hemorragia intracerebral",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I69.3",
-    "descripcion": "Secuelas de infarto cerebral",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I69.4",
-    "descripcion": "Secuelas de ACV no especificado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I70.0",
-    "descripcion": "Aterosclerosis de la aorta",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I70.2",
-    "descripcion": "Aterosclerosis de las arterias de los miembros",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I70.9",
-    "descripcion": "Aterosclerosis generalizada y no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I71.0",
-    "descripcion": "Disección de la aorta",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I71.2",
-    "descripcion": "Aneurisma de la aorta torácica sin ruptura",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I71.4",
-    "descripcion": "Aneurisma de la aorta abdominal sin ruptura",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I72.4",
-    "descripcion": "Aneurisma de arteria de miembro inferior",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I73.0",
-    "descripcion": "Síndrome de Raynaud",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I73.9",
-    "descripcion": "Enfermedad vascular periférica no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I74.3",
-    "descripcion": "Embolia y trombosis de arterias de miembros inferiores",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I80.0",
-    "descripcion": "Tromboflebitis superficial de miembros inferiores",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I80.2",
-    "descripcion": "Trombosis venosa profunda de miembros inferiores",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I83.0",
-    "descripcion": "Várices de miembros inferiores con úlcera",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I83.9",
-    "descripcion": "Várices de miembros inferiores sin úlcera ni inflamación",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I87.2",
-    "descripcion": "Insuficiencia venosa crónica periférica",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I89.0",
-    "descripcion": "Linfedema no clasificado en otra parte",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I95.1",
-    "descripcion": "Hipotensión ortostática",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "I95.9",
-    "descripcion": "Hipotensión no especificada",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "K64.0",
-    "descripcion": "Hemorroides de primer grado",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "K64.9",
-    "descripcion": "Hemorroides no especificadas",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "J00",
-    "descripcion": "Rinofaringitis aguda (resfriado común)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.0",
-    "descripcion": "Sinusitis maxilar aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.1",
-    "descripcion": "Sinusitis frontal aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.2",
-    "descripcion": "Sinusitis etmoidal aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.9",
-    "descripcion": "Sinusitis aguda no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J02.0",
-    "descripcion": "Faringitis estreptocócica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J02.9",
-    "descripcion": "Faringitis aguda no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J03.0",
-    "descripcion": "Amigdalitis estreptocócica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J03.9",
-    "descripcion": "Amigdalitis aguda no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J04.0",
-    "descripcion": "Laringitis aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J04.1",
-    "descripcion": "Traqueítis aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J04.2",
-    "descripcion": "Laringotraqueítis aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J05.0",
-    "descripcion": "Laringitis obstructiva aguda (crup)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J05.1",
-    "descripcion": "Epiglotitis aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J06.0",
-    "descripcion": "Laringofaringitis aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J06.9",
-    "descripcion": "Infección aguda de vías respiratorias superiores",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J09",
-    "descripcion": "Influenza por virus de influenza zoonótica identificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J10.0",
-    "descripcion": "Influenza con neumonía, virus identificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J10.1",
-    "descripcion": "Influenza con otras manifestaciones respiratorias",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J11.0",
-    "descripcion": "Influenza con neumonía, virus no identificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J11.1",
-    "descripcion": "Influenza con manifestaciones respiratorias, virus no identificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.0",
-    "descripcion": "Neumonía por adenovirus",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.1",
-    "descripcion": "Neumonía por virus sincitial respiratorio",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.2",
-    "descripcion": "Neumonía por virus parainfluenza",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.3",
-    "descripcion": "Neumonía por metapneumovirus humano",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.8",
-    "descripcion": "Neumonía por otros virus (incluye SARS-CoV-2)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J12.9",
-    "descripcion": "Neumonía viral no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J13",
-    "descripcion": "Neumonía por Streptococcus pneumoniae",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J14",
-    "descripcion": "Neumonía por Haemophilus influenzae",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.0",
-    "descripcion": "Neumonía por Klebsiella pneumoniae",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.1",
-    "descripcion": "Neumonía por Pseudomonas",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.2",
-    "descripcion": "Neumonía por estafilococo",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.3",
-    "descripcion": "Neumonía por estreptococo del grupo B",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.5",
-    "descripcion": "Neumonía por Escherichia coli",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.7",
-    "descripcion": "Neumonía por Mycoplasma pneumoniae (atípica)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J15.9",
-    "descripcion": "Neumonía bacteriana no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J16.0",
-    "descripcion": "Neumonía por clamidias",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J18.0",
-    "descripcion": "Bronconeumonía no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J18.1",
-    "descripcion": "Neumonía lobar no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J18.9",
-    "descripcion": "Neumonía no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J20.0",
-    "descripcion": "Bronquitis aguda por Mycoplasma pneumoniae",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J20.5",
-    "descripcion": "Bronquitis aguda por virus sincitial respiratorio",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J20.9",
-    "descripcion": "Bronquitis aguda no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J21.0",
-    "descripcion": "Bronquiolitis aguda por virus sincitial respiratorio",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J21.9",
-    "descripcion": "Bronquiolitis aguda no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J22",
-    "descripcion": "Infección aguda de vías respiratorias inferiores",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J30.1",
-    "descripcion": "Rinitis alérgica por polen",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J30.3",
-    "descripcion": "Rinitis alérgica perenne",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J30.4",
-    "descripcion": "Rinitis alérgica no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J31.0",
-    "descripcion": "Rinitis crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J31.2",
-    "descripcion": "Faringitis crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J32.0",
-    "descripcion": "Sinusitis maxilar crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J32.1",
-    "descripcion": "Sinusitis frontal crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J32.9",
-    "descripcion": "Sinusitis crónica no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J33.9",
-    "descripcion": "Pólipo nasal no especificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J34.2",
-    "descripcion": "Desviación del tabique nasal",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J34.3",
-    "descripcion": "Hipertrofia de cornetes nasales",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J35.0",
-    "descripcion": "Amigdalitis crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J35.1",
-    "descripcion": "Hipertrofia de las amígdalas",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J35.2",
-    "descripcion": "Hipertrofia de las adenoides",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J35.3",
-    "descripcion": "Hipertrofia de amígdalas con hipertrofia de adenoides",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J36",
-    "descripcion": "Absceso periamigdalino",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J37.0",
-    "descripcion": "Laringitis crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J40",
-    "descripcion": "Bronquitis no especificada como aguda o crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J41.0",
-    "descripcion": "Bronquitis crónica simple",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J41.1",
-    "descripcion": "Bronquitis crónica mucopurulenta",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J42",
-    "descripcion": "Bronquitis crónica no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J43.9",
-    "descripcion": "Enfisema pulmonar no especificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J44.0",
-    "descripcion": "EPOC con infección respiratoria aguda de vías inferiores",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J44.1",
-    "descripcion": "EPOC con exacerbación aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J44.9",
-    "descripcion": "EPOC no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.0",
-    "descripcion": "Asma predominantemente alérgica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.1",
-    "descripcion": "Asma no alérgica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.8",
-    "descripcion": "Asma mixta",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.9",
-    "descripcion": "Asma no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J46",
-    "descripcion": "Estado asmático (crisis asmática severa)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J47",
-    "descripcion": "Bronquiectasias",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J60",
-    "descripcion": "Neumoconiosis de los mineros del carbón",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J61",
-    "descripcion": "Neumoconiosis por asbesto (asbestosis)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J62.8",
-    "descripcion": "Silicosis (neumoconiosis por sílice)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J64",
-    "descripcion": "Neumoconiosis no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J67.9",
-    "descripcion": "Neumonitis por hipersensibilidad no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J68.0",
-    "descripcion": "Neumonitis por inhalación de gases, humos y vapores",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J69.0",
-    "descripcion": "Neumonía aspirativa por alimento o vómito",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J80",
-    "descripcion": "Síndrome de dificultad respiratoria aguda (SDRA)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J81",
-    "descripcion": "Edema pulmonar",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J84.1",
-    "descripcion": "Fibrosis pulmonar intersticial",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J84.9",
-    "descripcion": "Enfermedad pulmonar intersticial no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J85.2",
-    "descripcion": "Absceso pulmonar sin neumonía",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J86.9",
-    "descripcion": "Empiema pleural (piotórax) sin fístula",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J90",
-    "descripcion": "Derrame pleural no clasificado en otra parte",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J93.0",
-    "descripcion": "Neumotórax espontáneo a tensión",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J93.1",
-    "descripcion": "Neumotórax espontáneo",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J93.9",
-    "descripcion": "Neumotórax no especificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J94.2",
-    "descripcion": "Hemotórax",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J96.0",
-    "descripcion": "Insuficiencia respiratoria aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J96.1",
-    "descripcion": "Insuficiencia respiratoria crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J96.9",
-    "descripcion": "Insuficiencia respiratoria no especificada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "G47.3",
-    "descripcion": "Apnea del sueño",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "U09.9",
-    "descripcion": "Condición post COVID-19 (secuelas respiratorias)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "K02.1",
-    "descripcion": "Caries de la dentina",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K02.9",
-    "descripcion": "Caries dental, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K04.0",
-    "descripcion": "Pulpitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K04.6",
-    "descripcion": "Absceso periapical con fistula",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K04.7",
-    "descripcion": "Absceso periapical sin fistula",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K05.0",
-    "descripcion": "Gingivitis aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K05.1",
-    "descripcion": "Gingivitis cronica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K05.3",
-    "descripcion": "Periodontitis cronica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K12.0",
-    "descripcion": "Estomatitis aftosa recurrente",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K12.2",
-    "descripcion": "Celulitis y absceso de la boca",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K20",
-    "descripcion": "Esofagitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K21.0",
-    "descripcion": "Enfermedad por reflujo gastroesofagico con esofagitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K21.9",
-    "descripcion": "Enfermedad por reflujo gastroesofagico sin esofagitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K22.1",
-    "descripcion": "Ulcera del esofago",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "I85.0",
-    "descripcion": "Varices esofagicas con hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "I85.9",
-    "descripcion": "Varices esofagicas sin hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K25.0",
-    "descripcion": "Ulcera gastrica aguda con hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K25.1",
-    "descripcion": "Ulcera gastrica aguda con perforacion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K25.3",
-    "descripcion": "Ulcera gastrica aguda sin hemorragia ni perforacion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K25.7",
-    "descripcion": "Ulcera gastrica cronica sin hemorragia ni perforacion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K25.9",
-    "descripcion": "Ulcera gastrica, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K26.0",
-    "descripcion": "Ulcera duodenal aguda con hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K26.3",
-    "descripcion": "Ulcera duodenal aguda sin hemorragia ni perforacion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K26.7",
-    "descripcion": "Ulcera duodenal cronica sin hemorragia ni perforacion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K26.9",
-    "descripcion": "Ulcera duodenal, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K27.9",
-    "descripcion": "Ulcera peptica, sitio no especificado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.0",
-    "descripcion": "Gastritis aguda hemorragica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.1",
-    "descripcion": "Otras gastritis agudas",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.3",
-    "descripcion": "Gastritis cronica superficial",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.4",
-    "descripcion": "Gastritis cronica atrofica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.7",
-    "descripcion": "Gastritis, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.8",
-    "descripcion": "Duodenitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.9",
-    "descripcion": "Gastroduodenitis, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K30",
-    "descripcion": "Dispepsia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K35.2",
-    "descripcion": "Apendicitis aguda con peritonitis generalizada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K35.3",
-    "descripcion": "Apendicitis aguda con peritonitis localizada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K35.8",
-    "descripcion": "Apendicitis aguda, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K36",
-    "descripcion": "Apendicitis cronica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K37",
-    "descripcion": "Apendicitis, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K40.0",
-    "descripcion": "Hernia inguinal bilateral con obstruccion, sin gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K40.3",
-    "descripcion": "Hernia inguinal unilateral con obstruccion, sin gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K40.9",
-    "descripcion": "Hernia inguinal unilateral, sin obstruccion ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K41.9",
-    "descripcion": "Hernia femoral unilateral, sin obstruccion ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K42.0",
-    "descripcion": "Hernia umbilical con obstruccion, sin gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K42.9",
-    "descripcion": "Hernia umbilical sin obstruccion ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K43.0",
-    "descripcion": "Hernia ventral con obstruccion, sin gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K43.9",
-    "descripcion": "Hernia ventral sin obstruccion ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K44.0",
-    "descripcion": "Hernia diafragmatica con obstruccion, sin gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K44.9",
-    "descripcion": "Hernia hiatal sin obstruccion ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K46.9",
-    "descripcion": "Hernia abdominal, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K50.0",
-    "descripcion": "Enfermedad de Crohn del intestino delgado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K50.1",
-    "descripcion": "Enfermedad de Crohn del intestino grueso",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K50.9",
-    "descripcion": "Enfermedad de Crohn, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K51.0",
-    "descripcion": "Colitis ulcerosa con pancolitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K51.9",
-    "descripcion": "Colitis ulcerosa, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K52.1",
-    "descripcion": "Gastroenteritis y colitis toxicas",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K52.2",
-    "descripcion": "Gastroenteritis y colitis alergicas y dieteticas",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K52.9",
-    "descripcion": "Gastroenteritis y colitis no infecciosa, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K56.0",
-    "descripcion": "Ileo paralitico",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K56.2",
-    "descripcion": "Volvulo intestinal",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K56.5",
-    "descripcion": "Adherencias intestinales con obstruccion",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K56.6",
-    "descripcion": "Otras obstrucciones intestinales y las no especificadas",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K56.7",
-    "descripcion": "Ileo, no especificado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K57.2",
-    "descripcion": "Diverticulitis del colon con perforacion y absceso",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K57.3",
-    "descripcion": "Diverticulosis del colon sin perforacion ni absceso",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K57.9",
-    "descripcion": "Enfermedad diverticular del intestino, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K58.0",
-    "descripcion": "Sindrome del intestino irritable con diarrea",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K58.9",
-    "descripcion": "Sindrome del intestino irritable sin diarrea",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K59.0",
-    "descripcion": "Estrenimiento",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K59.1",
-    "descripcion": "Diarrea funcional",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K60.0",
-    "descripcion": "Fisura anal aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K60.1",
-    "descripcion": "Fisura anal cronica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K60.3",
-    "descripcion": "Fistula anal",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K61.0",
-    "descripcion": "Absceso anal",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K64.1",
-    "descripcion": "Hemorroides de segundo grado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K64.2",
-    "descripcion": "Hemorroides de tercer grado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K64.3",
-    "descripcion": "Hemorroides de cuarto grado",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K64.5",
-    "descripcion": "Trombosis venosa perianal",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K65.0",
-    "descripcion": "Peritonitis aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K65.9",
-    "descripcion": "Peritonitis, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K70.0",
-    "descripcion": "Higado graso alcoholico",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K70.1",
-    "descripcion": "Hepatitis alcoholica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K70.3",
-    "descripcion": "Cirrosis hepatica alcoholica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K71.6",
-    "descripcion": "Hepatitis toxica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K72.0",
-    "descripcion": "Insuficiencia hepatica aguda y subaguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K72.9",
-    "descripcion": "Insuficiencia hepatica, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K74.6",
-    "descripcion": "Cirrosis del higado, otra y no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K75.8",
-    "descripcion": "Esteatohepatitis no alcoholica (NASH)",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K76.0",
-    "descripcion": "Higado graso (esteatosis hepatica)",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.0",
-    "descripcion": "Colelitiasis con colecistitis aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.1",
-    "descripcion": "Colelitiasis con otra colecistitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.2",
-    "descripcion": "Colelitiasis sin colecistitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.3",
-    "descripcion": "Calculo de conducto biliar con colangitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.5",
-    "descripcion": "Calculo de conducto biliar sin colangitis ni colecistitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K81.0",
-    "descripcion": "Colecistitis aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K81.1",
-    "descripcion": "Colecistitis cronica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K81.9",
-    "descripcion": "Colecistitis, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K83.0",
-    "descripcion": "Colangitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K85.1",
-    "descripcion": "Pancreatitis aguda biliar",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K85.2",
-    "descripcion": "Pancreatitis aguda inducida por alcohol",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K85.9",
-    "descripcion": "Pancreatitis aguda, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K86.0",
-    "descripcion": "Pancreatitis cronica inducida por alcohol",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K86.1",
-    "descripcion": "Otras pancreatitis cronicas",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K90.0",
-    "descripcion": "Enfermedad celiaca",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K90.9",
-    "descripcion": "Malabsorcion intestinal, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K92.0",
-    "descripcion": "Hematemesis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K92.1",
-    "descripcion": "Melena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K92.2",
-    "descripcion": "Hemorragia gastrointestinal, no especificada",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "L01.0",
-    "descripcion": "Impetigo",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.0",
-    "descripcion": "Absceso cutaneo, furunculo y antrax de la cara",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.1",
-    "descripcion": "Absceso cutaneo, furunculo y antrax del cuello",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.2",
-    "descripcion": "Absceso cutaneo, furunculo y antrax del tronco",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.3",
-    "descripcion": "Absceso cutaneo, furunculo y antrax de la nalga",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.4",
-    "descripcion": "Absceso cutaneo, furunculo y antrax de miembro",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L02.9",
-    "descripcion": "Absceso cutaneo y furunculo, sitio no especificado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L03.0",
-    "descripcion": "Celulitis de dedos de mano y pie (paroniquia)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L03.1",
-    "descripcion": "Celulitis de otras partes de los miembros",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L03.2",
-    "descripcion": "Celulitis de la cara",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L03.3",
-    "descripcion": "Celulitis del tronco",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L03.9",
-    "descripcion": "Celulitis, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "I89.1",
-    "descripcion": "Linfangitis",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L05.0",
-    "descripcion": "Quiste pilonidal con absceso",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L05.9",
-    "descripcion": "Quiste pilonidal sin absceso",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L08.0",
-    "descripcion": "Pioderma",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L20.8",
-    "descripcion": "Otras dermatitis atopicas",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L20.9",
-    "descripcion": "Dermatitis atopica, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L21.0",
-    "descripcion": "Dermatitis seborreica del cuero cabelludo",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L21.9",
-    "descripcion": "Dermatitis seborreica, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L22",
-    "descripcion": "Dermatitis del panal",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L23.0",
-    "descripcion": "Dermatitis alergica de contacto debida a metales",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L23.2",
-    "descripcion": "Dermatitis alergica de contacto debida a cosmeticos",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L23.3",
-    "descripcion": "Dermatitis alergica de contacto por medicamentos topicos",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L23.9",
-    "descripcion": "Dermatitis alergica de contacto, causa no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L24.0",
-    "descripcion": "Dermatitis de contacto por irritantes: detergentes",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L24.9",
-    "descripcion": "Dermatitis de contacto por irritantes, causa no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L25.9",
-    "descripcion": "Dermatitis de contacto, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L27.0",
-    "descripcion": "Erupcion cutanea generalizada debida a medicamentos",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L28.0",
-    "descripcion": "Liquen simple cronico",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L29.0",
-    "descripcion": "Prurito anal",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L29.9",
-    "descripcion": "Prurito, no especificado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L30.0",
-    "descripcion": "Dermatitis numular",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L30.4",
-    "descripcion": "Eritema intertrigo",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L30.9",
-    "descripcion": "Dermatitis (eccema), no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.0",
-    "descripcion": "Psoriasis vulgar",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.1",
-    "descripcion": "Psoriasis pustulosa generalizada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.3",
-    "descripcion": "Pustulosis palmoplantar",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.4",
-    "descripcion": "Psoriasis guttata",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.5",
-    "descripcion": "Artropatia psoriasica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.8",
-    "descripcion": "Otras psoriasis (inversa o flexural)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L40.9",
-    "descripcion": "Psoriasis, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L42",
-    "descripcion": "Pitiriasis rosada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L43.9",
-    "descripcion": "Liquen plano, no especificado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.0",
-    "descripcion": "Urticaria alergica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.1",
-    "descripcion": "Urticaria idiopatica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.2",
-    "descripcion": "Urticaria debida al calor y al frio",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.3",
-    "descripcion": "Urticaria dermatografica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.6",
-    "descripcion": "Urticaria de contacto",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.8",
-    "descripcion": "Urticaria cronica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L50.9",
-    "descripcion": "Urticaria, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L51.0",
-    "descripcion": "Eritema multiforme no flictenular",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L51.1",
-    "descripcion": "Eritema multiforme flictenular (Stevens-Johnson)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L51.9",
-    "descripcion": "Eritema multiforme, no especificado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L55.0",
-    "descripcion": "Quemadura solar de primer grado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L55.1",
-    "descripcion": "Quemadura solar de segundo grado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L55.9",
-    "descripcion": "Quemadura solar, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L57.0",
-    "descripcion": "Queratosis actinica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L60.0",
-    "descripcion": "Una encarnada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L63.9",
-    "descripcion": "Alopecia areata, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L64.9",
-    "descripcion": "Alopecia androgenica, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L65.0",
-    "descripcion": "Efluvio telogeno",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L68.0",
-    "descripcion": "Hirsutismo",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L70.0",
-    "descripcion": "Acne vulgar",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L70.1",
-    "descripcion": "Acne conglobata",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L70.4",
-    "descripcion": "Acne infantil",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L70.5",
-    "descripcion": "Acne excoriado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L70.9",
-    "descripcion": "Acne, no especificado",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L71.0",
-    "descripcion": "Dermatitis perioral",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L71.9",
-    "descripcion": "Rosacea, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L72.0",
-    "descripcion": "Quiste epidermico",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L72.1",
-    "descripcion": "Quiste tricodermico (sebaceo)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L73.0",
-    "descripcion": "Acne queloide",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L73.2",
-    "descripcion": "Hidradenitis supurativa",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L73.9",
-    "descripcion": "Foliculitis, no especificada",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L80",
-    "descripcion": "Vitiligo",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L81.0",
-    "descripcion": "Hiperpigmentacion postinflamatoria",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L81.1",
-    "descripcion": "Cloasma (melasma)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L82",
-    "descripcion": "Queratosis seborreica",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L84",
-    "descripcion": "Callos y callosidades",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L85.0",
-    "descripcion": "Ictiosis adquirida",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L89.0",
-    "descripcion": "Ulcera de decubito grado I",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L89.1",
-    "descripcion": "Ulcera de decubito grado II",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L89.2",
-    "descripcion": "Ulcera de decubito grado III",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L89.3",
-    "descripcion": "Ulcera de decubito grado IV",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L91.0",
-    "descripcion": "Cicatriz queloide",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L92.0",
-    "descripcion": "Granuloma anular",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L97",
-    "descripcion": "Ulcera de miembro inferior, no clasificada en otra parte",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "L98.0",
-    "descripcion": "Granuloma piogeno",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
-  },
-  {
-    "codigo": "E10.1",
-    "descripcion": "Diabetes mellitus tipo 1 con cetoacidosis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.2",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones renales",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.3",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones oftálmicas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.4",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones neurológicas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.5",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones circulatorias",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.6",
-    "descripcion": "Diabetes mellitus tipo 1 con otras complicaciones",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.7",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones múltiples",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.8",
-    "descripcion": "Diabetes mellitus tipo 1 con complicaciones no especificadas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E10.9",
-    "descripcion": "Diabetes mellitus tipo 1 sin complicaciones",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.0",
-    "descripcion": "Diabetes mellitus tipo 2 con coma hiperosmolar",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.1",
-    "descripcion": "Diabetes mellitus tipo 2 con cetoacidosis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.2",
-    "descripcion": "Diabetes mellitus tipo 2 con nefropatía diabética",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.3",
-    "descripcion": "Diabetes mellitus tipo 2 con retinopatía diabética",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.4",
-    "descripcion": "Diabetes mellitus tipo 2 con neuropatía diabética",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.5",
-    "descripcion": "Diabetes mellitus tipo 2 con complicaciones circulatorias",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.6",
-    "descripcion": "Diabetes mellitus tipo 2 con pie diabético",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.7",
-    "descripcion": "Diabetes mellitus tipo 2 con complicaciones múltiples",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.8",
-    "descripcion": "Diabetes mellitus tipo 2 con complicaciones no especificadas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E11.9",
-    "descripcion": "Diabetes mellitus tipo 2 sin complicaciones",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E12.9",
-    "descripcion": "Diabetes mellitus asociada a desnutrición",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E13.1",
-    "descripcion": "Otra diabetes mellitus especificada con cetoacidosis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E13.9",
-    "descripcion": "Otra diabetes mellitus especificada sin complicaciones",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E14.9",
-    "descripcion": "Diabetes mellitus no especificada sin complicaciones",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "O24.4",
-    "descripcion": "Diabetes mellitus gestacional",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "R73.0",
-    "descripcion": "Anomalía de la prueba de tolerancia a la glucosa",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "R73.9",
-    "descripcion": "Hiperglucemia no especificada (prediabetes)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E16.0",
-    "descripcion": "Hipoglucemia sin coma inducida por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E16.1",
-    "descripcion": "Otra hipoglucemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E16.2",
-    "descripcion": "Hipoglucemia no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E15",
-    "descripcion": "Coma hipoglucémico no diabético",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E00.9",
-    "descripcion": "Síndrome de deficiencia congénita de yodo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E01.0",
-    "descripcion": "Bocio difuso por deficiencia de yodo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E01.1",
-    "descripcion": "Bocio multinodular por deficiencia de yodo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E01.2",
-    "descripcion": "Bocio relacionado con deficiencia de yodo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E02",
-    "descripcion": "Hipotiroidismo subclínico por deficiencia de yodo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.0",
-    "descripcion": "Hipotiroidismo congénito con bocio difuso",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.1",
-    "descripcion": "Hipotiroidismo congénito sin bocio",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.2",
-    "descripcion": "Hipotiroidismo por fármacos y sustancias exógenas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.3",
-    "descripcion": "Hipotiroidismo postinfeccioso",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.4",
-    "descripcion": "Atrofia de tiroides adquirida",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.5",
-    "descripcion": "Coma mixedematoso",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.8",
-    "descripcion": "Otros hipotiroidismos especificados",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E03.9",
-    "descripcion": "Hipotiroidismo no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E04.0",
-    "descripcion": "Bocio difuso no tóxico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E04.1",
-    "descripcion": "Nódulo tiroideo solitario no tóxico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E04.2",
-    "descripcion": "Bocio multinodular no tóxico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E04.9",
-    "descripcion": "Bocio no tóxico no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E05.0",
-    "descripcion": "Hipertiroidismo con bocio difuso (enfermedad de Graves)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E05.1",
-    "descripcion": "Hipertiroidismo con nódulo tóxico solitario",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E05.2",
-    "descripcion": "Hipertiroidismo con bocio multinodular tóxico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E05.5",
-    "descripcion": "Crisis o tormenta tiroidea",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E05.9",
-    "descripcion": "Hipertiroidismo no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.0",
-    "descripcion": "Tiroiditis aguda",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.1",
-    "descripcion": "Tiroiditis subaguda (de De Quervain)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.2",
-    "descripcion": "Tiroiditis crónica con tirotoxicosis transitoria",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.3",
-    "descripcion": "Tiroiditis autoinmune (de Hashimoto)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.4",
-    "descripcion": "Tiroiditis inducida por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E06.9",
-    "descripcion": "Tiroiditis no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E07.9",
-    "descripcion": "Trastorno de la tiroides no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E20.0",
-    "descripcion": "Hipoparatiroidismo idiopático",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E20.1",
-    "descripcion": "Pseudohipoparatiroidismo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E20.9",
-    "descripcion": "Hipoparatiroidismo no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E21.0",
-    "descripcion": "Hiperparatiroidismo primario",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E21.1",
-    "descripcion": "Hiperparatiroidismo secundario",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E21.2",
-    "descripcion": "Otros hiperparatiroidismos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E21.3",
-    "descripcion": "Trastorno de la paratiroides no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E22.0",
-    "descripcion": "Acromegalia y gigantismo hipofisario",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E22.1",
-    "descripcion": "Hiperprolactinemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E22.2",
-    "descripcion": "Síndrome de secreción inadecuada de ADH (SIADH)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E22.8",
-    "descripcion": "Otras hiperfunciones de la hipófisis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E22.9",
-    "descripcion": "Hiperfunción de la hipófisis no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E23.0",
-    "descripcion": "Hipopituitarismo (panhipopituitarismo)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E23.1",
-    "descripcion": "Hipopituitarismo inducido por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E23.2",
-    "descripcion": "Diabetes insípida",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E23.6",
-    "descripcion": "Otros trastornos de la hipófisis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E23.7",
-    "descripcion": "Trastorno de la hipófisis no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E24.0",
-    "descripcion": "Enfermedad de Cushing hipofisaria",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E24.2",
-    "descripcion": "Síndrome de Cushing inducido por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E24.9",
-    "descripcion": "Síndrome de Cushing no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E25.0",
-    "descripcion": "Trastornos adrenogenitales congénitos con deficiencia enzimática",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E25.9",
-    "descripcion": "Trastorno adrenogenital no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E26.0",
-    "descripcion": "Hiperaldosteronismo primario (síndrome de Conn)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E26.1",
-    "descripcion": "Hiperaldosteronismo secundario",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E26.9",
-    "descripcion": "Hiperaldosteronismo no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.1",
-    "descripcion": "Insuficiencia adrenocortical primaria (enfermedad de Addison)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.2",
-    "descripcion": "Crisis addisoniana",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.3",
-    "descripcion": "Insuficiencia adrenocortical inducida por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.4",
-    "descripcion": "Otra insuficiencia adrenocortical no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.5",
-    "descripcion": "Hiperfunción de la médula suprarrenal",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E27.9",
-    "descripcion": "Trastorno de la glándula suprarrenal no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E28.0",
-    "descripcion": "Exceso de estrógenos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E28.1",
-    "descripcion": "Exceso de andrógenos de origen ovárico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E28.2",
-    "descripcion": "Síndrome de ovario poliquístico (SOP)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E28.3",
-    "descripcion": "Insuficiencia ovárica primaria",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E28.9",
-    "descripcion": "Disfunción ovárica no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E34.0",
-    "descripcion": "Síndrome carcinoide",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E34.9",
-    "descripcion": "Trastorno endocrino no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E66.0",
-    "descripcion": "Obesidad por exceso de calorías",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E66.1",
-    "descripcion": "Obesidad inducida por fármacos",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E66.2",
-    "descripcion": "Obesidad mórbida con hipoventilación alveolar",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E66.8",
-    "descripcion": "Otra obesidad especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E66.9",
-    "descripcion": "Obesidad no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.0",
-    "descripcion": "Hipercolesterolemia pura",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.1",
-    "descripcion": "Hipertrigliceridemia pura",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.2",
-    "descripcion": "Hiperlipidemia mixta",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.3",
-    "descripcion": "Hiperquilomicronemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.4",
-    "descripcion": "Otras hiperlipidemias",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.5",
-    "descripcion": "Hiperlipidemia no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.6",
-    "descripcion": "Deficiencia de lipoproteínas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.8",
-    "descripcion": "Otros trastornos del metabolismo de lipoproteínas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E78.9",
-    "descripcion": "Trastorno del metabolismo de lipoproteínas no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E88.81",
-    "descripcion": "Síndrome metabólico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E88.0",
-    "descripcion": "Trastorno del metabolismo de proteínas plasmáticas",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E88.9",
-    "descripcion": "Trastorno metabólico no especificado",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E40",
-    "descripcion": "Kwashiorkor",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E41",
-    "descripcion": "Marasmo nutricional",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E42",
-    "descripcion": "Kwashiorkor marasmático",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E43",
-    "descripcion": "Desnutrición proteico-calórica grave no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E44.0",
-    "descripcion": "Desnutrición proteico-calórica moderada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E44.1",
-    "descripcion": "Desnutrición proteico-calórica leve",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E46",
-    "descripcion": "Desnutrición proteico-calórica no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E50.9",
-    "descripcion": "Deficiencia de vitamina A no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E51.9",
-    "descripcion": "Deficiencia de tiamina (vitamina B1) no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E53.8",
-    "descripcion": "Deficiencia de otras vitaminas del grupo B",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E53.9",
-    "descripcion": "Deficiencia de vitamina B12",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E55.9",
-    "descripcion": "Deficiencia de vitamina D no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E55.0",
-    "descripcion": "Raquitismo activo por deficiencia de vitamina D",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E58",
-    "descripcion": "Deficiencia dietética de calcio",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E61.1",
-    "descripcion": "Deficiencia de hierro",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E63.9",
-    "descripcion": "Deficiencia nutricional no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.0",
-    "descripcion": "Hiperosmolaridad e hipernatremia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.1",
-    "descripcion": "Hipoosmolaridad e hiponatremia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.2",
-    "descripcion": "Acidosis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.3",
-    "descripcion": "Alcalosis",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.5",
-    "descripcion": "Hiperkalemia (hiperpotasemia)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.6",
-    "descripcion": "Hipokalemia (hipopotasemia)",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E87.8",
-    "descripcion": "Otros trastornos del equilibrio hidroelectrolítico",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.39",
-    "descripcion": "Trastorno del metabolismo del fósforo",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.42",
-    "descripcion": "Hipomagnesemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.51",
-    "descripcion": "Hipocalcemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.52",
-    "descripcion": "Hipercalcemia",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.10",
-    "descripcion": "Trastorno del metabolismo del hierro",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E83.0",
-    "descripcion": "Trastorno del metabolismo del cobre",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E79.0",
-    "descripcion": "Hiperuricemia sin signos de artritis gotosa",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "M10.9",
-    "descripcion": "Gota metabólica no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E80.1",
-    "descripcion": "Porfiria cutánea tardía",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E80.2",
-    "descripcion": "Otras porfirias",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E84.0",
-    "descripcion": "Fibrosis quística con manifestaciones pulmonares",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E84.1",
-    "descripcion": "Fibrosis quística con manifestaciones intestinales",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "E84.9",
-    "descripcion": "Fibrosis quística no especificada",
-    "grupo": "Endocrino/Metabólico",
-    "sistema": "Endocrino/Metabólico"
-  },
-  {
-    "codigo": "A00.0",
-    "descripcion": "Cólera debido a Vibrio cholerae 01, biotipo cholerae",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A00.1",
-    "descripcion": "Cólera debido a Vibrio cholerae 01, biotipo El Tor",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A00.9",
-    "descripcion": "Cólera, no especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A01.0",
-    "descripcion": "Fiebre tifoidea",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A01.1",
-    "descripcion": "Fiebre paratifoidea A",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A02.0",
-    "descripcion": "Enteritis debida a Salmonella",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A02.1",
-    "descripcion": "Septicemia debida a Salmonella",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A02.9",
-    "descripcion": "Infección por Salmonella, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A03.9",
-    "descripcion": "Shigelosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.4",
-    "descripcion": "Otras infecciones intestinales por Escherichia coli",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.5",
-    "descripcion": "Enteritis debida a Campylobacter",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.6",
-    "descripcion": "Enteritis debida a Yersinia enterocolitica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.7",
-    "descripcion": "Enterocolitis debida a Clostridium difficile",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.9",
-    "descripcion": "Infección intestinal bacteriana, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A05.0",
-    "descripcion": "Intoxicación alimentaria estafilocócica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A05.1",
-    "descripcion": "Botulismo del adulto",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A05.9",
-    "descripcion": "Intoxicación alimentaria bacteriana, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A06.0",
-    "descripcion": "Disentería amebiana aguda",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A06.1",
-    "descripcion": "Amebiasis intestinal crónica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A06.4",
-    "descripcion": "Absceso amebiano del hígado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A06.9",
-    "descripcion": "Amebiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A07.1",
-    "descripcion": "Giardiasis (lambliasis)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A07.2",
-    "descripcion": "Criptosporidiosis",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A07.9",
-    "descripcion": "Enfermedad intestinal por protozoarios, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A08.0",
-    "descripcion": "Enteritis debida a rotavirus",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A08.1",
-    "descripcion": "Gastroenteropatía aguda por agente de Norwalk",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A08.4",
-    "descripcion": "Infección intestinal viral, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A09",
-    "descripcion": "Diarrea y gastroenteritis de presunto origen infeccioso",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A15.0",
-    "descripcion": "Tuberculosis del pulmón, confirmada bacteriológicamente",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A15.3",
-    "descripcion": "Tuberculosis del pulmón, confirmada por medios no especificados",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A15.6",
-    "descripcion": "Pleuresía tuberculosa, confirmada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A15.9",
-    "descripcion": "Tuberculosis respiratoria no especificada, confirmada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A16.2",
-    "descripcion": "Tuberculosis del pulmón, sin confirmación bacteriológica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A16.9",
-    "descripcion": "Tuberculosis respiratoria no especificada, sin confirmación",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A17.0",
-    "descripcion": "Meningitis tuberculosa",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A17.9",
-    "descripcion": "Tuberculosis del sistema nervioso, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A18.0",
-    "descripcion": "Tuberculosis de huesos y articulaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A18.1",
-    "descripcion": "Tuberculosis del aparato genitourinario",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A18.2",
-    "descripcion": "Linfadenopatía periférica tuberculosa",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A18.3",
-    "descripcion": "Tuberculosis de intestinos, peritoneo y ganglios mesentéricos",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A18.4",
-    "descripcion": "Tuberculosis de la piel y el tejido subcutáneo",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A19.0",
-    "descripcion": "Tuberculosis miliar aguda de un solo sitio especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A19.9",
-    "descripcion": "Tuberculosis miliar, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A20.0",
-    "descripcion": "Peste bubónica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A21.9",
-    "descripcion": "Tularemia, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A22.0",
-    "descripcion": "Carbunco (ántrax) cutáneo",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A23.9",
-    "descripcion": "Brucelosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A25.9",
-    "descripcion": "Fiebre por mordedura de rata, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A27.0",
-    "descripcion": "Leptospirosis icterohemorrágica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A27.9",
-    "descripcion": "Leptospirosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A30.9",
-    "descripcion": "Lepra, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A32.9",
-    "descripcion": "Listeriosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A33",
-    "descripcion": "Tétanos neonatal",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A34",
-    "descripcion": "Tétanos obstétrico",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A35",
-    "descripcion": "Otros tétanos",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A36.9",
-    "descripcion": "Difteria, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A37.0",
-    "descripcion": "Tos ferina debida a Bordetella pertussis",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A37.9",
-    "descripcion": "Tos ferina, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A38",
-    "descripcion": "Escarlatina",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A39.0",
-    "descripcion": "Meningitis meningocócica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A39.2",
-    "descripcion": "Meningococemia aguda",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A39.9",
-    "descripcion": "Infección meningocócica, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A40.0",
-    "descripcion": "Septicemia debida a estreptococo del grupo A",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A40.9",
-    "descripcion": "Septicemia estreptocócica, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A41.0",
-    "descripcion": "Septicemia debida a Staphylococcus aureus",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A41.1",
-    "descripcion": "Septicemia debida a otro estafilococo especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A41.5",
-    "descripcion": "Septicemia debida a otros organismos gramnegativos",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A41.9",
-    "descripcion": "Septicemia, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A46",
-    "descripcion": "Erisipela",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A48.0",
-    "descripcion": "Gangrena gaseosa",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A48.1",
-    "descripcion": "Enfermedad de los legionarios",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A49.0",
-    "descripcion": "Infección estafilocócica, sin otra especificación",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A49.1",
-    "descripcion": "Infección estreptocócica, sin otra especificación",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A49.9",
-    "descripcion": "Infección bacteriana, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A50.9",
-    "descripcion": "Sífilis congénita, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A51.0",
-    "descripcion": "Sífilis genital primaria",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A51.3",
-    "descripcion": "Sífilis secundaria de piel y membranas mucosas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A51.9",
-    "descripcion": "Sífilis precoz, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A52.9",
-    "descripcion": "Sífilis tardía, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A53.9",
-    "descripcion": "Sífilis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A54.0",
-    "descripcion": "Infección gonocócica del tracto genitourinario inferior",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A54.9",
-    "descripcion": "Infección gonocócica, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A55",
-    "descripcion": "Linfogranuloma (venéreo) por clamidias",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A56.0",
-    "descripcion": "Infección por clamidias del tracto genitourinario inferior",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A56.9",
-    "descripcion": "Infección de transmisión sexual por clamidias, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A57",
-    "descripcion": "Chancro blando (chancroide)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A59.0",
-    "descripcion": "Tricomoniasis urogenital",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A59.9",
-    "descripcion": "Tricomoniasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A60.0",
-    "descripcion": "Infección anogenital por virus del herpes simple",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A63.0",
-    "descripcion": "Verrugas anogenitales (venéreas)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A64",
-    "descripcion": "Enfermedad de transmisión sexual, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A69.2",
-    "descripcion": "Enfermedad de Lyme",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A70",
-    "descripcion": "Infección debida a Chlamydia psittaci",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A75.9",
-    "descripcion": "Tifus, no especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A79.9",
-    "descripcion": "Rickettsiosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A80.9",
-    "descripcion": "Poliomielitis aguda, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A82.9",
-    "descripcion": "Rabia, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A84.9",
-    "descripcion": "Encefalitis viral transmitida por garrapatas, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A86",
-    "descripcion": "Encefalitis viral, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A87.9",
-    "descripcion": "Meningitis viral, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A90",
-    "descripcion": "Fiebre del dengue (dengue clásico)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A91",
-    "descripcion": "Fiebre del dengue hemorrágico",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A92.0",
-    "descripcion": "Fiebre de Chikungunya",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A92.5",
-    "descripcion": "Enfermedad por virus de Zika",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A92.8",
-    "descripcion": "Otras fiebres virales transmitidas por mosquitos",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A95.9",
-    "descripcion": "Fiebre amarilla, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A97.0",
-    "descripcion": "Dengue sin signos de alarma",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A97.1",
-    "descripcion": "Dengue con signos de alarma",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A97.2",
-    "descripcion": "Dengue grave",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A98.5",
-    "descripcion": "Fiebre hemorrágica con síndrome renal",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B00.1",
-    "descripcion": "Dermatitis vesicular por virus del herpes",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B00.9",
-    "descripcion": "Infección por virus del herpes, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B01.9",
-    "descripcion": "Varicela sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B02.9",
-    "descripcion": "Herpes zóster sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B05.9",
-    "descripcion": "Sarampión sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B06.9",
-    "descripcion": "Rubéola sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B07",
-    "descripcion": "Verrugas víricas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B08.1",
-    "descripcion": "Molusco contagioso",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B08.4",
-    "descripcion": "Estomatitis vesicular enteroviral con exantema",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B15.9",
-    "descripcion": "Hepatitis aguda tipo A sin coma hepático",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B16.9",
-    "descripcion": "Hepatitis aguda tipo B sin agente delta ni coma hepático",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B17.1",
-    "descripcion": "Hepatitis aguda tipo C",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B17.9",
-    "descripcion": "Hepatitis viral aguda, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B18.0",
-    "descripcion": "Hepatitis viral crónica tipo B con agente delta",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B18.1",
-    "descripcion": "Hepatitis viral crónica tipo B sin agente delta",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B18.2",
-    "descripcion": "Hepatitis viral crónica tipo C",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B18.9",
-    "descripcion": "Hepatitis viral crónica, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B19.9",
-    "descripcion": "Hepatitis viral, no especificada, sin coma hepático",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B20",
-    "descripcion": "Enfermedad por VIH con enfermedades infecciosas y parasitarias",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B21",
-    "descripcion": "Enfermedad por VIH con tumores malignos",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B22",
-    "descripcion": "Enfermedad por VIH con otras enfermedades especificadas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B23.8",
-    "descripcion": "Enfermedad por VIH con otras afecciones especificadas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B24",
-    "descripcion": "Enfermedad por VIH, sin otra especificación",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B25.9",
-    "descripcion": "Enfermedad por citomegalovirus, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B26.9",
-    "descripcion": "Parotiditis sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B27.9",
-    "descripcion": "Mononucleosis infecciosa, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B30.9",
-    "descripcion": "Conjuntivitis viral, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B33.4",
-    "descripcion": "Síndrome pulmonar por hantavirus",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B34.9",
-    "descripcion": "Infección viral, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B35.0",
-    "descripcion": "Tiña de la barba y del cuero cabelludo",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B35.1",
-    "descripcion": "Tiña de las uñas (onicomicosis)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B35.3",
-    "descripcion": "Tiña del pie (pie de atleta)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B35.4",
-    "descripcion": "Tiña del cuerpo",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B35.6",
-    "descripcion": "Tiña inguinal",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B36.0",
-    "descripcion": "Pitiriasis versicolor",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B37.0",
-    "descripcion": "Estomatitis candidiásica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B37.3",
-    "descripcion": "Candidiasis de la vulva y de la vagina",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B37.9",
-    "descripcion": "Candidiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B38.9",
-    "descripcion": "Coccidioidomicosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B39.9",
-    "descripcion": "Histoplasmosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B40.9",
-    "descripcion": "Blastomicosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B41.9",
-    "descripcion": "Paracoccidioidomicosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B44.9",
-    "descripcion": "Aspergilosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B45.9",
-    "descripcion": "Criptococosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B49",
-    "descripcion": "Micosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B50.9",
-    "descripcion": "Paludismo por Plasmodium falciparum, no especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B51.9",
-    "descripcion": "Paludismo por Plasmodium vivax sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B52.9",
-    "descripcion": "Paludismo por Plasmodium malariae sin complicaciones",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B53.0",
-    "descripcion": "Paludismo por Plasmodium ovale",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B54",
-    "descripcion": "Paludismo (malaria), no especificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B55.1",
-    "descripcion": "Leishmaniasis cutánea",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B55.2",
-    "descripcion": "Leishmaniasis mucocutánea",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B55.0",
-    "descripcion": "Leishmaniasis visceral (kala-azar)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B55.9",
-    "descripcion": "Leishmaniasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B56.9",
-    "descripcion": "Tripanosomiasis africana, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B57.2",
-    "descripcion": "Enfermedad de Chagas crónica con afección del corazón",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B57.9",
-    "descripcion": "Enfermedad de Chagas, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B58.9",
-    "descripcion": "Toxoplasmosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B59",
-    "descripcion": "Neumocistosis (Pneumocystis jirovecii)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B65.9",
-    "descripcion": "Esquistosomiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B67.9",
-    "descripcion": "Equinococosis (hidatidosis), no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B67.0",
-    "descripcion": "Equinococosis del hígado por Echinococcus granulosus",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B68.9",
-    "descripcion": "Teniasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B69.9",
-    "descripcion": "Cisticercosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B69.0",
-    "descripcion": "Cisticercosis del sistema nervioso central",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B71.9",
-    "descripcion": "Infección por cestodos, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B76.9",
-    "descripcion": "Anquilostomiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B77.9",
-    "descripcion": "Ascariasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B77.0",
-    "descripcion": "Ascariasis con complicaciones intestinales",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B78.9",
-    "descripcion": "Estrongiloidiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B79",
-    "descripcion": "Tricuriasis",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B80",
-    "descripcion": "Oxiuriasis (enterobiasis)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B82.9",
-    "descripcion": "Parasitosis intestinal, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B83.9",
-    "descripcion": "Helmintiasis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B85.0",
-    "descripcion": "Pediculosis debida a Pediculus humanus capitis",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B85.2",
-    "descripcion": "Pediculosis, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B86",
-    "descripcion": "Escabiosis (sarna)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B88.9",
-    "descripcion": "Infestación, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B89",
-    "descripcion": "Enfermedad parasitaria, no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B90.9",
-    "descripcion": "Secuelas de tuberculosis respiratoria y no especificada",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B95.6",
-    "descripcion": "Staphylococcus aureus como causa de enfermedades",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B96.2",
-    "descripcion": "Escherichia coli como causa de enfermedades clasificadas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B99",
-    "descripcion": "Otras enfermedades infecciosas y las no especificadas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B58.0",
-    "descripcion": "Oftalmopatía por Toxoplasma",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A48.3",
-    "descripcion": "Síndrome de choque tóxico",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B44.0",
-    "descripcion": "Aspergilosis pulmonar invasiva",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "A04.8",
-    "descripcion": "Otras infecciones intestinales bacterianas especificadas",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "B37.7",
-    "descripcion": "Septicemia candidiásica",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "U07.1",
-    "descripcion": "COVID-19, virus identificado",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "U07.2",
-    "descripcion": "COVID-19, virus no identificado (clínico o epidemiológico)",
-    "grupo": "Infecciosas",
-    "sistema": "Infecciosas"
-  },
-  {
-    "codigo": "F00.0",
-    "descripcion": "Demencia en Alzheimer de inicio temprano",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F00.1",
-    "descripcion": "Demencia en Alzheimer de inicio tardío",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F00.2",
-    "descripcion": "Demencia en Alzheimer atípica o mixta",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F01.0",
-    "descripcion": "Demencia vascular de inicio agudo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F01.1",
-    "descripcion": "Demencia vascular por infartos múltiples",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F01.3",
-    "descripcion": "Demencia vascular mixta cortical y subcortical",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F03",
-    "descripcion": "Demencia no especificada",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F04",
-    "descripcion": "Síndrome amnésico orgánico no inducido por alcohol",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F05.0",
-    "descripcion": "Delirium no superpuesto a demencia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F05.1",
-    "descripcion": "Delirium superpuesto a demencia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F06.0",
-    "descripcion": "Alucinosis orgánica",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F06.2",
-    "descripcion": "Trastorno delirante orgánico",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F06.3",
-    "descripcion": "Trastornos del humor orgánicos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F07.0",
-    "descripcion": "Trastorno orgánico de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F09",
-    "descripcion": "Trastorno mental orgánico no especificado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F10.0",
-    "descripcion": "Intoxicación aguda por alcohol",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F10.1",
-    "descripcion": "Uso nocivo de alcohol",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F10.2",
-    "descripcion": "Síndrome de dependencia del alcohol",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F10.3",
-    "descripcion": "Síndrome de abstinencia de alcohol",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F10.4",
-    "descripcion": "Abstinencia de alcohol con delirium",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F11.2",
-    "descripcion": "Síndrome de dependencia de opioides",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F12.1",
-    "descripcion": "Uso nocivo de cannabinoides",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F12.2",
-    "descripcion": "Síndrome de dependencia de cannabinoides",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F13.2",
-    "descripcion": "Dependencia de sedantes o hipnóticos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F14.2",
-    "descripcion": "Síndrome de dependencia de cocaína",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F15.2",
-    "descripcion": "Dependencia de otros estimulantes",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F16.0",
-    "descripcion": "Intoxicación aguda por alucinógenos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F17.2",
-    "descripcion": "Síndrome de dependencia de tabaco",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F19.2",
-    "descripcion": "Dependencia de múltiples drogas",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F20.0",
-    "descripcion": "Esquizofrenia paranoide",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F20.1",
-    "descripcion": "Esquizofrenia hebefrénica",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F20.3",
-    "descripcion": "Esquizofrenia indiferenciada",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F21",
-    "descripcion": "Trastorno esquizotípico",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F22.0",
-    "descripcion": "Trastorno delirante persistente",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F23.0",
-    "descripcion": "Trastorno psicótico agudo polimorfo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F25.0",
-    "descripcion": "Trastorno esquizoafectivo de tipo maníaco",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F25.1",
-    "descripcion": "Trastorno esquizoafectivo de tipo depresivo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F28",
-    "descripcion": "Otros trastornos psicóticos no orgánicos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F29",
-    "descripcion": "Psicosis no orgánica no especificada",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F30.2",
-    "descripcion": "Episodio maníaco con síntomas psicóticos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.0",
-    "descripcion": "Trastorno bipolar episodio hipomaníaco actual",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.1",
-    "descripcion": "Trastorno bipolar episodio maníaco sin psicosis",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.2",
-    "descripcion": "Trastorno bipolar episodio maníaco con psicosis",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.3",
-    "descripcion": "Trastorno bipolar episodio depresivo leve o moderado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.4",
-    "descripcion": "Trastorno bipolar episodio depresivo grave sin psicosis",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F31.6",
-    "descripcion": "Trastorno bipolar episodio mixto actual",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F32.0",
-    "descripcion": "Episodio depresivo leve",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F32.1",
-    "descripcion": "Episodio depresivo moderado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F32.2",
-    "descripcion": "Episodio depresivo grave sin síntomas psicóticos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F32.3",
-    "descripcion": "Episodio depresivo grave con síntomas psicóticos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F33.0",
-    "descripcion": "Trastorno depresivo recurrente episodio actual leve",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F33.1",
-    "descripcion": "Trastorno depresivo recurrente episodio moderado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F33.2",
-    "descripcion": "Depresivo recurrente episodio grave sin psicosis",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F34.0",
-    "descripcion": "Ciclotimia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F34.1",
-    "descripcion": "Distimia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F40.0",
-    "descripcion": "Agorafobia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F40.1",
-    "descripcion": "Fobias sociales",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F40.2",
-    "descripcion": "Fobias específicas o aisladas",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F41.0",
-    "descripcion": "Trastorno de pánico",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F41.1",
-    "descripcion": "Trastorno de ansiedad generalizada",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F41.2",
-    "descripcion": "Trastorno mixto ansioso-depresivo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F42.0",
-    "descripcion": "TOC con predominio de pensamientos obsesivos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F42.1",
-    "descripcion": "TOC con predominio de actos compulsivos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F42.2",
-    "descripcion": "TOC con mezcla de pensamientos y actos",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F43.0",
-    "descripcion": "Reacción a estrés agudo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F43.1",
-    "descripcion": "Trastorno de estrés postraumático",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F43.2",
-    "descripcion": "Trastornos de adaptación",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F44.0",
-    "descripcion": "Amnesia disociativa",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F44.4",
-    "descripcion": "Trastornos disociativos motores",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F45.0",
-    "descripcion": "Trastorno de somatización",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F45.1",
-    "descripcion": "Trastorno somatomorfo indiferenciado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F45.2",
-    "descripcion": "Trastorno hipocondríaco",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F45.4",
-    "descripcion": "Trastorno de dolor somatomorfo persistente",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F50.0",
-    "descripcion": "Anorexia nerviosa",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F50.2",
-    "descripcion": "Bulimia nerviosa",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F50.4",
-    "descripcion": "Hiperfagia asociada a alteraciones psicológicas",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F51.0",
-    "descripcion": "Insomnio no orgánico",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F51.2",
-    "descripcion": "Trastorno no orgánico del ciclo sueño-vigilia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F51.5",
-    "descripcion": "Pesadillas",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.0",
-    "descripcion": "Trastorno paranoide de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.1",
-    "descripcion": "Trastorno esquizoide de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.2",
-    "descripcion": "Trastorno disocial de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.3",
-    "descripcion": "Trastorno de inestabilidad emocional de personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.4",
-    "descripcion": "Trastorno histriónico de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.5",
-    "descripcion": "Trastorno anancástico de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.6",
-    "descripcion": "Trastorno ansioso de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F60.7",
-    "descripcion": "Trastorno dependiente de la personalidad",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F63.0",
-    "descripcion": "Ludopatía",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F70",
-    "descripcion": "Retraso mental leve",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F71",
-    "descripcion": "Retraso mental moderado",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F72",
-    "descripcion": "Retraso mental grave",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F73",
-    "descripcion": "Retraso mental profundo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F80.0",
-    "descripcion": "Trastorno específico de la pronunciación",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F80.1",
-    "descripcion": "Trastorno del lenguaje expresivo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F80.2",
-    "descripcion": "Trastorno de la comprensión del lenguaje",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F81.0",
-    "descripcion": "Trastorno específico de la lectura",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F81.1",
-    "descripcion": "Trastorno específico de la ortografía",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F81.2",
-    "descripcion": "Trastorno específico del cálculo",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F82",
-    "descripcion": "Trastorno específico del desarrollo motor",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F84.0",
-    "descripcion": "Autismo infantil",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F84.1",
-    "descripcion": "Autismo atípico",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F84.2",
-    "descripcion": "Síndrome de Rett",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F84.5",
-    "descripcion": "Síndrome de Asperger",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F90.0",
-    "descripcion": "Trastorno de la actividad y la atención (TDAH)",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F90.1",
-    "descripcion": "Trastorno hipercinético disocial",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F91.0",
-    "descripcion": "Trastorno disocial limitado al contexto familiar",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F91.3",
-    "descripcion": "Trastorno desafiante y oposicionista",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F93.0",
-    "descripcion": "Trastorno de ansiedad de separación en la infancia",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F95.2",
-    "descripcion": "Síndrome de Gilles de la Tourette",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "F98.0",
-    "descripcion": "Enuresis no orgánica",
-    "grupo": "Salud Mental",
-    "sistema": "Salud Mental"
-  },
-  {
-    "codigo": "G00.1",
-    "descripcion": "Meningitis neumocócica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G00.9",
-    "descripcion": "Meningitis bacteriana no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G03.9",
-    "descripcion": "Meningitis de causa no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G04.9",
-    "descripcion": "Encefalitis y encefalomielitis no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G06.0",
-    "descripcion": "Absceso y granuloma intracraneal",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G08",
-    "descripcion": "Flebitis y tromboflebitis intracraneal",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G09",
-    "descripcion": "Secuelas de enfermedad inflamatoria del SNC",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G10",
-    "descripcion": "Enfermedad de Huntington",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G11.1",
-    "descripcion": "Ataxia cerebelosa de inicio temprano",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G12.2",
-    "descripcion": "Esclerosis lateral amiotrófica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G20",
-    "descripcion": "Enfermedad de Parkinson",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G21.0",
-    "descripcion": "Síndrome neuroléptico maligno",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G21.1",
-    "descripcion": "Parkinsonismo secundario inducido por fármacos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G23.1",
-    "descripcion": "Parálisis supranuclear progresiva",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G24.0",
-    "descripcion": "Distonía inducida por fármacos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G24.8",
-    "descripcion": "Otras distonías",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G25.0",
-    "descripcion": "Temblor esencial",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G25.3",
-    "descripcion": "Mioclonía",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G25.5",
-    "descripcion": "Otras coreas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G30.0",
-    "descripcion": "Enfermedad de Alzheimer de inicio temprano",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G30.1",
-    "descripcion": "Enfermedad de Alzheimer de inicio tardío",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G30.9",
-    "descripcion": "Enfermedad de Alzheimer no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G31.0",
-    "descripcion": "Atrofia cerebral circunscrita",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G31.8",
-    "descripcion": "Degeneración del sistema nervioso por alcohol",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G35",
-    "descripcion": "Esclerosis múltiple",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G36.0",
-    "descripcion": "Neuromielitis óptica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G37.3",
-    "descripcion": "Mielitis transversa aguda desmielinizante",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G37.9",
-    "descripcion": "Enfermedad desmielinizante del SNC no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.0",
-    "descripcion": "Epilepsia focal idiopática",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.1",
-    "descripcion": "Epilepsia focal con crisis parciales simples",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.2",
-    "descripcion": "Epilepsia focal con crisis parciales complejas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.3",
-    "descripcion": "Epilepsia generalizada idiopática",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.4",
-    "descripcion": "Otras epilepsias generalizadas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.5",
-    "descripcion": "Crisis epilépticas relacionadas con situaciones",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.6",
-    "descripcion": "Crisis de gran mal no especificadas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.7",
-    "descripcion": "Crisis de pequeño mal no especificadas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.8",
-    "descripcion": "Otras epilepsias",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.9",
-    "descripcion": "Epilepsia no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G41.0",
-    "descripcion": "Estado de gran mal epiléptico",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G41.1",
-    "descripcion": "Estado de pequeño mal epiléptico",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G41.9",
-    "descripcion": "Estado epiléptico no especificado",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.0",
-    "descripcion": "Migraña sin aura",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.1",
-    "descripcion": "Migraña con aura",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.2",
-    "descripcion": "Estado migrañoso",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.3",
-    "descripcion": "Migraña crónica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.8",
-    "descripcion": "Otras migrañas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.0",
-    "descripcion": "Cefalea en racimos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.1",
-    "descripcion": "Cefalea vascular no clasificada en otra parte",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.2",
-    "descripcion": "Cefalea de tipo tensional",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G45.0",
-    "descripcion": "Síndrome arterial vertebrobasilar",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G45.1",
-    "descripcion": "Síndrome de la arteria carótida",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G45.4",
-    "descripcion": "Amnesia global transitoria",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G47.0",
-    "descripcion": "Trastornos del inicio y mantenimiento del sueño",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G47.1",
-    "descripcion": "Trastornos por exceso de somnolencia",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G47.2",
-    "descripcion": "Trastornos del ritmo circadiano del sueño",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G47.4",
-    "descripcion": "Narcolepsia y cataplejía",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G47.6",
-    "descripcion": "Trastornos del movimiento relacionados con el sueño",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G50.0",
-    "descripcion": "Neuralgia del trigémino",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G51.0",
-    "descripcion": "Parálisis de Bell",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G51.8",
-    "descripcion": "Otros trastornos del nervio facial",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G52.1",
-    "descripcion": "Trastornos del nervio glosofaríngeo",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G54.0",
-    "descripcion": "Trastornos del plexo braquial",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G54.1",
-    "descripcion": "Trastornos del plexo lumbosacro",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G55.1",
-    "descripcion": "Compresión de raíces por trastornos de disco",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G56.0",
-    "descripcion": "Síndrome del túnel carpiano",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G56.1",
-    "descripcion": "Otras lesiones del nervio mediano",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G56.2",
-    "descripcion": "Lesión del nervio cubital",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G57.0",
-    "descripcion": "Lesión del nervio ciático",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G57.1",
-    "descripcion": "Meralgia parestésica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G57.2",
-    "descripcion": "Lesión del nervio crural",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G57.3",
-    "descripcion": "Lesión del nervio ciático poplíteo externo",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G58.9",
-    "descripcion": "Mononeuropatía no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G60.0",
-    "descripcion": "Neuropatía hereditaria sensitivomotora",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G61.0",
-    "descripcion": "Síndrome de Guillain-Barré",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G62.0",
-    "descripcion": "Polineuropatía inducida por fármacos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G62.1",
-    "descripcion": "Polineuropatía alcohólica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G62.9",
-    "descripcion": "Polineuropatía no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G63.2",
-    "descripcion": "Polineuropatía diabética",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G70.0",
-    "descripcion": "Miastenia gravis",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G70.2",
-    "descripcion": "Miastenia congénita y del desarrollo",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G71.0",
-    "descripcion": "Distrofia muscular",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G71.1",
-    "descripcion": "Trastornos miotónicos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G71.2",
-    "descripcion": "Miopatías congénitas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G72.0",
-    "descripcion": "Miopatía inducida por fármacos",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G73.7",
-    "descripcion": "Miopatía en enfermedades clasificadas en otra parte",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G80.0",
-    "descripcion": "Parálisis cerebral espástica cuadripléjica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G80.1",
-    "descripcion": "Parálisis cerebral espástica dipléjica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G80.2",
-    "descripcion": "Parálisis cerebral espástica hemipléjica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G81.0",
-    "descripcion": "Hemiplejía flácida",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G81.1",
-    "descripcion": "Hemiplejía espástica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G82.0",
-    "descripcion": "Paraplejía flácida",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G82.1",
-    "descripcion": "Paraplejía espástica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G82.2",
-    "descripcion": "Paraplejía no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G82.4",
-    "descripcion": "Tetraplejía espástica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G83.0",
-    "descripcion": "Diplejía de miembros superiores",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G83.4",
-    "descripcion": "Síndrome de la cola de caballo",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G90.0",
-    "descripcion": "Neuropatía autonómica periférica idiopática",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G91.0",
-    "descripcion": "Hidrocefalia comunicante",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G91.1",
-    "descripcion": "Hidrocefalia obstructiva",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G91.2",
-    "descripcion": "Hidrocefalia normotensiva",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G92",
-    "descripcion": "Encefalopatía tóxica",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G93.1",
-    "descripcion": "Lesión cerebral anóxica no clasificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G93.2",
-    "descripcion": "Hipertensión intracraneal benigna",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G93.4",
-    "descripcion": "Encefalopatía no especificada",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G93.6",
-    "descripcion": "Edema cerebral",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G94",
-    "descripcion": "Otros trastornos del encéfalo",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G95.0",
-    "descripcion": "Siringomielia y siringobulbia",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G95.1",
-    "descripcion": "Mielopatías vasculares",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "M00.9",
-    "descripcion": "Artritis piógena no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M02.3",
-    "descripcion": "Enfermedad de Reiter",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M02.9",
-    "descripcion": "Artropatía reactiva no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M05.0",
-    "descripcion": "Síndrome de Felty",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M05.3",
-    "descripcion": "Artritis reumatoide con compromiso de otros órganos y sistemas",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M05.8",
-    "descripcion": "Otras artritis reumatoides seropositivas",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M05.9",
-    "descripcion": "Artritis reumatoide seropositiva no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M06.0",
-    "descripcion": "Artritis reumatoide seronegativa",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M06.4",
-    "descripcion": "Poliartropatía inflamatoria",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M06.9",
-    "descripcion": "Artritis reumatoide no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M07.3",
-    "descripcion": "Otras artropatías psoriásicas",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M08.0",
-    "descripcion": "Artritis juvenil reumatoide",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M08.3",
-    "descripcion": "Poliartritis juvenil seronegativa",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M08.9",
-    "descripcion": "Artritis juvenil no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M10.0",
-    "descripcion": "Gota idiopática",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M10.3",
-    "descripcion": "Gota debida a alteración de la función renal",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M10.4",
-    "descripcion": "Otras gotas secundarias",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M11.9",
-    "descripcion": "Artropatía por cristales no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M13.9",
-    "descripcion": "Artritis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M15.0",
-    "descripcion": "Artrosis primaria generalizada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M15.9",
-    "descripcion": "Poliartrosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M16.0",
-    "descripcion": "Coxartrosis primaria bilateral",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M16.1",
-    "descripcion": "Otras coxartrosis primarias",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M16.9",
-    "descripcion": "Coxartrosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M17.0",
-    "descripcion": "Gonartrosis primaria bilateral",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M17.1",
-    "descripcion": "Otras gonartrosis primarias",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M17.9",
-    "descripcion": "Gonartrosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M18.9",
-    "descripcion": "Artrosis carpometacarpiana del pulgar no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M19.0",
-    "descripcion": "Artrosis primaria de otras articulaciones",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M19.9",
-    "descripcion": "Artrosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M20.1",
-    "descripcion": "Hallux valgus adquirido",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M20.2",
-    "descripcion": "Hallux rigidus",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M20.4",
-    "descripcion": "Otros dedos del pie en martillo adquiridos",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M21.4",
-    "descripcion": "Pie plano adquirido",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M21.6",
-    "descripcion": "Otras deformidades adquiridas del tobillo y del pie",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M22.4",
-    "descripcion": "Condromalacia de la rótula",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M23.2",
-    "descripcion": "Trastorno de menisco por desgarro o lesión antigua",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M25.4",
-    "descripcion": "Derrame articular",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M25.5",
-    "descripcion": "Dolor en articulación",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M25.6",
-    "descripcion": "Rigidez articular no clasificada en otra parte",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M30.0",
-    "descripcion": "Poliarteritis nodosa",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M31.3",
-    "descripcion": "Granulomatosis de Wegener",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M31.5",
-    "descripcion": "Arteritis de células gigantes con polimialgia reumática",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M31.6",
-    "descripcion": "Otras arteritis de células gigantes",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M32.1",
-    "descripcion": "Lupus eritematoso sistémico con compromiso de órganos",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M32.9",
-    "descripcion": "Lupus eritematoso sistémico no especificado",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M33.1",
-    "descripcion": "Dermatomiositis",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M33.2",
-    "descripcion": "Polimiositis",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M34.0",
-    "descripcion": "Esclerosis sistémica progresiva",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M34.9",
-    "descripcion": "Esclerosis sistémica no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M35.0",
-    "descripcion": "Síndrome seco de Sjögren",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M35.3",
-    "descripcion": "Polimialgia reumática",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M35.9",
-    "descripcion": "Compromiso sistémico del tejido conjuntivo no especificado",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M41.1",
-    "descripcion": "Escoliosis idiopática juvenil",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M41.2",
-    "descripcion": "Otras escoliosis idiopáticas",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M41.9",
-    "descripcion": "Escoliosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M42.1",
-    "descripcion": "Osteocondrosis vertebral del adulto",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M43.1",
-    "descripcion": "Espondilolistesis",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M43.6",
-    "descripcion": "Tortícolis",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M45",
-    "descripcion": "Espondilitis anquilosante",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M46.1",
-    "descripcion": "Sacroiliitis no clasificada en otra parte",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M47.1",
-    "descripcion": "Espondilosis con mielopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M47.2",
-    "descripcion": "Espondilosis con radiculopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M47.8",
-    "descripcion": "Otras espondilosis",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M47.9",
-    "descripcion": "Espondilosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M48.0",
-    "descripcion": "Estenosis espinal",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M50.0",
-    "descripcion": "Trastorno de disco cervical con mielopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M50.1",
-    "descripcion": "Trastorno de disco cervical con radiculopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M50.2",
-    "descripcion": "Otros desplazamientos de disco cervical",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M50.9",
-    "descripcion": "Trastorno de disco cervical no especificado",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M51.0",
-    "descripcion": "Trastorno de disco lumbar con mielopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M51.1",
-    "descripcion": "Trastorno de disco lumbar con radiculopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M51.2",
-    "descripcion": "Otros desplazamientos especificados de disco intervertebral",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M51.3",
-    "descripcion": "Otra degeneración especificada de disco intervertebral",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M53.1",
-    "descripcion": "Síndrome cervicobraquial",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M53.3",
-    "descripcion": "Coccigodinia",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.1",
-    "descripcion": "Radiculopatía",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.2",
-    "descripcion": "Cervicalgia",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.3",
-    "descripcion": "Ciática",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.4",
-    "descripcion": "Lumbago con ciática",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.5",
-    "descripcion": "Lumbago no especificado",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.6",
-    "descripcion": "Dolor en columna dorsal",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M54.9",
-    "descripcion": "Dorsalgia no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M60.9",
-    "descripcion": "Miositis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M62.4",
-    "descripcion": "Contractura muscular",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M62.6",
-    "descripcion": "Distensión muscular",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M65.3",
-    "descripcion": "Dedo en gatillo",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M65.4",
-    "descripcion": "Tenosinovitis de estiloides radial de De Quervain",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M65.9",
-    "descripcion": "Sinovitis y tenosinovitis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M67.4",
-    "descripcion": "Ganglión",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M70.2",
-    "descripcion": "Bursitis del olécranon",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M70.4",
-    "descripcion": "Bursitis prerrotuliana",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M70.6",
-    "descripcion": "Bursitis trocantérea",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M71.2",
-    "descripcion": "Quiste sinovial del hueco poplíteo de Baker",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M72.0",
-    "descripcion": "Fibromatosis de la fascia palmar de Dupuytren",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M72.2",
-    "descripcion": "Fascitis plantar",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.0",
-    "descripcion": "Capsulitis adhesiva del hombro",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.1",
-    "descripcion": "Síndrome del manguito rotador",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.2",
-    "descripcion": "Tendinitis del bíceps",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.3",
-    "descripcion": "Tendinitis calcificante del hombro",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.5",
-    "descripcion": "Bursitis del hombro",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M75.9",
-    "descripcion": "Lesión del hombro no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M76.6",
-    "descripcion": "Tendinitis aquiliana",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M77.0",
-    "descripcion": "Epicondilitis medial",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M77.1",
-    "descripcion": "Epicondilitis lateral",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M77.3",
-    "descripcion": "Espolón calcáneo",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M79.0",
-    "descripcion": "Reumatismo no especificado",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M79.1",
-    "descripcion": "Mialgia",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M79.6",
-    "descripcion": "Dolor en miembro",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M79.7",
-    "descripcion": "Fibromialgia",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M80.0",
-    "descripcion": "Osteoporosis posmenopáusica con fractura patológica",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M80.9",
-    "descripcion": "Osteoporosis no especificada con fractura patológica",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M81.0",
-    "descripcion": "Osteoporosis posmenopáusica",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M81.9",
-    "descripcion": "Osteoporosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M84.4",
-    "descripcion": "Fractura patológica no clasificada en otra parte",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M86.6",
-    "descripcion": "Otra osteomielitis crónica",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M86.9",
-    "descripcion": "Osteomielitis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M87.0",
-    "descripcion": "Necrosis aséptica idiopática del hueso",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "M87.9",
-    "descripcion": "Osteonecrosis no especificada",
-    "grupo": "Musculoesquelético",
-    "sistema": "Musculoesquelético"
-  },
-  {
-    "codigo": "N00.9",
-    "descripcion": "Síndrome nefrítico agudo no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N03.9",
-    "descripcion": "Síndrome nefrítico crónico no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N04.9",
-    "descripcion": "Síndrome nefrótico no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N05.9",
-    "descripcion": "Síndrome nefrítico no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N10",
-    "descripcion": "Nefritis tubulointersticial aguda (pielonefritis aguda)",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N11.0",
-    "descripcion": "Pielonefritis crónica no obstructiva asociada con reflujo",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N11.1",
-    "descripcion": "Pielonefritis crónica obstructiva",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N11.9",
-    "descripcion": "Nefritis tubulointersticial crónica no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N12",
-    "descripcion": "Pielonefritis no especificada como aguda o crónica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N13.2",
-    "descripcion": "Hidronefrosis con obstrucción por cálculos",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N13.3",
-    "descripcion": "Otras hidronefrosis y las no especificadas",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N15.1",
-    "descripcion": "Absceso renal y perirrenal",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N17.9",
-    "descripcion": "Insuficiencia renal aguda no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.1",
-    "descripcion": "Enfermedad renal crónica estadio 1",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.2",
-    "descripcion": "Enfermedad renal crónica estadio 2",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.3",
-    "descripcion": "Enfermedad renal crónica estadio 3",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.4",
-    "descripcion": "Enfermedad renal crónica estadio 4",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.5",
-    "descripcion": "Enfermedad renal crónica estadio 5",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N18.9",
-    "descripcion": "Enfermedad renal crónica no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N19",
-    "descripcion": "Insuficiencia renal no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N20.0",
-    "descripcion": "Cálculo del riñón",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N20.1",
-    "descripcion": "Cálculo del uréter",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N20.2",
-    "descripcion": "Cálculo del riñón con cálculo del uréter",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N21.0",
-    "descripcion": "Cálculo en la vejiga",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N23",
-    "descripcion": "Cólico renal no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.0",
-    "descripcion": "Cistitis aguda",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.1",
-    "descripcion": "Cistitis intersticial crónica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.9",
-    "descripcion": "Cistitis no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N32.8",
-    "descripcion": "Vejiga hiperactiva",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N34.1",
-    "descripcion": "Uretritis no específica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N34.2",
-    "descripcion": "Otras uretritis",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N39.0",
-    "descripcion": "Infección de vías urinarias de sitio no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N39.3",
-    "descripcion": "Incontinencia urinaria por tensión",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N39.4",
-    "descripcion": "Otras incontinencias urinarias especificadas",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N40",
-    "descripcion": "Hiperplasia benigna de la próstata",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N41.0",
-    "descripcion": "Prostatitis aguda",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N41.1",
-    "descripcion": "Prostatitis crónica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N41.9",
-    "descripcion": "Enfermedad inflamatoria de la próstata no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N43.3",
-    "descripcion": "Hidrocele no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N44",
-    "descripcion": "Torsión del testículo",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N45.0",
-    "descripcion": "Orquitis, epididimitis y orquiepididimitis con absceso",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N45.9",
-    "descripcion": "Orquitis, epididimitis y orquiepididimitis sin absceso",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N46",
-    "descripcion": "Infertilidad masculina",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N47",
-    "descripcion": "Prepucio redundante, fimosis y parafimosis",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N48.1",
-    "descripcion": "Balanopostitis",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N48.4",
-    "descripcion": "Disfunción eréctil de origen orgánico",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "I86.1",
-    "descripcion": "Várices escrotales (varicocele)",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N60.1",
-    "descripcion": "Mastopatía quística difusa",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N60.2",
-    "descripcion": "Fibroadenosis de la mama",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N61",
-    "descripcion": "Mastitis y trastornos inflamatorios de la mama",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N62",
-    "descripcion": "Hipertrofia de la mama",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N63",
-    "descripcion": "Masa no especificada en la mama",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N70.0",
-    "descripcion": "Salpingitis y ooforitis aguda",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N70.9",
-    "descripcion": "Salpingitis y ooforitis no especificadas",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N71.0",
-    "descripcion": "Enfermedad inflamatoria aguda del útero",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N71.9",
-    "descripcion": "Enfermedad inflamatoria del útero no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N72",
-    "descripcion": "Enfermedad inflamatoria del cuello uterino (cervicitis)",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N73.9",
-    "descripcion": "Enfermedad pélvica inflamatoria no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N75.0",
-    "descripcion": "Quiste de la glándula de Bartholin",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N75.1",
-    "descripcion": "Absceso de la glándula de Bartholin",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N76.0",
-    "descripcion": "Vaginitis aguda",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N76.1",
-    "descripcion": "Vaginitis subaguda y crónica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N80.0",
-    "descripcion": "Endometriosis del útero",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N80.1",
-    "descripcion": "Endometriosis del ovario",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N80.9",
-    "descripcion": "Endometriosis no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N81.1",
-    "descripcion": "Cistocele",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N81.2",
-    "descripcion": "Prolapso uterovaginal incompleto",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N81.4",
-    "descripcion": "Prolapso uterovaginal no especificado",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N83.0",
-    "descripcion": "Quiste folicular del ovario",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N83.1",
-    "descripcion": "Quiste del cuerpo amarillo",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N83.2",
-    "descripcion": "Otros quistes ováricos y los no especificados",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N84.0",
-    "descripcion": "Pólipo del cuerpo del útero",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N84.1",
-    "descripcion": "Pólipo del cuello del útero",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N85.0",
-    "descripcion": "Hiperplasia de glándula endometrial",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N86",
-    "descripcion": "Erosión y ectropión del cuello del útero",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N87.0",
-    "descripcion": "Displasia cervical leve",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N87.1",
-    "descripcion": "Displasia cervical moderada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N87.9",
-    "descripcion": "Displasia del cuello del útero no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N91.0",
-    "descripcion": "Amenorrea primaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N91.1",
-    "descripcion": "Amenorrea secundaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N91.2",
-    "descripcion": "Amenorrea no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N91.3",
-    "descripcion": "Oligomenorrea primaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N91.5",
-    "descripcion": "Oligomenorrea no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N92.0",
-    "descripcion": "Menstruación excesiva y frecuente con ciclo regular",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N92.1",
-    "descripcion": "Menstruación excesiva y frecuente con ciclo irregular",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N92.6",
-    "descripcion": "Menstruación irregular no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N93.8",
-    "descripcion": "Otras hemorragias uterinas o vaginales anormales especificadas",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N93.9",
-    "descripcion": "Hemorragia vaginal y uterina anormal no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N94.1",
-    "descripcion": "Dispareunia",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N94.3",
-    "descripcion": "Síndrome de tensión premenstrual",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N94.4",
-    "descripcion": "Dismenorrea primaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N94.5",
-    "descripcion": "Dismenorrea secundaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N94.6",
-    "descripcion": "Dismenorrea no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N95.0",
-    "descripcion": "Hemorragia posmenopáusica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N95.1",
-    "descripcion": "Estados menopáusicos y climatéricos femeninos",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N95.2",
-    "descripcion": "Vaginitis atrófica posmenopáusica",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N97.0",
-    "descripcion": "Infertilidad femenina asociada con anovulación",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N97.9",
-    "descripcion": "Infertilidad femenina no especificada",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "C00.9",
-    "descripcion": "Tumor maligno del labio, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C02.9",
-    "descripcion": "Tumor maligno de la lengua, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C04.9",
-    "descripcion": "Tumor maligno del piso de la boca, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C05.9",
-    "descripcion": "Tumor maligno del paladar, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C07",
-    "descripcion": "Tumor maligno de la glándula parótida",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C09.9",
-    "descripcion": "Tumor maligno de la amígdala, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C10.9",
-    "descripcion": "Tumor maligno de la orofaringe, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C11.9",
-    "descripcion": "Tumor maligno de la nasofaringe, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C15.9",
-    "descripcion": "Tumor maligno del esófago, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C15.5",
-    "descripcion": "Tumor maligno del tercio inferior del esófago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C16.0",
-    "descripcion": "Tumor maligno del cardias gástrico",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C16.2",
-    "descripcion": "Tumor maligno del cuerpo del estómago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C16.3",
-    "descripcion": "Tumor maligno del antro pilórico",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C16.9",
-    "descripcion": "Tumor maligno del estómago, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C17.9",
-    "descripcion": "Tumor maligno del intestino delgado, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.0",
-    "descripcion": "Tumor maligno del ciego",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.2",
-    "descripcion": "Tumor maligno del colon ascendente",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.4",
-    "descripcion": "Tumor maligno del colon transverso",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.6",
-    "descripcion": "Tumor maligno del colon descendente",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.7",
-    "descripcion": "Tumor maligno del colon sigmoide",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C18.9",
-    "descripcion": "Tumor maligno del colon, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C19",
-    "descripcion": "Tumor maligno de la unión rectosigmoidea",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C20",
-    "descripcion": "Tumor maligno del recto",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C22.0",
-    "descripcion": "Carcinoma hepatocelular",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C22.1",
-    "descripcion": "Carcinoma de vías biliares intrahepáticas",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C22.9",
-    "descripcion": "Tumor maligno del hígado, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C23",
-    "descripcion": "Tumor maligno de la vesícula biliar",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C24.9",
-    "descripcion": "Tumor maligno de las vías biliares, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C25.0",
-    "descripcion": "Tumor maligno de la cabeza del páncreas",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C25.1",
-    "descripcion": "Tumor maligno del cuerpo del páncreas",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C25.9",
-    "descripcion": "Tumor maligno del páncreas, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C32.9",
-    "descripcion": "Tumor maligno de la laringe, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C33",
-    "descripcion": "Tumor maligno de la tráquea",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C34.0",
-    "descripcion": "Tumor maligno del bronquio principal",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C34.1",
-    "descripcion": "Tumor maligno del lóbulo superior, bronquio o pulmón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C34.3",
-    "descripcion": "Tumor maligno del lóbulo inferior, bronquio o pulmón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C34.9",
-    "descripcion": "Tumor maligno del bronquio o del pulmón, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C38.4",
-    "descripcion": "Tumor maligno de la pleura",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C41.9",
-    "descripcion": "Tumor maligno del hueso y cartílago, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C43.9",
-    "descripcion": "Melanoma maligno de la piel, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C43.5",
-    "descripcion": "Melanoma maligno del tronco",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C44.3",
-    "descripcion": "Tumor maligno de la piel de la cara",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C44.9",
-    "descripcion": "Tumor maligno de la piel, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C45.0",
-    "descripcion": "Mesotelioma de la pleura",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C49.9",
-    "descripcion": "Tumor maligno del tejido conjuntivo, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C50.1",
-    "descripcion": "Tumor maligno de la porción central de la mama",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C50.4",
-    "descripcion": "Tumor maligno del cuadrante superior externo de la mama",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C50.9",
-    "descripcion": "Tumor maligno de la mama, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C51.9",
-    "descripcion": "Tumor maligno de la vulva, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C52",
-    "descripcion": "Tumor maligno de la vagina",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C53.0",
-    "descripcion": "Tumor maligno del endocérvix",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C53.1",
-    "descripcion": "Tumor maligno del exocérvix",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C53.9",
-    "descripcion": "Tumor maligno del cuello del útero, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C54.1",
-    "descripcion": "Tumor maligno del endometrio",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C54.9",
-    "descripcion": "Tumor maligno del cuerpo del útero, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C55",
-    "descripcion": "Tumor maligno del útero, parte no especificada",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C56",
-    "descripcion": "Tumor maligno del ovario",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C61",
-    "descripcion": "Tumor maligno de la próstata",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C62.9",
-    "descripcion": "Tumor maligno del testículo, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C64",
-    "descripcion": "Tumor maligno del riñón, excepto pelvis renal",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C65",
-    "descripcion": "Tumor maligno de la pelvis renal",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C66",
-    "descripcion": "Tumor maligno del uréter",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C67.9",
-    "descripcion": "Tumor maligno de la vejiga, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C70.9",
-    "descripcion": "Tumor maligno de las meninges, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C71.9",
-    "descripcion": "Tumor maligno del encéfalo, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C71.0",
-    "descripcion": "Tumor maligno del cerebro, excepto lóbulos y ventrículos",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C72.0",
-    "descripcion": "Tumor maligno de la médula espinal",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C73",
-    "descripcion": "Tumor maligno de la glándula tiroides",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C74.9",
-    "descripcion": "Tumor maligno de la glándula suprarrenal, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C75.1",
-    "descripcion": "Tumor maligno de la hipófisis",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C76.0",
-    "descripcion": "Tumor maligno de cabeza, cara y cuello",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C77.9",
-    "descripcion": "Tumor maligno de ganglio linfático, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C78.0",
-    "descripcion": "Tumor maligno secundario del pulmón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C78.7",
-    "descripcion": "Tumor maligno secundario del hígado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C79.3",
-    "descripcion": "Tumor maligno secundario del encéfalo y meninges",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C79.5",
-    "descripcion": "Tumor maligno secundario del hueso y médula ósea",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C80.9",
-    "descripcion": "Tumor maligno de sitio no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C81.9",
-    "descripcion": "Enfermedad de Hodgkin, no especificada",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C81.1",
-    "descripcion": "Enfermedad de Hodgkin, esclerosis nodular",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C82.9",
-    "descripcion": "Linfoma no Hodgkin folicular, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C83.5",
-    "descripcion": "Linfoma difuso de células B grandes",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C83.9",
-    "descripcion": "Linfoma no Hodgkin difuso, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C84.0",
-    "descripcion": "Micosis fungoide",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C85.9",
-    "descripcion": "Linfoma no Hodgkin, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C88.0",
-    "descripcion": "Macroglobulinemia de Waldenström",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C90.0",
-    "descripcion": "Mieloma múltiple",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C90.1",
-    "descripcion": "Leucemia de células plasmáticas",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C91.0",
-    "descripcion": "Leucemia linfoblástica aguda",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C91.1",
-    "descripcion": "Leucemia linfocítica crónica",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C92.0",
-    "descripcion": "Leucemia mieloide aguda",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C92.1",
-    "descripcion": "Leucemia mieloide crónica",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C93.1",
-    "descripcion": "Leucemia mielomonocítica crónica",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C94.6",
-    "descripcion": "Enfermedad mielodisplásica y mieloproliferativa",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C95.9",
-    "descripcion": "Leucemia de tipo celular no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "C96.9",
-    "descripcion": "Tumor maligno del tejido linfático y hematopoyético",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D00.1",
-    "descripcion": "Carcinoma in situ del esófago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D00.2",
-    "descripcion": "Carcinoma in situ del estómago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D01.0",
-    "descripcion": "Carcinoma in situ del colon",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D01.1",
-    "descripcion": "Carcinoma in situ de la unión rectosigmoidea",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D02.2",
-    "descripcion": "Carcinoma in situ del bronquio y pulmón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D03.9",
-    "descripcion": "Melanoma in situ, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D04.9",
-    "descripcion": "Carcinoma in situ de la piel, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D05.1",
-    "descripcion": "Carcinoma intraductal in situ de la mama",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D05.9",
-    "descripcion": "Carcinoma in situ de la mama, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D06.9",
-    "descripcion": "Carcinoma in situ del cuello del útero, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D07.5",
-    "descripcion": "Carcinoma in situ de la próstata",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D09.0",
-    "descripcion": "Carcinoma in situ de la vejiga",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D10.4",
-    "descripcion": "Tumor benigno de la amígdala",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D11.0",
-    "descripcion": "Tumor benigno de la glándula parótida",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D12.0",
-    "descripcion": "Pólipo o tumor benigno del ciego",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D12.5",
-    "descripcion": "Pólipo o tumor benigno del colon sigmoide",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D12.6",
-    "descripcion": "Pólipo adenomatoso del colon",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D12.8",
-    "descripcion": "Pólipo o tumor benigno del recto",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D13.1",
-    "descripcion": "Tumor benigno del estómago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D13.4",
-    "descripcion": "Tumor benigno del hígado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D13.7",
-    "descripcion": "Tumor benigno del páncreas endocrino",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D14.3",
-    "descripcion": "Tumor benigno del bronquio y pulmón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D16.9",
-    "descripcion": "Tumor benigno del hueso y cartílago, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D17.9",
-    "descripcion": "Lipoma, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D17.1",
-    "descripcion": "Lipoma de piel y tejido subcutáneo del tronco",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D18.0",
-    "descripcion": "Hemangioma de cualquier sitio",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D18.1",
-    "descripcion": "Linfangioma de cualquier sitio",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D21.9",
-    "descripcion": "Tumor benigno del tejido conjuntivo, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D22.9",
-    "descripcion": "Nevo melanocítico, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D23.9",
-    "descripcion": "Tumor benigno de la piel, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D24",
-    "descripcion": "Tumor benigno de la mama",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D25.9",
-    "descripcion": "Leiomioma del útero, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D25.1",
-    "descripcion": "Leiomioma intramural del útero",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D26.9",
-    "descripcion": "Tumor benigno del útero, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D27",
-    "descripcion": "Tumor benigno del ovario",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D29.1",
-    "descripcion": "Tumor benigno de la próstata",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D30.0",
-    "descripcion": "Tumor benigno del riñón",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D32.9",
-    "descripcion": "Tumor benigno de las meninges, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D33.2",
-    "descripcion": "Tumor benigno del encéfalo, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D34",
-    "descripcion": "Tumor benigno de la glándula tiroides",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D35.0",
-    "descripcion": "Tumor benigno de la glándula suprarrenal",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D35.2",
-    "descripcion": "Tumor benigno de la hipófisis",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D36.0",
-    "descripcion": "Tumor benigno de los ganglios linfáticos",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D37.1",
-    "descripcion": "Tumor de comportamiento incierto del estómago",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D37.4",
-    "descripcion": "Tumor de comportamiento incierto del colon",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D37.5",
-    "descripcion": "Tumor de comportamiento incierto del recto",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D39.1",
-    "descripcion": "Tumor de comportamiento incierto del ovario",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D41.4",
-    "descripcion": "Tumor de comportamiento incierto de la vejiga",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D43.2",
-    "descripcion": "Tumor de comportamiento incierto del encéfalo",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D44.0",
-    "descripcion": "Tumor de comportamiento incierto de la tiroides",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D45",
-    "descripcion": "Policitemia vera",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D46.9",
-    "descripcion": "Síndrome mielodisplásico, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D47.1",
-    "descripcion": "Enfermedad mieloproliferativa crónica",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D47.3",
-    "descripcion": "Trombocitemia esencial (hemorrágica)",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D48.9",
-    "descripcion": "Tumor de comportamiento incierto, no especificado",
-    "grupo": "Oncología",
-    "sistema": "Oncología"
-  },
-  {
-    "codigo": "D50.0",
-    "descripcion": "Anemia ferropénica secundaria a pérdida de sangre",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D50.9",
-    "descripcion": "Anemia por deficiencia de hierro, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D51.0",
-    "descripcion": "Anemia por deficiencia de vitamina B12 por malabsorción",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D51.9",
-    "descripcion": "Anemia por deficiencia de vitamina B12, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D52.0",
-    "descripcion": "Anemia por deficiencia de folatos en la dieta",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D52.9",
-    "descripcion": "Anemia por deficiencia de folatos, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D53.9",
-    "descripcion": "Anemia nutricional, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D55.0",
-    "descripcion": "Anemia por deficiencia de glucosa-6-fosfato deshidrogenasa",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D56.0",
-    "descripcion": "Alfa talasemia",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D56.1",
-    "descripcion": "Beta talasemia",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D56.9",
-    "descripcion": "Talasemia, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D57.0",
-    "descripcion": "Anemia drepanocítica con crisis",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D57.1",
-    "descripcion": "Anemia drepanocítica sin crisis",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D58.0",
-    "descripcion": "Esferocitosis hereditaria",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D58.9",
-    "descripcion": "Anemia hemolítica hereditaria, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D59.0",
-    "descripcion": "Anemia hemolítica autoinmune inducida por fármacos",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D59.1",
-    "descripcion": "Otras anemias hemolíticas autoinmunes",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D59.9",
-    "descripcion": "Anemia hemolítica adquirida, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D60.9",
-    "descripcion": "Aplasia pura de glóbulos rojos adquirida",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D61.0",
-    "descripcion": "Anemia aplásica constitucional",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D61.1",
-    "descripcion": "Anemia aplásica inducida por fármacos",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D61.9",
-    "descripcion": "Anemia aplásica, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D62",
-    "descripcion": "Anemia posthemorrágica aguda",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D63.0",
-    "descripcion": "Anemia en enfermedad neoplásica",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D63.8",
-    "descripcion": "Anemia en otras enfermedades crónicas",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D64.9",
-    "descripcion": "Anemia, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D65",
-    "descripcion": "Coagulación intravascular diseminada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D66",
-    "descripcion": "Deficiencia hereditaria del factor VIII (hemofilia A)",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D67",
-    "descripcion": "Deficiencia hereditaria del factor IX (hemofilia B)",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D68.0",
-    "descripcion": "Enfermedad de von Willebrand",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D68.2",
-    "descripcion": "Deficiencia hereditaria de otros factores de coagulación",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D68.4",
-    "descripcion": "Deficiencia adquirida de factores de coagulación",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D68.9",
-    "descripcion": "Defecto de la coagulación, no especificado",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.0",
-    "descripcion": "Púrpura alérgica (de Schönlein-Henoch)",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.1",
-    "descripcion": "Defectos cualitativos de las plaquetas",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.3",
-    "descripcion": "Púrpura trombocitopénica idiopática",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.4",
-    "descripcion": "Otras trombocitopenias primarias",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.5",
-    "descripcion": "Trombocitopenia secundaria",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.6",
-    "descripcion": "Trombocitopenia, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D69.9",
-    "descripcion": "Afección hemorrágica, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D70",
-    "descripcion": "Agranulocitosis y neutropenia",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D72.1",
-    "descripcion": "Eosinofilia",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D72.9",
-    "descripcion": "Trastorno de los leucocitos, no especificado",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D73.0",
-    "descripcion": "Hipoesplenismo",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D73.1",
-    "descripcion": "Hiperesplenismo",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D73.2",
-    "descripcion": "Esplenomegalia congestiva crónica",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D73.9",
-    "descripcion": "Enfermedad del bazo, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D75.0",
-    "descripcion": "Eritrocitosis familiar",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D75.1",
-    "descripcion": "Policitemia secundaria",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D75.9",
-    "descripcion": "Enfermedad de la sangre y órganos hematopoyéticos",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D77",
-    "descripcion": "Otros trastornos de la sangre en enfermedades clasificadas",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D80.0",
-    "descripcion": "Hipogammaglobulinemia hereditaria",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D80.1",
-    "descripcion": "Hipogammaglobulinemia no familiar",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D81.9",
-    "descripcion": "Inmunodeficiencia combinada, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D82.0",
-    "descripcion": "Síndrome de Wiskott-Aldrich",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D83.9",
-    "descripcion": "Inmunodeficiencia variable común, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D84.9",
-    "descripcion": "Inmunodeficiencia, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D86.9",
-    "descripcion": "Sarcoidosis, no especificada",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D89.1",
-    "descripcion": "Crioglobulinemia",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "D89.9",
-    "descripcion": "Trastorno del mecanismo inmunitario, no especificado",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
-  },
-  {
-    "codigo": "O00.0",
-    "descripcion": "Embarazo abdominal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O00.1",
-    "descripcion": "Embarazo tubárico",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O00.9",
-    "descripcion": "Embarazo ectópico no especificado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O01.0",
-    "descripcion": "Mola hidatiforme clásica",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O01.9",
-    "descripcion": "Mola hidatiforme no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O02.0",
-    "descripcion": "Huevo anembrionado y mola no hidatiforme",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O02.1",
-    "descripcion": "Aborto retenido",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O03.4",
-    "descripcion": "Aborto espontáneo incompleto sin complicación",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O03.9",
-    "descripcion": "Aborto espontáneo completo o no especificado sin complicación",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O06.9",
-    "descripcion": "Aborto no especificado sin complicación",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O08.0",
-    "descripcion": "Infección genital y pelviana consecutiva al aborto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O08.1",
-    "descripcion": "Hemorragia excesiva o tardía consecutiva al aborto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O10.0",
-    "descripcion": "Hipertensión esencial preexistente que complica el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O11",
-    "descripcion": "Preeclampsia sobreagregada a hipertensión crónica",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O13",
-    "descripcion": "Hipertensión gestacional sin proteinuria significativa",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O14.0",
-    "descripcion": "Preeclampsia leve a moderada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O14.1",
-    "descripcion": "Preeclampsia severa",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O14.2",
-    "descripcion": "Síndrome HELLP",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O14.9",
-    "descripcion": "Preeclampsia no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O15.0",
-    "descripcion": "Eclampsia en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O15.1",
-    "descripcion": "Eclampsia durante el trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O15.2",
-    "descripcion": "Eclampsia en el puerperio",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O16",
-    "descripcion": "Hipertensión materna no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O20.0",
-    "descripcion": "Amenaza de aborto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O20.9",
-    "descripcion": "Hemorragia precoz del embarazo no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O21.0",
-    "descripcion": "Hiperémesis gravídica leve",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O21.1",
-    "descripcion": "Hiperémesis gravídica con trastornos metabólicos",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O22.0",
-    "descripcion": "Várices de miembros inferiores en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O22.3",
-    "descripcion": "Trombosis venosa profunda en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O23.0",
-    "descripcion": "Infección del riñón en el embarazo (pielonefritis)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O23.1",
-    "descripcion": "Infección de la vejiga urinaria en el embarazo (cistitis)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O23.4",
-    "descripcion": "Infección urinaria no especificada en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O23.5",
-    "descripcion": "Infección genital en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O24.9",
-    "descripcion": "Diabetes mellitus no especificada en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O25",
-    "descripcion": "Desnutrición en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O26.0",
-    "descripcion": "Aumento excesivo de peso en el embarazo",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O26.6",
-    "descripcion": "Trastornos del hígado en el embarazo (colestasis gravídica)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O30.0",
-    "descripcion": "Embarazo doble (gemelar)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O30.1",
-    "descripcion": "Embarazo triple",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O30.9",
-    "descripcion": "Embarazo múltiple no especificado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O32.1",
-    "descripcion": "Atención materna por presentación de nalgas",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O32.2",
-    "descripcion": "Atención materna por situación fetal transversa u oblicua",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O33.9",
-    "descripcion": "Atención materna por desproporción fetopélvica no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O34.2",
-    "descripcion": "Atención materna por cicatriz uterina de cesárea previa",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O36.0",
-    "descripcion": "Atención materna por isoinmunización Rh",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O36.3",
-    "descripcion": "Atención materna por signos de hipoxia fetal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O36.4",
-    "descripcion": "Atención materna por muerte intrauterina del feto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O36.5",
-    "descripcion": "Atención materna por crecimiento fetal deficiente (RCIU)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O36.6",
-    "descripcion": "Atención materna por crecimiento fetal excesivo (macrosomía)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O40",
-    "descripcion": "Polihidramnios",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O41.0",
-    "descripcion": "Oligohidramnios",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O41.1",
-    "descripcion": "Infección del saco amniótico y membranas (corioamnionitis)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O42.0",
-    "descripcion": "RPM con inicio del trabajo de parto dentro de las 24 horas",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O42.9",
-    "descripcion": "Ruptura prematura de membranas no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O43.2",
-    "descripcion": "Placenta mórbidamente adherente (acretismo placentario)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O44.0",
-    "descripcion": "Placenta previa sin hemorragia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O44.1",
-    "descripcion": "Placenta previa con hemorragia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O45.0",
-    "descripcion": "Desprendimiento de placenta con defecto de la coagulación",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O45.9",
-    "descripcion": "Desprendimiento prematuro de placenta no especificado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O46.9",
-    "descripcion": "Hemorragia anteparto no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O47.0",
-    "descripcion": "Falso trabajo de parto antes de las 37 semanas completas",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O48",
-    "descripcion": "Embarazo prolongado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O60.0",
-    "descripcion": "Amenaza de parto pretérmino sin parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O60.1",
-    "descripcion": "Trabajo de parto prematuro con parto pretérmino",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O61.0",
-    "descripcion": "Fracaso de la inducción médica del trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O62.0",
-    "descripcion": "Contracciones primarias inadecuadas (hipodinamia uterina)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O62.4",
-    "descripcion": "Contracciones uterinas hipertónicas e incoordinadas",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O63.0",
-    "descripcion": "Prolongación del primer periodo del trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O63.1",
-    "descripcion": "Prolongación del segundo periodo del trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O64.9",
-    "descripcion": "Parto obstruido por presentación fetal anómala no especificada",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O65.4",
-    "descripcion": "Trabajo de parto obstruido por desproporción fetopélvica",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O66.0",
-    "descripcion": "Trabajo de parto obstruido por distocia de hombros",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O68.0",
-    "descripcion": "Parto complicado por anomalía de la frecuencia cardiaca fetal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O69.0",
-    "descripcion": "Parto complicado por prolapso del cordón umbilical",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O69.1",
-    "descripcion": "Parto complicado por circular de cordón con compresión",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O70.0",
-    "descripcion": "Desgarro perineal de primer grado durante el parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O70.1",
-    "descripcion": "Desgarro perineal de segundo grado durante el parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O70.2",
-    "descripcion": "Desgarro perineal de tercer grado durante el parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O70.3",
-    "descripcion": "Desgarro perineal de cuarto grado durante el parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O71.0",
-    "descripcion": "Ruptura del útero antes del inicio del trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O71.1",
-    "descripcion": "Ruptura del útero durante el trabajo de parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O72.0",
-    "descripcion": "Hemorragia del tercer periodo del parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O72.1",
-    "descripcion": "Hemorragia postparto inmediata (atonía uterina)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O72.2",
-    "descripcion": "Hemorragia postparto secundaria o tardía",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O73.0",
-    "descripcion": "Retención de la placenta sin hemorragia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O73.1",
-    "descripcion": "Retención de fragmentos placentarios sin hemorragia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O80.0",
-    "descripcion": "Parto único espontáneo en presentación cefálica de vértice",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O80.9",
-    "descripcion": "Parto único espontáneo sin otra especificación",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O81.4",
-    "descripcion": "Parto único con extractor al vacío",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O82.0",
-    "descripcion": "Parto por cesárea electiva",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O82.1",
-    "descripcion": "Parto por cesárea de emergencia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O85",
-    "descripcion": "Sepsis puerperal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O86.0",
-    "descripcion": "Infección de herida quirúrgica obstétrica",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O86.2",
-    "descripcion": "Infección de las vías urinarias consecutiva al parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O87.1",
-    "descripcion": "Trombosis venosa profunda en el puerperio",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O88.1",
-    "descripcion": "Embolia de líquido amniótico",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O90.3",
-    "descripcion": "Miocardiopatía en el puerperio (periparto)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O91.1",
-    "descripcion": "Absceso de la mama asociado con el parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O91.2",
-    "descripcion": "Mastitis no purulenta asociada con el parto (puerperal)",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O92.4",
-    "descripcion": "Hipogalactia",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "O99.0",
-    "descripcion": "Anemia que complica el embarazo, el parto y el puerperio",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "F53.0",
-    "descripcion": "Depresión postparto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z32.1",
-    "descripcion": "Embarazo confirmado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z34.0",
-    "descripcion": "Supervisión de primer embarazo normal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z34.8",
-    "descripcion": "Supervisión de otro embarazo normal",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z35.5",
-    "descripcion": "Supervisión de primigesta añosa",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z35.6",
-    "descripcion": "Supervisión de primigesta muy joven",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z35.9",
-    "descripcion": "Supervisión de embarazo de alto riesgo no especificado",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "Z39.0",
-    "descripcion": "Atención y examen inmediatamente después del parto",
-    "grupo": "Obstetricia",
-    "sistema": "Obstetricia"
-  },
-  {
-    "codigo": "P00.0",
-    "descripcion": "RN afectado por trastorno hipertensivo de la madre",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P01.1",
-    "descripcion": "RN afectado por ruptura prematura de membranas",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P02.4",
-    "descripcion": "RN afectado por prolapso del cordón umbilical",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P02.7",
-    "descripcion": "RN afectado por corioamnionitis",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P05.0",
-    "descripcion": "Bajo peso para la edad gestacional",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P05.1",
-    "descripcion": "Pequeño para la edad gestacional",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P05.9",
-    "descripcion": "Retardo del crecimiento fetal no especificado",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P07.0",
-    "descripcion": "Peso extremadamente bajo al nacer (menos de 1000 g)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P07.1",
-    "descripcion": "Otro peso bajo al nacer (1000 a 2499 g)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P07.2",
-    "descripcion": "Inmaturidad extrema (menos de 28 semanas)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P07.3",
-    "descripcion": "Otros recién nacidos pretérmino (28 a 36 semanas)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P08.0",
-    "descripcion": "Recién nacido excepcionalmente grande (4500 g o más)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P08.1",
-    "descripcion": "RN grande para la edad gestacional (macrosomía)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P08.2",
-    "descripcion": "Recién nacido postérmino sin sobrepeso para su edad",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P12.0",
-    "descripcion": "Cefalohematoma debido a traumatismo del nacimiento",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P13.4",
-    "descripcion": "Fractura de clavícula por traumatismo del nacimiento",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P14.0",
-    "descripcion": "Parálisis de Erb por traumatismo del nacimiento",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P20.9",
-    "descripcion": "Hipoxia intrauterina no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P21.0",
-    "descripcion": "Asfixia del nacimiento severa",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P21.1",
-    "descripcion": "Asfixia del nacimiento leve y moderada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P21.9",
-    "descripcion": "Asfixia del nacimiento no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P22.0",
-    "descripcion": "Síndrome de dificultad respiratoria del RN (membrana hialina)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P22.1",
-    "descripcion": "Taquipnea transitoria del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P23.9",
-    "descripcion": "Neumonía congénita no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P24.0",
-    "descripcion": "Aspiración neonatal de meconio",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P25.1",
-    "descripcion": "Neumotórax originado en el periodo perinatal",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P27.1",
-    "descripcion": "Displasia broncopulmonar originada en el periodo perinatal",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P28.4",
-    "descripcion": "Apnea del recién nacido (apnea del prematuro)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P29.3",
-    "descripcion": "Hipertensión pulmonar persistente del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P35.1",
-    "descripcion": "Infección citomegalovírica congénita",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P36.0",
-    "descripcion": "Sepsis del RN por estreptococo del grupo B",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P36.9",
-    "descripcion": "Sepsis bacteriana del recién nacido no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P37.1",
-    "descripcion": "Toxoplasmosis congénita",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P38",
-    "descripcion": "Onfalitis del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P39.1",
-    "descripcion": "Conjuntivitis y dacriocistitis neonatales",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P52.3",
-    "descripcion": "Hemorragia intraventricular del RN no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P53",
-    "descripcion": "Enfermedad hemorrágica del RN (deficiencia de vitamina K)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P55.0",
-    "descripcion": "Isoinmunización Rh del feto y del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P55.1",
-    "descripcion": "Isoinmunización ABO del feto y del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P57.9",
-    "descripcion": "Kernícterus no especificado",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P59.0",
-    "descripcion": "Ictericia neonatal asociada con el parto pretérmino",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P59.9",
-    "descripcion": "Ictericia neonatal no especificada (fisiológica)",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P61.2",
-    "descripcion": "Anemia de la prematuridad",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P70.0",
-    "descripcion": "Síndrome del RN de madre con diabetes gestacional",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P70.1",
-    "descripcion": "Síndrome del recién nacido de madre diabética",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P70.4",
-    "descripcion": "Hipoglucemia neonatal",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P77",
-    "descripcion": "Enterocolitis necrotizante del feto y del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P80.9",
-    "descripcion": "Hipotermia del recién nacido no especificada",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P90",
-    "descripcion": "Convulsiones del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "P91.6",
-    "descripcion": "Encefalopatía hipóxico-isquémica del recién nacido",
-    "grupo": "Perinatal",
-    "sistema": "Perinatal"
-  },
-  {
-    "codigo": "Q00.0",
-    "descripcion": "Anencefalia",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q02",
-    "descripcion": "Microcefalia",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q03.9",
-    "descripcion": "Hidrocefalia congénita no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q05.9",
-    "descripcion": "Espina bífida no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q20.3",
-    "descripcion": "Transposición de grandes vasos",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q21.0",
-    "descripcion": "Comunicación interventricular (CIV)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q21.1",
-    "descripcion": "Comunicación interauricular (CIA)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q21.2",
-    "descripcion": "Defecto del tabique auriculoventricular",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q21.3",
-    "descripcion": "Tetralogía de Fallot",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q22.1",
-    "descripcion": "Estenosis congénita de la válvula pulmonar",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q23.4",
-    "descripcion": "Síndrome de corazón izquierdo hipoplásico",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q24.9",
-    "descripcion": "Malformación congénita del corazón no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q25.0",
-    "descripcion": "Conducto arterioso permeable (ductus persistente)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q25.1",
-    "descripcion": "Coartación de la aorta",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q35.9",
-    "descripcion": "Fisura del paladar no especificada (paladar hendido)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q36.9",
-    "descripcion": "Labio leporino unilateral",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q37.9",
-    "descripcion": "Paladar hendido con labio leporino unilateral",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q39.0",
-    "descripcion": "Atresia del esófago sin fístula",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q39.1",
-    "descripcion": "Atresia del esófago con fístula traqueoesofágica",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q40.0",
-    "descripcion": "Estenosis hipertrófica congénita del píloro",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q41.0",
-    "descripcion": "Atresia y estenosis congénita del duodeno",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q42.3",
-    "descripcion": "Atresia del ano sin fístula (ano imperforado)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q43.1",
-    "descripcion": "Enfermedad de Hirschsprung",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q44.2",
-    "descripcion": "Atresia de los conductos biliares",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q53.9",
-    "descripcion": "Testículo no descendido no especificado (criptorquidia)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q54.9",
-    "descripcion": "Hipospadias no especificado",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q62.0",
-    "descripcion": "Hidronefrosis congénita",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q65.0",
-    "descripcion": "Luxación congénita de la cadera, unilateral",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q65.8",
-    "descripcion": "Displasia del desarrollo de la cadera",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q66.0",
-    "descripcion": "Pie equino varo congénito (talipes equinovarus)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q69.9",
-    "descripcion": "Polidactilia no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q70.9",
-    "descripcion": "Sindactilia no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q79.0",
-    "descripcion": "Hernia diafragmática congénita",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q79.2",
-    "descripcion": "Onfalocele (exónfalos)",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q79.3",
-    "descripcion": "Gastrosquisis",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q90.9",
-    "descripcion": "Síndrome de Down no especificado",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q91.3",
-    "descripcion": "Trisomía 18 (síndrome de Edwards) no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q91.7",
-    "descripcion": "Trisomía 13 (síndrome de Patau) no especificada",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q96.9",
-    "descripcion": "Síndrome de Turner no especificado",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "Q98.0",
-    "descripcion": "Síndrome de Klinefelter, cariotipo 47,XXY",
-    "grupo": "Congénitas",
-    "sistema": "Congénitas"
-  },
-  {
-    "codigo": "H00.0",
-    "descripcion": "Orzuelo y otras inflamaciones profundas del párpado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H00.1",
-    "descripcion": "Chalazión",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H01.0",
-    "descripcion": "Blefaritis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H02.0",
-    "descripcion": "Entropión y triquiasis palpebral",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H02.1",
-    "descripcion": "Ectropión del párpado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H02.4",
-    "descripcion": "Ptosis del párpado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H02.6",
-    "descripcion": "Xantelasma del párpado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.0",
-    "descripcion": "Dacrioadenitis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.1",
-    "descripcion": "Síndrome de ojo seco (queratoconjuntivitis seca)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.2",
-    "descripcion": "Epífora",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.3",
-    "descripcion": "Dacriocistitis aguda",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.4",
-    "descripcion": "Dacriocistitis crónica",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H04.5",
-    "descripcion": "Estenosis y obstrucción de las vías lagrimales",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H05.0",
-    "descripcion": "Celulitis orbitaria (inflamación aguda de la órbita)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.0",
-    "descripcion": "Conjuntivitis mucopurulenta",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.1",
-    "descripcion": "Conjuntivitis atópica aguda (alérgica)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.3",
-    "descripcion": "Conjuntivitis aguda, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.4",
-    "descripcion": "Conjuntivitis crónica",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.5",
-    "descripcion": "Blefaroconjuntivitis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H10.9",
-    "descripcion": "Conjuntivitis, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H11.0",
-    "descripcion": "Pterigión",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H11.1",
-    "descripcion": "Degeneraciones y depósitos conjuntivales (pinguécula)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H11.3",
-    "descripcion": "Hemorragia subconjuntival",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H15.0",
-    "descripcion": "Escleritis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H15.1",
-    "descripcion": "Episcleritis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H16.0",
-    "descripcion": "Úlcera de la córnea",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H16.1",
-    "descripcion": "Queratitis superficial sin conjuntivitis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H16.2",
-    "descripcion": "Queratoconjuntivitis",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H16.3",
-    "descripcion": "Queratitis intersticial y profunda",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H16.9",
-    "descripcion": "Queratitis, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H17.9",
-    "descripcion": "Cicatriz u opacidad corneal, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H18.6",
-    "descripcion": "Queratocono",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H20.0",
-    "descripcion": "Iridociclitis aguda y subaguda (uveítis anterior aguda)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H20.1",
-    "descripcion": "Iridociclitis crónica",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H20.9",
-    "descripcion": "Iridociclitis, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H21.0",
-    "descripcion": "Hifema",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H25.0",
-    "descripcion": "Catarata senil incipiente",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H25.1",
-    "descripcion": "Catarata senil nuclear",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H25.9",
-    "descripcion": "Catarata senil, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H26.0",
-    "descripcion": "Catarata infantil, juvenil y presenil",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H26.1",
-    "descripcion": "Catarata traumática",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H26.2",
-    "descripcion": "Catarata complicada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H26.4",
-    "descripcion": "Catarata secundaria (opacificación capsular posterior)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H26.9",
-    "descripcion": "Catarata, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H27.0",
-    "descripcion": "Afaquia",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H27.1",
-    "descripcion": "Luxación del cristalino",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H28.0",
-    "descripcion": "Catarata diabética",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H30.9",
-    "descripcion": "Coriorretinitis, no especificada",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H33.0",
-    "descripcion": "Desprendimiento de retina con ruptura (regmatógeno)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H33.2",
-    "descripcion": "Desprendimiento seroso de la retina",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H33.3",
-    "descripcion": "Desgarro de la retina sin desprendimiento",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H33.5",
-    "descripcion": "Otros desprendimientos de la retina",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H34.0",
-    "descripcion": "Oclusión arterial retiniana transitoria (amaurosis fugaz)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H34.1",
-    "descripcion": "Oclusión de la arteria central de la retina",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H34.8",
-    "descripcion": "Otras oclusiones vasculares retinianas (oclusión venosa)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H35.0",
-    "descripcion": "Retinopatía hipertensiva y cambios vasculares retinianos",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H35.3",
-    "descripcion": "Degeneración macular relacionada con la edad",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H35.6",
-    "descripcion": "Hemorragia retiniana",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H36.0",
-    "descripcion": "Retinopatía diabética",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.0",
-    "descripcion": "Sospecha de glaucoma (hipertensión ocular)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.1",
-    "descripcion": "Glaucoma primario de ángulo abierto",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.2",
-    "descripcion": "Glaucoma primario de ángulo cerrado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.3",
-    "descripcion": "Glaucoma secundario a traumatismo ocular",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.4",
-    "descripcion": "Glaucoma secundario a inflamación ocular",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H40.9",
-    "descripcion": "Glaucoma, no especificado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H43.1",
-    "descripcion": "Hemorragia del vítreo",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H43.9",
-    "descripcion": "Trastorno del vítreo, no especificado (moscas volantes)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H46",
-    "descripcion": "Neuritis óptica",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H47.2",
-    "descripcion": "Atrofia óptica",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H49.0",
-    "descripcion": "Parálisis del tercer par craneal (motor ocular común)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H50.0",
-    "descripcion": "Estrabismo convergente concomitante (esotropía)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H50.1",
-    "descripcion": "Estrabismo divergente concomitante (exotropía)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H50.9",
-    "descripcion": "Estrabismo, no especificado",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H52.0",
-    "descripcion": "Hipermetropía",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H52.1",
-    "descripcion": "Miopía",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H52.2",
-    "descripcion": "Astigmatismo",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H52.3",
-    "descripcion": "Anisometropía y aniseiconía",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H52.4",
-    "descripcion": "Presbicia",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H53.0",
-    "descripcion": "Ambliopía ex anopsia",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H53.2",
-    "descripcion": "Diplopía",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H53.5",
-    "descripcion": "Deficiencia de la visión cromática (daltonismo)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H54.0",
-    "descripcion": "Ceguera de ambos ojos",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H54.2",
-    "descripcion": "Visión subnormal de ambos ojos (baja visión)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H54.4",
-    "descripcion": "Ceguera de un ojo",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H57.1",
-    "descripcion": "Dolor ocular",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
-  },
-  {
-    "codigo": "H60.0",
-    "descripcion": "Absceso del oído externo (forúnculo del conducto auditivo)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.1",
-    "descripcion": "Celulitis del oído externo",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.2",
-    "descripcion": "Otitis externa maligna",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.3",
-    "descripcion": "Otras otitis externas infecciosas (otitis externa difusa)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.4",
-    "descripcion": "Colesteatoma del oído externo",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.5",
-    "descripcion": "Otitis externa aguda, no infecciosa",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H60.9",
-    "descripcion": "Otitis externa, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H61.0",
-    "descripcion": "Pericondritis del oído externo",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H61.2",
-    "descripcion": "Tapón de cerumen (cerumen impactado)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H61.3",
-    "descripcion": "Estenosis adquirida del conducto auditivo externo",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H65.0",
-    "descripcion": "Otitis media aguda serosa",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H65.1",
-    "descripcion": "Otras otitis medias agudas no supurativas",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H65.2",
-    "descripcion": "Otitis media crónica serosa",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H65.3",
-    "descripcion": "Otitis media crónica mucoide",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H65.9",
-    "descripcion": "Otitis media no supurativa, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H66.0",
-    "descripcion": "Otitis media supurativa aguda",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H66.1",
-    "descripcion": "Otitis media tubotimpánica supurativa crónica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H66.2",
-    "descripcion": "Otitis media supurativa crónica aticoantral",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H66.4",
-    "descripcion": "Otitis media supurativa, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H66.9",
-    "descripcion": "Otitis media, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H68.0",
-    "descripcion": "Salpingitis de la trompa de Eustaquio",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H68.1",
-    "descripcion": "Obstrucción de la trompa de Eustaquio",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H70.0",
-    "descripcion": "Mastoiditis aguda",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H70.1",
-    "descripcion": "Mastoiditis crónica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H70.9",
-    "descripcion": "Mastoiditis, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H71",
-    "descripcion": "Colesteatoma del oído medio",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H72.0",
-    "descripcion": "Perforación central de la membrana timpánica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H72.1",
-    "descripcion": "Perforación ática de la membrana timpánica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H72.9",
-    "descripcion": "Perforación de la membrana timpánica, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H73.0",
-    "descripcion": "Miringitis aguda",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H73.1",
-    "descripcion": "Miringitis crónica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H74.0",
-    "descripcion": "Timpanoesclerosis",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H74.1",
-    "descripcion": "Enfermedad adhesiva del oído medio",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H74.2",
-    "descripcion": "Discontinuidad y dislocación de los huesecillos del oído",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H80.0",
-    "descripcion": "Otosclerosis que afecta la ventana oval, no obliterante",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H80.9",
-    "descripcion": "Otosclerosis, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.0",
-    "descripcion": "Enfermedad de Ménière",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.1",
-    "descripcion": "Vértigo paroxístico posicional benigno",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.2",
-    "descripcion": "Neuronitis vestibular",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.3",
-    "descripcion": "Otros vértigos periféricos",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.4",
-    "descripcion": "Vértigo de origen central",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H81.9",
-    "descripcion": "Trastorno de la función vestibular, no especificado",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H83.0",
-    "descripcion": "Laberintitis",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H83.1",
-    "descripcion": "Fístula del laberinto",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H83.3",
-    "descripcion": "Efectos del ruido sobre el oído interno (trauma acústico)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.0",
-    "descripcion": "Hipoacusia conductiva bilateral",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.1",
-    "descripcion": "Hipoacusia conductiva unilateral con audición contralateral normal",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.2",
-    "descripcion": "Hipoacusia conductiva, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.3",
-    "descripcion": "Hipoacusia neurosensorial bilateral",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.4",
-    "descripcion": "Hipoacusia neurosensorial unilateral, audición contralateral normal",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.5",
-    "descripcion": "Hipoacusia neurosensorial, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.6",
-    "descripcion": "Hipoacusia mixta conductiva y neurosensorial bilateral",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H90.8",
-    "descripcion": "Hipoacusia mixta conductiva y neurosensorial, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H91.0",
-    "descripcion": "Hipoacusia ototóxica",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H91.1",
-    "descripcion": "Presbiacusia",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H91.2",
-    "descripcion": "Hipoacusia súbita idiopática",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H91.9",
-    "descripcion": "Hipoacusia, no especificada",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H92.0",
-    "descripcion": "Otalgia",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H92.1",
-    "descripcion": "Otorrea",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H92.2",
-    "descripcion": "Otorragia",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H93.0",
-    "descripcion": "Trastornos degenerativos y vasculares del oído",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H93.1",
-    "descripcion": "Tinnitus (acúfenos)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H93.2",
-    "descripcion": "Otras percepciones auditivas anormales (hiperacusia)",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H93.9",
-    "descripcion": "Trastorno del oído, no especificado",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "H95.0",
-    "descripcion": "Colesteatoma recurrente de la cavidad posmastoidectomía",
-    "grupo": "Otorrinolaringología",
-    "sistema": "Otorrinolaringología"
-  },
-  {
-    "codigo": "R00.0",
-    "descripcion": "Taquicardia no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R00.2",
-    "descripcion": "Palpitaciones",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R01.1",
-    "descripcion": "Soplo cardíaco no especificado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R03.0",
-    "descripcion": "Presión arterial elevada, sin diagnóstico de hipertensión",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R04.0",
-    "descripcion": "Epistaxis",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R04.2",
-    "descripcion": "Hemoptisis",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R05",
-    "descripcion": "Tos",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R06.0",
-    "descripcion": "Disnea",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R06.1",
-    "descripcion": "Estridor",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R06.2",
-    "descripcion": "Sibilancias",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R06.4",
-    "descripcion": "Hiperventilación",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R07.0",
-    "descripcion": "Dolor de garganta",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R07.1",
-    "descripcion": "Dolor en el pecho al respirar",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R07.2",
-    "descripcion": "Dolor precordial",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R07.4",
-    "descripcion": "Dolor torácico no especificado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R10.0",
-    "descripcion": "Abdomen agudo",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R10.1",
-    "descripcion": "Dolor abdominal superior (epigastrio, hipocondrio)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R10.2",
-    "descripcion": "Dolor pélvico y perineal",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R10.3",
-    "descripcion": "Dolor abdominal inferior (fosa ilíaca)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R10.4",
-    "descripcion": "Dolor abdominal generalizado y no especificado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R11",
-    "descripcion": "Náuseas y vómitos",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R12",
-    "descripcion": "Pirosis (acidez estomacal)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R13",
-    "descripcion": "Disfagia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R14",
-    "descripcion": "Flatulencia y afecciones afines (meteorismo)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R15",
-    "descripcion": "Incontinencia fecal",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R16.0",
-    "descripcion": "Hepatomegalia, no clasificada en otra parte",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R16.1",
-    "descripcion": "Esplenomegalia, no clasificada en otra parte",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R17",
-    "descripcion": "Ictericia no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R18",
-    "descripcion": "Ascitis",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R19.0",
-    "descripcion": "Masa o tumoración intraabdominal y pélvica",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R19.4",
-    "descripcion": "Cambio en los hábitos intestinales",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R20.2",
-    "descripcion": "Parestesia de la piel",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R21",
-    "descripcion": "Exantema y otras erupciones cutáneas no especificadas",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R22.9",
-    "descripcion": "Masa o tumoración localizada, no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R23.0",
-    "descripcion": "Cianosis",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R23.3",
-    "descripcion": "Equimosis espontáneas (petequias)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R25.1",
-    "descripcion": "Temblor no especificado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R26.0",
-    "descripcion": "Marcha atáxica",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R26.2",
-    "descripcion": "Dificultad para caminar, no clasificada en otra parte",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R30.0",
-    "descripcion": "Disuria",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R31",
-    "descripcion": "Hematuria no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R32",
-    "descripcion": "Incontinencia urinaria no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R33",
-    "descripcion": "Retención de orina",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R34",
-    "descripcion": "Anuria y oliguria",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R35",
-    "descripcion": "Poliuria",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R40.0",
-    "descripcion": "Somnolencia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R40.1",
-    "descripcion": "Estupor",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R40.2",
-    "descripcion": "Coma no especificado (alteración de conciencia)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R41.0",
-    "descripcion": "Desorientación no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R41.3",
-    "descripcion": "Otra amnesia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R42",
-    "descripcion": "Mareo y desvanecimiento (vértigo)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R43.0",
-    "descripcion": "Anosmia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R45.0",
-    "descripcion": "Nerviosismo",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R45.1",
-    "descripcion": "Inquietud y agitación",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R45.4",
-    "descripcion": "Irritabilidad y enojo",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R47.0",
-    "descripcion": "Disfasia y afasia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R49.0",
-    "descripcion": "Disfonía",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R50.9",
-    "descripcion": "Fiebre no especificada (fiebre de origen desconocido)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R51",
-    "descripcion": "Cefalea",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R52.0",
-    "descripcion": "Dolor agudo",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R52.1",
-    "descripcion": "Dolor crónico intratable",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R52.2",
-    "descripcion": "Otro dolor crónico",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R53",
-    "descripcion": "Malestar general, fatiga y astenia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R55",
-    "descripcion": "Síncope y colapso (lipotimia)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R56.0",
-    "descripcion": "Convulsiones febriles",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R56.8",
-    "descripcion": "Otras convulsiones y las no especificadas",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R57.9",
-    "descripcion": "Choque, no especificado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R58",
-    "descripcion": "Hemorragia, no clasificada en otra parte",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R59.0",
-    "descripcion": "Adenomegalia localizada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R59.1",
-    "descripcion": "Adenomegalia generalizada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R60.0",
-    "descripcion": "Edema localizado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R60.1",
-    "descripcion": "Edema generalizado",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R61.9",
-    "descripcion": "Hiperhidrosis, no especificada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R63.0",
-    "descripcion": "Anorexia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R63.1",
-    "descripcion": "Polidipsia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R63.2",
-    "descripcion": "Polifagia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R63.3",
-    "descripcion": "Dificultades en la alimentación",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R63.4",
-    "descripcion": "Pérdida anormal de peso",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R64",
-    "descripcion": "Caquexia",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R70.0",
-    "descripcion": "Velocidad de eritrosedimentación elevada (VSG)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R74.0",
-    "descripcion": "Elevación de niveles de transaminasas y DHL",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R79.8",
-    "descripcion": "Otros hallazgos anormales en química sanguínea (PCR elevada)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R80",
-    "descripcion": "Proteinuria aislada",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R81",
-    "descripcion": "Glucosuria",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R82.4",
-    "descripcion": "Acetonuria",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "R94.3",
-    "descripcion": "Resultado anormal de estudio funcional cardiovascular (ECG)",
-    "grupo": "Síntomas y Signos",
-    "sistema": "Síntomas y Signos"
-  },
-  {
-    "codigo": "S00.0",
-    "descripcion": "Traumatismo superficial del cuero cabelludo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S01.0",
-    "descripcion": "Herida del cuero cabelludo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S01.4",
-    "descripcion": "Herida de la mejilla y de la región temporomandibular",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S01.5",
-    "descripcion": "Herida del labio y de la cavidad bucal",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S02.0",
-    "descripcion": "Fractura de la bóveda del cráneo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S02.1",
-    "descripcion": "Fractura de la base del cráneo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S02.2",
-    "descripcion": "Fractura de los huesos de la nariz",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S02.6",
-    "descripcion": "Fractura del maxilar inferior (mandíbula)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S03.0",
-    "descripcion": "Luxación del maxilar (mandíbula)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S05.0",
-    "descripcion": "Traumatismo de conjuntiva y abrasión corneal sin cuerpo extraño",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S05.1",
-    "descripcion": "Contusión del globo ocular y del tejido orbitario",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S06.0",
-    "descripcion": "Concusión (conmoción cerebral, TEC leve)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S06.9",
-    "descripcion": "Traumatismo intracraneal, no especificado (TEC)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S13.4",
-    "descripcion": "Esguince y torcedura de columna cervical (latigazo cervical)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S20.2",
-    "descripcion": "Contusión del tórax",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S22.0",
-    "descripcion": "Fractura de vértebra torácica",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S22.3",
-    "descripcion": "Fractura de costilla",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S22.4",
-    "descripcion": "Fracturas múltiples de costillas",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S30.0",
-    "descripcion": "Contusión de la región lumbosacra y de la pelvis",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S30.1",
-    "descripcion": "Contusión de la pared abdominal",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S32.0",
-    "descripcion": "Fractura de vértebra lumbar",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S42.0",
-    "descripcion": "Fractura de la clavícula",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S42.2",
-    "descripcion": "Fractura de la epífisis superior del húmero",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S42.3",
-    "descripcion": "Fractura de la diáfisis del húmero",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S42.4",
-    "descripcion": "Fractura de la epífisis inferior del húmero (supracondílea)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S43.0",
-    "descripcion": "Luxación de la articulación del hombro",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S43.4",
-    "descripcion": "Esguince y torcedura de la articulación del hombro",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S46.0",
-    "descripcion": "Traumatismo del tendón del manguito rotador del hombro",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S50.0",
-    "descripcion": "Contusión del codo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S52.0",
-    "descripcion": "Fractura de la epífisis superior del cúbito (olécranon)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S52.2",
-    "descripcion": "Fractura de la diáfisis del cúbito",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S52.3",
-    "descripcion": "Fractura de la diáfisis del radio",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S52.5",
-    "descripcion": "Fractura de la epífisis inferior del radio (Colles)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S52.6",
-    "descripcion": "Fractura de la epífisis inferior del cúbito y del radio",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S53.1",
-    "descripcion": "Luxación del codo, no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S60.0",
-    "descripcion": "Contusión de dedos de la mano, sin daño de la uña",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S61.0",
-    "descripcion": "Herida de dedos de la mano, sin daño de la uña",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S61.9",
-    "descripcion": "Herida de la muñeca y de la mano, parte no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S62.0",
-    "descripcion": "Fractura del hueso escafoides de la mano",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S62.3",
-    "descripcion": "Fractura de otros huesos metacarpianos",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S62.6",
-    "descripcion": "Fractura de dedo de la mano (falanges)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S63.1",
-    "descripcion": "Luxación de dedo de la mano",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S63.5",
-    "descripcion": "Esguince y torcedura de la muñeca",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S63.6",
-    "descripcion": "Esguince y torcedura de dedos de la mano",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S70.0",
-    "descripcion": "Contusión de la cadera",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S72.0",
-    "descripcion": "Fractura del cuello del fémur (fractura de cadera)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S72.1",
-    "descripcion": "Fractura pertrocanteriana del fémur",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S72.3",
-    "descripcion": "Fractura de la diáfisis del fémur",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S80.0",
-    "descripcion": "Contusión de la rodilla",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S81.9",
-    "descripcion": "Herida de la pierna, parte no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.0",
-    "descripcion": "Fractura de la rótula",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.1",
-    "descripcion": "Fractura de la epífisis superior de la tibia",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.2",
-    "descripcion": "Fractura de la diáfisis de la tibia",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.4",
-    "descripcion": "Fractura del peroné solamente",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.5",
-    "descripcion": "Fractura del maléolo interno (tobillo)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S82.6",
-    "descripcion": "Fractura del maléolo externo (tobillo)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S83.0",
-    "descripcion": "Luxación de la rótula",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S83.2",
-    "descripcion": "Desgarro reciente de menisco de la rodilla",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S83.4",
-    "descripcion": "Esguince de ligamentos laterales de la rodilla",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S83.5",
-    "descripcion": "Esguince que compromete ligamento cruzado de la rodilla",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S86.0",
-    "descripcion": "Traumatismo del tendón de Aquiles (ruptura)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S90.0",
-    "descripcion": "Contusión del tobillo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S91.3",
-    "descripcion": "Herida de otras partes del pie",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S92.0",
-    "descripcion": "Fractura del calcáneo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S92.3",
-    "descripcion": "Fractura de hueso del metatarso",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S93.0",
-    "descripcion": "Luxación de la articulación del tobillo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "S93.4",
-    "descripcion": "Esguince y torcedura del tobillo",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T14.1",
-    "descripcion": "Herida de región no especificada del cuerpo (mordedura)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T15.0",
-    "descripcion": "Cuerpo extraño en la córnea",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T16",
-    "descripcion": "Cuerpo extraño en el oído",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T17.1",
-    "descripcion": "Cuerpo extraño en el orificio nasal",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T17.9",
-    "descripcion": "Cuerpo extraño en vías respiratorias, parte no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T18.1",
-    "descripcion": "Cuerpo extraño en el esófago",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T18.9",
-    "descripcion": "Cuerpo extraño en tubo digestivo, parte no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T20.1",
-    "descripcion": "Quemadura de primer grado de la cabeza y del cuello",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T20.2",
-    "descripcion": "Quemadura de segundo grado de la cabeza y del cuello",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T21.1",
-    "descripcion": "Quemadura de primer grado del tronco",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T21.2",
-    "descripcion": "Quemadura de segundo grado del tronco",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T22.2",
-    "descripcion": "Quemadura de segundo grado de hombro y miembro superior",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T23.1",
-    "descripcion": "Quemadura de primer grado de la muñeca y de la mano",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T23.2",
-    "descripcion": "Quemadura de segundo grado de la muñeca y de la mano",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T24.2",
-    "descripcion": "Quemadura de segundo grado de cadera y miembro inferior",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T25.2",
-    "descripcion": "Quemadura de segundo grado del tobillo y del pie",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T30.0",
-    "descripcion": "Quemadura de región del cuerpo y grado no especificados",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T33.9",
-    "descripcion": "Congelamiento superficial, sitio no especificado",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T39.1",
-    "descripcion": "Envenenamiento por derivados del 4-aminofenol (paracetamol)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T39.3",
-    "descripcion": "Envenenamiento por antiinflamatorios no esteroideos (AINE)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T42.4",
-    "descripcion": "Envenenamiento por benzodiazepinas",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T43.0",
-    "descripcion": "Envenenamiento por antidepresivos tricíclicos",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T51.0",
-    "descripcion": "Efecto tóxico del etanol (intoxicación alcohólica)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T58",
-    "descripcion": "Efecto tóxico del monóxido de carbono",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T60.0",
-    "descripcion": "Efecto tóxico de plaguicidas organofosforados y carbamatos",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T62.9",
-    "descripcion": "Efecto tóxico de sustancia nociva ingerida como alimento",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T63.0",
-    "descripcion": "Efecto tóxico del veneno de serpiente",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T63.2",
-    "descripcion": "Efecto tóxico del veneno de escorpión",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T63.3",
-    "descripcion": "Efecto tóxico del veneno de arañas (loxoscelismo)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T67.0",
-    "descripcion": "Golpe de calor e insolación",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T74.1",
-    "descripcion": "Abuso físico (síndrome de maltrato)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T75.1",
-    "descripcion": "Ahogamiento y sumersión no mortal",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T78.0",
-    "descripcion": "Choque anafiláctico debido a reacción adversa a alimentos",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T78.2",
-    "descripcion": "Choque anafiláctico, no especificado",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T78.3",
-    "descripcion": "Edema angioneurótico (angioedema)",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T78.4",
-    "descripcion": "Alergia no especificada",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T88.6",
-    "descripcion": "Choque anafiláctico por medicamento correctamente administrado",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "T88.7",
-    "descripcion": "Efecto adverso no especificado de droga o medicamento",
-    "grupo": "Traumatismos",
-    "sistema": "Traumatismos"
-  },
-  {
-    "codigo": "Z00.0",
-    "descripcion": "Examen médico general (control de salud de rutina del adulto)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z00.1",
-    "descripcion": "Control de salud de rutina del niño",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z02.1",
-    "descripcion": "Examen preempleo",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z21",
-    "descripcion": "Estado de infección asintomática por VIH",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z22.5",
-    "descripcion": "Portador de hepatitis viral",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z24.6",
-    "descripcion": "Necesidad de inmunización contra la hepatitis viral",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z25.1",
-    "descripcion": "Necesidad de inmunización contra la influenza",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z30.0",
-    "descripcion": "Consejo y asesoramiento general sobre la anticoncepción",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z30.1",
-    "descripcion": "Inserción de dispositivo anticonceptivo (DIU)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z30.4",
-    "descripcion": "Supervisión del uso de drogas anticonceptivas",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z30.5",
-    "descripcion": "Supervisión del uso de dispositivo anticonceptivo (DIU)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z34.9",
-    "descripcion": "Supervisión de embarazo normal (control prenatal)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z39.2",
-    "descripcion": "Seguimiento postparto de rutina",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z43.3",
-    "descripcion": "Atención de colostomía (cuidados de ostomía)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z44.9",
-    "descripcion": "Prueba y ajuste de dispositivo protésico externo",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z45.0",
-    "descripcion": "Asistencia y ajuste de marcapaso cardíaco",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z52.0",
-    "descripcion": "Donante de sangre",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z54.0",
-    "descripcion": "Convalecencia consecutiva a cirugía",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z71.3",
-    "descripcion": "Consulta para instrucción y vigilancia de la dieta",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z72.0",
-    "descripcion": "Uso de tabaco (tabaquismo)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z72.1",
-    "descripcion": "Problemas relacionados con el uso del alcohol",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z72.3",
-    "descripcion": "Falta de ejercicio físico",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z72.4",
-    "descripcion": "Dieta y hábitos alimentarios inapropiados",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z76.0",
-    "descripcion": "Consulta para repetición de receta (prescripción repetida)",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "Z85.9",
-    "descripcion": "Antecedente personal de tumor maligno, no especificado",
-    "grupo": "Factores de Salud",
-    "sistema": "Factores de Salud"
-  },
-  {
-    "codigo": "J01.00",
-    "descripcion": "Sinusitis maxilar aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.10",
-    "descripcion": "Sinusitis frontal aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J01.40",
-    "descripcion": "Pansinusitis aguda NE",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J03.00",
-    "descripcion": "Amigdalitis estreptocócica aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J09.X1",
-    "descripcion": "Influenza con neumonía — virus identificado",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J30.0",
-    "descripcion": "Rinitis alérgica estacional (polinosis)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J30.9",
-    "descripcion": "Rinitis alérgica NE",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J32.4",
-    "descripcion": "Poliposis nasal crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J35.01",
-    "descripcion": "Amigdalitis crónica",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J38.3",
-    "descripcion": "Otras enfermedades de cuerdas vocales",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.20",
-    "descripcion": "Asma leve intermitente no complicada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.30",
-    "descripcion": "Asma leve persistente no complicada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.40",
-    "descripcion": "Asma moderada persistente no complicada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.50",
-    "descripcion": "Asma severa persistente no complicada",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J45.909",
-    "descripcion": "Asma NE sin complicaciones",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J47.0",
-    "descripcion": "Bronquiectasias con infección aguda",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J70.0",
-    "descripcion": "Neumonitis por radiación",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J81.0",
-    "descripcion": "Edema pulmonar agudo cardiogénico",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "J96.00",
-    "descripcion": "Insuficiencia respiratoria aguda NE",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
-  },
-  {
-    "codigo": "G47.33",
-    "descripcion": "Apnea obstructiva del sueño (adultos)",
-    "grupo": "Respiratorio",
-    "sistema": "Respiratorio"
+    "grupo": "Enfermedad cardiorrenal hipertensiva con",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I13.10",
     "descripcion": "HTA con cardiopatía y nefropatía sin ICC",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "HTA con cardiopatía y nefropatía sin ICC",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I13.2",
+    "descripcion": "Enfermedad cardiorrenal hipertensiva con falla cardíaca y renal",
+    "grupo": "Enfermedad cardiorrenal hipertensiva con",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I15.0",
+    "descripcion": "Hipertensión renovascular",
+    "grupo": "Hipertensión renovascular",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I15.9",
+    "descripcion": "Hipertensión secundaria no especificada",
+    "grupo": "Hipertensión secundaria",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I20.0",
+    "descripcion": "Angina inestable",
+    "grupo": "Angina inestable",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I20.1",
+    "descripcion": "Angina de pecho con espasmo documentado (angina variante)",
+    "grupo": "Angina de pecho con espasmo documentado",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I20.8",
+    "descripcion": "Angina de pecho estable",
+    "grupo": "Angina de pecho estable",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I20.9",
+    "descripcion": "Angina de pecho no especificada",
+    "grupo": "Angina de pecho",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.0",
+    "descripcion": "Infarto agudo de miocardio transmural de pared anterior",
+    "grupo": "Infarto de miocardio transmural de pared",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I21.01",
     "descripcion": "IAM con elevación ST pared anterior",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "IAM con elevación ST pared anterior",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I21.09",
     "descripcion": "IAM con elevación ST otra localización",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "IAM con elevación ST otra localización",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.1",
+    "descripcion": "Infarto agudo de miocardio transmural de pared inferior",
+    "grupo": "Infarto de miocardio transmural de pared",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I21.19",
     "descripcion": "IAM sin elevación ST NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "IAM sin elevación ST NE",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.2",
+    "descripcion": "Infarto agudo de miocardio transmural de otros sitios",
+    "grupo": "Infarto de miocardio transmural de otros",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.3",
+    "descripcion": "Infarto agudo de miocardio transmural no especificado (IAMCEST)",
+    "grupo": "Infarto de miocardio transmural",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.4",
+    "descripcion": "Infarto agudo de miocardio subendocárdico (IAMSEST)",
+    "grupo": "Infarto de miocardio subendocárdico",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I21.9",
+    "descripcion": "Infarto agudo de miocardio no especificado",
+    "grupo": "Infarto de miocardio",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I22.9",
+    "descripcion": "Infarto de miocardio recurrente de sitio no especificado",
+    "grupo": "Infarto de miocardio de sitio",
+    "sistema": "Cardiovascular",
+    "tipo": "recurrente",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I24.9",
+    "descripcion": "Cardiopatía isquémica aguda no especificada",
+    "grupo": "Cardiopatía isquémica",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.1",
+    "descripcion": "Enfermedad aterosclerótica del corazón",
+    "grupo": "Enfermedad aterosclerótica del corazón",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I25.10",
     "descripcion": "Cardiopatía isquémica crónica sin angina",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Cardiopatía isquémica sin angina",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I25.110",
     "descripcion": "Cardiopatía isquémica con angina estable",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Cardiopatía isquémica con angina estable",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.2",
+    "descripcion": "Infarto antiguo de miocardio",
+    "grupo": "Infarto antiguo de miocardio",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.5",
+    "descripcion": "Miocardiopatía isquémica",
+    "grupo": "Miocardiopatía isquémica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.8",
+    "descripcion": "Otras formas de cardiopatía isquémica crónica",
+    "grupo": "Otras formas de cardiopatía isquémica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I25.9",
+    "descripcion": "Cardiopatía isquémica crónica no especificada",
+    "grupo": "Cardiopatía isquémica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I26.0",
+    "descripcion": "Embolia pulmonar con cor pulmonale agudo",
+    "grupo": "Embolia pulmonar con cor pulmonale",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I26.09",
     "descripcion": "Embolia pulmonar sin cor pulmonale agudo",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Embolia pulmonar sin cor pulmonale",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I26.9",
+    "descripcion": "Embolia pulmonar sin cor pulmonale agudo",
+    "grupo": "Embolia pulmonar sin cor pulmonale",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I27.0",
+    "descripcion": "Hipertensión pulmonar primaria",
+    "grupo": "Hipertensión pulmonar primaria",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I27.2",
+    "descripcion": "Hipertensión pulmonar secundaria",
+    "grupo": "Hipertensión pulmonar secundaria",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I27.9",
+    "descripcion": "Enfermedad cardiopulmonar crónica no especificada",
+    "grupo": "Enfermedad cardiopulmonar",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I30.0",
+    "descripcion": "Pericarditis aguda idiopática",
+    "grupo": "Pericarditis idiopática",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I30.9",
+    "descripcion": "Pericarditis aguda no especificada",
+    "grupo": "Pericarditis",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I31.3",
+    "descripcion": "Derrame pericárdico no inflamatorio",
+    "grupo": "Derrame pericárdico no inflamatorio",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I33.0",
+    "descripcion": "Endocarditis infecciosa aguda y subaguda",
+    "grupo": "Endocarditis infecciosa y subaguda",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I34.0",
+    "descripcion": "Insuficiencia mitral no reumática",
+    "grupo": "Insuficiencia mitral no reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I34.1",
+    "descripcion": "Prolapso de la válvula mitral",
+    "grupo": "Prolapso de la válvula mitral",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I35.0",
+    "descripcion": "Estenosis de la válvula aórtica no reumática",
+    "grupo": "Estenosis de la válvula aórtica no reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I35.1",
+    "descripcion": "Insuficiencia de la válvula aórtica no reumática",
+    "grupo": "Insuficiencia de la válvula aórtica no",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I35.2",
+    "descripcion": "Estenosis aórtica con insuficiencia no reumática",
+    "grupo": "Estenosis aórtica con insuficiencia no",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I36.1",
+    "descripcion": "Insuficiencia tricuspídea no reumática",
+    "grupo": "Insuficiencia tricuspídea no reumática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I38",
+    "descripcion": "Endocarditis de válvula no especificada",
+    "grupo": "Endocarditis de válvula",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I40.9",
+    "descripcion": "Miocarditis aguda no especificada",
+    "grupo": "Miocarditis",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I42.0",
+    "descripcion": "Miocardiopatía dilatada",
+    "grupo": "Miocardiopatía dilatada",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I42.1",
+    "descripcion": "Miocardiopatía hipertrófica obstructiva",
+    "grupo": "Miocardiopatía hipertrófica obstructiva",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "I42.2",
+    "descripcion": "Miocardiopatía hipertrófica no obstructiva",
+    "grupo": "Miocardiopatía hipertrófica no obstructiva",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "I42.5",
+    "descripcion": "Miocardiopatía restrictiva",
+    "grupo": "Miocardiopatía restrictiva",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I42.9",
+    "descripcion": "Miocardiopatía no especificada",
+    "grupo": "Miocardiopatía",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I44.0",
+    "descripcion": "Bloqueo auriculoventricular de primer grado",
+    "grupo": "Bloqueo auriculoventricular de primer grado",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I44.1",
+    "descripcion": "Bloqueo auriculoventricular de segundo grado",
+    "grupo": "Bloqueo auriculoventricular de segundo grado",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I44.2",
+    "descripcion": "Bloqueo auriculoventricular completo (tercer grado)",
+    "grupo": "Bloqueo auriculoventricular completo",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I44.7",
+    "descripcion": "Bloqueo de rama izquierda no especificado",
+    "grupo": "Bloqueo de rama izquierda",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I45.1",
+    "descripcion": "Bloqueo de rama derecha",
+    "grupo": "Bloqueo de rama derecha",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I45.6",
+    "descripcion": "Síndrome de preexcitación (Wolff-Parkinson-White)",
+    "grupo": "Síndrome de preexcitación",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I46.0",
+    "descripcion": "Paro cardíaco con resucitación exitosa",
+    "grupo": "Paro cardíaco con resucitación exitosa",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I46.9",
+    "descripcion": "Paro cardíaco no especificado",
+    "grupo": "Paro cardíaco",
+    "sistema": "Cardiovascular",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I47.1",
+    "descripcion": "Taquicardia supraventricular",
+    "grupo": "Taquicardia supraventricular",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I47.2",
+    "descripcion": "Taquicardia ventricular",
+    "grupo": "Taquicardia ventricular",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I48.0",
+    "descripcion": "Fibrilación auricular paroxística",
+    "grupo": "Fibrilación auricular paroxística",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I48.1",
+    "descripcion": "Fibrilación auricular persistente",
+    "grupo": "Fibrilación auricular persistente",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I48.11",
     "descripcion": "Fibrilación auricular persistente (<7 días)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Fibrilación auricular persistente",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I48.19",
     "descripcion": "Fibrilación auricular persistente (>7 días)",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Fibrilación auricular persistente",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I48.2",
+    "descripcion": "Fibrilación auricular crónica (permanente)",
+    "grupo": "Fibrilación auricular",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I48.3",
+    "descripcion": "Aleteo (flutter) auricular típico",
+    "grupo": "Aleteo auricular típico",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I48.9",
+    "descripcion": "Fibrilación y aleteo auricular no especificados",
+    "grupo": "Fibrilación y aleteo auricular",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I48.91",
     "descripcion": "Fibrilación auricular crónica/longstanding",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Fibrilación auricular /longstanding",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.1",
+    "descripcion": "Extrasístoles auriculares",
+    "grupo": "Extrasístoles auriculares",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.3",
+    "descripcion": "Extrasístoles ventriculares",
+    "grupo": "Extrasístoles ventriculares",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.5",
+    "descripcion": "Síndrome del nodo sinusal enfermo",
+    "grupo": "Síndrome del nodo sinusal enfermo",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I49.9",
+    "descripcion": "Arritmia cardíaca no especificada",
+    "grupo": "Arritmia cardíaca",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.0",
+    "descripcion": "Insuficiencia cardíaca congestiva",
+    "grupo": "Insuficiencia cardíaca congestiva",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.1",
+    "descripcion": "Insuficiencia cardíaca izquierda",
+    "grupo": "Insuficiencia cardíaca izquierda",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.2",
+    "descripcion": "Insuficiencia cardíaca sistólica",
+    "grupo": "Insuficiencia cardíaca sistólica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I50.20",
     "descripcion": "Insuficiencia cardiaca sistólica NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Insuficiencia cardiaca sistólica NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.3",
+    "descripcion": "Insuficiencia cardíaca diastólica",
+    "grupo": "Insuficiencia cardíaca diastólica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I50.30",
     "descripcion": "Insuficiencia cardiaca diastólica NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Insuficiencia cardiaca diastólica NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I50.9",
+    "descripcion": "Insuficiencia cardíaca no especificada",
+    "grupo": "Insuficiencia cardíaca",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I51.5",
     "descripcion": "Disfunción del músculo cardíaco NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Disfunción del músculo cardíaco NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I51.7",
+    "descripcion": "Cardiomegalia",
+    "grupo": "Cardiomegalia",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I70.0",
+    "descripcion": "Aterosclerosis de la aorta",
+    "grupo": "Aterosclerosis de la aorta",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I70.2",
+    "descripcion": "Aterosclerosis de las arterias de los miembros",
+    "grupo": "Aterosclerosis de las arterias de los miembros",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I70.209",
     "descripcion": "Arteriosclerosis obliterante de extremidades NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Arteriosclerosis obliterante de extremidades",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I70.9",
+    "descripcion": "Aterosclerosis generalizada y no especificada",
+    "grupo": "Aterosclerosis generalizada y",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I71.0",
+    "descripcion": "Disección de la aorta",
+    "grupo": "Disección de la aorta",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I71.2",
+    "descripcion": "Aneurisma de la aorta torácica sin ruptura",
+    "grupo": "Aneurisma de la aorta torácica sin ruptura",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I71.4",
+    "descripcion": "Aneurisma de la aorta abdominal sin ruptura",
+    "grupo": "Aneurisma de la aorta abdominal sin ruptura",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I72.4",
+    "descripcion": "Aneurisma de arteria de miembro inferior",
+    "grupo": "Aneurisma de arteria de miembro inferior",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I73.0",
+    "descripcion": "Síndrome de Raynaud",
+    "grupo": "Síndrome de Raynaud",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I73.9",
+    "descripcion": "Enfermedad vascular periférica no especificada",
+    "grupo": "Enfermedad vascular periférica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I74.3",
+    "descripcion": "Embolia y trombosis de arterias de miembros inferiores",
+    "grupo": "Embolia y trombosis de arterias de miembros",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I80.0",
+    "descripcion": "Tromboflebitis superficial de miembros inferiores",
+    "grupo": "Tromboflebitis superficial de miembros",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I80.2",
+    "descripcion": "Trombosis venosa profunda de miembros inferiores",
+    "grupo": "Trombosis venosa profunda de miembros",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I80.3",
     "descripcion": "Flebitis y tromboflebitis de extremidad NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Flebitis y tromboflebitis de extremidad NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I82.401",
     "descripcion": "Trombosis venosa profunda (TVP) MMII",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Trombosis venosa profunda MMII",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I83.0",
+    "descripcion": "Várices de miembros inferiores con úlcera",
+    "grupo": "Várices de miembros inferiores con úlcera",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I83.9",
+    "descripcion": "Várices de miembros inferiores sin úlcera ni inflamación",
+    "grupo": "Várices de miembros inferiores sin úlcera ni",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I83.90",
     "descripcion": "Várices de extremidades inferiores NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
+    "grupo": "Várices de extremidades inferiores NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
   },
   {
     "codigo": "I87.1",
     "descripcion": "Insuficiencia venosa crónica NE",
-    "grupo": "Cardiovascular",
-    "sistema": "Cardiovascular"
-  },
-  {
-    "codigo": "E05.00",
-    "descripcion": "Bocio difuso tóxico (Graves-Basedow)",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E05.10",
-    "descripcion": "Bocio nodular tóxico uninodular",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E05.90",
-    "descripcion": "Hipertiroidismo NE",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E10.10",
-    "descripcion": "DM tipo 1 con cetoacidosis sin coma",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E10.40",
-    "descripcion": "DM tipo 1 con neuropatía diabética",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.21",
-    "descripcion": "DM tipo 2 con nefropatía diabética",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.36",
-    "descripcion": "DM tipo 2 con retinopatía diabética proliferativa",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.40",
-    "descripcion": "DM tipo 2 con neuropatía diabética",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.51",
-    "descripcion": "DM tipo 2 con complicaciones circulatorias periféricas",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.65",
-    "descripcion": "DM tipo 2 con hiperglicemia",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E11.649",
-    "descripcion": "DM tipo 2 con hipoglicemia NE",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E26.01",
-    "descripcion": "Hiperaldosteronismo primario (Conn)",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E27.40",
-    "descripcion": "Insuficiencia suprarrenal NE",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E64.0",
-    "descripcion": "Secuelas de marasmo",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E66.01",
-    "descripcion": "Obesidad mórbida por exceso de calorías (IMC≥40)",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E66.09",
-    "descripcion": "Obesidad NE",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E78.00",
-    "descripcion": "Hipercolesterolemia pura",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "M10.011",
-    "descripcion": "Gota idiopática — articulación tobillo/pie",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "E86.0",
-    "descripcion": "Deshidratación",
-    "grupo": "Metabólico",
-    "sistema": "Metabólico"
-  },
-  {
-    "codigo": "A09.9",
-    "descripcion": "Gastroenteritis y colitis infecciosa NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K20.0",
-    "descripcion": "Esofagitis eosinofílica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K20.9",
-    "descripcion": "Esofagitis NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K22.2",
-    "descripcion": "Úlcera esofágica",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.00",
-    "descripcion": "Gastritis aguda sin hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K29.70",
-    "descripcion": "Gastritis NE sin hemorragia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K31.84",
-    "descripcion": "Gastroparesia",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K35.20",
-    "descripcion": "Apendicitis aguda con peritonitis generalizada NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K35.89",
-    "descripcion": "Apendicitis aguda con otro tipo de peritonitis",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K40.90",
-    "descripcion": "Hernia inguinal NE sin obstrucción ni gangrena",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K50.90",
-    "descripcion": "Enfermedad de Crohn NE sin complicaciones",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K51.00",
-    "descripcion": "Colitis ulcerativa NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K51.90",
-    "descripcion": "Colitis ulcerativa NE sin complicaciones",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K52.29",
-    "descripcion": "Colitis alérgica/eosinofílica NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K55.30",
-    "descripcion": "Colitis isquémica NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K57.30",
-    "descripcion": "Enfermedad diverticular intestino grueso sin perforación",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K57.92",
-    "descripcion": "Diverticulitis del intestino grueso NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K58.1",
-    "descripcion": "Síndrome de intestino irritable con estreñimiento",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K59.00",
-    "descripcion": "Estreñimiento NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K59.09",
-    "descripcion": "Estreñimiento funcional crónico",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K63.5",
-    "descripcion": "Pólipo de colon",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K70.9",
-    "descripcion": "Hepatopatía alcohólica NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K72.10",
-    "descripcion": "Insuficiencia hepática crónica NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K74.60",
-    "descripcion": "Cirrosis hepática NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K75.0",
-    "descripcion": "Absceso hepático",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K75.4",
-    "descripcion": "Hepatitis autoinmune",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.20",
-    "descripcion": "Colelitiasis NE sin colecistitis aguda",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K80.00",
-    "descripcion": "Colelitiasis con colecistitis aguda con obstrucción",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "K83.09",
-    "descripcion": "Colangitis NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "R10.9",
-    "descripcion": "Dolor abdominal NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "R11.10",
-    "descripcion": "Náuseas y vómitos NE",
-    "grupo": "Digestivo",
-    "sistema": "Digestivo"
-  },
-  {
-    "codigo": "M06.00",
-    "descripcion": "Artritis reumatoide seronegativa",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M07.60",
-    "descripcion": "Artropatía psoriásica NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M08.00",
-    "descripcion": "Artritis reumatoide juvenil NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M19.90",
-    "descripcion": "Artrosis primaria NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M35.00",
-    "descripcion": "Síndrome de Sjögren NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M40.202",
-    "descripcion": "Cifosis postural no especificada — región torácica",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M45.9",
-    "descripcion": "Espondilitis anquilosante NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M47.816",
-    "descripcion": "Espondiloartrosis lumbar sin mielopatía",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M47.812",
-    "descripcion": "Espondiloartrosis cervical sin mielopatía",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M48.06",
-    "descripcion": "Estenosis del canal lumbar",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M51.17",
-    "descripcion": "Hernia discal lumbar con radiculopatía",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M54.50",
-    "descripcion": "Lumbalgia baja NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M62.838",
-    "descripcion": "Espasmo muscular NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M70.30",
-    "descripcion": "Bursitis prepatelar NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M75.50",
-    "descripcion": "Bursitis del hombro NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M76.60",
-    "descripcion": "Tendinopatía del tendón de Aquiles",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M77.10",
-    "descripcion": "Epicondilitis lateral (codo de tenista)",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M77.21",
-    "descripcion": "Epicondilitis medial (codo de golfista)",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M79.3",
-    "descripcion": "Paniculitis NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M80.00XA",
-    "descripcion": "Fractura vertebral osteoporótica — columna cervical",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M81.6",
-    "descripcion": "Osteoporosis localizada NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M83.9",
-    "descripcion": "Osteomalacia del adulto NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "M84.512A",
-    "descripcion": "Fractura patológica por osteoporosis — radio/cúbito",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "G57.00",
-    "descripcion": "Lesión del nervio ciático NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "G57.50",
-    "descripcion": "Síndrome del túnel del tarso NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "G56.00",
-    "descripcion": "Síndrome del túnel del carpo NE",
-    "grupo": "Músculo-esquelético",
-    "sistema": "Músculo-esquelético"
-  },
-  {
-    "codigo": "N25.81",
-    "descripcion": "Poliuria secundaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N28.9",
-    "descripcion": "Trastorno renal NE",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.00",
-    "descripcion": "Cistitis aguda sin hematuria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.10",
-    "descripcion": "Cistitis intersticial crónica (dolorosa) sin hematuria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N30.91",
-    "descripcion": "Cistitis NE con hematuria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N35.919",
-    "descripcion": "Estenosis uretral NE",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N39.41",
-    "descripcion": "Urgencia urinaria",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N40.0",
-    "descripcion": "Hiperplasia benigna de próstata sin síntomas urinarios",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N40.1",
-    "descripcion": "Hiperplasia benigna de próstata con síntomas del tracto urinario inferior",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N41.3",
-    "descripcion": "Prostatodinia (prostatitis crónica pélvica)",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N44.1",
-    "descripcion": "Torsión de apéndice testicular",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N45.1",
-    "descripcion": "Epididimitis",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N45.3",
-    "descripcion": "Orquiepididimitis",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N50.89",
-    "descripcion": "Otros trastornos del pene NE",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "N52.9",
-    "descripcion": "Disfunción eréctil NE",
-    "grupo": "Genitourinario",
-    "sistema": "Genitourinario"
-  },
-  {
-    "codigo": "A56.02",
-    "descripcion": "Cervicitis por clamidia",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "A59.01",
-    "descripcion": "Tricomoniasis vulvovaginal",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "N70.01",
-    "descripcion": "Salpingitis aguda",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "N81.10",
-    "descripcion": "Cistocele NE",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "N83.20",
-    "descripcion": "Quiste ovárico NE",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "N83.29",
-    "descripcion": "Quiste ovárico hemorrágico NE",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "N94.0",
-    "descripcion": "Dispareunia",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O14.00",
-    "descripcion": "Preeclampsia moderada",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O14.10",
-    "descripcion": "Preeclampsia severa",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O15.9",
-    "descripcion": "Eclampsia NE",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O26.85",
-    "descripcion": "Síndrome de túnel del carpo en el embarazo",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O34.21",
-    "descripcion": "Útero con cicatriz de cesárea anterior",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "O36.0130",
-    "descripcion": "Incompatibilidad Rh sin hidropesía fetal",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "Z34.01",
-    "descripcion": "Supervisión de embarazo normal — primer trimestre",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "Z34.31",
-    "descripcion": "Supervisión de embarazo normal — tercer trimestre",
-    "grupo": "Ginecología",
-    "sistema": "Ginecología"
-  },
-  {
-    "codigo": "G21.9",
-    "descripcion": "Parkinsonismo secundario NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G25.81",
-    "descripcion": "Síndrome de piernas inquietas",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G31.09",
-    "descripcion": "Demencia frontotemporal NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G31.84",
-    "descripcion": "Deterioro cognitivo leve (DCL)",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.009",
-    "descripcion": "Epilepsia localizada NE sin estado epiléptico",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.109",
-    "descripcion": "Epilepsia generalizada NE sin estado epiléptico",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.909",
-    "descripcion": "Epilepsia NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G40.311",
-    "descripcion": "Epilepsia mioclónica juvenil",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.009",
-    "descripcion": "Migraña sin aura NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.109",
-    "descripcion": "Migraña con aura NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.909",
-    "descripcion": "Migraña NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G43.A0",
-    "descripcion": "Migraña crónica sin estado migrañoso",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.009",
-    "descripcion": "Cefalea en racimos NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.309",
-    "descripcion": "Cefalea post-traumática NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.319",
-    "descripcion": "Cefalea tensional episódica NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G44.329",
-    "descripcion": "Cefalea tensional crónica NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G54.2",
-    "descripcion": "Radiculopatía cervical",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G54.4",
-    "descripcion": "Radiculopatía lumbosacra",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G57.10",
-    "descripcion": "Meralgia parestésica NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G60.9",
-    "descripcion": "Neuropatía hereditaria y sensitiva NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G63",
-    "descripcion": "Polineuropatía en enfermedades clasificadas en otra parte",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G70.01",
-    "descripcion": "Miastenia gravis con exacerbación (crisis)",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G89.21",
-    "descripcion": "Dolor crónico agudo-en-crónico",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G89.29",
-    "descripcion": "Dolor crónico NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G93.40",
-    "descripcion": "Encefalopatía NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "G95.9",
-    "descripcion": "Enfermedad de la médula espinal NE",
-    "grupo": "Neurología",
-    "sistema": "Neurología"
-  },
-  {
-    "codigo": "F06.30",
-    "descripcion": "Depresión debida a enfermedad médica — sin síntomas psicóticos",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F10.10",
-    "descripcion": "Trastorno por uso de alcohol — nivel leve",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F10.20",
-    "descripcion": "Dependencia al alcohol — nivel moderado/severo",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F17.210",
-    "descripcion": "Dependencia al tabaco NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F19.10",
-    "descripcion": "Trastorno por uso de otras sustancias — nivel leve",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F20.9",
-    "descripcion": "Esquizofrenia NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F25.9",
-    "descripcion": "Trastorno esquizoafectivo NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F31.9",
-    "descripcion": "Trastorno afectivo bipolar NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F32.9",
-    "descripcion": "Episodio depresivo NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F33.9",
-    "descripcion": "Trastorno depresivo recurrente NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F40.10",
-    "descripcion": "Fobia social NE (trastorno de ansiedad social)",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F40.218",
-    "descripcion": "Fobia específica — otros tipos",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F41.3",
-    "descripcion": "Trastorno mixto ansioso-depresivo",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F41.9",
-    "descripcion": "Trastorno de ansiedad NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F42.9",
-    "descripcion": "Trastorno obsesivo-compulsivo (TOC) NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F43.10",
-    "descripcion": "Trastorno de estrés postraumático (TEPT) agudo",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F43.12",
-    "descripcion": "TEPT crónico",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F43.20",
-    "descripcion": "Trastorno de adaptación NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F43.23",
-    "descripcion": "Trastorno de adaptación con ansiedad",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F50.9",
-    "descripcion": "Trastorno de la conducta alimentaria NE",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F51.3",
-    "descripcion": "Sonambulismo",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F90.2",
-    "descripcion": "TDAH — presentación combinada",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
-  },
-  {
-    "codigo": "F90.9",
-    "descripcion": "TDAH — tipo no especificado",
-    "grupo": "Salud mental",
-    "sistema": "Salud mental"
+    "grupo": "Insuficiencia venosa NE",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I87.2",
+    "descripcion": "Insuficiencia venosa crónica periférica",
+    "grupo": "Insuficiencia venosa periférica",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I89.0",
+    "descripcion": "Linfedema no clasificado en otra parte",
+    "grupo": "Linfedema no clasificado en otra parte",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I95.1",
+    "descripcion": "Hipotensión ortostática",
+    "grupo": "Hipotensión ortostática",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I95.9",
+    "descripcion": "Hipotensión no especificada",
+    "grupo": "Hipotensión",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.0",
+    "descripcion": "Hemorroides de primer grado",
+    "grupo": "Hemorroides de primer grado",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.9",
+    "descripcion": "Hemorroides no especificadas",
+    "grupo": "Hemorroides",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "R00.1",
+    "descripcion": "Bradicardia no especificada",
+    "grupo": "Bradicardia",
+    "sistema": "Cardiovascular",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q00.0",
+    "descripcion": "Anencefalia",
+    "grupo": "Anencefalia",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q02",
+    "descripcion": "Microcefalia",
+    "grupo": "Microcefalia",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q03.9",
+    "descripcion": "Hidrocefalia congénita no especificada",
+    "grupo": "Hidrocefalia congénita",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q05.9",
+    "descripcion": "Espina bífida no especificada",
+    "grupo": "Espina bífida",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q20.3",
+    "descripcion": "Transposición de grandes vasos",
+    "grupo": "Transposición de grandes vasos",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q21.0",
+    "descripcion": "Comunicación interventricular (CIV)",
+    "grupo": "Comunicación interventricular",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q21.1",
+    "descripcion": "Comunicación interauricular (CIA)",
+    "grupo": "Comunicación interauricular",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q21.2",
+    "descripcion": "Defecto del tabique auriculoventricular",
+    "grupo": "Defecto del tabique auriculoventricular",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q21.3",
+    "descripcion": "Tetralogía de Fallot",
+    "grupo": "Tetralogía de Fallot",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q22.1",
+    "descripcion": "Estenosis congénita de la válvula pulmonar",
+    "grupo": "Estenosis congénita de la válvula pulmonar",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q23.4",
+    "descripcion": "Síndrome de corazón izquierdo hipoplásico",
+    "grupo": "Síndrome de corazón izquierdo hipoplásico",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q24.9",
+    "descripcion": "Malformación congénita del corazón no especificada",
+    "grupo": "Malformación congénita del corazón",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q25.0",
+    "descripcion": "Conducto arterioso permeable (ductus persistente)",
+    "grupo": "Conducto arterioso permeable",
+    "sistema": "Congénitas",
+    "tipo": "crónico",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q25.1",
+    "descripcion": "Coartación de la aorta",
+    "grupo": "Coartación de la aorta",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q35.9",
+    "descripcion": "Fisura del paladar no especificada (paladar hendido)",
+    "grupo": "Fisura del paladar",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q36.9",
+    "descripcion": "Labio leporino unilateral",
+    "grupo": "Labio leporino unilateral",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q37.9",
+    "descripcion": "Paladar hendido con labio leporino unilateral",
+    "grupo": "Paladar hendido con labio leporino unilateral",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q39.0",
+    "descripcion": "Atresia del esófago sin fístula",
+    "grupo": "Atresia del esófago sin fístula",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q39.1",
+    "descripcion": "Atresia del esófago con fístula traqueoesofágica",
+    "grupo": "Atresia del esófago con fístula",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q40.0",
+    "descripcion": "Estenosis hipertrófica congénita del píloro",
+    "grupo": "Estenosis hipertrófica congénita del píloro",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q41.0",
+    "descripcion": "Atresia y estenosis congénita del duodeno",
+    "grupo": "Atresia y estenosis congénita del duodeno",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q42.3",
+    "descripcion": "Atresia del ano sin fístula (ano imperforado)",
+    "grupo": "Atresia del ano sin fístula",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q43.1",
+    "descripcion": "Enfermedad de Hirschsprung",
+    "grupo": "Enfermedad de Hirschsprung",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q44.2",
+    "descripcion": "Atresia de los conductos biliares",
+    "grupo": "Atresia de los conductos biliares",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q53.9",
+    "descripcion": "Testículo no descendido no especificado (criptorquidia)",
+    "grupo": "Testículo no descendido",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q54.9",
+    "descripcion": "Hipospadias no especificado",
+    "grupo": "Hipospadias",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q62.0",
+    "descripcion": "Hidronefrosis congénita",
+    "grupo": "Hidronefrosis congénita",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q65.0",
+    "descripcion": "Luxación congénita de la cadera, unilateral",
+    "grupo": "Luxación congénita de la cadera",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q65.8",
+    "descripcion": "Displasia del desarrollo de la cadera",
+    "grupo": "Displasia del desarrollo de la cadera",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q66.0",
+    "descripcion": "Pie equino varo congénito (talipes equinovarus)",
+    "grupo": "Pie equino varo congénito",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q69.9",
+    "descripcion": "Polidactilia no especificada",
+    "grupo": "Polidactilia",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q70.9",
+    "descripcion": "Sindactilia no especificada",
+    "grupo": "Sindactilia",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q79.0",
+    "descripcion": "Hernia diafragmática congénita",
+    "grupo": "Hernia diafragmática congénita",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q79.2",
+    "descripcion": "Onfalocele (exónfalos)",
+    "grupo": "Onfalocele",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q79.3",
+    "descripcion": "Gastrosquisis",
+    "grupo": "Gastrosquisis",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q90.9",
+    "descripcion": "Síndrome de Down no especificado",
+    "grupo": "Síndrome de Down",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q91.3",
+    "descripcion": "Trisomía 18 (síndrome de Edwards) no especificada",
+    "grupo": "Trisomía 18",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q91.7",
+    "descripcion": "Trisomía 13 (síndrome de Patau) no especificada",
+    "grupo": "Trisomía 13",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q96.9",
+    "descripcion": "Síndrome de Turner no especificado",
+    "grupo": "Síndrome de Turner",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
+  },
+  {
+    "codigo": "Q98.0",
+    "descripcion": "Síndrome de Klinefelter, cariotipo 47,XXY",
+    "grupo": "Síndrome de Klinefelter",
+    "sistema": "Congénitas",
+    "tipo": "congénito",
+    "subtipo": "congénito",
+    "severidad": ""
   },
   {
     "codigo": "B02.22",
     "descripcion": "Herpes zóster con encefalitis",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Herpes zóster con encefalitis",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
     "codigo": "B02.29",
     "descripcion": "Herpes zóster — otras complicaciones",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Herpes zóster",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
     "codigo": "B35.9",
     "descripcion": "Tiña NE (dermatofitosis)",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Tiña NE",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
     "codigo": "B85.1",
     "descripcion": "Pediculosis capitis",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Pediculosis capitis",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "I89.1",
+    "descripcion": "Linfangitis",
+    "grupo": "Linfangitis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "L01.0",
+    "descripcion": "Impetigo",
+    "grupo": "Impetigo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.0",
+    "descripcion": "Absceso cutaneo, furunculo y antrax de la cara",
+    "grupo": "Absceso cutaneo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L02.01",
     "descripcion": "Absceso cutáneo de cara",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Absceso cutáneo de cara",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.1",
+    "descripcion": "Absceso cutaneo, furunculo y antrax del cuello",
+    "grupo": "Absceso cutaneo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.2",
+    "descripcion": "Absceso cutaneo, furunculo y antrax del tronco",
+    "grupo": "Absceso cutaneo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L02.214",
     "descripcion": "Furúnculo de miembro inferior",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Furúnculo de miembro inferior",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.3",
+    "descripcion": "Absceso cutaneo, furunculo y antrax de la nalga",
+    "grupo": "Absceso cutaneo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.4",
+    "descripcion": "Absceso cutaneo, furunculo y antrax de miembro",
+    "grupo": "Absceso cutaneo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L02.9",
+    "descripcion": "Absceso cutaneo y furunculo, sitio no especificado",
+    "grupo": "Absceso cutaneo y furunculo",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L03.0",
+    "descripcion": "Celulitis de dedos de mano y pie (paroniquia)",
+    "grupo": "Celulitis de dedos de mano y pie",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L03.011",
     "descripcion": "Celulitis de dedo de mano",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Celulitis de dedo de mano",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L03.1",
+    "descripcion": "Celulitis de otras partes de los miembros",
+    "grupo": "Celulitis de otras partes de los miembros",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L03.2",
+    "descripcion": "Celulitis de la cara",
+    "grupo": "Celulitis de la cara",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L03.3",
+    "descripcion": "Celulitis del tronco",
+    "grupo": "Celulitis del tronco",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L03.9",
+    "descripcion": "Celulitis, no especificada",
+    "grupo": "Celulitis",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L03.90",
     "descripcion": "Celulitis NE",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Celulitis NE",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "L27.1",
-    "descripcion": "Erupción cutánea localizada por drogas",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "codigo": "L05.0",
+    "descripcion": "Quiste pilonidal con absceso",
+    "grupo": "Quiste pilonidal con absceso",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "L72.9",
-    "descripcion": "Quiste folicular cutáneo NE",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "codigo": "L05.9",
+    "descripcion": "Quiste pilonidal sin absceso",
+    "grupo": "Quiste pilonidal sin absceso",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "L98.9",
-    "descripcion": "Trastorno de piel NE",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "codigo": "L08.0",
+    "descripcion": "Pioderma",
+    "grupo": "Pioderma",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L08.9",
     "descripcion": "Infección local de la piel NE",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Infección local de la piel NE",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L20.8",
+    "descripcion": "Otras dermatitis atopicas",
+    "grupo": "Otras dermatitis atopicas",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L20.9",
+    "descripcion": "Dermatitis atopica, no especificada",
+    "grupo": "Dermatitis atopica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L21.0",
+    "descripcion": "Dermatitis seborreica del cuero cabelludo",
+    "grupo": "Dermatitis seborreica del cuero cabelludo",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L21.9",
+    "descripcion": "Dermatitis seborreica, no especificada",
+    "grupo": "Dermatitis seborreica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L22",
+    "descripcion": "Dermatitis del panal",
+    "grupo": "Dermatitis del panal",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L23.0",
+    "descripcion": "Dermatitis alergica de contacto debida a metales",
+    "grupo": "Dermatitis alergica de contacto debida a",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L23.2",
+    "descripcion": "Dermatitis alergica de contacto debida a cosmeticos",
+    "grupo": "Dermatitis alergica de contacto debida a",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L23.3",
+    "descripcion": "Dermatitis alergica de contacto por medicamentos topicos",
+    "grupo": "Dermatitis alergica de contacto por",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L23.9",
+    "descripcion": "Dermatitis alergica de contacto, causa no especificada",
+    "grupo": "Dermatitis alergica de contacto",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L24.0",
+    "descripcion": "Dermatitis de contacto por irritantes: detergentes",
+    "grupo": "Dermatitis de contacto por irritantes:",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L24.9",
+    "descripcion": "Dermatitis de contacto por irritantes, causa no especificada",
+    "grupo": "Dermatitis de contacto por irritantes",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L25.9",
+    "descripcion": "Dermatitis de contacto, no especificada",
+    "grupo": "Dermatitis de contacto",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L27.0",
+    "descripcion": "Erupcion cutanea generalizada debida a medicamentos",
+    "grupo": "Erupcion cutanea generalizada debida a",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L27.1",
+    "descripcion": "Erupción cutánea localizada por drogas",
+    "grupo": "Erupción cutánea localizada por drogas",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L28.0",
+    "descripcion": "Liquen simple cronico",
+    "grupo": "Liquen simple",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L29.0",
+    "descripcion": "Prurito anal",
+    "grupo": "Prurito anal",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L29.9",
+    "descripcion": "Prurito, no especificado",
+    "grupo": "Prurito",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L30.0",
+    "descripcion": "Dermatitis numular",
+    "grupo": "Dermatitis numular",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L30.4",
+    "descripcion": "Eritema intertrigo",
+    "grupo": "Eritema intertrigo",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L30.9",
+    "descripcion": "Dermatitis (eccema), no especificada",
+    "grupo": "Dermatitis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.0",
+    "descripcion": "Psoriasis vulgar",
+    "grupo": "Psoriasis vulgar",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.1",
+    "descripcion": "Psoriasis pustulosa generalizada",
+    "grupo": "Psoriasis pustulosa generalizada",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.3",
+    "descripcion": "Pustulosis palmoplantar",
+    "grupo": "Pustulosis palmoplantar",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.4",
+    "descripcion": "Psoriasis guttata",
+    "grupo": "Psoriasis guttata",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.5",
+    "descripcion": "Artropatia psoriasica",
+    "grupo": "Artropatia psoriasica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.8",
+    "descripcion": "Otras psoriasis (inversa o flexural)",
+    "grupo": "Otras psoriasis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L40.9",
+    "descripcion": "Psoriasis, no especificada",
+    "grupo": "Psoriasis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L42",
+    "descripcion": "Pitiriasis rosada",
+    "grupo": "Pitiriasis rosada",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L43.9",
+    "descripcion": "Liquen plano, no especificado",
+    "grupo": "Liquen plano",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.0",
+    "descripcion": "Urticaria alergica",
+    "grupo": "Urticaria alergica",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.1",
+    "descripcion": "Urticaria idiopatica",
+    "grupo": "Urticaria idiopatica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.2",
+    "descripcion": "Urticaria debida al calor y al frio",
+    "grupo": "Urticaria debida al calor y al frio",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.3",
+    "descripcion": "Urticaria dermatografica",
+    "grupo": "Urticaria dermatografica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.6",
+    "descripcion": "Urticaria de contacto",
+    "grupo": "Urticaria de contacto",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.8",
+    "descripcion": "Urticaria cronica",
+    "grupo": "Urticaria",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L50.9",
+    "descripcion": "Urticaria, no especificada",
+    "grupo": "Urticaria",
+    "sistema": "Dermatología",
+    "tipo": "agudo",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L51.0",
+    "descripcion": "Eritema multiforme no flictenular",
+    "grupo": "Eritema multiforme no flictenular",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L51.1",
+    "descripcion": "Eritema multiforme flictenular (Stevens-Johnson)",
+    "grupo": "Eritema multiforme flictenular",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L51.9",
+    "descripcion": "Eritema multiforme, no especificado",
+    "grupo": "Eritema multiforme",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L55.0",
+    "descripcion": "Quemadura solar de primer grado",
+    "grupo": "Quemadura solar de primer grado",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L55.1",
+    "descripcion": "Quemadura solar de segundo grado",
+    "grupo": "Quemadura solar de segundo grado",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L55.9",
+    "descripcion": "Quemadura solar, no especificada",
+    "grupo": "Quemadura solar",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L57.0",
+    "descripcion": "Queratosis actinica",
+    "grupo": "Queratosis actinica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L60.0",
+    "descripcion": "Una encarnada",
+    "grupo": "Una encarnada",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L63.9",
+    "descripcion": "Alopecia areata, no especificada",
+    "grupo": "Alopecia areata",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L64.9",
+    "descripcion": "Alopecia androgenica, no especificada",
+    "grupo": "Alopecia androgenica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L65.0",
+    "descripcion": "Efluvio telogeno",
+    "grupo": "Efluvio telogeno",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L68.0",
+    "descripcion": "Hirsutismo",
+    "grupo": "Hirsutismo",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L70.0",
+    "descripcion": "Acne vulgar",
+    "grupo": "Acne vulgar",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L70.1",
+    "descripcion": "Acne conglobata",
+    "grupo": "Acne conglobata",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L70.4",
+    "descripcion": "Acne infantil",
+    "grupo": "Acne infantil",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L70.5",
+    "descripcion": "Acne excoriado",
+    "grupo": "Acne excoriado",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L70.9",
+    "descripcion": "Acne, no especificado",
+    "grupo": "Acne",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L71.0",
+    "descripcion": "Dermatitis perioral",
+    "grupo": "Dermatitis perioral",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L71.9",
+    "descripcion": "Rosacea, no especificada",
+    "grupo": "Rosacea",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L72.0",
+    "descripcion": "Quiste epidermico",
+    "grupo": "Quiste epidermico",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L72.1",
+    "descripcion": "Quiste tricodermico (sebaceo)",
+    "grupo": "Quiste tricodermico",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L72.9",
+    "descripcion": "Quiste folicular cutáneo NE",
+    "grupo": "Quiste folicular cutáneo NE",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L73.0",
+    "descripcion": "Acne queloide",
+    "grupo": "Acne queloide",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L73.2",
+    "descripcion": "Hidradenitis supurativa",
+    "grupo": "Hidradenitis supurativa",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L73.9",
+    "descripcion": "Foliculitis, no especificada",
+    "grupo": "Foliculitis",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L80",
+    "descripcion": "Vitiligo",
+    "grupo": "Vitiligo",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L81.0",
+    "descripcion": "Hiperpigmentacion postinflamatoria",
+    "grupo": "Hiperpigmentacion postinflamatoria",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L81.1",
+    "descripcion": "Cloasma (melasma)",
+    "grupo": "Cloasma",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "L82",
+    "descripcion": "Queratosis seborreica",
+    "grupo": "Queratosis seborreica",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
     "codigo": "L82.1",
     "descripcion": "Queratosis seborreica NE",
-    "grupo": "Dermatología",
-    "sistema": "Dermatología"
+    "grupo": "Queratosis seborreica NE",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H04.12",
-    "descripcion": "Dacriocistitis aguda",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L84",
+    "descripcion": "Callos y callosidades",
+    "grupo": "Callos y callosidades",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H10.10",
-    "descripcion": "Conjuntivitis aguda atópica",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L85.0",
+    "descripcion": "Ictiosis adquirida",
+    "grupo": "Ictiosis adquirida",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H10.30",
-    "descripcion": "Conjuntivitis alérgica NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L89.0",
+    "descripcion": "Ulcera de decubito grado I",
+    "grupo": "Ulcera de decubito grado I",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H16.009",
-    "descripcion": "Úlcera corneal NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L89.1",
+    "descripcion": "Ulcera de decubito grado II",
+    "grupo": "Ulcera de decubito grado II",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H18.9",
-    "descripcion": "Trastorno de córnea NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L89.2",
+    "descripcion": "Ulcera de decubito grado III",
+    "grupo": "Ulcera de decubito grado III",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H33.00",
-    "descripcion": "Desprendimiento de retina sin rotura",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L89.3",
+    "descripcion": "Ulcera de decubito grado IV",
+    "grupo": "Ulcera de decubito grado IV",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H35.30",
-    "descripcion": "Degeneración macular por edad NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L91.0",
+    "descripcion": "Cicatriz queloide",
+    "grupo": "Cicatriz queloide",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H36",
-    "descripcion": "Retinopatía diabética en DM clasificada en otro lugar",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L92.0",
+    "descripcion": "Granuloma anular",
+    "grupo": "Granuloma anular",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H40.1110",
-    "descripcion": "Glaucoma primario de ángulo abierto — ojo derecho",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L97",
+    "descripcion": "Ulcera de miembro inferior, no clasificada en otra parte",
+    "grupo": "Ulcera de miembro inferior",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H65.30",
-    "descripcion": "Otitis media serosa crónica NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L98.0",
+    "descripcion": "Granuloma piogeno",
+    "grupo": "Granuloma piogeno",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H66.00",
-    "descripcion": "Otitis media supurativa aguda NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L98.4",
+    "descripcion": "Úlcera crónica de la piel no clasificada en otra parte",
+    "grupo": "Úlcera de la piel no clasificada en otra parte",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H66.3X9",
-    "descripcion": "Otitis media supurativa crónica NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "L98.9",
+    "descripcion": "Trastorno de piel NE",
+    "grupo": "Trastorno de piel NE",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": ""
   },
   {
-    "codigo": "H74.9",
-    "descripcion": "Trastorno de oído medio y mastoideo NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "A09.9",
+    "descripcion": "Gastroenteritis y colitis infecciosa NE",
+    "grupo": "Gastroenteritis y colitis infecciosa NE",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "H81.09",
-    "descripcion": "Enfermedad de Ménière NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "I85.0",
+    "descripcion": "Varices esofagicas con hemorragia",
+    "grupo": "Varices esofagicas con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
   },
   {
-    "codigo": "H81.311",
-    "descripcion": "Vértigo posicional paroxístico benigno (VPPB) — oído derecho",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "I85.9",
+    "descripcion": "Varices esofagicas sin hemorragia",
+    "grupo": "Varices esofagicas sin hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
   },
   {
-    "codigo": "H83.09",
-    "descripcion": "Laberintitis NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "K02.1",
+    "descripcion": "Caries de la dentina",
+    "grupo": "Caries de la dentina",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
   },
   {
-    "codigo": "H91.90",
-    "descripcion": "Hipoacusia NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "K02.9",
+    "descripcion": "Caries dental, no especificada",
+    "grupo": "Caries dental",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
   },
   {
-    "codigo": "H92.09",
-    "descripcion": "Otalgia NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "K04.0",
+    "descripcion": "Pulpitis",
+    "grupo": "Pulpitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
   },
   {
-    "codigo": "H93.19",
-    "descripcion": "Tinnitus NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "K04.6",
+    "descripcion": "Absceso periapical con fistula",
+    "grupo": "Absceso periapical con fistula",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
   },
   {
-    "codigo": "J38.0",
-    "descripcion": "Parálisis de cuerdas vocales NE",
-    "grupo": "Oftalmología/ORL",
-    "sistema": "Oftalmología/ORL"
+    "codigo": "K04.7",
+    "descripcion": "Absceso periapical sin fistula",
+    "grupo": "Absceso periapical sin fistula",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K05.0",
+    "descripcion": "Gingivitis aguda",
+    "grupo": "Gingivitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K05.1",
+    "descripcion": "Gingivitis cronica",
+    "grupo": "Gingivitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K05.3",
+    "descripcion": "Periodontitis cronica",
+    "grupo": "Periodontitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K12.0",
+    "descripcion": "Estomatitis aftosa recurrente",
+    "grupo": "Estomatitis aftosa",
+    "sistema": "Digestivo",
+    "tipo": "recurrente",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K12.2",
+    "descripcion": "Celulitis y absceso de la boca",
+    "grupo": "Celulitis y absceso de la boca",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K20",
+    "descripcion": "Esofagitis",
+    "grupo": "Esofagitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K20.0",
+    "descripcion": "Esofagitis eosinofílica",
+    "grupo": "Esofagitis eosinofílica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K20.9",
+    "descripcion": "Esofagitis NE",
+    "grupo": "Esofagitis NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K21.0",
+    "descripcion": "Enfermedad por reflujo gastroesofagico con esofagitis",
+    "grupo": "Enfermedad por reflujo gastroesofagico con",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K21.9",
+    "descripcion": "Enfermedad por reflujo gastroesofagico sin esofagitis",
+    "grupo": "Enfermedad por reflujo gastroesofagico sin",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K22.1",
+    "descripcion": "Ulcera del esofago",
+    "grupo": "Ulcera del esofago",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K22.2",
+    "descripcion": "Úlcera esofágica",
+    "grupo": "Úlcera esofágica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.0",
+    "descripcion": "Ulcera gastrica aguda con hemorragia",
+    "grupo": "Ulcera gastrica con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.1",
+    "descripcion": "Ulcera gastrica aguda con perforacion",
+    "grupo": "Ulcera gastrica con perforacion",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.3",
+    "descripcion": "Ulcera gastrica aguda sin hemorragia ni perforacion",
+    "grupo": "Ulcera gastrica sin hemorragia ni perforacion",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.4",
+    "descripcion": "Úlcera gástrica crónica con hemorragia",
+    "grupo": "Úlcera gástrica con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.5",
+    "descripcion": "Úlcera gástrica crónica con perforación",
+    "grupo": "Úlcera gástrica con perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.6",
+    "descripcion": "Úlcera gástrica crónica con hemorragia y perforación",
+    "grupo": "Úlcera gástrica con hemorragia y perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.7",
+    "descripcion": "Ulcera gastrica cronica sin hemorragia ni perforacion",
+    "grupo": "Ulcera gastrica sin hemorragia ni perforacion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K25.9",
+    "descripcion": "Ulcera gastrica, no especificada",
+    "grupo": "Ulcera gastrica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.0",
+    "descripcion": "Ulcera duodenal aguda con hemorragia",
+    "grupo": "Ulcera duodenal con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.3",
+    "descripcion": "Ulcera duodenal aguda sin hemorragia ni perforacion",
+    "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.4",
+    "descripcion": "Úlcera duodenal crónica con hemorragia",
+    "grupo": "Úlcera duodenal con hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.5",
+    "descripcion": "Úlcera duodenal crónica con perforación",
+    "grupo": "Úlcera duodenal con perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.7",
+    "descripcion": "Ulcera duodenal cronica sin hemorragia ni perforacion",
+    "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K26.9",
+    "descripcion": "Ulcera duodenal, no especificada",
+    "grupo": "Ulcera duodenal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K27.3",
+    "descripcion": "Úlcera péptica aguda sin hemorragia ni perforación",
+    "grupo": "Úlcera péptica sin hemorragia ni perforación",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K27.7",
+    "descripcion": "Úlcera péptica crónica sin hemorragia ni perforación",
+    "grupo": "Úlcera péptica sin hemorragia ni perforación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K27.9",
+    "descripcion": "Ulcera peptica, sitio no especificado",
+    "grupo": "Ulcera peptica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.0",
+    "descripcion": "Gastritis aguda hemorragica",
+    "grupo": "Gastritis hemorragica",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.00",
+    "descripcion": "Gastritis aguda sin hemorragia",
+    "grupo": "Gastritis sin hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.1",
+    "descripcion": "Otras gastritis agudas",
+    "grupo": "Otras gastritis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.2",
+    "descripcion": "Gastritis alcohólica",
+    "grupo": "Gastritis alcohólica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.3",
+    "descripcion": "Gastritis cronica superficial",
+    "grupo": "Gastritis superficial",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.4",
+    "descripcion": "Gastritis cronica atrofica",
+    "grupo": "Gastritis atrofica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.5",
+    "descripcion": "Gastritis crónica no especificada",
+    "grupo": "Gastritis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.6",
+    "descripcion": "Otras gastritis",
+    "grupo": "Otras gastritis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.7",
+    "descripcion": "Gastritis, no especificada",
+    "grupo": "Gastritis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.70",
+    "descripcion": "Gastritis NE sin hemorragia",
+    "grupo": "Gastritis NE sin hemorragia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.8",
+    "descripcion": "Duodenitis",
+    "grupo": "Duodenitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K29.9",
+    "descripcion": "Gastroduodenitis, no especificada",
+    "grupo": "Gastroduodenitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K30",
+    "descripcion": "Dispepsia",
+    "grupo": "Dispepsia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K31.84",
+    "descripcion": "Gastroparesia",
+    "grupo": "Gastroparesia",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.2",
+    "descripcion": "Apendicitis aguda con peritonitis generalizada",
+    "grupo": "Apendicitis con peritonitis generalizada",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.20",
+    "descripcion": "Apendicitis aguda con peritonitis generalizada NE",
+    "grupo": "Apendicitis con peritonitis generalizada NE",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.3",
+    "descripcion": "Apendicitis aguda con peritonitis localizada",
+    "grupo": "Apendicitis con peritonitis localizada",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.8",
+    "descripcion": "Apendicitis aguda, no especificada",
+    "grupo": "Apendicitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K35.89",
+    "descripcion": "Apendicitis aguda con otro tipo de peritonitis",
+    "grupo": "Apendicitis con otro tipo de peritonitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K36",
+    "descripcion": "Apendicitis cronica",
+    "grupo": "Apendicitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K37",
+    "descripcion": "Apendicitis, no especificada",
+    "grupo": "Apendicitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K40.0",
+    "descripcion": "Hernia inguinal bilateral con obstruccion, sin gangrena",
+    "grupo": "Hernia inguinal bilateral con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K40.3",
+    "descripcion": "Hernia inguinal unilateral con obstruccion, sin gangrena",
+    "grupo": "Hernia inguinal unilateral con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K40.9",
+    "descripcion": "Hernia inguinal unilateral, sin obstruccion ni gangrena",
+    "grupo": "Hernia inguinal unilateral",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K40.90",
+    "descripcion": "Hernia inguinal NE sin obstrucción ni gangrena",
+    "grupo": "Hernia inguinal NE sin obstrucción ni gangrena",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K41.9",
+    "descripcion": "Hernia femoral unilateral, sin obstruccion ni gangrena",
+    "grupo": "Hernia femoral unilateral",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K42.0",
+    "descripcion": "Hernia umbilical con obstruccion, sin gangrena",
+    "grupo": "Hernia umbilical con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K42.9",
+    "descripcion": "Hernia umbilical sin obstruccion ni gangrena",
+    "grupo": "Hernia umbilical sin obstruccion ni gangrena",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K43.0",
+    "descripcion": "Hernia ventral con obstruccion, sin gangrena",
+    "grupo": "Hernia ventral con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K43.9",
+    "descripcion": "Hernia ventral sin obstruccion ni gangrena",
+    "grupo": "Hernia ventral sin obstruccion ni gangrena",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K44.0",
+    "descripcion": "Hernia diafragmatica con obstruccion, sin gangrena",
+    "grupo": "Hernia diafragmatica con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K44.9",
+    "descripcion": "Hernia hiatal sin obstruccion ni gangrena",
+    "grupo": "Hernia hiatal sin obstruccion ni gangrena",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K46.9",
+    "descripcion": "Hernia abdominal, no especificada",
+    "grupo": "Hernia abdominal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K50.0",
+    "descripcion": "Enfermedad de Crohn del intestino delgado",
+    "grupo": "Enfermedad de Crohn del intestino delgado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K50.1",
+    "descripcion": "Enfermedad de Crohn del intestino grueso",
+    "grupo": "Enfermedad de Crohn del intestino grueso",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K50.9",
+    "descripcion": "Enfermedad de Crohn, no especificada",
+    "grupo": "Enfermedad de Crohn",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K50.90",
+    "descripcion": "Enfermedad de Crohn NE sin complicaciones",
+    "grupo": "Enfermedad de Crohn NE sin complicaciones",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K51.0",
+    "descripcion": "Colitis ulcerosa con pancolitis",
+    "grupo": "Colitis ulcerosa con pancolitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K51.00",
+    "descripcion": "Colitis ulcerativa NE",
+    "grupo": "Colitis ulcerativa NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K51.9",
+    "descripcion": "Colitis ulcerosa, no especificada",
+    "grupo": "Colitis ulcerosa",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K51.90",
+    "descripcion": "Colitis ulcerativa NE sin complicaciones",
+    "grupo": "Colitis ulcerativa NE sin complicaciones",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "K52.1",
+    "descripcion": "Gastroenteritis y colitis toxicas",
+    "grupo": "Gastroenteritis y colitis toxicas",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K52.2",
+    "descripcion": "Gastroenteritis y colitis alergicas y dieteticas",
+    "grupo": "Gastroenteritis y colitis alergicas y",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K52.29",
+    "descripcion": "Colitis alérgica/eosinofílica NE",
+    "grupo": "Colitis alérgica/eosinofílica NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K52.9",
+    "descripcion": "Gastroenteritis y colitis no infecciosa, no especificada",
+    "grupo": "Gastroenteritis y colitis no infecciosa",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K55.30",
+    "descripcion": "Colitis isquémica NE",
+    "grupo": "Colitis isquémica NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K56.0",
+    "descripcion": "Ileo paralitico",
+    "grupo": "Ileo paralitico",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K56.2",
+    "descripcion": "Volvulo intestinal",
+    "grupo": "Volvulo intestinal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K56.5",
+    "descripcion": "Adherencias intestinales con obstruccion",
+    "grupo": "Adherencias intestinales con obstruccion",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K56.6",
+    "descripcion": "Otras obstrucciones intestinales y las no especificadas",
+    "grupo": "Otras obstrucciones intestinales y las",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K56.7",
+    "descripcion": "Ileo, no especificado",
+    "grupo": "Ileo",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.2",
+    "descripcion": "Diverticulitis del colon con perforacion y absceso",
+    "grupo": "Diverticulitis del colon con perforacion y",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.3",
+    "descripcion": "Diverticulosis del colon sin perforacion ni absceso",
+    "grupo": "Diverticulosis del colon sin perforacion ni",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.30",
+    "descripcion": "Enfermedad diverticular intestino grueso sin perforación",
+    "grupo": "Enfermedad diverticular intestino grueso sin",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.9",
+    "descripcion": "Enfermedad diverticular del intestino, no especificada",
+    "grupo": "Enfermedad diverticular del intestino",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K57.92",
+    "descripcion": "Diverticulitis del intestino grueso NE",
+    "grupo": "Diverticulitis del intestino grueso NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K58.0",
+    "descripcion": "Sindrome del intestino irritable con diarrea",
+    "grupo": "Sindrome del intestino irritable con diarrea",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K58.1",
+    "descripcion": "Síndrome de intestino irritable con estreñimiento",
+    "grupo": "Síndrome de intestino irritable con",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K58.9",
+    "descripcion": "Sindrome del intestino irritable sin diarrea",
+    "grupo": "Sindrome del intestino irritable sin diarrea",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K59.0",
+    "descripcion": "Estrenimiento",
+    "grupo": "Estrenimiento",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K59.00",
+    "descripcion": "Estreñimiento NE",
+    "grupo": "Estreñimiento NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K59.09",
+    "descripcion": "Estreñimiento funcional crónico",
+    "grupo": "Estreñimiento funcional",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K59.1",
+    "descripcion": "Diarrea funcional",
+    "grupo": "Diarrea funcional",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K60.0",
+    "descripcion": "Fisura anal aguda",
+    "grupo": "Fisura anal",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K60.1",
+    "descripcion": "Fisura anal cronica",
+    "grupo": "Fisura anal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K60.3",
+    "descripcion": "Fistula anal",
+    "grupo": "Fistula anal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K61.0",
+    "descripcion": "Absceso anal",
+    "grupo": "Absceso anal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K63.5",
+    "descripcion": "Pólipo de colon",
+    "grupo": "Pólipo de colon",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.1",
+    "descripcion": "Hemorroides de segundo grado",
+    "grupo": "Hemorroides de segundo grado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.2",
+    "descripcion": "Hemorroides de tercer grado",
+    "grupo": "Hemorroides de tercer grado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.3",
+    "descripcion": "Hemorroides de cuarto grado",
+    "grupo": "Hemorroides de cuarto grado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K64.5",
+    "descripcion": "Trombosis venosa perianal",
+    "grupo": "Trombosis venosa perianal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K65.0",
+    "descripcion": "Peritonitis aguda",
+    "grupo": "Peritonitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K65.9",
+    "descripcion": "Peritonitis, no especificada",
+    "grupo": "Peritonitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K70.0",
+    "descripcion": "Higado graso alcoholico",
+    "grupo": "Higado graso alcoholico",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K70.1",
+    "descripcion": "Hepatitis alcoholica",
+    "grupo": "Hepatitis alcoholica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K70.3",
+    "descripcion": "Cirrosis hepatica alcoholica",
+    "grupo": "Cirrosis hepatica alcoholica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K70.9",
+    "descripcion": "Hepatopatía alcohólica NE",
+    "grupo": "Hepatopatía alcohólica NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K71.6",
+    "descripcion": "Hepatitis toxica",
+    "grupo": "Hepatitis toxica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K72.0",
+    "descripcion": "Insuficiencia hepatica aguda y subaguda",
+    "grupo": "Insuficiencia hepatica y subaguda",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K72.10",
+    "descripcion": "Insuficiencia hepática crónica NE",
+    "grupo": "Insuficiencia hepática NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K72.9",
+    "descripcion": "Insuficiencia hepatica, no especificada",
+    "grupo": "Insuficiencia hepatica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K74.6",
+    "descripcion": "Cirrosis del higado, otra y no especificada",
+    "grupo": "Cirrosis del higado",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K74.60",
+    "descripcion": "Cirrosis hepática NE",
+    "grupo": "Cirrosis hepática NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K75.0",
+    "descripcion": "Absceso hepático",
+    "grupo": "Absceso hepático",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K75.4",
+    "descripcion": "Hepatitis autoinmune",
+    "grupo": "Hepatitis autoinmune",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K75.8",
+    "descripcion": "Esteatohepatitis no alcoholica (NASH)",
+    "grupo": "Esteatohepatitis no alcoholica",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K76.0",
+    "descripcion": "Higado graso (esteatosis hepatica)",
+    "grupo": "Higado graso",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.0",
+    "descripcion": "Colelitiasis con colecistitis aguda",
+    "grupo": "Colelitiasis con colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.00",
+    "descripcion": "Colelitiasis con colecistitis aguda con obstrucción",
+    "grupo": "Colelitiasis con colecistitis con obstrucción",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.1",
+    "descripcion": "Colelitiasis con otra colecistitis",
+    "grupo": "Colelitiasis con otra colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.2",
+    "descripcion": "Colelitiasis sin colecistitis",
+    "grupo": "Colelitiasis sin colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.20",
+    "descripcion": "Colelitiasis NE sin colecistitis aguda",
+    "grupo": "Colelitiasis NE sin colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.3",
+    "descripcion": "Calculo de conducto biliar con colangitis",
+    "grupo": "Calculo de conducto biliar con colangitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.4",
+    "descripcion": "Cálculo de la vía biliar con colecistitis",
+    "grupo": "Cálculo de la vía biliar con colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K80.5",
+    "descripcion": "Calculo de conducto biliar sin colangitis ni colecistitis",
+    "grupo": "Calculo de conducto biliar sin colangitis ni",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K81.0",
+    "descripcion": "Colecistitis aguda",
+    "grupo": "Colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K81.1",
+    "descripcion": "Colecistitis cronica",
+    "grupo": "Colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K81.9",
+    "descripcion": "Colecistitis, no especificada",
+    "grupo": "Colecistitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K83.0",
+    "descripcion": "Colangitis",
+    "grupo": "Colangitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K83.09",
+    "descripcion": "Colangitis NE",
+    "grupo": "Colangitis NE",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K85.1",
+    "descripcion": "Pancreatitis aguda biliar",
+    "grupo": "Pancreatitis biliar",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K85.2",
+    "descripcion": "Pancreatitis aguda inducida por alcohol",
+    "grupo": "Pancreatitis inducida por alcohol",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K85.9",
+    "descripcion": "Pancreatitis aguda, no especificada",
+    "grupo": "Pancreatitis",
+    "sistema": "Digestivo",
+    "tipo": "agudo",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K86.0",
+    "descripcion": "Pancreatitis cronica inducida por alcohol",
+    "grupo": "Pancreatitis inducida por alcohol",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K86.1",
+    "descripcion": "Otras pancreatitis cronicas",
+    "grupo": "Otras pancreatitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K90.0",
+    "descripcion": "Enfermedad celiaca",
+    "grupo": "Enfermedad celiaca",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K90.9",
+    "descripcion": "Malabsorcion intestinal, no especificada",
+    "grupo": "Malabsorcion intestinal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K92.0",
+    "descripcion": "Hematemesis",
+    "grupo": "Hematemesis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K92.1",
+    "descripcion": "Melena",
+    "grupo": "Melena",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "K92.2",
+    "descripcion": "Hemorragia gastrointestinal, no especificada",
+    "grupo": "Hemorragia gastrointestinal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.9",
+    "descripcion": "Dolor abdominal NE",
+    "grupo": "Dolor abdominal NE",
+    "sistema": "Digestivo",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R11.10",
+    "descripcion": "Náuseas y vómitos NE",
+    "grupo": "Náuseas y vómitos NE",
+    "sistema": "Digestivo",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "E00.9",
+    "descripcion": "Síndrome de deficiencia congénita de yodo",
+    "grupo": "Síndrome de deficiencia congénita de yodo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E01.0",
+    "descripcion": "Bocio difuso por deficiencia de yodo",
+    "grupo": "Bocio difuso por deficiencia de yodo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E01.1",
+    "descripcion": "Bocio multinodular por deficiencia de yodo",
+    "grupo": "Bocio multinodular por deficiencia de yodo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E01.2",
+    "descripcion": "Bocio relacionado con deficiencia de yodo",
+    "grupo": "Bocio relacionado con deficiencia de yodo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E02",
+    "descripcion": "Hipotiroidismo subclínico por deficiencia de yodo",
+    "grupo": "Hipotiroidismo subclínico por deficiencia de",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.0",
+    "descripcion": "Hipotiroidismo congénito con bocio difuso",
+    "grupo": "Hipotiroidismo congénito con bocio difuso",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.1",
+    "descripcion": "Hipotiroidismo congénito sin bocio",
+    "grupo": "Hipotiroidismo congénito sin bocio",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.2",
+    "descripcion": "Hipotiroidismo por fármacos y sustancias exógenas",
+    "grupo": "Hipotiroidismo por fármacos y sustancias",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.3",
+    "descripcion": "Hipotiroidismo postinfeccioso",
+    "grupo": "Hipotiroidismo postinfeccioso",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.4",
+    "descripcion": "Atrofia de tiroides adquirida",
+    "grupo": "Atrofia de tiroides adquirida",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.5",
+    "descripcion": "Coma mixedematoso",
+    "grupo": "Coma mixedematoso",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.8",
+    "descripcion": "Otros hipotiroidismos especificados",
+    "grupo": "Otros hipotiroidismos especificados",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E03.9",
+    "descripcion": "Hipotiroidismo no especificado",
+    "grupo": "Hipotiroidismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E04.0",
+    "descripcion": "Bocio difuso no tóxico",
+    "grupo": "Bocio difuso no tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E04.1",
+    "descripcion": "Nódulo tiroideo solitario no tóxico",
+    "grupo": "Nódulo tiroideo solitario no tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E04.2",
+    "descripcion": "Bocio multinodular no tóxico",
+    "grupo": "Bocio multinodular no tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E04.9",
+    "descripcion": "Bocio no tóxico no especificado",
+    "grupo": "Bocio no tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.0",
+    "descripcion": "Hipertiroidismo con bocio difuso (enfermedad de Graves)",
+    "grupo": "Hipertiroidismo con bocio difuso",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "E05.00",
+    "descripcion": "Bocio difuso tóxico (Graves-Basedow)",
+    "grupo": "Bocio difuso tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "E05.1",
+    "descripcion": "Hipertiroidismo con nódulo tóxico solitario",
+    "grupo": "Hipertiroidismo con nódulo tóxico solitario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.10",
+    "descripcion": "Bocio nodular tóxico uninodular",
+    "grupo": "Bocio nodular tóxico uninodular",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.2",
+    "descripcion": "Hipertiroidismo con bocio multinodular tóxico",
+    "grupo": "Hipertiroidismo con bocio multinodular tóxico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.5",
+    "descripcion": "Crisis o tormenta tiroidea",
+    "grupo": "Crisis o tormenta tiroidea",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.9",
+    "descripcion": "Hipertiroidismo no especificado",
+    "grupo": "Hipertiroidismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E05.90",
+    "descripcion": "Hipertiroidismo NE",
+    "grupo": "Hipertiroidismo NE",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.0",
+    "descripcion": "Tiroiditis aguda",
+    "grupo": "Tiroiditis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.1",
+    "descripcion": "Tiroiditis subaguda (de De Quervain)",
+    "grupo": "Tiroiditis subaguda",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.2",
+    "descripcion": "Tiroiditis crónica con tirotoxicosis transitoria",
+    "grupo": "Tiroiditis con tirotoxicosis transitoria",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.3",
+    "descripcion": "Tiroiditis autoinmune (de Hashimoto)",
+    "grupo": "Tiroiditis autoinmune",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.4",
+    "descripcion": "Tiroiditis inducida por fármacos",
+    "grupo": "Tiroiditis inducida por fármacos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E06.9",
+    "descripcion": "Tiroiditis no especificada",
+    "grupo": "Tiroiditis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E07.9",
+    "descripcion": "Trastorno de la tiroides no especificado",
+    "grupo": "Trastorno de la tiroides",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.1",
+    "descripcion": "Diabetes mellitus tipo 1 con cetoacidosis",
+    "grupo": "Diabetes mellitus tipo 1 con cetoacidosis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.10",
+    "descripcion": "DM tipo 1 con cetoacidosis sin coma",
+    "grupo": "DM tipo 1 con cetoacidosis sin coma",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.2",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones renales",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.3",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones oftálmicas",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.4",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones neurológicas",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.40",
+    "descripcion": "DM tipo 1 con neuropatía diabética",
+    "grupo": "DM tipo 1 con neuropatía diabética",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.5",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones circulatorias",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.6",
+    "descripcion": "Diabetes mellitus tipo 1 con otras complicaciones",
+    "grupo": "Diabetes mellitus tipo 1 con otras",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.7",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones múltiples",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.8",
+    "descripcion": "Diabetes mellitus tipo 1 con complicaciones no especificadas",
+    "grupo": "Diabetes mellitus tipo 1 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E10.9",
+    "descripcion": "Diabetes mellitus tipo 1 sin complicaciones",
+    "grupo": "Diabetes mellitus tipo 1 sin complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.0",
+    "descripcion": "Diabetes mellitus tipo 2 con coma hiperosmolar",
+    "grupo": "Diabetes mellitus tipo 2 con coma hiperosmolar",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.1",
+    "descripcion": "Diabetes mellitus tipo 2 con cetoacidosis",
+    "grupo": "Diabetes mellitus tipo 2 con cetoacidosis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.2",
+    "descripcion": "Diabetes mellitus tipo 2 con nefropatía diabética",
+    "grupo": "Diabetes mellitus tipo 2 con nefropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.21",
+    "descripcion": "DM tipo 2 con nefropatía diabética",
+    "grupo": "DM tipo 2 con nefropatía diabética",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.3",
+    "descripcion": "Diabetes mellitus tipo 2 con retinopatía diabética",
+    "grupo": "Diabetes mellitus tipo 2 con retinopatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.36",
+    "descripcion": "DM tipo 2 con retinopatía diabética proliferativa",
+    "grupo": "DM tipo 2 con retinopatía diabética",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.4",
+    "descripcion": "Diabetes mellitus tipo 2 con neuropatía diabética",
+    "grupo": "Diabetes mellitus tipo 2 con neuropatía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.40",
+    "descripcion": "DM tipo 2 con neuropatía diabética",
+    "grupo": "DM tipo 2 con neuropatía diabética",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.5",
+    "descripcion": "Diabetes mellitus tipo 2 con complicaciones circulatorias",
+    "grupo": "Diabetes mellitus tipo 2 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.51",
+    "descripcion": "DM tipo 2 con complicaciones circulatorias periféricas",
+    "grupo": "DM tipo 2 con complicaciones circulatorias",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.6",
+    "descripcion": "Diabetes mellitus tipo 2 con pie diabético",
+    "grupo": "Diabetes mellitus tipo 2 con pie diabético",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.649",
+    "descripcion": "DM tipo 2 con hipoglicemia NE",
+    "grupo": "DM tipo 2 con hipoglicemia NE",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.65",
+    "descripcion": "DM tipo 2 con hiperglicemia",
+    "grupo": "DM tipo 2 con hiperglicemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.7",
+    "descripcion": "Diabetes mellitus tipo 2 con complicaciones múltiples",
+    "grupo": "Diabetes mellitus tipo 2 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.8",
+    "descripcion": "Diabetes mellitus tipo 2 con complicaciones no especificadas",
+    "grupo": "Diabetes mellitus tipo 2 con complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E11.9",
+    "descripcion": "Diabetes mellitus tipo 2 sin complicaciones",
+    "grupo": "Diabetes mellitus tipo 2 sin complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E12.9",
+    "descripcion": "Diabetes mellitus asociada a desnutrición",
+    "grupo": "Diabetes mellitus asociada a desnutrición",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E13.1",
+    "descripcion": "Otra diabetes mellitus especificada con cetoacidosis",
+    "grupo": "Otra diabetes mellitus especificada con",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E13.9",
+    "descripcion": "Otra diabetes mellitus especificada sin complicaciones",
+    "grupo": "Otra diabetes mellitus especificada sin",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E14.9",
+    "descripcion": "Diabetes mellitus no especificada sin complicaciones",
+    "grupo": "Diabetes mellitus sin complicaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "E15",
+    "descripcion": "Coma hipoglucémico no diabético",
+    "grupo": "Coma hipoglucémico no diabético",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E16.0",
+    "descripcion": "Hipoglucemia sin coma inducida por fármacos",
+    "grupo": "Hipoglucemia sin coma inducida por fármacos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E16.1",
+    "descripcion": "Otra hipoglucemia",
+    "grupo": "Otra hipoglucemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E16.2",
+    "descripcion": "Hipoglucemia no especificada",
+    "grupo": "Hipoglucemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E20.0",
+    "descripcion": "Hipoparatiroidismo idiopático",
+    "grupo": "Hipoparatiroidismo idiopático",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E20.1",
+    "descripcion": "Pseudohipoparatiroidismo",
+    "grupo": "Pseudohipoparatiroidismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E20.9",
+    "descripcion": "Hipoparatiroidismo no especificado",
+    "grupo": "Hipoparatiroidismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E21.0",
+    "descripcion": "Hiperparatiroidismo primario",
+    "grupo": "Hiperparatiroidismo primario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E21.1",
+    "descripcion": "Hiperparatiroidismo secundario",
+    "grupo": "Hiperparatiroidismo secundario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E21.2",
+    "descripcion": "Otros hiperparatiroidismos",
+    "grupo": "Otros hiperparatiroidismos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E21.3",
+    "descripcion": "Trastorno de la paratiroides no especificado",
+    "grupo": "Trastorno de la paratiroides",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E22.0",
+    "descripcion": "Acromegalia y gigantismo hipofisario",
+    "grupo": "Acromegalia y gigantismo hipofisario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E22.1",
+    "descripcion": "Hiperprolactinemia",
+    "grupo": "Hiperprolactinemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E22.2",
+    "descripcion": "Síndrome de secreción inadecuada de ADH (SIADH)",
+    "grupo": "Síndrome de secreción inadecuada de ADH",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E22.8",
+    "descripcion": "Otras hiperfunciones de la hipófisis",
+    "grupo": "Otras hiperfunciones de la hipófisis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E22.9",
+    "descripcion": "Hiperfunción de la hipófisis no especificada",
+    "grupo": "Hiperfunción de la hipófisis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E23.0",
+    "descripcion": "Hipopituitarismo (panhipopituitarismo)",
+    "grupo": "Hipopituitarismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E23.1",
+    "descripcion": "Hipopituitarismo inducido por fármacos",
+    "grupo": "Hipopituitarismo inducido por fármacos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E23.2",
+    "descripcion": "Diabetes insípida",
+    "grupo": "Diabetes insípida",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E23.6",
+    "descripcion": "Otros trastornos de la hipófisis",
+    "grupo": "Otros trastornos de la hipófisis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E23.7",
+    "descripcion": "Trastorno de la hipófisis no especificado",
+    "grupo": "Trastorno de la hipófisis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E24.0",
+    "descripcion": "Enfermedad de Cushing hipofisaria",
+    "grupo": "Enfermedad de Cushing hipofisaria",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E24.2",
+    "descripcion": "Síndrome de Cushing inducido por fármacos",
+    "grupo": "Síndrome de Cushing inducido por fármacos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E24.9",
+    "descripcion": "Síndrome de Cushing no especificado",
+    "grupo": "Síndrome de Cushing",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E25.0",
+    "descripcion": "Trastornos adrenogenitales congénitos con deficiencia enzimática",
+    "grupo": "Trastornos adrenogenitales congénitos con",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E25.9",
+    "descripcion": "Trastorno adrenogenital no especificado",
+    "grupo": "Trastorno adrenogenital",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E26.0",
+    "descripcion": "Hiperaldosteronismo primario (síndrome de Conn)",
+    "grupo": "Hiperaldosteronismo primario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E26.01",
+    "descripcion": "Hiperaldosteronismo primario (Conn)",
+    "grupo": "Hiperaldosteronismo primario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E26.1",
+    "descripcion": "Hiperaldosteronismo secundario",
+    "grupo": "Hiperaldosteronismo secundario",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E26.9",
+    "descripcion": "Hiperaldosteronismo no especificado",
+    "grupo": "Hiperaldosteronismo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.1",
+    "descripcion": "Insuficiencia adrenocortical primaria (enfermedad de Addison)",
+    "grupo": "Insuficiencia adrenocortical primaria",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.2",
+    "descripcion": "Crisis addisoniana",
+    "grupo": "Crisis addisoniana",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.3",
+    "descripcion": "Insuficiencia adrenocortical inducida por fármacos",
+    "grupo": "Insuficiencia adrenocortical inducida por",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.4",
+    "descripcion": "Otra insuficiencia adrenocortical no especificada",
+    "grupo": "Otra insuficiencia adrenocortical",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.40",
+    "descripcion": "Insuficiencia suprarrenal NE",
+    "grupo": "Insuficiencia suprarrenal NE",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.5",
+    "descripcion": "Hiperfunción de la médula suprarrenal",
+    "grupo": "Hiperfunción de la médula suprarrenal",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E27.9",
+    "descripcion": "Trastorno de la glándula suprarrenal no especificado",
+    "grupo": "Trastorno de la glándula suprarrenal",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E28.0",
+    "descripcion": "Exceso de estrógenos",
+    "grupo": "Exceso de estrógenos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E28.1",
+    "descripcion": "Exceso de andrógenos de origen ovárico",
+    "grupo": "Exceso de andrógenos de origen ovárico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E28.2",
+    "descripcion": "Síndrome de ovario poliquístico (SOP)",
+    "grupo": "Síndrome de ovario poliquístico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E28.3",
+    "descripcion": "Insuficiencia ovárica primaria",
+    "grupo": "Insuficiencia ovárica primaria",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E28.9",
+    "descripcion": "Disfunción ovárica no especificada",
+    "grupo": "Disfunción ovárica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E34.0",
+    "descripcion": "Síndrome carcinoide",
+    "grupo": "Síndrome carcinoide",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E34.9",
+    "descripcion": "Trastorno endocrino no especificado",
+    "grupo": "Trastorno endocrino",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E40",
+    "descripcion": "Kwashiorkor",
+    "grupo": "Kwashiorkor",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E41",
+    "descripcion": "Marasmo nutricional",
+    "grupo": "Marasmo nutricional",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E42",
+    "descripcion": "Kwashiorkor marasmático",
+    "grupo": "Kwashiorkor marasmático",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E43",
+    "descripcion": "Desnutrición proteico-calórica grave no especificada",
+    "grupo": "Desnutrición proteico-calórica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "E44.0",
+    "descripcion": "Desnutrición proteico-calórica moderada",
+    "grupo": "Desnutrición proteico-calórica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "E44.1",
+    "descripcion": "Desnutrición proteico-calórica leve",
+    "grupo": "Desnutrición proteico-calórica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "E46",
+    "descripcion": "Desnutrición proteico-calórica no especificada",
+    "grupo": "Desnutrición proteico-calórica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E50.9",
+    "descripcion": "Deficiencia de vitamina A no especificada",
+    "grupo": "Deficiencia de vitamina A",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E51.9",
+    "descripcion": "Deficiencia de tiamina (vitamina B1) no especificada",
+    "grupo": "Deficiencia de tiamina",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E53.8",
+    "descripcion": "Deficiencia de otras vitaminas del grupo B",
+    "grupo": "Deficiencia de otras vitaminas del grupo B",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E53.9",
+    "descripcion": "Deficiencia de vitamina B12",
+    "grupo": "Deficiencia de vitamina B12",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E55.0",
+    "descripcion": "Raquitismo activo por deficiencia de vitamina D",
+    "grupo": "Raquitismo activo por deficiencia de vitamina",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E55.9",
+    "descripcion": "Deficiencia de vitamina D no especificada",
+    "grupo": "Deficiencia de vitamina D",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E58",
+    "descripcion": "Deficiencia dietética de calcio",
+    "grupo": "Deficiencia dietética de calcio",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E61.1",
+    "descripcion": "Deficiencia de hierro",
+    "grupo": "Deficiencia de hierro",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E63.9",
+    "descripcion": "Deficiencia nutricional no especificada",
+    "grupo": "Deficiencia nutricional",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E64.0",
+    "descripcion": "Secuelas de marasmo",
+    "grupo": "Secuelas de marasmo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.0",
+    "descripcion": "Obesidad por exceso de calorías",
+    "grupo": "Obesidad por exceso de calorías",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.01",
+    "descripcion": "Obesidad mórbida por exceso de calorías (IMC≥40)",
+    "grupo": "Obesidad mórbida por exceso de calorías",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.09",
+    "descripcion": "Obesidad NE",
+    "grupo": "Obesidad NE",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.1",
+    "descripcion": "Obesidad inducida por fármacos",
+    "grupo": "Obesidad inducida por fármacos",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.2",
+    "descripcion": "Obesidad mórbida con hipoventilación alveolar",
+    "grupo": "Obesidad mórbida con hipoventilación alveolar",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.8",
+    "descripcion": "Otra obesidad especificada",
+    "grupo": "Otra obesidad especificada",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E66.9",
+    "descripcion": "Obesidad no especificada",
+    "grupo": "Obesidad",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.0",
+    "descripcion": "Hipercolesterolemia pura",
+    "grupo": "Hipercolesterolemia pura",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.00",
+    "descripcion": "Hipercolesterolemia pura",
+    "grupo": "Hipercolesterolemia pura",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.1",
+    "descripcion": "Hipertrigliceridemia pura",
+    "grupo": "Hipertrigliceridemia pura",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.2",
+    "descripcion": "Hiperlipidemia mixta",
+    "grupo": "Hiperlipidemia mixta",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.3",
+    "descripcion": "Hiperquilomicronemia",
+    "grupo": "Hiperquilomicronemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.4",
+    "descripcion": "Otras hiperlipidemias",
+    "grupo": "Otras hiperlipidemias",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.5",
+    "descripcion": "Hiperlipidemia no especificada",
+    "grupo": "Hiperlipidemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.6",
+    "descripcion": "Deficiencia de lipoproteínas",
+    "grupo": "Deficiencia de lipoproteínas",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.8",
+    "descripcion": "Otros trastornos del metabolismo de lipoproteínas",
+    "grupo": "Otros trastornos del metabolismo de",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E78.9",
+    "descripcion": "Trastorno del metabolismo de lipoproteínas no especificado",
+    "grupo": "Trastorno del metabolismo de lipoproteínas",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E79.0",
+    "descripcion": "Hiperuricemia sin signos de artritis gotosa",
+    "grupo": "Hiperuricemia sin signos de artritis gotosa",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E80.1",
+    "descripcion": "Porfiria cutánea tardía",
+    "grupo": "Porfiria cutánea tardía",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E80.2",
+    "descripcion": "Otras porfirias",
+    "grupo": "Otras porfirias",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.0",
+    "descripcion": "Trastorno del metabolismo del cobre",
+    "grupo": "Trastorno del metabolismo del cobre",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.10",
+    "descripcion": "Trastorno del metabolismo del hierro",
+    "grupo": "Trastorno del metabolismo del hierro",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.39",
+    "descripcion": "Trastorno del metabolismo del fósforo",
+    "grupo": "Trastorno del metabolismo del fósforo",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.42",
+    "descripcion": "Hipomagnesemia",
+    "grupo": "Hipomagnesemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.51",
+    "descripcion": "Hipocalcemia",
+    "grupo": "Hipocalcemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E83.52",
+    "descripcion": "Hipercalcemia",
+    "grupo": "Hipercalcemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E84.0",
+    "descripcion": "Fibrosis quística con manifestaciones pulmonares",
+    "grupo": "Fibrosis quística con manifestaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E84.1",
+    "descripcion": "Fibrosis quística con manifestaciones intestinales",
+    "grupo": "Fibrosis quística con manifestaciones",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E84.9",
+    "descripcion": "Fibrosis quística no especificada",
+    "grupo": "Fibrosis quística",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E86.0",
+    "descripcion": "Deshidratación",
+    "grupo": "Deshidratación",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.0",
+    "descripcion": "Hiperosmolaridad e hipernatremia",
+    "grupo": "Hiperosmolaridad e hipernatremia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.1",
+    "descripcion": "Hipoosmolaridad e hiponatremia",
+    "grupo": "Hipoosmolaridad e hiponatremia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.2",
+    "descripcion": "Acidosis",
+    "grupo": "Acidosis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.3",
+    "descripcion": "Alcalosis",
+    "grupo": "Alcalosis",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.5",
+    "descripcion": "Hiperkalemia (hiperpotasemia)",
+    "grupo": "Hiperkalemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.6",
+    "descripcion": "Hipokalemia (hipopotasemia)",
+    "grupo": "Hipokalemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E87.8",
+    "descripcion": "Otros trastornos del equilibrio hidroelectrolítico",
+    "grupo": "Otros trastornos del equilibrio",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E88.0",
+    "descripcion": "Trastorno del metabolismo de proteínas plasmáticas",
+    "grupo": "Trastorno del metabolismo de proteínas",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E88.81",
+    "descripcion": "Síndrome metabólico",
+    "grupo": "Síndrome metabólico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "E88.9",
+    "descripcion": "Trastorno metabólico no especificado",
+    "grupo": "Trastorno metabólico",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.011",
+    "descripcion": "Gota idiopática — articulación tobillo/pie",
+    "grupo": "Gota idiopática",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.9",
+    "descripcion": "Gota metabólica no especificada",
+    "grupo": "Gota metabólica",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "O24.4",
+    "descripcion": "Diabetes mellitus gestacional",
+    "grupo": "Diabetes mellitus gestacional",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "R73.0",
+    "descripcion": "Anomalía de la prueba de tolerancia a la glucosa",
+    "grupo": "Anomalía de la prueba de tolerancia a la",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R73.9",
+    "descripcion": "Hiperglucemia no especificada (prediabetes)",
+    "grupo": "Hiperglucemia",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.0",
+    "descripcion": "Examen médico general (control de salud de rutina del adulto)",
+    "grupo": "Examen médico general",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.1",
+    "descripcion": "Control de salud de rutina del niño",
+    "grupo": "Control de salud de rutina del niño",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z02.1",
+    "descripcion": "Examen preempleo",
+    "grupo": "Examen preempleo",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z21",
+    "descripcion": "Estado de infección asintomática por VIH",
+    "grupo": "Estado de infección asintomática por VIH",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z22.5",
+    "descripcion": "Portador de hepatitis viral",
+    "grupo": "Portador de hepatitis viral",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z24.6",
+    "descripcion": "Necesidad de inmunización contra la hepatitis viral",
+    "grupo": "Necesidad de inmunización contra la hepatitis",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z25.1",
+    "descripcion": "Necesidad de inmunización contra la influenza",
+    "grupo": "Necesidad de inmunización contra la influenza",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.0",
+    "descripcion": "Consejo y asesoramiento general sobre la anticoncepción",
+    "grupo": "Consejo y asesoramiento general sobre la",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.1",
+    "descripcion": "Inserción de dispositivo anticonceptivo (DIU)",
+    "grupo": "Inserción de dispositivo anticonceptivo",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.4",
+    "descripcion": "Supervisión del uso de drogas anticonceptivas",
+    "grupo": "Supervisión del uso de drogas anticonceptivas",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.5",
+    "descripcion": "Supervisión del uso de dispositivo anticonceptivo (DIU)",
+    "grupo": "Supervisión del uso de dispositivo",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z34.9",
+    "descripcion": "Supervisión de embarazo normal (control prenatal)",
+    "grupo": "Supervisión de embarazo normal",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z39.2",
+    "descripcion": "Seguimiento postparto de rutina",
+    "grupo": "Seguimiento postparto de rutina",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z43.3",
+    "descripcion": "Atención de colostomía (cuidados de ostomía)",
+    "grupo": "Atención de colostomía",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z44.9",
+    "descripcion": "Prueba y ajuste de dispositivo protésico externo",
+    "grupo": "Prueba y ajuste de dispositivo protésico",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z45.0",
+    "descripcion": "Asistencia y ajuste de marcapaso cardíaco",
+    "grupo": "Asistencia y ajuste de marcapaso cardíaco",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z52.0",
+    "descripcion": "Donante de sangre",
+    "grupo": "Donante de sangre",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z54.0",
+    "descripcion": "Convalecencia consecutiva a cirugía",
+    "grupo": "Convalecencia consecutiva a cirugía",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z71.3",
+    "descripcion": "Consulta para instrucción y vigilancia de la dieta",
+    "grupo": "Consulta para instrucción y vigilancia de la",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z72.0",
+    "descripcion": "Uso de tabaco (tabaquismo)",
+    "grupo": "Uso de tabaco",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z72.1",
+    "descripcion": "Problemas relacionados con el uso del alcohol",
+    "grupo": "Problemas relacionados con el uso del alcohol",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z72.3",
+    "descripcion": "Falta de ejercicio físico",
+    "grupo": "Falta de ejercicio físico",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z72.4",
+    "descripcion": "Dieta y hábitos alimentarios inapropiados",
+    "grupo": "Dieta y hábitos alimentarios inapropiados",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z76.0",
+    "descripcion": "Consulta para repetición de receta (prescripción repetida)",
+    "grupo": "Consulta para repetición de receta",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z85.9",
+    "descripcion": "Antecedente personal de tumor maligno, no especificado",
+    "grupo": "Antecedente personal de tumor maligno",
+    "sistema": "Factores de Salud",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "I86.1",
+    "descripcion": "Várices escrotales (varicocele)",
+    "grupo": "Várices escrotales",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "N00.9",
+    "descripcion": "Síndrome nefrítico agudo no especificado",
+    "grupo": "Síndrome nefrítico",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N03.9",
+    "descripcion": "Síndrome nefrítico crónico no especificado",
+    "grupo": "Síndrome nefrítico",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N04.9",
+    "descripcion": "Síndrome nefrótico no especificado",
+    "grupo": "Síndrome nefrótico",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N05.9",
+    "descripcion": "Síndrome nefrítico no especificado",
+    "grupo": "Síndrome nefrítico",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N10",
+    "descripcion": "Nefritis tubulointersticial aguda (pielonefritis aguda)",
+    "grupo": "Nefritis tubulointersticial",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N11.0",
+    "descripcion": "Pielonefritis crónica no obstructiva asociada con reflujo",
+    "grupo": "Pielonefritis no obstructiva asociada con",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "N11.1",
+    "descripcion": "Pielonefritis crónica obstructiva",
+    "grupo": "Pielonefritis obstructiva",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "N11.9",
+    "descripcion": "Nefritis tubulointersticial crónica no especificada",
+    "grupo": "Nefritis tubulointersticial",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N12",
+    "descripcion": "Pielonefritis no especificada como aguda o crónica",
+    "grupo": "Pielonefritis como o",
+    "sistema": "Genitourinario",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N13.2",
+    "descripcion": "Hidronefrosis con obstrucción por cálculos",
+    "grupo": "Hidronefrosis con obstrucción por cálculos",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N13.3",
+    "descripcion": "Otras hidronefrosis y las no especificadas",
+    "grupo": "Otras hidronefrosis y las",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N15.1",
+    "descripcion": "Absceso renal y perirrenal",
+    "grupo": "Absceso renal y perirrenal",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N17.9",
+    "descripcion": "Insuficiencia renal aguda no especificada",
+    "grupo": "Insuficiencia renal",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.1",
+    "descripcion": "Enfermedad renal crónica estadio 1",
+    "grupo": "Enfermedad renal estadio 1",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.2",
+    "descripcion": "Enfermedad renal crónica estadio 2",
+    "grupo": "Enfermedad renal estadio 2",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.3",
+    "descripcion": "Enfermedad renal crónica estadio 3",
+    "grupo": "Enfermedad renal estadio 3",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.4",
+    "descripcion": "Enfermedad renal crónica estadio 4",
+    "grupo": "Enfermedad renal estadio 4",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.5",
+    "descripcion": "Enfermedad renal crónica estadio 5",
+    "grupo": "Enfermedad renal estadio 5",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N18.9",
+    "descripcion": "Enfermedad renal crónica no especificada",
+    "grupo": "Enfermedad renal",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N19",
+    "descripcion": "Insuficiencia renal no especificada",
+    "grupo": "Insuficiencia renal",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N20.0",
+    "descripcion": "Cálculo del riñón",
+    "grupo": "Cálculo del riñón",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N20.1",
+    "descripcion": "Cálculo del uréter",
+    "grupo": "Cálculo del uréter",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N20.2",
+    "descripcion": "Cálculo del riñón con cálculo del uréter",
+    "grupo": "Cálculo del riñón con cálculo del uréter",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N20.9",
+    "descripcion": "Cálculo urinario no especificado",
+    "grupo": "Cálculo urinario",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N21.0",
+    "descripcion": "Cálculo en la vejiga",
+    "grupo": "Cálculo en la vejiga",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N23",
+    "descripcion": "Cólico renal no especificado",
+    "grupo": "Cólico renal",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N25.81",
+    "descripcion": "Poliuria secundaria",
+    "grupo": "Poliuria secundaria",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N28.9",
+    "descripcion": "Trastorno renal NE",
+    "grupo": "Trastorno renal NE",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.0",
+    "descripcion": "Cistitis aguda",
+    "grupo": "Cistitis",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.00",
+    "descripcion": "Cistitis aguda sin hematuria",
+    "grupo": "Cistitis sin hematuria",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.1",
+    "descripcion": "Cistitis intersticial crónica",
+    "grupo": "Cistitis intersticial",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.10",
+    "descripcion": "Cistitis intersticial crónica (dolorosa) sin hematuria",
+    "grupo": "Cistitis intersticial sin hematuria",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.2",
+    "descripcion": "Otras cistitis crónicas",
+    "grupo": "Otras cistitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.3",
+    "descripcion": "Trigonitis",
+    "grupo": "Trigonitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.4",
+    "descripcion": "Cistitis por irradiación",
+    "grupo": "Cistitis por irradiación",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.9",
+    "descripcion": "Cistitis no especificada",
+    "grupo": "Cistitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N30.91",
+    "descripcion": "Cistitis NE con hematuria",
+    "grupo": "Cistitis NE con hematuria",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N32.8",
+    "descripcion": "Vejiga hiperactiva",
+    "grupo": "Vejiga hiperactiva",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N34.1",
+    "descripcion": "Uretritis no específica",
+    "grupo": "Uretritis no específica",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N34.2",
+    "descripcion": "Otras uretritis",
+    "grupo": "Otras uretritis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N35.919",
+    "descripcion": "Estenosis uretral NE",
+    "grupo": "Estenosis uretral NE",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N39.0",
+    "descripcion": "Infección de vías urinarias de sitio no especificado",
+    "grupo": "Infección de vías urinarias de sitio",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N39.3",
+    "descripcion": "Incontinencia urinaria por tensión",
+    "grupo": "Incontinencia urinaria por tensión",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N39.4",
+    "descripcion": "Otras incontinencias urinarias especificadas",
+    "grupo": "Otras incontinencias urinarias especificadas",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N39.41",
+    "descripcion": "Urgencia urinaria",
+    "grupo": "Urgencia urinaria",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N40",
+    "descripcion": "Hiperplasia benigna de la próstata",
+    "grupo": "Hiperplasia benigna de la próstata",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N40.0",
+    "descripcion": "Hiperplasia benigna de próstata sin síntomas urinarios",
+    "grupo": "Hiperplasia benigna de próstata sin síntomas",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N40.1",
+    "descripcion": "Hiperplasia benigna de próstata con síntomas del tracto urinario inferior",
+    "grupo": "Hiperplasia benigna de próstata con síntomas",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N41.0",
+    "descripcion": "Prostatitis aguda",
+    "grupo": "Prostatitis",
+    "sistema": "Genitourinario",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N41.1",
+    "descripcion": "Prostatitis crónica",
+    "grupo": "Prostatitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N41.3",
+    "descripcion": "Prostatodinia (prostatitis crónica pélvica)",
+    "grupo": "Prostatodinia",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N41.9",
+    "descripcion": "Enfermedad inflamatoria de la próstata no especificada",
+    "grupo": "Enfermedad inflamatoria de la próstata",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N43.3",
+    "descripcion": "Hidrocele no especificado",
+    "grupo": "Hidrocele",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N44",
+    "descripcion": "Torsión del testículo",
+    "grupo": "Torsión del testículo",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N44.1",
+    "descripcion": "Torsión de apéndice testicular",
+    "grupo": "Torsión de apéndice testicular",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N45.0",
+    "descripcion": "Orquitis, epididimitis y orquiepididimitis con absceso",
+    "grupo": "Orquitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N45.1",
+    "descripcion": "Epididimitis",
+    "grupo": "Epididimitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N45.3",
+    "descripcion": "Orquiepididimitis",
+    "grupo": "Orquiepididimitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N45.9",
+    "descripcion": "Orquitis, epididimitis y orquiepididimitis sin absceso",
+    "grupo": "Orquitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N46",
+    "descripcion": "Infertilidad masculina",
+    "grupo": "Infertilidad masculina",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N47",
+    "descripcion": "Prepucio redundante, fimosis y parafimosis",
+    "grupo": "Prepucio redundante",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N48.1",
+    "descripcion": "Balanopostitis",
+    "grupo": "Balanopostitis",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N48.4",
+    "descripcion": "Disfunción eréctil de origen orgánico",
+    "grupo": "Disfunción eréctil de origen orgánico",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N50.89",
+    "descripcion": "Otros trastornos del pene NE",
+    "grupo": "Otros trastornos del pene NE",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N52.9",
+    "descripcion": "Disfunción eréctil NE",
+    "grupo": "Disfunción eréctil NE",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N60.1",
+    "descripcion": "Mastopatía quística difusa",
+    "grupo": "Mastopatía quística difusa",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N60.2",
+    "descripcion": "Fibroadenosis de la mama",
+    "grupo": "Fibroadenosis de la mama",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N61",
+    "descripcion": "Mastitis y trastornos inflamatorios de la mama",
+    "grupo": "Mastitis y trastornos inflamatorios de la mama",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N62",
+    "descripcion": "Hipertrofia de la mama",
+    "grupo": "Hipertrofia de la mama",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N63",
+    "descripcion": "Masa no especificada en la mama",
+    "grupo": "Masa en la mama",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "A56.02",
+    "descripcion": "Cervicitis por clamidia",
+    "grupo": "Cervicitis por clamidia",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A59.01",
+    "descripcion": "Tricomoniasis vulvovaginal",
+    "grupo": "Tricomoniasis vulvovaginal",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N70.0",
+    "descripcion": "Salpingitis y ooforitis aguda",
+    "grupo": "Salpingitis y ooforitis",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N70.01",
+    "descripcion": "Salpingitis aguda",
+    "grupo": "Salpingitis",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N70.1",
+    "descripcion": "Salpingitis y ooforitis crónica",
+    "grupo": "Salpingitis y ooforitis",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N70.9",
+    "descripcion": "Salpingitis y ooforitis no especificadas",
+    "grupo": "Salpingitis y ooforitis",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N71.0",
+    "descripcion": "Enfermedad inflamatoria aguda del útero",
+    "grupo": "Enfermedad inflamatoria del útero",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N71.9",
+    "descripcion": "Enfermedad inflamatoria del útero no especificada",
+    "grupo": "Enfermedad inflamatoria del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N72",
+    "descripcion": "Enfermedad inflamatoria del cuello uterino (cervicitis)",
+    "grupo": "Enfermedad inflamatoria del cuello uterino",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N73.9",
+    "descripcion": "Enfermedad pélvica inflamatoria no especificada",
+    "grupo": "Enfermedad pélvica inflamatoria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N75.0",
+    "descripcion": "Quiste de la glándula de Bartholin",
+    "grupo": "Quiste de la glándula de Bartholin",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N75.1",
+    "descripcion": "Absceso de la glándula de Bartholin",
+    "grupo": "Absceso de la glándula de Bartholin",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N76.0",
+    "descripcion": "Vaginitis aguda",
+    "grupo": "Vaginitis",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N76.1",
+    "descripcion": "Vaginitis subaguda y crónica",
+    "grupo": "Vaginitis subaguda y",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N76.4",
+    "descripcion": "Absceso de la vulva",
+    "grupo": "Absceso de la vulva",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N80.0",
+    "descripcion": "Endometriosis del útero",
+    "grupo": "Endometriosis del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N80.1",
+    "descripcion": "Endometriosis del ovario",
+    "grupo": "Endometriosis del ovario",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N80.9",
+    "descripcion": "Endometriosis no especificada",
+    "grupo": "Endometriosis",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N81.1",
+    "descripcion": "Cistocele",
+    "grupo": "Cistocele",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N81.10",
+    "descripcion": "Cistocele NE",
+    "grupo": "Cistocele NE",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N81.2",
+    "descripcion": "Prolapso uterovaginal incompleto",
+    "grupo": "Prolapso uterovaginal incompleto",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N81.4",
+    "descripcion": "Prolapso uterovaginal no especificado",
+    "grupo": "Prolapso uterovaginal",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N83.0",
+    "descripcion": "Quiste folicular del ovario",
+    "grupo": "Quiste folicular del ovario",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N83.1",
+    "descripcion": "Quiste del cuerpo amarillo",
+    "grupo": "Quiste del cuerpo amarillo",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N83.2",
+    "descripcion": "Otros quistes ováricos y los no especificados",
+    "grupo": "Otros quistes ováricos y los",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N83.20",
+    "descripcion": "Quiste ovárico NE",
+    "grupo": "Quiste ovárico NE",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N83.29",
+    "descripcion": "Quiste ovárico hemorrágico NE",
+    "grupo": "Quiste ovárico hemorrágico NE",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "N84.0",
+    "descripcion": "Pólipo del cuerpo del útero",
+    "grupo": "Pólipo del cuerpo del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N84.1",
+    "descripcion": "Pólipo del cuello del útero",
+    "grupo": "Pólipo del cuello del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N85.0",
+    "descripcion": "Hiperplasia de glándula endometrial",
+    "grupo": "Hiperplasia de glándula endometrial",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N86",
+    "descripcion": "Erosión y ectropión del cuello del útero",
+    "grupo": "Erosión y ectropión del cuello del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N87.0",
+    "descripcion": "Displasia cervical leve",
+    "grupo": "Displasia cervical",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "N87.1",
+    "descripcion": "Displasia cervical moderada",
+    "grupo": "Displasia cervical",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "N87.9",
+    "descripcion": "Displasia del cuello del útero no especificada",
+    "grupo": "Displasia del cuello del útero",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N91.0",
+    "descripcion": "Amenorrea primaria",
+    "grupo": "Amenorrea primaria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N91.1",
+    "descripcion": "Amenorrea secundaria",
+    "grupo": "Amenorrea secundaria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N91.2",
+    "descripcion": "Amenorrea no especificada",
+    "grupo": "Amenorrea",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N91.3",
+    "descripcion": "Oligomenorrea primaria",
+    "grupo": "Oligomenorrea primaria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N91.5",
+    "descripcion": "Oligomenorrea no especificada",
+    "grupo": "Oligomenorrea",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N92.0",
+    "descripcion": "Menstruación excesiva y frecuente con ciclo regular",
+    "grupo": "Menstruación excesiva y frecuente con ciclo",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N92.1",
+    "descripcion": "Menstruación excesiva y frecuente con ciclo irregular",
+    "grupo": "Menstruación excesiva y frecuente con ciclo",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N92.6",
+    "descripcion": "Menstruación irregular no especificada",
+    "grupo": "Menstruación irregular",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N93.8",
+    "descripcion": "Otras hemorragias uterinas o vaginales anormales especificadas",
+    "grupo": "Otras hemorragias uterinas o vaginales",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "N93.9",
+    "descripcion": "Hemorragia vaginal y uterina anormal no especificada",
+    "grupo": "Hemorragia vaginal y uterina anormal",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.0",
+    "descripcion": "Dispareunia",
+    "grupo": "Dispareunia",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.1",
+    "descripcion": "Dispareunia",
+    "grupo": "Dispareunia",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.3",
+    "descripcion": "Síndrome de tensión premenstrual",
+    "grupo": "Síndrome de tensión premenstrual",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.4",
+    "descripcion": "Dismenorrea primaria",
+    "grupo": "Dismenorrea primaria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.5",
+    "descripcion": "Dismenorrea secundaria",
+    "grupo": "Dismenorrea secundaria",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N94.6",
+    "descripcion": "Dismenorrea no especificada",
+    "grupo": "Dismenorrea",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N95.0",
+    "descripcion": "Hemorragia posmenopáusica",
+    "grupo": "Hemorragia posmenopáusica",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "N95.1",
+    "descripcion": "Estados menopáusicos y climatéricos femeninos",
+    "grupo": "Estados menopáusicos y climatéricos femeninos",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N95.2",
+    "descripcion": "Vaginitis atrófica posmenopáusica",
+    "grupo": "Vaginitis atrófica posmenopáusica",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N97.0",
+    "descripcion": "Infertilidad femenina asociada con anovulación",
+    "grupo": "Infertilidad femenina asociada con anovulación",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "N97.9",
+    "descripcion": "Infertilidad femenina no especificada",
+    "grupo": "Infertilidad femenina",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "genitourinario",
+    "severidad": ""
+  },
+  {
+    "codigo": "O14.00",
+    "descripcion": "Preeclampsia moderada",
+    "grupo": "Preeclampsia",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "O14.10",
+    "descripcion": "Preeclampsia severa",
+    "grupo": "Preeclampsia",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "O15.9",
+    "descripcion": "Eclampsia NE",
+    "grupo": "Eclampsia NE",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O26.85",
+    "descripcion": "Síndrome de túnel del carpo en el embarazo",
+    "grupo": "Síndrome de túnel del carpo en el embarazo",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O34.21",
+    "descripcion": "Útero con cicatriz de cesárea anterior",
+    "grupo": "Útero con cicatriz de cesárea anterior",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.0130",
+    "descripcion": "Incompatibilidad Rh sin hidropesía fetal",
+    "grupo": "Incompatibilidad Rh sin hidropesía fetal",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z01.4",
+    "descripcion": "Examen ginecológico",
+    "grupo": "Examen ginecológico",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z34.01",
+    "descripcion": "Supervisión de embarazo normal — primer trimestre",
+    "grupo": "Supervisión de embarazo normal",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z34.31",
+    "descripcion": "Supervisión de embarazo normal — tercer trimestre",
+    "grupo": "Supervisión de embarazo normal",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "D50.0",
+    "descripcion": "Anemia ferropénica secundaria a pérdida de sangre",
+    "grupo": "Anemia ferropénica secundaria a pérdida de",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D50.9",
+    "descripcion": "Anemia por deficiencia de hierro, no especificada",
+    "grupo": "Anemia por deficiencia de hierro",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D51.0",
+    "descripcion": "Anemia por deficiencia de vitamina B12 por malabsorción",
+    "grupo": "Anemia por deficiencia de vitamina B12 por",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D51.9",
+    "descripcion": "Anemia por deficiencia de vitamina B12, no especificada",
+    "grupo": "Anemia por deficiencia de vitamina B12",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D52.0",
+    "descripcion": "Anemia por deficiencia de folatos en la dieta",
+    "grupo": "Anemia por deficiencia de folatos en la dieta",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D52.9",
+    "descripcion": "Anemia por deficiencia de folatos, no especificada",
+    "grupo": "Anemia por deficiencia de folatos",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D53.9",
+    "descripcion": "Anemia nutricional, no especificada",
+    "grupo": "Anemia nutricional",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D55.0",
+    "descripcion": "Anemia por deficiencia de glucosa-6-fosfato deshidrogenasa",
+    "grupo": "Anemia por deficiencia de glucosa-6-fosfato",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
     "codigo": "D55.9",
     "descripcion": "Anemia hemolítica enzimática NE",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
+    "grupo": "Anemia hemolítica enzimática NE",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D56.0",
+    "descripcion": "Alfa talasemia",
+    "grupo": "Alfa talasemia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D56.1",
+    "descripcion": "Beta talasemia",
+    "grupo": "Beta talasemia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D56.9",
+    "descripcion": "Talasemia, no especificada",
+    "grupo": "Talasemia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D57.0",
+    "descripcion": "Anemia drepanocítica con crisis",
+    "grupo": "Anemia drepanocítica con crisis",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D57.1",
+    "descripcion": "Anemia drepanocítica sin crisis",
+    "grupo": "Anemia drepanocítica sin crisis",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D58.0",
+    "descripcion": "Esferocitosis hereditaria",
+    "grupo": "Esferocitosis hereditaria",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D58.9",
+    "descripcion": "Anemia hemolítica hereditaria, no especificada",
+    "grupo": "Anemia hemolítica hereditaria",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D59.0",
+    "descripcion": "Anemia hemolítica autoinmune inducida por fármacos",
+    "grupo": "Anemia hemolítica autoinmune inducida por",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D59.1",
+    "descripcion": "Otras anemias hemolíticas autoinmunes",
+    "grupo": "Otras anemias hemolíticas autoinmunes",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D59.9",
+    "descripcion": "Anemia hemolítica adquirida, no especificada",
+    "grupo": "Anemia hemolítica adquirida",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D60.9",
+    "descripcion": "Aplasia pura de glóbulos rojos adquirida",
+    "grupo": "Aplasia pura de glóbulos rojos adquirida",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D61.0",
+    "descripcion": "Anemia aplásica constitucional",
+    "grupo": "Anemia aplásica constitucional",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D61.1",
+    "descripcion": "Anemia aplásica inducida por fármacos",
+    "grupo": "Anemia aplásica inducida por fármacos",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D61.9",
+    "descripcion": "Anemia aplásica, no especificada",
+    "grupo": "Anemia aplásica",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D62",
+    "descripcion": "Anemia posthemorrágica aguda",
+    "grupo": "Anemia posthemorrágica",
+    "sistema": "Hematología",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D63.0",
+    "descripcion": "Anemia en enfermedad neoplásica",
+    "grupo": "Anemia en enfermedad neoplásica",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D63.8",
+    "descripcion": "Anemia en otras enfermedades crónicas",
+    "grupo": "Anemia en otras enfermedades",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D64.9",
+    "descripcion": "Anemia, no especificada",
+    "grupo": "Anemia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D65",
+    "descripcion": "Coagulación intravascular diseminada",
+    "grupo": "Coagulación intravascular diseminada",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D66",
+    "descripcion": "Deficiencia hereditaria del factor VIII (hemofilia A)",
+    "grupo": "Deficiencia hereditaria del factor VIII",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D67",
+    "descripcion": "Deficiencia hereditaria del factor IX (hemofilia B)",
+    "grupo": "Deficiencia hereditaria del factor IX",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D68.0",
+    "descripcion": "Enfermedad de von Willebrand",
+    "grupo": "Enfermedad de von Willebrand",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D68.2",
+    "descripcion": "Deficiencia hereditaria de otros factores de coagulación",
+    "grupo": "Deficiencia hereditaria de otros factores de",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D68.4",
+    "descripcion": "Deficiencia adquirida de factores de coagulación",
+    "grupo": "Deficiencia adquirida de factores de",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D68.9",
+    "descripcion": "Defecto de la coagulación, no especificado",
+    "grupo": "Defecto de la coagulación",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.0",
+    "descripcion": "Púrpura alérgica (de Schönlein-Henoch)",
+    "grupo": "Púrpura alérgica",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.1",
+    "descripcion": "Defectos cualitativos de las plaquetas",
+    "grupo": "Defectos cualitativos de las plaquetas",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.3",
+    "descripcion": "Púrpura trombocitopénica idiopática",
+    "grupo": "Púrpura trombocitopénica idiopática",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.4",
+    "descripcion": "Otras trombocitopenias primarias",
+    "grupo": "Otras trombocitopenias primarias",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.5",
+    "descripcion": "Trombocitopenia secundaria",
+    "grupo": "Trombocitopenia secundaria",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.6",
+    "descripcion": "Trombocitopenia, no especificada",
+    "grupo": "Trombocitopenia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D69.9",
+    "descripcion": "Afección hemorrágica, no especificada",
+    "grupo": "Afección hemorrágica",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D70",
+    "descripcion": "Agranulocitosis y neutropenia",
+    "grupo": "Agranulocitosis y neutropenia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
     "codigo": "D72.0",
     "descripcion": "Neutropenia NE",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
+    "grupo": "Neutropenia NE",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
+  },
+  {
+    "codigo": "D72.1",
+    "descripcion": "Eosinofilia",
+    "grupo": "Eosinofilia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
     "codigo": "D72.829",
     "descripcion": "Leucocitosis NE",
-    "grupo": "Hematología",
-    "sistema": "Hematología"
+    "grupo": "Leucocitosis NE",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "M23.200",
-    "descripcion": "Lesión de menisco NE — rodilla",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D72.9",
+    "descripcion": "Trastorno de los leucocitos, no especificado",
+    "grupo": "Trastorno de los leucocitos",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "M23.400",
-    "descripcion": "Cuerpo libre en articulación de rodilla NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D73.0",
+    "descripcion": "Hipoesplenismo",
+    "grupo": "Hipoesplenismo",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "M25.311",
-    "descripcion": "Rigidez articular de hombro derecho NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D73.1",
+    "descripcion": "Hiperesplenismo",
+    "grupo": "Hiperesplenismo",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "M25.561",
-    "descripcion": "Dolor de rodilla NE — derecha",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D73.2",
+    "descripcion": "Esplenomegalia congestiva crónica",
+    "grupo": "Esplenomegalia congestiva",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S00.01XA",
-    "descripcion": "Abrasión cuero cabelludo — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D73.9",
+    "descripcion": "Enfermedad del bazo, no especificada",
+    "grupo": "Enfermedad del bazo",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S09.90XA",
-    "descripcion": "Traumatismo craneal NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D75.0",
+    "descripcion": "Eritrocitosis familiar",
+    "grupo": "Eritrocitosis familiar",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S09.8XXA",
-    "descripcion": "Traumatismo de cabeza NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D75.1",
+    "descripcion": "Policitemia secundaria",
+    "grupo": "Policitemia secundaria",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S13.4XXA",
-    "descripcion": "Esguince cervical — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D75.9",
+    "descripcion": "Enfermedad de la sangre y órganos hematopoyéticos",
+    "grupo": "Enfermedad de la sangre y órganos",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
   },
   {
-    "codigo": "S19.9XXA",
-    "descripcion": "Traumatismo del cuello NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D77",
+    "descripcion": "Otros trastornos de la sangre en enfermedades clasificadas",
+    "grupo": "Otros trastornos de la sangre en enfermedades",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
   },
   {
-    "codigo": "S29.9XXA",
-    "descripcion": "Traumatismo del tórax NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D80.0",
+    "descripcion": "Hipogammaglobulinemia hereditaria",
+    "grupo": "Hipogammaglobulinemia hereditaria",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S39.012A",
-    "descripcion": "Distensión musculatura lumbar — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D80.1",
+    "descripcion": "Hipogammaglobulinemia no familiar",
+    "grupo": "Hipogammaglobulinemia no familiar",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S39.91XA",
-    "descripcion": "Traumatismo abdomen NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D81.9",
+    "descripcion": "Inmunodeficiencia combinada, no especificada",
+    "grupo": "Inmunodeficiencia combinada",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S42.002A",
-    "descripcion": "Fractura clavícula NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D82.0",
+    "descripcion": "Síndrome de Wiskott-Aldrich",
+    "grupo": "Síndrome de Wiskott-Aldrich",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S42.202A",
-    "descripcion": "Fractura húmero proximal NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D83.9",
+    "descripcion": "Inmunodeficiencia variable común, no especificada",
+    "grupo": "Inmunodeficiencia variable común",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S49.009A",
-    "descripcion": "Fractura de fisis de húmero (niños) — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D84.9",
+    "descripcion": "Inmunodeficiencia, no especificada",
+    "grupo": "Inmunodeficiencia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S52.501A",
-    "descripcion": "Fractura radio distal NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D86.9",
+    "descripcion": "Sarcoidosis, no especificada",
+    "grupo": "Sarcoidosis",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S52.601A",
-    "descripcion": "Fractura de cúbito NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D89.1",
+    "descripcion": "Crioglobulinemia",
+    "grupo": "Crioglobulinemia",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S62.009A",
-    "descripcion": "Fractura de escafoides — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "D89.9",
+    "descripcion": "Trastorno del mecanismo inmunitario, no especificado",
+    "grupo": "Trastorno del mecanismo inmunitario",
+    "sistema": "Hematología",
+    "tipo": "crónico",
+    "subtipo": "no especificado",
+    "severidad": ""
   },
   {
-    "codigo": "S72.001A",
-    "descripcion": "Fractura de cuello de fémur — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A00.0",
+    "descripcion": "Cólera debido a Vibrio cholerae 01, biotipo cholerae",
+    "grupo": "Cólera debido a Vibrio cholerae 01",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S82.001A",
-    "descripcion": "Fractura de rótula — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A00.1",
+    "descripcion": "Cólera debido a Vibrio cholerae 01, biotipo El Tor",
+    "grupo": "Cólera debido a Vibrio cholerae 01",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S82.201A",
-    "descripcion": "Fractura de tibia — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A00.9",
+    "descripcion": "Cólera, no especificado",
+    "grupo": "Cólera",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S82.401A",
-    "descripcion": "Fractura de peroné — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A01.0",
+    "descripcion": "Fiebre tifoidea",
+    "grupo": "Fiebre tifoidea",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S86.011A",
-    "descripcion": "Desgarro del tendón de Aquiles — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A01.1",
+    "descripcion": "Fiebre paratifoidea A",
+    "grupo": "Fiebre paratifoidea A",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S93.401A",
-    "descripcion": "Esguince de tobillo — ligamento peroneo-astragalino anterior, inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A02.0",
+    "descripcion": "Enteritis debida a Salmonella",
+    "grupo": "Enteritis debida a Salmonella",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S93.499A",
-    "descripcion": "Esguince de tobillo NE — inicial",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A02.1",
+    "descripcion": "Septicemia debida a Salmonella",
+    "grupo": "Septicemia debida a Salmonella",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "T07",
-    "descripcion": "Traumatismos múltiples no especificados",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A02.9",
+    "descripcion": "Infección por Salmonella, no especificada",
+    "grupo": "Infección por Salmonella",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "T14.90",
-    "descripcion": "Herida NE — no especificada",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A03.9",
+    "descripcion": "Shigelosis, no especificada",
+    "grupo": "Shigelosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S42.001",
-    "descripcion": "Fractura de clavícula NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.4",
+    "descripcion": "Otras infecciones intestinales por Escherichia coli",
+    "grupo": "Otras infecciones intestinales por",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
   },
   {
-    "codigo": "S52.501",
-    "descripcion": "Fractura de la epífisis distal del radio NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.5",
+    "descripcion": "Enteritis debida a Campylobacter",
+    "grupo": "Enteritis debida a Campylobacter",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
   },
   {
-    "codigo": "S62.001",
-    "descripcion": "Fractura del escafoides carpiano NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.6",
+    "descripcion": "Enteritis debida a Yersinia enterocolitica",
+    "grupo": "Enteritis debida a Yersinia enterocolitica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S72.001",
-    "descripcion": "Fractura del cuello del fémur NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.7",
+    "descripcion": "Enterocolitis debida a Clostridium difficile",
+    "grupo": "Enterocolitis debida a Clostridium difficile",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "S82.001",
-    "descripcion": "Fractura de rótula NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.8",
+    "descripcion": "Otras infecciones intestinales bacterianas especificadas",
+    "grupo": "Otras infecciones intestinales bacterianas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
   },
   {
-    "codigo": "S82.201",
-    "descripcion": "Fractura de la diáfisis tibial NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A04.9",
+    "descripcion": "Infección intestinal bacteriana, no especificada",
+    "grupo": "Infección intestinal bacteriana",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
   },
   {
-    "codigo": "S93.401",
-    "descripcion": "Esguince del tobillo NE",
-    "grupo": "Traumatología",
-    "sistema": "Traumatología"
+    "codigo": "A05.0",
+    "descripcion": "Intoxicación alimentaria estafilocócica",
+    "grupo": "Intoxicación alimentaria estafilocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A05.1",
+    "descripcion": "Botulismo del adulto",
+    "grupo": "Botulismo del adulto",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A05.9",
+    "descripcion": "Intoxicación alimentaria bacteriana, no especificada",
+    "grupo": "Intoxicación alimentaria bacteriana",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A06.0",
+    "descripcion": "Disentería amebiana aguda",
+    "grupo": "Disentería amebiana",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A06.1",
+    "descripcion": "Amebiasis intestinal crónica",
+    "grupo": "Amebiasis intestinal",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A06.4",
+    "descripcion": "Absceso amebiano del hígado",
+    "grupo": "Absceso amebiano del hígado",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A06.9",
+    "descripcion": "Amebiasis, no especificada",
+    "grupo": "Amebiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A07.1",
+    "descripcion": "Giardiasis (lambliasis)",
+    "grupo": "Giardiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A07.2",
+    "descripcion": "Criptosporidiosis",
+    "grupo": "Criptosporidiosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A07.9",
+    "descripcion": "Enfermedad intestinal por protozoarios, no especificada",
+    "grupo": "Enfermedad intestinal por protozoarios",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A08.0",
+    "descripcion": "Enteritis debida a rotavirus",
+    "grupo": "Enteritis debida a rotavirus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A08.1",
+    "descripcion": "Gastroenteropatía aguda por agente de Norwalk",
+    "grupo": "Gastroenteropatía por agente de Norwalk",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A08.4",
+    "descripcion": "Infección intestinal viral, no especificada",
+    "grupo": "Infección intestinal viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A09",
+    "descripcion": "Diarrea y gastroenteritis de presunto origen infeccioso",
+    "grupo": "Diarrea y gastroenteritis de presunto origen",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A15.0",
+    "descripcion": "Tuberculosis del pulmón, confirmada bacteriológicamente",
+    "grupo": "Tuberculosis del pulmón",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A15.3",
+    "descripcion": "Tuberculosis del pulmón, confirmada por medios no especificados",
+    "grupo": "Tuberculosis del pulmón",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A15.6",
+    "descripcion": "Pleuresía tuberculosa, confirmada",
+    "grupo": "Pleuresía tuberculosa",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A15.9",
+    "descripcion": "Tuberculosis respiratoria no especificada, confirmada",
+    "grupo": "Tuberculosis respiratoria",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A16.2",
+    "descripcion": "Tuberculosis del pulmón, sin confirmación bacteriológica",
+    "grupo": "Tuberculosis del pulmón",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A16.9",
+    "descripcion": "Tuberculosis respiratoria no especificada, sin confirmación",
+    "grupo": "Tuberculosis respiratoria",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A17.0",
+    "descripcion": "Meningitis tuberculosa",
+    "grupo": "Meningitis tuberculosa",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A17.9",
+    "descripcion": "Tuberculosis del sistema nervioso, no especificada",
+    "grupo": "Tuberculosis del sistema nervioso",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A18.0",
+    "descripcion": "Tuberculosis de huesos y articulaciones",
+    "grupo": "Tuberculosis de huesos y articulaciones",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A18.1",
+    "descripcion": "Tuberculosis del aparato genitourinario",
+    "grupo": "Tuberculosis del aparato genitourinario",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A18.2",
+    "descripcion": "Linfadenopatía periférica tuberculosa",
+    "grupo": "Linfadenopatía periférica tuberculosa",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A18.3",
+    "descripcion": "Tuberculosis de intestinos, peritoneo y ganglios mesentéricos",
+    "grupo": "Tuberculosis de intestinos",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A18.4",
+    "descripcion": "Tuberculosis de la piel y el tejido subcutáneo",
+    "grupo": "Tuberculosis de la piel y el tejido subcutáneo",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A19.0",
+    "descripcion": "Tuberculosis miliar aguda de un solo sitio especificado",
+    "grupo": "Tuberculosis miliar de un solo sitio",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A19.9",
+    "descripcion": "Tuberculosis miliar, no especificada",
+    "grupo": "Tuberculosis miliar",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A20.0",
+    "descripcion": "Peste bubónica",
+    "grupo": "Peste bubónica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A21.9",
+    "descripcion": "Tularemia, no especificada",
+    "grupo": "Tularemia",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A22.0",
+    "descripcion": "Carbunco (ántrax) cutáneo",
+    "grupo": "Carbunco cutáneo",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A23.9",
+    "descripcion": "Brucelosis, no especificada",
+    "grupo": "Brucelosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A25.9",
+    "descripcion": "Fiebre por mordedura de rata, no especificada",
+    "grupo": "Fiebre por mordedura de rata",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A27.0",
+    "descripcion": "Leptospirosis icterohemorrágica",
+    "grupo": "Leptospirosis icterohemorrágica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "A27.9",
+    "descripcion": "Leptospirosis, no especificada",
+    "grupo": "Leptospirosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A30.9",
+    "descripcion": "Lepra, no especificada",
+    "grupo": "Lepra",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A32.9",
+    "descripcion": "Listeriosis, no especificada",
+    "grupo": "Listeriosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A33",
+    "descripcion": "Tétanos neonatal",
+    "grupo": "Tétanos neonatal",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A34",
+    "descripcion": "Tétanos obstétrico",
+    "grupo": "Tétanos obstétrico",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A35",
+    "descripcion": "Otros tétanos",
+    "grupo": "Otros tétanos",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A36.9",
+    "descripcion": "Difteria, no especificada",
+    "grupo": "Difteria",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A37.0",
+    "descripcion": "Tos ferina debida a Bordetella pertussis",
+    "grupo": "Tos ferina debida a Bordetella pertussis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A37.9",
+    "descripcion": "Tos ferina, no especificada",
+    "grupo": "Tos ferina",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A37.90",
     "descripcion": "Tos ferina NE",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Tos ferina NE",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A38",
+    "descripcion": "Escarlatina",
+    "grupo": "Escarlatina",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A38.9",
     "descripcion": "Fiebre escarlatina NE",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Fiebre escarlatina NE",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A39.0",
+    "descripcion": "Meningitis meningocócica",
+    "grupo": "Meningitis meningocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A39.2",
+    "descripcion": "Meningococemia aguda",
+    "grupo": "Meningococemia",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A39.9",
+    "descripcion": "Infección meningocócica, no especificada",
+    "grupo": "Infección meningocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A40.0",
+    "descripcion": "Septicemia debida a estreptococo del grupo A",
+    "grupo": "Septicemia debida a estreptococo del grupo A",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A40.9",
+    "descripcion": "Septicemia estreptocócica, no especificada",
+    "grupo": "Septicemia estreptocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A41.0",
+    "descripcion": "Septicemia debida a Staphylococcus aureus",
+    "grupo": "Septicemia debida a Staphylococcus aureus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A41.01",
     "descripcion": "Sepsis por Staphylococcus aureus",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Sepsis por Staphylococcus aureus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A41.1",
+    "descripcion": "Septicemia debida a otro estafilococo especificado",
+    "grupo": "Septicemia debida a otro estafilococo",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A41.5",
+    "descripcion": "Septicemia debida a otros organismos gramnegativos",
+    "grupo": "Septicemia debida a otros organismos",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A41.51",
     "descripcion": "Sepsis por Escherichia coli",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Sepsis por Escherichia coli",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A41.9",
+    "descripcion": "Septicemia, no especificada",
+    "grupo": "Septicemia",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A46",
+    "descripcion": "Erisipela",
+    "grupo": "Erisipela",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A48.0",
+    "descripcion": "Gangrena gaseosa",
+    "grupo": "Gangrena gaseosa",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A48.1",
+    "descripcion": "Enfermedad de los legionarios",
+    "grupo": "Enfermedad de los legionarios",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A48.3",
+    "descripcion": "Síndrome de choque tóxico",
+    "grupo": "Síndrome de choque tóxico",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A49.0",
+    "descripcion": "Infección estafilocócica, sin otra especificación",
+    "grupo": "Infección estafilocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A49.1",
+    "descripcion": "Infección estreptocócica, sin otra especificación",
+    "grupo": "Infección estreptocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A49.9",
+    "descripcion": "Infección bacteriana, no especificada",
+    "grupo": "Infección bacteriana",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "A50.9",
+    "descripcion": "Sífilis congénita, no especificada",
+    "grupo": "Sífilis congénita",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A51.0",
+    "descripcion": "Sífilis genital primaria",
+    "grupo": "Sífilis genital primaria",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A51.3",
+    "descripcion": "Sífilis secundaria de piel y membranas mucosas",
+    "grupo": "Sífilis secundaria de piel y membranas mucosas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A51.9",
+    "descripcion": "Sífilis precoz, no especificada",
+    "grupo": "Sífilis precoz",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A52.9",
+    "descripcion": "Sífilis tardía, no especificada",
+    "grupo": "Sífilis tardía",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A53.9",
+    "descripcion": "Sífilis, no especificada",
+    "grupo": "Sífilis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A54.0",
+    "descripcion": "Infección gonocócica del tracto genitourinario inferior",
+    "grupo": "Infección gonocócica del tracto",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A54.9",
+    "descripcion": "Infección gonocócica, no especificada",
+    "grupo": "Infección gonocócica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A55",
+    "descripcion": "Linfogranuloma (venéreo) por clamidias",
+    "grupo": "Linfogranuloma por clamidias",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A56.0",
+    "descripcion": "Infección por clamidias del tracto genitourinario inferior",
+    "grupo": "Infección por clamidias del tracto",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A56.00",
     "descripcion": "Infección genital por clamidia NE",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Infección genital por clamidia NE",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A56.9",
+    "descripcion": "Infección de transmisión sexual por clamidias, no especificada",
+    "grupo": "Infección de transmisión sexual por clamidias",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A57",
+    "descripcion": "Chancro blando (chancroide)",
+    "grupo": "Chancro blando",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A59.0",
+    "descripcion": "Tricomoniasis urogenital",
+    "grupo": "Tricomoniasis urogenital",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "A59.9",
+    "descripcion": "Tricomoniasis, no especificada",
+    "grupo": "Tricomoniasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "A60.0",
+    "descripcion": "Infección anogenital por virus del herpes simple",
+    "grupo": "Infección anogenital por virus del herpes",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
     "codigo": "A60.00",
     "descripcion": "Herpes genital NE",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Herpes genital NE",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A63.0",
+    "descripcion": "Verrugas anogenitales (venéreas)",
+    "grupo": "Verrugas anogenitales",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A64",
+    "descripcion": "Enfermedad de transmisión sexual, no especificada",
+    "grupo": "Enfermedad de transmisión sexual",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A69.2",
+    "descripcion": "Enfermedad de Lyme",
+    "grupo": "Enfermedad de Lyme",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
     "codigo": "A69.20",
     "descripcion": "Enfermedad de Lyme diseminada NE",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Enfermedad de Lyme diseminada NE",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A70",
+    "descripcion": "Infección debida a Chlamydia psittaci",
+    "grupo": "Infección debida a Chlamydia psittaci",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A75.9",
+    "descripcion": "Tifus, no especificado",
+    "grupo": "Tifus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A79.9",
+    "descripcion": "Rickettsiosis, no especificada",
+    "grupo": "Rickettsiosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A80.9",
+    "descripcion": "Poliomielitis aguda, no especificada",
+    "grupo": "Poliomielitis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A82.9",
+    "descripcion": "Rabia, no especificada",
+    "grupo": "Rabia",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A84.9",
+    "descripcion": "Encefalitis viral transmitida por garrapatas, no especificada",
+    "grupo": "Encefalitis viral transmitida por garrapatas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A86",
+    "descripcion": "Encefalitis viral, no especificada",
+    "grupo": "Encefalitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A87.9",
+    "descripcion": "Meningitis viral, no especificada",
+    "grupo": "Meningitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A90",
+    "descripcion": "Fiebre del dengue (dengue clásico)",
+    "grupo": "Fiebre del dengue",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A91",
+    "descripcion": "Fiebre del dengue hemorrágico",
+    "grupo": "Fiebre del dengue hemorrágico",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A92.0",
+    "descripcion": "Fiebre de Chikungunya",
+    "grupo": "Fiebre de Chikungunya",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A92.5",
+    "descripcion": "Enfermedad por virus de Zika",
+    "grupo": "Enfermedad por virus de Zika",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A92.8",
+    "descripcion": "Otras fiebres virales transmitidas por mosquitos",
+    "grupo": "Otras fiebres virales transmitidas por",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A95.9",
+    "descripcion": "Fiebre amarilla, no especificada",
+    "grupo": "Fiebre amarilla",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "A97.0",
+    "descripcion": "Dengue sin signos de alarma",
+    "grupo": "Dengue sin signos de alarma",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A97.1",
+    "descripcion": "Dengue con signos de alarma",
+    "grupo": "Dengue con signos de alarma",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A97.2",
+    "descripcion": "Dengue grave",
+    "grupo": "Dengue",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": "grave"
   },
   {
     "codigo": "A97.9",
     "descripcion": "Dengue sin signos de alarma",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Dengue sin signos de alarma",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "A98.5",
+    "descripcion": "Fiebre hemorrágica con síndrome renal",
+    "grupo": "Fiebre hemorrágica con síndrome renal",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
   },
   {
     "codigo": "B00.0",
     "descripcion": "Eczema herpético (erupción variceliforme de Kaposi)",
-    "grupo": "Infeccioso",
-    "sistema": "Infeccioso"
+    "grupo": "Eczema herpético",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "K08.9",
-    "descripcion": "Erupción dentaria tardía NE",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B00.1",
+    "descripcion": "Dermatitis vesicular por virus del herpes",
+    "grupo": "Dermatitis vesicular por virus del herpes",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "L00",
-    "descripcion": "Síndrome estafilocócico de la piel escaldada",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B00.9",
+    "descripcion": "Infección por virus del herpes, no especificada",
+    "grupo": "Infección por virus del herpes",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "P07.30",
-    "descripcion": "Pretérmino NE — <37 semanas",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B01.9",
+    "descripcion": "Varicela sin complicaciones",
+    "grupo": "Varicela sin complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "P07.10",
-    "descripcion": "Muy bajo peso al nacer NE — <1,500g",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B02.9",
+    "descripcion": "Herpes zóster sin complicaciones",
+    "grupo": "Herpes zóster sin complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "P28.5",
-    "descripcion": "Insuficiencia respiratoria del recién nacido NE",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B05.9",
+    "descripcion": "Sarampión sin complicaciones",
+    "grupo": "Sarampión sin complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "P83.9",
-    "descripcion": "Trastorno de integumento del RN NE",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B06.9",
+    "descripcion": "Rubéola sin complicaciones",
+    "grupo": "Rubéola sin complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
   },
   {
-    "codigo": "R62.0",
-    "descripcion": "Retraso del desarrollo psicomotor NE",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B07",
+    "descripcion": "Verrugas víricas",
+    "grupo": "Verrugas víricas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "R62.51",
-    "descripcion": "Fallo de medro en lactante",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B08.1",
+    "descripcion": "Molusco contagioso",
+    "grupo": "Molusco contagioso",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "Z00.110",
-    "descripcion": "Visita de salud del lactante — sin hallazgos",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B08.4",
+    "descripcion": "Estomatitis vesicular enteroviral con exantema",
+    "grupo": "Estomatitis vesicular enteroviral con exantema",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z00.121",
-    "descripcion": "Control de salud del niño — sin hallazgos",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B15.9",
+    "descripcion": "Hepatitis aguda tipo A sin coma hepático",
+    "grupo": "Hepatitis tipo A sin coma hepático",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z23",
-    "descripcion": "Inmunización / vacunación",
-    "grupo": "Pediatría",
-    "sistema": "Pediatría"
+    "codigo": "B16.9",
+    "descripcion": "Hepatitis aguda tipo B sin agente delta ni coma hepático",
+    "grupo": "Hepatitis tipo B sin agente delta ni coma",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z00.00",
-    "descripcion": "Examen médico general adulto sin hallazgos",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B17.1",
+    "descripcion": "Hepatitis aguda tipo C",
+    "grupo": "Hepatitis tipo C",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z00.01",
-    "descripcion": "Examen médico general adulto con hallazgos anormales",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B17.9",
+    "descripcion": "Hepatitis viral aguda, no especificada",
+    "grupo": "Hepatitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z11.3",
-    "descripcion": "Cribado de infecciones de transmisión sexual",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B18.0",
+    "descripcion": "Hepatitis viral crónica tipo B con agente delta",
+    "grupo": "Hepatitis viral tipo B con agente delta",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z11.4",
-    "descripcion": "Cribado de VIH",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B18.1",
+    "descripcion": "Hepatitis viral crónica tipo B sin agente delta",
+    "grupo": "Hepatitis viral tipo B sin agente delta",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z11.51",
-    "descripcion": "Cribado de tuberculosis",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B18.2",
+    "descripcion": "Hepatitis viral crónica tipo C",
+    "grupo": "Hepatitis viral tipo C",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z12.11",
-    "descripcion": "Cribado de cáncer de colon y recto (colonoscopía)",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B18.9",
+    "descripcion": "Hepatitis viral crónica, no especificada",
+    "grupo": "Hepatitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z12.31",
-    "descripcion": "Cribado de cáncer de mama (mamografía)",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B19.9",
+    "descripcion": "Hepatitis viral, no especificada, sin coma hepático",
+    "grupo": "Hepatitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z12.4",
-    "descripcion": "Cribado de cáncer de cuello uterino (PAP)",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B20",
+    "descripcion": "Enfermedad por VIH con enfermedades infecciosas y parasitarias",
+    "grupo": "Enfermedad por VIH con enfermedades",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z12.5",
-    "descripcion": "Cribado de cáncer de próstata (PSA)",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B21",
+    "descripcion": "Enfermedad por VIH con tumores malignos",
+    "grupo": "Enfermedad por VIH con tumores malignos",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z13.1",
-    "descripcion": "Cribado de diabetes mellitus",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B22",
+    "descripcion": "Enfermedad por VIH con otras enfermedades especificadas",
+    "grupo": "Enfermedad por VIH con otras enfermedades",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z13.220",
-    "descripcion": "Cribado de lipidemia",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B23.8",
+    "descripcion": "Enfermedad por VIH con otras afecciones especificadas",
+    "grupo": "Enfermedad por VIH con otras afecciones",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z13.6",
-    "descripcion": "Cribado de enfermedad cardiovascular",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B24",
+    "descripcion": "Enfermedad por VIH, sin otra especificación",
+    "grupo": "Enfermedad por VIH",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z71.41",
-    "descripcion": "Consejería sobre uso de alcohol",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B25.9",
+    "descripcion": "Enfermedad por citomegalovirus, no especificada",
+    "grupo": "Enfermedad por citomegalovirus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z71.6",
-    "descripcion": "Consejería sobre uso de tabaco",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B26.9",
+    "descripcion": "Parotiditis sin complicaciones",
+    "grupo": "Parotiditis sin complicaciones",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z79.4",
-    "descripcion": "Uso a largo plazo de insulina",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B27.9",
+    "descripcion": "Mononucleosis infecciosa, no especificada",
+    "grupo": "Mononucleosis infecciosa",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "Z79.899",
-    "descripcion": "Uso a largo plazo de otros medicamentos",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B30.9",
+    "descripcion": "Conjuntivitis viral, no especificada",
+    "grupo": "Conjuntivitis viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "Z87.891",
-    "descripcion": "Antecedente personal de tabaquismo",
-    "grupo": "Prevención",
-    "sistema": "Prevención"
+    "codigo": "B33.4",
+    "descripcion": "Síndrome pulmonar por hantavirus",
+    "grupo": "Síndrome pulmonar por hantavirus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "R00.8",
-    "descripcion": "Palpitaciones",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B34.9",
+    "descripcion": "Infección viral, no especificada",
+    "grupo": "Infección viral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
   },
   {
-    "codigo": "R05.9",
-    "descripcion": "Tos NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B35.0",
+    "descripcion": "Tiña de la barba y del cuero cabelludo",
+    "grupo": "Tiña de la barba y del cuero cabelludo",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R06.00",
-    "descripcion": "Disnea en reposo",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B35.1",
+    "descripcion": "Tiña de las uñas (onicomicosis)",
+    "grupo": "Tiña de las uñas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R06.09",
-    "descripcion": "Disnea de esfuerzo NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B35.3",
+    "descripcion": "Tiña del pie (pie de atleta)",
+    "grupo": "Tiña del pie",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R07.9",
-    "descripcion": "Dolor torácico NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B35.4",
+    "descripcion": "Tiña del cuerpo",
+    "grupo": "Tiña del cuerpo",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R09.02",
-    "descripcion": "Hipoxemia",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B35.6",
+    "descripcion": "Tiña inguinal",
+    "grupo": "Tiña inguinal",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R11.0",
-    "descripcion": "Náuseas",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B36.0",
+    "descripcion": "Pitiriasis versicolor",
+    "grupo": "Pitiriasis versicolor",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "R11.11",
-    "descripcion": "Vómitos NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B37.0",
+    "descripcion": "Estomatitis candidiásica",
+    "grupo": "Estomatitis candidiásica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R14.0",
-    "descripcion": "Distensión abdominal (meteorismo)",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B37.3",
+    "descripcion": "Candidiasis de la vulva y de la vagina",
+    "grupo": "Candidiasis de la vulva y de la vagina",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R19.7",
-    "descripcion": "Diarrea NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B37.7",
+    "descripcion": "Septicemia candidiásica",
+    "grupo": "Septicemia candidiásica",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R25.2",
-    "descripcion": "Calambres musculares",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B37.9",
+    "descripcion": "Candidiasis, no especificada",
+    "grupo": "Candidiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R35.0",
-    "descripcion": "Frecuencia urinaria",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B38.9",
+    "descripcion": "Coccidioidomicosis, no especificada",
+    "grupo": "Coccidioidomicosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R39.9",
-    "descripcion": "Síntoma del tracto urinario NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B39.9",
+    "descripcion": "Histoplasmosis, no especificada",
+    "grupo": "Histoplasmosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
   },
   {
-    "codigo": "R51.9",
-    "descripcion": "Cefalea NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "B40.9",
+    "descripcion": "Blastomicosis, no especificada",
+    "grupo": "Blastomicosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
   },
   {
-    "codigo": "R52",
+    "codigo": "B41.9",
+    "descripcion": "Paracoccidioidomicosis, no especificada",
+    "grupo": "Paracoccidioidomicosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
+  },
+  {
+    "codigo": "B44.0",
+    "descripcion": "Aspergilosis pulmonar invasiva",
+    "grupo": "Aspergilosis pulmonar invasiva",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B44.9",
+    "descripcion": "Aspergilosis, no especificada",
+    "grupo": "Aspergilosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B45.9",
+    "descripcion": "Criptococosis, no especificada",
+    "grupo": "Criptococosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B49",
+    "descripcion": "Micosis, no especificada",
+    "grupo": "Micosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "micótico",
+    "severidad": ""
+  },
+  {
+    "codigo": "B50.9",
+    "descripcion": "Paludismo por Plasmodium falciparum, no especificado",
+    "grupo": "Paludismo por Plasmodium falciparum",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B51.9",
+    "descripcion": "Paludismo por Plasmodium vivax sin complicaciones",
+    "grupo": "Paludismo por Plasmodium vivax sin",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "B52.9",
+    "descripcion": "Paludismo por Plasmodium malariae sin complicaciones",
+    "grupo": "Paludismo por Plasmodium malariae sin",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "B53.0",
+    "descripcion": "Paludismo por Plasmodium ovale",
+    "grupo": "Paludismo por Plasmodium ovale",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B54",
+    "descripcion": "Paludismo (malaria), no especificado",
+    "grupo": "Paludismo",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B55.0",
+    "descripcion": "Leishmaniasis visceral (kala-azar)",
+    "grupo": "Leishmaniasis visceral",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B55.1",
+    "descripcion": "Leishmaniasis cutánea",
+    "grupo": "Leishmaniasis cutánea",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B55.2",
+    "descripcion": "Leishmaniasis mucocutánea",
+    "grupo": "Leishmaniasis mucocutánea",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B55.9",
+    "descripcion": "Leishmaniasis, no especificada",
+    "grupo": "Leishmaniasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B56.9",
+    "descripcion": "Tripanosomiasis africana, no especificada",
+    "grupo": "Tripanosomiasis africana",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B57.2",
+    "descripcion": "Enfermedad de Chagas crónica con afección del corazón",
+    "grupo": "Enfermedad de Chagas con afección del corazón",
+    "sistema": "Infecciosas",
+    "tipo": "crónico",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B57.9",
+    "descripcion": "Enfermedad de Chagas, no especificada",
+    "grupo": "Enfermedad de Chagas",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B58.0",
+    "descripcion": "Oftalmopatía por Toxoplasma",
+    "grupo": "Oftalmopatía por Toxoplasma",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B58.9",
+    "descripcion": "Toxoplasmosis, no especificada",
+    "grupo": "Toxoplasmosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B59",
+    "descripcion": "Neumocistosis (Pneumocystis jirovecii)",
+    "grupo": "Neumocistosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B65.9",
+    "descripcion": "Esquistosomiasis, no especificada",
+    "grupo": "Esquistosomiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B67.0",
+    "descripcion": "Equinococosis del hígado por Echinococcus granulosus",
+    "grupo": "Equinococosis del hígado por Echinococcus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B67.9",
+    "descripcion": "Equinococosis (hidatidosis), no especificada",
+    "grupo": "Equinococosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B68.9",
+    "descripcion": "Teniasis, no especificada",
+    "grupo": "Teniasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B69.0",
+    "descripcion": "Cisticercosis del sistema nervioso central",
+    "grupo": "Cisticercosis del sistema nervioso central",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B69.9",
+    "descripcion": "Cisticercosis, no especificada",
+    "grupo": "Cisticercosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B71.9",
+    "descripcion": "Infección por cestodos, no especificada",
+    "grupo": "Infección por cestodos",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B76.9",
+    "descripcion": "Anquilostomiasis, no especificada",
+    "grupo": "Anquilostomiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B77.0",
+    "descripcion": "Ascariasis con complicaciones intestinales",
+    "grupo": "Ascariasis con complicaciones intestinales",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "con complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "B77.9",
+    "descripcion": "Ascariasis, no especificada",
+    "grupo": "Ascariasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B78.9",
+    "descripcion": "Estrongiloidiasis, no especificada",
+    "grupo": "Estrongiloidiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B79",
+    "descripcion": "Tricuriasis",
+    "grupo": "Tricuriasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B80",
+    "descripcion": "Oxiuriasis (enterobiasis)",
+    "grupo": "Oxiuriasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B82.9",
+    "descripcion": "Parasitosis intestinal, no especificada",
+    "grupo": "Parasitosis intestinal",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "B83.9",
+    "descripcion": "Helmintiasis, no especificada",
+    "grupo": "Helmintiasis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B85.0",
+    "descripcion": "Pediculosis debida a Pediculus humanus capitis",
+    "grupo": "Pediculosis debida a Pediculus humanus capitis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B85.2",
+    "descripcion": "Pediculosis, no especificada",
+    "grupo": "Pediculosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B86",
+    "descripcion": "Escabiosis (sarna)",
+    "grupo": "Escabiosis",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "B88.9",
+    "descripcion": "Infestación, no especificada",
+    "grupo": "Infestación",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B89",
+    "descripcion": "Enfermedad parasitaria, no especificada",
+    "grupo": "Enfermedad parasitaria",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "parasitario",
+    "severidad": ""
+  },
+  {
+    "codigo": "B90.9",
+    "descripcion": "Secuelas de tuberculosis respiratoria y no especificada",
+    "grupo": "Secuelas de tuberculosis respiratoria y",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B95.6",
+    "descripcion": "Staphylococcus aureus como causa de enfermedades",
+    "grupo": "Staphylococcus aureus como causa de",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "B96.2",
+    "descripcion": "Escherichia coli como causa de enfermedades clasificadas",
+    "grupo": "Escherichia coli como causa de enfermedades",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "B99",
+    "descripcion": "Otras enfermedades infecciosas y las no especificadas",
+    "grupo": "Otras enfermedades infecciosas y las",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "U07.1",
+    "descripcion": "COVID-19, virus identificado",
+    "grupo": "COVID-19",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "U07.2",
+    "descripcion": "COVID-19, virus no identificado (clínico o epidemiológico)",
+    "grupo": "COVID-19",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "G56.00",
+    "descripcion": "Síndrome del túnel del carpo NE",
+    "grupo": "Síndrome del túnel del carpo NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.00",
+    "descripcion": "Lesión del nervio ciático NE",
+    "grupo": "Lesión del nervio ciático NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.50",
+    "descripcion": "Síndrome del túnel del tarso NE",
+    "grupo": "Síndrome del túnel del tarso NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "M00.9",
+    "descripcion": "Artritis piógena no especificada",
+    "grupo": "Artritis piógena",
+    "sistema": "Musculoesquelético",
+    "tipo": "agudo",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M02.3",
+    "descripcion": "Enfermedad de Reiter",
+    "grupo": "Enfermedad de Reiter",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M02.9",
+    "descripcion": "Artropatía reactiva no especificada",
+    "grupo": "Artropatía reactiva",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M05.0",
+    "descripcion": "Síndrome de Felty",
+    "grupo": "Síndrome de Felty",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M05.3",
+    "descripcion": "Artritis reumatoide con compromiso de otros órganos y sistemas",
+    "grupo": "Artritis reumatoide con compromiso de otros",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M05.8",
+    "descripcion": "Otras artritis reumatoides seropositivas",
+    "grupo": "Otras artritis reumatoides seropositivas",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M05.9",
+    "descripcion": "Artritis reumatoide seropositiva no especificada",
+    "grupo": "Artritis reumatoide seropositiva",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M06.0",
+    "descripcion": "Artritis reumatoide seronegativa",
+    "grupo": "Artritis reumatoide seronegativa",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M06.00",
+    "descripcion": "Artritis reumatoide seronegativa",
+    "grupo": "Artritis reumatoide seronegativa",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M06.4",
+    "descripcion": "Poliartropatía inflamatoria",
+    "grupo": "Poliartropatía inflamatoria",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M06.9",
+    "descripcion": "Artritis reumatoide no especificada",
+    "grupo": "Artritis reumatoide",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M07.3",
+    "descripcion": "Otras artropatías psoriásicas",
+    "grupo": "Otras artropatías psoriásicas",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M07.60",
+    "descripcion": "Artropatía psoriásica NE",
+    "grupo": "Artropatía psoriásica NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M08.0",
+    "descripcion": "Artritis juvenil reumatoide",
+    "grupo": "Artritis juvenil reumatoide",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M08.00",
+    "descripcion": "Artritis reumatoide juvenil NE",
+    "grupo": "Artritis reumatoide juvenil NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M08.3",
+    "descripcion": "Poliartritis juvenil seronegativa",
+    "grupo": "Poliartritis juvenil seronegativa",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M08.9",
+    "descripcion": "Artritis juvenil no especificada",
+    "grupo": "Artritis juvenil",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.0",
+    "descripcion": "Gota idiopática",
+    "grupo": "Gota idiopática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.3",
+    "descripcion": "Gota debida a alteración de la función renal",
+    "grupo": "Gota debida a alteración de la función renal",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M10.4",
+    "descripcion": "Otras gotas secundarias",
+    "grupo": "Otras gotas secundarias",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M11.9",
+    "descripcion": "Artropatía por cristales no especificada",
+    "grupo": "Artropatía por cristales",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M13.9",
+    "descripcion": "Artritis no especificada",
+    "grupo": "Artritis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M15.0",
+    "descripcion": "Artrosis primaria generalizada",
+    "grupo": "Artrosis primaria generalizada",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M15.9",
+    "descripcion": "Poliartrosis no especificada",
+    "grupo": "Poliartrosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M16.0",
+    "descripcion": "Coxartrosis primaria bilateral",
+    "grupo": "Coxartrosis primaria bilateral",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M16.1",
+    "descripcion": "Otras coxartrosis primarias",
+    "grupo": "Otras coxartrosis primarias",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M16.9",
+    "descripcion": "Coxartrosis no especificada",
+    "grupo": "Coxartrosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.0",
+    "descripcion": "Gonartrosis primaria bilateral",
+    "grupo": "Gonartrosis primaria bilateral",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.1",
+    "descripcion": "Otras gonartrosis primarias",
+    "grupo": "Otras gonartrosis primarias",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M17.9",
+    "descripcion": "Gonartrosis no especificada",
+    "grupo": "Gonartrosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M18.9",
+    "descripcion": "Artrosis carpometacarpiana del pulgar no especificada",
+    "grupo": "Artrosis carpometacarpiana del pulgar",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M19.0",
+    "descripcion": "Artrosis primaria de otras articulaciones",
+    "grupo": "Artrosis primaria de otras articulaciones",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M19.9",
+    "descripcion": "Artrosis no especificada",
+    "grupo": "Artrosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M19.90",
+    "descripcion": "Artrosis primaria NE",
+    "grupo": "Artrosis primaria NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M20.1",
+    "descripcion": "Hallux valgus adquirido",
+    "grupo": "Hallux valgus adquirido",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M20.2",
+    "descripcion": "Hallux rigidus",
+    "grupo": "Hallux rigidus",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M20.4",
+    "descripcion": "Otros dedos del pie en martillo adquiridos",
+    "grupo": "Otros dedos del pie en martillo adquiridos",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M21.4",
+    "descripcion": "Pie plano adquirido",
+    "grupo": "Pie plano adquirido",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M21.6",
+    "descripcion": "Otras deformidades adquiridas del tobillo y del pie",
+    "grupo": "Otras deformidades adquiridas del tobillo y",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M22.4",
+    "descripcion": "Condromalacia de la rótula",
+    "grupo": "Condromalacia de la rótula",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M23.2",
+    "descripcion": "Trastorno de menisco por desgarro o lesión antigua",
+    "grupo": "Trastorno de menisco por desgarro o lesión",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M25.4",
+    "descripcion": "Derrame articular",
+    "grupo": "Derrame articular",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M25.5",
+    "descripcion": "Dolor en articulación",
+    "grupo": "Dolor en articulación",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M25.6",
+    "descripcion": "Rigidez articular no clasificada en otra parte",
+    "grupo": "Rigidez articular no clasificada en otra parte",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M30.0",
+    "descripcion": "Poliarteritis nodosa",
+    "grupo": "Poliarteritis nodosa",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M31.3",
+    "descripcion": "Granulomatosis de Wegener",
+    "grupo": "Granulomatosis de Wegener",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M31.5",
+    "descripcion": "Arteritis de células gigantes con polimialgia reumática",
+    "grupo": "Arteritis de células gigantes con polimialgia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M31.6",
+    "descripcion": "Otras arteritis de células gigantes",
+    "grupo": "Otras arteritis de células gigantes",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M32.1",
+    "descripcion": "Lupus eritematoso sistémico con compromiso de órganos",
+    "grupo": "Lupus eritematoso sistémico con compromiso de",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M32.9",
+    "descripcion": "Lupus eritematoso sistémico no especificado",
+    "grupo": "Lupus eritematoso sistémico",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M33.1",
+    "descripcion": "Dermatomiositis",
+    "grupo": "Dermatomiositis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M33.2",
+    "descripcion": "Polimiositis",
+    "grupo": "Polimiositis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M34.0",
+    "descripcion": "Esclerosis sistémica progresiva",
+    "grupo": "Esclerosis sistémica progresiva",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M34.9",
+    "descripcion": "Esclerosis sistémica no especificada",
+    "grupo": "Esclerosis sistémica",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M35.0",
+    "descripcion": "Síndrome seco de Sjögren",
+    "grupo": "Síndrome seco de Sjögren",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M35.00",
+    "descripcion": "Síndrome de Sjögren NE",
+    "grupo": "Síndrome de Sjögren NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M35.3",
+    "descripcion": "Polimialgia reumática",
+    "grupo": "Polimialgia reumática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M35.9",
+    "descripcion": "Compromiso sistémico del tejido conjuntivo no especificado",
+    "grupo": "Compromiso sistémico del tejido conjuntivo",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M40.202",
+    "descripcion": "Cifosis postural no especificada — región torácica",
+    "grupo": "Cifosis postural",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M41.1",
+    "descripcion": "Escoliosis idiopática juvenil",
+    "grupo": "Escoliosis idiopática juvenil",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M41.2",
+    "descripcion": "Otras escoliosis idiopáticas",
+    "grupo": "Otras escoliosis idiopáticas",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M41.9",
+    "descripcion": "Escoliosis no especificada",
+    "grupo": "Escoliosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M42.1",
+    "descripcion": "Osteocondrosis vertebral del adulto",
+    "grupo": "Osteocondrosis vertebral del adulto",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M43.1",
+    "descripcion": "Espondilolistesis",
+    "grupo": "Espondilolistesis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M43.6",
+    "descripcion": "Tortícolis",
+    "grupo": "Tortícolis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M45",
+    "descripcion": "Espondilitis anquilosante",
+    "grupo": "Espondilitis anquilosante",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M45.9",
+    "descripcion": "Espondilitis anquilosante NE",
+    "grupo": "Espondilitis anquilosante NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M46.1",
+    "descripcion": "Sacroiliitis no clasificada en otra parte",
+    "grupo": "Sacroiliitis no clasificada en otra parte",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.1",
+    "descripcion": "Espondilosis con mielopatía",
+    "grupo": "Espondilosis con mielopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.2",
+    "descripcion": "Espondilosis con radiculopatía",
+    "grupo": "Espondilosis con radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.8",
+    "descripcion": "Otras espondilosis",
+    "grupo": "Otras espondilosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.812",
+    "descripcion": "Espondiloartrosis cervical sin mielopatía",
+    "grupo": "Espondiloartrosis cervical sin mielopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.816",
+    "descripcion": "Espondiloartrosis lumbar sin mielopatía",
+    "grupo": "Espondiloartrosis lumbar sin mielopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M47.9",
+    "descripcion": "Espondilosis no especificada",
+    "grupo": "Espondilosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M48.0",
+    "descripcion": "Estenosis espinal",
+    "grupo": "Estenosis espinal",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M48.06",
+    "descripcion": "Estenosis del canal lumbar",
+    "grupo": "Estenosis del canal lumbar",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M50.0",
+    "descripcion": "Trastorno de disco cervical con mielopatía",
+    "grupo": "Trastorno de disco cervical con mielopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M50.1",
+    "descripcion": "Trastorno de disco cervical con radiculopatía",
+    "grupo": "Trastorno de disco cervical con radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M50.2",
+    "descripcion": "Otros desplazamientos de disco cervical",
+    "grupo": "Otros desplazamientos de disco cervical",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M50.9",
+    "descripcion": "Trastorno de disco cervical no especificado",
+    "grupo": "Trastorno de disco cervical",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.0",
+    "descripcion": "Trastorno de disco lumbar con mielopatía",
+    "grupo": "Trastorno de disco lumbar con mielopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.1",
+    "descripcion": "Trastorno de disco lumbar con radiculopatía",
+    "grupo": "Trastorno de disco lumbar con radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.17",
+    "descripcion": "Hernia discal lumbar con radiculopatía",
+    "grupo": "Hernia discal lumbar con radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.2",
+    "descripcion": "Otros desplazamientos especificados de disco intervertebral",
+    "grupo": "Otros desplazamientos especificados de disco",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M51.3",
+    "descripcion": "Otra degeneración especificada de disco intervertebral",
+    "grupo": "Otra degeneración especificada de disco",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M53.1",
+    "descripcion": "Síndrome cervicobraquial",
+    "grupo": "Síndrome cervicobraquial",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M53.3",
+    "descripcion": "Coccigodinia",
+    "grupo": "Coccigodinia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.1",
+    "descripcion": "Radiculopatía",
+    "grupo": "Radiculopatía",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.2",
+    "descripcion": "Cervicalgia",
+    "grupo": "Cervicalgia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.3",
+    "descripcion": "Ciática",
+    "grupo": "Ciática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.4",
+    "descripcion": "Lumbago con ciática",
+    "grupo": "Lumbago con ciática",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.5",
+    "descripcion": "Lumbago no especificado",
+    "grupo": "Lumbago",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.50",
+    "descripcion": "Lumbalgia baja NE",
+    "grupo": "Lumbalgia baja NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.6",
+    "descripcion": "Dolor en columna dorsal",
+    "grupo": "Dolor en columna dorsal",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M54.9",
+    "descripcion": "Dorsalgia no especificada",
+    "grupo": "Dorsalgia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M60.9",
+    "descripcion": "Miositis no especificada",
+    "grupo": "Miositis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M62.4",
+    "descripcion": "Contractura muscular",
+    "grupo": "Contractura muscular",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M62.6",
+    "descripcion": "Distensión muscular",
+    "grupo": "Distensión muscular",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M62.838",
+    "descripcion": "Espasmo muscular NE",
+    "grupo": "Espasmo muscular NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M65.3",
+    "descripcion": "Dedo en gatillo",
+    "grupo": "Dedo en gatillo",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M65.4",
+    "descripcion": "Tenosinovitis de estiloides radial de De Quervain",
+    "grupo": "Tenosinovitis de estiloides radial de De",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M65.9",
+    "descripcion": "Sinovitis y tenosinovitis no especificada",
+    "grupo": "Sinovitis y tenosinovitis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M67.4",
+    "descripcion": "Ganglión",
+    "grupo": "Ganglión",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M70.2",
+    "descripcion": "Bursitis del olécranon",
+    "grupo": "Bursitis del olécranon",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M70.30",
+    "descripcion": "Bursitis prepatelar NE",
+    "grupo": "Bursitis prepatelar NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M70.4",
+    "descripcion": "Bursitis prerrotuliana",
+    "grupo": "Bursitis prerrotuliana",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M70.6",
+    "descripcion": "Bursitis trocantérea",
+    "grupo": "Bursitis trocantérea",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M71.2",
+    "descripcion": "Quiste sinovial del hueco poplíteo de Baker",
+    "grupo": "Quiste sinovial del hueco poplíteo de Baker",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M72.0",
+    "descripcion": "Fibromatosis de la fascia palmar de Dupuytren",
+    "grupo": "Fibromatosis de la fascia palmar de Dupuytren",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M72.2",
+    "descripcion": "Fascitis plantar",
+    "grupo": "Fascitis plantar",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.0",
+    "descripcion": "Capsulitis adhesiva del hombro",
+    "grupo": "Capsulitis adhesiva del hombro",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.1",
+    "descripcion": "Síndrome del manguito rotador",
+    "grupo": "Síndrome del manguito rotador",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.2",
+    "descripcion": "Tendinitis del bíceps",
+    "grupo": "Tendinitis del bíceps",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.3",
+    "descripcion": "Tendinitis calcificante del hombro",
+    "grupo": "Tendinitis calcificante del hombro",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.5",
+    "descripcion": "Bursitis del hombro",
+    "grupo": "Bursitis del hombro",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.50",
+    "descripcion": "Bursitis del hombro NE",
+    "grupo": "Bursitis del hombro NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M75.9",
+    "descripcion": "Lesión del hombro no especificada",
+    "grupo": "Lesión del hombro",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M76.6",
+    "descripcion": "Tendinitis aquiliana",
+    "grupo": "Tendinitis aquiliana",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M76.60",
+    "descripcion": "Tendinopatía del tendón de Aquiles",
+    "grupo": "Tendinopatía del tendón de Aquiles",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M77.0",
+    "descripcion": "Epicondilitis medial",
+    "grupo": "Epicondilitis medial",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M77.1",
+    "descripcion": "Epicondilitis lateral",
+    "grupo": "Epicondilitis lateral",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M77.10",
+    "descripcion": "Epicondilitis lateral (codo de tenista)",
+    "grupo": "Epicondilitis lateral",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M77.21",
+    "descripcion": "Epicondilitis medial (codo de golfista)",
+    "grupo": "Epicondilitis medial",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M77.3",
+    "descripcion": "Espolón calcáneo",
+    "grupo": "Espolón calcáneo",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.0",
+    "descripcion": "Reumatismo no especificado",
+    "grupo": "Reumatismo",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.1",
+    "descripcion": "Mialgia",
+    "grupo": "Mialgia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.3",
+    "descripcion": "Paniculitis NE",
+    "grupo": "Paniculitis NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.6",
+    "descripcion": "Dolor en miembro",
+    "grupo": "Dolor en miembro",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.7",
+    "descripcion": "Fibromialgia",
+    "grupo": "Fibromialgia",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M80.0",
+    "descripcion": "Osteoporosis posmenopáusica con fractura patológica",
+    "grupo": "Osteoporosis posmenopáusica con fractura",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M80.00XA",
+    "descripcion": "Fractura vertebral osteoporótica — columna cervical",
+    "grupo": "Fractura vertebral osteoporótica",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M80.9",
+    "descripcion": "Osteoporosis no especificada con fractura patológica",
+    "grupo": "Osteoporosis con fractura patológica",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M81.0",
+    "descripcion": "Osteoporosis posmenopáusica",
+    "grupo": "Osteoporosis posmenopáusica",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M81.6",
+    "descripcion": "Osteoporosis localizada NE",
+    "grupo": "Osteoporosis localizada NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M81.9",
+    "descripcion": "Osteoporosis no especificada",
+    "grupo": "Osteoporosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M83.9",
+    "descripcion": "Osteomalacia del adulto NE",
+    "grupo": "Osteomalacia del adulto NE",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M84.4",
+    "descripcion": "Fractura patológica no clasificada en otra parte",
+    "grupo": "Fractura patológica no clasificada en otra",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M84.512A",
+    "descripcion": "Fractura patológica por osteoporosis — radio/cúbito",
+    "grupo": "Fractura patológica por osteoporosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M86.6",
+    "descripcion": "Otra osteomielitis crónica",
+    "grupo": "Otra osteomielitis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M86.9",
+    "descripcion": "Osteomielitis no especificada",
+    "grupo": "Osteomielitis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M87.0",
+    "descripcion": "Necrosis aséptica idiopática del hueso",
+    "grupo": "Necrosis aséptica idiopática del hueso",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M87.9",
+    "descripcion": "Osteonecrosis no especificada",
+    "grupo": "Osteonecrosis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "G00.1",
+    "descripcion": "Meningitis neumocócica",
+    "grupo": "Meningitis neumocócica",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G00.9",
+    "descripcion": "Meningitis bacteriana no especificada",
+    "grupo": "Meningitis bacteriana",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "G03.9",
+    "descripcion": "Meningitis de causa no especificada",
+    "grupo": "Meningitis de causa",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G04.9",
+    "descripcion": "Encefalitis y encefalomielitis no especificada",
+    "grupo": "Encefalitis y encefalomielitis",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G06.0",
+    "descripcion": "Absceso y granuloma intracraneal",
+    "grupo": "Absceso y granuloma intracraneal",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G08",
+    "descripcion": "Flebitis y tromboflebitis intracraneal",
+    "grupo": "Flebitis y tromboflebitis intracraneal",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G09",
+    "descripcion": "Secuelas de enfermedad inflamatoria del SNC",
+    "grupo": "Secuelas de enfermedad inflamatoria del SNC",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G10",
+    "descripcion": "Enfermedad de Huntington",
+    "grupo": "Enfermedad de Huntington",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G11.1",
+    "descripcion": "Ataxia cerebelosa de inicio temprano",
+    "grupo": "Ataxia cerebelosa de inicio temprano",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G12.2",
+    "descripcion": "Esclerosis lateral amiotrófica",
+    "grupo": "Esclerosis lateral amiotrófica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G20",
+    "descripcion": "Enfermedad de Parkinson",
+    "grupo": "Enfermedad de Parkinson",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G21.0",
+    "descripcion": "Síndrome neuroléptico maligno",
+    "grupo": "Síndrome neuroléptico maligno",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G21.1",
+    "descripcion": "Parkinsonismo secundario inducido por fármacos",
+    "grupo": "Parkinsonismo secundario inducido por fármacos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G21.9",
+    "descripcion": "Parkinsonismo secundario NE",
+    "grupo": "Parkinsonismo secundario NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G23.1",
+    "descripcion": "Parálisis supranuclear progresiva",
+    "grupo": "Parálisis supranuclear progresiva",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G24.0",
+    "descripcion": "Distonía inducida por fármacos",
+    "grupo": "Distonía inducida por fármacos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G24.8",
+    "descripcion": "Otras distonías",
+    "grupo": "Otras distonías",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G25.0",
+    "descripcion": "Temblor esencial",
+    "grupo": "Temblor esencial",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G25.3",
+    "descripcion": "Mioclonía",
+    "grupo": "Mioclonía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G25.5",
+    "descripcion": "Otras coreas",
+    "grupo": "Otras coreas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G25.81",
+    "descripcion": "Síndrome de piernas inquietas",
+    "grupo": "Síndrome de piernas inquietas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G30.0",
+    "descripcion": "Enfermedad de Alzheimer de inicio temprano",
+    "grupo": "Enfermedad de Alzheimer de inicio temprano",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G30.1",
+    "descripcion": "Enfermedad de Alzheimer de inicio tardío",
+    "grupo": "Enfermedad de Alzheimer de inicio tardío",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G30.9",
+    "descripcion": "Enfermedad de Alzheimer no especificada",
+    "grupo": "Enfermedad de Alzheimer",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G31.0",
+    "descripcion": "Atrofia cerebral circunscrita",
+    "grupo": "Atrofia cerebral circunscrita",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G31.09",
+    "descripcion": "Demencia frontotemporal NE",
+    "grupo": "Demencia frontotemporal NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G31.8",
+    "descripcion": "Degeneración del sistema nervioso por alcohol",
+    "grupo": "Degeneración del sistema nervioso por alcohol",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G31.84",
+    "descripcion": "Deterioro cognitivo leve (DCL)",
+    "grupo": "Deterioro cognitivo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "G35",
+    "descripcion": "Esclerosis múltiple",
+    "grupo": "Esclerosis múltiple",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G36.0",
+    "descripcion": "Neuromielitis óptica",
+    "grupo": "Neuromielitis óptica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G37.3",
+    "descripcion": "Mielitis transversa aguda desmielinizante",
+    "grupo": "Mielitis transversa desmielinizante",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G37.9",
+    "descripcion": "Enfermedad desmielinizante del SNC no especificada",
+    "grupo": "Enfermedad desmielinizante del SNC",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.0",
+    "descripcion": "Epilepsia focal idiopática",
+    "grupo": "Epilepsia focal idiopática",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.009",
+    "descripcion": "Epilepsia localizada NE sin estado epiléptico",
+    "grupo": "Epilepsia localizada NE sin estado epiléptico",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.1",
+    "descripcion": "Epilepsia focal con crisis parciales simples",
+    "grupo": "Epilepsia focal con crisis parciales simples",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.109",
+    "descripcion": "Epilepsia generalizada NE sin estado epiléptico",
+    "grupo": "Epilepsia generalizada NE sin estado",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.2",
+    "descripcion": "Epilepsia focal con crisis parciales complejas",
+    "grupo": "Epilepsia focal con crisis parciales complejas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.3",
+    "descripcion": "Epilepsia generalizada idiopática",
+    "grupo": "Epilepsia generalizada idiopática",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.311",
+    "descripcion": "Epilepsia mioclónica juvenil",
+    "grupo": "Epilepsia mioclónica juvenil",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.4",
+    "descripcion": "Otras epilepsias generalizadas",
+    "grupo": "Otras epilepsias generalizadas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.5",
+    "descripcion": "Crisis epilépticas relacionadas con situaciones",
+    "grupo": "Crisis epilépticas relacionadas con",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.6",
+    "descripcion": "Crisis de gran mal no especificadas",
+    "grupo": "Crisis de gran mal",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.7",
+    "descripcion": "Crisis de pequeño mal no especificadas",
+    "grupo": "Crisis de pequeño mal",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.8",
+    "descripcion": "Otras epilepsias",
+    "grupo": "Otras epilepsias",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.9",
+    "descripcion": "Epilepsia no especificada",
+    "grupo": "Epilepsia",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G40.909",
+    "descripcion": "Epilepsia NE",
+    "grupo": "Epilepsia NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G41.0",
+    "descripcion": "Estado de gran mal epiléptico",
+    "grupo": "Estado de gran mal epiléptico",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G41.1",
+    "descripcion": "Estado de pequeño mal epiléptico",
+    "grupo": "Estado de pequeño mal epiléptico",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G41.9",
+    "descripcion": "Estado epiléptico no especificado",
+    "grupo": "Estado epiléptico",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.0",
+    "descripcion": "Migraña sin aura",
+    "grupo": "Migraña sin aura",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.009",
+    "descripcion": "Migraña sin aura NE",
+    "grupo": "Migraña sin aura NE",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.1",
+    "descripcion": "Migraña con aura",
+    "grupo": "Migraña con aura",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.109",
+    "descripcion": "Migraña con aura NE",
+    "grupo": "Migraña con aura NE",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.2",
+    "descripcion": "Estado migrañoso",
+    "grupo": "Estado migrañoso",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.3",
+    "descripcion": "Migraña crónica",
+    "grupo": "Migraña",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.8",
+    "descripcion": "Otras migrañas",
+    "grupo": "Otras migrañas",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.9",
+    "descripcion": "Migraña no especificada",
+    "grupo": "Migraña",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.909",
+    "descripcion": "Migraña NE",
+    "grupo": "Migraña NE",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G43.A0",
+    "descripcion": "Migraña crónica sin estado migrañoso",
+    "grupo": "Migraña sin estado migrañoso",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.0",
+    "descripcion": "Cefalea en racimos",
+    "grupo": "Cefalea en racimos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.009",
+    "descripcion": "Cefalea en racimos NE",
+    "grupo": "Cefalea en racimos NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.1",
+    "descripcion": "Cefalea vascular no clasificada en otra parte",
+    "grupo": "Cefalea vascular no clasificada en otra parte",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.2",
+    "descripcion": "Cefalea de tipo tensional",
+    "grupo": "Cefalea de tipo tensional",
+    "sistema": "Neurología",
+    "tipo": "recurrente",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.309",
+    "descripcion": "Cefalea post-traumática NE",
+    "grupo": "Cefalea post-traumática NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.319",
+    "descripcion": "Cefalea tensional episódica NE",
+    "grupo": "Cefalea tensional episódica NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G44.329",
+    "descripcion": "Cefalea tensional crónica NE",
+    "grupo": "Cefalea tensional NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G45.0",
+    "descripcion": "Síndrome arterial vertebrobasilar",
+    "grupo": "Síndrome arterial vertebrobasilar",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G45.1",
+    "descripcion": "Síndrome de la arteria carótida",
+    "grupo": "Síndrome de la arteria carótida",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G45.4",
+    "descripcion": "Amnesia global transitoria",
+    "grupo": "Amnesia global transitoria",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.0",
+    "descripcion": "Trastornos del inicio y mantenimiento del sueño",
+    "grupo": "Trastornos del inicio y mantenimiento del",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.1",
+    "descripcion": "Trastornos por exceso de somnolencia",
+    "grupo": "Trastornos por exceso de somnolencia",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.2",
+    "descripcion": "Trastornos del ritmo circadiano del sueño",
+    "grupo": "Trastornos del ritmo circadiano del sueño",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.4",
+    "descripcion": "Narcolepsia y cataplejía",
+    "grupo": "Narcolepsia y cataplejía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.6",
+    "descripcion": "Trastornos del movimiento relacionados con el sueño",
+    "grupo": "Trastornos del movimiento relacionados con el",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G50.0",
+    "descripcion": "Neuralgia del trigémino",
+    "grupo": "Neuralgia del trigémino",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G51.0",
+    "descripcion": "Parálisis de Bell",
+    "grupo": "Parálisis de Bell",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G51.8",
+    "descripcion": "Otros trastornos del nervio facial",
+    "grupo": "Otros trastornos del nervio facial",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G52.1",
+    "descripcion": "Trastornos del nervio glosofaríngeo",
+    "grupo": "Trastornos del nervio glosofaríngeo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G54.0",
+    "descripcion": "Trastornos del plexo braquial",
+    "grupo": "Trastornos del plexo braquial",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G54.1",
+    "descripcion": "Trastornos del plexo lumbosacro",
+    "grupo": "Trastornos del plexo lumbosacro",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G54.2",
+    "descripcion": "Radiculopatía cervical",
+    "grupo": "Radiculopatía cervical",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G54.4",
+    "descripcion": "Radiculopatía lumbosacra",
+    "grupo": "Radiculopatía lumbosacra",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G55.1",
+    "descripcion": "Compresión de raíces por trastornos de disco",
+    "grupo": "Compresión de raíces por trastornos de disco",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G56.0",
+    "descripcion": "Síndrome del túnel carpiano",
+    "grupo": "Síndrome del túnel carpiano",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G56.1",
+    "descripcion": "Otras lesiones del nervio mediano",
+    "grupo": "Otras lesiones del nervio mediano",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G56.2",
+    "descripcion": "Lesión del nervio cubital",
+    "grupo": "Lesión del nervio cubital",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.0",
+    "descripcion": "Lesión del nervio ciático",
+    "grupo": "Lesión del nervio ciático",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.1",
+    "descripcion": "Meralgia parestésica",
+    "grupo": "Meralgia parestésica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.10",
+    "descripcion": "Meralgia parestésica NE",
+    "grupo": "Meralgia parestésica NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.2",
+    "descripcion": "Lesión del nervio crural",
+    "grupo": "Lesión del nervio crural",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G57.3",
+    "descripcion": "Lesión del nervio ciático poplíteo externo",
+    "grupo": "Lesión del nervio ciático poplíteo externo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G58.9",
+    "descripcion": "Mononeuropatía no especificada",
+    "grupo": "Mononeuropatía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G60.0",
+    "descripcion": "Neuropatía hereditaria sensitivomotora",
+    "grupo": "Neuropatía hereditaria sensitivomotora",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G60.9",
+    "descripcion": "Neuropatía hereditaria y sensitiva NE",
+    "grupo": "Neuropatía hereditaria y sensitiva NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G61.0",
+    "descripcion": "Síndrome de Guillain-Barré",
+    "grupo": "Síndrome de Guillain-Barré",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G62.0",
+    "descripcion": "Polineuropatía inducida por fármacos",
+    "grupo": "Polineuropatía inducida por fármacos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G62.1",
+    "descripcion": "Polineuropatía alcohólica",
+    "grupo": "Polineuropatía alcohólica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G62.9",
+    "descripcion": "Polineuropatía no especificada",
+    "grupo": "Polineuropatía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G63",
+    "descripcion": "Polineuropatía en enfermedades clasificadas en otra parte",
+    "grupo": "Polineuropatía en enfermedades clasificadas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G63.2",
+    "descripcion": "Polineuropatía diabética",
+    "grupo": "Polineuropatía diabética",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G70.0",
+    "descripcion": "Miastenia gravis",
+    "grupo": "Miastenia gravis",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G70.01",
+    "descripcion": "Miastenia gravis con exacerbación (crisis)",
+    "grupo": "Miastenia gravis con exacerbación",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G70.2",
+    "descripcion": "Miastenia congénita y del desarrollo",
+    "grupo": "Miastenia congénita y del desarrollo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G71.0",
+    "descripcion": "Distrofia muscular",
+    "grupo": "Distrofia muscular",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G71.1",
+    "descripcion": "Trastornos miotónicos",
+    "grupo": "Trastornos miotónicos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G71.2",
+    "descripcion": "Miopatías congénitas",
+    "grupo": "Miopatías congénitas",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G72.0",
+    "descripcion": "Miopatía inducida por fármacos",
+    "grupo": "Miopatía inducida por fármacos",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G73.7",
+    "descripcion": "Miopatía en enfermedades clasificadas en otra parte",
+    "grupo": "Miopatía en enfermedades clasificadas en otra",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G80.0",
+    "descripcion": "Parálisis cerebral espástica cuadripléjica",
+    "grupo": "Parálisis cerebral espástica cuadripléjica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G80.1",
+    "descripcion": "Parálisis cerebral espástica dipléjica",
+    "grupo": "Parálisis cerebral espástica dipléjica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G80.2",
+    "descripcion": "Parálisis cerebral espástica hemipléjica",
+    "grupo": "Parálisis cerebral espástica hemipléjica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G81.0",
+    "descripcion": "Hemiplejía flácida",
+    "grupo": "Hemiplejía flácida",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G81.1",
+    "descripcion": "Hemiplejía espástica",
+    "grupo": "Hemiplejía espástica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G82.0",
+    "descripcion": "Paraplejía flácida",
+    "grupo": "Paraplejía flácida",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G82.1",
+    "descripcion": "Paraplejía espástica",
+    "grupo": "Paraplejía espástica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G82.2",
+    "descripcion": "Paraplejía no especificada",
+    "grupo": "Paraplejía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G82.4",
+    "descripcion": "Tetraplejía espástica",
+    "grupo": "Tetraplejía espástica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G83.0",
+    "descripcion": "Diplejía de miembros superiores",
+    "grupo": "Diplejía de miembros superiores",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G83.4",
+    "descripcion": "Síndrome de la cola de caballo",
+    "grupo": "Síndrome de la cola de caballo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G89.21",
+    "descripcion": "Dolor crónico agudo-en-crónico",
+    "grupo": "Dolor -en-",
+    "sistema": "Neurología",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G89.29",
     "descripcion": "Dolor crónico NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "grupo": "Dolor NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
   },
   {
-    "codigo": "R53.1",
-    "descripcion": "Debilidad NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "G90.0",
+    "descripcion": "Neuropatía autonómica periférica idiopática",
+    "grupo": "Neuropatía autonómica periférica idiopática",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
   },
   {
-    "codigo": "R53.83",
-    "descripcion": "Fatiga crónica NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "G91.0",
+    "descripcion": "Hidrocefalia comunicante",
+    "grupo": "Hidrocefalia comunicante",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
   },
   {
-    "codigo": "R56.9",
-    "descripcion": "Convulsiones NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "G91.1",
+    "descripcion": "Hidrocefalia obstructiva",
+    "grupo": "Hidrocefalia obstructiva",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
   },
   {
-    "codigo": "R60.9",
-    "descripcion": "Edema NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "G91.2",
+    "descripcion": "Hidrocefalia normotensiva",
+    "grupo": "Hidrocefalia normotensiva",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
   },
   {
-    "codigo": "R68.89",
-    "descripcion": "Otros síntomas y signos NE",
-    "grupo": "Síntomas generales",
-    "sistema": "Síntomas generales"
+    "codigo": "G92",
+    "descripcion": "Encefalopatía tóxica",
+    "grupo": "Encefalopatía tóxica",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G93.1",
+    "descripcion": "Lesión cerebral anóxica no clasificada",
+    "grupo": "Lesión cerebral anóxica no clasificada",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G93.2",
+    "descripcion": "Hipertensión intracraneal benigna",
+    "grupo": "Hipertensión intracraneal benigna",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G93.4",
+    "descripcion": "Encefalopatía no especificada",
+    "grupo": "Encefalopatía",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G93.40",
+    "descripcion": "Encefalopatía NE",
+    "grupo": "Encefalopatía NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G93.6",
+    "descripcion": "Edema cerebral",
+    "grupo": "Edema cerebral",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G94",
+    "descripcion": "Otros trastornos del encéfalo",
+    "grupo": "Otros trastornos del encéfalo",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G95.0",
+    "descripcion": "Siringomielia y siringobulbia",
+    "grupo": "Siringomielia y siringobulbia",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G95.1",
+    "descripcion": "Mielopatías vasculares",
+    "grupo": "Mielopatías vasculares",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G95.9",
+    "descripcion": "Enfermedad de la médula espinal NE",
+    "grupo": "Enfermedad de la médula espinal NE",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I60.9",
+    "descripcion": "Hemorragia subaracnoidea no especificada",
+    "grupo": "Hemorragia subaracnoidea",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I61.9",
+    "descripcion": "Hemorragia intracerebral no especificada",
+    "grupo": "Hemorragia intracerebral",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I63.9",
+    "descripcion": "Infarto cerebral (ACV isquémico) no especificado",
+    "grupo": "Infarto cerebral",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I64",
+    "descripcion": "ACV no especificado como hemorrágico o isquémico",
+    "grupo": "ACV como hemorrágico o isquémico",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I65.2",
+    "descripcion": "Oclusión y estenosis de la arteria carótida",
+    "grupo": "Oclusión y estenosis de la arteria carótida",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I67.1",
+    "descripcion": "Aneurisma cerebral sin ruptura",
+    "grupo": "Aneurisma cerebral sin ruptura",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I67.9",
+    "descripcion": "Enfermedad cerebrovascular no especificada",
+    "grupo": "Enfermedad cerebrovascular",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I69.1",
+    "descripcion": "Secuelas de hemorragia intracerebral",
+    "grupo": "Secuelas de hemorragia intracerebral",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "I69.3",
+    "descripcion": "Secuelas de infarto cerebral",
+    "grupo": "Secuelas de infarto cerebral",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "I69.4",
+    "descripcion": "Secuelas de ACV no especificado",
+    "grupo": "Secuelas de ACV",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "vascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "F53.0",
+    "descripcion": "Depresión postparto",
+    "grupo": "Depresión postparto",
+    "sistema": "Obstetricia",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "O00.0",
+    "descripcion": "Embarazo abdominal",
+    "grupo": "Embarazo abdominal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O00.1",
+    "descripcion": "Embarazo tubárico",
+    "grupo": "Embarazo tubárico",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O00.9",
+    "descripcion": "Embarazo ectópico no especificado",
+    "grupo": "Embarazo ectópico",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O01.0",
+    "descripcion": "Mola hidatiforme clásica",
+    "grupo": "Mola hidatiforme clásica",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O01.9",
+    "descripcion": "Mola hidatiforme no especificada",
+    "grupo": "Mola hidatiforme",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O02.0",
+    "descripcion": "Huevo anembrionado y mola no hidatiforme",
+    "grupo": "Huevo anembrionado y mola no hidatiforme",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O02.1",
+    "descripcion": "Aborto retenido",
+    "grupo": "Aborto retenido",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O03.4",
+    "descripcion": "Aborto espontáneo incompleto sin complicación",
+    "grupo": "Aborto espontáneo incompleto sin complicación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O03.9",
+    "descripcion": "Aborto espontáneo completo o no especificado sin complicación",
+    "grupo": "Aborto espontáneo completo o sin complicación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O06.9",
+    "descripcion": "Aborto no especificado sin complicación",
+    "grupo": "Aborto sin complicación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O08.0",
+    "descripcion": "Infección genital y pelviana consecutiva al aborto",
+    "grupo": "Infección genital y pelviana consecutiva al",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O08.1",
+    "descripcion": "Hemorragia excesiva o tardía consecutiva al aborto",
+    "grupo": "Hemorragia excesiva o tardía consecutiva al",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O10.0",
+    "descripcion": "Hipertensión esencial preexistente que complica el embarazo",
+    "grupo": "Hipertensión esencial preexistente que",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O11",
+    "descripcion": "Preeclampsia sobreagregada a hipertensión crónica",
+    "grupo": "Preeclampsia sobreagregada a hipertensión",
+    "sistema": "Obstetricia",
+    "tipo": "crónico",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O13",
+    "descripcion": "Hipertensión gestacional sin proteinuria significativa",
+    "grupo": "Hipertensión gestacional sin proteinuria",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O14.0",
+    "descripcion": "Preeclampsia leve a moderada",
+    "grupo": "Preeclampsia a",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "O14.1",
+    "descripcion": "Preeclampsia severa",
+    "grupo": "Preeclampsia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "O14.2",
+    "descripcion": "Síndrome HELLP",
+    "grupo": "Síndrome HELLP",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O14.9",
+    "descripcion": "Preeclampsia no especificada",
+    "grupo": "Preeclampsia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O15.0",
+    "descripcion": "Eclampsia en el embarazo",
+    "grupo": "Eclampsia en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O15.1",
+    "descripcion": "Eclampsia durante el trabajo de parto",
+    "grupo": "Eclampsia durante el trabajo de parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O15.2",
+    "descripcion": "Eclampsia en el puerperio",
+    "grupo": "Eclampsia en el puerperio",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O16",
+    "descripcion": "Hipertensión materna no especificada",
+    "grupo": "Hipertensión materna",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O20.0",
+    "descripcion": "Amenaza de aborto",
+    "grupo": "Amenaza de aborto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O20.9",
+    "descripcion": "Hemorragia precoz del embarazo no especificada",
+    "grupo": "Hemorragia precoz del embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O21.0",
+    "descripcion": "Hiperémesis gravídica leve",
+    "grupo": "Hiperémesis gravídica",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "O21.1",
+    "descripcion": "Hiperémesis gravídica con trastornos metabólicos",
+    "grupo": "Hiperémesis gravídica con trastornos",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O22.0",
+    "descripcion": "Várices de miembros inferiores en el embarazo",
+    "grupo": "Várices de miembros inferiores en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O22.3",
+    "descripcion": "Trombosis venosa profunda en el embarazo",
+    "grupo": "Trombosis venosa profunda en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O23.0",
+    "descripcion": "Infección del riñón en el embarazo (pielonefritis)",
+    "grupo": "Infección del riñón en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O23.1",
+    "descripcion": "Infección de la vejiga urinaria en el embarazo (cistitis)",
+    "grupo": "Infección de la vejiga urinaria en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O23.4",
+    "descripcion": "Infección urinaria no especificada en el embarazo",
+    "grupo": "Infección urinaria en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O23.5",
+    "descripcion": "Infección genital en el embarazo",
+    "grupo": "Infección genital en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O24.9",
+    "descripcion": "Diabetes mellitus no especificada en el embarazo",
+    "grupo": "Diabetes mellitus en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O25",
+    "descripcion": "Desnutrición en el embarazo",
+    "grupo": "Desnutrición en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O26.0",
+    "descripcion": "Aumento excesivo de peso en el embarazo",
+    "grupo": "Aumento excesivo de peso en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O26.6",
+    "descripcion": "Trastornos del hígado en el embarazo (colestasis gravídica)",
+    "grupo": "Trastornos del hígado en el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O30.0",
+    "descripcion": "Embarazo doble (gemelar)",
+    "grupo": "Embarazo doble",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O30.1",
+    "descripcion": "Embarazo triple",
+    "grupo": "Embarazo triple",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O30.9",
+    "descripcion": "Embarazo múltiple no especificado",
+    "grupo": "Embarazo múltiple",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O32.1",
+    "descripcion": "Atención materna por presentación de nalgas",
+    "grupo": "Atención materna por presentación de nalgas",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O32.2",
+    "descripcion": "Atención materna por situación fetal transversa u oblicua",
+    "grupo": "Atención materna por situación fetal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O33.9",
+    "descripcion": "Atención materna por desproporción fetopélvica no especificada",
+    "grupo": "Atención materna por desproporción fetopélvica",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O34.2",
+    "descripcion": "Atención materna por cicatriz uterina de cesárea previa",
+    "grupo": "Atención materna por cicatriz uterina de",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.0",
+    "descripcion": "Atención materna por isoinmunización Rh",
+    "grupo": "Atención materna por isoinmunización Rh",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.3",
+    "descripcion": "Atención materna por signos de hipoxia fetal",
+    "grupo": "Atención materna por signos de hipoxia fetal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.4",
+    "descripcion": "Atención materna por muerte intrauterina del feto",
+    "grupo": "Atención materna por muerte intrauterina del",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.5",
+    "descripcion": "Atención materna por crecimiento fetal deficiente (RCIU)",
+    "grupo": "Atención materna por crecimiento fetal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O36.6",
+    "descripcion": "Atención materna por crecimiento fetal excesivo (macrosomía)",
+    "grupo": "Atención materna por crecimiento fetal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O40",
+    "descripcion": "Polihidramnios",
+    "grupo": "Polihidramnios",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O41.0",
+    "descripcion": "Oligohidramnios",
+    "grupo": "Oligohidramnios",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O41.1",
+    "descripcion": "Infección del saco amniótico y membranas (corioamnionitis)",
+    "grupo": "Infección del saco amniótico y membranas",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O42.0",
+    "descripcion": "RPM con inicio del trabajo de parto dentro de las 24 horas",
+    "grupo": "RPM con inicio del trabajo de parto dentro de",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O42.9",
+    "descripcion": "Ruptura prematura de membranas no especificada",
+    "grupo": "Ruptura prematura de membranas",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O43.2",
+    "descripcion": "Placenta mórbidamente adherente (acretismo placentario)",
+    "grupo": "Placenta mórbidamente adherente",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O44.0",
+    "descripcion": "Placenta previa sin hemorragia",
+    "grupo": "Placenta previa sin hemorragia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O44.1",
+    "descripcion": "Placenta previa con hemorragia",
+    "grupo": "Placenta previa con hemorragia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O45.0",
+    "descripcion": "Desprendimiento de placenta con defecto de la coagulación",
+    "grupo": "Desprendimiento de placenta con defecto de la",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O45.9",
+    "descripcion": "Desprendimiento prematuro de placenta no especificado",
+    "grupo": "Desprendimiento prematuro de placenta",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O46.9",
+    "descripcion": "Hemorragia anteparto no especificada",
+    "grupo": "Hemorragia anteparto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O47.0",
+    "descripcion": "Falso trabajo de parto antes de las 37 semanas completas",
+    "grupo": "Falso trabajo de parto antes de las 37",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O48",
+    "descripcion": "Embarazo prolongado",
+    "grupo": "Embarazo prolongado",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O60.0",
+    "descripcion": "Amenaza de parto pretérmino sin parto",
+    "grupo": "Amenaza de parto pretérmino sin parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O60.1",
+    "descripcion": "Trabajo de parto prematuro con parto pretérmino",
+    "grupo": "Trabajo de parto prematuro con parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O61.0",
+    "descripcion": "Fracaso de la inducción médica del trabajo de parto",
+    "grupo": "Fracaso de la inducción médica del trabajo de",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O62.0",
+    "descripcion": "Contracciones primarias inadecuadas (hipodinamia uterina)",
+    "grupo": "Contracciones primarias inadecuadas",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O62.4",
+    "descripcion": "Contracciones uterinas hipertónicas e incoordinadas",
+    "grupo": "Contracciones uterinas hipertónicas e",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O63.0",
+    "descripcion": "Prolongación del primer periodo del trabajo de parto",
+    "grupo": "Prolongación del primer periodo del trabajo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O63.1",
+    "descripcion": "Prolongación del segundo periodo del trabajo de parto",
+    "grupo": "Prolongación del segundo periodo del trabajo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O64.9",
+    "descripcion": "Parto obstruido por presentación fetal anómala no especificada",
+    "grupo": "Parto obstruido por presentación fetal anómala",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O65.4",
+    "descripcion": "Trabajo de parto obstruido por desproporción fetopélvica",
+    "grupo": "Trabajo de parto obstruido por desproporción",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O66.0",
+    "descripcion": "Trabajo de parto obstruido por distocia de hombros",
+    "grupo": "Trabajo de parto obstruido por distocia de",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O68.0",
+    "descripcion": "Parto complicado por anomalía de la frecuencia cardiaca fetal",
+    "grupo": "Parto complicado por anomalía de la",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O69.0",
+    "descripcion": "Parto complicado por prolapso del cordón umbilical",
+    "grupo": "Parto complicado por prolapso del cordón",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O69.1",
+    "descripcion": "Parto complicado por circular de cordón con compresión",
+    "grupo": "Parto complicado por circular de cordón con",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O70.0",
+    "descripcion": "Desgarro perineal de primer grado durante el parto",
+    "grupo": "Desgarro perineal de primer grado durante el",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O70.1",
+    "descripcion": "Desgarro perineal de segundo grado durante el parto",
+    "grupo": "Desgarro perineal de segundo grado durante el",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O70.2",
+    "descripcion": "Desgarro perineal de tercer grado durante el parto",
+    "grupo": "Desgarro perineal de tercer grado durante el",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O70.3",
+    "descripcion": "Desgarro perineal de cuarto grado durante el parto",
+    "grupo": "Desgarro perineal de cuarto grado durante el",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O71.0",
+    "descripcion": "Ruptura del útero antes del inicio del trabajo de parto",
+    "grupo": "Ruptura del útero antes del inicio del",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O71.1",
+    "descripcion": "Ruptura del útero durante el trabajo de parto",
+    "grupo": "Ruptura del útero durante el trabajo de parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O72.0",
+    "descripcion": "Hemorragia del tercer periodo del parto",
+    "grupo": "Hemorragia del tercer periodo del parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O72.1",
+    "descripcion": "Hemorragia postparto inmediata (atonía uterina)",
+    "grupo": "Hemorragia postparto inmediata",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O72.2",
+    "descripcion": "Hemorragia postparto secundaria o tardía",
+    "grupo": "Hemorragia postparto secundaria o tardía",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O73.0",
+    "descripcion": "Retención de la placenta sin hemorragia",
+    "grupo": "Retención de la placenta sin hemorragia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O73.1",
+    "descripcion": "Retención de fragmentos placentarios sin hemorragia",
+    "grupo": "Retención de fragmentos placentarios sin",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "O80",
+    "descripcion": "Parto único espontáneo",
+    "grupo": "Parto único espontáneo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O80.0",
+    "descripcion": "Parto único espontáneo en presentación cefálica de vértice",
+    "grupo": "Parto único espontáneo en presentación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O80.9",
+    "descripcion": "Parto único espontáneo sin otra especificación",
+    "grupo": "Parto único espontáneo sin otra especificación",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O81.4",
+    "descripcion": "Parto único con extractor al vacío",
+    "grupo": "Parto único con extractor al vacío",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O82.0",
+    "descripcion": "Parto por cesárea electiva",
+    "grupo": "Parto por cesárea electiva",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O82.1",
+    "descripcion": "Parto por cesárea de emergencia",
+    "grupo": "Parto por cesárea de emergencia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O85",
+    "descripcion": "Sepsis puerperal",
+    "grupo": "Sepsis puerperal",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "O86.0",
+    "descripcion": "Infección de herida quirúrgica obstétrica",
+    "grupo": "Infección de herida quirúrgica obstétrica",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O86.2",
+    "descripcion": "Infección de las vías urinarias consecutiva al parto",
+    "grupo": "Infección de las vías urinarias consecutiva",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O87.1",
+    "descripcion": "Trombosis venosa profunda en el puerperio",
+    "grupo": "Trombosis venosa profunda en el puerperio",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O88.1",
+    "descripcion": "Embolia de líquido amniótico",
+    "grupo": "Embolia de líquido amniótico",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O90.3",
+    "descripcion": "Miocardiopatía en el puerperio (periparto)",
+    "grupo": "Miocardiopatía en el puerperio",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O91.1",
+    "descripcion": "Absceso de la mama asociado con el parto",
+    "grupo": "Absceso de la mama asociado con el parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O91.2",
+    "descripcion": "Mastitis no purulenta asociada con el parto (puerperal)",
+    "grupo": "Mastitis no purulenta asociada con el parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O92.4",
+    "descripcion": "Hipogalactia",
+    "grupo": "Hipogalactia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "O99.0",
+    "descripcion": "Anemia que complica el embarazo, el parto y el puerperio",
+    "grupo": "Anemia que complica el embarazo",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "obstétrico",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z32.1",
+    "descripcion": "Embarazo confirmado",
+    "grupo": "Embarazo confirmado",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z34.0",
+    "descripcion": "Supervisión de primer embarazo normal",
+    "grupo": "Supervisión de primer embarazo normal",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z34.8",
+    "descripcion": "Supervisión de otro embarazo normal",
+    "grupo": "Supervisión de otro embarazo normal",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z35.5",
+    "descripcion": "Supervisión de primigesta añosa",
+    "grupo": "Supervisión de primigesta añosa",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z35.6",
+    "descripcion": "Supervisión de primigesta muy joven",
+    "grupo": "Supervisión de primigesta muy joven",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z35.9",
+    "descripcion": "Supervisión de embarazo de alto riesgo no especificado",
+    "grupo": "Supervisión de embarazo de alto riesgo",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z39.0",
+    "descripcion": "Atención y examen inmediatamente después del parto",
+    "grupo": "Atención y examen inmediatamente después del",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "H00.0",
+    "descripcion": "Orzuelo y otras inflamaciones profundas del párpado",
+    "grupo": "Orzuelo y otras inflamaciones profundas del",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
   },
   {
     "codigo": "H00.01",
     "descripcion": "Orzuelo externo (hordeolum externum)",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
+    "grupo": "Orzuelo externo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H00.1",
+    "descripcion": "Chalazión",
+    "grupo": "Chalazión",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
   },
   {
     "codigo": "H00.14",
     "descripcion": "Chalazión",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
+    "grupo": "Chalazión",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H01.0",
+    "descripcion": "Blefaritis",
+    "grupo": "Blefaritis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
   },
   {
     "codigo": "H01.00",
     "descripcion": "Blefaritis NE",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
+    "grupo": "Blefaritis NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H02.0",
+    "descripcion": "Entropión y triquiasis palpebral",
+    "grupo": "Entropión y triquiasis palpebral",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H02.1",
+    "descripcion": "Ectropión del párpado",
+    "grupo": "Ectropión del párpado",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H02.4",
+    "descripcion": "Ptosis del párpado",
+    "grupo": "Ptosis del párpado",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H02.6",
+    "descripcion": "Xantelasma del párpado",
+    "grupo": "Xantelasma del párpado",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.0",
+    "descripcion": "Dacrioadenitis",
+    "grupo": "Dacrioadenitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.1",
+    "descripcion": "Síndrome de ojo seco (queratoconjuntivitis seca)",
+    "grupo": "Síndrome de ojo seco",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.12",
+    "descripcion": "Dacriocistitis aguda",
+    "grupo": "Dacriocistitis",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.2",
+    "descripcion": "Epífora",
+    "grupo": "Epífora",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
   },
   {
     "codigo": "H04.20",
     "descripcion": "Epifora NE",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
+    "grupo": "Epifora NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.3",
+    "descripcion": "Dacriocistitis aguda",
+    "grupo": "Dacriocistitis",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.4",
+    "descripcion": "Dacriocistitis crónica",
+    "grupo": "Dacriocistitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H04.5",
+    "descripcion": "Estenosis y obstrucción de las vías lagrimales",
+    "grupo": "Estenosis y obstrucción de las vías lagrimales",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H05.0",
+    "descripcion": "Celulitis orbitaria (inflamación aguda de la órbita)",
+    "grupo": "Celulitis orbitaria",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.0",
+    "descripcion": "Conjuntivitis mucopurulenta",
+    "grupo": "Conjuntivitis mucopurulenta",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.1",
+    "descripcion": "Conjuntivitis atópica aguda (alérgica)",
+    "grupo": "Conjuntivitis atópica",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.10",
+    "descripcion": "Conjuntivitis aguda atópica",
+    "grupo": "Conjuntivitis atópica",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.2",
+    "descripcion": "Otras conjuntivitis agudas",
+    "grupo": "Otras conjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.3",
+    "descripcion": "Conjuntivitis aguda, no especificada",
+    "grupo": "Conjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.30",
+    "descripcion": "Conjuntivitis alérgica NE",
+    "grupo": "Conjuntivitis alérgica NE",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.4",
+    "descripcion": "Conjuntivitis crónica",
+    "grupo": "Conjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.5",
+    "descripcion": "Blefaroconjuntivitis",
+    "grupo": "Blefaroconjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H10.9",
+    "descripcion": "Conjuntivitis, no especificada",
+    "grupo": "Conjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H11.0",
+    "descripcion": "Pterigión",
+    "grupo": "Pterigión",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H11.1",
+    "descripcion": "Degeneraciones y depósitos conjuntivales (pinguécula)",
+    "grupo": "Degeneraciones y depósitos conjuntivales",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H11.3",
+    "descripcion": "Hemorragia subconjuntival",
+    "grupo": "Hemorragia subconjuntival",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H15.0",
+    "descripcion": "Escleritis",
+    "grupo": "Escleritis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H15.1",
+    "descripcion": "Episcleritis",
+    "grupo": "Episcleritis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.0",
+    "descripcion": "Úlcera de la córnea",
+    "grupo": "Úlcera de la córnea",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.009",
+    "descripcion": "Úlcera corneal NE",
+    "grupo": "Úlcera corneal NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.1",
+    "descripcion": "Queratitis superficial sin conjuntivitis",
+    "grupo": "Queratitis superficial sin conjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.2",
+    "descripcion": "Queratoconjuntivitis",
+    "grupo": "Queratoconjuntivitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.3",
+    "descripcion": "Queratitis intersticial y profunda",
+    "grupo": "Queratitis intersticial y profunda",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H16.9",
+    "descripcion": "Queratitis, no especificada",
+    "grupo": "Queratitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H17.9",
+    "descripcion": "Cicatriz u opacidad corneal, no especificada",
+    "grupo": "Cicatriz u opacidad corneal",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H18.6",
+    "descripcion": "Queratocono",
+    "grupo": "Queratocono",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H18.9",
+    "descripcion": "Trastorno de córnea NE",
+    "grupo": "Trastorno de córnea NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H20.0",
+    "descripcion": "Iridociclitis aguda y subaguda (uveítis anterior aguda)",
+    "grupo": "Iridociclitis y subaguda",
+    "sistema": "Oftalmología",
+    "tipo": "agudo",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H20.1",
+    "descripcion": "Iridociclitis crónica",
+    "grupo": "Iridociclitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H20.9",
+    "descripcion": "Iridociclitis, no especificada",
+    "grupo": "Iridociclitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H21.0",
+    "descripcion": "Hifema",
+    "grupo": "Hifema",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H25.0",
+    "descripcion": "Catarata senil incipiente",
+    "grupo": "Catarata senil incipiente",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H25.1",
+    "descripcion": "Catarata senil nuclear",
+    "grupo": "Catarata senil nuclear",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H25.9",
+    "descripcion": "Catarata senil, no especificada",
+    "grupo": "Catarata senil",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H26.0",
+    "descripcion": "Catarata infantil, juvenil y presenil",
+    "grupo": "Catarata infantil",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H26.1",
+    "descripcion": "Catarata traumática",
+    "grupo": "Catarata traumática",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H26.2",
+    "descripcion": "Catarata complicada",
+    "grupo": "Catarata complicada",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H26.4",
+    "descripcion": "Catarata secundaria (opacificación capsular posterior)",
+    "grupo": "Catarata secundaria",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H26.9",
+    "descripcion": "Catarata, no especificada",
+    "grupo": "Catarata",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H27.0",
+    "descripcion": "Afaquia",
+    "grupo": "Afaquia",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H27.1",
+    "descripcion": "Luxación del cristalino",
+    "grupo": "Luxación del cristalino",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H28.0",
+    "descripcion": "Catarata diabética",
+    "grupo": "Catarata diabética",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H30.9",
+    "descripcion": "Coriorretinitis, no especificada",
+    "grupo": "Coriorretinitis",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H33.0",
+    "descripcion": "Desprendimiento de retina con ruptura (regmatógeno)",
+    "grupo": "Desprendimiento de retina con ruptura",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H33.00",
+    "descripcion": "Desprendimiento de retina sin rotura",
+    "grupo": "Desprendimiento de retina sin rotura",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H33.2",
+    "descripcion": "Desprendimiento seroso de la retina",
+    "grupo": "Desprendimiento seroso de la retina",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H33.3",
+    "descripcion": "Desgarro de la retina sin desprendimiento",
+    "grupo": "Desgarro de la retina sin desprendimiento",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H33.5",
+    "descripcion": "Otros desprendimientos de la retina",
+    "grupo": "Otros desprendimientos de la retina",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H34.0",
+    "descripcion": "Oclusión arterial retiniana transitoria (amaurosis fugaz)",
+    "grupo": "Oclusión arterial retiniana transitoria",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H34.1",
+    "descripcion": "Oclusión de la arteria central de la retina",
+    "grupo": "Oclusión de la arteria central de la retina",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H34.8",
+    "descripcion": "Otras oclusiones vasculares retinianas (oclusión venosa)",
+    "grupo": "Otras oclusiones vasculares retinianas",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H35.0",
+    "descripcion": "Retinopatía hipertensiva y cambios vasculares retinianos",
+    "grupo": "Retinopatía hipertensiva y cambios vasculares",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H35.3",
+    "descripcion": "Degeneración macular relacionada con la edad",
+    "grupo": "Degeneración macular relacionada con la edad",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H35.30",
+    "descripcion": "Degeneración macular por edad NE",
+    "grupo": "Degeneración macular por edad NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H35.6",
+    "descripcion": "Hemorragia retiniana",
+    "grupo": "Hemorragia retiniana",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H36",
+    "descripcion": "Retinopatía diabética en DM clasificada en otro lugar",
+    "grupo": "Retinopatía diabética en DM clasificada en",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H36.0",
+    "descripcion": "Retinopatía diabética",
+    "grupo": "Retinopatía diabética",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.0",
+    "descripcion": "Sospecha de glaucoma (hipertensión ocular)",
+    "grupo": "Sospecha de glaucoma",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.1",
+    "descripcion": "Glaucoma primario de ángulo abierto",
+    "grupo": "Glaucoma primario de ángulo abierto",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.1110",
+    "descripcion": "Glaucoma primario de ángulo abierto — ojo derecho",
+    "grupo": "Glaucoma primario de ángulo abierto",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.2",
+    "descripcion": "Glaucoma primario de ángulo cerrado",
+    "grupo": "Glaucoma primario de ángulo cerrado",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.3",
+    "descripcion": "Glaucoma secundario a traumatismo ocular",
+    "grupo": "Glaucoma secundario a traumatismo ocular",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.4",
+    "descripcion": "Glaucoma secundario a inflamación ocular",
+    "grupo": "Glaucoma secundario a inflamación ocular",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H40.9",
+    "descripcion": "Glaucoma, no especificado",
+    "grupo": "Glaucoma",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H43.1",
+    "descripcion": "Hemorragia del vítreo",
+    "grupo": "Hemorragia del vítreo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H43.9",
+    "descripcion": "Trastorno del vítreo, no especificado (moscas volantes)",
+    "grupo": "Trastorno del vítreo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H46",
+    "descripcion": "Neuritis óptica",
+    "grupo": "Neuritis óptica",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H47.2",
+    "descripcion": "Atrofia óptica",
+    "grupo": "Atrofia óptica",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H49.0",
+    "descripcion": "Parálisis del tercer par craneal (motor ocular común)",
+    "grupo": "Parálisis del tercer par craneal",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H50.0",
+    "descripcion": "Estrabismo convergente concomitante (esotropía)",
+    "grupo": "Estrabismo convergente concomitante",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H50.1",
+    "descripcion": "Estrabismo divergente concomitante (exotropía)",
+    "grupo": "Estrabismo divergente concomitante",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H50.9",
+    "descripcion": "Estrabismo, no especificado",
+    "grupo": "Estrabismo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H52.0",
+    "descripcion": "Hipermetropía",
+    "grupo": "Hipermetropía",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H52.1",
+    "descripcion": "Miopía",
+    "grupo": "Miopía",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H52.2",
+    "descripcion": "Astigmatismo",
+    "grupo": "Astigmatismo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H52.3",
+    "descripcion": "Anisometropía y aniseiconía",
+    "grupo": "Anisometropía y aniseiconía",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H52.4",
+    "descripcion": "Presbicia",
+    "grupo": "Presbicia",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H53.0",
+    "descripcion": "Ambliopía ex anopsia",
+    "grupo": "Ambliopía ex anopsia",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H53.2",
+    "descripcion": "Diplopía",
+    "grupo": "Diplopía",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H53.5",
+    "descripcion": "Deficiencia de la visión cromática (daltonismo)",
+    "grupo": "Deficiencia de la visión cromática",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H54.0",
+    "descripcion": "Ceguera de ambos ojos",
+    "grupo": "Ceguera de ambos ojos",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H54.2",
+    "descripcion": "Visión subnormal de ambos ojos (baja visión)",
+    "grupo": "Visión subnormal de ambos ojos",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H54.4",
+    "descripcion": "Ceguera de un ojo",
+    "grupo": "Ceguera de un ojo",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
   },
   {
     "codigo": "H54.9",
     "descripcion": "Deficiencia visual NE",
-    "grupo": "Oftalmología",
-    "sistema": "Oftalmología"
+    "grupo": "Deficiencia visual NE",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H57.1",
+    "descripcion": "Dolor ocular",
+    "grupo": "Dolor ocular",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "oftalmológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C00.9",
+    "descripcion": "Tumor maligno del labio, no especificado",
+    "grupo": "Tumor maligno del labio",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C02.9",
+    "descripcion": "Tumor maligno de la lengua, no especificado",
+    "grupo": "Tumor maligno de la lengua",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C04.9",
+    "descripcion": "Tumor maligno del piso de la boca, no especificado",
+    "grupo": "Tumor maligno del piso de la boca",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C05.9",
+    "descripcion": "Tumor maligno del paladar, no especificado",
+    "grupo": "Tumor maligno del paladar",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C07",
+    "descripcion": "Tumor maligno de la glándula parótida",
+    "grupo": "Tumor maligno de la glándula parótida",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C09.9",
+    "descripcion": "Tumor maligno de la amígdala, no especificado",
+    "grupo": "Tumor maligno de la amígdala",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C10.9",
+    "descripcion": "Tumor maligno de la orofaringe, no especificado",
+    "grupo": "Tumor maligno de la orofaringe",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C11.9",
+    "descripcion": "Tumor maligno de la nasofaringe, no especificado",
+    "grupo": "Tumor maligno de la nasofaringe",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C15.5",
+    "descripcion": "Tumor maligno del tercio inferior del esófago",
+    "grupo": "Tumor maligno del tercio inferior del esófago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C15.9",
+    "descripcion": "Tumor maligno del esófago, no especificado",
+    "grupo": "Tumor maligno del esófago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C16.0",
+    "descripcion": "Tumor maligno del cardias gástrico",
+    "grupo": "Tumor maligno del cardias gástrico",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C16.2",
+    "descripcion": "Tumor maligno del cuerpo del estómago",
+    "grupo": "Tumor maligno del cuerpo del estómago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C16.3",
+    "descripcion": "Tumor maligno del antro pilórico",
+    "grupo": "Tumor maligno del antro pilórico",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C16.9",
+    "descripcion": "Tumor maligno del estómago, no especificado",
+    "grupo": "Tumor maligno del estómago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C17.9",
+    "descripcion": "Tumor maligno del intestino delgado, no especificado",
+    "grupo": "Tumor maligno del intestino delgado",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.0",
+    "descripcion": "Tumor maligno del ciego",
+    "grupo": "Tumor maligno del ciego",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.2",
+    "descripcion": "Tumor maligno del colon ascendente",
+    "grupo": "Tumor maligno del colon ascendente",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.4",
+    "descripcion": "Tumor maligno del colon transverso",
+    "grupo": "Tumor maligno del colon transverso",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.6",
+    "descripcion": "Tumor maligno del colon descendente",
+    "grupo": "Tumor maligno del colon descendente",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.7",
+    "descripcion": "Tumor maligno del colon sigmoide",
+    "grupo": "Tumor maligno del colon sigmoide",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C18.9",
+    "descripcion": "Tumor maligno del colon, no especificado",
+    "grupo": "Tumor maligno del colon",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C19",
+    "descripcion": "Tumor maligno de la unión rectosigmoidea",
+    "grupo": "Tumor maligno de la unión rectosigmoidea",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C20",
+    "descripcion": "Tumor maligno del recto",
+    "grupo": "Tumor maligno del recto",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C22.0",
+    "descripcion": "Carcinoma hepatocelular",
+    "grupo": "Carcinoma hepatocelular",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C22.1",
+    "descripcion": "Carcinoma de vías biliares intrahepáticas",
+    "grupo": "Carcinoma de vías biliares intrahepáticas",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C22.9",
+    "descripcion": "Tumor maligno del hígado, no especificado",
+    "grupo": "Tumor maligno del hígado",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C23",
+    "descripcion": "Tumor maligno de la vesícula biliar",
+    "grupo": "Tumor maligno de la vesícula biliar",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C24.9",
+    "descripcion": "Tumor maligno de las vías biliares, no especificado",
+    "grupo": "Tumor maligno de las vías biliares",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C25.0",
+    "descripcion": "Tumor maligno de la cabeza del páncreas",
+    "grupo": "Tumor maligno de la cabeza del páncreas",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C25.1",
+    "descripcion": "Tumor maligno del cuerpo del páncreas",
+    "grupo": "Tumor maligno del cuerpo del páncreas",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C25.9",
+    "descripcion": "Tumor maligno del páncreas, no especificado",
+    "grupo": "Tumor maligno del páncreas",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C32.9",
+    "descripcion": "Tumor maligno de la laringe, no especificado",
+    "grupo": "Tumor maligno de la laringe",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C33",
+    "descripcion": "Tumor maligno de la tráquea",
+    "grupo": "Tumor maligno de la tráquea",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C34.0",
+    "descripcion": "Tumor maligno del bronquio principal",
+    "grupo": "Tumor maligno del bronquio principal",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C34.1",
+    "descripcion": "Tumor maligno del lóbulo superior, bronquio o pulmón",
+    "grupo": "Tumor maligno del lóbulo superior",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C34.3",
+    "descripcion": "Tumor maligno del lóbulo inferior, bronquio o pulmón",
+    "grupo": "Tumor maligno del lóbulo inferior",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C34.9",
+    "descripcion": "Tumor maligno del bronquio o del pulmón, no especificado",
+    "grupo": "Tumor maligno del bronquio o del pulmón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
   },
   {
     "codigo": "C34.90",
     "descripcion": "Tumor maligno de bronquio y pulmón NE",
-    "grupo": "Neoplasias",
-    "sistema": "Neoplasias"
+    "grupo": "Tumor maligno de bronquio y pulmón NE",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C38.4",
+    "descripcion": "Tumor maligno de la pleura",
+    "grupo": "Tumor maligno de la pleura",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C41.9",
+    "descripcion": "Tumor maligno del hueso y cartílago, no especificado",
+    "grupo": "Tumor maligno del hueso y cartílago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C43.5",
+    "descripcion": "Melanoma maligno del tronco",
+    "grupo": "Melanoma maligno del tronco",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C43.9",
+    "descripcion": "Melanoma maligno de la piel, no especificado",
+    "grupo": "Melanoma maligno de la piel",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C44.3",
+    "descripcion": "Tumor maligno de la piel de la cara",
+    "grupo": "Tumor maligno de la piel de la cara",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C44.9",
+    "descripcion": "Tumor maligno de la piel, no especificado",
+    "grupo": "Tumor maligno de la piel",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C45.0",
+    "descripcion": "Mesotelioma de la pleura",
+    "grupo": "Mesotelioma de la pleura",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C49.9",
+    "descripcion": "Tumor maligno del tejido conjuntivo, no especificado",
+    "grupo": "Tumor maligno del tejido conjuntivo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C50.1",
+    "descripcion": "Tumor maligno de la porción central de la mama",
+    "grupo": "Tumor maligno de la porción central de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C50.4",
+    "descripcion": "Tumor maligno del cuadrante superior externo de la mama",
+    "grupo": "Tumor maligno del cuadrante superior externo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C50.9",
+    "descripcion": "Tumor maligno de la mama, no especificado",
+    "grupo": "Tumor maligno de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
   },
   {
     "codigo": "C50.919",
     "descripcion": "Tumor maligno de la mama NE",
-    "grupo": "Neoplasias",
-    "sistema": "Neoplasias"
+    "grupo": "Tumor maligno de la mama NE",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C51.9",
+    "descripcion": "Tumor maligno de la vulva, no especificado",
+    "grupo": "Tumor maligno de la vulva",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C52",
+    "descripcion": "Tumor maligno de la vagina",
+    "grupo": "Tumor maligno de la vagina",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C53.0",
+    "descripcion": "Tumor maligno del endocérvix",
+    "grupo": "Tumor maligno del endocérvix",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C53.1",
+    "descripcion": "Tumor maligno del exocérvix",
+    "grupo": "Tumor maligno del exocérvix",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C53.9",
+    "descripcion": "Tumor maligno del cuello del útero, no especificado",
+    "grupo": "Tumor maligno del cuello del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C54.1",
+    "descripcion": "Tumor maligno del endometrio",
+    "grupo": "Tumor maligno del endometrio",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C54.9",
+    "descripcion": "Tumor maligno del cuerpo del útero, no especificado",
+    "grupo": "Tumor maligno del cuerpo del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C55",
+    "descripcion": "Tumor maligno del útero, parte no especificada",
+    "grupo": "Tumor maligno del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C56",
+    "descripcion": "Tumor maligno del ovario",
+    "grupo": "Tumor maligno del ovario",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C61",
+    "descripcion": "Tumor maligno de la próstata",
+    "grupo": "Tumor maligno de la próstata",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C62.9",
+    "descripcion": "Tumor maligno del testículo, no especificado",
+    "grupo": "Tumor maligno del testículo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C64",
+    "descripcion": "Tumor maligno del riñón, excepto pelvis renal",
+    "grupo": "Tumor maligno del riñón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C65",
+    "descripcion": "Tumor maligno de la pelvis renal",
+    "grupo": "Tumor maligno de la pelvis renal",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C66",
+    "descripcion": "Tumor maligno del uréter",
+    "grupo": "Tumor maligno del uréter",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C67.9",
+    "descripcion": "Tumor maligno de la vejiga, no especificado",
+    "grupo": "Tumor maligno de la vejiga",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C70.9",
+    "descripcion": "Tumor maligno de las meninges, no especificado",
+    "grupo": "Tumor maligno de las meninges",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C71.0",
+    "descripcion": "Tumor maligno del cerebro, excepto lóbulos y ventrículos",
+    "grupo": "Tumor maligno del cerebro",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C71.9",
+    "descripcion": "Tumor maligno del encéfalo, no especificado",
+    "grupo": "Tumor maligno del encéfalo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C72.0",
+    "descripcion": "Tumor maligno de la médula espinal",
+    "grupo": "Tumor maligno de la médula espinal",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C73",
+    "descripcion": "Tumor maligno de la glándula tiroides",
+    "grupo": "Tumor maligno de la glándula tiroides",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C74.9",
+    "descripcion": "Tumor maligno de la glándula suprarrenal, no especificado",
+    "grupo": "Tumor maligno de la glándula suprarrenal",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C75.1",
+    "descripcion": "Tumor maligno de la hipófisis",
+    "grupo": "Tumor maligno de la hipófisis",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C76.0",
+    "descripcion": "Tumor maligno de cabeza, cara y cuello",
+    "grupo": "Tumor maligno de cabeza",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C77.9",
+    "descripcion": "Tumor maligno de ganglio linfático, no especificado",
+    "grupo": "Tumor maligno de ganglio linfático",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C78.0",
+    "descripcion": "Tumor maligno secundario del pulmón",
+    "grupo": "Tumor maligno secundario del pulmón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C78.7",
+    "descripcion": "Tumor maligno secundario del hígado",
+    "grupo": "Tumor maligno secundario del hígado",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C79.3",
+    "descripcion": "Tumor maligno secundario del encéfalo y meninges",
+    "grupo": "Tumor maligno secundario del encéfalo y",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C79.5",
+    "descripcion": "Tumor maligno secundario del hueso y médula ósea",
+    "grupo": "Tumor maligno secundario del hueso y médula",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C80.9",
+    "descripcion": "Tumor maligno de sitio no especificado",
+    "grupo": "Tumor maligno de sitio",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C81.1",
+    "descripcion": "Enfermedad de Hodgkin, esclerosis nodular",
+    "grupo": "Enfermedad de Hodgkin",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C81.9",
+    "descripcion": "Enfermedad de Hodgkin, no especificada",
+    "grupo": "Enfermedad de Hodgkin",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C82.9",
+    "descripcion": "Linfoma no Hodgkin folicular, no especificado",
+    "grupo": "Linfoma no Hodgkin folicular",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C83.5",
+    "descripcion": "Linfoma difuso de células B grandes",
+    "grupo": "Linfoma difuso de células B grandes",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C83.9",
+    "descripcion": "Linfoma no Hodgkin difuso, no especificado",
+    "grupo": "Linfoma no Hodgkin difuso",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C84.0",
+    "descripcion": "Micosis fungoide",
+    "grupo": "Micosis fungoide",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "micótico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C85.9",
+    "descripcion": "Linfoma no Hodgkin, no especificado",
+    "grupo": "Linfoma no Hodgkin",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C88.0",
+    "descripcion": "Macroglobulinemia de Waldenström",
+    "grupo": "Macroglobulinemia de Waldenström",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C90.0",
+    "descripcion": "Mieloma múltiple",
+    "grupo": "Mieloma múltiple",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C90.1",
+    "descripcion": "Leucemia de células plasmáticas",
+    "grupo": "Leucemia de células plasmáticas",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C91.0",
+    "descripcion": "Leucemia linfoblástica aguda",
+    "grupo": "Leucemia linfoblástica",
+    "sistema": "Oncología",
+    "tipo": "agudo",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C91.1",
+    "descripcion": "Leucemia linfocítica crónica",
+    "grupo": "Leucemia linfocítica",
+    "sistema": "Oncología",
+    "tipo": "crónico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C91.9",
+    "descripcion": "Leucemia linfoide no especificada",
+    "grupo": "Leucemia linfoide",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C92.0",
+    "descripcion": "Leucemia mieloide aguda",
+    "grupo": "Leucemia mieloide",
+    "sistema": "Oncología",
+    "tipo": "agudo",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C92.1",
+    "descripcion": "Leucemia mieloide crónica",
+    "grupo": "Leucemia mieloide",
+    "sistema": "Oncología",
+    "tipo": "crónico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C93.1",
+    "descripcion": "Leucemia mielomonocítica crónica",
+    "grupo": "Leucemia mielomonocítica",
+    "sistema": "Oncología",
+    "tipo": "crónico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C94.6",
+    "descripcion": "Enfermedad mielodisplásica y mieloproliferativa",
+    "grupo": "Enfermedad mielodisplásica y",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C95.9",
+    "descripcion": "Leucemia de tipo celular no especificado",
+    "grupo": "Leucemia de tipo celular",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "C96.9",
+    "descripcion": "Tumor maligno del tejido linfático y hematopoyético",
+    "grupo": "Tumor maligno del tejido linfático y",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D00.1",
+    "descripcion": "Carcinoma in situ del esófago",
+    "grupo": "Carcinoma in situ del esófago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D00.2",
+    "descripcion": "Carcinoma in situ del estómago",
+    "grupo": "Carcinoma in situ del estómago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D01.0",
+    "descripcion": "Carcinoma in situ del colon",
+    "grupo": "Carcinoma in situ del colon",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D01.1",
+    "descripcion": "Carcinoma in situ de la unión rectosigmoidea",
+    "grupo": "Carcinoma in situ de la unión rectosigmoidea",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D02.2",
+    "descripcion": "Carcinoma in situ del bronquio y pulmón",
+    "grupo": "Carcinoma in situ del bronquio y pulmón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D03.9",
+    "descripcion": "Melanoma in situ, no especificado",
+    "grupo": "Melanoma in situ",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D04.9",
+    "descripcion": "Carcinoma in situ de la piel, no especificado",
+    "grupo": "Carcinoma in situ de la piel",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D05.1",
+    "descripcion": "Carcinoma intraductal in situ de la mama",
+    "grupo": "Carcinoma intraductal in situ de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D05.9",
+    "descripcion": "Carcinoma in situ de la mama, no especificado",
+    "grupo": "Carcinoma in situ de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D06.9",
+    "descripcion": "Carcinoma in situ del cuello del útero, no especificado",
+    "grupo": "Carcinoma in situ del cuello del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D07.5",
+    "descripcion": "Carcinoma in situ de la próstata",
+    "grupo": "Carcinoma in situ de la próstata",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D09.0",
+    "descripcion": "Carcinoma in situ de la vejiga",
+    "grupo": "Carcinoma in situ de la vejiga",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D10.4",
+    "descripcion": "Tumor benigno de la amígdala",
+    "grupo": "Tumor benigno de la amígdala",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D11.0",
+    "descripcion": "Tumor benigno de la glándula parótida",
+    "grupo": "Tumor benigno de la glándula parótida",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D12.0",
+    "descripcion": "Pólipo o tumor benigno del ciego",
+    "grupo": "Pólipo o tumor benigno del ciego",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D12.5",
+    "descripcion": "Pólipo o tumor benigno del colon sigmoide",
+    "grupo": "Pólipo o tumor benigno del colon sigmoide",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D12.6",
+    "descripcion": "Pólipo adenomatoso del colon",
+    "grupo": "Pólipo adenomatoso del colon",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D12.8",
+    "descripcion": "Pólipo o tumor benigno del recto",
+    "grupo": "Pólipo o tumor benigno del recto",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D13.1",
+    "descripcion": "Tumor benigno del estómago",
+    "grupo": "Tumor benigno del estómago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D13.4",
+    "descripcion": "Tumor benigno del hígado",
+    "grupo": "Tumor benigno del hígado",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D13.7",
+    "descripcion": "Tumor benigno del páncreas endocrino",
+    "grupo": "Tumor benigno del páncreas endocrino",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D14.3",
+    "descripcion": "Tumor benigno del bronquio y pulmón",
+    "grupo": "Tumor benigno del bronquio y pulmón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D16.9",
+    "descripcion": "Tumor benigno del hueso y cartílago, no especificado",
+    "grupo": "Tumor benigno del hueso y cartílago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D17.1",
+    "descripcion": "Lipoma de piel y tejido subcutáneo del tronco",
+    "grupo": "Lipoma de piel y tejido subcutáneo del tronco",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D17.9",
+    "descripcion": "Lipoma, no especificado",
+    "grupo": "Lipoma",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D18.0",
+    "descripcion": "Hemangioma de cualquier sitio",
+    "grupo": "Hemangioma de cualquier sitio",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D18.1",
+    "descripcion": "Linfangioma de cualquier sitio",
+    "grupo": "Linfangioma de cualquier sitio",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D21.9",
+    "descripcion": "Tumor benigno del tejido conjuntivo, no especificado",
+    "grupo": "Tumor benigno del tejido conjuntivo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D22.9",
+    "descripcion": "Nevo melanocítico, no especificado",
+    "grupo": "Nevo melanocítico",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D23.9",
+    "descripcion": "Tumor benigno de la piel, no especificado",
+    "grupo": "Tumor benigno de la piel",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D24",
+    "descripcion": "Tumor benigno de la mama",
+    "grupo": "Tumor benigno de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D25.1",
+    "descripcion": "Leiomioma intramural del útero",
+    "grupo": "Leiomioma intramural del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D25.9",
+    "descripcion": "Leiomioma del útero, no especificado",
+    "grupo": "Leiomioma del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D26.9",
+    "descripcion": "Tumor benigno del útero, no especificado",
+    "grupo": "Tumor benigno del útero",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D27",
+    "descripcion": "Tumor benigno del ovario",
+    "grupo": "Tumor benigno del ovario",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D29.1",
+    "descripcion": "Tumor benigno de la próstata",
+    "grupo": "Tumor benigno de la próstata",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D30.0",
+    "descripcion": "Tumor benigno del riñón",
+    "grupo": "Tumor benigno del riñón",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D32.9",
+    "descripcion": "Tumor benigno de las meninges, no especificado",
+    "grupo": "Tumor benigno de las meninges",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D33.2",
+    "descripcion": "Tumor benigno del encéfalo, no especificado",
+    "grupo": "Tumor benigno del encéfalo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D34",
+    "descripcion": "Tumor benigno de la glándula tiroides",
+    "grupo": "Tumor benigno de la glándula tiroides",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D35.0",
+    "descripcion": "Tumor benigno de la glándula suprarrenal",
+    "grupo": "Tumor benigno de la glándula suprarrenal",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D35.2",
+    "descripcion": "Tumor benigno de la hipófisis",
+    "grupo": "Tumor benigno de la hipófisis",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D36.0",
+    "descripcion": "Tumor benigno de los ganglios linfáticos",
+    "grupo": "Tumor benigno de los ganglios linfáticos",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D37.1",
+    "descripcion": "Tumor de comportamiento incierto del estómago",
+    "grupo": "Tumor de comportamiento incierto del estómago",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D37.4",
+    "descripcion": "Tumor de comportamiento incierto del colon",
+    "grupo": "Tumor de comportamiento incierto del colon",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D37.5",
+    "descripcion": "Tumor de comportamiento incierto del recto",
+    "grupo": "Tumor de comportamiento incierto del recto",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D39.1",
+    "descripcion": "Tumor de comportamiento incierto del ovario",
+    "grupo": "Tumor de comportamiento incierto del ovario",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D41.4",
+    "descripcion": "Tumor de comportamiento incierto de la vejiga",
+    "grupo": "Tumor de comportamiento incierto de la vejiga",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D43.2",
+    "descripcion": "Tumor de comportamiento incierto del encéfalo",
+    "grupo": "Tumor de comportamiento incierto del encéfalo",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D44.0",
+    "descripcion": "Tumor de comportamiento incierto de la tiroides",
+    "grupo": "Tumor de comportamiento incierto de la",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D45",
+    "descripcion": "Policitemia vera",
+    "grupo": "Policitemia vera",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D46.9",
+    "descripcion": "Síndrome mielodisplásico, no especificado",
+    "grupo": "Síndrome mielodisplásico",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D47.1",
+    "descripcion": "Enfermedad mieloproliferativa crónica",
+    "grupo": "Enfermedad mieloproliferativa",
+    "sistema": "Oncología",
+    "tipo": "crónico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D47.3",
+    "descripcion": "Trombocitemia esencial (hemorrágica)",
+    "grupo": "Trombocitemia esencial",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "D48.9",
+    "descripcion": "Tumor de comportamiento incierto, no especificado",
+    "grupo": "Tumor de comportamiento incierto",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "neoplásico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.0",
+    "descripcion": "Absceso del oído externo (forúnculo del conducto auditivo)",
+    "grupo": "Absceso del oído externo",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.1",
+    "descripcion": "Celulitis del oído externo",
+    "grupo": "Celulitis del oído externo",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.2",
+    "descripcion": "Otitis externa maligna",
+    "grupo": "Otitis externa maligna",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.3",
+    "descripcion": "Otras otitis externas infecciosas (otitis externa difusa)",
+    "grupo": "Otras otitis externas infecciosas",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.4",
+    "descripcion": "Colesteatoma del oído externo",
+    "grupo": "Colesteatoma del oído externo",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.5",
+    "descripcion": "Otitis externa aguda, no infecciosa",
+    "grupo": "Otitis externa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H60.9",
+    "descripcion": "Otitis externa, no especificada",
+    "grupo": "Otitis externa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H61.0",
+    "descripcion": "Pericondritis del oído externo",
+    "grupo": "Pericondritis del oído externo",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H61.2",
+    "descripcion": "Tapón de cerumen (cerumen impactado)",
+    "grupo": "Tapón de cerumen",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H61.3",
+    "descripcion": "Estenosis adquirida del conducto auditivo externo",
+    "grupo": "Estenosis adquirida del conducto auditivo",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.0",
+    "descripcion": "Otitis media aguda serosa",
+    "grupo": "Otitis media serosa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.1",
+    "descripcion": "Otras otitis medias agudas no supurativas",
+    "grupo": "Otras otitis medias no supurativas",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.2",
+    "descripcion": "Otitis media crónica serosa",
+    "grupo": "Otitis media serosa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.3",
+    "descripcion": "Otitis media crónica mucoide",
+    "grupo": "Otitis media mucoide",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.30",
+    "descripcion": "Otitis media serosa crónica NE",
+    "grupo": "Otitis media serosa NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.4",
+    "descripcion": "Otras otitis medias crónicas no supurativas",
+    "grupo": "Otras otitis medias no supurativas",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H65.9",
+    "descripcion": "Otitis media no supurativa, no especificada",
+    "grupo": "Otitis media no supurativa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.0",
+    "descripcion": "Otitis media supurativa aguda",
+    "grupo": "Otitis media supurativa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.00",
+    "descripcion": "Otitis media supurativa aguda NE",
+    "grupo": "Otitis media supurativa NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.1",
+    "descripcion": "Otitis media tubotimpánica supurativa crónica",
+    "grupo": "Otitis media tubotimpánica supurativa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.2",
+    "descripcion": "Otitis media supurativa crónica aticoantral",
+    "grupo": "Otitis media supurativa aticoantral",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.3",
+    "descripcion": "Otras otitis medias supurativas crónicas",
+    "grupo": "Otras otitis medias supurativas",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.3X9",
+    "descripcion": "Otitis media supurativa crónica NE",
+    "grupo": "Otitis media supurativa NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.4",
+    "descripcion": "Otitis media supurativa, no especificada",
+    "grupo": "Otitis media supurativa",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H66.9",
+    "descripcion": "Otitis media, no especificada",
+    "grupo": "Otitis media",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H68.0",
+    "descripcion": "Salpingitis de la trompa de Eustaquio",
+    "grupo": "Salpingitis de la trompa de Eustaquio",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H68.1",
+    "descripcion": "Obstrucción de la trompa de Eustaquio",
+    "grupo": "Obstrucción de la trompa de Eustaquio",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H70.0",
+    "descripcion": "Mastoiditis aguda",
+    "grupo": "Mastoiditis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H70.1",
+    "descripcion": "Mastoiditis crónica",
+    "grupo": "Mastoiditis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H70.9",
+    "descripcion": "Mastoiditis, no especificada",
+    "grupo": "Mastoiditis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H71",
+    "descripcion": "Colesteatoma del oído medio",
+    "grupo": "Colesteatoma del oído medio",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H72.0",
+    "descripcion": "Perforación central de la membrana timpánica",
+    "grupo": "Perforación central de la membrana timpánica",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H72.1",
+    "descripcion": "Perforación ática de la membrana timpánica",
+    "grupo": "Perforación ática de la membrana timpánica",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H72.9",
+    "descripcion": "Perforación de la membrana timpánica, no especificada",
+    "grupo": "Perforación de la membrana timpánica",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H73.0",
+    "descripcion": "Miringitis aguda",
+    "grupo": "Miringitis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "agudo",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H73.1",
+    "descripcion": "Miringitis crónica",
+    "grupo": "Miringitis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H74.0",
+    "descripcion": "Timpanoesclerosis",
+    "grupo": "Timpanoesclerosis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H74.1",
+    "descripcion": "Enfermedad adhesiva del oído medio",
+    "grupo": "Enfermedad adhesiva del oído medio",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H74.2",
+    "descripcion": "Discontinuidad y dislocación de los huesecillos del oído",
+    "grupo": "Discontinuidad y dislocación de los",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H74.9",
+    "descripcion": "Trastorno de oído medio y mastoideo NE",
+    "grupo": "Trastorno de oído medio y mastoideo NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H80.0",
+    "descripcion": "Otosclerosis que afecta la ventana oval, no obliterante",
+    "grupo": "Otosclerosis que afecta la ventana oval",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H80.9",
+    "descripcion": "Otosclerosis, no especificada",
+    "grupo": "Otosclerosis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.0",
+    "descripcion": "Enfermedad de Ménière",
+    "grupo": "Enfermedad de Ménière",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.09",
+    "descripcion": "Enfermedad de Ménière NE",
+    "grupo": "Enfermedad de Ménière NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.1",
+    "descripcion": "Vértigo paroxístico posicional benigno",
+    "grupo": "Vértigo paroxístico posicional benigno",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.2",
+    "descripcion": "Neuronitis vestibular",
+    "grupo": "Neuronitis vestibular",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.3",
+    "descripcion": "Otros vértigos periféricos",
+    "grupo": "Otros vértigos periféricos",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.311",
+    "descripcion": "Vértigo posicional paroxístico benigno (VPPB) — oído derecho",
+    "grupo": "Vértigo posicional paroxístico benigno",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.4",
+    "descripcion": "Vértigo de origen central",
+    "grupo": "Vértigo de origen central",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H81.9",
+    "descripcion": "Trastorno de la función vestibular, no especificado",
+    "grupo": "Trastorno de la función vestibular",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H83.0",
+    "descripcion": "Laberintitis",
+    "grupo": "Laberintitis",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H83.09",
+    "descripcion": "Laberintitis NE",
+    "grupo": "Laberintitis NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H83.1",
+    "descripcion": "Fístula del laberinto",
+    "grupo": "Fístula del laberinto",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H83.3",
+    "descripcion": "Efectos del ruido sobre el oído interno (trauma acústico)",
+    "grupo": "Efectos del ruido sobre el oído interno",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.0",
+    "descripcion": "Hipoacusia conductiva bilateral",
+    "grupo": "Hipoacusia conductiva bilateral",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.1",
+    "descripcion": "Hipoacusia conductiva unilateral con audición contralateral normal",
+    "grupo": "Hipoacusia conductiva unilateral con audición",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.2",
+    "descripcion": "Hipoacusia conductiva, no especificada",
+    "grupo": "Hipoacusia conductiva",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.3",
+    "descripcion": "Hipoacusia neurosensorial bilateral",
+    "grupo": "Hipoacusia neurosensorial bilateral",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.4",
+    "descripcion": "Hipoacusia neurosensorial unilateral, audición contralateral normal",
+    "grupo": "Hipoacusia neurosensorial unilateral",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.5",
+    "descripcion": "Hipoacusia neurosensorial, no especificada",
+    "grupo": "Hipoacusia neurosensorial",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.6",
+    "descripcion": "Hipoacusia mixta conductiva y neurosensorial bilateral",
+    "grupo": "Hipoacusia mixta conductiva y neurosensorial",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H90.8",
+    "descripcion": "Hipoacusia mixta conductiva y neurosensorial, no especificada",
+    "grupo": "Hipoacusia mixta conductiva y neurosensorial",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H91.0",
+    "descripcion": "Hipoacusia ototóxica",
+    "grupo": "Hipoacusia ototóxica",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H91.1",
+    "descripcion": "Presbiacusia",
+    "grupo": "Presbiacusia",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H91.2",
+    "descripcion": "Hipoacusia súbita idiopática",
+    "grupo": "Hipoacusia súbita idiopática",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H91.9",
+    "descripcion": "Hipoacusia, no especificada",
+    "grupo": "Hipoacusia",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H91.90",
+    "descripcion": "Hipoacusia NE",
+    "grupo": "Hipoacusia NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H92.0",
+    "descripcion": "Otalgia",
+    "grupo": "Otalgia",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H92.09",
+    "descripcion": "Otalgia NE",
+    "grupo": "Otalgia NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H92.1",
+    "descripcion": "Otorrea",
+    "grupo": "Otorrea",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H92.2",
+    "descripcion": "Otorragia",
+    "grupo": "Otorragia",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H93.0",
+    "descripcion": "Trastornos degenerativos y vasculares del oído",
+    "grupo": "Trastornos degenerativos y vasculares del oído",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H93.1",
+    "descripcion": "Tinnitus (acúfenos)",
+    "grupo": "Tinnitus",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H93.19",
+    "descripcion": "Tinnitus NE",
+    "grupo": "Tinnitus NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H93.2",
+    "descripcion": "Otras percepciones auditivas anormales (hiperacusia)",
+    "grupo": "Otras percepciones auditivas anormales",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H93.9",
+    "descripcion": "Trastorno del oído, no especificado",
+    "grupo": "Trastorno del oído",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "H95.0",
+    "descripcion": "Colesteatoma recurrente de la cavidad posmastoidectomía",
+    "grupo": "Colesteatoma de la cavidad posmastoidectomía",
+    "sistema": "Otorrinolaringología",
+    "tipo": "recurrente",
+    "subtipo": "otológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J38.0",
+    "descripcion": "Parálisis de cuerdas vocales NE",
+    "grupo": "Parálisis de cuerdas vocales NE",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "B08.2",
+    "descripcion": "Exantema súbito",
+    "grupo": "Exantema súbito",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "infeccioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "E45",
+    "descripcion": "Retardo del desarrollo por desnutrición",
+    "grupo": "Retardo del desarrollo por desnutrición",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
+    "codigo": "K08.9",
+    "descripcion": "Erupción dentaria tardía NE",
+    "grupo": "Erupción dentaria tardía NE",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "digestivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "L00",
+    "descripcion": "Síndrome estafilocócico de la piel escaldada",
+    "grupo": "Síndrome estafilocócico de la piel escaldada",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.10",
+    "descripcion": "Muy bajo peso al nacer NE — <1,500g",
+    "grupo": "Muy bajo peso al nacer NE",
+    "sistema": "Pediatría",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.30",
+    "descripcion": "Pretérmino NE — <37 semanas",
+    "grupo": "Pretérmino NE",
+    "sistema": "Pediatría",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P28.5",
+    "descripcion": "Insuficiencia respiratoria del recién nacido NE",
+    "grupo": "Insuficiencia respiratoria del recién nacido",
+    "sistema": "Pediatría",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P83.9",
+    "descripcion": "Trastorno de integumento del RN NE",
+    "grupo": "Trastorno de integumento del RN NE",
+    "sistema": "Pediatría",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "R62.0",
+    "descripcion": "Retraso del desarrollo psicomotor NE",
+    "grupo": "Retraso del desarrollo psicomotor NE",
+    "sistema": "Pediatría",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R62.51",
+    "descripcion": "Fallo de medro en lactante",
+    "grupo": "Fallo de medro en lactante",
+    "sistema": "Pediatría",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.110",
+    "descripcion": "Visita de salud del lactante — sin hallazgos",
+    "grupo": "Visita de salud del lactante",
+    "sistema": "Pediatría",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.121",
+    "descripcion": "Control de salud del niño — sin hallazgos",
+    "grupo": "Control de salud del niño",
+    "sistema": "Pediatría",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.2",
+    "descripcion": "Examen durante el período de crecimiento rápido en la infancia",
+    "grupo": "Examen durante el período de crecimiento",
+    "sistema": "Pediatría",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.3",
+    "descripcion": "Examen del estado de desarrollo del adolescente",
+    "grupo": "Examen del estado de desarrollo del",
+    "sistema": "Pediatría",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z23",
+    "descripcion": "Inmunización / vacunación",
+    "grupo": "Inmunización / vacunación",
+    "sistema": "Pediatría",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "P00.0",
+    "descripcion": "RN afectado por trastorno hipertensivo de la madre",
+    "grupo": "RN afectado por trastorno hipertensivo de la",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P01.1",
+    "descripcion": "RN afectado por ruptura prematura de membranas",
+    "grupo": "RN afectado por ruptura prematura de membranas",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P02.4",
+    "descripcion": "RN afectado por prolapso del cordón umbilical",
+    "grupo": "RN afectado por prolapso del cordón umbilical",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P02.7",
+    "descripcion": "RN afectado por corioamnionitis",
+    "grupo": "RN afectado por corioamnionitis",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P05.0",
+    "descripcion": "Bajo peso para la edad gestacional",
+    "grupo": "Bajo peso para la edad gestacional",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P05.1",
+    "descripcion": "Pequeño para la edad gestacional",
+    "grupo": "Pequeño para la edad gestacional",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P05.9",
+    "descripcion": "Retardo del crecimiento fetal no especificado",
+    "grupo": "Retardo del crecimiento fetal",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.0",
+    "descripcion": "Peso extremadamente bajo al nacer (menos de 1000 g)",
+    "grupo": "Peso extremadamente bajo al nacer",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.1",
+    "descripcion": "Otro peso bajo al nacer (1000 a 2499 g)",
+    "grupo": "Otro peso bajo al nacer",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.2",
+    "descripcion": "Inmaturidad extrema (menos de 28 semanas)",
+    "grupo": "Inmaturidad extrema",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P07.3",
+    "descripcion": "Otros recién nacidos pretérmino (28 a 36 semanas)",
+    "grupo": "Otros recién nacidos pretérmino",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P08.0",
+    "descripcion": "Recién nacido excepcionalmente grande (4500 g o más)",
+    "grupo": "Recién nacido excepcionalmente grande",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P08.1",
+    "descripcion": "RN grande para la edad gestacional (macrosomía)",
+    "grupo": "RN grande para la edad gestacional",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P08.2",
+    "descripcion": "Recién nacido postérmino sin sobrepeso para su edad",
+    "grupo": "Recién nacido postérmino sin sobrepeso para",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P12.0",
+    "descripcion": "Cefalohematoma debido a traumatismo del nacimiento",
+    "grupo": "Cefalohematoma debido a traumatismo del",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P13.4",
+    "descripcion": "Fractura de clavícula por traumatismo del nacimiento",
+    "grupo": "Fractura de clavícula por traumatismo del",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P14.0",
+    "descripcion": "Parálisis de Erb por traumatismo del nacimiento",
+    "grupo": "Parálisis de Erb por traumatismo del",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P20.9",
+    "descripcion": "Hipoxia intrauterina no especificada",
+    "grupo": "Hipoxia intrauterina",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P21.0",
+    "descripcion": "Asfixia del nacimiento severa",
+    "grupo": "Asfixia del nacimiento",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "P21.1",
+    "descripcion": "Asfixia del nacimiento leve y moderada",
+    "grupo": "Asfixia del nacimiento y",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "P21.9",
+    "descripcion": "Asfixia del nacimiento no especificada",
+    "grupo": "Asfixia del nacimiento",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P22.0",
+    "descripcion": "Síndrome de dificultad respiratoria del RN (membrana hialina)",
+    "grupo": "Síndrome de dificultad respiratoria del RN",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P22.1",
+    "descripcion": "Taquipnea transitoria del recién nacido",
+    "grupo": "Taquipnea transitoria del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P23.9",
+    "descripcion": "Neumonía congénita no especificada",
+    "grupo": "Neumonía congénita",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P24.0",
+    "descripcion": "Aspiración neonatal de meconio",
+    "grupo": "Aspiración neonatal de meconio",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P25.1",
+    "descripcion": "Neumotórax originado en el periodo perinatal",
+    "grupo": "Neumotórax originado en el periodo perinatal",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P27.1",
+    "descripcion": "Displasia broncopulmonar originada en el periodo perinatal",
+    "grupo": "Displasia broncopulmonar originada en el",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P28.4",
+    "descripcion": "Apnea del recién nacido (apnea del prematuro)",
+    "grupo": "Apnea del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P29.3",
+    "descripcion": "Hipertensión pulmonar persistente del recién nacido",
+    "grupo": "Hipertensión pulmonar persistente del recién",
+    "sistema": "Perinatal",
+    "tipo": "crónico",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P35.1",
+    "descripcion": "Infección citomegalovírica congénita",
+    "grupo": "Infección citomegalovírica congénita",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P36.0",
+    "descripcion": "Sepsis del RN por estreptococo del grupo B",
+    "grupo": "Sepsis del RN por estreptococo del grupo B",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "P36.9",
+    "descripcion": "Sepsis bacteriana del recién nacido no especificada",
+    "grupo": "Sepsis bacteriana del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "P37.1",
+    "descripcion": "Toxoplasmosis congénita",
+    "grupo": "Toxoplasmosis congénita",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P38",
+    "descripcion": "Onfalitis del recién nacido",
+    "grupo": "Onfalitis del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P39.1",
+    "descripcion": "Conjuntivitis y dacriocistitis neonatales",
+    "grupo": "Conjuntivitis y dacriocistitis neonatales",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P52.3",
+    "descripcion": "Hemorragia intraventricular del RN no especificada",
+    "grupo": "Hemorragia intraventricular del RN",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "P53",
+    "descripcion": "Enfermedad hemorrágica del RN (deficiencia de vitamina K)",
+    "grupo": "Enfermedad hemorrágica del RN",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "P55.0",
+    "descripcion": "Isoinmunización Rh del feto y del recién nacido",
+    "grupo": "Isoinmunización Rh del feto y del recién",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P55.1",
+    "descripcion": "Isoinmunización ABO del feto y del recién nacido",
+    "grupo": "Isoinmunización ABO del feto y del recién",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P57.9",
+    "descripcion": "Kernícterus no especificado",
+    "grupo": "Kernícterus",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P59.0",
+    "descripcion": "Ictericia neonatal asociada con el parto pretérmino",
+    "grupo": "Ictericia neonatal asociada con el parto",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P59.9",
+    "descripcion": "Ictericia neonatal no especificada (fisiológica)",
+    "grupo": "Ictericia neonatal",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P61.2",
+    "descripcion": "Anemia de la prematuridad",
+    "grupo": "Anemia de la prematuridad",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P70.0",
+    "descripcion": "Síndrome del RN de madre con diabetes gestacional",
+    "grupo": "Síndrome del RN de madre con diabetes",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P70.1",
+    "descripcion": "Síndrome del recién nacido de madre diabética",
+    "grupo": "Síndrome del recién nacido de madre diabética",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P70.4",
+    "descripcion": "Hipoglucemia neonatal",
+    "grupo": "Hipoglucemia neonatal",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P77",
+    "descripcion": "Enterocolitis necrotizante del feto y del recién nacido",
+    "grupo": "Enterocolitis necrotizante del feto y del",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P80.9",
+    "descripcion": "Hipotermia del recién nacido no especificada",
+    "grupo": "Hipotermia del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P90",
+    "descripcion": "Convulsiones del recién nacido",
+    "grupo": "Convulsiones del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "P91.6",
+    "descripcion": "Encefalopatía hipóxico-isquémica del recién nacido",
+    "grupo": "Encefalopatía hipóxico-isquémica del recién",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.00",
+    "descripcion": "Examen médico general adulto sin hallazgos",
+    "grupo": "Examen médico general adulto sin hallazgos",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z00.01",
+    "descripcion": "Examen médico general adulto con hallazgos anormales",
+    "grupo": "Examen médico general adulto con hallazgos",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z01.0",
+    "descripcion": "Examen de ojos y de la visión",
+    "grupo": "Examen de ojos y de la visión",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z01.1",
+    "descripcion": "Examen de oídos y de la audición",
+    "grupo": "Examen de oídos y de la audición",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z09",
+    "descripcion": "Examen de seguimiento consecutivo a tratamiento",
+    "grupo": "Examen de seguimiento consecutivo a",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z11.3",
+    "descripcion": "Cribado de infecciones de transmisión sexual",
+    "grupo": "Cribado de infecciones de transmisión sexual",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z11.4",
+    "descripcion": "Cribado de VIH",
+    "grupo": "Cribado de VIH",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z11.51",
+    "descripcion": "Cribado de tuberculosis",
+    "grupo": "Cribado de tuberculosis",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.11",
+    "descripcion": "Cribado de cáncer de colon y recto (colonoscopía)",
+    "grupo": "Cribado de cáncer de colon y recto",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.31",
+    "descripcion": "Cribado de cáncer de mama (mamografía)",
+    "grupo": "Cribado de cáncer de mama",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.4",
+    "descripcion": "Cribado de cáncer de cuello uterino (PAP)",
+    "grupo": "Cribado de cáncer de cuello uterino",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.5",
+    "descripcion": "Cribado de cáncer de próstata (PSA)",
+    "grupo": "Cribado de cáncer de próstata",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z13.1",
+    "descripcion": "Cribado de diabetes mellitus",
+    "grupo": "Cribado de diabetes mellitus",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z13.220",
+    "descripcion": "Cribado de lipidemia",
+    "grupo": "Cribado de lipidemia",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z13.6",
+    "descripcion": "Cribado de enfermedad cardiovascular",
+    "grupo": "Cribado de enfermedad cardiovascular",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z13.9",
+    "descripcion": "Cribado no especificado",
+    "grupo": "Cribado",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z71.41",
+    "descripcion": "Consejería sobre uso de alcohol",
+    "grupo": "Consejería sobre uso de alcohol",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z71.6",
+    "descripcion": "Consejería sobre uso de tabaco",
+    "grupo": "Consejería sobre uso de tabaco",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z79.4",
+    "descripcion": "Uso a largo plazo de insulina",
+    "grupo": "Uso a largo plazo de insulina",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z79.899",
+    "descripcion": "Uso a largo plazo de otros medicamentos",
+    "grupo": "Uso a largo plazo de otros medicamentos",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z87.891",
+    "descripcion": "Antecedente personal de tabaquismo",
+    "grupo": "Antecedente personal de tabaquismo",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z48.0",
+    "descripcion": "Atención de vendajes y suturas",
+    "grupo": "Atención de vendajes y suturas",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z51.0",
+    "descripcion": "Sesión de radioterapia",
+    "grupo": "Sesión de radioterapia",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
   },
   {
     "codigo": "Z51.11",
     "descripcion": "Sesión de quimioterapia antineoplásica",
-    "grupo": "Procedimientos",
-    "sistema": "Procedimientos"
+    "grupo": "Sesión de quimioterapia antineoplásica",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z51.5",
+    "descripcion": "Cuidados paliativos",
+    "grupo": "Cuidados paliativos",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
   },
   {
     "codigo": "Z51.81",
     "descripcion": "Manejo del dolor crónico",
-    "grupo": "Procedimientos",
-    "sistema": "Procedimientos"
+    "grupo": "Manejo del dolor",
+    "sistema": "Procedimientos",
+    "tipo": "crónico",
+    "subtipo": "preventivo",
+    "severidad": ""
   },
   {
     "codigo": "Z51.89",
     "descripcion": "Otro procedimiento de atención de la salud",
-    "grupo": "Procedimientos",
-    "sistema": "Procedimientos"
+    "grupo": "Otro procedimiento de atención de la salud",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
   },
   {
     "codigo": "Z96.641",
     "descripcion": "Presencia de prótesis de articulación de cadera",
-    "grupo": "Procedimientos",
-    "sistema": "Procedimientos"
+    "grupo": "Presencia de prótesis de articulación de",
+    "sistema": "Procedimientos",
+    "tipo": "prevención",
+    "subtipo": "preventivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.3",
+    "descripcion": "Apnea del sueño",
+    "grupo": "Apnea del sueño",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "neurológico",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.33",
+    "descripcion": "Apnea obstructiva del sueño (adultos)",
+    "grupo": "Apnea obstructiva del sueño",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "J00",
+    "descripcion": "Rinofaringitis aguda (resfriado común)",
+    "grupo": "Rinofaringitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.0",
+    "descripcion": "Sinusitis maxilar aguda",
+    "grupo": "Sinusitis maxilar",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.00",
+    "descripcion": "Sinusitis maxilar aguda",
+    "grupo": "Sinusitis maxilar",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.1",
+    "descripcion": "Sinusitis frontal aguda",
+    "grupo": "Sinusitis frontal",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.10",
+    "descripcion": "Sinusitis frontal aguda",
+    "grupo": "Sinusitis frontal",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.2",
+    "descripcion": "Sinusitis etmoidal aguda",
+    "grupo": "Sinusitis etmoidal",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.3",
+    "descripcion": "Sinusitis esfenoidal aguda",
+    "grupo": "Sinusitis esfenoidal",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.4",
+    "descripcion": "Pansinusitis aguda",
+    "grupo": "Pansinusitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.40",
+    "descripcion": "Pansinusitis aguda NE",
+    "grupo": "Pansinusitis NE",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J01.9",
+    "descripcion": "Sinusitis aguda no especificada",
+    "grupo": "Sinusitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J02.0",
+    "descripcion": "Faringitis estreptocócica",
+    "grupo": "Faringitis estreptocócica",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J02.9",
+    "descripcion": "Faringitis aguda no especificada",
+    "grupo": "Faringitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J03.0",
+    "descripcion": "Amigdalitis estreptocócica",
+    "grupo": "Amigdalitis estreptocócica",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J03.00",
+    "descripcion": "Amigdalitis estreptocócica aguda",
+    "grupo": "Amigdalitis estreptocócica",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J03.9",
+    "descripcion": "Amigdalitis aguda no especificada",
+    "grupo": "Amigdalitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J04.0",
+    "descripcion": "Laringitis aguda",
+    "grupo": "Laringitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J04.1",
+    "descripcion": "Traqueítis aguda",
+    "grupo": "Traqueítis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J04.2",
+    "descripcion": "Laringotraqueítis aguda",
+    "grupo": "Laringotraqueítis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J05.0",
+    "descripcion": "Laringitis obstructiva aguda (crup)",
+    "grupo": "Laringitis obstructiva",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "J05.1",
+    "descripcion": "Epiglotitis aguda",
+    "grupo": "Epiglotitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J06.0",
+    "descripcion": "Laringofaringitis aguda",
+    "grupo": "Laringofaringitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J06.8",
+    "descripcion": "Otras infecciones agudas de las vías respiratorias superiores",
+    "grupo": "Otras infecciones de las vías respiratorias",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J06.9",
+    "descripcion": "Infección aguda de vías respiratorias superiores",
+    "grupo": "Infección de vías respiratorias superiores",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J09",
+    "descripcion": "Influenza por virus de influenza zoonótica identificado",
+    "grupo": "Influenza por virus de influenza zoonótica",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J09.X1",
+    "descripcion": "Influenza con neumonía — virus identificado",
+    "grupo": "Influenza con neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J10.0",
+    "descripcion": "Influenza con neumonía, virus identificado",
+    "grupo": "Influenza con neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J10.1",
+    "descripcion": "Influenza con otras manifestaciones respiratorias",
+    "grupo": "Influenza con otras manifestaciones",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J11.0",
+    "descripcion": "Influenza con neumonía, virus no identificado",
+    "grupo": "Influenza con neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J11.1",
+    "descripcion": "Influenza con manifestaciones respiratorias, virus no identificado",
+    "grupo": "Influenza con manifestaciones respiratorias",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.0",
+    "descripcion": "Neumonía por adenovirus",
+    "grupo": "Neumonía por adenovirus",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.1",
+    "descripcion": "Neumonía por virus sincitial respiratorio",
+    "grupo": "Neumonía por virus sincitial respiratorio",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.2",
+    "descripcion": "Neumonía por virus parainfluenza",
+    "grupo": "Neumonía por virus parainfluenza",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.3",
+    "descripcion": "Neumonía por metapneumovirus humano",
+    "grupo": "Neumonía por metapneumovirus humano",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.8",
+    "descripcion": "Neumonía por otros virus (incluye SARS-CoV-2)",
+    "grupo": "Neumonía por otros virus",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J12.9",
+    "descripcion": "Neumonía viral no especificada",
+    "grupo": "Neumonía viral",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J13",
+    "descripcion": "Neumonía por Streptococcus pneumoniae",
+    "grupo": "Neumonía por Streptococcus pneumoniae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J14",
+    "descripcion": "Neumonía por Haemophilus influenzae",
+    "grupo": "Neumonía por Haemophilus influenzae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.0",
+    "descripcion": "Neumonía por Klebsiella pneumoniae",
+    "grupo": "Neumonía por Klebsiella pneumoniae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.1",
+    "descripcion": "Neumonía por Pseudomonas",
+    "grupo": "Neumonía por Pseudomonas",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.2",
+    "descripcion": "Neumonía por estafilococo",
+    "grupo": "Neumonía por estafilococo",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.3",
+    "descripcion": "Neumonía por estreptococo del grupo B",
+    "grupo": "Neumonía por estreptococo del grupo B",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.5",
+    "descripcion": "Neumonía por Escherichia coli",
+    "grupo": "Neumonía por Escherichia coli",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.7",
+    "descripcion": "Neumonía por Mycoplasma pneumoniae (atípica)",
+    "grupo": "Neumonía por Mycoplasma pneumoniae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J15.9",
+    "descripcion": "Neumonía bacteriana no especificada",
+    "grupo": "Neumonía bacteriana",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "bacteriano",
+    "severidad": ""
+  },
+  {
+    "codigo": "J16.0",
+    "descripcion": "Neumonía por clamidias",
+    "grupo": "Neumonía por clamidias",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J18.0",
+    "descripcion": "Bronconeumonía no especificada",
+    "grupo": "Bronconeumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J18.1",
+    "descripcion": "Neumonía lobar no especificada",
+    "grupo": "Neumonía lobar",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J18.9",
+    "descripcion": "Neumonía no especificada",
+    "grupo": "Neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.0",
+    "descripcion": "Bronquitis aguda por Mycoplasma pneumoniae",
+    "grupo": "Bronquitis por Mycoplasma pneumoniae",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.5",
+    "descripcion": "Bronquitis aguda por virus sincitial respiratorio",
+    "grupo": "Bronquitis por virus sincitial respiratorio",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J20.9",
+    "descripcion": "Bronquitis aguda no especificada",
+    "grupo": "Bronquitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J21.0",
+    "descripcion": "Bronquiolitis aguda por virus sincitial respiratorio",
+    "grupo": "Bronquiolitis por virus sincitial respiratorio",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "J21.9",
+    "descripcion": "Bronquiolitis aguda no especificada",
+    "grupo": "Bronquiolitis",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J22",
+    "descripcion": "Infección aguda de vías respiratorias inferiores",
+    "grupo": "Infección de vías respiratorias inferiores",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.0",
+    "descripcion": "Rinitis alérgica estacional (polinosis)",
+    "grupo": "Rinitis alérgica estacional",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.1",
+    "descripcion": "Rinitis alérgica por polen",
+    "grupo": "Rinitis alérgica por polen",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.3",
+    "descripcion": "Rinitis alérgica perenne",
+    "grupo": "Rinitis alérgica perenne",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.4",
+    "descripcion": "Rinitis alérgica no especificada",
+    "grupo": "Rinitis alérgica",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.9",
+    "descripcion": "Rinitis alérgica NE",
+    "grupo": "Rinitis alérgica NE",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J31.0",
+    "descripcion": "Rinitis crónica",
+    "grupo": "Rinitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J31.1",
+    "descripcion": "Nasofaringitis crónica",
+    "grupo": "Nasofaringitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J31.2",
+    "descripcion": "Faringitis crónica",
+    "grupo": "Faringitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.0",
+    "descripcion": "Sinusitis maxilar crónica",
+    "grupo": "Sinusitis maxilar",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.1",
+    "descripcion": "Sinusitis frontal crónica",
+    "grupo": "Sinusitis frontal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.2",
+    "descripcion": "Sinusitis etmoidal crónica",
+    "grupo": "Sinusitis etmoidal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.3",
+    "descripcion": "Sinusitis esfenoidal crónica",
+    "grupo": "Sinusitis esfenoidal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.4",
+    "descripcion": "Poliposis nasal crónica",
+    "grupo": "Poliposis nasal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J32.9",
+    "descripcion": "Sinusitis crónica no especificada",
+    "grupo": "Sinusitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J33.9",
+    "descripcion": "Pólipo nasal no especificado",
+    "grupo": "Pólipo nasal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J34.2",
+    "descripcion": "Desviación del tabique nasal",
+    "grupo": "Desviación del tabique nasal",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J34.3",
+    "descripcion": "Hipertrofia de cornetes nasales",
+    "grupo": "Hipertrofia de cornetes nasales",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J35.0",
+    "descripcion": "Amigdalitis crónica",
+    "grupo": "Amigdalitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J35.01",
+    "descripcion": "Amigdalitis crónica",
+    "grupo": "Amigdalitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J35.1",
+    "descripcion": "Hipertrofia de las amígdalas",
+    "grupo": "Hipertrofia de las amígdalas",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J35.2",
+    "descripcion": "Hipertrofia de las adenoides",
+    "grupo": "Hipertrofia de las adenoides",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J35.3",
+    "descripcion": "Hipertrofia de amígdalas con hipertrofia de adenoides",
+    "grupo": "Hipertrofia de amígdalas con hipertrofia de",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J36",
+    "descripcion": "Absceso periamigdalino",
+    "grupo": "Absceso periamigdalino",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J37.0",
+    "descripcion": "Laringitis crónica",
+    "grupo": "Laringitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J38.3",
+    "descripcion": "Otras enfermedades de cuerdas vocales",
+    "grupo": "Otras enfermedades de cuerdas vocales",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J40",
+    "descripcion": "Bronquitis no especificada como aguda o crónica",
+    "grupo": "Bronquitis como o",
+    "sistema": "Respiratorio",
+    "tipo": "agudo sobre crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J41.0",
+    "descripcion": "Bronquitis crónica simple",
+    "grupo": "Bronquitis simple",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J41.1",
+    "descripcion": "Bronquitis crónica mucopurulenta",
+    "grupo": "Bronquitis mucopurulenta",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J41.8",
+    "descripcion": "Bronquitis crónica mixta simple y mucopurulenta",
+    "grupo": "Bronquitis mixta simple y mucopurulenta",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J42",
+    "descripcion": "Bronquitis crónica no especificada",
+    "grupo": "Bronquitis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J43.9",
+    "descripcion": "Enfisema pulmonar no especificado",
+    "grupo": "Enfisema pulmonar",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J44.0",
+    "descripcion": "EPOC con infección respiratoria aguda de vías inferiores",
+    "grupo": "EPOC con infección respiratoria de vías",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J44.1",
+    "descripcion": "EPOC con exacerbación aguda",
+    "grupo": "EPOC con exacerbación",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J44.8",
+    "descripcion": "Otra enfermedad pulmonar obstructiva crónica",
+    "grupo": "Otra enfermedad pulmonar obstructiva",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
+    "severidad": ""
+  },
+  {
+    "codigo": "J44.9",
+    "descripcion": "EPOC no especificada",
+    "grupo": "EPOC",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J45.0",
+    "descripcion": "Asma predominantemente alérgica",
+    "grupo": "Asma predominantemente alérgica",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J45.1",
+    "descripcion": "Asma no alérgica",
+    "grupo": "Asma no alérgica",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J45.20",
+    "descripcion": "Asma leve intermitente no complicada",
+    "grupo": "Asma intermitente no complicada",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "J45.30",
+    "descripcion": "Asma leve persistente no complicada",
+    "grupo": "Asma persistente no complicada",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "J45.40",
+    "descripcion": "Asma moderada persistente no complicada",
+    "grupo": "Asma persistente no complicada",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "J45.50",
+    "descripcion": "Asma severa persistente no complicada",
+    "grupo": "Asma persistente no complicada",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "J45.8",
+    "descripcion": "Asma mixta",
+    "grupo": "Asma mixta",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J45.9",
+    "descripcion": "Asma no especificada",
+    "grupo": "Asma",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J45.909",
+    "descripcion": "Asma NE sin complicaciones",
+    "grupo": "Asma NE sin complicaciones",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "sin complicación",
+    "severidad": ""
+  },
+  {
+    "codigo": "J46",
+    "descripcion": "Estado asmático (crisis asmática severa)",
+    "grupo": "Estado asmático",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "J47",
+    "descripcion": "Bronquiectasias",
+    "grupo": "Bronquiectasias",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J47.0",
+    "descripcion": "Bronquiectasias con infección aguda",
+    "grupo": "Bronquiectasias con infección",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J60",
+    "descripcion": "Neumoconiosis de los mineros del carbón",
+    "grupo": "Neumoconiosis de los mineros del carbón",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J61",
+    "descripcion": "Neumoconiosis por asbesto (asbestosis)",
+    "grupo": "Neumoconiosis por asbesto",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J62.8",
+    "descripcion": "Silicosis (neumoconiosis por sílice)",
+    "grupo": "Silicosis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J64",
+    "descripcion": "Neumoconiosis no especificada",
+    "grupo": "Neumoconiosis",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J67.9",
+    "descripcion": "Neumonitis por hipersensibilidad no especificada",
+    "grupo": "Neumonitis por hipersensibilidad",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J68.0",
+    "descripcion": "Neumonitis por inhalación de gases, humos y vapores",
+    "grupo": "Neumonitis por inhalación de gases",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J69.0",
+    "descripcion": "Neumonía aspirativa por alimento o vómito",
+    "grupo": "Neumonía aspirativa por alimento o vómito",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J70.0",
+    "descripcion": "Neumonitis por radiación",
+    "grupo": "Neumonitis por radiación",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J80",
+    "descripcion": "Síndrome de dificultad respiratoria aguda (SDRA)",
+    "grupo": "Síndrome de dificultad respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J81",
+    "descripcion": "Edema pulmonar",
+    "grupo": "Edema pulmonar",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J81.0",
+    "descripcion": "Edema pulmonar agudo cardiogénico",
+    "grupo": "Edema pulmonar cardiogénico",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J84.1",
+    "descripcion": "Fibrosis pulmonar intersticial",
+    "grupo": "Fibrosis pulmonar intersticial",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J84.9",
+    "descripcion": "Enfermedad pulmonar intersticial no especificada",
+    "grupo": "Enfermedad pulmonar intersticial",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J85.2",
+    "descripcion": "Absceso pulmonar sin neumonía",
+    "grupo": "Absceso pulmonar sin neumonía",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J86.9",
+    "descripcion": "Empiema pleural (piotórax) sin fístula",
+    "grupo": "Empiema pleural sin fístula",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J90",
+    "descripcion": "Derrame pleural no clasificado en otra parte",
+    "grupo": "Derrame pleural no clasificado en otra parte",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J93.0",
+    "descripcion": "Neumotórax espontáneo a tensión",
+    "grupo": "Neumotórax espontáneo a tensión",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J93.1",
+    "descripcion": "Neumotórax espontáneo",
+    "grupo": "Neumotórax espontáneo",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J93.9",
+    "descripcion": "Neumotórax no especificado",
+    "grupo": "Neumotórax",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J94.2",
+    "descripcion": "Hemotórax",
+    "grupo": "Hemotórax",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.0",
+    "descripcion": "Insuficiencia respiratoria aguda",
+    "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.00",
+    "descripcion": "Insuficiencia respiratoria aguda NE",
+    "grupo": "Insuficiencia respiratoria NE",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.1",
+    "descripcion": "Insuficiencia respiratoria crónica",
+    "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "J96.9",
+    "descripcion": "Insuficiencia respiratoria no especificada",
+    "grupo": "Insuficiencia respiratoria",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "respiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "U09.9",
+    "descripcion": "Condición post COVID-19 (secuelas respiratorias)",
+    "grupo": "Condición post COVID-19",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "F00.0",
+    "descripcion": "Demencia en Alzheimer de inicio temprano",
+    "grupo": "Demencia en Alzheimer de inicio temprano",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F00.1",
+    "descripcion": "Demencia en Alzheimer de inicio tardío",
+    "grupo": "Demencia en Alzheimer de inicio tardío",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F00.2",
+    "descripcion": "Demencia en Alzheimer atípica o mixta",
+    "grupo": "Demencia en Alzheimer atípica o mixta",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F01.0",
+    "descripcion": "Demencia vascular de inicio agudo",
+    "grupo": "Demencia vascular de inicio",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F01.1",
+    "descripcion": "Demencia vascular por infartos múltiples",
+    "grupo": "Demencia vascular por infartos múltiples",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F01.3",
+    "descripcion": "Demencia vascular mixta cortical y subcortical",
+    "grupo": "Demencia vascular mixta cortical y subcortical",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F03",
+    "descripcion": "Demencia no especificada",
+    "grupo": "Demencia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F04",
+    "descripcion": "Síndrome amnésico orgánico no inducido por alcohol",
+    "grupo": "Síndrome amnésico orgánico no inducido por",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F05.0",
+    "descripcion": "Delirium no superpuesto a demencia",
+    "grupo": "Delirium no superpuesto a demencia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F05.1",
+    "descripcion": "Delirium superpuesto a demencia",
+    "grupo": "Delirium superpuesto a demencia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F06.0",
+    "descripcion": "Alucinosis orgánica",
+    "grupo": "Alucinosis orgánica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F06.2",
+    "descripcion": "Trastorno delirante orgánico",
+    "grupo": "Trastorno delirante orgánico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F06.3",
+    "descripcion": "Trastornos del humor orgánicos",
+    "grupo": "Trastornos del humor orgánicos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F06.30",
+    "descripcion": "Depresión debida a enfermedad médica — sin síntomas psicóticos",
+    "grupo": "Depresión debida a enfermedad médica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F07.0",
+    "descripcion": "Trastorno orgánico de la personalidad",
+    "grupo": "Trastorno orgánico de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F09",
+    "descripcion": "Trastorno mental orgánico no especificado",
+    "grupo": "Trastorno mental orgánico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F10.0",
+    "descripcion": "Intoxicación aguda por alcohol",
+    "grupo": "Intoxicación por alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F10.1",
+    "descripcion": "Uso nocivo de alcohol",
+    "grupo": "Uso nocivo de alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F10.10",
+    "descripcion": "Trastorno por uso de alcohol — nivel leve",
+    "grupo": "Trastorno por uso de alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "F10.2",
+    "descripcion": "Síndrome de dependencia del alcohol",
+    "grupo": "Síndrome de dependencia del alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F10.20",
+    "descripcion": "Dependencia al alcohol — nivel moderado/severo",
+    "grupo": "Dependencia al alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F10.3",
+    "descripcion": "Síndrome de abstinencia de alcohol",
+    "grupo": "Síndrome de abstinencia de alcohol",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F10.4",
+    "descripcion": "Abstinencia de alcohol con delirium",
+    "grupo": "Abstinencia de alcohol con delirium",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F11.2",
+    "descripcion": "Síndrome de dependencia de opioides",
+    "grupo": "Síndrome de dependencia de opioides",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F12.1",
+    "descripcion": "Uso nocivo de cannabinoides",
+    "grupo": "Uso nocivo de cannabinoides",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F12.2",
+    "descripcion": "Síndrome de dependencia de cannabinoides",
+    "grupo": "Síndrome de dependencia de cannabinoides",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F13.2",
+    "descripcion": "Dependencia de sedantes o hipnóticos",
+    "grupo": "Dependencia de sedantes o hipnóticos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F14.2",
+    "descripcion": "Síndrome de dependencia de cocaína",
+    "grupo": "Síndrome de dependencia de cocaína",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F15.2",
+    "descripcion": "Dependencia de otros estimulantes",
+    "grupo": "Dependencia de otros estimulantes",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F16.0",
+    "descripcion": "Intoxicación aguda por alucinógenos",
+    "grupo": "Intoxicación por alucinógenos",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F17.2",
+    "descripcion": "Síndrome de dependencia de tabaco",
+    "grupo": "Síndrome de dependencia de tabaco",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F17.210",
+    "descripcion": "Dependencia al tabaco NE",
+    "grupo": "Dependencia al tabaco NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F19.10",
+    "descripcion": "Trastorno por uso de otras sustancias — nivel leve",
+    "grupo": "Trastorno por uso de otras sustancias",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "F19.2",
+    "descripcion": "Dependencia de múltiples drogas",
+    "grupo": "Dependencia de múltiples drogas",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F20.0",
+    "descripcion": "Esquizofrenia paranoide",
+    "grupo": "Esquizofrenia paranoide",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F20.1",
+    "descripcion": "Esquizofrenia hebefrénica",
+    "grupo": "Esquizofrenia hebefrénica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F20.3",
+    "descripcion": "Esquizofrenia indiferenciada",
+    "grupo": "Esquizofrenia indiferenciada",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F20.9",
+    "descripcion": "Esquizofrenia NE",
+    "grupo": "Esquizofrenia NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F21",
+    "descripcion": "Trastorno esquizotípico",
+    "grupo": "Trastorno esquizotípico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F22.0",
+    "descripcion": "Trastorno delirante persistente",
+    "grupo": "Trastorno delirante persistente",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F23.0",
+    "descripcion": "Trastorno psicótico agudo polimorfo",
+    "grupo": "Trastorno psicótico polimorfo",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F25.0",
+    "descripcion": "Trastorno esquizoafectivo de tipo maníaco",
+    "grupo": "Trastorno esquizoafectivo de tipo maníaco",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F25.1",
+    "descripcion": "Trastorno esquizoafectivo de tipo depresivo",
+    "grupo": "Trastorno esquizoafectivo de tipo depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F25.9",
+    "descripcion": "Trastorno esquizoafectivo NE",
+    "grupo": "Trastorno esquizoafectivo NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F28",
+    "descripcion": "Otros trastornos psicóticos no orgánicos",
+    "grupo": "Otros trastornos psicóticos no orgánicos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F29",
+    "descripcion": "Psicosis no orgánica no especificada",
+    "grupo": "Psicosis no orgánica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F30.2",
+    "descripcion": "Episodio maníaco con síntomas psicóticos",
+    "grupo": "Episodio maníaco con síntomas psicóticos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F31.0",
+    "descripcion": "Trastorno bipolar episodio hipomaníaco actual",
+    "grupo": "Trastorno bipolar episodio hipomaníaco actual",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F31.1",
+    "descripcion": "Trastorno bipolar episodio maníaco sin psicosis",
+    "grupo": "Trastorno bipolar episodio maníaco sin",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F31.2",
+    "descripcion": "Trastorno bipolar episodio maníaco con psicosis",
+    "grupo": "Trastorno bipolar episodio maníaco con",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F31.3",
+    "descripcion": "Trastorno bipolar episodio depresivo leve o moderado",
+    "grupo": "Trastorno bipolar episodio depresivo o",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "F31.4",
+    "descripcion": "Trastorno bipolar episodio depresivo grave sin psicosis",
+    "grupo": "Trastorno bipolar episodio depresivo sin",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F31.6",
+    "descripcion": "Trastorno bipolar episodio mixto actual",
+    "grupo": "Trastorno bipolar episodio mixto actual",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F31.9",
+    "descripcion": "Trastorno afectivo bipolar NE",
+    "grupo": "Trastorno afectivo bipolar NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F32.0",
+    "descripcion": "Episodio depresivo leve",
+    "grupo": "Episodio depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "F32.1",
+    "descripcion": "Episodio depresivo moderado",
+    "grupo": "Episodio depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "F32.2",
+    "descripcion": "Episodio depresivo grave sin síntomas psicóticos",
+    "grupo": "Episodio depresivo sin síntomas psicóticos",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F32.3",
+    "descripcion": "Episodio depresivo grave con síntomas psicóticos",
+    "grupo": "Episodio depresivo con síntomas psicóticos",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F32.9",
+    "descripcion": "Episodio depresivo NE",
+    "grupo": "Episodio depresivo NE",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F33.0",
+    "descripcion": "Trastorno depresivo recurrente episodio actual leve",
+    "grupo": "Trastorno depresivo episodio actual",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "mental",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "F33.1",
+    "descripcion": "Trastorno depresivo recurrente episodio moderado",
+    "grupo": "Trastorno depresivo episodio",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "mental",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "F33.2",
+    "descripcion": "Depresivo recurrente episodio grave sin psicosis",
+    "grupo": "Depresivo episodio sin psicosis",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F33.4",
+    "descripcion": "Trastorno depresivo recurrente, actualmente en remisión",
+    "grupo": "Trastorno depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F33.9",
+    "descripcion": "Trastorno depresivo recurrente NE",
+    "grupo": "Trastorno depresivo NE",
+    "sistema": "Salud Mental",
+    "tipo": "recurrente",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F34.0",
+    "descripcion": "Ciclotimia",
+    "grupo": "Ciclotimia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F34.1",
+    "descripcion": "Distimia",
+    "grupo": "Distimia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F40.0",
+    "descripcion": "Agorafobia",
+    "grupo": "Agorafobia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F40.1",
+    "descripcion": "Fobias sociales",
+    "grupo": "Fobias sociales",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F40.10",
+    "descripcion": "Fobia social NE (trastorno de ansiedad social)",
+    "grupo": "Fobia social NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F40.2",
+    "descripcion": "Fobias específicas o aisladas",
+    "grupo": "Fobias específicas o aisladas",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F40.218",
+    "descripcion": "Fobia específica — otros tipos",
+    "grupo": "Fobia específica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.0",
+    "descripcion": "Trastorno de pánico",
+    "grupo": "Trastorno de pánico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.1",
+    "descripcion": "Trastorno de ansiedad generalizada",
+    "grupo": "Trastorno de ansiedad generalizada",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.2",
+    "descripcion": "Trastorno mixto ansioso-depresivo",
+    "grupo": "Trastorno mixto ansioso-depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.3",
+    "descripcion": "Trastorno mixto ansioso-depresivo",
+    "grupo": "Trastorno mixto ansioso-depresivo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.9",
+    "descripcion": "Trastorno de ansiedad NE",
+    "grupo": "Trastorno de ansiedad NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F42.0",
+    "descripcion": "TOC con predominio de pensamientos obsesivos",
+    "grupo": "TOC con predominio de pensamientos obsesivos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F42.1",
+    "descripcion": "TOC con predominio de actos compulsivos",
+    "grupo": "TOC con predominio de actos compulsivos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F42.2",
+    "descripcion": "TOC con mezcla de pensamientos y actos",
+    "grupo": "TOC con mezcla de pensamientos y actos",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F42.9",
+    "descripcion": "Trastorno obsesivo-compulsivo (TOC) NE",
+    "grupo": "Trastorno obsesivo-compulsivo NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.0",
+    "descripcion": "Reacción a estrés agudo",
+    "grupo": "Reacción a estrés",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.1",
+    "descripcion": "Trastorno de estrés postraumático",
+    "grupo": "Trastorno de estrés postraumático",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.10",
+    "descripcion": "Trastorno de estrés postraumático (TEPT) agudo",
+    "grupo": "Trastorno de estrés postraumático",
+    "sistema": "Salud Mental",
+    "tipo": "agudo",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.12",
+    "descripcion": "TEPT crónico",
+    "grupo": "TEPT",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.2",
+    "descripcion": "Trastornos de adaptación",
+    "grupo": "Trastornos de adaptación",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.20",
+    "descripcion": "Trastorno de adaptación NE",
+    "grupo": "Trastorno de adaptación NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F43.23",
+    "descripcion": "Trastorno de adaptación con ansiedad",
+    "grupo": "Trastorno de adaptación con ansiedad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F44.0",
+    "descripcion": "Amnesia disociativa",
+    "grupo": "Amnesia disociativa",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F44.4",
+    "descripcion": "Trastornos disociativos motores",
+    "grupo": "Trastornos disociativos motores",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F45.0",
+    "descripcion": "Trastorno de somatización",
+    "grupo": "Trastorno de somatización",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F45.1",
+    "descripcion": "Trastorno somatomorfo indiferenciado",
+    "grupo": "Trastorno somatomorfo indiferenciado",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F45.2",
+    "descripcion": "Trastorno hipocondríaco",
+    "grupo": "Trastorno hipocondríaco",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F45.4",
+    "descripcion": "Trastorno de dolor somatomorfo persistente",
+    "grupo": "Trastorno de dolor somatomorfo persistente",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F50.0",
+    "descripcion": "Anorexia nerviosa",
+    "grupo": "Anorexia nerviosa",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F50.2",
+    "descripcion": "Bulimia nerviosa",
+    "grupo": "Bulimia nerviosa",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F50.4",
+    "descripcion": "Hiperfagia asociada a alteraciones psicológicas",
+    "grupo": "Hiperfagia asociada a alteraciones",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F50.9",
+    "descripcion": "Trastorno de la conducta alimentaria NE",
+    "grupo": "Trastorno de la conducta alimentaria NE",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F51.0",
+    "descripcion": "Insomnio no orgánico",
+    "grupo": "Insomnio no orgánico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F51.2",
+    "descripcion": "Trastorno no orgánico del ciclo sueño-vigilia",
+    "grupo": "Trastorno no orgánico del ciclo sueño-vigilia",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F51.3",
+    "descripcion": "Sonambulismo",
+    "grupo": "Sonambulismo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F51.5",
+    "descripcion": "Pesadillas",
+    "grupo": "Pesadillas",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.0",
+    "descripcion": "Trastorno paranoide de la personalidad",
+    "grupo": "Trastorno paranoide de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.1",
+    "descripcion": "Trastorno esquizoide de la personalidad",
+    "grupo": "Trastorno esquizoide de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.2",
+    "descripcion": "Trastorno disocial de la personalidad",
+    "grupo": "Trastorno disocial de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.3",
+    "descripcion": "Trastorno de inestabilidad emocional de personalidad",
+    "grupo": "Trastorno de inestabilidad emocional de",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.4",
+    "descripcion": "Trastorno histriónico de la personalidad",
+    "grupo": "Trastorno histriónico de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.5",
+    "descripcion": "Trastorno anancástico de la personalidad",
+    "grupo": "Trastorno anancástico de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.6",
+    "descripcion": "Trastorno ansioso de la personalidad",
+    "grupo": "Trastorno ansioso de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F60.7",
+    "descripcion": "Trastorno dependiente de la personalidad",
+    "grupo": "Trastorno dependiente de la personalidad",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F63.0",
+    "descripcion": "Ludopatía",
+    "grupo": "Ludopatía",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F70",
+    "descripcion": "Retraso mental leve",
+    "grupo": "Retraso mental",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "F71",
+    "descripcion": "Retraso mental moderado",
+    "grupo": "Retraso mental",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "moderado"
+  },
+  {
+    "codigo": "F72",
+    "descripcion": "Retraso mental grave",
+    "grupo": "Retraso mental",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": "grave"
+  },
+  {
+    "codigo": "F73",
+    "descripcion": "Retraso mental profundo",
+    "grupo": "Retraso mental profundo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F80.0",
+    "descripcion": "Trastorno específico de la pronunciación",
+    "grupo": "Trastorno específico de la pronunciación",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F80.1",
+    "descripcion": "Trastorno del lenguaje expresivo",
+    "grupo": "Trastorno del lenguaje expresivo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F80.2",
+    "descripcion": "Trastorno de la comprensión del lenguaje",
+    "grupo": "Trastorno de la comprensión del lenguaje",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F81.0",
+    "descripcion": "Trastorno específico de la lectura",
+    "grupo": "Trastorno específico de la lectura",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F81.1",
+    "descripcion": "Trastorno específico de la ortografía",
+    "grupo": "Trastorno específico de la ortografía",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F81.2",
+    "descripcion": "Trastorno específico del cálculo",
+    "grupo": "Trastorno específico del cálculo",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F82",
+    "descripcion": "Trastorno específico del desarrollo motor",
+    "grupo": "Trastorno específico del desarrollo motor",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F84.0",
+    "descripcion": "Autismo infantil",
+    "grupo": "Autismo infantil",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F84.1",
+    "descripcion": "Autismo atípico",
+    "grupo": "Autismo atípico",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F84.2",
+    "descripcion": "Síndrome de Rett",
+    "grupo": "Síndrome de Rett",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F84.5",
+    "descripcion": "Síndrome de Asperger",
+    "grupo": "Síndrome de Asperger",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F90.0",
+    "descripcion": "Trastorno de la actividad y la atención (TDAH)",
+    "grupo": "Trastorno de la actividad y la atención",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F90.1",
+    "descripcion": "Trastorno hipercinético disocial",
+    "grupo": "Trastorno hipercinético disocial",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F90.2",
+    "descripcion": "TDAH — presentación combinada",
+    "grupo": "TDAH",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F90.9",
+    "descripcion": "TDAH — tipo no especificado",
+    "grupo": "TDAH",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F91.0",
+    "descripcion": "Trastorno disocial limitado al contexto familiar",
+    "grupo": "Trastorno disocial limitado al contexto",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F91.3",
+    "descripcion": "Trastorno desafiante y oposicionista",
+    "grupo": "Trastorno desafiante y oposicionista",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F93.0",
+    "descripcion": "Trastorno de ansiedad de separación en la infancia",
+    "grupo": "Trastorno de ansiedad de separación en la",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F95.2",
+    "descripcion": "Síndrome de Gilles de la Tourette",
+    "grupo": "Síndrome de Gilles de la Tourette",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "F98.0",
+    "descripcion": "Enuresis no orgánica",
+    "grupo": "Enuresis no orgánica",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "mental",
+    "severidad": ""
+  },
+  {
+    "codigo": "R00.0",
+    "descripcion": "Taquicardia no especificada",
+    "grupo": "Taquicardia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R00.2",
+    "descripcion": "Palpitaciones",
+    "grupo": "Palpitaciones",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R00.8",
+    "descripcion": "Palpitaciones",
+    "grupo": "Palpitaciones",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R01.1",
+    "descripcion": "Soplo cardíaco no especificado",
+    "grupo": "Soplo cardíaco",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R03.0",
+    "descripcion": "Presión arterial elevada, sin diagnóstico de hipertensión",
+    "grupo": "Presión arterial elevada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R04.0",
+    "descripcion": "Epistaxis",
+    "grupo": "Epistaxis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R04.2",
+    "descripcion": "Hemoptisis",
+    "grupo": "Hemoptisis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R05",
+    "descripcion": "Tos",
+    "grupo": "Tos",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R05.9",
+    "descripcion": "Tos NE",
+    "grupo": "Tos NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.0",
+    "descripcion": "Disnea",
+    "grupo": "Disnea",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.00",
+    "descripcion": "Disnea en reposo",
+    "grupo": "Disnea en reposo",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.09",
+    "descripcion": "Disnea de esfuerzo NE",
+    "grupo": "Disnea de esfuerzo NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.1",
+    "descripcion": "Estridor",
+    "grupo": "Estridor",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.2",
+    "descripcion": "Sibilancias",
+    "grupo": "Sibilancias",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R06.4",
+    "descripcion": "Hiperventilación",
+    "grupo": "Hiperventilación",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R07.0",
+    "descripcion": "Dolor de garganta",
+    "grupo": "Dolor de garganta",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R07.1",
+    "descripcion": "Dolor en el pecho al respirar",
+    "grupo": "Dolor en el pecho al respirar",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R07.2",
+    "descripcion": "Dolor precordial",
+    "grupo": "Dolor precordial",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R07.4",
+    "descripcion": "Dolor torácico no especificado",
+    "grupo": "Dolor torácico",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R07.9",
+    "descripcion": "Dolor torácico NE",
+    "grupo": "Dolor torácico NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R09.02",
+    "descripcion": "Hipoxemia",
+    "grupo": "Hipoxemia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.0",
+    "descripcion": "Abdomen agudo",
+    "grupo": "Abdomen",
+    "sistema": "Síntomas y Signos",
+    "tipo": "agudo",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.1",
+    "descripcion": "Dolor abdominal superior (epigastrio, hipocondrio)",
+    "grupo": "Dolor abdominal superior",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.2",
+    "descripcion": "Dolor pélvico y perineal",
+    "grupo": "Dolor pélvico y perineal",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.3",
+    "descripcion": "Dolor abdominal inferior (fosa ilíaca)",
+    "grupo": "Dolor abdominal inferior",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R10.4",
+    "descripcion": "Dolor abdominal generalizado y no especificado",
+    "grupo": "Dolor abdominal generalizado y",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R11",
+    "descripcion": "Náuseas y vómitos",
+    "grupo": "Náuseas y vómitos",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R11.0",
+    "descripcion": "Náuseas",
+    "grupo": "Náuseas",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R11.11",
+    "descripcion": "Vómitos NE",
+    "grupo": "Vómitos NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R12",
+    "descripcion": "Pirosis (acidez estomacal)",
+    "grupo": "Pirosis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R13",
+    "descripcion": "Disfagia",
+    "grupo": "Disfagia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R14",
+    "descripcion": "Flatulencia y afecciones afines (meteorismo)",
+    "grupo": "Flatulencia y afecciones afines",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R14.0",
+    "descripcion": "Distensión abdominal (meteorismo)",
+    "grupo": "Distensión abdominal",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R15",
+    "descripcion": "Incontinencia fecal",
+    "grupo": "Incontinencia fecal",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R16.0",
+    "descripcion": "Hepatomegalia, no clasificada en otra parte",
+    "grupo": "Hepatomegalia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R16.1",
+    "descripcion": "Esplenomegalia, no clasificada en otra parte",
+    "grupo": "Esplenomegalia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R17",
+    "descripcion": "Ictericia no especificada",
+    "grupo": "Ictericia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R18",
+    "descripcion": "Ascitis",
+    "grupo": "Ascitis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R19.0",
+    "descripcion": "Masa o tumoración intraabdominal y pélvica",
+    "grupo": "Masa o tumoración intraabdominal y pélvica",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R19.4",
+    "descripcion": "Cambio en los hábitos intestinales",
+    "grupo": "Cambio en los hábitos intestinales",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R19.7",
+    "descripcion": "Diarrea NE",
+    "grupo": "Diarrea NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R20.2",
+    "descripcion": "Parestesia de la piel",
+    "grupo": "Parestesia de la piel",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R21",
+    "descripcion": "Exantema y otras erupciones cutáneas no especificadas",
+    "grupo": "Exantema y otras erupciones cutáneas",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R22.9",
+    "descripcion": "Masa o tumoración localizada, no especificada",
+    "grupo": "Masa o tumoración localizada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R23.0",
+    "descripcion": "Cianosis",
+    "grupo": "Cianosis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R23.3",
+    "descripcion": "Equimosis espontáneas (petequias)",
+    "grupo": "Equimosis espontáneas",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R25.1",
+    "descripcion": "Temblor no especificado",
+    "grupo": "Temblor",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R25.2",
+    "descripcion": "Calambres musculares",
+    "grupo": "Calambres musculares",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R26.0",
+    "descripcion": "Marcha atáxica",
+    "grupo": "Marcha atáxica",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R26.2",
+    "descripcion": "Dificultad para caminar, no clasificada en otra parte",
+    "grupo": "Dificultad para caminar",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R30.0",
+    "descripcion": "Disuria",
+    "grupo": "Disuria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R31",
+    "descripcion": "Hematuria no especificada",
+    "grupo": "Hematuria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R32",
+    "descripcion": "Incontinencia urinaria no especificada",
+    "grupo": "Incontinencia urinaria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R33",
+    "descripcion": "Retención de orina",
+    "grupo": "Retención de orina",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R34",
+    "descripcion": "Anuria y oliguria",
+    "grupo": "Anuria y oliguria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R35",
+    "descripcion": "Poliuria",
+    "grupo": "Poliuria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R35.0",
+    "descripcion": "Frecuencia urinaria",
+    "grupo": "Frecuencia urinaria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R39.9",
+    "descripcion": "Síntoma del tracto urinario NE",
+    "grupo": "Síntoma del tracto urinario NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R40.0",
+    "descripcion": "Somnolencia",
+    "grupo": "Somnolencia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R40.1",
+    "descripcion": "Estupor",
+    "grupo": "Estupor",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R40.2",
+    "descripcion": "Coma no especificado (alteración de conciencia)",
+    "grupo": "Coma",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R41.0",
+    "descripcion": "Desorientación no especificada",
+    "grupo": "Desorientación",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R41.3",
+    "descripcion": "Otra amnesia",
+    "grupo": "Otra amnesia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R42",
+    "descripcion": "Mareo y desvanecimiento (vértigo)",
+    "grupo": "Mareo y desvanecimiento",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R43.0",
+    "descripcion": "Anosmia",
+    "grupo": "Anosmia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R45.0",
+    "descripcion": "Nerviosismo",
+    "grupo": "Nerviosismo",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R45.1",
+    "descripcion": "Inquietud y agitación",
+    "grupo": "Inquietud y agitación",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R45.4",
+    "descripcion": "Irritabilidad y enojo",
+    "grupo": "Irritabilidad y enojo",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R47.0",
+    "descripcion": "Disfasia y afasia",
+    "grupo": "Disfasia y afasia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R49.0",
+    "descripcion": "Disfonía",
+    "grupo": "Disfonía",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R50.9",
+    "descripcion": "Fiebre no especificada (fiebre de origen desconocido)",
+    "grupo": "Fiebre",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R51",
+    "descripcion": "Cefalea",
+    "grupo": "Cefalea",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R51.9",
+    "descripcion": "Cefalea NE",
+    "grupo": "Cefalea NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R52",
+    "descripcion": "Dolor crónico NE",
+    "grupo": "Dolor NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "crónico",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R52.0",
+    "descripcion": "Dolor agudo",
+    "grupo": "Dolor",
+    "sistema": "Síntomas y Signos",
+    "tipo": "agudo",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R52.1",
+    "descripcion": "Dolor crónico intratable",
+    "grupo": "Dolor intratable",
+    "sistema": "Síntomas y Signos",
+    "tipo": "crónico",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R52.2",
+    "descripcion": "Otro dolor crónico",
+    "grupo": "Otro dolor",
+    "sistema": "Síntomas y Signos",
+    "tipo": "crónico",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R53",
+    "descripcion": "Malestar general, fatiga y astenia",
+    "grupo": "Malestar general",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R53.1",
+    "descripcion": "Debilidad NE",
+    "grupo": "Debilidad NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R53.83",
+    "descripcion": "Fatiga crónica NE",
+    "grupo": "Fatiga NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "crónico",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R55",
+    "descripcion": "Síncope y colapso (lipotimia)",
+    "grupo": "Síncope y colapso",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R56.0",
+    "descripcion": "Convulsiones febriles",
+    "grupo": "Convulsiones febriles",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R56.8",
+    "descripcion": "Otras convulsiones y las no especificadas",
+    "grupo": "Otras convulsiones y las",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R56.9",
+    "descripcion": "Convulsiones NE",
+    "grupo": "Convulsiones NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R57.9",
+    "descripcion": "Choque, no especificado",
+    "grupo": "Choque",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R58",
+    "descripcion": "Hemorragia, no clasificada en otra parte",
+    "grupo": "Hemorragia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "hemorrágico",
+    "severidad": ""
+  },
+  {
+    "codigo": "R59.0",
+    "descripcion": "Adenomegalia localizada",
+    "grupo": "Adenomegalia localizada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R59.1",
+    "descripcion": "Adenomegalia generalizada",
+    "grupo": "Adenomegalia generalizada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R60.0",
+    "descripcion": "Edema localizado",
+    "grupo": "Edema localizado",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R60.1",
+    "descripcion": "Edema generalizado",
+    "grupo": "Edema generalizado",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R60.9",
+    "descripcion": "Edema NE",
+    "grupo": "Edema NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R61.9",
+    "descripcion": "Hiperhidrosis, no especificada",
+    "grupo": "Hiperhidrosis",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R63.0",
+    "descripcion": "Anorexia",
+    "grupo": "Anorexia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R63.1",
+    "descripcion": "Polidipsia",
+    "grupo": "Polidipsia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R63.2",
+    "descripcion": "Polifagia",
+    "grupo": "Polifagia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R63.3",
+    "descripcion": "Dificultades en la alimentación",
+    "grupo": "Dificultades en la alimentación",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R63.4",
+    "descripcion": "Pérdida anormal de peso",
+    "grupo": "Pérdida anormal de peso",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R64",
+    "descripcion": "Caquexia",
+    "grupo": "Caquexia",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R68.89",
+    "descripcion": "Otros síntomas y signos NE",
+    "grupo": "Otros síntomas y signos NE",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R70.0",
+    "descripcion": "Velocidad de eritrosedimentación elevada (VSG)",
+    "grupo": "Velocidad de eritrosedimentación elevada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R74.0",
+    "descripcion": "Elevación de niveles de transaminasas y DHL",
+    "grupo": "Elevación de niveles de transaminasas y DHL",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R79.8",
+    "descripcion": "Otros hallazgos anormales en química sanguínea (PCR elevada)",
+    "grupo": "Otros hallazgos anormales en química sanguínea",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R80",
+    "descripcion": "Proteinuria aislada",
+    "grupo": "Proteinuria aislada",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R81",
+    "descripcion": "Glucosuria",
+    "grupo": "Glucosuria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R82.4",
+    "descripcion": "Acetonuria",
+    "grupo": "Acetonuria",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "R94.3",
+    "descripcion": "Resultado anormal de estudio funcional cardiovascular (ECG)",
+    "grupo": "Resultado anormal de estudio funcional",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "síntoma",
+    "severidad": ""
+  },
+  {
+    "codigo": "M23.200",
+    "descripcion": "Lesión de menisco NE — rodilla",
+    "grupo": "Lesión de menisco NE",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M23.400",
+    "descripcion": "Cuerpo libre en articulación de rodilla NE",
+    "grupo": "Cuerpo libre en articulación de rodilla NE",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M25.311",
+    "descripcion": "Rigidez articular de hombro derecho NE",
+    "grupo": "Rigidez articular de hombro derecho NE",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "M25.561",
+    "descripcion": "Dolor de rodilla NE — derecha",
+    "grupo": "Dolor de rodilla NE",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "musculoesquelético",
+    "severidad": ""
+  },
+  {
+    "codigo": "S00.0",
+    "descripcion": "Traumatismo superficial del cuero cabelludo",
+    "grupo": "Traumatismo superficial del cuero cabelludo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S00.01XA",
+    "descripcion": "Abrasión cuero cabelludo — inicial",
+    "grupo": "Abrasión cuero cabelludo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S01.0",
+    "descripcion": "Herida del cuero cabelludo",
+    "grupo": "Herida del cuero cabelludo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S01.4",
+    "descripcion": "Herida de la mejilla y de la región temporomandibular",
+    "grupo": "Herida de la mejilla y de la región",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S01.5",
+    "descripcion": "Herida del labio y de la cavidad bucal",
+    "grupo": "Herida del labio y de la cavidad bucal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S02.0",
+    "descripcion": "Fractura de la bóveda del cráneo",
+    "grupo": "Fractura de la bóveda del cráneo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S02.1",
+    "descripcion": "Fractura de la base del cráneo",
+    "grupo": "Fractura de la base del cráneo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S02.2",
+    "descripcion": "Fractura de los huesos de la nariz",
+    "grupo": "Fractura de los huesos de la nariz",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S02.6",
+    "descripcion": "Fractura del maxilar inferior (mandíbula)",
+    "grupo": "Fractura del maxilar inferior",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S03.0",
+    "descripcion": "Luxación del maxilar (mandíbula)",
+    "grupo": "Luxación del maxilar",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S05.0",
+    "descripcion": "Traumatismo de conjuntiva y abrasión corneal sin cuerpo extraño",
+    "grupo": "Traumatismo de conjuntiva y abrasión corneal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S05.1",
+    "descripcion": "Contusión del globo ocular y del tejido orbitario",
+    "grupo": "Contusión del globo ocular y del tejido",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S06.0",
+    "descripcion": "Concusión (conmoción cerebral, TEC leve)",
+    "grupo": "Concusión",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": "leve"
+  },
+  {
+    "codigo": "S06.9",
+    "descripcion": "Traumatismo intracraneal, no especificado (TEC)",
+    "grupo": "Traumatismo intracraneal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S09.8XXA",
+    "descripcion": "Traumatismo de cabeza NE — inicial",
+    "grupo": "Traumatismo de cabeza NE",
+    "sistema": "Traumatismos",
+    "tipo": "agudo",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S09.90XA",
+    "descripcion": "Traumatismo craneal NE — inicial",
+    "grupo": "Traumatismo craneal NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S13.4",
+    "descripcion": "Esguince y torcedura de columna cervical (latigazo cervical)",
+    "grupo": "Esguince y torcedura de columna cervical",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S13.4XXA",
+    "descripcion": "Esguince cervical — inicial",
+    "grupo": "Esguince cervical",
+    "sistema": "Traumatismos",
+    "tipo": "agudo",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S19.9XXA",
+    "descripcion": "Traumatismo del cuello NE — inicial",
+    "grupo": "Traumatismo del cuello NE",
+    "sistema": "Traumatismos",
+    "tipo": "agudo",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S20.2",
+    "descripcion": "Contusión del tórax",
+    "grupo": "Contusión del tórax",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S22.0",
+    "descripcion": "Fractura de vértebra torácica",
+    "grupo": "Fractura de vértebra torácica",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S22.3",
+    "descripcion": "Fractura de costilla",
+    "grupo": "Fractura de costilla",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S22.4",
+    "descripcion": "Fracturas múltiples de costillas",
+    "grupo": "Fracturas múltiples de costillas",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S29.9XXA",
+    "descripcion": "Traumatismo del tórax NE — inicial",
+    "grupo": "Traumatismo del tórax NE",
+    "sistema": "Traumatismos",
+    "tipo": "agudo",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S30.0",
+    "descripcion": "Contusión de la región lumbosacra y de la pelvis",
+    "grupo": "Contusión de la región lumbosacra y de la",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S30.1",
+    "descripcion": "Contusión de la pared abdominal",
+    "grupo": "Contusión de la pared abdominal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S32.0",
+    "descripcion": "Fractura de vértebra lumbar",
+    "grupo": "Fractura de vértebra lumbar",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S39.012A",
+    "descripcion": "Distensión musculatura lumbar — inicial",
+    "grupo": "Distensión musculatura lumbar",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S39.91XA",
+    "descripcion": "Traumatismo abdomen NE — inicial",
+    "grupo": "Traumatismo abdomen NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.0",
+    "descripcion": "Fractura de la clavícula",
+    "grupo": "Fractura de la clavícula",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.001",
+    "descripcion": "Fractura de clavícula NE",
+    "grupo": "Fractura de clavícula NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.002A",
+    "descripcion": "Fractura clavícula NE — inicial",
+    "grupo": "Fractura clavícula NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.2",
+    "descripcion": "Fractura de la epífisis superior del húmero",
+    "grupo": "Fractura de la epífisis superior del húmero",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.202A",
+    "descripcion": "Fractura húmero proximal NE — inicial",
+    "grupo": "Fractura húmero proximal NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.3",
+    "descripcion": "Fractura de la diáfisis del húmero",
+    "grupo": "Fractura de la diáfisis del húmero",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S42.4",
+    "descripcion": "Fractura de la epífisis inferior del húmero (supracondílea)",
+    "grupo": "Fractura de la epífisis inferior del húmero",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S43.0",
+    "descripcion": "Luxación de la articulación del hombro",
+    "grupo": "Luxación de la articulación del hombro",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S43.4",
+    "descripcion": "Esguince y torcedura de la articulación del hombro",
+    "grupo": "Esguince y torcedura de la articulación del",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S46.0",
+    "descripcion": "Traumatismo del tendón del manguito rotador del hombro",
+    "grupo": "Traumatismo del tendón del manguito rotador",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S49.009A",
+    "descripcion": "Fractura de fisis de húmero (niños) — inicial",
+    "grupo": "Fractura de fisis de húmero",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S50.0",
+    "descripcion": "Contusión del codo",
+    "grupo": "Contusión del codo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.0",
+    "descripcion": "Fractura de la epífisis superior del cúbito (olécranon)",
+    "grupo": "Fractura de la epífisis superior del cúbito",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.2",
+    "descripcion": "Fractura de la diáfisis del cúbito",
+    "grupo": "Fractura de la diáfisis del cúbito",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.3",
+    "descripcion": "Fractura de la diáfisis del radio",
+    "grupo": "Fractura de la diáfisis del radio",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.5",
+    "descripcion": "Fractura de la epífisis inferior del radio (Colles)",
+    "grupo": "Fractura de la epífisis inferior del radio",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.501",
+    "descripcion": "Fractura de la epífisis distal del radio NE",
+    "grupo": "Fractura de la epífisis distal del radio NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.501A",
+    "descripcion": "Fractura radio distal NE — inicial",
+    "grupo": "Fractura radio distal NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.6",
+    "descripcion": "Fractura de la epífisis inferior del cúbito y del radio",
+    "grupo": "Fractura de la epífisis inferior del cúbito y",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S52.601A",
+    "descripcion": "Fractura de cúbito NE — inicial",
+    "grupo": "Fractura de cúbito NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S53.1",
+    "descripcion": "Luxación del codo, no especificada",
+    "grupo": "Luxación del codo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S60.0",
+    "descripcion": "Contusión de dedos de la mano, sin daño de la uña",
+    "grupo": "Contusión de dedos de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S61.0",
+    "descripcion": "Herida de dedos de la mano, sin daño de la uña",
+    "grupo": "Herida de dedos de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S61.9",
+    "descripcion": "Herida de la muñeca y de la mano, parte no especificada",
+    "grupo": "Herida de la muñeca y de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S62.0",
+    "descripcion": "Fractura del hueso escafoides de la mano",
+    "grupo": "Fractura del hueso escafoides de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S62.001",
+    "descripcion": "Fractura del escafoides carpiano NE",
+    "grupo": "Fractura del escafoides carpiano NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S62.009A",
+    "descripcion": "Fractura de escafoides — inicial",
+    "grupo": "Fractura de escafoides",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S62.3",
+    "descripcion": "Fractura de otros huesos metacarpianos",
+    "grupo": "Fractura de otros huesos metacarpianos",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S62.6",
+    "descripcion": "Fractura de dedo de la mano (falanges)",
+    "grupo": "Fractura de dedo de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S63.1",
+    "descripcion": "Luxación de dedo de la mano",
+    "grupo": "Luxación de dedo de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S63.5",
+    "descripcion": "Esguince y torcedura de la muñeca",
+    "grupo": "Esguince y torcedura de la muñeca",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S63.6",
+    "descripcion": "Esguince y torcedura de dedos de la mano",
+    "grupo": "Esguince y torcedura de dedos de la mano",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S70.0",
+    "descripcion": "Contusión de la cadera",
+    "grupo": "Contusión de la cadera",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S72.0",
+    "descripcion": "Fractura del cuello del fémur (fractura de cadera)",
+    "grupo": "Fractura del cuello del fémur",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S72.001",
+    "descripcion": "Fractura del cuello del fémur NE",
+    "grupo": "Fractura del cuello del fémur NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S72.001A",
+    "descripcion": "Fractura de cuello de fémur — inicial",
+    "grupo": "Fractura de cuello de fémur",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S72.1",
+    "descripcion": "Fractura pertrocanteriana del fémur",
+    "grupo": "Fractura pertrocanteriana del fémur",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S72.3",
+    "descripcion": "Fractura de la diáfisis del fémur",
+    "grupo": "Fractura de la diáfisis del fémur",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S80.0",
+    "descripcion": "Contusión de la rodilla",
+    "grupo": "Contusión de la rodilla",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S81.9",
+    "descripcion": "Herida de la pierna, parte no especificada",
+    "grupo": "Herida de la pierna",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.0",
+    "descripcion": "Fractura de la rótula",
+    "grupo": "Fractura de la rótula",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.001",
+    "descripcion": "Fractura de rótula NE",
+    "grupo": "Fractura de rótula NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.001A",
+    "descripcion": "Fractura de rótula — inicial",
+    "grupo": "Fractura de rótula",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.1",
+    "descripcion": "Fractura de la epífisis superior de la tibia",
+    "grupo": "Fractura de la epífisis superior de la tibia",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.2",
+    "descripcion": "Fractura de la diáfisis de la tibia",
+    "grupo": "Fractura de la diáfisis de la tibia",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.201",
+    "descripcion": "Fractura de la diáfisis tibial NE",
+    "grupo": "Fractura de la diáfisis tibial NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.201A",
+    "descripcion": "Fractura de tibia — inicial",
+    "grupo": "Fractura de tibia",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.4",
+    "descripcion": "Fractura del peroné solamente",
+    "grupo": "Fractura del peroné solamente",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.401A",
+    "descripcion": "Fractura de peroné — inicial",
+    "grupo": "Fractura de peroné",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.5",
+    "descripcion": "Fractura del maléolo interno (tobillo)",
+    "grupo": "Fractura del maléolo interno",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S82.6",
+    "descripcion": "Fractura del maléolo externo (tobillo)",
+    "grupo": "Fractura del maléolo externo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S83.0",
+    "descripcion": "Luxación de la rótula",
+    "grupo": "Luxación de la rótula",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S83.2",
+    "descripcion": "Desgarro reciente de menisco de la rodilla",
+    "grupo": "Desgarro reciente de menisco de la rodilla",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S83.4",
+    "descripcion": "Esguince de ligamentos laterales de la rodilla",
+    "grupo": "Esguince de ligamentos laterales de la rodilla",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S83.5",
+    "descripcion": "Esguince que compromete ligamento cruzado de la rodilla",
+    "grupo": "Esguince que compromete ligamento cruzado de",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S86.0",
+    "descripcion": "Traumatismo del tendón de Aquiles (ruptura)",
+    "grupo": "Traumatismo del tendón de Aquiles",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S86.011A",
+    "descripcion": "Desgarro del tendón de Aquiles — inicial",
+    "grupo": "Desgarro del tendón de Aquiles",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S90.0",
+    "descripcion": "Contusión del tobillo",
+    "grupo": "Contusión del tobillo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S91.3",
+    "descripcion": "Herida de otras partes del pie",
+    "grupo": "Herida de otras partes del pie",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S92.0",
+    "descripcion": "Fractura del calcáneo",
+    "grupo": "Fractura del calcáneo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S92.3",
+    "descripcion": "Fractura de hueso del metatarso",
+    "grupo": "Fractura de hueso del metatarso",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S93.0",
+    "descripcion": "Luxación de la articulación del tobillo",
+    "grupo": "Luxación de la articulación del tobillo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S93.4",
+    "descripcion": "Esguince y torcedura del tobillo",
+    "grupo": "Esguince y torcedura del tobillo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S93.401",
+    "descripcion": "Esguince del tobillo NE",
+    "grupo": "Esguince del tobillo NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S93.401A",
+    "descripcion": "Esguince de tobillo — ligamento peroneo-astragalino anterior, inicial",
+    "grupo": "Esguince de tobillo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "S93.499A",
+    "descripcion": "Esguince de tobillo NE — inicial",
+    "grupo": "Esguince de tobillo NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T07",
+    "descripcion": "Traumatismos múltiples no especificados",
+    "grupo": "Traumatismos múltiples",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T14.1",
+    "descripcion": "Herida de región no especificada del cuerpo (mordedura)",
+    "grupo": "Herida de región del cuerpo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T14.90",
+    "descripcion": "Herida NE — no especificada",
+    "grupo": "Herida NE",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T15.0",
+    "descripcion": "Cuerpo extraño en la córnea",
+    "grupo": "Cuerpo extraño en la córnea",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T16",
+    "descripcion": "Cuerpo extraño en el oído",
+    "grupo": "Cuerpo extraño en el oído",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T17.1",
+    "descripcion": "Cuerpo extraño en el orificio nasal",
+    "grupo": "Cuerpo extraño en el orificio nasal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T17.9",
+    "descripcion": "Cuerpo extraño en vías respiratorias, parte no especificada",
+    "grupo": "Cuerpo extraño en vías respiratorias",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T18.1",
+    "descripcion": "Cuerpo extraño en el esófago",
+    "grupo": "Cuerpo extraño en el esófago",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T18.9",
+    "descripcion": "Cuerpo extraño en tubo digestivo, parte no especificada",
+    "grupo": "Cuerpo extraño en tubo digestivo",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T20.1",
+    "descripcion": "Quemadura de primer grado de la cabeza y del cuello",
+    "grupo": "Quemadura de primer grado de la cabeza y del",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T20.2",
+    "descripcion": "Quemadura de segundo grado de la cabeza y del cuello",
+    "grupo": "Quemadura de segundo grado de la cabeza y del",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T21.1",
+    "descripcion": "Quemadura de primer grado del tronco",
+    "grupo": "Quemadura de primer grado del tronco",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T21.2",
+    "descripcion": "Quemadura de segundo grado del tronco",
+    "grupo": "Quemadura de segundo grado del tronco",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T22.2",
+    "descripcion": "Quemadura de segundo grado de hombro y miembro superior",
+    "grupo": "Quemadura de segundo grado de hombro y",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T23.1",
+    "descripcion": "Quemadura de primer grado de la muñeca y de la mano",
+    "grupo": "Quemadura de primer grado de la muñeca y de",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T23.2",
+    "descripcion": "Quemadura de segundo grado de la muñeca y de la mano",
+    "grupo": "Quemadura de segundo grado de la muñeca y de",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T24.2",
+    "descripcion": "Quemadura de segundo grado de cadera y miembro inferior",
+    "grupo": "Quemadura de segundo grado de cadera y",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T25.2",
+    "descripcion": "Quemadura de segundo grado del tobillo y del pie",
+    "grupo": "Quemadura de segundo grado del tobillo y del",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T30.0",
+    "descripcion": "Quemadura de región del cuerpo y grado no especificados",
+    "grupo": "Quemadura de región del cuerpo y grado",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T33.9",
+    "descripcion": "Congelamiento superficial, sitio no especificado",
+    "grupo": "Congelamiento superficial",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T39.1",
+    "descripcion": "Envenenamiento por derivados del 4-aminofenol (paracetamol)",
+    "grupo": "Envenenamiento por derivados del 4-aminofenol",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T39.3",
+    "descripcion": "Envenenamiento por antiinflamatorios no esteroideos (AINE)",
+    "grupo": "Envenenamiento por antiinflamatorios no",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T42.4",
+    "descripcion": "Envenenamiento por benzodiazepinas",
+    "grupo": "Envenenamiento por benzodiazepinas",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T43.0",
+    "descripcion": "Envenenamiento por antidepresivos tricíclicos",
+    "grupo": "Envenenamiento por antidepresivos tricíclicos",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T51.0",
+    "descripcion": "Efecto tóxico del etanol (intoxicación alcohólica)",
+    "grupo": "Efecto tóxico del etanol",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T58",
+    "descripcion": "Efecto tóxico del monóxido de carbono",
+    "grupo": "Efecto tóxico del monóxido de carbono",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T60.0",
+    "descripcion": "Efecto tóxico de plaguicidas organofosforados y carbamatos",
+    "grupo": "Efecto tóxico de plaguicidas organofosforados",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T62.9",
+    "descripcion": "Efecto tóxico de sustancia nociva ingerida como alimento",
+    "grupo": "Efecto tóxico de sustancia nociva ingerida",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T63.0",
+    "descripcion": "Efecto tóxico del veneno de serpiente",
+    "grupo": "Efecto tóxico del veneno de serpiente",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T63.2",
+    "descripcion": "Efecto tóxico del veneno de escorpión",
+    "grupo": "Efecto tóxico del veneno de escorpión",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T63.3",
+    "descripcion": "Efecto tóxico del veneno de arañas (loxoscelismo)",
+    "grupo": "Efecto tóxico del veneno de arañas",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T67.0",
+    "descripcion": "Golpe de calor e insolación",
+    "grupo": "Golpe de calor e insolación",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T74.1",
+    "descripcion": "Abuso físico (síndrome de maltrato)",
+    "grupo": "Abuso físico",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T75.1",
+    "descripcion": "Ahogamiento y sumersión no mortal",
+    "grupo": "Ahogamiento y sumersión no mortal",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T78.0",
+    "descripcion": "Choque anafiláctico debido a reacción adversa a alimentos",
+    "grupo": "Choque anafiláctico debido a reacción adversa",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T78.2",
+    "descripcion": "Choque anafiláctico, no especificado",
+    "grupo": "Choque anafiláctico",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T78.3",
+    "descripcion": "Edema angioneurótico (angioedema)",
+    "grupo": "Edema angioneurótico",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T78.4",
+    "descripcion": "Alergia no especificada",
+    "grupo": "Alergia",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "T88.6",
+    "descripcion": "Choque anafiláctico por medicamento correctamente administrado",
+    "grupo": "Choque anafiláctico por medicamento",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T88.7",
+    "descripcion": "Efecto adverso no especificado de droga o medicamento",
+    "grupo": "Efecto adverso de droga o medicamento",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T90.5",
+    "descripcion": "Secuelas de traumatismo intracraneal",
+    "grupo": "Secuelas de traumatismo intracraneal",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T92.1",
+    "descripcion": "Secuelas de fractura del brazo",
+    "grupo": "Secuelas de fractura del brazo",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "traumático",
+    "severidad": ""
+  },
+  {
+    "codigo": "T93.2",
+    "descripcion": "Secuelas de otras fracturas del miembro inferior",
+    "grupo": "Secuelas de otras fracturas del miembro",
+    "sistema": "Traumatismos",
+    "tipo": "crónico",
+    "subtipo": "traumático",
+    "severidad": ""
   }
 ];
 
