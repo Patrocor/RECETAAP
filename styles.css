@@ -435,11 +435,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .desk-lock {
+  display: grid;
+  grid-template-rows: minmax(28px, 1fr) auto auto minmax(28px, 1fr);
+  justify-items: stretch;
+  align-items: center;
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
-  gap: 0;
+  gap: clamp(14px, 3.2vh, 40px) 0;
+  background: #f4f7fb;
 }
 
 .desk-lock > * { animation: none; }
@@ -449,14 +454,48 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin: 0 auto;
 }
 
+.desk-lock .desk-hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
 .desk-lock .desk-hero {
-  flex: 1 1 0;
+  grid-row: 2;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  width: 100%;
   min-height: 0;
   margin: 0;
-  padding: calc(16px + env(safe-area-inset-top)) 0 28px;
+  padding: 0 0 8px;
+  background: transparent;
+  color: white;
+}
+
+.desk-lock .desk-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: -100dvh;
+  bottom: 0;
+  background: #123652;
+}
+
+.desk-lock .desk-hero::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 42vh;
+  pointer-events: none;
+  background: radial-gradient(78% 100% at 100% 0%, rgba(215, 228, 240, 0.34), transparent 70%);
 }
 
 .desk-panel {
@@ -470,9 +509,46 @@ button, input, select, textarea { font: inherit; color: inherit; }
   padding: 8px 0 4px;
 }
 
+.desk-lock .desk-panel {
+  grid-row: 3;
+  position: relative;
+  z-index: 1;
+  flex: none;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  padding: 0 0 calc(4px + env(safe-area-inset-bottom));
+}
+
 .desk-lock .desk-card {
   width: min(440px, calc(100% - 40px));
-  margin: 0;
+  margin: 0 auto;
+  padding: clamp(20px, 4.2vh, 44px) clamp(22px, 3vh, 40px);
+}
+
+.desk-lock .desk-card.stack {
+  gap: clamp(12px, 2.2vh, 24px);
+}
+
+.desk-lock .desk-mark {
+  justify-content: center;
+  margin-bottom: clamp(14px, 3vh, 36px);
+}
+
+.desk-lock .desk-name {
+  font-size: clamp(34px, 6.4vh, 64px);
+}
+
+.desk-lock .logo {
+  width: clamp(52px, 11vh, 104px);
+  height: auto;
+  aspect-ratio: 171 / 136;
+}
+
+.desk-lock .btn {
+  width: 100%;
+  min-height: clamp(52px, 7.5vh, 64px);
+  margin-top: 2px;
 }
 
 .desk-lock .logo {
@@ -527,15 +603,15 @@ svg.logo {
 }
 
 .desk-lock input {
-  min-height: 48px;
-  padding: 12px 14px;
+  min-height: clamp(48px, 7vh, 64px);
+  padding: 12px 16px;
   font-size: 16px;
 }
 
 @keyframes logo-story {
-  0% { opacity: 0; transform: translateY(10vh) scale(0.84); }
-  28% { opacity: 1; transform: translateY(10vh) scale(1.9); }
-  68% { opacity: 1; transform: translateY(10vh) scale(1.9); }
+  0% { opacity: 0; transform: translateY(6vh) scale(0.84); }
+  28% { opacity: 1; transform: translateY(6vh) scale(1.85); }
+  68% { opacity: 1; transform: translateY(6vh) scale(1.85); }
   100% { opacity: 1; transform: none; }
 }
 
@@ -553,15 +629,25 @@ svg.logo {
 
 @media (max-height: 700px) {
   .desk-name { font-size: 28px; }
-  .desk-lock .desk-hero { padding-bottom: 18px; }
-  .desk-mark { margin-bottom: 16px; }
+  .desk-lock { gap: 12px 0; }
+  .desk-lock .desk-name { font-size: 32px; }
+  .desk-lock .desk-hero { padding-bottom: 8px; }
+  .desk-lock .logo { width: 48px; height: 38px; }
+  .desk-lock .desk-card { padding: 16px; }
+  .desk-lock .desk-card.stack { gap: 10px; }
+  .desk-lock input,
+  .desk-lock .btn { min-height: 48px; }
+  .desk-mark { margin-bottom: 12px; }
 }
 
 @media (min-width: 840px) {
   .desk-hero-inner,
-  .desk-lock .desk-card,
+  .desk-lock .desk-card {
+    width: min(560px, calc(100% - 96px));
+  }
+
   .shell-desk .btn {
-    width: min(460px, calc(100% - 64px));
+    width: min(520px, calc(100% - 80px));
   }
 }
 
@@ -599,6 +685,10 @@ svg.logo {
   min-height: 48px;
   border-radius: 16px;
   background: #123652;
+}
+
+.shell-desk .desk-lock .btn {
+  width: 100%;
 }
 
 .screen h2 {

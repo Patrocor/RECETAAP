@@ -409,11 +409,7 @@ function footer() {
       }, [agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF")]),
     ]);
   }
-  if (screen === "login") {
-    return el("footer", { class: "footer" }, [
-      el("button", { type: "button", class: "btn", disabled: busy, onclick: enviarLogin }, [busy ? "Ingresando…" : "Ingresar"]),
-    ]);
-  }
+  if (screen === "login") return null;
   let label = "Continuar";
   let action = next;
   if (screen === "perfil") {
@@ -585,6 +581,12 @@ function viewLogin() {
         errorSlot(),
         el("label", { class: "field", text: "Usuario" }, [usuario]),
         el("label", { class: "field", text: "Contraseña" }, [clave]),
+        el("button", {
+          type: "button",
+          class: "btn",
+          disabled: busy,
+          onclick: enviarLogin,
+        }, [busy ? "Ingresando…" : "Ingresar"]),
       ]),
     ]),
   ]);
