@@ -16,7 +16,10 @@ export function unidadDe(presentacion) {
   const texto = String(presentacion || "").toLowerCase();
   const directa = UNIDADES.find((unidad) => texto.includes(unidad));
   if (directa) return directa;
-  if (/jarabe|suspensi[oó]n|soluci[oó]n|elixir/.test(texto)) return "dosis";
+  if (/ampolla/.test(texto)) return "ampollas";
+  if (/jeringa/.test(texto)) return "jeringas";
+  if (/\bvial\b/.test(texto)) return "viales";
+  if (/jarabe|suspensi[oó]n|soluci[oó]n|elixir|sobre/.test(texto)) return "dosis";
   return "unidades";
 }
 

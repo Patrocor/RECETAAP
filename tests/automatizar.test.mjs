@@ -19,6 +19,8 @@ test("la cantidad sale de frecuencia, duración y presentación", () => {
   assert.equal(unidadDe("10 mg/ml gotas"), "gotas");
   assert.equal(calcularCantidad("250 mg/5 mL jarabe", "Cada 8 horas", "5"), "15 dosis");
   assert.equal(unidadDe("125 mg supositorios"), "supositorios");
+  assert.equal(unidadDe("75 mg/3 mL ampolla IM"), "ampollas");
+  assert.equal(calcularCantidad("75 mg/3 mL ampolla IM", "Cada 24 horas", "3"), "3 ampollas");
 });
 
 test("la dosis de referencia usa el catálogo", () => {

@@ -34374,6 +34374,1175 @@ export const medicamentosData = [
       "Bacitrigent",
       "Neo-Polibac"
     ]
+  },
+  {
+    "dci": "Diclofenaco sódico",
+    "presentacion": "100 mg tabletas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "AINE — liberación prolongada",
+    "marcas": [
+      "Voltaren Retard",
+      "Diclofenaco LP",
+      "Artren Retard"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Diclofenaco sódico",
+    "presentacion": "100 mg supositorio",
+    "via": "Vía rectal",
+    "grupo": "AINE rectal",
+    "marcas": [
+      "Voltaren supositorio",
+      "Diclofenaco supositorio"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Diclofenaco sódico",
+    "presentacion": "75 mg/3 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "AINE inyectable",
+    "marcas": [
+      "Voltaren IV",
+      "Diclofenaco IV",
+      "Difenac IV"
+    ],
+    "dosisMg": 75
+  },
+  {
+    "dci": "Diclofenaco oftálmico",
+    "presentacion": "0.1% colirio 5 mL",
+    "via": "Vía oftálmica",
+    "grupo": "AINE oftálmico",
+    "marcas": [
+      "Voltaren oftálmico",
+      "Diclofenaco colirio"
+    ]
+  },
+  {
+    "dci": "Diclofenaco + Complejo B",
+    "presentacion": "75 mg/3 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "AINE inyectable con vitaminas",
+    "marcas": [
+      "Doloneurobión",
+      "Diclofenaco B",
+      "Sodix B"
+    ],
+    "dosisMg": 75
+  },
+  {
+    "dci": "Diclofenaco + Paracetamol",
+    "presentacion": "50/500 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "AINE + analgésico",
+    "marcas": [
+      "Dolo-Neurobión oral",
+      "Diclofenaco/Paracetamol"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Ketoprofeno",
+    "presentacion": "100 mg/2 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "AINE inyectable",
+    "marcas": [
+      "Profenid IM",
+      "Ketoprofeno IM",
+      "Orudis IM"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Ketoprofeno",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "AINE — dosis baja",
+    "marcas": [
+      "Profenid 50",
+      "Ketoprofeno 50"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Ketoprofeno",
+    "presentacion": "200 mg cápsulas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "AINE — liberación prolongada",
+    "marcas": [
+      "Profenid LP",
+      "Ketoprofeno LP"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Piroxicam",
+    "presentacion": "20 mg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "AINE inyectable",
+    "marcas": [
+      "Feldene IM",
+      "Piroxicam IM"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Clonixinato de lisina",
+    "presentacion": "125 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Analgésico antiinflamatorio",
+    "marcas": [
+      "Dorixina",
+      "Clonixinato"
+    ],
+    "dosisMg": 125
+  },
+  {
+    "dci": "Clonixinato de lisina",
+    "presentacion": "100 mg/2 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Analgésico inyectable",
+    "marcas": [
+      "Dorixina IM",
+      "Clonixinato IM"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Parecoxib",
+    "presentacion": "40 mg polvo IV/IM",
+    "via": "Vía intravenosa",
+    "grupo": "AINE inyectable COX-2",
+    "marcas": [
+      "Dynastat",
+      "Parecoxib"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Ketorolaco",
+    "presentacion": "60 mg/2 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "AINE potente inyectable",
+    "marcas": [
+      "Dolac 60",
+      "Ketorolaco 60",
+      "Toradol 60"
+    ],
+    "dosisMg": 60
+  },
+  {
+    "dci": "Ketorolaco oftálmico",
+    "presentacion": "0.5% colirio 5 mL",
+    "via": "Vía oftálmica",
+    "grupo": "AINE oftálmico",
+    "marcas": [
+      "Acular",
+      "Ketorolaco colirio"
+    ]
+  },
+  {
+    "dci": "Naproxeno",
+    "presentacion": "125 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "AINE suspensión",
+    "marcas": [
+      "Naprosyn suspensión",
+      "Naproxeno jarabe"
+    ]
+  },
+  {
+    "dci": "Ibuprofeno",
+    "presentacion": "200 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "AINE — dosis baja",
+    "marcas": [
+      "Motrin 200",
+      "Ibuprofeno 200",
+      "Advil"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Metamizol sódico",
+    "presentacion": "500 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Analgésico en gotas",
+    "marcas": [
+      "Novalgina gotas",
+      "Dipirona gotas",
+      "Metamizol gotas"
+    ]
+  },
+  {
+    "dci": "Tramadol",
+    "presentacion": "50 mg/1 mL ampolla IV/IM",
+    "via": "Vía intravenosa",
+    "grupo": "Analgésico opioide inyectable",
+    "marcas": [
+      "Tramal 50",
+      "Tramadol amp"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Clorfenamina",
+    "presentacion": "10 mg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Antihistamínico inyectable",
+    "marcas": [
+      "Cloro-Trimeton IM",
+      "Clorfenamina amp"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Clorfenamina",
+    "presentacion": "2.5 mg/5 mL jarabe",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico jarabe",
+    "marcas": [
+      "Cloro-Trimeton jarabe",
+      "Clorfenamina jarabe"
+    ]
+  },
+  {
+    "dci": "Dimenhidrinato",
+    "presentacion": "50 mg/mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Antiemético inyectable",
+    "marcas": [
+      "Dramamine IM",
+      "Dimenhidrinato amp"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Dexametasona",
+    "presentacion": "8 mg/2 mL ampolla IV/IM",
+    "via": "Vía intramuscular",
+    "grupo": "Corticoide inyectable",
+    "marcas": [
+      "Decadrón 8",
+      "Dexametasona 8 mg"
+    ],
+    "dosisMg": 8
+  },
+  {
+    "dci": "Metilprednisolona",
+    "presentacion": "125 mg polvo IV",
+    "via": "Vía intravenosa",
+    "grupo": "Corticoide inyectable",
+    "marcas": [
+      "Solu-Medrol 125",
+      "Metilprednisolona 125"
+    ],
+    "dosisMg": 125
+  },
+  {
+    "dci": "Prednisolona",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Prednisolona 5"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Prednisolona",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Prednisolona 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Gentamicina",
+    "presentacion": "80 mg/2 mL ampolla IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Aminoglucósido inyectable",
+    "marcas": [
+      "Gentamicina 80",
+      "Garamicina 80"
+    ],
+    "dosisMg": 80
+  },
+  {
+    "dci": "Ampicilina",
+    "presentacion": "1 g polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Penicilina inyectable",
+    "marcas": [
+      "Ampicilina 1 g",
+      "Pentrexyl IM"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Penicilina G sódica",
+    "presentacion": "1,000,000 UI polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Penicilina cristalina",
+    "marcas": [
+      "Penicilina cristalina",
+      "Penicilina G"
+    ]
+  },
+  {
+    "dci": "Penicilina benzatínica",
+    "presentacion": "1,200,000 UI polvo IM",
+    "via": "Vía intramuscular",
+    "grupo": "Penicilina de depósito",
+    "marcas": [
+      "Benzetacil 1.2",
+      "Penicilina benzatínica"
+    ]
+  },
+  {
+    "dci": "Lincomicina",
+    "presentacion": "600 mg/2 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Antibiótico inyectable",
+    "marcas": [
+      "Lincocin",
+      "Lincomicina IM"
+    ],
+    "dosisMg": 600
+  },
+  {
+    "dci": "Dicloxacilina",
+    "presentacion": "250 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Penicilina antiestafilocócica",
+    "marcas": [
+      "Dicloxacilina 250"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Dicloxacilina",
+    "presentacion": "125 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Penicilina antiestafilocócica",
+    "marcas": [
+      "Dicloxacilina suspensión"
+    ]
+  },
+  {
+    "dci": "Vancomicina",
+    "presentacion": "1 g polvo IV",
+    "via": "Vía intravenosa",
+    "grupo": "Antibiótico glucopéptido",
+    "marcas": [
+      "Vancomicina 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Meropenem",
+    "presentacion": "500 mg polvo IV",
+    "via": "Vía intravenosa",
+    "grupo": "Carbapenémico",
+    "marcas": [
+      "Meropenem 500"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Ambroxol",
+    "presentacion": "15 mg/2 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Mucolítico inyectable",
+    "marcas": [
+      "Mucosolvan IM",
+      "Ambroxol amp"
+    ],
+    "dosisMg": 15
+  },
+  {
+    "dci": "Ambroxol",
+    "presentacion": "7.5 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Mucolítico en gotas",
+    "marcas": [
+      "Mucosolvan gotas",
+      "Ambroxol gotas"
+    ]
+  },
+  {
+    "dci": "Acetilcisteína",
+    "presentacion": "300 mg/3 mL ampolla para nebulización",
+    "via": "Inhalatoria",
+    "grupo": "Mucolítico nebulizado",
+    "marcas": [
+      "Fluimucil nebulización",
+      "Acetilcisteína neb"
+    ],
+    "dosisMg": 300
+  },
+  {
+    "dci": "Ipratropio",
+    "presentacion": "0.25 mg/mL solución para nebulización",
+    "via": "Inhalatoria",
+    "grupo": "Broncodilatador nebulizado",
+    "marcas": [
+      "Atrovent nebulización",
+      "Ipratropio neb"
+    ]
+  },
+  {
+    "dci": "Bromhexina",
+    "presentacion": "8 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Mucolítico",
+    "marcas": [
+      "Bisolvon",
+      "Bromhexina"
+    ],
+    "dosisMg": 8
+  },
+  {
+    "dci": "Bromhexina",
+    "presentacion": "4 mg/5 mL jarabe",
+    "via": "Vía oral",
+    "grupo": "Mucolítico jarabe",
+    "marcas": [
+      "Bisolvon jarabe",
+      "Bromhexina jarabe"
+    ]
+  },
+  {
+    "dci": "Captopril",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "IECA",
+    "marcas": [
+      "Capoten 25",
+      "Captopril"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Captopril",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "IECA",
+    "marcas": [
+      "Capoten 50",
+      "Captopril 50"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Indapamida",
+    "presentacion": "1.5 mg tabletas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Diurético tipo tiazida",
+    "marcas": [
+      "Natrilex",
+      "Indapamida"
+    ],
+    "dosisMg": 1.5
+  },
+  {
+    "dci": "Losartán",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARA-II — dosis baja",
+    "marcas": [
+      "Cozaar 25",
+      "Losartán 25"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Dinitrato de isosorbide",
+    "presentacion": "5 mg tabletas sublinguales",
+    "via": "Vía sublingual",
+    "grupo": "Nitrato antianginoso",
+    "marcas": [
+      "Isordil 5",
+      "Isosorbide sublingual"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Dinitrato de isosorbide",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Nitrato antianginoso",
+    "marcas": [
+      "Isordil 10",
+      "Isosorbide 10"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Sucralfato",
+    "presentacion": "1 g tabletas",
+    "via": "Vía oral",
+    "grupo": "Protector de mucosa gástrica",
+    "marcas": [
+      "Sucralfato",
+      "Ulsanic"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Ranitidina",
+    "presentacion": "150 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anti-H2",
+    "marcas": [
+      "Zantac 150",
+      "Ranitidina 150"
+    ],
+    "dosisMg": 150
+  },
+  {
+    "dci": "Ranitidina",
+    "presentacion": "300 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anti-H2",
+    "marcas": [
+      "Zantac 300",
+      "Ranitidina 300"
+    ],
+    "dosisMg": 300
+  },
+  {
+    "dci": "Permetrina",
+    "presentacion": "5% crema tópica",
+    "via": "Vía tópica",
+    "grupo": "Escabicida",
+    "marcas": [
+      "Permetrina 5%",
+      "Elimite"
+    ]
+  },
+  {
+    "dci": "Permetrina",
+    "presentacion": "1% loción",
+    "via": "Vía tópica",
+    "grupo": "Pediculicida",
+    "marcas": [
+      "Permetrina 1%",
+      "Nix"
+    ]
+  },
+  {
+    "dci": "Petidina",
+    "presentacion": "100 mg/2 mL ampolla IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Analgésico opioide inyectable",
+    "marcas": [
+      "Petidina",
+      "Meperidina"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Nalbufina",
+    "presentacion": "10 mg/mL ampolla IV/IM",
+    "via": "Vía intravenosa",
+    "grupo": "Analgésico opioide inyectable",
+    "marcas": [
+      "Nubain",
+      "Nalbufina"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Sales de rehidratación oral",
+    "presentacion": "sobre para 1 L",
+    "via": "Vía oral",
+    "grupo": "Rehidratación",
+    "marcas": [
+      "SRO",
+      "Electrolitos orales OMS"
+    ]
+  },
+  {
+    "dci": "Vitamina C",
+    "presentacion": "1 g tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitamina",
+    "marcas": [
+      "Redoxon",
+      "Vitamina C 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Levotiroxina",
+    "presentacion": "75 mcg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hormona tiroidea",
+    "marcas": [
+      "Eutirox 75",
+      "Levotiroxina 75"
+    ]
+  },
+  {
+    "dci": "Clonazepam",
+    "presentacion": "1 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Benzodiazepina",
+    "marcas": [
+      "Rivotril 1",
+      "Clonazepam 1"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Ceftriaxona",
+    "presentacion": "500 mg polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Cefalosporina inyectable",
+    "marcas": [
+      "Rocephin 500",
+      "Ceftriaxona 500"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Cefazolina",
+    "presentacion": "1 g polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Cefalosporina inyectable",
+    "marcas": [
+      "Cefazolina 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Oxacilina",
+    "presentacion": "1 g polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Penicilina antiestafilocócica inyectable",
+    "marcas": [
+      "Oxacilina 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Metronidazol",
+    "presentacion": "250 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Nitroimidazol",
+    "marcas": [
+      "Flagyl 250",
+      "Metronidazol 250"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Fluconazol",
+    "presentacion": "50 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Antifúngico",
+    "marcas": [
+      "Diflucan 50",
+      "Fluconazol 50"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Aciclovir",
+    "presentacion": "200 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiviral",
+    "marcas": [
+      "Zovirax 200",
+      "Aciclovir 200"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Esomeprazol",
+    "presentacion": "40 mg polvo IV",
+    "via": "Vía intravenosa",
+    "grupo": "IBP inyectable",
+    "marcas": [
+      "Nexium IV",
+      "Esomeprazol IV"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Omeprazol",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "IBP",
+    "marcas": [
+      "Omeprazol 20 tabletas",
+      "Losec"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Paracetamol",
+    "presentacion": "1 g/100 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Analgésico IV",
+    "marcas": [
+      "Paracetamol 1 g IV",
+      "Perfalgan 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Paracetamol",
+    "presentacion": "250 mg supositorios",
+    "via": "Vía rectal",
+    "grupo": "Analgésico rectal",
+    "marcas": [
+      "Paracetamol supositorio"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Ibuprofeno",
+    "presentacion": "400 mg/100 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "AINE inyectable",
+    "marcas": [
+      "Ibuprofeno IV"
+    ],
+    "dosisMg": 400
+  },
+  {
+    "dci": "Dexketoprofeno",
+    "presentacion": "25 mg solución oral en sobre",
+    "via": "Vía oral",
+    "grupo": "AINE — solución oral",
+    "marcas": [
+      "Enantyum sobre",
+      "Dexketoprofeno sobre"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Meloxicam",
+    "presentacion": "7.5 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "AINE suspensión",
+    "marcas": [
+      "Mobic suspensión"
+    ]
+  },
+  {
+    "dci": "Betametasona",
+    "presentacion": "0.5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Celestone oral",
+      "Betametasona 0.5"
+    ],
+    "dosisMg": 0.5
+  },
+  {
+    "dci": "Hidrocortisona",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Hidrocortisona 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Furosemida",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Diurético de asa",
+    "marcas": [
+      "Lasix 20",
+      "Furosemida 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Digoxina",
+    "presentacion": "0.5 mg/2 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Glucósido cardíaco inyectable",
+    "marcas": [
+      "Lanoxin IV"
+    ],
+    "dosisMg": 0.5
+  },
+  {
+    "dci": "Heparina sódica",
+    "presentacion": "5000 UI/mL ampolla IV/SC",
+    "via": "Vía subcutánea",
+    "grupo": "Anticoagulante inyectable",
+    "marcas": [
+      "Heparina 5000"
+    ]
+  },
+  {
+    "dci": "Enoxaparina",
+    "presentacion": "100 mg/1 mL jeringa SC",
+    "via": "Vía subcutánea",
+    "grupo": "Heparina de bajo peso molecular",
+    "marcas": [
+      "Clexane 100",
+      "Enoxaparina 100"
+    ]
+  },
+  {
+    "dci": "Insulina NPH",
+    "presentacion": "100 UI/mL pluma SC",
+    "via": "Vía subcutánea",
+    "grupo": "Insulina intermedia",
+    "marcas": [
+      "Insulatard pluma",
+      "Humulin N pluma"
+    ]
+  },
+  {
+    "dci": "Salbutamol",
+    "presentacion": "2.5 mg/2.5 mL solución para nebulización",
+    "via": "Inhalatoria",
+    "grupo": "Broncodilatador nebulizado",
+    "marcas": [
+      "Ventolin nebulización",
+      "Salbutamol neb"
+    ]
+  },
+  {
+    "dci": "Budesonida",
+    "presentacion": "0.5 mg/2 mL suspensión para nebulización",
+    "via": "Inhalatoria",
+    "grupo": "Corticoide nebulizado",
+    "marcas": [
+      "Pulmicort neb",
+      "Budesonida 0.5"
+    ]
+  },
+  {
+    "dci": "Loratadina",
+    "presentacion": "1 mg/mL jarabe",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico jarabe",
+    "marcas": [
+      "Clarityne jarabe",
+      "Loratadina jarabe"
+    ]
+  },
+  {
+    "dci": "Cetirizina",
+    "presentacion": "10 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico en gotas",
+    "marcas": [
+      "Zyrtec gotas",
+      "Cetirizina gotas"
+    ]
+  },
+  {
+    "dci": "Ácido fólico",
+    "presentacion": "0.4 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitamina prenatal",
+    "marcas": [
+      "Ácido fólico 0.4"
+    ],
+    "dosisMg": 0.4
+  },
+  {
+    "dci": "Sulfato ferroso",
+    "presentacion": "125 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Hierro en gotas",
+    "marcas": [
+      "Sulfato ferroso gotas"
+    ]
+  },
+  {
+    "dci": "Calcio carbonato",
+    "presentacion": "500 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Calcio",
+    "marcas": [
+      "Calcio 500"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Vitamina D3",
+    "presentacion": "800 UI tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitamina D",
+    "marcas": [
+      "Vitamina D 800"
+    ],
+    "dosisMg": 800
+  },
+  {
+    "dci": "Albendazol",
+    "presentacion": "200 mg tabletas masticables",
+    "via": "Vía oral",
+    "grupo": "Antihelmíntico",
+    "marcas": [
+      "Zentel 200"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Ivermectina",
+    "presentacion": "3 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiparasitario",
+    "marcas": [
+      "Ivermectina 3"
+    ],
+    "dosisMg": 3
+  },
+  {
+    "dci": "Amoxicilina",
+    "presentacion": "1 g tabletas",
+    "via": "Vía oral",
+    "grupo": "Penicilina",
+    "marcas": [
+      "Amoxicilina 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Amoxicilina + Clavulanato",
+    "presentacion": "1 g/125 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Penicilina con inhibidor",
+    "marcas": [
+      "Augmentin 1 g",
+      "Clavulin 1 g"
+    ]
+  },
+  {
+    "dci": "Ciprofloxacino",
+    "presentacion": "750 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Fluoroquinolona",
+    "marcas": [
+      "Ciproxina 750",
+      "Ciprofloxacino 750"
+    ],
+    "dosisMg": 750
+  },
+  {
+    "dci": "Claritromicina",
+    "presentacion": "500 mg tabletas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Macrólido de liberación prolongada",
+    "marcas": [
+      "Klacid OD",
+      "Claritromicina LP"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Nitrofurantoína",
+    "presentacion": "100 mg cápsulas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Urinario",
+    "marcas": [
+      "Macrodantina",
+      "Nitrofurantoína LP"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Fosfomicina",
+    "presentacion": "3 g sobre",
+    "via": "Vía oral",
+    "grupo": "Urinario dosis única",
+    "marcas": [
+      "Monurol",
+      "Fosfomicina 3 g"
+    ],
+    "dosisMg": 3000
+  },
+  {
+    "dci": "Clotrimazol",
+    "presentacion": "500 mg óvulo vaginal",
+    "via": "Vía vaginal",
+    "grupo": "Antifúngico vaginal",
+    "marcas": [
+      "Canesten óvulo",
+      "Clotrimazol 500"
+    ]
+  },
+  {
+    "dci": "Aciclovir",
+    "presentacion": "800 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiviral",
+    "marcas": [
+      "Zovirax 800",
+      "Aciclovir 800"
+    ],
+    "dosisMg": 800
+  },
+  {
+    "dci": "Oseltamivir",
+    "presentacion": "12 mg/mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Antiviral influenza",
+    "marcas": [
+      "Tamiflu suspensión"
+    ]
+  },
+  {
+    "dci": "Sertralina",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ISRS — dosis de inicio",
+    "marcas": [
+      "Zoloft 25",
+      "Sertralina 25"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Risperidona",
+    "presentacion": "1 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antipsicótico",
+    "marcas": [
+      "Risperdal 1",
+      "Risperidona 1"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Risperidona",
+    "presentacion": "1 mg/mL solución oral",
+    "via": "Vía oral",
+    "grupo": "Antipsicótico solución",
+    "marcas": [
+      "Risperdal solución"
+    ]
+  },
+  {
+    "dci": "Haloperidol",
+    "presentacion": "2 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Antipsicótico en gotas",
+    "marcas": [
+      "Haldol gotas"
+    ]
+  },
+  {
+    "dci": "Levotiroxina",
+    "presentacion": "88 mcg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hormona tiroidea",
+    "marcas": [
+      "Eutirox 88"
+    ]
+  },
+  {
+    "dci": "Levotiroxina",
+    "presentacion": "112 mcg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hormona tiroidea",
+    "marcas": [
+      "Eutirox 112"
+    ]
+  },
+  {
+    "dci": "Empagliflozina",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "iSGLT2",
+    "marcas": [
+      "Jardiance 25",
+      "Empagliflozina 25"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Rosuvastatina",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Estatina — dosis baja",
+    "marcas": [
+      "Crestor 5",
+      "Rosuvastatina 5"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Amlodipino",
+    "presentacion": "2.5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Calcioantagonista — dosis baja",
+    "marcas": [
+      "Norvasc 2.5",
+      "Amlodipino 2.5"
+    ],
+    "dosisMg": 2.5
+  },
+  {
+    "dci": "Bisoprolol",
+    "presentacion": "2.5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Betabloqueador",
+    "marcas": [
+      "Concor 2.5",
+      "Bisoprolol 2.5"
+    ],
+    "dosisMg": 2.5
+  },
+  {
+    "dci": "Carvedilol",
+    "presentacion": "6.25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Betabloqueador",
+    "marcas": [
+      "Carvedilol 6.25",
+      "Dilatrend"
+    ],
+    "dosisMg": 6.25
+  },
+  {
+    "dci": "Hidroclorotiazida",
+    "presentacion": "12.5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Diurético tiazídico",
+    "marcas": [
+      "Hidroclorotiazida 12.5"
+    ],
+    "dosisMg": 12.5
+  },
+  {
+    "dci": "Losartán + Hidroclorotiazida",
+    "presentacion": "100/25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARA-II + diurético",
+    "marcas": [
+      "Cozaar Plus",
+      "Losartán/HCTZ 100/25"
+    ]
+  },
+  {
+    "dci": "Tamsulosina",
+    "presentacion": "0.4 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Alfa-bloqueador",
+    "marcas": [
+      "Secotex",
+      "Tamsulosina"
+    ],
+    "dosisMg": 0.4
   }
 ];
 

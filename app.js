@@ -1480,17 +1480,71 @@ function paintDxSuggestions() {
   box.replaceChildren(...nodes);
 }
 
+const FORMAS_MED = {
+  inyectable: ["inyectable", "ampolla", "intramuscular", "intravenosa", "intravenoso", "subcutanea"],
+  inyectables: ["inyectable", "ampolla", "intramuscular", "intravenosa", "intravenoso", "subcutanea"],
+  inyeccion: ["inyectable", "ampolla", "intramuscular", "intravenosa", "intravenoso"],
+  ampolla: ["ampolla", "inyectable", "intramuscular", "intravenosa", "intravenoso"],
+  ampollas: ["ampolla", "inyectable", "intramuscular", "intravenosa", "intravenoso"],
+  intramuscular: ["intramuscular", "ampolla"],
+  intravenosa: ["intravenosa", "intravenoso"],
+  intravenoso: ["intravenosa", "intravenoso"],
+  subcutanea: ["subcutanea", "subcutaneo"],
+  im: ["intramuscular"],
+  iv: ["intravenosa", "intravenoso"],
+  jarabe: ["jarabe", "suspension"],
+  suspension: ["suspension", "jarabe"],
+  gotas: ["gotas", "colirio"],
+  colirio: ["colirio", "oftalmica"],
+  gel: ["gel"],
+  crema: ["crema"],
+  pomada: ["pomada"],
+  inhalador: ["inhalador", "inhalatoria"],
+  nebulizacion: ["nebulizacion", "inhalatoria"],
+  supositorio: ["supositorio", "rectal"],
+  supositorios: ["supositorio", "rectal"],
+  ovulo: ["ovulo", "vaginal"],
+  ovulos: ["ovulo", "vaginal"],
+  tableta: ["tableta", "comprimido"],
+  tabletas: ["tableta", "comprimido"],
+  capsula: ["capsula"],
+  capsulas: ["capsula"],
+  topico: ["topica", "topico", "gel", "crema", "pomada"],
+  topica: ["topica", "topico", "gel", "crema", "pomada"],
+};
+
+function coincideMedicamento(texto, token) {
+  const claves = FORMAS_MED[token] || [token];
+  return claves.some((clave) => {
+    if (clave.length <= 3) return new RegExp(`(?:^|[^a-z0-9])${clave}(?:[^a-z0-9]|$)`).test(texto);
+    return texto.includes(clave);
+  });
+}
+
 function scoreMed(med, term) {
-  const t = term.toLowerCase();
-  const dci = med.dci.toLowerCase();
-  const present = (med.presentacion || "").toLowerCase();
-  const marcas = (med.marcas || []).map((marca) => marca.toLowerCase());
-  const extra = [med.via, med.grupo, med.atc].map((value) => String(value || "").toLowerCase());
-  if (dci.startsWith(t)) return 4;
-  if (present.split(/\s+/).some((word) => word.startsWith(t))) return 3;
-  if (dci.includes(t)) return 2;
-  if (marcas.some((marca) => marca.includes(t)) || extra.some((value) => value.includes(t))) return 1;
-  return -1;
+  const tokens = sinAcento(term).split(/[^a-z0-9]+/).filter((word) => word.length >= 2);
+  if (!tokens.length) return -1;
+  const dci = sinAcento(med.dci);
+  const ficha = sinAcento(`${med.presentacion || ""} ${med.via || ""} ${med.grupo || ""}`);
+  const marcas = sinAcento((med.marcas || []).join(" "));
+  const todo = `${dci} ${ficha} ${marcas}`;
+  let score = 0;
+  for (const token of tokens) {
+    const esForma = Boolean(FORMAS_MED[token]);
+    if (esForma) {
+      if (!coincideMedicamento(ficha, token)) return -1;
+      score += 6;
+      continue;
+    }
+    if (!coincideMedicamento(todo, token)) return -1;
+    const farmaco = dci === token || (dci.startsWith(`${token} `) && !dci.startsWith(`${token} +`));
+    if (farmaco) score += 12;
+    else if (dci.startsWith(token)) score += 10;
+    else if (dci.split(/[^a-z0-9]+/).some((word) => word.startsWith(token))) score += 8;
+    else if (coincideMedicamento(dci, token)) score += 5;
+    else score += 2;
+  }
+  return score;
 }
 
 function paintMedSuggestions() {
@@ -1502,18 +1556,20 @@ function paintMedSuggestions() {
     box.replaceChildren();
     return;
   }
-  const grupos = new Map();
+  const vistos = new Set();
+  const ranked = [];
   for (const med of medicamentosData) {
     const score = scoreMed(med, term);
     if (score < 0) continue;
-    const actual = grupos.get(med.dci);
-    if (!actual || score > actual.score) grupos.set(med.dci, { score, med });
+    const clave = `${med.dci}|${med.presentacion}|${med.via}`;
+    if (vistos.has(clave)) continue;
+    vistos.add(clave);
+    ranked.push({ med, score });
   }
-  const matches = [...grupos.values()]
-    .sort((a, b) => b.score - a.score || a.med.dci.localeCompare(b.med.dci, "es"))
-    .slice(0, 2)
-    .map((item) => item.med);
-  box.replaceChildren(...matches.map((med) => {
+  ranked.sort((a, b) => b.score - a.score || a.med.dci.localeCompare(b.med.dci, "es") || a.med.presentacion.localeCompare(b.med.presentacion, "es"));
+  const matches = ranked.slice(0, 16);
+  const resto = ranked.length - matches.length;
+  const nodes = matches.map(({ med }) => {
     const total = presentacionesDe(med.dci).length;
     const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
     const button = el("button", { type: "button", class: "suggestion" }, [
@@ -1523,7 +1579,9 @@ function paintMedSuggestions() {
     ]);
     button.addEventListener("click", () => applyMed(med));
     return button;
-  }));
+  });
+  if (resto > 0) nodes.push(el("p", { class: "suggest-more", text: `${resto} presentaciones más. Escribe la vía o la dosis para afinar.` }));
+  box.replaceChildren(...nodes);
 }
 
 function elegirPresentacion(med) {
