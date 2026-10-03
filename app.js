@@ -479,6 +479,28 @@ function deskMark() {
   ]);
 }
 
+let accesoPresentado = false;
+
+function enfocarAcceso() {
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+  document.getElementById(loginUsuario ? "login-clave" : "login-usuario")?.focus();
+}
+
+function presentarAcceso(section) {
+  const reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (accesoPresentado || reducir) {
+    accesoPresentado = true;
+    section.classList.add("is-ready");
+    queueMicrotask(enfocarAcceso);
+    return;
+  }
+  window.setTimeout(() => {
+    accesoPresentado = true;
+    section.classList.add("is-ready");
+    enfocarAcceso();
+  }, 1500);
+}
+
 function viewLogin() {
   const usuario = el("input", {
     id: "login-usuario",
@@ -507,22 +529,24 @@ function viewLogin() {
   clave.addEventListener("keydown", (event) => {
     if (event.key === "Enter") enviarLogin();
   });
-  queueMicrotask(() => {
-    document.getElementById(loginUsuario ? "login-clave" : "login-usuario")?.focus();
-  });
-  return el("section", { class: "screen desk" }, [
+  const section = el("section", { class: "screen desk desk-lock" }, [
     el("div", { class: "desk-hero" }, [
-      deskMark(),
-      el("p", { class: "desk-date", text: fechaEscritorio() }),
-      el("h1", { class: "desk-name", text: "Acceso" }),
+      el("div", { class: "desk-hero-inner" }, [
+        deskMark(),
+        el("p", { class: "desk-date", text: fechaEscritorio() }),
+        el("h1", { class: "desk-name", text: "Acceso" }),
+      ]),
     ]),
-    el("div", { class: "desk-card stack" }, [
-      errorSlot(),
-      el("label", { class: "field", text: "Usuario" }, [usuario]),
-      el("label", { class: "field", text: "Contraseña" }, [clave]),
+    el("div", { class: "desk-panel" }, [
+      el("div", { class: "desk-card stack" }, [
+        errorSlot(),
+        el("label", { class: "field", text: "Usuario" }, [usuario]),
+        el("label", { class: "field", text: "Contraseña" }, [clave]),
+      ]),
     ]),
-    el("div", { class: "desk-spacer" }),
   ]);
+  queueMicrotask(() => presentarAcceso(section));
+  return section;
 }
 
 async function enviarLogin() {

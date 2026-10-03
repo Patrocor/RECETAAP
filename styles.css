@@ -250,7 +250,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .shell-desk {
+  max-width: none;
+  width: 100%;
   background: #f4f7fb;
+}
+
+.shell-desk .desk:not(.desk-lock) {
+  width: min(440px, 100%);
+  margin: 0 auto;
 }
 
 .main-desk {
@@ -427,12 +434,117 @@ button, input, select, textarea { font: inherit; color: inherit; }
   outline-offset: 2px;
 }
 
+.desk-lock {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.desk-lock > * { animation: none; }
+
+.desk-hero-inner {
+  width: min(440px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.desk-lock .desk-hero {
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 0;
+  margin: 0;
+  padding: calc(16px + env(safe-area-inset-top)) 0 28px;
+}
+
+.desk-panel {
+  flex: 1.15 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  width: 100%;
+  background: #f4f7fb;
+  padding: 8px 0 4px;
+}
+
+.desk-lock .desk-card {
+  width: min(440px, calc(100% - 40px));
+  margin: 0;
+}
+
+.desk-lock .logo {
+  transform-origin: center center;
+  animation: logo-story 1.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.desk-lock .wordmark,
+.desk-lock .desk-date,
+.desk-lock .desk-name,
+.desk-lock .desk-panel {
+  animation: rise 460ms ease 980ms both;
+}
+
+.desk-lock.is-ready .logo,
+.desk-lock.is-ready .wordmark,
+.desk-lock.is-ready .desk-date,
+.desk-lock.is-ready .desk-name,
+.desk-lock.is-ready .desk-panel {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.desk-lock input {
+  min-height: 48px;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+
+@keyframes logo-story {
+  0% { opacity: 0; transform: translateY(10vh) scale(0.84); }
+  36% { opacity: 1; transform: translateY(10vh) scale(1.75); }
+  58% { opacity: 1; transform: translateY(10vh) scale(1.75); }
+  100% { opacity: 1; transform: none; }
+}
+
+@media (max-height: 700px) {
+  .desk-name { font-size: 28px; }
+  .desk-lock .desk-hero { padding-bottom: 18px; }
+  .desk-mark { margin-bottom: 16px; }
+}
+
+@media (min-width: 840px) {
+  .desk-hero-inner,
+  .desk-lock .desk-card,
+  .shell-desk .btn {
+    width: min(460px, calc(100% - 64px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desk-lock .logo,
+  .desk-lock .wordmark,
+  .desk-lock .desk-date,
+  .desk-lock .desk-name,
+  .desk-lock .desk-panel {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .shell-desk .footer {
-  background: transparent;
+  display: flex;
+  justify-content: center;
+  background: #f4f7fb;
   border-top: 0;
 }
 
 .shell-desk .btn {
+  width: min(440px, calc(100% - 40px));
   min-height: 48px;
   border-radius: 16px;
   background: #123652;
