@@ -36,7 +36,6 @@ const WIZARD = [
   { id: "paciente", titulo: "Paciente" },
   { id: "diagnostico", titulo: "Diagnóstico" },
   { id: "medicamentos", titulo: "Medicamentos" },
-  { id: "examenes", titulo: "Exámenes" },
   { id: "indicaciones", titulo: "Indicaciones" },
   { id: "revision", titulo: "Revisión" },
 ];
@@ -227,6 +226,7 @@ let cambiandoMed = false;
 let examQuery = "";
 let examNombre = "";
 let examEditId = null;
+let examTipo = "Laboratorio";
 let dialog = null;
 let dialogResolver = null;
 let busy = false;
@@ -336,6 +336,29 @@ function sanitizeMed(item) {
   return med;
 }
 
+function catalogExam(nombre) {
+  const buscado = sinAcento(nombre).trim();
+  return examenesCatalogo.find((ex) => sinAcento(ex.nombre) === buscado) || null;
+}
+
+function tipoOrdenExamen(tipo) {
+  return tipo === "Laboratorio" ? "Laboratorio" : "Imágenes";
+}
+
+function sanitizeExam(item) {
+  if (!item || typeof item !== "object") return null;
+  const nombre = cleanText(item.nombre, 160);
+  if (!nombre) return null;
+  const catalogo = catalogExam(nombre);
+  return {
+    id: Number(item.id) || Date.now(),
+    nombre,
+    tipo: tipoOrdenExamen(cleanText(item.tipo || catalogo?.tipo, 40)),
+    grupo: cleanText(item.grupo || catalogo?.grupo, 80),
+    indicaciones: cleanText(item.indicaciones || catalogo?.indicacionesSug, 300),
+  };
+}
+
 function loadDraft() {
   try {
     const raw = JSON.parse(sessionStorage.getItem(DRAFT_KEY) || "null");
@@ -361,10 +384,7 @@ function loadDraft() {
     base.indicacionesGenerales = cleanMultiline(raw.indicacionesGenerales, 800);
     base.medicamentos = Array.isArray(raw.medicamentos) ? raw.medicamentos.map(sanitizeMed).filter(Boolean).slice(0, 30) : [];
     base.examenes = Array.isArray(raw.examenes)
-      ? raw.examenes.map((ex) => ({
-        id: Number(ex?.id) || Date.now(),
-        nombre: cleanText(ex?.nombre, 160),
-      })).filter((ex) => ex.nombre).slice(0, 30)
+      ? raw.examenes.map(sanitizeExam).filter(Boolean).slice(0, 30)
       : [];
     base.screen = WIZARD.some((step) => step.id === raw.screen) ? raw.screen : "paciente";
     return base;
@@ -436,6 +456,9 @@ function header() {
   } else if (screen === "receta") {
     title = "Receta";
     onBack = () => goto("inicio");
+  } else if (screen === "examenes") {
+    title = "Orden de exámenes";
+    onBack = () => goto("receta");
   } else if (screen === "admin") {
     title = "Admin";
     onBack = () => goto("inicio");
@@ -486,16 +509,29 @@ function header() {
 function footer() {
   if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
   if (screen === "receta") {
-    const agregando = composer === "med" || composer === "exam";
+    const agregando = composer === "med";
     const button = el("button", {
       type: "button",
       class: agregando ? "btn has-icon" : "btn",
       disabled: busy,
       "aria-label": agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF"),
-      onclick: composer === "med" ? commitMed : composer === "exam" ? commitExam : generarPDF,
+      onclick: composer === "med" ? commitMed : generarPDF,
     });
     if (agregando) button.append(icono("check"));
     else button.textContent = busy ? "Generando…" : "Generar PDF";
+    return el("footer", { class: "footer" }, [button]);
+  }
+  if (screen === "examenes") {
+    const agregando = composer === "exam";
+    const button = el("button", {
+      type: "button",
+      class: agregando ? "btn has-icon" : "btn",
+      disabled: busy || (!agregando && !draft.examenes.length),
+      "aria-label": agregando ? "Agregar" : (busy ? "Generando…" : "Generar orden PDF"),
+      onclick: agregando ? commitExam : generarOrdenExamenes,
+    });
+    if (agregando) button.append(icono("check"));
+    else button.textContent = busy ? "Generando…" : "Generar orden PDF";
     return el("footer", { class: "footer" }, [button]);
   }
   if (screen === "login") return null;
@@ -507,11 +543,7 @@ function footer() {
   } else if (composer === "med") {
     label = "Agregar";
     action = commitMed;
-  } else if (composer === "exam") {
-    label = "Agregar";
-    action = commitExam;
-  } else if (screen === "examenes" && !draft.examenes.length) label = "Omitir";
-  else if (screen === "indicaciones") label = "Revisar";
+  } else if (screen === "indicaciones") label = "Revisar";
   else if (screen === "revision") {
     label = busy ? "Generando…" : "Generar PDF";
     action = generarPDF;
@@ -539,7 +571,7 @@ function view() {
   if (screen === "paciente") return viewPaciente();
   if (screen === "diagnostico") return viewDiagnostico();
   if (screen === "medicamentos") return composer === "med" ? viewMedComposer() : viewMedicamentos();
-  if (screen === "examenes") return composer === "exam" ? viewExamComposer() : viewExamenes();
+  if (screen === "examenes") return viewOrdenExamenes();
   if (screen === "indicaciones") return viewIndicaciones();
   if (screen === "revision") return viewRevision();
   return viewInicio();
@@ -1299,22 +1331,78 @@ function viewMedComposer() {
   return section;
 }
 
+function resumenPacienteOrden() {
+  const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "";
+  const detalle = [
+    draft.pacienteDNI ? `DNI ${draft.pacienteDNI}` : "",
+    draft.pacienteEdad ? `${draft.pacienteEdad} años` : "",
+    sexo,
+  ].filter(Boolean).join(" · ");
+  return el("article", { class: draft.pacienteNombre ? "item order-patient" : "item order-patient is-empty" }, [
+    el("div", { class: "item-top" }, [
+      el("div", {}, [
+        el("p", { class: "eyebrow", text: "Paciente" }),
+        el("h3", { text: draft.pacienteNombre || "Completa los datos del paciente" }),
+        detalle ? el("p", { class: "muted", text: detalle }) : null,
+      ]),
+      iconBtn("pencil", draft.pacienteNombre ? "Editar paciente" : "Completar paciente", () => goto("paciente")),
+    ]),
+  ]);
+}
+
+function selectorTipoExamen() {
+  return el("div", { class: "segment exam-types", role: "group", "aria-label": "Tipo de examen" }, [
+    ...["Laboratorio", "Imágenes"].map((tipo) => {
+      const cuentaTipo = draft.examenes.filter((ex) => ex.tipo === tipo).length;
+      return el("button", {
+        type: "button",
+        class: examTipo === tipo ? "is-on" : "",
+        "aria-pressed": examTipo === tipo ? "true" : "false",
+        onclick: () => {
+          examTipo = tipo;
+          composer = null;
+          examQuery = "";
+          examNombre = "";
+          examEditId = null;
+          render();
+        },
+      }, [`${tipo}${cuentaTipo ? ` · ${cuentaTipo}` : ""}`]);
+    }),
+  ]);
+}
+
+function viewOrdenExamenes() {
+  return el("section", { class: "screen stack exam-order" }, [
+    errorSlot(),
+    resumenPacienteOrden(),
+    el("div", { class: "order-heading" }, [
+      el("p", { class: "eyebrow", text: "Solicitud independiente" }),
+      el("h2", { text: examTipo === "Laboratorio" ? "Exámenes de laboratorio" : "Imágenes y otros estudios" }),
+    ]),
+    selectorTipoExamen(),
+    composer === "exam" ? viewExamComposer() : viewExamenes(),
+  ]);
+}
+
 function viewExamenes() {
-  const items = draft.examenes.map(examCard);
-  return el("section", { class: "screen stack" }, [
-    items.length ? null : vacioLista("Todavía no hay exámenes.", () => openComposer("exam")),
+  const items = draft.examenes.filter((ex) => ex.tipo === examTipo).map(examCard);
+  return el("div", { class: "stack exam-list" }, [
+    items.length ? null : vacioLista(
+      examTipo === "Laboratorio" ? "Todavía no hay análisis de laboratorio." : "Todavía no hay estudios de imagen.",
+      () => openComposer("exam"),
+    ),
     ...items,
     items.length ? botonMas("Agregar examen", () => openComposer("exam")) : null,
   ]);
 }
 
 function viewExamComposer() {
-  const section = el("section", { class: "screen stack" });
+  const section = el("div", { class: "stack exam-composer" });
   const search = el("input", {
     id: "exam-q",
     type: "search",
     value: examQuery,
-    placeholder: "Hemograma, TAC, EKG",
+    placeholder: examTipo === "Laboratorio" ? "Hemograma, glucosa, perfil lipídico" : "Radiografía, ecografía, TAC",
     maxlength: "80",
     autocomplete: "off",
   });
@@ -1327,21 +1415,19 @@ function viewExamComposer() {
     el("div", { id: "exam-suggest", class: "suggestions" }),
   ]));
   if (examNombre) {
-    const nombre = el("input", {
-      id: "exam-nombre",
-      type: "text",
-      value: examNombre,
-      maxlength: "160",
-      autocomplete: "off",
-    });
-    nombre.addEventListener("input", () => {
-      examNombre = cleanText(nombre.value, 160);
-    });
+    const catalogo = catalogExam(examNombre);
     section.append(el("article", { class: "item elegido" }, [
       el("div", { class: "item-top" }, [
-        el("h3", { text: "Examen elegido" }),
+        el("div", {}, [
+          el("h3", { text: examNombre }),
+          catalogo?.grupo ? el("p", { class: "muted", text: catalogo.grupo }) : null,
+        ]),
         el("div", { class: "item-actions" }, [
-          iconBtn("pencil", "Cambiar", () => nombre.focus()),
+          iconBtn("pencil", "Cambiar", () => {
+            examNombre = "";
+            render();
+            queueMicrotask(() => document.getElementById("exam-q")?.focus());
+          }),
           iconBtn("trash", "Quitar", () => {
             if (examEditId) {
               draft.examenes = draft.examenes.filter((item) => item.id !== examEditId);
@@ -1359,7 +1445,7 @@ function viewExamComposer() {
           }, "is-danger"),
         ]),
       ]),
-      el("label", { class: "field", text: "Nombre" }, [nombre]),
+      catalogo?.indicacionesSug ? el("p", { class: "exam-guidance", text: catalogo.indicacionesSug }) : null,
     ]));
   }
   queueMicrotask(paintExamSuggestions);
@@ -1453,7 +1539,6 @@ function viewRevision() {
       draft.proximoControl ? `Control ${fechaLegible(draft.proximoControl)}` : "",
     ]),
     reviewBlock("Medicamentos", "medicamentos", draft.medicamentos.map((med) => `${med.nombre} — ${med.cantidad}, ${med.frecuencia}`)),
-    reviewBlock("Exámenes", "examenes", draft.examenes.map((ex) => ex.nombre)),
     reviewBlock("Indicaciones", "indicaciones", [draft.indicacionesGenerales]),
   ]);
 }
@@ -1526,7 +1611,10 @@ function medCard(med) {
 function examCard(ex) {
   return el("article", { class: "item" }, [
     el("div", { class: "item-top" }, [
-      el("h3", { text: ex.nombre }),
+      el("div", {}, [
+        el("h3", { text: ex.nombre }),
+        el("p", { class: "muted", text: [ex.tipo, ex.grupo].filter(Boolean).join(" · ") }),
+      ]),
       el("div", { class: "item-actions" }, [
         iconBtn("pencil", "Editar", () => editarExamen(ex)),
         iconBtn("trash", "Quitar", () => {
@@ -1536,6 +1624,7 @@ function examCard(ex) {
         }, "is-danger"),
       ]),
     ]),
+    ex.indicaciones ? el("p", { class: "exam-guidance", text: ex.indicaciones }) : null,
   ]);
 }
 
@@ -1792,6 +1881,7 @@ function paintExamSuggestions() {
     return;
   }
   const ranked = examenesCatalogo.flatMap((ex) => {
+    if (tipoOrdenExamen(ex.tipo) !== examTipo) return [];
     const score = scoreExam(ex, term);
     return score < 0 ? [] : [{ ex, score }];
   }).sort((a, b) => b.score - a.score || a.ex.nombre.localeCompare(b.ex.nombre, "es"));
@@ -1805,6 +1895,7 @@ function paintExamSuggestions() {
     ]);
     button.addEventListener("click", () => {
       examNombre = cleanText(ex.nombre, 160);
+      examTipo = tipoOrdenExamen(ex.tipo);
       examQuery = "";
       goto("examenes");
     });
@@ -1838,6 +1929,7 @@ function editarMed(med) {
 function editarExamen(ex) {
   examEditId = ex.id;
   examNombre = ex.nombre;
+  examTipo = ex.tipo;
   examQuery = "";
   showError("");
   composer = "exam";
@@ -1902,7 +1994,23 @@ function commitExam() {
     showError("Escribe el nombre del examen.");
     return;
   }
-  const examen = { id: examEditId || Date.now(), nombre };
+  const catalogo = catalogExam(nombre);
+  const examen = sanitizeExam({
+    id: examEditId || Date.now(),
+    nombre,
+    tipo: examTipo,
+    grupo: catalogo?.grupo,
+    indicaciones: catalogo?.indicacionesSug,
+  });
+  if (!examen) {
+    showError("Elige un examen del catálogo.");
+    return;
+  }
+  const repetido = draft.examenes.some((item) => item.id !== examen.id && sinAcento(item.nombre) === sinAcento(examen.nombre));
+  if (repetido) {
+    showError("Este examen ya está en la orden.");
+    return;
+  }
   if (examEditId) draft.examenes = draft.examenes.map((item) => item.id === examen.id ? examen : item);
   else draft.examenes.push(examen);
   examEditId = null;
@@ -1934,9 +2042,6 @@ function next() {
     }
     rememberPaciente();
     saveDraft();
-  }
-  if (screen === "examenes" && !draft.indicacionesGenerales.trim()) {
-    draft.indicacionesGenerales = indicacionesAutomaticas(draft);
   }
   const index = wizardIndex();
   if (index < 0 || index >= WIZARD.length - 1) return;
@@ -1993,7 +2098,6 @@ function resumenPaso(id) {
   if (id === "paciente") return draft.pacienteNombre || draft.pacienteDNI || "Sin paciente";
   if (id === "diagnostico") return draft.diagnostico || "Sin diagnóstico";
   if (id === "medicamentos") return draft.medicamentos.length ? String(draft.medicamentos.length) : "Ninguno";
-  if (id === "examenes") return draft.examenes.length ? String(draft.examenes.length) : "Ninguno";
   return draft.indicacionesGenerales ? "Listas" : "Vacías";
 }
 
@@ -2001,7 +2105,6 @@ function cuerpoPaso(id) {
   if (id === "paciente") return viewPaciente();
   if (id === "diagnostico") return viewDiagnostico();
   if (id === "medicamentos") return composer === "med" ? viewMedComposer() : viewMedicamentos();
-  if (id === "examenes") return composer === "exam" ? viewExamComposer() : viewExamenes();
   return viewIndicaciones();
 }
 
@@ -2009,7 +2112,7 @@ function abrirPanel(id) {
   if (panel === "paciente" && id !== "paciente") rememberPaciente();
   const estaba = screen === "receta" && panel === "paciente";
   if (panel !== id) {
-    if (id !== "medicamentos" && id !== "examenes") composer = null;
+    if (id !== "medicamentos") composer = null;
   }
   panel = panel === id ? "" : id;
   if (panel === "paciente" && !estaba) enfocarDni = true;
@@ -2047,15 +2150,23 @@ function viewBoard() {
     fold("paciente", "Paciente"),
     fold("diagnostico", "Diagnóstico"),
     fold("medicamentos", "Medicamentos"),
-    fold("examenes", "Exámenes"),
     fold("indicaciones", "Indicaciones"),
+    el("button", { type: "button", class: "order-link", onclick: () => goto("examenes") }, [
+      el("span", {}, [
+        el("strong", { text: "Solicitar exámenes" }),
+        el("small", { text: draft.examenes.length
+          ? `${draft.examenes.length} seleccionado${draft.examenes.length === 1 ? "" : "s"}`
+          : "Laboratorio, imágenes y otros estudios" }),
+      ]),
+      el("span", { class: "order-link-arrow", "aria-hidden": "true", text: "›" }),
+    ]),
   ]);
 }
 
 function goto(id) {
   formError = "";
   if (WIZARD.some((step) => step.id === id)) {
-    if (id !== "medicamentos" && id !== "examenes") composer = null;
+    if (id !== "medicamentos") composer = null;
     const estaba = screen === "receta" && panel === "paciente";
     if (panel === "paciente" && id !== "paciente") rememberPaciente();
     panel = id === "revision" ? "indicaciones" : id;
@@ -2069,7 +2180,7 @@ function goto(id) {
     render();
     return;
   }
-  composer = null;
+  if (id !== "examenes") composer = null;
   screen = id;
   render();
 }
@@ -2248,7 +2359,6 @@ function dibujarReceta(doc, top, alto) {
   });
   const notas = [
     ...String(draft.indicacionesGenerales || "").split("\n").map((linea) => linea.trim()).filter(Boolean),
-    ...draft.examenes.map((ex) => `Examen: ${ex.nombre}`),
   ];
   lineasColumna(doc, rp, x + 6, primera - 1.5, colAncho - 8, ultima - 2);
   lineasColumna(doc, notas, x + 102, primera - 1.5, colAncho - 8, ultima - 2);
@@ -2270,6 +2380,135 @@ function dibujarReceta(doc, top, alto) {
   doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
 }
 
+function generarOrdenExamenes() {
+  if (busy) return;
+  showError("");
+  const pacienteError = validarPaciente();
+  if (!perfilListo(perfil)) {
+    showError("Completa tu nombre y CMP en el perfil antes de generar.");
+    return;
+  }
+  if (pacienteError) {
+    showError(pacienteError);
+    return;
+  }
+  if (!draft.examenes.length) {
+    showError("Agrega al menos un examen.");
+    return;
+  }
+  const jsPDF = window.jspdf?.jsPDF;
+  if (!jsPDF) {
+    showError("No se pudo cargar el generador de PDF.");
+    return;
+  }
+  rememberPaciente();
+  busy = true;
+  render();
+  try {
+    const doc = new jsPDF({ unit: "mm", format: "a4" });
+    const tinta = [17, 58, 87];
+    const suave = [92, 111, 127];
+    const dibujarCabecera = () => {
+      doc.setFillColor(...tinta);
+      doc.rect(0, 0, 210, 30, "F");
+      doc.setTextColor(255);
+      doc.setFont("times", "bold");
+      doc.setFontSize(17);
+      doc.text(perfil.nombre || "Médico", 16, 12);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join(" · "), 16, 20);
+      doc.setFont("times", "bold");
+      doc.setFontSize(15);
+      doc.text("ORDEN DE EXÁMENES", 194, 15, { align: "right" });
+      doc.setTextColor(...tinta);
+      doc.setFontSize(11);
+      doc.text(draft.pacienteNombre, 16, 42);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      const paciente = [
+        draft.pacienteDNI ? `DNI: ${draft.pacienteDNI}` : "",
+        draft.pacienteEdad ? `Edad: ${draft.pacienteEdad} años` : "",
+        draft.pacienteSexo ? `Sexo: ${draft.pacienteSexo}` : "",
+        `Fecha: ${fechaLegible(draft.fechaAtencion)}`,
+      ].filter(Boolean).join("   ·   ");
+      doc.text(paciente, 16, 49);
+      if (draft.diagnostico) {
+        doc.setTextColor(...suave);
+        doc.text(`Diagnóstico: ${[draft.cie10, draft.diagnostico].filter(Boolean).join(" — ")}`, 16, 56);
+      }
+      doc.setDrawColor(194, 207, 218);
+      doc.line(16, 61, 194, 61);
+    };
+    dibujarCabecera();
+    let y = 70;
+    for (const tipo of ["Laboratorio", "Imágenes"]) {
+      const items = draft.examenes.filter((ex) => ex.tipo === tipo);
+      if (!items.length) continue;
+      if (y > 245) {
+        doc.addPage();
+        dibujarCabecera();
+        y = 70;
+      }
+      doc.setTextColor(...tinta);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(11);
+      doc.text(tipo === "Laboratorio" ? "LABORATORIO" : "IMÁGENES Y OTROS ESTUDIOS", 16, y);
+      y += 7;
+      for (const ex of items) {
+        const guia = ex.indicaciones ? doc.splitTextToSize(ex.indicaciones, 158) : [];
+        const alto = 8 + guia.length * 4;
+        if (y + alto > 267) {
+          doc.addPage();
+          dibujarCabecera();
+          y = 70;
+        }
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(10);
+        doc.setTextColor(24, 44, 61);
+        doc.text(`• ${ex.nombre}`, 19, y);
+        if (ex.grupo) {
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(8);
+          doc.setTextColor(...suave);
+          doc.text(ex.grupo, 190, y, { align: "right" });
+        }
+        y += 5;
+        if (guia.length) {
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(8.5);
+          doc.setTextColor(...suave);
+          doc.text(guia, 23, y);
+          y += guia.length * 4;
+        }
+        y += 4;
+      }
+    }
+    if (y > 260) {
+      doc.addPage();
+      dibujarCabecera();
+      y = 250;
+    } else {
+      y = Math.max(y + 8, 250);
+    }
+    doc.setDrawColor(130, 151, 168);
+    doc.line(126, y, 188, y);
+    doc.setFont("times", "bold");
+    doc.setFontSize(9);
+    doc.setTextColor(...tinta);
+    doc.text("Firma y Sello", 157, y + 5, { align: "center" });
+    doc.save(`Orden_examenes_${fileSlug(draft.pacienteNombre)}.pdf`);
+    composer = null;
+    screen = "receta";
+    panel = "indicaciones";
+  } catch {
+    showError("No se pudo generar la orden de exámenes.");
+  } finally {
+    busy = false;
+    render();
+  }
+}
+
 function generarPDF() {
   if (busy) return;
   showError("");
@@ -2282,8 +2521,8 @@ function generarPDF() {
     showError(pacienteError);
     return;
   }
-  if (!draft.medicamentos.length && !draft.examenes.length) {
-    showError("Agrega al menos un medicamento o un examen.");
+  if (!draft.medicamentos.length) {
+    showError("Agrega al menos un medicamento.");
     return;
   }
   if (!draft.indicacionesGenerales.trim()) {
