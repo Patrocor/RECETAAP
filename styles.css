@@ -480,6 +480,35 @@ button, input, select, textarea { font: inherit; color: inherit; }
   animation: logo-story 1.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+svg.logo {
+  display: block;
+  overflow: visible;
+}
+
+.desk-lock .logo-ekg {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: ekg-draw 0.72s cubic-bezier(0.33, 0, 0.2, 1) 0.26s forwards;
+}
+
+.desk-lock .logo-ekg-pulse {
+  stroke-dasharray: 22 78;
+  stroke-dashoffset: 24;
+  opacity: 0;
+  filter: drop-shadow(0 0 2px rgba(232, 246, 255, 0.95));
+  animation: ekg-on 0.16s linear 0.94s forwards, ekg-run 1.15s linear 0.94s infinite;
+}
+
+.desk-lock.is-ready .logo-ekg {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+.desk-lock.is-ready .logo-ekg-pulse {
+  opacity: 1;
+  animation: ekg-run 1.15s linear infinite;
+}
+
 .desk-lock .wordmark,
 .desk-lock .desk-date,
 .desk-lock .desk-name,
@@ -505,9 +534,21 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 @keyframes logo-story {
   0% { opacity: 0; transform: translateY(10vh) scale(0.84); }
-  36% { opacity: 1; transform: translateY(10vh) scale(1.75); }
-  58% { opacity: 1; transform: translateY(10vh) scale(1.75); }
+  28% { opacity: 1; transform: translateY(10vh) scale(1.9); }
+  68% { opacity: 1; transform: translateY(10vh) scale(1.9); }
   100% { opacity: 1; transform: none; }
+}
+
+@keyframes ekg-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes ekg-on {
+  to { opacity: 1; }
+}
+
+@keyframes ekg-run {
+  to { stroke-dashoffset: -86; }
 }
 
 @media (max-height: 700px) {
@@ -529,10 +570,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .desk-lock .wordmark,
   .desk-lock .desk-date,
   .desk-lock .desk-name,
-  .desk-lock .desk-panel {
+  .desk-lock .desk-panel,
+  .desk-lock .logo-ekg,
+  .desk-lock .logo-ekg-pulse {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .desk-lock .logo-ekg {
+    stroke-dashoffset: 0;
+  }
+
+  .desk-lock .logo-ekg-pulse {
+    opacity: 0;
   }
 }
 
