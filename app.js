@@ -232,6 +232,7 @@ let dialogResolver = null;
 let busy = false;
 let formError = "";
 let afterPerfil = "inicio";
+let origenExamenes = "receta";
 
 const root = document.getElementById("app");
 
@@ -273,6 +274,31 @@ function icono(nombre) {
   else if (nombre === "pencil") {
     trazo("M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3z");
     trazo("M13.5 6.5l4 4");
+  } else if (nombre === "doc") {
+    trazo("M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z");
+    trazo("M14 2v6h6");
+    trazo("M9 13h6");
+    trazo("M9 17h3");
+  } else if (nombre === "flask") {
+    trazo("M10 2v7.5l-4.5 8a2 2 0 0 0 1.7 3h9.6a2 2 0 0 0 1.7-3l-4.5-8V2");
+    trazo("M8.5 2h7");
+    trazo("M7 16h10");
+  } else if (nombre === "user") {
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", "12");
+    circle.setAttribute("cy", "7");
+    circle.setAttribute("r", "4");
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", "currentColor");
+    circle.setAttribute("stroke-width", "1.8");
+    svg.append(circle);
+    trazo("M5.5 21a6.5 6.5 0 0 1 13 0");
+  } else if (nombre === "shield") {
+    trazo("M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z");
+  } else if (nombre === "logout") {
+    trazo("M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4");
+    trazo("M16 17l5-5-5-5");
+    trazo("M21 12H9");
   } else {
     trazo("M5 7h14");
     trazo("M9 7V5h6v2");
@@ -458,7 +484,7 @@ function header() {
     onBack = () => goto("inicio");
   } else if (screen === "examenes") {
     title = "Orden de exámenes";
-    onBack = () => goto("receta");
+    onBack = () => goto(origenExamenes || "receta");
   } else if (screen === "admin") {
     title = "Admin";
     onBack = () => goto("inicio");
@@ -919,18 +945,88 @@ function tarjetaReceta(etiqueta, nombre, detalle, onclick) {
 function viewInicio() {
   const meta = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join(" · ");
   const ultima = leerUltima();
-  const detalleBorrador = [draft.pacienteNombre || "Sin paciente", draft.diagnostico].filter(Boolean).join(" · ");
+  const detalleBorrador = [
+    [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "),
+    draft.medicamentos.length ? `${draft.medicamentos.length} med` : "",
+    draft.examenes.length ? `${draft.examenes.length} ex` : "",
+  ].filter(Boolean).join(" · ");
   const detalleUltima = [fechaLegible(ultima?.cuando), ultima?.diagnostico].filter(Boolean).join(" · ");
+
+  let estadoCard;
+  if (hasMeaningfulDraft()) {
+    estadoCard = el("button", {
+      type: "button",
+      class: "desk-status-card",
+      onclick: resume,
+    }, [
+      el("span", { class: "desk-status-badge amber" }, [
+        el("span", { class: "desk-status-dot" }),
+        document.createTextNode("Borrador en curso"),
+      ]),
+      el("p", { class: "desk-status-title", text: draft.pacienteNombre || "Paciente no especificado" }),
+      el("p", { class: "desk-status-text", text: detalleBorrador || "Borrador activo listo para continuar." }),
+      el("div", { class: "desk-status-action" }, [
+        el("span", { text: "Continuar edición" }),
+        el("span", { text: "→" }),
+      ]),
+    ]);
+  } else if (ultima) {
+    estadoCard = el("button", {
+      type: "button",
+      class: "desk-status-card",
+      onclick: () => repetirPaciente(ultima),
+    }, [
+      el("span", { class: "desk-status-badge blue" }, [
+        el("span", { class: "desk-status-dot" }),
+        document.createTextNode("Última receta emitida"),
+      ]),
+      el("p", { class: "desk-status-title", text: ultima.nombre || "Paciente" }),
+      el("p", { class: "desk-status-text", text: detalleUltima || "Atención previa registrada." }),
+      el("div", { class: "desk-status-action" }, [
+        el("span", { text: "Nueva atención con este paciente" }),
+        el("span", { text: "→" }),
+      ]),
+    ]);
+  } else {
+    estadoCard = el("div", { class: "desk-status-card" }, [
+      el("span", { class: "desk-status-badge" }, [
+        el("span", { class: "desk-status-dot" }),
+        document.createTextNode("Consultorio activo"),
+      ]),
+      el("p", { class: "desk-status-title", text: "Prescripción médica lista" }),
+      el("p", { class: "desk-status-text", text: "Catálogos clínicos y vademécum preparados para emitir recetas y órdenes médicas." }),
+      el("div", { class: "desk-stats-grid" }, [
+        el("div", { class: "desk-stat-item" }, [
+          el("span", { class: "desk-stat-num", text: "2,598" }),
+          el("span", { class: "desk-stat-label", text: "CIE-10" }),
+        ]),
+        el("div", { class: "desk-stat-item" }, [
+          el("span", { class: "desk-stat-num", text: "1,084" }),
+          el("span", { class: "desk-stat-label", text: "Fármacos" }),
+        ]),
+        el("div", { class: "desk-stat-item" }, [
+          el("span", { class: "desk-stat-num", text: "280+" }),
+          el("span", { class: "desk-stat-label", text: "Exámenes" }),
+        ]),
+      ]),
+    ]);
+  }
+
   const rail = [
-    el("button", { type: "button", onclick: () => openPerfil("inicio") }, ["Perfil"]),
-    cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, ["Admin"]) : null,
-    el("button", { type: "button", onclick: salirDeLaApp }, ["Salir"]),
-  ];
-  const seguimiento = hasMeaningfulDraft()
-    ? tarjetaReceta("Borrador", detalleBorrador, "", resume)
-    : ultima
-      ? tarjetaReceta("Última receta", ultima.nombre || "Paciente", detalleUltima, () => repetirPaciente(ultima))
-      : null;
+    el("button", { type: "button", onclick: () => openPerfil("inicio") }, [
+      icono("user"),
+      el("span", { text: "Perfil" }),
+    ]),
+    cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, [
+      icono("shield"),
+      el("span", { text: "Admin" }),
+    ]) : null,
+    el("button", { type: "button", onclick: salirDeLaApp }, [
+      icono("logout"),
+      el("span", { text: "Salir" }),
+    ]),
+  ].filter(Boolean);
+
   return el("section", { class: "screen desk desk-home" }, [
     el("div", { class: "desk-hero" }, [
       el("div", { class: "desk-hero-inner" }, [
@@ -944,11 +1040,33 @@ function viewInicio() {
     ]),
     el("div", { class: "desk-panel" }, [
       el("div", { class: "desk-home-actions" }, [
-        el("button", { type: "button", class: "desk-primary", onclick: startNew }, [
-          el("span", { text: "Nueva receta" }),
+        el("div", { class: "desk-main-actions" }, [
+          el("button", { type: "button", class: "desk-action-card primary", onclick: startNew }, [
+            el("span", { class: "desk-action-icon" }, [icono("doc")]),
+            el("span", { class: "desk-action-body" }, [
+              el("span", { class: "desk-action-title", text: "Nueva receta" }),
+              el("span", { class: "desk-action-desc", text: "Fármacos, dosis e indicaciones" }),
+            ]),
+            el("span", { class: "desk-action-arrow", "aria-hidden": "true", text: "→" }),
+          ]),
+          el("button", {
+            type: "button",
+            class: "desk-action-card",
+            onclick: () => {
+              origenExamenes = "inicio";
+              goto("examenes");
+            },
+          }, [
+            el("span", { class: "desk-action-icon" }, [icono("flask")]),
+            el("span", { class: "desk-action-body" }, [
+              el("span", { class: "desk-action-title", text: "Orden de exámenes" }),
+              el("span", { class: "desk-action-desc", text: "Laboratorio, imágenes y estudios" }),
+            ]),
+            el("span", { class: "desk-action-arrow", "aria-hidden": "true", text: "→" }),
+          ]),
         ]),
-        seguimiento,
-        el("nav", { class: "desk-rail", "aria-label": "Cuenta" }, rail),
+        estadoCard,
+        el("nav", { class: "desk-rail-dock", "aria-label": "Cuenta" }, rail),
       ]),
     ]),
   ]);
@@ -2182,7 +2300,10 @@ function viewBoard() {
     fold("diagnostico", "Diagnóstico"),
     fold("medicamentos", "Medicamentos"),
     fold("indicaciones", "Indicaciones"),
-    el("button", { type: "button", class: "order-link", onclick: () => goto("examenes") }, [
+    el("button", { type: "button", class: "order-link", onclick: () => {
+      origenExamenes = "receta";
+      goto("examenes");
+    } }, [
       el("span", { class: "order-link-mark", "aria-hidden": "true", text: "EX" }),
       el("span", {}, [
         el("strong", { text: "Solicitar exámenes" }),
@@ -2531,8 +2652,8 @@ function generarOrdenExamenes() {
     doc.text("Firma y Sello", 157, y + 5, { align: "center" });
     doc.save(`Orden_examenes_${fileSlug(draft.pacienteNombre)}.pdf`);
     composer = null;
-    screen = "receta";
-    panel = "indicaciones";
+    screen = origenExamenes === "inicio" ? "inicio" : "receta";
+    if (screen === "receta") panel = "indicaciones";
   } catch {
     showError("No se pudo generar la orden de exámenes.");
   } finally {

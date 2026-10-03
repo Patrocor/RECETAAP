@@ -308,8 +308,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin: 0;
   padding: 0;
   gap: 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100dvh;
 }
 
 .main-desk {
@@ -801,35 +803,306 @@ svg.logo {
 .shell-flow .success-mark { margin: 0 auto 4px; }
 
 .desk-home .desk-hero {
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: calc(18px + env(safe-area-inset-top)) 0 20px;
+  padding: calc(20px + env(safe-area-inset-top)) 20px 22px;
+  background:
+    radial-gradient(85% 100% at 50% 0%, rgba(215, 228, 240, 0.35), transparent 72%),
+    #123652;
 }
 
 .desk-home .desk-hero-inner,
 .desk-home .desk-id {
   text-align: center;
+  width: 100%;
 }
 
 .desk-home .desk-mark {
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.desk-home .desk-date {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.desk-home .desk-name {
+  font-size: clamp(21px, 5.2vw, 28px);
+  text-wrap: balance;
+  max-width: 320px;
+  margin: 6px auto 0;
+  line-height: 1.18;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.desk-home .desk-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.02em;
 }
 
 .desk-home .desk-panel {
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #f4f7fb;
-  padding: 20px 0 calc(12px + env(safe-area-inset-bottom));
+  padding: 18px 20px calc(18px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .desk-home-actions {
-  width: min(560px, calc(100% - 48px));
+  width: min(440px, 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.desk-main-actions {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.desk-action-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid rgba(18, 54, 82, 0.08);
+  background: white;
+  box-shadow: 0 4px 14px rgba(18, 54, 82, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.desk-action-card:active {
+  transform: scale(0.985);
+}
+
+.desk-action-card.primary {
+  background: linear-gradient(135deg, #123652 0%, #1a4d75 100%);
+  color: white;
+  border: 0;
+  box-shadow: 0 10px 24px rgba(18, 54, 82, 0.18);
+}
+
+.desk-action-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.desk-action-card.primary .desk-action-icon {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+}
+
+.desk-action-card:not(.primary) .desk-action-icon {
+  background: #eef3f8;
+  color: #123652;
+}
+
+.desk-action-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.desk-action-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.desk-action-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  display: block;
+}
+
+.desk-action-desc {
+  font-size: 12px;
+  line-height: 1.3;
+  margin-top: 3px;
+  display: block;
+  opacity: 0.8;
+}
+
+.desk-action-arrow {
+  font-size: 18px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.desk-status-card {
+  background: white;
+  border: 1px solid rgba(18, 54, 82, 0.08);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(18, 54, 82, 0.04);
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+button.desk-status-card {
+  cursor: pointer;
+  border: 1px solid rgba(18, 54, 82, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button.desk-status-card:active {
+  transform: scale(0.985);
+}
+
+.desk-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #067647;
+  margin-bottom: 8px;
+}
+
+.desk-status-badge.amber {
+  color: #d97706;
+}
+
+.desk-status-badge.blue {
+  color: #2f4b9e;
+}
+
+.desk-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.desk-status-title {
+  font-size: 14.5px;
+  font-weight: 650;
+  color: #131b3a;
+  margin: 0 0 4px;
+}
+
+.desk-status-text {
+  font-size: 12.5px;
+  color: #5c6578;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.desk-status-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(18, 54, 82, 0.06);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #123652;
+}
+
+.desk-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(18, 54, 82, 0.06);
+}
+
+.desk-stat-item {
+  text-align: center;
+}
+
+.desk-stat-num {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #123652;
+}
+
+.desk-stat-label {
+  display: block;
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.desk-rail-dock {
+  display: flex;
+  gap: 6px;
+  background: white;
+  border: 1px solid rgba(18, 54, 82, 0.08);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow: 0 4px 16px rgba(18, 54, 82, 0.05);
+  margin-top: auto;
+}
+
+.desk-rail-dock button {
+  flex: 1;
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #5c6578;
+  font-size: 12.5px;
+  font-weight: 650;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.desk-rail-dock button svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.desk-rail-dock button:active {
+  background: #f0f4f9;
+  color: #123652;
 }
 
 .desk-home .desk-primary {
