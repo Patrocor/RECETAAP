@@ -17,11 +17,15 @@ test("la cantidad sale de frecuencia, duración y presentación", () => {
   assert.equal(calcularCantidad("Inhalador 100 mcg/dosis", "Dosis única", "7"), "1 dosis");
   assert.equal(calcularCantidad("500 mg tabletas", "Según necesidad", "5"), "");
   assert.equal(unidadDe("10 mg/ml gotas"), "gotas");
+  assert.equal(calcularCantidad("250 mg/5 mL jarabe", "Cada 8 horas", "5"), "15 dosis");
+  assert.equal(unidadDe("125 mg supositorios"), "supositorios");
 });
 
 test("la dosis de referencia usa el catálogo", () => {
   assert.equal(dosisReferencia({ dosisMg: 500 }), "500 mg");
   assert.equal(dosisReferencia({ dosisMg: 0.5 }), "0.5 mg");
+  assert.equal(dosisReferencia({ presentacion: "1 g tabletas" }), "1 g");
+  assert.equal(dosisReferencia({ presentacion: "500/10 mg tabletas" }), "500/10 mg");
   assert.equal(dosisReferencia({}), "");
 });
 

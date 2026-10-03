@@ -10,11 +10,14 @@ const TOMAS_POR_DIA = {
   "3 veces al día": 3,
 };
 
-const UNIDADES = ["tabletas", "cápsulas", "comprimidos", "ampollas", "sobres", "gotas", "dosis"];
+const UNIDADES = ["tabletas", "cápsulas", "comprimidos", "ampollas", "sobres", "supositorios", "óvulos", "gotas", "dosis"];
 
 export function unidadDe(presentacion) {
   const texto = String(presentacion || "").toLowerCase();
-  return UNIDADES.find((unidad) => texto.includes(unidad)) || "unidades";
+  const directa = UNIDADES.find((unidad) => texto.includes(unidad));
+  if (directa) return directa;
+  if (/jarabe|suspensi[oó]n|soluci[oó]n|elixir/.test(texto)) return "dosis";
+  return "unidades";
 }
 
 export function diasDe(duracion) {
@@ -38,8 +41,12 @@ export function calcularCantidad(presentacion, frecuencia, duracion) {
 }
 
 export function dosisReferencia(med) {
-  if (!med || typeof med.dosisMg !== "number" || !Number.isFinite(med.dosisMg)) return "";
-  return `${med.dosisMg} mg`;
+  if (!med || typeof med !== "object") return "";
+  if (typeof med.dosisMg === "number" && Number.isFinite(med.dosisMg)) return `${med.dosisMg} mg`;
+  const presentacion = String(med.presentacion || "").trim();
+  const match = presentacion.match(/^(\d+(?:[.,]\d+)?(?:\s*\/\s*\d+(?:[.,]\d+)?)*)\s*(mg|g|mcg|µg|ui|ml)/i);
+  if (!match) return "";
+  return `${match[1].replace(/\s+/g, "")} ${match[2].toLowerCase() === "ml" ? "mL" : match[2]}`;
 }
 
 export function buscarPacientes(lista, query) {

@@ -356,6 +356,10 @@ textarea { min-height: 0; height: 72px; resize: none; }
 
 .fold.is-open textarea { flex: 1; height: auto; }
 
+input[readonly] {
+  background: #e7eef6;
+}
+
 input:focus, select:focus, textarea:focus {
   outline: 2px solid rgba(47, 75, 158, 0.35);
   border-color: var(--accent);

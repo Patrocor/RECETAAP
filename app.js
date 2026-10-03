@@ -134,6 +134,8 @@ function emptyDraft() {
     fechaAtencion: todayISO(),
     horaAtencion: nowTime(),
     diagnostico: "",
+    cie10: "",
+    proximoControl: "",
     dxQuery: "",
     filtroSistema: "",
     filtroTipo: "",
@@ -153,6 +155,7 @@ function emptyMedForm() {
     cantidad: "",
     dosis: "",
     frecuencia: "",
+    dias: "",
     duracion: "",
     via: "",
     indicaciones: "",
@@ -174,7 +177,6 @@ let loginUsuario = "";
 let loginClave = "";
 let composer = null;
 let medForm = emptyMedForm();
-let cantidadManual = false;
 let examQuery = "";
 let examNombre = "";
 let dialog = null;
@@ -250,6 +252,15 @@ function loadDraft() {
     base.fechaAtencion = /^\d{4}-\d{2}-\d{2}$/.test(raw.fechaAtencion || "") ? raw.fechaAtencion : base.fechaAtencion;
     base.horaAtencion = /^\d{2}:\d{2}$/.test(raw.horaAtencion || "") ? raw.horaAtencion : base.horaAtencion;
     base.diagnostico = cleanText(raw.diagnostico, 180);
+    base.cie10 = /^[A-Z][0-9]{2}(?:\.[0-9A-Z]{1,4})?$/i.test(raw.cie10 || "") ? String(raw.cie10).toUpperCase() : "";
+    if (!base.cie10) {
+      const hallado = base.diagnostico.match(/^([A-Z]\d{2}(?:\.[0-9A-Z]{1,4})?)\s*-\s*(.+)$/i);
+      if (hallado) {
+        base.cie10 = hallado[1].toUpperCase();
+        base.diagnostico = cleanText(hallado[2], 180);
+      }
+    }
+    base.proximoControl = /^\d{4}-\d{2}-\d{2}$/.test(raw.proximoControl || "") ? raw.proximoControl : "";
     base.dxQuery = cleanText(raw.dxQuery, 80);
     const sistemaGuardado = ALIAS_SISTEMA[raw.filtroSistema] || raw.filtroSistema;
     base.filtroSistema = SISTEMAS.includes(sistemaGuardado) ? sistemaGuardado : "";
@@ -966,11 +977,12 @@ function viewDiagnostico() {
         el("h3", { text: "Diagnóstico" }),
         el("button", { type: "button", class: "text-danger", onclick: () => {
           draft.diagnostico = "";
+          draft.cie10 = "";
           saveDraft();
           goto("diagnostico");
         } }, ["Quitar"]),
       ]),
-      el("p", { text: draft.diagnostico }),
+      el("p", { text: [draft.cie10, draft.diagnostico].filter(Boolean).join(" — ") }),
     ]));
   }
   queueMicrotask(paintDxSuggestions);
@@ -987,54 +999,81 @@ function viewMedicamentos() {
   ]);
 }
 
+function presentacionesDe(dci) {
+  const nombre = String(dci || "").trim().toLowerCase();
+  if (!nombre) return [];
+  return medicamentosData.filter((med) => med.dci.toLowerCase() === nombre);
+}
+
 function viewMedComposer() {
-  return el("section", { class: "screen stack" }, [
-    (() => {
-      const input = el("input", {
-        id: "med-q",
-        type: "search",
-        value: medForm.q,
-        placeholder: "",
-        maxlength: "80",
-        autocomplete: "off",
-      });
-      input.addEventListener("input", () => {
-        medForm.q = cleanText(input.value, 80);
-        paintMedSuggestions();
-      });
-      return el("label", { class: "field", text: "Buscar" }, [input]);
-    })(),
+  const opciones = presentacionesDe(medForm.nombre);
+  const buscar = el("input", {
+    id: "med-q",
+    type: "search",
+    value: medForm.q,
+    placeholder: "",
+    maxlength: "80",
+    autocomplete: "off",
+  });
+  buscar.addEventListener("input", () => {
+    medForm.q = cleanText(buscar.value, 80);
+    paintMedSuggestions();
+  });
+  const section = el("section", { class: "screen stack" }, [
+    el("label", { class: "field", text: "Buscar" }, [buscar]),
     el("div", { id: "med-suggest", class: "suggestions" }),
-    el("button", {
-      type: "button",
-      class: detalleMed ? "add-btn is-on" : "add-btn",
-      onclick: () => {
-        detalleMed = !detalleMed;
-        goto("medicamentos");
-      },
-    }, ["Detalle"]),
-    ...(detalleMed ? [
-    medInput("Nombre", "med-nombre", "nombre", "Paracetamol"),
-    el("div", { class: "two" }, [
-      medInput("Presentación", "med-presentacion", "presentacion", "500 mg"),
-      medInput("Cantidad", "med-cantidad", "cantidad", "20"),
-    ]),
-    el("div", { class: "two" }, [
-      medInput("Dosis", "med-dosis", "dosis", "500 mg"),
-      medInput("Duración", "med-duracion", "duracion", "7"),
-    ]),
-    el("div", { class: "two" }, [
-      selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
-        medForm.frecuencia = value;
-        syncCantidad();
-      }),
+  ]);
+  if (opciones.length) {
+    const select = el("select", { id: "med-presentacion" }, opciones.map((med) => (
+      el("option", { value: med.presentacion, text: med.presentacion })
+    )));
+    select.value = opciones.some((med) => med.presentacion === medForm.presentacion) ? medForm.presentacion : opciones[0].presentacion;
+    if (select.value !== medForm.presentacion) {
+      const elegido = opciones.find((med) => med.presentacion === select.value);
+      if (elegido) elegirPresentacion(elegido);
+    }
+    select.addEventListener("change", () => {
+      const elegido = opciones.find((med) => med.presentacion === select.value);
+      if (!elegido) return;
+      elegirPresentacion(elegido);
+      const dosis = document.getElementById("med-dosis");
+      const via = document.getElementById("med-via");
+      if (dosis) dosis.value = medForm.dosis;
+      if (via) via.value = medForm.via;
+    });
+    section.append(el("label", { class: "field", text: "Presentación" }, [select]));
+  }
+  section.append(el("div", { class: "two" }, [
+    diasField(),
+    selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
+      medForm.frecuencia = FRECUENCIAS.includes(value) ? value : "";
+      syncCantidad();
+    }),
+  ]));
+  section.append(cantidadField());
+  section.append(el("button", {
+    type: "button",
+    class: detalleMed ? "add-btn is-on" : "add-btn",
+    onclick: () => {
+      detalleMed = !detalleMed;
+      goto("medicamentos");
+    },
+  }, ["Detalle"]));
+  if (detalleMed) {
+    if (!opciones.length) {
+      section.append(medInput("Nombre", "med-nombre", "nombre", ""));
+      section.append(medInput("Presentación", "med-presentacion", "presentacion", ""));
+    }
+    section.append(el("div", { class: "two" }, [
+      medInput("Dosis", "med-dosis", "dosis", ""),
       selectField("Vía", "med-via", VIAS, medForm.via, (value) => {
         medForm.via = value;
       }),
-    ]),
-    medInput("Indicaciones", "med-indicaciones", "indicaciones", "Con alimentos"),
-    ] : []),
-  ]);
+    ]));
+    section.append(medInput("Indicaciones", "med-indicaciones", "indicaciones", ""));
+  }
+  queueMicrotask(paintMedSuggestions);
+  return section;
 }
 
 function viewExamenes() {
@@ -1113,6 +1152,10 @@ function viewIndicaciones() {
   });
   return el("section", { class: "screen stack" }, [
     el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
+    field("Control", "proximo-control", draft.proximoControl, "date", "", (input) => {
+      draft.proximoControl = /^\d{4}-\d{2}-\d{2}$/.test(input.value) ? input.value : "";
+      saveDraft();
+    }),
     el("label", { class: "field", text: "Indicaciones" }, [area]),
   ]);
 }
@@ -1126,14 +1169,17 @@ function viewRevision() {
       perfil.cmp ? `CMP ${perfil.cmp}` : "—",
     ]),
     reviewBlock("Paciente", "paciente", [
-      draft.pacienteDNI ? `HC ${draft.pacienteDNI}` : "HC —",
+      draft.pacienteDNI ? `HC: ${draft.pacienteDNI}` : "HC —",
       draft.pacienteNombre || "—",
       `Edad ${draft.pacienteEdad || "—"} · ${sexo}`,
       `${draft.fechaAtencion || "—"}${draft.horaAtencion ? ` · ${draft.horaAtencion}` : ""}`,
     ]),
-    reviewBlock("Diagnóstico", "diagnostico", [draft.diagnostico || "—"]),
+    reviewBlock("Diagnóstico", "diagnostico", [
+      [draft.cie10, draft.diagnostico].filter(Boolean).join(" — ") || "—",
+      draft.proximoControl ? `Control ${draft.proximoControl}` : "",
+    ].filter(Boolean)),
     reviewBlock("Medicamentos", "medicamentos", draft.medicamentos.length
-      ? draft.medicamentos.map((med) => `${med.nombre} — ${med.dosis}, ${med.frecuencia}`)
+      ? draft.medicamentos.map((med) => `${med.nombre} — ${med.cantidad}, ${med.frecuencia}`)
       : ["—"]),
     reviewBlock("Exámenes", "examenes", draft.examenes.length
       ? draft.examenes.map((ex) => ex.nombre)
@@ -1182,8 +1228,7 @@ function medInput(label, id, key, placeholder) {
   input.addEventListener("input", () => {
     const max = key === "indicaciones" ? 240 : key === "nombre" ? 120 : 80;
     medForm[key] = cleanText(input.value, max);
-    if (key === "cantidad") cantidadManual = true;
-    if (key === "duracion" || key === "presentacion") syncCantidad();
+    if (key === "presentacion") syncCantidad();
   });
   return el("label", { class: "field", text: label }, [input]);
 }
@@ -1279,7 +1324,8 @@ function paintDxSuggestions() {
     ]);
     button.addEventListener("click", () => {
       const extra = curso && !dx.descripcion.toLowerCase().includes(curso.toLowerCase()) ? ` (${curso})` : "";
-      draft.diagnostico = cleanText(`${dx.codigo} - ${dx.descripcion}${extra}`, 180);
+      draft.cie10 = cleanText(dx.codigo, 12).toUpperCase();
+      draft.diagnostico = cleanText(`${dx.descripcion}${extra}`, 180);
       draft.dxQuery = "";
       saveDraft();
       goto("diagnostico");
@@ -1309,17 +1355,23 @@ function paintMedSuggestions() {
     box.replaceChildren();
     return;
   }
-  const matches = medicamentosData
-    .map((med) => ({ med, score: scoreMed(med, term) }))
-    .filter((item) => item.score >= 0)
+  const grupos = new Map();
+  for (const med of medicamentosData) {
+    const score = scoreMed(med, term);
+    if (score < 0) continue;
+    const actual = grupos.get(med.dci);
+    if (!actual || score > actual.score) grupos.set(med.dci, { score, med });
+  }
+  const matches = [...grupos.values()]
     .sort((a, b) => b.score - a.score || a.med.dci.localeCompare(b.med.dci, "es"))
     .slice(0, 2)
     .map((item) => item.med);
   box.replaceChildren(...matches.map((med) => {
+    const total = presentacionesDe(med.dci).length;
     const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: `${med.dci} — ${med.presentacion}` }),
-      el("small", { text: [med.grupo, med.via, dosisReferencia(med), med.atc ? `ATC ${med.atc}` : ""].filter(Boolean).join(" · ") }),
+      el("small", { text: [total > 1 ? `${total} presentaciones` : "", med.via, dosisReferencia(med)].filter(Boolean).join(" · ") }),
       peru.length ? el("small", { text: `Perú: ${peru.join(", ")}` }) : null,
     ]);
     button.addEventListener("click", () => applyMed(med));
@@ -1327,37 +1379,56 @@ function paintMedSuggestions() {
   }));
 }
 
+function elegirPresentacion(med) {
+  medForm.presentacion = cleanText(med.presentacion, 80);
+  medForm.via = VIAS.includes(med.via) ? med.via : "";
+  medForm.dosis = dosisReferencia(med) || cleanText(med.presentacion, 40);
+  syncCantidad();
+}
+
 function applyMed(med) {
   medForm.nombre = cleanText(med.dci, 120);
-  medForm.presentacion = cleanText(med.presentacion, 80);
-  medForm.via = VIAS.find((via) => via === med.via) || "";
-  medForm.dosis = dosisReferencia(med) || medForm.dosis;
-  medForm.q = cleanText(`${med.dci} (${med.presentacion})`, 80);
-  cantidadManual = false;
-  const peru = (med.marcas || []).filter((marca) => MARCAS_PERU.some((item) => item.toLowerCase() === marca.toLowerCase()));
-  const assign = (id, value) => {
-    const node = document.getElementById(id);
-    if (node) node.value = value;
-  };
-  assign("med-q", medForm.q);
-  assign("med-nombre", medForm.nombre);
-  assign("med-presentacion", medForm.presentacion);
-  assign("med-via", medForm.via);
-  assign("med-dosis", medForm.dosis);
-  const notas = document.getElementById("med-indicaciones");
-  if (notas && peru.length) notas.placeholder = `Marcas: ${peru.join(", ")}`;
-  syncCantidad();
-  const box = document.getElementById("med-suggest");
-  if (box) box.replaceChildren();
+  medForm.q = "";
+  elegirPresentacion(med);
+  goto("medicamentos");
 }
 
 function syncCantidad() {
-  if (cantidadManual) return;
-  const cantidad = calcularCantidad(medForm.presentacion, medForm.frecuencia, medForm.duracion);
-  if (!cantidad && !medForm.cantidad) return;
-  medForm.cantidad = cantidad;
+  medForm.cantidad = calcularCantidad(medForm.presentacion, medForm.frecuencia, medForm.duracion);
   const node = document.getElementById("med-cantidad");
-  if (node) node.value = cantidad;
+  if (node) node.value = medForm.cantidad;
+}
+
+function diasField() {
+  const input = el("input", {
+    id: "med-dias",
+    type: "number",
+    min: "1",
+    max: "90",
+    inputmode: "numeric",
+    value: medForm.dias,
+  });
+  input.addEventListener("input", () => {
+    const n = Math.min(90, Number(onlyDigits(input.value, 2)) || 0);
+    medForm.dias = n ? String(n) : "";
+    input.value = medForm.dias;
+    medForm.duracion = n === 1 ? "1 día" : n ? `${n} días` : "";
+    syncCantidad();
+  });
+  return el("label", { class: "field", text: "Días" }, [input]);
+}
+
+function cantidadField() {
+  const input = el("input", {
+    id: "med-cantidad",
+    type: "text",
+    value: medForm.cantidad,
+    readonly: "readonly",
+    tabindex: "-1",
+    placeholder: "Se calcula sola",
+    "aria-readonly": "true",
+  });
+  return el("label", { class: "field", text: "Cantidad" }, [input]);
 }
 
 function completarIndicaciones(area) {
@@ -1403,7 +1474,6 @@ function openComposer(kind) {
   showError("");
   if (kind === "med") {
     medForm = emptyMedForm();
-    cantidadManual = false;
     detalleMed = false;
   }
   if (kind === "exam") {
@@ -1415,11 +1485,14 @@ function openComposer(kind) {
 }
 
 function commitMed() {
-  let duracion = cleanText(medForm.duracion, 40);
-  if (duracion && /^\d+$/.test(duracion)) {
-    const n = Number(duracion);
-    duracion = n === 1 ? "1 día" : `${n} días`;
+  if (medForm.dias) {
+    const n = Number(medForm.dias);
+    medForm.duracion = n === 1 ? "1 día" : `${n} días`;
+  } else if (medForm.frecuencia === "Dosis única") {
+    medForm.duracion = medForm.duracion || "Dosis única";
   }
+  if (!medForm.dosis) medForm.dosis = dosisReferencia({ presentacion: medForm.presentacion }) || cleanText(medForm.presentacion, 40);
+  syncCantidad();
   const med = sanitizeMed({
     id: Date.now(),
     nombre: medForm.nombre,
@@ -1427,12 +1500,15 @@ function commitMed() {
     cantidad: medForm.cantidad,
     dosis: medForm.dosis,
     frecuencia: medForm.frecuencia,
-    duracion,
+    duracion: medForm.duracion,
     via: medForm.via,
     indicaciones: medForm.indicaciones,
   });
   if (!med) {
-    showError("Completa nombre, presentación, cantidad, dosis, frecuencia, duración y vía.");
+    if (!medForm.nombre || !medForm.presentacion) showError("Elige el medicamento y su presentación.");
+    else if (medForm.frecuencia === "Según necesidad") showError("Esa frecuencia no calcula una cantidad.");
+    else if (!medForm.dias && medForm.frecuencia !== "Dosis única") showError("Elige los días y la frecuencia.");
+    else showError("Revisa la presentación, la dosis y la vía.");
     return;
   }
   draft.medicamentos.push(med);
@@ -1647,10 +1723,171 @@ function dialogNode() {
   ]);
 }
 
-function writeLine(doc, text, x, y, width) {
-  const lines = doc.splitTextToSize(String(text || ""), width);
-  doc.text(lines, x, y);
-  return y + lines.length * 6;
+function fechaGuion(iso) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso || "")) return "";
+  const [anio, mes, dia] = iso.split("-");
+  return `${dia} / ${mes} / ${anio}`;
+}
+
+function casilla(doc, x, y, marcada) {
+  doc.setDrawColor(18, 54, 82);
+  doc.setLineWidth(0.3);
+  doc.rect(x, y, 3.1, 3.1);
+  if (!marcada) return;
+  doc.setLineWidth(0.45);
+  doc.line(x + 0.5, y + 1.5, x + 1.2, y + 2.4);
+  doc.line(x + 1.2, y + 2.4, x + 2.6, y + 0.6);
+}
+
+function campoReceta(doc, etiqueta, valor, x, y, ancho) {
+  doc.setFont("times", "bold");
+  doc.setFontSize(8);
+  doc.setTextColor(18, 54, 82);
+  doc.text(etiqueta, x, y);
+  const inicio = x + doc.getTextWidth(etiqueta) + 1.3;
+  const libre = Math.max(6, x + ancho - inicio);
+  doc.setFont("times", "normal");
+  doc.setFontSize(9);
+  const texto = doc.splitTextToSize(String(valor || ""), libre)[0] || "";
+  if (texto) doc.text(texto, inicio, y);
+  doc.setDrawColor(168, 188, 208);
+  doc.setLineWidth(0.2);
+  doc.line(inicio, y + 1.1, x + ancho, y + 1.1);
+}
+
+function lineasColumna(doc, lineas, x, y, ancho, limite) {
+  doc.setFont("times", "normal");
+  doc.setFontSize(8);
+  doc.setTextColor(18, 54, 82);
+  let cursor = y;
+  for (const linea of lineas) {
+    const partes = doc.splitTextToSize(String(linea || ""), ancho);
+    for (const parte of partes) {
+      if (cursor > limite) return;
+      doc.text(parte, x, cursor);
+      cursor += 4.5;
+    }
+  }
+}
+
+function dibujarReceta(doc, top, alto) {
+  const x = 8;
+  const ancho = 194;
+  const tinta = [18, 54, 82];
+  const fondo = [215, 228, 240];
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.45);
+  doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
+  doc.setFillColor(...fondo);
+  doc.roundedRect(x, top, ancho, 16, 2.4, 2.4, "F");
+  doc.rect(x, top + 10, ancho, 6, "F");
+  doc.setDrawColor(...tinta);
+  doc.line(x, top + 16, x + ancho, top + 16);
+
+  doc.setFillColor(255, 255, 255);
+  doc.roundedRect(x + 4, top + 2.2, 14, 11.6, 1.4, 1.4, "FD");
+  doc.setFont("times", "bold");
+  doc.setFontSize(13);
+  doc.setTextColor(...tinta);
+  doc.text("LR", x + 11, top + 10, { align: "center" });
+
+  const nombre = (perfil.nombre || "").toUpperCase();
+  doc.setFontSize(11);
+  const titulo = doc.splitTextToSize(nombre, 128)[0] || "";
+  doc.text(titulo, x + ancho / 2, top + 7.2, { align: "center" });
+  doc.setFont("times", "normal");
+  doc.setFontSize(8);
+  const credencial = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  |  ").toUpperCase();
+  doc.text(doc.splitTextToSize(credencial, 128)[0] || "", x + ancho / 2, top + 12.4, { align: "center" });
+
+  const cx = x + ancho - 12;
+  const cy = top + 8.2;
+  doc.setLineWidth(0.35);
+  doc.circle(cx, cy - 4.2, 1.15);
+  doc.line(cx, cy - 3, cx, cy + 4.2);
+  doc.line(cx - 2.4, cy + 4.2, cx, cy + 2);
+  doc.line(cx + 2.4, cy + 4.2, cx, cy + 2);
+  doc.line(cx, cy - 2.2, cx + 2.1, cy - 0.6);
+  doc.line(cx + 2.1, cy - 0.6, cx, cy + 1);
+  doc.line(cx, cy + 1, cx - 2.1, cy + 2.5);
+
+  let y = top + 22;
+  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 4, y, 128);
+  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 136, y, 54);
+  y += 6.4;
+  campoReceta(doc, "Edad:", draft.pacienteEdad, x + 4, y, 28);
+  doc.setFont("times", "bold");
+  doc.setFontSize(8);
+  doc.setTextColor(...tinta);
+  doc.text("Sexo:", x + 36, y);
+  doc.setFont("times", "normal");
+  doc.text("M", x + 48, y);
+  casilla(doc, x + 52, y - 2.5, draft.pacienteSexo === "M");
+  doc.text("F", x + 58, y);
+  casilla(doc, x + 61.5, y - 2.5, draft.pacienteSexo === "F");
+  campoReceta(doc, "DNI:", draft.pacienteDNI, x + 70, y, 52);
+  campoReceta(doc, "H. Clínica:", draft.pacienteDNI, x + 126, y, 64);
+  y += 6.4;
+  campoReceta(doc, "Diagnóstico:", draft.diagnostico, x + 4, y, 128);
+  campoReceta(doc, "CIE-10:", draft.cie10, x + 136, y, 54);
+
+  const colTop = y + 4;
+  const colAlto = alto - (colTop - top) - 16;
+  const colAncho = 92;
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.35);
+  doc.roundedRect(x + 3, colTop, colAncho, colAlto, 1.6, 1.6);
+  doc.roundedRect(x + 99, colTop, colAncho, colAlto, 1.6, 1.6);
+  doc.setFont("times", "bolditalic");
+  doc.setFontSize(12);
+  doc.text("Rp/", x + 7, colTop + 6);
+  doc.setFont("times", "bold");
+  doc.setFontSize(11);
+  doc.text("Indicaciones:", x + 103, colTop + 6);
+
+  doc.setFont("times", "bold");
+  doc.setFontSize(36);
+  doc.setTextColor(232, 239, 246);
+  doc.text("LR", x + ancho / 2, colTop + colAlto / 2 + 4, { align: "center" });
+
+  doc.setDrawColor(186, 204, 220);
+  doc.setLineWidth(0.15);
+  const primera = colTop + 12;
+  const ultima = colTop + colAlto - 4;
+  for (let linea = primera; linea <= ultima; linea += 4.5) {
+    doc.line(x + 6, linea, x + 3 + colAncho - 3, linea);
+    doc.line(x + 102, linea, x + 99 + colAncho - 3, linea);
+  }
+
+  const rp = [];
+  draft.medicamentos.forEach((med, index) => {
+    rp.push(`${index + 1}. ${med.nombre} — ${med.presentacion}`);
+    const pauta = [`Cant. ${med.cantidad}`, med.dosis, med.frecuencia, med.duracion, med.via].filter(Boolean).join(", ");
+    if (pauta) rp.push(pauta);
+    if (med.indicaciones) rp.push(med.indicaciones);
+  });
+  const notas = [
+    ...String(draft.indicacionesGenerales || "").split("\n").map((linea) => linea.trim()).filter(Boolean),
+    ...draft.examenes.map((ex) => `Examen: ${ex.nombre}`),
+  ];
+  lineasColumna(doc, rp, x + 6, primera - 1.5, colAncho - 8, ultima - 2);
+  lineasColumna(doc, notas, x + 102, primera - 1.5, colAncho - 8, ultima - 2);
+
+  const pie = top + alto - 8;
+  doc.setFont("times", "bold");
+  doc.setFontSize(8);
+  doc.setTextColor(...tinta);
+  doc.text("Próximo control:", x + 6, pie);
+  doc.setFont("times", "normal");
+  doc.text(fechaGuion(draft.proximoControl), x + 34, pie);
+  doc.setDrawColor(168, 188, 208);
+  doc.line(x + 34, pie + 1.1, x + 78, pie + 1.1);
+  doc.line(x + 124, pie - 6, x + 186, pie - 6);
+  doc.setFont("times", "bold");
+  doc.text("Firma y Sello", x + 155, pie, { align: "center" });
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.45);
+  doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
 }
 
 function generarPDF() {
@@ -1681,115 +1918,22 @@ function generarPDF() {
   busy = true;
   render();
   try {
-    const doc = new jsPDF();
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const pageHeight = doc.internal.pageSize.getHeight();
-    const margin = 16;
-    const width = pageWidth - margin * 2;
-    let y = 20;
-
-    const ensure = (needed) => {
-      if (y + needed > pageHeight - 16) {
-        doc.addPage();
-        y = 20;
-      }
-    };
-
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(18);
-    doc.text("RECETA MÉDICA", pageWidth / 2, y, { align: "center" });
-    y += 10;
-    doc.setFontSize(11);
+    const doc = new jsPDF({ unit: "mm", format: "a4" });
+    const alto = 142;
+    dibujarReceta(doc, 5, alto);
+    dibujarReceta(doc, 150, alto);
+    doc.setDrawColor(180, 196, 214);
+    doc.setLineDashPattern([0.7, 0.8], 0);
+    doc.setLineWidth(0.2);
+    doc.line(12, 148.6, 198, 148.6);
+    doc.setLineDashPattern([], 0);
     doc.setFont("helvetica", "normal");
-    const contacto = [];
-    if (perfil.telefono) contacto.push(`Tel: ${perfil.telefono}`);
-    if (perfil.email && !validarEmail(perfil.email)) contacto.push(perfil.email);
-    if (contacto.length) y = writeLine(doc, contacto.join(" | "), margin, y, width);
-    y += 2;
-    doc.line(margin, y, pageWidth - margin, y);
-    y += 8;
-
-    doc.setFont("helvetica", "bold");
-    doc.text("MÉDICO PRESCRIPTOR", margin, y);
-    y += 6;
-    doc.setFont("helvetica", "normal");
-    y = writeLine(doc, perfil.nombre, margin, y, width);
-    const credencial = perfil.especialidad ? `CMP: ${perfil.cmp} | ${perfil.especialidad}` : `CMP: ${perfil.cmp}`;
-    y = writeLine(doc, credencial, margin, y, width);
-    y += 4;
-
-    doc.setFont("helvetica", "bold");
-    doc.text("PACIENTE", margin, y);
-    y += 6;
-    doc.setFont("helvetica", "normal");
-    y = writeLine(doc, draft.pacienteNombre, margin, y, width);
-    const sexo = draft.pacienteSexo === "M" ? "Masculino" : draft.pacienteSexo === "F" ? "Femenino" : "";
-    let datos = `Edad: ${draft.pacienteEdad} años`;
-    if (sexo) datos += ` | Sexo: ${sexo}`;
-    if (draft.pacienteDNI) datos += ` | HC: ${draft.pacienteDNI}`;
-    y = writeLine(doc, datos, margin, y, width);
-    const fecha = new Date(`${draft.fechaAtencion}T00:00:00`).toLocaleDateString("es-PE", {
-      year: "numeric", month: "long", day: "numeric",
-    });
-    y = writeLine(doc, `Fecha de atención: ${fecha}${draft.horaAtencion ? ` | Hora: ${draft.horaAtencion}` : ""}`, margin, y, width);
-    if (draft.diagnostico) y = writeLine(doc, `Diagnóstico: ${draft.diagnostico}`, margin, y, width);
-    y += 4;
-
-    if (draft.medicamentos.length) {
-      ensure(20);
-      doc.setFont("helvetica", "bold");
-      doc.text("Rp/", margin, y);
-      y += 7;
-      doc.setFont("helvetica", "normal");
-      draft.medicamentos.forEach((med, index) => {
-        ensure(18);
-        const texto = `${index + 1}. ${med.nombre} (${med.presentacion}) — Cant.: ${med.cantidad}. ${med.dosis}, ${med.frecuencia}, ${med.duracion}, ${med.via}${med.indicaciones ? `. ${med.indicaciones}` : ""}`;
-        y = writeLine(doc, texto, margin, y, width);
-        y += 2;
-      });
-    }
-
-    if (draft.examenes.length) {
-      ensure(20);
-      y += 2;
-      doc.setFont("helvetica", "bold");
-      doc.text("Exámenes auxiliares", margin, y);
-      y += 7;
-      doc.setFont("helvetica", "normal");
-      draft.examenes.forEach((ex, index) => {
-        ensure(12);
-        y = writeLine(doc, `${index + 1}. ${ex.nombre}`, margin, y, width);
-      });
-    }
-
-    if (draft.indicacionesGenerales) {
-      ensure(24);
-      y += 4;
-      doc.setFont("helvetica", "bold");
-      doc.text("Indicaciones generales", margin, y);
-      y += 7;
-      doc.setFont("helvetica", "normal");
-      y = writeLine(doc, draft.indicacionesGenerales, margin, y, width);
-    }
-
-    ensure(36);
-    y += 12;
-    doc.line(pageWidth / 2 - 28, y, pageWidth / 2 + 28, y);
-    y += 6;
-    doc.setFont("helvetica", "bold");
-    doc.text("Firma del médico", pageWidth / 2, y, { align: "center" });
-    y += 6;
-    doc.setFont("helvetica", "normal");
-    doc.text(perfil.nombre, pageWidth / 2, y, { align: "center" });
-    y += 5;
-    doc.text(credencial, pageWidth / 2, y, { align: "center" });
-    y += 8;
-    doc.setFontSize(8);
-    doc.setTextColor(90);
+    doc.setFontSize(6.5);
+    doc.setTextColor(110);
     const generado = new Date().toLocaleString("es-PE", {
       year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
     });
-    doc.text(`Generado localmente el ${generado}. Este PDF no incluye firma digital.`, pageWidth / 2, y, { align: "center" });
+    doc.text(`Generado localmente el ${generado}. Este PDF no incluye firma digital.`, 105, 294.6, { align: "center" });
     doc.save(`Receta_${fileSlug(draft.pacienteNombre)}.pdf`);
     draft = emptyDraft();
     composer = null;
