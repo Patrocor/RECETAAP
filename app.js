@@ -324,7 +324,12 @@ function initials(nombre) {
 }
 
 function render() {
-  const shell = el("div", { class: "shell" }, [header(), el("main", { class: "main" }, [view()]), footer()]);
+  const escritorio = screen === "inicio" || screen === "login";
+  const shell = el("div", { class: escritorio ? "shell shell-desk" : "shell" }, [
+    escritorio ? null : header(),
+    el("main", { class: escritorio ? "main main-desk" : "main" }, [view()]),
+    footer(),
+  ]);
   if (dialog) shell.append(dialogNode());
   root.replaceChildren(shell);
   if (formError) showError(formError);
@@ -459,6 +464,21 @@ function showError(message) {
   node.textContent = formError;
 }
 
+function fechaEscritorio() {
+  return new Date().toLocaleDateString("es-PE", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+  }).replace(/\./g, "").replace(/,/g, "");
+}
+
+function deskMark() {
+  return el("div", { class: "desk-mark" }, [
+    el("img", { class: "logo", src: "logo.svg", alt: "" }),
+    el("div", { class: "wordmark", text: "RecetAPP" }),
+  ]);
+}
+
 function viewLogin() {
   const usuario = el("input", {
     id: "login-usuario",
@@ -484,10 +504,17 @@ function viewLogin() {
   clave.addEventListener("input", () => {
     loginClave = clave.value.slice(0, 80);
   });
-  return el("section", { class: "screen stack" }, [
-    errorSlot(),
-    el("label", { class: "field", text: "Usuario" }, [usuario]),
-    el("label", { class: "field", text: "Contraseña" }, [clave]),
+  return el("section", { class: "screen desk" }, [
+    el("div", { class: "desk-hero" }, [
+      deskMark(),
+      el("p", { class: "desk-date", text: fechaEscritorio() }),
+    ]),
+    el("div", { class: "desk-card stack" }, [
+      errorSlot(),
+      el("label", { class: "field", text: "Usuario" }, [usuario]),
+      el("label", { class: "field", text: "Contraseña" }, [clave]),
+    ]),
+    el("div", { class: "desk-spacer" }),
   ]);
 }
 
@@ -664,36 +691,31 @@ async function salirDeLaApp() {
 }
 
 function viewInicio() {
-  const blocks = [
-    el("button", { type: "button", class: "profile-row", onclick: () => openPerfil("inicio") }, [
-      el("div", { class: "avatar", text: initials(perfil.nombre) }),
-      el("div", {}, [
-        el("div", { class: "profile-name", text: perfil.nombre || "Perfil" }),
-        perfil.cmp ? el("div", { class: "profile-sub", text: `CMP ${perfil.cmp}` }) : null,
-      ]),
-      el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
-    ]),
-    el("button", { type: "button", class: "cta", onclick: startNew }, [
-      el("span", { class: "cta-title", text: "Nueva receta" }),
-    ]),
-    cuenta?.isAdmin ? el("button", { type: "button", class: "secondary-card", onclick: abrirAdmin }, [
-      el("div", { class: "profile-name", text: "Admin" }),
-      el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
-    ]) : null,
-    el("button", { type: "button", class: "secondary-card", onclick: salirDeLaApp }, [
-      el("div", { class: "profile-name", text: "Salir" }),
-    ]),
+  const meta = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join(" · ");
+  const rail = [
+    el("button", { type: "button", onclick: () => openPerfil("inicio") }, ["Perfil"]),
+    cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, ["Admin"]) : null,
+    el("button", { type: "button", onclick: salirDeLaApp }, ["Salir"]),
   ];
-  if (hasMeaningfulDraft()) {
-    blocks.push(el("button", { type: "button", class: "secondary-card", onclick: resume }, [
-      el("div", {}, [
-        el("div", { class: "profile-name", text: "Borrador" }),
-        draft.pacienteNombre ? el("div", { class: "profile-sub", text: draft.pacienteNombre }) : null,
+  return el("section", { class: "screen desk" }, [
+    el("div", { class: "desk-hero" }, [
+      deskMark(),
+      el("button", { type: "button", class: "desk-id", onclick: () => openPerfil("inicio") }, [
+        el("p", { class: "desk-date", text: fechaEscritorio() }),
+        el("h1", { class: "desk-name", text: perfil.nombre || "Perfil" }),
+        meta ? el("p", { class: "desk-meta", text: meta }) : null,
       ]),
-      el("span", { class: "chev", "aria-hidden": "true", text: "›" }),
-    ]));
-  }
-  return el("section", { class: "screen stack home" }, blocks);
+    ]),
+    el("button", { type: "button", class: "desk-primary", onclick: startNew }, [
+      el("span", { text: "Nueva receta" }),
+    ]),
+    hasMeaningfulDraft() ? el("button", { type: "button", class: "desk-draft", onclick: resume }, [
+      el("span", { class: "desk-draft-label", text: "Borrador" }),
+      el("span", { class: "desk-draft-name", text: draft.pacienteNombre || "Sin paciente" }),
+    ]) : null,
+    el("div", { class: "desk-spacer" }),
+    el("nav", { class: "desk-rail", "aria-label": "Cuenta" }, rail),
+  ]);
 }
 
 function viewPerfil() {
