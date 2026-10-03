@@ -1339,14 +1339,13 @@ function resumenPacienteOrden() {
     sexo,
   ].filter(Boolean).join(" · ");
   return el("article", { class: draft.pacienteNombre ? "item order-patient" : "item order-patient is-empty" }, [
-    el("div", { class: "item-top" }, [
-      el("div", {}, [
+    el("span", { class: "patient-mark", "aria-hidden": "true", text: initials(draft.pacienteNombre) }),
+    el("div", { class: "patient-copy" }, [
         el("p", { class: "eyebrow", text: "Paciente" }),
         el("h3", { text: draft.pacienteNombre || "Completa los datos del paciente" }),
         detalle ? el("p", { class: "muted", text: detalle }) : null,
-      ]),
-      iconBtn("pencil", draft.pacienteNombre ? "Editar paciente" : "Completar paciente", () => goto("paciente")),
     ]),
+    iconBtn("pencil", draft.pacienteNombre ? "Editar paciente" : "Completar paciente", () => goto("paciente")),
   ]);
 }
 
@@ -1366,8 +1365,25 @@ function selectorTipoExamen() {
           examEditId = null;
           render();
         },
-      }, [`${tipo}${cuentaTipo ? ` · ${cuentaTipo}` : ""}`]);
+      }, [
+        el("span", { text: tipo }),
+        cuentaTipo ? el("span", { class: "tab-count", text: String(cuentaTipo) }) : null,
+      ]);
     }),
+  ]);
+}
+
+function resumenOrdenExamenes() {
+  const laboratorios = draft.examenes.filter((ex) => ex.tipo === "Laboratorio").length;
+  const imagenes = draft.examenes.filter((ex) => ex.tipo === "Imágenes").length;
+  const total = laboratorios + imagenes;
+  if (!total) return null;
+  return el("div", { class: "order-summary" }, [
+    el("strong", { text: `${total} examen${total === 1 ? "" : "es"} en la orden` }),
+    el("span", { text: [
+      laboratorios ? `${laboratorios} laboratorio${laboratorios === 1 ? "" : "s"}` : "",
+      imagenes ? `${imagenes} ${imagenes === 1 ? "estudio" : "estudios"}` : "",
+    ].filter(Boolean).join(" · ") }),
   ]);
 }
 
@@ -1376,10 +1392,11 @@ function viewOrdenExamenes() {
     errorSlot(),
     resumenPacienteOrden(),
     el("div", { class: "order-heading" }, [
-      el("p", { class: "eyebrow", text: "Solicitud independiente" }),
       el("h2", { text: examTipo === "Laboratorio" ? "Exámenes de laboratorio" : "Imágenes y otros estudios" }),
+      el("p", { text: "Busca, selecciona y revisa la preparación antes de generar la orden." }),
     ]),
     selectorTipoExamen(),
+    resumenOrdenExamenes(),
     composer === "exam" ? viewExamComposer() : viewExamenes(),
   ]);
 }
@@ -1387,10 +1404,16 @@ function viewOrdenExamenes() {
 function viewExamenes() {
   const items = draft.examenes.filter((ex) => ex.tipo === examTipo).map(examCard);
   return el("div", { class: "stack exam-list" }, [
-    items.length ? null : vacioLista(
-      examTipo === "Laboratorio" ? "Todavía no hay análisis de laboratorio." : "Todavía no hay estudios de imagen.",
-      () => openComposer("exam"),
-    ),
+    items.length ? null : el("div", { class: "empty exam-empty" }, [
+      el("span", { class: "empty-mark", "aria-hidden": "true", text: examTipo === "Laboratorio" ? "LAB" : "IMG" }),
+      el("div", {}, [
+        el("strong", { text: examTipo === "Laboratorio" ? "Sin análisis seleccionados" : "Sin estudios seleccionados" }),
+        el("p", { text: examTipo === "Laboratorio"
+          ? "Agrega hemograma, perfiles, cultivos u otras pruebas."
+          : "Agrega radiografías, ecografías, tomografías u otros estudios." }),
+      ]),
+      botonMas("Agregar examen", () => openComposer("exam")),
+    ]),
     ...items,
     items.length ? botonMas("Agregar examen", () => openComposer("exam")) : null,
   ]);
@@ -1418,6 +1441,7 @@ function viewExamComposer() {
     const catalogo = catalogExam(examNombre);
     section.append(el("article", { class: "item elegido" }, [
       el("div", { class: "item-top" }, [
+        el("span", { class: "exam-kind", "aria-hidden": "true", text: examTipo === "Laboratorio" ? "LAB" : "IMG" }),
         el("div", {}, [
           el("h3", { text: examNombre }),
           catalogo?.grupo ? el("p", { class: "muted", text: catalogo.grupo }) : null,
@@ -1445,7 +1469,10 @@ function viewExamComposer() {
           }, "is-danger"),
         ]),
       ]),
-      catalogo?.indicacionesSug ? el("p", { class: "exam-guidance", text: catalogo.indicacionesSug }) : null,
+      catalogo?.indicacionesSug ? el("div", { class: "exam-guidance" }, [
+        el("strong", { text: "Preparación" }),
+        el("p", { text: catalogo.indicacionesSug }),
+      ]) : null,
     ]));
   }
   queueMicrotask(paintExamSuggestions);
@@ -1611,9 +1638,10 @@ function medCard(med) {
 function examCard(ex) {
   return el("article", { class: "item" }, [
     el("div", { class: "item-top" }, [
+      el("span", { class: "exam-kind", "aria-hidden": "true", text: ex.tipo === "Laboratorio" ? "LAB" : "IMG" }),
       el("div", {}, [
         el("h3", { text: ex.nombre }),
-        el("p", { class: "muted", text: [ex.tipo, ex.grupo].filter(Boolean).join(" · ") }),
+        el("p", { class: "muted", text: ex.grupo || ex.tipo }),
       ]),
       el("div", { class: "item-actions" }, [
         iconBtn("pencil", "Editar", () => editarExamen(ex)),
@@ -1624,7 +1652,10 @@ function examCard(ex) {
         }, "is-danger"),
       ]),
     ]),
-    ex.indicaciones ? el("p", { class: "exam-guidance", text: ex.indicaciones }) : null,
+    ex.indicaciones ? el("div", { class: "exam-guidance" }, [
+      el("strong", { text: "Preparación" }),
+      el("p", { text: ex.indicaciones }),
+    ]) : null,
   ]);
 }
 
@@ -2152,6 +2183,7 @@ function viewBoard() {
     fold("medicamentos", "Medicamentos"),
     fold("indicaciones", "Indicaciones"),
     el("button", { type: "button", class: "order-link", onclick: () => goto("examenes") }, [
+      el("span", { class: "order-link-mark", "aria-hidden": "true", text: "EX" }),
       el("span", {}, [
         el("strong", { text: "Solicitar exámenes" }),
         el("small", { text: draft.examenes.length
