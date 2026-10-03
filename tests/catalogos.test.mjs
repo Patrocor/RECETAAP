@@ -4,8 +4,8 @@ import { cie10Data, medicamentosData, examenesCatalogo } from "../catalogos.js";
 
 test("los catálogos conservan el tamaño de la versión anterior", () => {
   assert.ok(cie10Data.length >= 2300);
-  assert.ok(medicamentosData.length >= 900);
-  assert.ok(examenesCatalogo.length >= 150);
+  assert.ok(medicamentosData.length >= 1050);
+  assert.ok(examenesCatalogo.length >= 280);
   assert.ok(medicamentosData.some((med) => med.dci === "Omeprazol"));
   assert.ok(medicamentosData.some((med) => med.dci === "Diclofenaco sódico" && /ampolla IM/.test(med.presentacion)));
   assert.ok(medicamentosData.some((med) => med.dci === "Diclofenaco sódico" && /ampolla IV/.test(med.presentacion)));
@@ -13,6 +13,16 @@ test("los catálogos conservan el tamaño de la versión anterior", () => {
   assert.ok(medicamentosData.some((med) => med.dci === "Clonixinato de lisina" && /ampolla IM/.test(med.presentacion)));
   assert.ok(medicamentosData.some((med) => med.dci === "Clorfenamina" && /ampolla IM/.test(med.presentacion)));
   assert.ok(examenesCatalogo.some((ex) => ex.nombre === "Mamografía bilateral"));
+  assert.ok(medicamentosData.some((med) => med.dci === "Rivaroxabán" && med.via === "Vía oral"));
+  assert.ok(medicamentosData.some((med) => med.dci === "Semaglutida" && med.via === "Vía subcutánea"));
+  assert.ok(medicamentosData.some((med) => med.dci === "Amikacina" && /ampolla/.test(med.presentacion)));
+  assert.ok(examenesCatalogo.some((ex) => ex.nombre === "Triglicéridos"));
+  assert.ok(examenesCatalogo.some((ex) => ex.nombre === "Gasometría venosa"));
+  assert.ok(examenesCatalogo.some((ex) => /EKG/.test(ex.alias)));
+  assert.ok(examenesCatalogo.some((ex) => /TAC/.test(ex.alias) && ex.grupo === "Tomografía"));
+  assert.ok(examenesCatalogo.some((ex) => /carotíd/.test(`${ex.nombre} ${ex.alias}`)));
+  assert.equal(new Set(examenesCatalogo.map((ex) => ex.nombre)).size, examenesCatalogo.length);
+  assert.ok(new Set(medicamentosData.map((med) => `${med.dci}|${med.presentacion}|${med.via}`.toLowerCase())).size >= 1040);
   assert.ok(cie10Data.some((dx) => dx.codigo === "I10"));
   assert.equal(cie10Data.every((dx) => dx.tipo && dx.subtipo && dx.sistema), true);
   assert.equal(cie10Data.some((dx) => dx.tipo === "otro"), false);

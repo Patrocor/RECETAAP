@@ -77,9 +77,6 @@ const VIAS = [
   "Dispositivo intrauterino",
 ];
 
-const SISTEMAS = [...new Set(cie10Data.map((dx) => dx.sistema).filter(Boolean))]
-  .sort((a, b) => a.localeCompare(b, "es"));
-
 const TIPOS = [
   { id: "agudo", label: "Agudo" },
   { id: "crónico", label: "Crónico" },
@@ -91,19 +88,6 @@ const TIPOS = [
   { id: "síntoma", label: "Síntoma" },
   { id: "prevención", label: "Prevención" },
 ];
-
-const SUBTIPOS = [...new Set(cie10Data.map((dx) => dx.subtipo).filter(Boolean))]
-  .sort((a, b) => a.localeCompare(b, "es"));
-
-const ALIAS_SISTEMA = {
-  "Salud mental": "Salud Mental",
-  "Músculo-esquelético": "Musculoesquelético",
-  "Infeccioso": "Infecciosas",
-  "Neoplasias": "Oncología",
-  "Metabólico": "Endocrino/Metabólico",
-  "Traumatología": "Traumatismos",
-  "Síntomas generales": "Síntomas y Signos",
-};
 
 function etiquetaTipo(id) {
   return TIPOS.find((tipo) => tipo.id === id)?.label || "";
@@ -175,8 +159,6 @@ function ordenarDiagnosticos(items) {
   });
 }
 
-const TIPOS_EXAMEN = ["Laboratorio", "Imágenes", "Procedimientos"];
-
 const MARCAS_PERU = [
   "Panadol", "Velamox", "Clamoxin", "Augmentin", "Zitromax", "Ciproxina",
   "Cozaar", "Metforal", "Voltaren", "Apronax", "Rocephin", "Ventolin",
@@ -204,12 +186,8 @@ function emptyDraft() {
     cie10: "",
     proximoControl: "",
     dxQuery: "",
-    filtroSistema: "",
-    filtroTipo: "",
-    filtroSubtipo: "",
     medicamentos: [],
     examenes: [],
-    filtroExamen: "",
     indicacionesGenerales: "",
   };
 }
@@ -234,7 +212,6 @@ let draft = loadDraft();
 let screen = "login";
 let panel = "paciente";
 let enfocarDni = false;
-let filtrosAbiertos = false;
 let detalleMed = false;
 let cuenta = null;
 let accesos = [];
@@ -329,11 +306,6 @@ function loadDraft() {
     }
     base.proximoControl = /^\d{4}-\d{2}-\d{2}$/.test(raw.proximoControl || "") ? raw.proximoControl : "";
     base.dxQuery = cleanText(raw.dxQuery, 80);
-    const sistemaGuardado = ALIAS_SISTEMA[raw.filtroSistema] || raw.filtroSistema;
-    base.filtroSistema = SISTEMAS.includes(sistemaGuardado) ? sistemaGuardado : "";
-    base.filtroTipo = TIPOS.some((t) => t.id === raw.filtroTipo) ? raw.filtroTipo : "";
-    base.filtroSubtipo = SUBTIPOS.includes(raw.filtroSubtipo) ? raw.filtroSubtipo : "";
-    base.filtroExamen = TIPOS_EXAMEN.includes(raw.filtroExamen) ? raw.filtroExamen : "";
     base.indicacionesGenerales = cleanMultiline(raw.indicacionesGenerales, 800);
     base.medicamentos = Array.isArray(raw.medicamentos) ? raw.medicamentos.map(sanitizeMed).filter(Boolean).slice(0, 30) : [];
     base.examenes = Array.isArray(raw.examenes)
@@ -1021,8 +993,10 @@ function paintPacSuggestions() {
       vistos.add(clave);
       const yaEsta = paciente.nombre === draft.pacienteNombre && paciente.dni === draft.pacienteDNI && paciente.edad === draft.pacienteEdad;
       return !yaEsta;
-    }).slice(0, 2);
-  box.replaceChildren(...matches.map((paciente) => {
+    });
+  const visibles = matches.slice(0, 16);
+  const resto = matches.length - visibles.length;
+  const nodes = visibles.map((paciente) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: paciente.dni || paciente.nombre }),
       el("small", { text: [paciente.dni ? paciente.nombre : "", paciente.edad ? `${paciente.edad} años` : "", paciente.sexo].filter(Boolean).join(" · ") }),
@@ -1032,57 +1006,13 @@ function paintPacSuggestions() {
       paintPacSuggestions();
     });
     return button;
-  }));
+  });
+  if (resto > 0) nodes.push(el("p", { class: "suggest-more", text: `${resto} pacientes más. Escribe el nombre o el DNI para afinar.` }));
+  box.replaceChildren(...nodes);
 }
 
 function viewDiagnostico() {
-  const section = el("section", { class: "screen stack" }, [
-    el("button", {
-      type: "button",
-      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
-      onclick: () => {
-        filtrosAbiertos = !filtrosAbiertos;
-        goto("diagnostico");
-      },
-    }, ["Filtros"]),
-  ]);
-  if (filtrosAbiertos) {
-    const sistema = el("select", {}, [
-      el("option", { value: "", text: "Todos" }),
-      ...SISTEMAS.map((nombre) => el("option", { value: nombre, text: nombre })),
-    ]);
-    sistema.value = draft.filtroSistema;
-    sistema.addEventListener("change", () => {
-      draft.filtroSistema = SISTEMAS.includes(sistema.value) ? sistema.value : "";
-      if (draft.filtroSubtipo && !subtiposVisibles().includes(draft.filtroSubtipo)) draft.filtroSubtipo = "";
-      saveDraft();
-      goto("diagnostico");
-    });
-    section.append(el("label", { class: "field", text: "Sistema" }, [sistema]));
-    const tipo = el("select", {}, [
-      el("option", { value: "", text: "Todos" }),
-      ...TIPOS.map((item) => el("option", { value: item.id, text: item.label })),
-    ]);
-    tipo.value = draft.filtroTipo;
-    tipo.addEventListener("change", () => {
-      draft.filtroTipo = TIPOS.some((item) => item.id === tipo.value) ? tipo.value : "";
-      if (draft.filtroSubtipo && !subtiposVisibles().includes(draft.filtroSubtipo)) draft.filtroSubtipo = "";
-      saveDraft();
-      goto("diagnostico");
-    });
-    section.append(el("label", { class: "field", text: "Tipo" }, [tipo]));
-    const subtipo = el("select", {}, [
-      el("option", { value: "", text: "Todos" }),
-      ...subtiposVisibles().map((nombre) => el("option", { value: nombre, text: nombre })),
-    ]);
-    subtipo.value = draft.filtroSubtipo;
-    subtipo.addEventListener("change", () => {
-      draft.filtroSubtipo = subtiposVisibles().includes(subtipo.value) ? subtipo.value : "";
-      saveDraft();
-      paintDxSuggestions();
-    });
-    section.append(el("label", { class: "field", text: "Subtipo" }, [subtipo]));
-  }
+  const section = el("section", { class: "screen stack" });
   const search = el("input", {
     id: "dx-query",
     type: "text",
@@ -1218,29 +1148,7 @@ function viewExamenes() {
 }
 
 function viewExamComposer() {
-  const section = el("section", { class: "screen stack" }, [
-    el("button", {
-      type: "button",
-      class: filtrosAbiertos ? "add-btn is-on" : "add-btn",
-      onclick: () => {
-        filtrosAbiertos = !filtrosAbiertos;
-        goto("examenes");
-      },
-    }, ["Filtros"]),
-  ]);
-  if (filtrosAbiertos) {
-    const tipo = el("select", {}, [
-      el("option", { value: "", text: "Todos" }),
-      ...TIPOS_EXAMEN.map((nombre) => el("option", { value: nombre, text: nombre })),
-    ]);
-    tipo.value = draft.filtroExamen;
-    tipo.addEventListener("change", () => {
-      draft.filtroExamen = TIPOS_EXAMEN.includes(tipo.value) ? tipo.value : "";
-      saveDraft();
-      paintExamSuggestions();
-    });
-    section.append(el("label", { class: "field", text: "Tipo" }, [tipo]));
-  }
+  const section = el("section", { class: "screen stack" });
   const search = el("input", {
     id: "exam-q",
     type: "search",
@@ -1426,13 +1334,6 @@ function reviewBlock(title, stepId, lines) {
   ]);
 }
 
-function subtiposVisibles() {
-  return [...new Set(cie10Data.filter((dx) => (
-    (!draft.filtroSistema || dx.sistema === draft.filtroSistema)
-    && (!draft.filtroTipo || dx.tipo === draft.filtroTipo)
-  )).map((dx) => dx.subtipo).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
-}
-
 function anclarLista(box) {
   const campo = document.activeElement?.closest?.(".search-anchor");
   if (!box || !campo || box.parentElement === campo) return;
@@ -1444,17 +1345,12 @@ function paintDxSuggestions() {
   if (!box) return;
   anclarLista(box);
   const term = (draft.dxQuery || "").trim().toLowerCase();
-  const filtrado = Boolean(draft.filtroSistema || draft.filtroTipo || draft.filtroSubtipo);
-  if (term.length < 2 && !filtrado) {
+  if (term.length < 2) {
     box.replaceChildren();
     return;
   }
   const ranked = ordenarDiagnosticos(cie10Data.flatMap((dx) => {
-    const sistema = !draft.filtroSistema || dx.sistema === draft.filtroSistema;
-    const tipo = !draft.filtroTipo || dx.tipo === draft.filtroTipo;
-    const subtipo = !draft.filtroSubtipo || dx.subtipo === draft.filtroSubtipo;
-    if (!sistema || !tipo || !subtipo) return [];
-    const score = puntajeDiagnostico(dx, term.length < 2 ? "" : term);
+    const score = puntajeDiagnostico(dx, term);
     return score < 0 ? [] : [{ dx, score }];
   }));
   const matches = ranked.slice(0, 24);
@@ -1644,21 +1540,44 @@ function completarIndicaciones(area) {
   saveDraft();
 }
 
+function scoreExam(ex, term) {
+  const tokens = sinAcento(term).split(/[^a-z0-9]+/).filter((word) => word.length >= 2);
+  if (!tokens.length) return -1;
+  const nombre = sinAcento(ex.nombre);
+  const alias = sinAcento(ex.alias);
+  const grupo = sinAcento(ex.grupo);
+  const todo = `${nombre} ${alias} ${grupo} ${sinAcento(ex.tipo)}`;
+  let score = 0;
+  for (const token of tokens) {
+    const corto = token.length <= 3;
+    const presente = corto
+      ? new RegExp(`(?:^|[^a-z0-9])${token}(?:[^a-z0-9]|$)`).test(todo)
+      : todo.includes(token);
+    if (!presente) return -1;
+    if (nombre.startsWith(token)) score += 10;
+    else if (alias.split(/[^a-z0-9]+/).some((word) => word === token || word.startsWith(token))) score += 8;
+    else if (nombre.includes(token)) score += 5;
+    else score += 2;
+  }
+  return score;
+}
+
 function paintExamSuggestions() {
   const box = document.getElementById("exam-suggest");
   if (!box) return;
   anclarLista(box);
   const term = examQuery.trim().toLowerCase();
-  if (term.length < 3 && !draft.filtroExamen) {
+  if (term.length < 2) {
     box.replaceChildren();
     return;
   }
-  const matches = examenesCatalogo.filter((ex) => {
-    const text = !term || [ex.nombre, ex.alias, ex.grupo].some((value) => String(value || "").toLowerCase().includes(term));
-    const tipo = !draft.filtroExamen || ex.tipo === draft.filtroExamen;
-    return text && tipo;
-  }).slice(0, 2);
-  box.replaceChildren(...matches.map((ex) => {
+  const ranked = examenesCatalogo.flatMap((ex) => {
+    const score = scoreExam(ex, term);
+    return score < 0 ? [] : [{ ex, score }];
+  }).sort((a, b) => b.score - a.score || a.ex.nombre.localeCompare(b.ex.nombre, "es"));
+  const matches = ranked.slice(0, 16);
+  const resto = ranked.length - matches.length;
+  const nodes = matches.map(({ ex }) => {
     const button = el("button", { type: "button", class: "suggestion" }, [
       el("strong", { text: ex.nombre }),
       el("small", { text: [ex.tipo, ex.grupo, ex.alias && ex.alias !== ex.nombre ? ex.alias : ""].filter(Boolean).join(" · ") }),
@@ -1673,7 +1592,9 @@ function paintExamSuggestions() {
       box.replaceChildren();
     });
     return button;
-  }));
+  });
+  if (resto > 0) nodes.push(el("p", { class: "suggest-more", text: `${resto} exámenes más. Escribe el nombre para afinar.` }));
+  box.replaceChildren(...nodes);
 }
 
 function openComposer(kind) {
@@ -1833,7 +1754,6 @@ function abrirPanel(id) {
   if (panel === "paciente" && id !== "paciente") rememberPaciente();
   const estaba = screen === "receta" && panel === "paciente";
   if (panel !== id) {
-    filtrosAbiertos = false;
     if (id !== "medicamentos") detalleMed = false;
     if (id !== "medicamentos" && id !== "examenes") composer = null;
   }

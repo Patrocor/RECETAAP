@@ -35543,6 +35543,1401 @@ export const medicamentosData = [
       "Tamsulosina"
     ],
     "dosisMg": 0.4
+  },
+  {
+    "dci": "Pirantel",
+    "presentacion": "250 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antihelmíntico",
+    "marcas": [
+      "Pirantel",
+      "Combantrin"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Pirantel",
+    "presentacion": "250 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Antihelmíntico",
+    "marcas": [
+      "Pirantel suspensión"
+    ]
+  },
+  {
+    "dci": "Griseofulvina",
+    "presentacion": "500 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antifúngico",
+    "marcas": [
+      "Griseofulvina"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Hidroxicina",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico",
+    "marcas": [
+      "Atarax",
+      "Hidroxicina"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Hidroxicina",
+    "presentacion": "10 mg/5 mL jarabe",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico",
+    "marcas": [
+      "Atarax jarabe"
+    ]
+  },
+  {
+    "dci": "Ebastina",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico",
+    "marcas": [
+      "Ebastel",
+      "Ebastina"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Ebastina",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antihistamínico",
+    "marcas": [
+      "Ebastel Forte"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Teofilina",
+    "presentacion": "200 mg tabletas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Broncodilatador",
+    "marcas": [
+      "Teofilina LP"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Aminofilina",
+    "presentacion": "250 mg/10 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Broncodilatador inyectable",
+    "marcas": [
+      "Aminofilina IV"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Beclometasona",
+    "presentacion": "250 mcg/dosis inhalador",
+    "via": "Inhalatoria",
+    "grupo": "Corticoide inhalado",
+    "marcas": [
+      "Beclometasona inhalador"
+    ]
+  },
+  {
+    "dci": "Beclometasona",
+    "presentacion": "50 mcg/dosis spray nasal",
+    "via": "Vía nasal",
+    "grupo": "Corticoide nasal",
+    "marcas": [
+      "Beclometasona nasal"
+    ]
+  },
+  {
+    "dci": "Deflazacort",
+    "presentacion": "6 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide",
+    "marcas": [
+      "Deflazacort 6",
+      "Zamene"
+    ],
+    "dosisMg": 6
+  },
+  {
+    "dci": "Deflazacort",
+    "presentacion": "30 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide",
+    "marcas": [
+      "Deflazacort 30"
+    ],
+    "dosisMg": 30
+  },
+  {
+    "dci": "Testosterona",
+    "presentacion": "250 mg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Andrógeno inyectable",
+    "marcas": [
+      "Testosterona depot"
+    ],
+    "dosisMg": 250
+  },
+  {
+    "dci": "Dutasterida",
+    "presentacion": "0.5 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Inhibidor de 5-alfa reductasa",
+    "marcas": [
+      "Avodart",
+      "Dutasterida"
+    ],
+    "dosisMg": 0.5
+  },
+  {
+    "dci": "Dutasterida + Tamsulosina",
+    "presentacion": "0.5/0.4 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Hiperplasia prostática",
+    "marcas": [
+      "Duodart",
+      "Combodart"
+    ]
+  },
+  {
+    "dci": "Tolterodina",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antimuscarínico urinario",
+    "marcas": [
+      "Detrusitol",
+      "Tolterodina"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Tolterodina",
+    "presentacion": "4 mg cápsulas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Antimuscarínico urinario",
+    "marcas": [
+      "Detrusitol LP"
+    ],
+    "dosisMg": 4
+  },
+  {
+    "dci": "Macrogol",
+    "presentacion": "sobre para solución oral",
+    "via": "Vía oral",
+    "grupo": "Laxante osmótico",
+    "marcas": [
+      "Movicol",
+      "Macrogol"
+    ]
+  },
+  {
+    "dci": "Itoprida",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Procinético",
+    "marcas": [
+      "Ganaton",
+      "Itoprida"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Cinitaprida",
+    "presentacion": "1 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Procinético",
+    "marcas": [
+      "Cidine",
+      "Cinitaprida"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Dimeticona",
+    "presentacion": "40 mg/mL gotas",
+    "via": "Vía oral",
+    "grupo": "Antiflatulento",
+    "marcas": [
+      "Dimeticona gotas",
+      "Aero-Om"
+    ]
+  },
+  {
+    "dci": "Racecadotrilo",
+    "presentacion": "100 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Antidiarreico",
+    "marcas": [
+      "Tiorfan",
+      "Racecadotrilo"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Racecadotrilo",
+    "presentacion": "10 mg sobres",
+    "via": "Vía oral",
+    "grupo": "Antidiarreico pediátrico",
+    "marcas": [
+      "Tiorfan niños"
+    ]
+  },
+  {
+    "dci": "Subsalicilato de bismuto",
+    "presentacion": "262 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antidiarreico",
+    "marcas": [
+      "Pepto-Bismol",
+      "Bismuto"
+    ],
+    "dosisMg": 262
+  },
+  {
+    "dci": "Hidróxido de aluminio + Hidróxido de magnesio",
+    "presentacion": "400/400 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiácido",
+    "marcas": [
+      "Almagato",
+      "Mylanta",
+      "Aluminio/Magnesio"
+    ]
+  },
+  {
+    "dci": "Magaldrato",
+    "presentacion": "800 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiácido",
+    "marcas": [
+      "Magaldrato"
+    ],
+    "dosisMg": 800
+  },
+  {
+    "dci": "Magaldrato",
+    "presentacion": "80 mg/mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Antiácido",
+    "marcas": [
+      "Magaldrato suspensión"
+    ]
+  },
+  {
+    "dci": "Granisetrón",
+    "presentacion": "1 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiemético",
+    "marcas": [
+      "Kytril",
+      "Granisetrón"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Granisetrón",
+    "presentacion": "1 mg/1 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Antiemético inyectable",
+    "marcas": [
+      "Kytril IV"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Meclizina",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antivertiginoso",
+    "marcas": [
+      "Bonadoxina",
+      "Meclizina"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Cinarizina",
+    "presentacion": "75 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antivertiginoso",
+    "marcas": [
+      "Stugeron",
+      "Cinarizina"
+    ],
+    "dosisMg": 75
+  },
+  {
+    "dci": "Flunarizina",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antivertiginoso / migraña",
+    "marcas": [
+      "Sibelium",
+      "Flunarizina"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Flunarizina",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antivertiginoso / migraña",
+    "marcas": [
+      "Sibelium 10"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Ergotamina + Cafeína",
+    "presentacion": "1/100 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antimigrañoso",
+    "marcas": [
+      "Cafergot",
+      "Ergotamina"
+    ]
+  },
+  {
+    "dci": "Trihexifenidilo",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anticolinérgico",
+    "marcas": [
+      "Artane",
+      "Trihexifenidilo"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Eszopiclona",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hipnótico",
+    "marcas": [
+      "Eszopiclona"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Eszopiclona",
+    "presentacion": "3 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hipnótico",
+    "marcas": [
+      "Eszopiclona 3"
+    ],
+    "dosisMg": 3
+  },
+  {
+    "dci": "Desvenlafaxina",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antidepresivo IRSN",
+    "marcas": [
+      "Pristiq",
+      "Desvenlafaxina"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Desvenlafaxina",
+    "presentacion": "100 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antidepresivo IRSN",
+    "marcas": [
+      "Desvenlafaxina 100"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Linagliptina",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "iDPP-4",
+    "marcas": [
+      "Trajenta",
+      "Linagliptina"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Propiltiouracilo",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antitiroideo",
+    "marcas": [
+      "Propiltiouracilo"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Colecalciferol",
+    "presentacion": "1000 UI tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitamina D",
+    "marcas": [
+      "Colecalciferol 1000"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Colecalciferol",
+    "presentacion": "50000 UI cápsulas",
+    "via": "Vía oral",
+    "grupo": "Vitamina D dosis alta",
+    "marcas": [
+      "Colecalciferol 50000"
+    ]
+  },
+  {
+    "dci": "Famotidina",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anti-H2",
+    "marcas": [
+      "Famotidina 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Famotidina",
+    "presentacion": "40 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anti-H2",
+    "marcas": [
+      "Famotidina 40"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Famotidina",
+    "presentacion": "20 mg/2 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Anti-H2 inyectable",
+    "marcas": [
+      "Famotidina IV"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Olmesartán",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARA-II",
+    "marcas": [
+      "Olmetec",
+      "Olmesartán 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Olmesartán",
+    "presentacion": "40 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARA-II",
+    "marcas": [
+      "Olmetec 40",
+      "Olmesartán 40"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Lercanidipino",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Calcioantagonista",
+    "marcas": [
+      "Zanidip",
+      "Lercanidipino"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Lercanidipino",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Calcioantagonista",
+    "marcas": [
+      "Lercanidipino 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Propafenona",
+    "presentacion": "150 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiarrítmico",
+    "marcas": [
+      "Rytmonorm",
+      "Propafenona"
+    ],
+    "dosisMg": 150
+  },
+  {
+    "dci": "Propafenona",
+    "presentacion": "300 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiarrítmico",
+    "marcas": [
+      "Propafenona 300"
+    ],
+    "dosisMg": 300
+  },
+  {
+    "dci": "Flecainida",
+    "presentacion": "100 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiarrítmico",
+    "marcas": [
+      "Flecainida"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Sacubitrilo + Valsartán",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARNI — insuficiencia cardíaca",
+    "marcas": [
+      "Entresto 50"
+    ]
+  },
+  {
+    "dci": "Sacubitrilo + Valsartán",
+    "presentacion": "100 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARNI — insuficiencia cardíaca",
+    "marcas": [
+      "Entresto 100"
+    ]
+  },
+  {
+    "dci": "Sacubitrilo + Valsartán",
+    "presentacion": "200 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "ARNI — insuficiencia cardíaca",
+    "marcas": [
+      "Entresto 200"
+    ]
+  },
+  {
+    "dci": "Ivabradina",
+    "presentacion": "7.5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Inhibidor del nodo sinusal",
+    "marcas": [
+      "Ivabradina 7.5"
+    ],
+    "dosisMg": 7.5
+  },
+  {
+    "dci": "Eplerenona",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antagonista de aldosterona",
+    "marcas": [
+      "Inspra",
+      "Eplerenona"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Ezetimiba + Atorvastatina",
+    "presentacion": "10/20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Hipolipemiante combinado",
+    "marcas": [
+      "Atozet",
+      "Ezetimiba/Atorvastatina"
+    ]
+  },
+  {
+    "dci": "Fenofibrato",
+    "presentacion": "160 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Fibrato",
+    "marcas": [
+      "Lipantil",
+      "Fenofibrato"
+    ],
+    "dosisMg": 160
+  },
+  {
+    "dci": "Liraglutida",
+    "presentacion": "6 mg/mL pluma SC",
+    "via": "Vía subcutánea",
+    "grupo": "Análogo de GLP-1",
+    "marcas": [
+      "Victoza",
+      "Liraglutida"
+    ]
+  },
+  {
+    "dci": "Semaglutida",
+    "presentacion": "1 mg pluma SC",
+    "via": "Vía subcutánea",
+    "grupo": "Análogo de GLP-1",
+    "marcas": [
+      "Ozempic",
+      "Semaglutida"
+    ]
+  },
+  {
+    "dci": "Semaglutida",
+    "presentacion": "14 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Análogo de GLP-1 oral",
+    "marcas": [
+      "Rybelsus",
+      "Semaglutida oral"
+    ],
+    "dosisMg": 14
+  },
+  {
+    "dci": "Ácido zoledrónico",
+    "presentacion": "5 mg/100 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Bifosfonato inyectable",
+    "marcas": [
+      "Aclasta",
+      "Zoledrónico"
+    ]
+  },
+  {
+    "dci": "Filgrastim",
+    "presentacion": "300 mcg/0.5 mL jeringa SC",
+    "via": "Vía subcutánea",
+    "grupo": "Factor estimulante de colonias",
+    "marcas": [
+      "Neupogen",
+      "Filgrastim"
+    ]
+  },
+  {
+    "dci": "Eritropoyetina",
+    "presentacion": "4000 UI jeringa SC",
+    "via": "Vía subcutánea",
+    "grupo": "Estimulante de eritropoyesis",
+    "marcas": [
+      "Eprex",
+      "Eritropoyetina"
+    ]
+  },
+  {
+    "dci": "Mesalazina",
+    "presentacion": "1 g supositorio",
+    "via": "Vía rectal",
+    "grupo": "Antiinflamatorio intestinal",
+    "marcas": [
+      "Pentasa supositorio"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Budesonida",
+    "presentacion": "2 mg espuma rectal",
+    "via": "Vía rectal",
+    "grupo": "Corticoide rectal",
+    "marcas": [
+      "Budesonida rectal"
+    ]
+  },
+  {
+    "dci": "Nistatina",
+    "presentacion": "100 000 UI/mL suspensión oral",
+    "via": "Vía oral",
+    "grupo": "Antifúngico oral",
+    "marcas": [
+      "Nistatina suspensión"
+    ]
+  },
+  {
+    "dci": "Peróxido de benzoilo",
+    "presentacion": "5% gel tópico",
+    "via": "Vía tópica",
+    "grupo": "Antiacné",
+    "marcas": [
+      "Benzac",
+      "Peróxido de benzoilo"
+    ]
+  },
+  {
+    "dci": "Mometasona",
+    "presentacion": "0.1% crema tópica",
+    "via": "Vía tópica",
+    "grupo": "Corticoide tópico",
+    "marcas": [
+      "Elocom",
+      "Mometasona"
+    ]
+  },
+  {
+    "dci": "Mometasona",
+    "presentacion": "50 mcg/dosis spray nasal",
+    "via": "Vía nasal",
+    "grupo": "Corticoide nasal",
+    "marcas": [
+      "Nasonex",
+      "Mometasona nasal"
+    ]
+  },
+  {
+    "dci": "Tiotropio",
+    "presentacion": "18 mcg cápsulas para inhalación",
+    "via": "Inhalatoria",
+    "grupo": "Broncodilatador anticolinérgico",
+    "marcas": [
+      "Spiriva",
+      "Tiotropio"
+    ]
+  },
+  {
+    "dci": "Fluticasona + Salmeterol",
+    "presentacion": "250/50 mcg inhalador",
+    "via": "Inhalatoria",
+    "grupo": "Corticoide + broncodilatador",
+    "marcas": [
+      "Seretide",
+      "Fluticasona/Salmeterol"
+    ]
+  },
+  {
+    "dci": "Sumatriptán",
+    "presentacion": "6 mg/0.5 mL jeringa SC",
+    "via": "Vía subcutánea",
+    "grupo": "Antimigrañoso inyectable",
+    "marcas": [
+      "Imigran SC"
+    ],
+    "dosisMg": 6
+  },
+  {
+    "dci": "Topiramato",
+    "presentacion": "25 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiepiléptico / migraña",
+    "marcas": [
+      "Topamax",
+      "Topiramato"
+    ],
+    "dosisMg": 25
+  },
+  {
+    "dci": "Donepezilo",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antidemencia",
+    "marcas": [
+      "Aricept",
+      "Donepezilo"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Biperideno",
+    "presentacion": "5 mg/1 mL ampolla IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Anticolinérgico inyectable",
+    "marcas": [
+      "Akineton IM"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Tizanidina",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Miorrelajante",
+    "marcas": [
+      "Sirdalud",
+      "Tizanidina"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Aripiprazol",
+    "presentacion": "15 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antipsicótico",
+    "marcas": [
+      "Aripiprazol 15"
+    ],
+    "dosisMg": 15
+  },
+  {
+    "dci": "Litio",
+    "presentacion": "300 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Estabilizador del ánimo",
+    "marcas": [
+      "Carbonato de litio",
+      "Litio"
+    ],
+    "dosisMg": 300
+  },
+  {
+    "dci": "Bupropión",
+    "presentacion": "150 mg tabletas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Antidepresivo",
+    "marcas": [
+      "Wellbutrin",
+      "Bupropión"
+    ],
+    "dosisMg": 150
+  },
+  {
+    "dci": "Venlafaxina",
+    "presentacion": "75 mg cápsulas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Antidepresivo IRSN",
+    "marcas": [
+      "Efexor",
+      "Venlafaxina"
+    ],
+    "dosisMg": 75
+  },
+  {
+    "dci": "Venlafaxina",
+    "presentacion": "150 mg cápsulas de liberación prolongada",
+    "via": "Vía oral",
+    "grupo": "Antidepresivo IRSN",
+    "marcas": [
+      "Venlafaxina 150"
+    ],
+    "dosisMg": 150
+  },
+  {
+    "dci": "Lorazepam",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Benzodiazepina",
+    "marcas": [
+      "Lorazepam 2"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Alprazolam",
+    "presentacion": "1 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Benzodiazepina",
+    "marcas": [
+      "Alprazolam 1"
+    ],
+    "dosisMg": 1
+  },
+  {
+    "dci": "Codeína",
+    "presentacion": "30 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Analgésico opioide",
+    "marcas": [
+      "Codeína"
+    ],
+    "dosisMg": 30
+  },
+  {
+    "dci": "Solifenacina",
+    "presentacion": "10 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antimuscarínico urinario",
+    "marcas": [
+      "Solifenacina 10"
+    ],
+    "dosisMg": 10
+  },
+  {
+    "dci": "Mirabegrón",
+    "presentacion": "50 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Agonista beta-3",
+    "marcas": [
+      "Betmiga",
+      "Mirabegrón"
+    ],
+    "dosisMg": 50
+  },
+  {
+    "dci": "Desogestrel",
+    "presentacion": "75 mcg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anticonceptivo de solo progestágeno",
+    "marcas": [
+      "Cerazette",
+      "Desogestrel"
+    ]
+  },
+  {
+    "dci": "Drospirenona + Etinilestradiol",
+    "presentacion": "3/0.03 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Anticonceptivo combinado",
+    "marcas": [
+      "Yasmin",
+      "Drospirenona"
+    ]
+  },
+  {
+    "dci": "Medroxiprogesterona",
+    "presentacion": "150 mg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Anticonceptivo inyectable",
+    "marcas": [
+      "Depo-Provera",
+      "Medroxiprogesterona"
+    ],
+    "dosisMg": 150
+  },
+  {
+    "dci": "Noretisterona",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Progestágeno",
+    "marcas": [
+      "Noretisterona"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Progesterona",
+    "presentacion": "200 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "Progestágeno",
+    "marcas": [
+      "Utrogestan",
+      "Progesterona"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Sildenafilo",
+    "presentacion": "100 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Inhibidor de PDE5",
+    "marcas": [
+      "Sildenafilo 100"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Tadalafilo",
+    "presentacion": "5 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Inhibidor de PDE5",
+    "marcas": [
+      "Cialis",
+      "Tadalafilo"
+    ],
+    "dosisMg": 5
+  },
+  {
+    "dci": "Mupirocina",
+    "presentacion": "2% pomada tópica",
+    "via": "Vía tópica",
+    "grupo": "Antibiótico tópico",
+    "marcas": [
+      "Bactroban",
+      "Mupirocina"
+    ]
+  },
+  {
+    "dci": "Clotrimazol",
+    "presentacion": "1% crema tópica",
+    "via": "Vía tópica",
+    "grupo": "Antifúngico tópico",
+    "marcas": [
+      "Canesten crema",
+      "Clotrimazol crema"
+    ]
+  },
+  {
+    "dci": "Ketoconazol",
+    "presentacion": "2% champú",
+    "via": "Vía tópica",
+    "grupo": "Antifúngico",
+    "marcas": [
+      "Nizoral",
+      "Ketoconazol champú"
+    ]
+  },
+  {
+    "dci": "Permetrina",
+    "presentacion": "5% loción",
+    "via": "Vía tópica",
+    "grupo": "Escabicida",
+    "marcas": [
+      "Permetrina loción"
+    ]
+  },
+  {
+    "dci": "Secnidazol",
+    "presentacion": "1 g tabletas",
+    "via": "Vía oral",
+    "grupo": "Nitroimidazol dosis única",
+    "marcas": [
+      "Secnidazol 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Rifaximina",
+    "presentacion": "550 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antibiótico intestinal",
+    "marcas": [
+      "Rifaximina 550"
+    ],
+    "dosisMg": 550
+  },
+  {
+    "dci": "Ofloxacino",
+    "presentacion": "200 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Fluoroquinolona",
+    "marcas": [
+      "Ofloxacino"
+    ],
+    "dosisMg": 200
+  },
+  {
+    "dci": "Ofloxacino ótico",
+    "presentacion": "0.3% gotas óticas",
+    "via": "Vía ótica",
+    "grupo": "Fluoroquinolona ótica",
+    "marcas": [
+      "Ofloxacino ótico"
+    ]
+  },
+  {
+    "dci": "Cefadroxilo",
+    "presentacion": "250 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Cefalosporina",
+    "marcas": [
+      "Cefadroxilo suspensión"
+    ]
+  },
+  {
+    "dci": "Amikacina",
+    "presentacion": "500 mg/2 mL ampolla IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Aminoglucósido inyectable",
+    "marcas": [
+      "Amikacina 500"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Amikacina",
+    "presentacion": "100 mg/2 mL ampolla IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Aminoglucósido inyectable",
+    "marcas": [
+      "Amikacina 100"
+    ],
+    "dosisMg": 100
+  },
+  {
+    "dci": "Cefotaxima",
+    "presentacion": "1 g polvo IM/IV",
+    "via": "Vía intramuscular",
+    "grupo": "Cefalosporina inyectable",
+    "marcas": [
+      "Cefotaxima 1 g"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Fluconazol",
+    "presentacion": "2 mg/mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Antifúngico inyectable",
+    "marcas": [
+      "Diflucan IV",
+      "Fluconazol IV"
+    ]
+  },
+  {
+    "dci": "Aciclovir",
+    "presentacion": "200 mg/5 mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Antiviral",
+    "marcas": [
+      "Aciclovir suspensión"
+    ]
+  },
+  {
+    "dci": "Dexametasona",
+    "presentacion": "4 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Dexametasona 4 mg"
+    ],
+    "dosisMg": 4
+  },
+  {
+    "dci": "Metilprednisolona",
+    "presentacion": "16 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Corticoide oral",
+    "marcas": [
+      "Medrol",
+      "Metilprednisolona 16"
+    ],
+    "dosisMg": 16
+  },
+  {
+    "dci": "Betametasona",
+    "presentacion": "4 mg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Corticoide inyectable",
+    "marcas": [
+      "Celestone",
+      "Betametasona 4 mg"
+    ],
+    "dosisMg": 4
+  },
+  {
+    "dci": "Hidrocortisona",
+    "presentacion": "500 mg polvo IV",
+    "via": "Vía intravenosa",
+    "grupo": "Corticoide inyectable",
+    "marcas": [
+      "Hidrocortisona 500"
+    ],
+    "dosisMg": 500
+  },
+  {
+    "dci": "Pantoprazol",
+    "presentacion": "20 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "IBP",
+    "marcas": [
+      "Pantoprazol 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Esomeprazol",
+    "presentacion": "20 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "IBP",
+    "marcas": [
+      "Nexium 20",
+      "Esomeprazol 20"
+    ],
+    "dosisMg": 20
+  },
+  {
+    "dci": "Esomeprazol",
+    "presentacion": "40 mg cápsulas",
+    "via": "Vía oral",
+    "grupo": "IBP",
+    "marcas": [
+      "Nexium 40",
+      "Esomeprazol 40"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Domperidona",
+    "presentacion": "1 mg/mL suspensión",
+    "via": "Vía oral",
+    "grupo": "Procinético",
+    "marcas": [
+      "Domperidona suspensión"
+    ]
+  },
+  {
+    "dci": "Simeticona",
+    "presentacion": "40 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antiflatulento",
+    "marcas": [
+      "Simeticona"
+    ],
+    "dosisMg": 40
+  },
+  {
+    "dci": "Lactulosa",
+    "presentacion": "10 g/15 mL jarabe",
+    "via": "Vía oral",
+    "grupo": "Laxante osmótico",
+    "marcas": [
+      "Duphalac",
+      "Lactulosa"
+    ]
+  },
+  {
+    "dci": "Loperamida",
+    "presentacion": "2 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Antidiarreico",
+    "marcas": [
+      "Imodium",
+      "Loperamida"
+    ],
+    "dosisMg": 2
+  },
+  {
+    "dci": "Alendronato",
+    "presentacion": "70 mg tabletas",
+    "via": "Vía oral",
+    "grupo": "Bifosfonato",
+    "marcas": [
+      "Fosamax",
+      "Alendronato"
+    ],
+    "dosisMg": 70
+  },
+  {
+    "dci": "Carbonato de calcio + Colecalciferol",
+    "presentacion": "600 mg/400 UI tabletas",
+    "via": "Vía oral",
+    "grupo": "Calcio y vitamina D",
+    "marcas": [
+      "Caltrate",
+      "Calcio + D"
+    ]
+  },
+  {
+    "dci": "Cianocobalamina",
+    "presentacion": "1000 mcg tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitamina B12",
+    "marcas": [
+      "Vitamina B12",
+      "Cianocobalamina"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Cianocobalamina",
+    "presentacion": "1000 mcg/1 mL ampolla IM",
+    "via": "Vía intramuscular",
+    "grupo": "Vitamina B12 inyectable",
+    "marcas": [
+      "Cianocobalamina IM"
+    ],
+    "dosisMg": 1000
+  },
+  {
+    "dci": "Complejo B",
+    "presentacion": "tabletas",
+    "via": "Vía oral",
+    "grupo": "Vitaminas del grupo B",
+    "marcas": [
+      "Complejo B",
+      "Bedoyecta oral"
+    ]
+  },
+  {
+    "dci": "Cloruro de potasio",
+    "presentacion": "20 mEq/15 mL solución oral",
+    "via": "Vía oral",
+    "grupo": "Electrolito",
+    "marcas": [
+      "Potasio oral",
+      "KCl"
+    ]
+  },
+  {
+    "dci": "Cloruro de potasio",
+    "presentacion": "20 mEq/10 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Electrolito inyectable",
+    "marcas": [
+      "KCl IV"
+    ]
+  },
+  {
+    "dci": "Sulfato de magnesio",
+    "presentacion": "1 g/10 mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Electrolito inyectable",
+    "marcas": [
+      "Sulfato de magnesio"
+    ]
+  },
+  {
+    "dci": "Bicarbonato de sodio",
+    "presentacion": "1 mEq/mL ampolla IV",
+    "via": "Vía intravenosa",
+    "grupo": "Alcalinizante",
+    "marcas": [
+      "Bicarbonato IV"
+    ]
+  },
+  {
+    "dci": "Solución salina 0.9%",
+    "presentacion": "100 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Cloruro de sodio 0.9%"
+    ]
+  },
+  {
+    "dci": "Solución salina 0.9%",
+    "presentacion": "500 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Suero fisiológico 500"
+    ]
+  },
+  {
+    "dci": "Solución salina 0.9%",
+    "presentacion": "1000 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Suero fisiológico 1000"
+    ]
+  },
+  {
+    "dci": "Dextrosa 5%",
+    "presentacion": "500 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Dextrosa 5%"
+    ]
+  },
+  {
+    "dci": "Dextrosa 10%",
+    "presentacion": "500 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Dextrosa 10%"
+    ]
+  },
+  {
+    "dci": "Lactato de Ringer",
+    "presentacion": "500 mL solución IV",
+    "via": "Vía intravenosa",
+    "grupo": "Solución intravenosa",
+    "marcas": [
+      "Ringer lactato"
+    ]
+  },
+  {
+    "dci": "Agua bidestilada",
+    "presentacion": "10 mL ampolla",
+    "via": "Vía intravenosa",
+    "grupo": "Diluyente",
+    "marcas": [
+      "Agua para inyección"
+    ]
   }
 ];
 
@@ -35647,7 +37042,7 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Hemoglobina glicosilada (HbA1c)",
-    "alias": "HbA1c",
+    "alias": "HbA1c, hemoglobina glicosilada, glicosilada, A1c",
     "tipo": "Laboratorio",
     "grupo": "Bioquímica",
     "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
@@ -35689,21 +37084,21 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Perfil lipídico completo",
-    "alias": "Perfil lipídico",
+    "alias": "Perfil lipídico, colesterol, triglicéridos, lípidos",
     "tipo": "Laboratorio",
     "grupo": "Bioquímica",
     "indicacionesSug": "Ayuno estricto de 12 horas. Puede beber agua. Evite alcohol 24 horas antes."
   },
   {
     "nombre": "Perfil hepático completo (TGO, TGP, FA, GGT, bilirrubinas)",
-    "alias": "Perfil hepático",
+    "alias": "Perfil hepático, transaminasas, TGO, TGP, AST, ALT, GGT, bilirrubinas",
     "tipo": "Laboratorio",
     "grupo": "Bioquímica",
     "indicacionesSug": "Ayuno de 8 horas. Evite alcohol 24 horas antes."
   },
   {
     "nombre": "Electrolitos séricos (Na, K, Cl)",
-    "alias": "Electrolitos",
+    "alias": "Electrolitos, sodio, potasio, cloro, ionograma",
     "tipo": "Laboratorio",
     "grupo": "Bioquímica",
     "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
@@ -35752,7 +37147,7 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Gases arteriales",
-    "alias": "Gases arteriales",
+    "alias": "Gases arteriales, gasometría, gasometría arterial",
     "tipo": "Laboratorio",
     "grupo": "Bioquímica",
     "indicacionesSug": "No requiere preparación. Informe si recibe oxígeno. La muestra se toma de una arteria."
@@ -35822,7 +37217,7 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Beta-HCG cuantitativa",
-    "alias": "Beta-HCG",
+    "alias": "Beta-HCG, beta hCG, gonadotropina coriónica",
     "tipo": "Laboratorio",
     "grupo": "Endocrinología",
     "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
@@ -35941,14 +37336,14 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Prueba de embarazo en sangre",
-    "alias": "Embarazo en sangre",
+    "alias": "Embarazo en sangre, beta hCG, gonadotropina",
     "tipo": "Laboratorio",
     "grupo": "Serología",
     "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
   },
   {
     "nombre": "Prueba de embarazo en orina",
-    "alias": "Embarazo en orina",
+    "alias": "Embarazo en orina, beta hCG orina",
     "tipo": "Laboratorio",
     "grupo": "Serología",
     "indicacionesSug": "Usar la primera orina de la mañana, más concentrada. No requiere ayuno."
@@ -36025,7 +37420,7 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Depuración de creatinina (orina 24 horas)",
-    "alias": "Depuración creatinina",
+    "alias": "Depuración creatinina, clearance, aclaramiento de creatinina",
     "tipo": "Laboratorio",
     "grupo": "Uroanálisis",
     "indicacionesSug": "Recolectar toda la orina de 24 horas en el envase indicado. Se tomará además una muestra de sangre."
@@ -36130,14 +37525,14 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Papanicolaou (citología cervical)",
-    "alias": "Papanicolaou",
+    "alias": "Papanicolaou, PAP, citología cervical",
     "tipo": "Laboratorio",
     "grupo": "Citología",
     "indicacionesSug": "No estar menstruando. No usar óvulos, duchas vaginales ni tener relaciones 48 horas antes."
   },
   {
     "nombre": "Secreción vaginal: directo y cultivo",
-    "alias": "Secreción vaginal",
+    "alias": "Secreción vaginal, fresco vaginal, cultivo vaginal, KOH",
     "tipo": "Laboratorio",
     "grupo": "Citología",
     "indicacionesSug": "No usar óvulos ni duchas vaginales y evitar relaciones 48 horas antes. No estar menstruando."
@@ -36368,91 +37763,91 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Tomografía de tórax sin contraste",
-    "alias": "TC tórax",
+    "alias": "TC tórax, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "No requiere preparación. Retirar objetos metálicos. Informe si está embarazada."
   },
   {
     "nombre": "Tomografía de tórax con contraste",
-    "alias": "TC tórax c/contraste",
+    "alias": "TC tórax c/contraste, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "Ayuno de 4 horas. Acudir con resultado de creatinina. Informe alergias al contraste."
   },
   {
     "nombre": "Tomografía de abdomen y pelvis con contraste",
-    "alias": "TC abdomen c/contraste",
+    "alias": "TC abdomen c/contraste, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "Ayuno de 6 horas. Acudir con resultado de creatinina. Informe alergias al contraste."
   },
   {
     "nombre": "Tomografía de cráneo sin contraste",
-    "alias": "TC cráneo",
+    "alias": "TC cráneo, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "No requiere preparación. Retirar lentes, aretes y horquillas metálicas."
   },
   {
     "nombre": "Tomografía de cráneo con contraste",
-    "alias": "TC cráneo c/contraste",
+    "alias": "TC cráneo c/contraste, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "Ayuno de 4 horas. Acudir con resultado de creatinina. Informe alergias al contraste."
   },
   {
     "nombre": "Tomografía de columna",
-    "alias": "TC columna",
+    "alias": "TC columna, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "No requiere preparación. Retirar objetos metálicos. Informe si está embarazada."
   },
   {
     "nombre": "AngioTC de tórax",
-    "alias": "AngioTC tórax",
+    "alias": "AngioTC tórax, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "Ayuno de 4 horas. Acudir con resultado de creatinina. Informe alergias al contraste."
   },
   {
     "nombre": "Urotomografía",
-    "alias": "Urotomografía",
+    "alias": "Urotomografía, TAC",
     "tipo": "Imágenes",
     "grupo": "Tomografía",
     "indicacionesSug": "Ayuno de 6 horas. Acudir con resultado de creatinina. Informe alergias al contraste."
   },
   {
     "nombre": "Resonancia magnética de cráneo",
-    "alias": "RM cráneo",
+    "alias": "RM cráneo, RMN",
     "tipo": "Imágenes",
     "grupo": "Resonancia",
     "indicacionesSug": "Retirar todo objeto metálico. Informe si tiene marcapasos, prótesis o implantes metálicos."
   },
   {
     "nombre": "Resonancia magnética de columna cervical",
-    "alias": "RM cervical",
+    "alias": "RM cervical, RMN",
     "tipo": "Imágenes",
     "grupo": "Resonancia",
     "indicacionesSug": "Retirar objetos metálicos. Informe si tiene marcapasos o implantes metálicos."
   },
   {
     "nombre": "Resonancia magnética de columna lumbar",
-    "alias": "RM lumbar",
+    "alias": "RM lumbar, RMN",
     "tipo": "Imágenes",
     "grupo": "Resonancia",
     "indicacionesSug": "Retirar objetos metálicos. Informe si tiene marcapasos o implantes metálicos."
   },
   {
     "nombre": "Resonancia magnética de rodilla",
-    "alias": "RM rodilla",
+    "alias": "RM rodilla, RMN",
     "tipo": "Imágenes",
     "grupo": "Resonancia",
     "indicacionesSug": "Retirar objetos metálicos. Informe si tiene implantes metálicos o marcapasos."
   },
   {
     "nombre": "Resonancia magnética de hombro",
-    "alias": "RM hombro",
+    "alias": "RM hombro, RMN",
     "tipo": "Imágenes",
     "grupo": "Resonancia",
     "indicacionesSug": "Retirar objetos metálicos. Informe si tiene implantes metálicos o marcapasos."
@@ -36473,7 +37868,7 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Electrocardiograma",
-    "alias": "ECG",
+    "alias": "ECG, EKG, electrocardiograma",
     "tipo": "Procedimientos",
     "grupo": "Cardiología",
     "indicacionesSug": "No requiere preparación. Evite cremas en el pecho. Use ropa de fácil retiro."
@@ -36494,14 +37889,14 @@ export const examenesCatalogo = [
   },
   {
     "nombre": "Holter de ritmo 24 horas",
-    "alias": "Holter 24h",
+    "alias": "Holter 24h, holter cardíaco, electrocardiograma ambulatorio",
     "tipo": "Procedimientos",
     "grupo": "Cardiología",
     "indicacionesSug": "No requiere ayuno. No mojar el equipo: evite ducharse durante el registro. Lleve un diario de actividades."
   },
   {
     "nombre": "MAPA 24 horas (presión arterial)",
-    "alias": "MAPA 24h",
+    "alias": "MAPA 24h, holter de presión, monitoreo ambulatorio de presión",
     "tipo": "Procedimientos",
     "grupo": "Cardiología",
     "indicacionesSug": "No requiere ayuno. Use ropa holgada de manga. Continúe sus actividades habituales y registre síntomas."
@@ -36659,5 +38054,915 @@ export const examenesCatalogo = [
     "tipo": "Procedimientos",
     "grupo": "Neumología",
     "indicacionesSug": "Acudir con el cabello limpio y seco. Evite cafeína y siestas el día del estudio. Lleve ropa cómoda para dormir."
+  },
+  {
+    "nombre": "Recuento de plaquetas",
+    "alias": "Plaquetas, trombocitos",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Hematocrito",
+    "alias": "Hematocrito, Hto",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Hemoglobina",
+    "alias": "Hemoglobina, Hb",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Recuento de reticulocitos",
+    "alias": "Reticulocitos",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Frotis de sangre periférica",
+    "alias": "Frotis sanguíneo, lámina periférica",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Prueba de Coombs directa",
+    "alias": "Coombs directo",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Prueba de Coombs indirecta",
+    "alias": "Coombs indirecto",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Haptoglobina",
+    "alias": "Haptoglobina",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Electroforesis de hemoglobina",
+    "alias": "Electroforesis Hb",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Proteína C funcional",
+    "alias": "Proteína C",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Proteína S funcional",
+    "alias": "Proteína S",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Antitrombina III",
+    "alias": "Antitrombina",
+    "tipo": "Laboratorio",
+    "grupo": "Hematología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Colesterol total",
+    "alias": "Colesterol",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Colesterol HDL",
+    "alias": "HDL, colesterol bueno",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Colesterol LDL",
+    "alias": "LDL, colesterol malo",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Triglicéridos",
+    "alias": "Triglicéridos, TG",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Apolipoproteína B",
+    "alias": "ApoB",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Lipoproteína (a)",
+    "alias": "Lp(a)",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Homocisteína",
+    "alias": "Homocisteína",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Transaminasa TGO (AST)",
+    "alias": "TGO, AST, transaminasa",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Transaminasa TGP (ALT)",
+    "alias": "TGP, ALT, transaminasa",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Fosfatasa alcalina",
+    "alias": "FA, fosfatasa alcalina",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Gamma glutamil transferasa (GGT)",
+    "alias": "GGT",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Bilirrubina total",
+    "alias": "Bilirrubina",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Bilirrubina directa e indirecta",
+    "alias": "Bilirrubina fraccionada",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Albúmina sérica",
+    "alias": "Albúmina",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Proteínas totales y fraccionadas",
+    "alias": "Proteínas, proteinograma",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Sodio sérico",
+    "alias": "Sodio, Na",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Potasio sérico",
+    "alias": "Potasio, K",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Cloro sérico",
+    "alias": "Cloro, Cl",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Péptido C",
+    "alias": "Péptido C",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Fructosamina",
+    "alias": "Fructosamina",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Gasometría venosa",
+    "alias": "Gasometría venosa",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. La muestra es venosa, en jeringa heparinizada."
+  },
+  {
+    "nombre": "Lactato sérico",
+    "alias": "Lactato, ácido láctico",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Amonio sérico",
+    "alias": "Amonio",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "No requiere ayuno. La muestra debe procesarse de inmediato."
+  },
+  {
+    "nombre": "Creatina fosfoquinasa total (CPK)",
+    "alias": "CPK, CK total",
+    "tipo": "Laboratorio",
+    "grupo": "Bioquímica",
+    "indicacionesSug": "Evite ejercicio intenso 24 horas antes. No requiere ayuno."
+  },
+  {
+    "nombre": "T4 libre",
+    "alias": "T4 libre, tiroxina",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "T3 libre",
+    "alias": "T3 libre, triyodotironina",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos anti-TPO",
+    "alias": "Anti-TPO, antitiroideos",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos antitiroglobulina",
+    "alias": "Anti-Tg",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Tiroglobulina",
+    "alias": "Tiroglobulina",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Paratohormona (PTH)",
+    "alias": "PTH, paratohormona",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Progesterona sérica",
+    "alias": "Progesterona",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Indique el día del ciclo menstrual."
+  },
+  {
+    "nombre": "Dehidroepiandrosterona sulfato (DHEA-S)",
+    "alias": "DHEA-S",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Hormona antimülleriana (AMH)",
+    "alias": "AMH, antimülleriana",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Globulina fijadora de hormonas sexuales (SHBG)",
+    "alias": "SHBG",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "IGF-1",
+    "alias": "IGF-1, somatomedina",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Cortisol libre en orina de 24 horas",
+    "alias": "Cortisol urinario",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "Recolecte toda la orina de 24 horas. El laboratorio entrega el recipiente."
+  },
+  {
+    "nombre": "Insulina postprandial",
+    "alias": "Insulina postprandial",
+    "tipo": "Laboratorio",
+    "grupo": "Endocrinología",
+    "indicacionesSug": "Acudir en ayunas. El laboratorio indicará el momento de la segunda muestra."
+  },
+  {
+    "nombre": "Proteína C reactiva ultrasensible",
+    "alias": "PCR ultrasensible, PCR-us",
+    "tipo": "Laboratorio",
+    "grupo": "Inmunología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Antiestreptolisina O (ASO)",
+    "alias": "ASO, antiestreptolisina",
+    "tipo": "Laboratorio",
+    "grupo": "Inmunología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Inmunoglobulina E total",
+    "alias": "IgE, IgE total",
+    "tipo": "Laboratorio",
+    "grupo": "Inmunología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "IgE específica",
+    "alias": "IgE específica, RAST",
+    "tipo": "Laboratorio",
+    "grupo": "Inmunología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Inmunoglobulinas IgG, IgA e IgM",
+    "alias": "Inmunoglobulinas",
+    "tipo": "Laboratorio",
+    "grupo": "Inmunología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos anti-transglutaminasa IgA",
+    "alias": "Anti-transglutaminasa, celiaquía",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No suspenda el gluten antes de la prueba, salvo indicación de su médico."
+  },
+  {
+    "nombre": "Anticuerpos antiendomisio",
+    "alias": "Antiendomisio",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "HLA-B27",
+    "alias": "HLA-B27",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos anti-Ro (SSA) y anti-La (SSB)",
+    "alias": "Anti-Ro, anti-La, SSA, SSB",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos antimúsculo liso",
+    "alias": "ASMA, antimúsculo liso",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpos antimitocondriales",
+    "alias": "AMA",
+    "tipo": "Laboratorio",
+    "grupo": "Autoinmunidad",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Serología de toxoplasma IgG e IgM",
+    "alias": "Toxoplasma",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Serología de rubéola IgG",
+    "alias": "Rubéola",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Serología de citomegalovirus IgG e IgM",
+    "alias": "CMV, citomegalovirus",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "PCR de Chlamydia trachomatis",
+    "alias": "Chlamydia, clamidia",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "La muestra puede ser orina o hisopado. Siga la indicación del laboratorio."
+  },
+  {
+    "nombre": "Antígeno de SARS-CoV-2",
+    "alias": "COVID-19, antígeno COVID",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Hisopado nasofaríngeo."
+  },
+  {
+    "nombre": "PCR de SARS-CoV-2",
+    "alias": "PCR COVID, COVID-19 PCR",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Hisopado nasofaríngeo."
+  },
+  {
+    "nombre": "Antígeno de influenza A y B",
+    "alias": "Influenza, gripe",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Hisopado nasofaríngeo."
+  },
+  {
+    "nombre": "Prueba rápida de estreptococo del grupo A",
+    "alias": "Estreptococo, prueba rápida de garganta",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Hisopado faríngeo."
+  },
+  {
+    "nombre": "Carga viral de VIH",
+    "alias": "Carga viral VIH",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Carga viral de hepatitis C",
+    "alias": "Carga viral VHC",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Anticuerpo anti-HBs",
+    "alias": "Anti-HBs, inmunidad hepatitis B",
+    "tipo": "Laboratorio",
+    "grupo": "Serología",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Relación albúmina/creatinina en orina",
+    "alias": "Albúmina/creatinina, RAC",
+    "tipo": "Laboratorio",
+    "grupo": "Uroanálisis",
+    "indicacionesSug": "Primera orina de la mañana, en frasco estéril."
+  },
+  {
+    "nombre": "Cultivo de esputo y antibiograma",
+    "alias": "Cultivo de esputo",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "Recoja el esputo de la mañana, después de enjuagar la boca, en frasco estéril."
+  },
+  {
+    "nombre": "Cultivo faríngeo",
+    "alias": "Cultivo de garganta",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "No use enjuague bucal ni antibióticos tópicos antes de la toma."
+  },
+  {
+    "nombre": "Fresco y KOH de secreción vaginal",
+    "alias": "Fresco vaginal, KOH",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "Evite óvulos, duchas vaginales y relaciones sexuales 48 horas antes."
+  },
+  {
+    "nombre": "Cultivo de secreción vaginal",
+    "alias": "Cultivo vaginal",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "Evite óvulos y duchas vaginales 48 horas antes."
+  },
+  {
+    "nombre": "Antígeno de Legionella en orina",
+    "alias": "Legionella orina",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "Muestra de orina en frasco estéril. No requiere ayuno."
+  },
+  {
+    "nombre": "Antígeno de neumococo en orina",
+    "alias": "Neumococo orina",
+    "tipo": "Laboratorio",
+    "grupo": "Microbiología",
+    "indicacionesSug": "Muestra de orina en frasco estéril. No requiere ayuno."
+  },
+  {
+    "nombre": "CA 15-3",
+    "alias": "CA 15-3",
+    "tipo": "Laboratorio",
+    "grupo": "Marcadores tumorales",
+    "indicacionesSug": "No requiere ayuno. Acudir con orden médica."
+  },
+  {
+    "nombre": "Calcitonina",
+    "alias": "Calcitonina",
+    "tipo": "Laboratorio",
+    "grupo": "Marcadores tumorales",
+    "indicacionesSug": "Ayuno de 8 horas. Puede beber agua. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de cadera",
+    "alias": "Rx cadera",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de fémur",
+    "alias": "Rx fémur",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de tibia y peroné",
+    "alias": "Rx tibia",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de húmero",
+    "alias": "Rx húmero",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de clavícula",
+    "alias": "Rx clavícula",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de articulaciones sacroilíacas",
+    "alias": "Rx sacroilíacas",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía de cavum",
+    "alias": "Rx cavum",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "No requiere preparación. Retire objetos metálicos de la zona. Acudir con orden médica."
+  },
+  {
+    "nombre": "Radiografía panorámica dental",
+    "alias": "Rx panorámica, ortopantomografía",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "Retire prótesis y objetos metálicos de cabeza y cuello."
+  },
+  {
+    "nombre": "Colon por enema",
+    "alias": "Colon por enema",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "Requiere preparación intestinal el día previo. El servicio entrega las indicaciones."
+  },
+  {
+    "nombre": "Serie esofagogastroduodenal",
+    "alias": "SEGD, trago de bario",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "Ayuno de 8 horas. Informe si está embarazada."
+  },
+  {
+    "nombre": "Urograma excretor",
+    "alias": "Urograma",
+    "tipo": "Imágenes",
+    "grupo": "Radiografía",
+    "indicacionesSug": "Ayuno de 6 horas. Informe alergia al contraste y función renal."
+  },
+  {
+    "nombre": "Tomografía de senos paranasales",
+    "alias": "TAC de senos, TC senos",
+    "tipo": "Imágenes",
+    "grupo": "Tomografía",
+    "indicacionesSug": "No requiere ayuno si es sin contraste. Retire objetos metálicos de la cara."
+  },
+  {
+    "nombre": "Tomografía de cuello",
+    "alias": "TAC de cuello, TC cuello",
+    "tipo": "Imágenes",
+    "grupo": "Tomografía",
+    "indicacionesSug": "Ayuno de 4 a 6 horas. Informe alergia al yodo y lleve creatinina reciente si la tiene."
+  },
+  {
+    "nombre": "Tomografía de pelvis",
+    "alias": "TAC de pelvis, TC pelvis",
+    "tipo": "Imágenes",
+    "grupo": "Tomografía",
+    "indicacionesSug": "Ayuno de 4 a 6 horas. Informe alergia al yodo y lleve creatinina reciente si la tiene."
+  },
+  {
+    "nombre": "AngioTC de vasos del cuello",
+    "alias": "AngioTAC carotídeo, TAC de carótidas",
+    "tipo": "Imágenes",
+    "grupo": "Tomografía",
+    "indicacionesSug": "Ayuno de 4 a 6 horas. Informe alergia al yodo y lleve creatinina reciente si la tiene."
+  },
+  {
+    "nombre": "AngioTC coronaria",
+    "alias": "Angiotac coronario, coronariografía por tomografía",
+    "tipo": "Imágenes",
+    "grupo": "Tomografía",
+    "indicacionesSug": "Ayuno de 4 horas. Puede requerir medicamento para bajar la frecuencia cardíaca."
+  },
+  {
+    "nombre": "Resonancia magnética de columna dorsal",
+    "alias": "RMN dorsal, RM dorsal",
+    "tipo": "Imágenes",
+    "grupo": "Resonancia",
+    "indicacionesSug": "Informe marcapasos, implantes metálicos o claustrofobia. Retire objetos metálicos."
+  },
+  {
+    "nombre": "Resonancia magnética de pelvis",
+    "alias": "RMN de pelvis, RM pelvis",
+    "tipo": "Imágenes",
+    "grupo": "Resonancia",
+    "indicacionesSug": "Informe marcapasos, implantes metálicos o claustrofobia. Retire objetos metálicos."
+  },
+  {
+    "nombre": "Resonancia magnética de hipófisis",
+    "alias": "RMN de hipófisis, RM hipófisis",
+    "tipo": "Imágenes",
+    "grupo": "Resonancia",
+    "indicacionesSug": "Informe marcapasos, implantes metálicos o claustrofobia. Retire objetos metálicos."
+  },
+  {
+    "nombre": "Resonancia magnética de tobillo",
+    "alias": "RMN de tobillo, RM tobillo",
+    "tipo": "Imágenes",
+    "grupo": "Resonancia",
+    "indicacionesSug": "Informe marcapasos, implantes metálicos o claustrofobia. Retire objetos metálicos."
+  },
+  {
+    "nombre": "Colangiorresonancia",
+    "alias": "Colangiorresonancia, CPRM",
+    "tipo": "Imágenes",
+    "grupo": "Resonancia",
+    "indicacionesSug": "Ayuno de 6 horas. Informe implantes metálicos."
+  },
+  {
+    "nombre": "Ecografía Doppler de vasos del cuello",
+    "alias": "Doppler carotídeo, eco carótidas",
+    "tipo": "Imágenes",
+    "grupo": "Ecografía",
+    "indicacionesSug": "No requiere ayuno. Acudir con estudios previos de cuello."
+  },
+  {
+    "nombre": "Ecografía Doppler venoso de miembros superiores",
+    "alias": "Doppler venoso MMSS",
+    "tipo": "Imágenes",
+    "grupo": "Ecografía",
+    "indicacionesSug": "Siga la preparación que indique el servicio. Acudir con orden médica y estudios previos."
+  },
+  {
+    "nombre": "Ecografía transrectal de próstata",
+    "alias": "Eco transrectal",
+    "tipo": "Imágenes",
+    "grupo": "Ecografía",
+    "indicacionesSug": "Puede requerir enema previo. Acudir con vejiga según el servicio."
+  },
+  {
+    "nombre": "Ecografía de cuello",
+    "alias": "Eco de cuello",
+    "tipo": "Imágenes",
+    "grupo": "Ecografía",
+    "indicacionesSug": "No requiere ayuno. Retire collares."
+  },
+  {
+    "nombre": "Ecografía de hombro",
+    "alias": "Eco hombro",
+    "tipo": "Imágenes",
+    "grupo": "Ecografía",
+    "indicacionesSug": "Siga la preparación que indique el servicio. Acudir con orden médica y estudios previos."
+  },
+  {
+    "nombre": "Mamografía unilateral",
+    "alias": "Mamografía de una mama",
+    "tipo": "Imágenes",
+    "grupo": "Mamografía",
+    "indicacionesSug": "No use desodorante ni crema en axilas y mamas el día del estudio."
+  },
+  {
+    "nombre": "Tomosíntesis mamaria",
+    "alias": "Tomosíntesis, mamografía 3D",
+    "tipo": "Imágenes",
+    "grupo": "Mamografía",
+    "indicacionesSug": "No use desodorante ni crema en axilas y mamas el día del estudio."
+  },
+  {
+    "nombre": "Gammagrafía ósea",
+    "alias": "Gammagrafía ósea",
+    "tipo": "Imágenes",
+    "grupo": "Medicina nuclear",
+    "indicacionesSug": "Se inyecta un radiofármaco. Beba abundante agua y siga las horas de espera del servicio."
+  },
+  {
+    "nombre": "Gammagrafía tiroidea",
+    "alias": "Gammagrafía de tiroides",
+    "tipo": "Imágenes",
+    "grupo": "Medicina nuclear",
+    "indicacionesSug": "Informe si toma levotiroxina o yodo. El servicio indica si debe suspenderlos."
+  },
+  {
+    "nombre": "PET-CT",
+    "alias": "PET, PET TAC",
+    "tipo": "Imágenes",
+    "grupo": "Medicina nuclear",
+    "indicacionesSug": "Ayuno de 6 horas. Evite ejercicio intenso el día previo. Informe diabetes."
+  },
+  {
+    "nombre": "Ecocardiograma transesofágico",
+    "alias": "Eco transesofágico, ETE",
+    "tipo": "Procedimientos",
+    "grupo": "Cardiología",
+    "indicacionesSug": "Ayuno de 6 horas. Acudir con acompañante. Informe alergia a sedantes."
+  },
+  {
+    "nombre": "Ecocardiograma de estrés",
+    "alias": "Eco estrés",
+    "tipo": "Procedimientos",
+    "grupo": "Cardiología",
+    "indicacionesSug": "Ayuno de 4 horas. Lleve ropa cómoda y lista de medicamentos."
+  },
+  {
+    "nombre": "Holter de ritmo 48 horas",
+    "alias": "Holter 48h",
+    "tipo": "Procedimientos",
+    "grupo": "Cardiología",
+    "indicacionesSug": "Puede bañarse solo si el equipo lo permite. Anote síntomas y la hora."
+  },
+  {
+    "nombre": "Test de caminata de 6 minutos",
+    "alias": "Test de caminata, prueba de marcha",
+    "tipo": "Procedimientos",
+    "grupo": "Neumología",
+    "indicacionesSug": "Lleve ropa y calzado cómodos. Use su oxígeno habitual si ya lo tiene indicado."
+  },
+  {
+    "nombre": "Flujometría máxima (peak flow)",
+    "alias": "Peak flow, flujometría",
+    "tipo": "Procedimientos",
+    "grupo": "Neumología",
+    "indicacionesSug": "Lleve su inhalador. Evite broncodilatador de rescate 4 horas antes, salvo crisis."
+  },
+  {
+    "nombre": "Difusión de monóxido de carbono (DLCO)",
+    "alias": "DLCO, difusión pulmonar",
+    "tipo": "Procedimientos",
+    "grupo": "Neumología",
+    "indicacionesSug": "Evite fumar el día del estudio. Acudir sin broncodilatador si se lo indicaron."
+  },
+  {
+    "nombre": "Poligrafía respiratoria",
+    "alias": "Poligrafía, estudio del sueño simplificado",
+    "tipo": "Procedimientos",
+    "grupo": "Neumología",
+    "indicacionesSug": "Acudir con el cabello limpio. Evite cafeína y siestas ese día."
+  },
+  {
+    "nombre": "Fibrobroncoscopía",
+    "alias": "Fibrobroncoscopia, broncoscopía",
+    "tipo": "Procedimientos",
+    "grupo": "Neumología",
+    "indicacionesSug": "Ayuno de 8 horas. Acudir con acompañante y estudios de coagulación si se los pidieron."
+  },
+  {
+    "nombre": "pHmetría esofágica de 24 horas",
+    "alias": "pHmetría",
+    "tipo": "Procedimientos",
+    "grupo": "Gastroenterología",
+    "indicacionesSug": "Suspenda inhibidores de la bomba de protones según le indique su médico, a menudo 7 días antes."
+  },
+  {
+    "nombre": "Manometría esofágica",
+    "alias": "Manometría",
+    "tipo": "Procedimientos",
+    "grupo": "Gastroenterología",
+    "indicacionesSug": "Ayuno de 8 horas. Informe medicamentos para el esófago."
+  },
+  {
+    "nombre": "Histeroscopía",
+    "alias": "Histeroscopia",
+    "tipo": "Procedimientos",
+    "grupo": "Ginecología",
+    "indicacionesSug": "Acudir fuera del sangrado menstrual, salvo indicación contraria. Puede requerir ayuno si habrá sedación."
+  },
+  {
+    "nombre": "Biopsia de mama",
+    "alias": "Biopsia mamaria",
+    "tipo": "Procedimientos",
+    "grupo": "Patología",
+    "indicacionesSug": "Informe si toma anticoagulantes o aspirina. Acudir con la mamografía o ecografía previa."
+  },
+  {
+    "nombre": "Artrocentesis",
+    "alias": "Artrocentesis, punción articular",
+    "tipo": "Procedimientos",
+    "grupo": "Procedimientos",
+    "indicacionesSug": "Informe si toma anticoagulantes. La zona debe estar limpia."
+  },
+  {
+    "nombre": "Prueba cutánea de prick",
+    "alias": "Prick test, prueba de alergia",
+    "tipo": "Procedimientos",
+    "grupo": "Alergología",
+    "indicacionesSug": "Suspenda antihistamínicos 5 días antes, salvo indicación de su médico."
+  },
+  {
+    "nombre": "Prueba de parche",
+    "alias": "Patch test",
+    "tipo": "Procedimientos",
+    "grupo": "Alergología",
+    "indicacionesSug": "La espalda debe estar libre de cremas. Evite mojar los parches durante la prueba."
+  },
+  {
+    "nombre": "Nasofibroscopía",
+    "alias": "Nasofibrolaringoscopía",
+    "tipo": "Procedimientos",
+    "grupo": "Otorrinolaringología",
+    "indicacionesSug": "No requiere ayuno. Informe alergia a anestésicos locales."
+  },
+  {
+    "nombre": "Potenciales evocados",
+    "alias": "Potenciales evocados",
+    "tipo": "Procedimientos",
+    "grupo": "Neurología",
+    "indicacionesSug": "Acudir con el cabello limpio y seco. Lleve estudios previos."
+  },
+  {
+    "nombre": "Tomografía de coherencia óptica (OCT)",
+    "alias": "OCT macular",
+    "tipo": "Procedimientos",
+    "grupo": "Oftalmología",
+    "indicacionesSug": "Puede requerir dilatación. Acudir con acompañante si se dilata la pupila."
+  },
+  {
+    "nombre": "Coronariografía",
+    "alias": "Coronariografía, cateterismo cardíaco",
+    "tipo": "Procedimientos",
+    "grupo": "Cardiología",
+    "indicacionesSug": "Ayuno de 8 horas. Acudir con acompañante, creatinina reciente y lista de medicamentos."
   }
 ];
