@@ -1,20 +1,11 @@
 export const cie10Data = [
   {
-    "codigo": "G45.9",
-    "descripcion": "Ataque isquémico transitorio (AIT)",
-    "grupo": "Ataque isquémico transitorio",
-    "sistema": "Cardiovascular",
-    "tipo": "agudo",
-    "subtipo": "neurológico",
-    "severidad": ""
-  },
-  {
     "codigo": "I00",
     "descripcion": "Fiebre reumática sin mención de complicación cardíaca",
     "grupo": "Fiebre reumática sin mención de complicación",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "reumático",
     "severidad": ""
   },
   {
@@ -23,7 +14,7 @@ export const cie10Data = [
     "grupo": "Pericarditis reumática",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "reumático",
     "severidad": ""
   },
   {
@@ -32,7 +23,7 @@ export const cie10Data = [
     "grupo": "Endocarditis reumática",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "reumático",
     "severidad": ""
   },
   {
@@ -41,7 +32,7 @@ export const cie10Data = [
     "grupo": "Miocarditis reumática",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "reumático",
     "severidad": ""
   },
   {
@@ -50,8 +41,8 @@ export const cie10Data = [
     "grupo": "Corea reumática sin complicación cardíaca",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "reumático",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "I05.0",
@@ -59,7 +50,7 @@ export const cie10Data = [
     "grupo": "Estenosis mitral reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -68,7 +59,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia mitral reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -77,7 +68,7 @@ export const cie10Data = [
     "grupo": "Estenosis mitral con insuficiencia",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -86,7 +77,7 @@ export const cie10Data = [
     "grupo": "Enfermedad valvular mitral reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -95,7 +86,7 @@ export const cie10Data = [
     "grupo": "Estenosis aórtica reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -104,7 +95,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia aórtica reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -113,7 +104,7 @@ export const cie10Data = [
     "grupo": "Estenosis aórtica reumática con insuficiencia",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -122,7 +113,7 @@ export const cie10Data = [
     "grupo": "Estenosis tricuspídea reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -131,7 +122,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia tricuspídea reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -140,7 +131,7 @@ export const cie10Data = [
     "grupo": "Trastorno de las válvulas mitral y aórtica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -149,7 +140,7 @@ export const cie10Data = [
     "grupo": "Enfermedad reumática del corazón",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -158,7 +149,7 @@ export const cie10Data = [
     "grupo": "Hipertensión esencial",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -167,7 +158,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía hipertensiva con insuficiencia",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -176,7 +167,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía hipertensiva sin insuficiencia",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -185,7 +176,7 @@ export const cie10Data = [
     "grupo": "Enfermedad renal hipertensiva con",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -194,7 +185,7 @@ export const cie10Data = [
     "grupo": "Enfermedad renal hipertensiva sin",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -203,7 +194,7 @@ export const cie10Data = [
     "grupo": "Enfermedad cardiorrenal hipertensiva con",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -212,7 +203,7 @@ export const cie10Data = [
     "grupo": "HTA con cardiopatía y nefropatía sin ICC",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "nefropático",
     "severidad": ""
   },
   {
@@ -221,7 +212,7 @@ export const cie10Data = [
     "grupo": "Enfermedad cardiorrenal hipertensiva con",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -230,7 +221,7 @@ export const cie10Data = [
     "grupo": "Hipertensión renovascular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -239,7 +230,7 @@ export const cie10Data = [
     "grupo": "Hipertensión secundaria",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "hipertensivo",
     "severidad": ""
   },
   {
@@ -248,7 +239,7 @@ export const cie10Data = [
     "grupo": "Angina inestable",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -257,7 +248,7 @@ export const cie10Data = [
     "grupo": "Angina de pecho con espasmo documentado",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -266,7 +257,7 @@ export const cie10Data = [
     "grupo": "Angina de pecho estable",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -275,7 +266,7 @@ export const cie10Data = [
     "grupo": "Angina de pecho",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -284,7 +275,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio transmural de pared",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -293,7 +284,7 @@ export const cie10Data = [
     "grupo": "IAM con elevación ST pared anterior",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -302,7 +293,7 @@ export const cie10Data = [
     "grupo": "IAM con elevación ST otra localización",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -311,7 +302,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio transmural de pared",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -320,7 +311,7 @@ export const cie10Data = [
     "grupo": "IAM sin elevación ST NE",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -329,7 +320,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio transmural de otros",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -338,7 +329,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio transmural",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -347,7 +338,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio subendocárdico",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -356,7 +347,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -365,7 +356,7 @@ export const cie10Data = [
     "grupo": "Infarto de miocardio de sitio",
     "sistema": "Cardiovascular",
     "tipo": "recurrente",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -374,7 +365,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía isquémica",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -383,7 +374,7 @@ export const cie10Data = [
     "grupo": "Enfermedad aterosclerótica del corazón",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -392,7 +383,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía isquémica sin angina",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -401,7 +392,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía isquémica con angina estable",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -410,7 +401,7 @@ export const cie10Data = [
     "grupo": "Infarto antiguo de miocardio",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -419,7 +410,7 @@ export const cie10Data = [
     "grupo": "Miocardiopatía isquémica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -428,7 +419,7 @@ export const cie10Data = [
     "grupo": "Otras formas de cardiopatía isquémica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -437,7 +428,7 @@ export const cie10Data = [
     "grupo": "Cardiopatía isquémica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "isquémico",
     "severidad": ""
   },
   {
@@ -446,7 +437,7 @@ export const cie10Data = [
     "grupo": "Embolia pulmonar con cor pulmonale",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -455,7 +446,7 @@ export const cie10Data = [
     "grupo": "Embolia pulmonar sin cor pulmonale",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -464,7 +455,7 @@ export const cie10Data = [
     "grupo": "Embolia pulmonar sin cor pulmonale",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -473,7 +464,7 @@ export const cie10Data = [
     "grupo": "Hipertensión pulmonar primaria",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -482,7 +473,7 @@ export const cie10Data = [
     "grupo": "Hipertensión pulmonar secundaria",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -491,7 +482,7 @@ export const cie10Data = [
     "grupo": "Enfermedad cardiopulmonar",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "tromboembólico",
     "severidad": ""
   },
   {
@@ -500,7 +491,7 @@ export const cie10Data = [
     "grupo": "Pericarditis idiopática",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "pericárdico",
     "severidad": ""
   },
   {
@@ -509,7 +500,7 @@ export const cie10Data = [
     "grupo": "Pericarditis",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "pericárdico",
     "severidad": ""
   },
   {
@@ -518,7 +509,7 @@ export const cie10Data = [
     "grupo": "Derrame pericárdico no inflamatorio",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "pericárdico",
     "severidad": ""
   },
   {
@@ -527,7 +518,7 @@ export const cie10Data = [
     "grupo": "Endocarditis infecciosa y subaguda",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "endocárdico",
     "severidad": ""
   },
   {
@@ -536,7 +527,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia mitral no reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -545,7 +536,7 @@ export const cie10Data = [
     "grupo": "Prolapso de la válvula mitral",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -554,7 +545,7 @@ export const cie10Data = [
     "grupo": "Estenosis de la válvula aórtica no reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -563,7 +554,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia de la válvula aórtica no",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -572,7 +563,7 @@ export const cie10Data = [
     "grupo": "Estenosis aórtica con insuficiencia no",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -581,7 +572,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia tricuspídea no reumática",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -590,7 +581,7 @@ export const cie10Data = [
     "grupo": "Endocarditis de válvula",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "valvular",
     "severidad": ""
   },
   {
@@ -599,7 +590,7 @@ export const cie10Data = [
     "grupo": "Miocarditis",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "miocárdico",
     "severidad": ""
   },
   {
@@ -608,7 +599,7 @@ export const cie10Data = [
     "grupo": "Miocardiopatía dilatada",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "miocárdico",
     "severidad": ""
   },
   {
@@ -635,7 +626,7 @@ export const cie10Data = [
     "grupo": "Miocardiopatía restrictiva",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "miocárdico",
     "severidad": ""
   },
   {
@@ -644,7 +635,7 @@ export const cie10Data = [
     "grupo": "Miocardiopatía",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "miocárdico",
     "severidad": ""
   },
   {
@@ -653,7 +644,7 @@ export const cie10Data = [
     "grupo": "Bloqueo auriculoventricular de primer grado",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -662,7 +653,7 @@ export const cie10Data = [
     "grupo": "Bloqueo auriculoventricular de segundo grado",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -671,7 +662,7 @@ export const cie10Data = [
     "grupo": "Bloqueo auriculoventricular completo",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -680,7 +671,7 @@ export const cie10Data = [
     "grupo": "Bloqueo de rama izquierda",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -689,7 +680,7 @@ export const cie10Data = [
     "grupo": "Bloqueo de rama derecha",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -698,7 +689,7 @@ export const cie10Data = [
     "grupo": "Síndrome de preexcitación",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -707,7 +698,7 @@ export const cie10Data = [
     "grupo": "Paro cardíaco con resucitación exitosa",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -716,7 +707,7 @@ export const cie10Data = [
     "grupo": "Paro cardíaco",
     "sistema": "Cardiovascular",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -725,7 +716,7 @@ export const cie10Data = [
     "grupo": "Taquicardia supraventricular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -734,7 +725,7 @@ export const cie10Data = [
     "grupo": "Taquicardia ventricular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -743,7 +734,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular paroxística",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -752,7 +743,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular persistente",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -761,7 +752,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular persistente",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -770,7 +761,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular persistente",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -779,7 +770,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -788,7 +779,7 @@ export const cie10Data = [
     "grupo": "Aleteo auricular típico",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -797,7 +788,7 @@ export const cie10Data = [
     "grupo": "Fibrilación y aleteo auricular",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -806,7 +797,7 @@ export const cie10Data = [
     "grupo": "Fibrilación auricular /longstanding",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -815,7 +806,7 @@ export const cie10Data = [
     "grupo": "Extrasístoles auriculares",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -824,7 +815,7 @@ export const cie10Data = [
     "grupo": "Extrasístoles ventriculares",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -833,7 +824,7 @@ export const cie10Data = [
     "grupo": "Síndrome del nodo sinusal enfermo",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -842,7 +833,7 @@ export const cie10Data = [
     "grupo": "Arritmia cardíaca",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arrítmico",
     "severidad": ""
   },
   {
@@ -851,7 +842,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardíaca congestiva",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -860,7 +851,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardíaca izquierda",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -869,7 +860,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardíaca sistólica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -878,7 +869,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardiaca sistólica NE",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -887,7 +878,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardíaca diastólica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -896,7 +887,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardiaca diastólica NE",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -905,7 +896,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia cardíaca",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "insuficiencia cardíaca",
     "severidad": ""
   },
   {
@@ -932,7 +923,7 @@ export const cie10Data = [
     "grupo": "Aterosclerosis de la aorta",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -941,7 +932,7 @@ export const cie10Data = [
     "grupo": "Aterosclerosis de las arterias de los miembros",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -950,7 +941,7 @@ export const cie10Data = [
     "grupo": "Arteriosclerosis obliterante de extremidades",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -959,7 +950,7 @@ export const cie10Data = [
     "grupo": "Aterosclerosis generalizada y",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -968,7 +959,7 @@ export const cie10Data = [
     "grupo": "Disección de la aorta",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -977,7 +968,7 @@ export const cie10Data = [
     "grupo": "Aneurisma de la aorta torácica sin ruptura",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -986,7 +977,7 @@ export const cie10Data = [
     "grupo": "Aneurisma de la aorta abdominal sin ruptura",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -995,7 +986,7 @@ export const cie10Data = [
     "grupo": "Aneurisma de arteria de miembro inferior",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -1004,7 +995,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Raynaud",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -1013,7 +1004,7 @@ export const cie10Data = [
     "grupo": "Enfermedad vascular periférica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -1022,7 +1013,7 @@ export const cie10Data = [
     "grupo": "Embolia y trombosis de arterias de miembros",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "arterial",
     "severidad": ""
   },
   {
@@ -1031,7 +1022,7 @@ export const cie10Data = [
     "grupo": "Tromboflebitis superficial de miembros",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1040,7 +1031,7 @@ export const cie10Data = [
     "grupo": "Trombosis venosa profunda de miembros",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1049,7 +1040,7 @@ export const cie10Data = [
     "grupo": "Flebitis y tromboflebitis de extremidad NE",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1058,7 +1049,7 @@ export const cie10Data = [
     "grupo": "Trombosis venosa profunda MMII",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1067,7 +1058,16 @@ export const cie10Data = [
     "grupo": "Várices de miembros inferiores con úlcera",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
+    "severidad": ""
+  },
+  {
+    "codigo": "I83.1",
+    "descripcion": "Várices de miembros inferiores con inflamación",
+    "grupo": "Várices de miembros inferiores con inflamación",
+    "sistema": "Cardiovascular",
+    "tipo": "crónico",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1076,7 +1076,7 @@ export const cie10Data = [
     "grupo": "Várices de miembros inferiores sin úlcera ni",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1085,7 +1085,7 @@ export const cie10Data = [
     "grupo": "Várices de extremidades inferiores NE",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1094,7 +1094,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia venosa NE",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1103,7 +1103,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia venosa periférica",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1112,7 +1112,7 @@ export const cie10Data = [
     "grupo": "Linfedema no clasificado en otra parte",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1139,7 +1139,7 @@ export const cie10Data = [
     "grupo": "Hemorroides de primer grado",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "hemorrágico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -1148,7 +1148,7 @@ export const cie10Data = [
     "grupo": "Hemorroides",
     "sistema": "Cardiovascular",
     "tipo": "crónico",
-    "subtipo": "hemorrágico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -1157,7 +1157,7 @@ export const cie10Data = [
     "grupo": "Bradicardia",
     "sistema": "Cardiovascular",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -1166,7 +1166,7 @@ export const cie10Data = [
     "grupo": "Anencefalia",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "sistema nervioso",
     "severidad": ""
   },
   {
@@ -1175,7 +1175,7 @@ export const cie10Data = [
     "grupo": "Microcefalia",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "sistema nervioso",
     "severidad": ""
   },
   {
@@ -1184,7 +1184,7 @@ export const cie10Data = [
     "grupo": "Hidrocefalia congénita",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "sistema nervioso",
     "severidad": ""
   },
   {
@@ -1193,7 +1193,7 @@ export const cie10Data = [
     "grupo": "Espina bífida",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "sistema nervioso",
     "severidad": ""
   },
   {
@@ -1202,7 +1202,7 @@ export const cie10Data = [
     "grupo": "Transposición de grandes vasos",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1211,7 +1211,7 @@ export const cie10Data = [
     "grupo": "Comunicación interventricular",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1220,7 +1220,7 @@ export const cie10Data = [
     "grupo": "Comunicación interauricular",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1229,7 +1229,7 @@ export const cie10Data = [
     "grupo": "Defecto del tabique auriculoventricular",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1238,7 +1238,7 @@ export const cie10Data = [
     "grupo": "Tetralogía de Fallot",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1247,7 +1247,7 @@ export const cie10Data = [
     "grupo": "Estenosis congénita de la válvula pulmonar",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1256,7 +1256,7 @@ export const cie10Data = [
     "grupo": "Síndrome de corazón izquierdo hipoplásico",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1265,7 +1265,7 @@ export const cie10Data = [
     "grupo": "Malformación congénita del corazón",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1274,7 +1274,7 @@ export const cie10Data = [
     "grupo": "Conducto arterioso permeable",
     "sistema": "Congénitas",
     "tipo": "crónico",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1283,7 +1283,7 @@ export const cie10Data = [
     "grupo": "Coartación de la aorta",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cardiovascular",
     "severidad": ""
   },
   {
@@ -1292,7 +1292,7 @@ export const cie10Data = [
     "grupo": "Fisura del paladar",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "fisura",
     "severidad": ""
   },
   {
@@ -1301,7 +1301,7 @@ export const cie10Data = [
     "grupo": "Labio leporino unilateral",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "fisura",
     "severidad": ""
   },
   {
@@ -1310,7 +1310,7 @@ export const cie10Data = [
     "grupo": "Paladar hendido con labio leporino unilateral",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "fisura",
     "severidad": ""
   },
   {
@@ -1481,7 +1481,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Down",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cromosómico",
     "severidad": ""
   },
   {
@@ -1490,7 +1490,7 @@ export const cie10Data = [
     "grupo": "Trisomía 18",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cromosómico",
     "severidad": ""
   },
   {
@@ -1499,7 +1499,7 @@ export const cie10Data = [
     "grupo": "Trisomía 13",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cromosómico",
     "severidad": ""
   },
   {
@@ -1508,7 +1508,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Turner",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cromosómico",
     "severidad": ""
   },
   {
@@ -1517,7 +1517,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Klinefelter",
     "sistema": "Congénitas",
     "tipo": "congénito",
-    "subtipo": "congénito",
+    "subtipo": "cromosómico",
     "severidad": ""
   },
   {
@@ -1553,7 +1553,7 @@ export const cie10Data = [
     "grupo": "Pediculosis capitis",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "ectoparásito",
     "severidad": ""
   },
   {
@@ -1562,7 +1562,7 @@ export const cie10Data = [
     "grupo": "Linfangitis",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -1580,7 +1580,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1589,7 +1589,7 @@ export const cie10Data = [
     "grupo": "Absceso cutáneo de cara",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1598,7 +1598,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1607,7 +1607,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1616,7 +1616,7 @@ export const cie10Data = [
     "grupo": "Furúnculo de miembro inferior",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1625,7 +1625,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1634,7 +1634,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1643,7 +1643,7 @@ export const cie10Data = [
     "grupo": "Absceso cutaneo y furunculo",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1652,7 +1652,7 @@ export const cie10Data = [
     "grupo": "Celulitis de dedos de mano y pie",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1661,7 +1661,7 @@ export const cie10Data = [
     "grupo": "Celulitis de dedo de mano",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1670,7 +1670,7 @@ export const cie10Data = [
     "grupo": "Celulitis de otras partes de los miembros",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1679,7 +1679,7 @@ export const cie10Data = [
     "grupo": "Celulitis de la cara",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1688,7 +1688,7 @@ export const cie10Data = [
     "grupo": "Celulitis del tronco",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1697,7 +1697,7 @@ export const cie10Data = [
     "grupo": "Celulitis",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1706,7 +1706,7 @@ export const cie10Data = [
     "grupo": "Celulitis NE",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1715,7 +1715,7 @@ export const cie10Data = [
     "grupo": "Quiste pilonidal con absceso",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1724,7 +1724,7 @@ export const cie10Data = [
     "grupo": "Quiste pilonidal sin absceso",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1733,7 +1733,7 @@ export const cie10Data = [
     "grupo": "Pioderma",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1742,7 +1742,7 @@ export const cie10Data = [
     "grupo": "Infección local de la piel NE",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "infeccioso cutáneo",
     "severidad": ""
   },
   {
@@ -1769,7 +1769,7 @@ export const cie10Data = [
     "grupo": "Dermatitis seborreica del cuero cabelludo",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1778,7 +1778,7 @@ export const cie10Data = [
     "grupo": "Dermatitis seborreica",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1787,7 +1787,7 @@ export const cie10Data = [
     "grupo": "Dermatitis del panal",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1832,7 +1832,7 @@ export const cie10Data = [
     "grupo": "Dermatitis de contacto por irritantes:",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1841,7 +1841,7 @@ export const cie10Data = [
     "grupo": "Dermatitis de contacto por irritantes",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1850,7 +1850,7 @@ export const cie10Data = [
     "grupo": "Dermatitis de contacto",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1859,7 +1859,7 @@ export const cie10Data = [
     "grupo": "Erupcion cutanea generalizada debida a",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1868,7 +1868,7 @@ export const cie10Data = [
     "grupo": "Erupción cutánea localizada por drogas",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1877,7 +1877,7 @@ export const cie10Data = [
     "grupo": "Liquen simple",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1886,7 +1886,7 @@ export const cie10Data = [
     "grupo": "Prurito anal",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1895,7 +1895,7 @@ export const cie10Data = [
     "grupo": "Prurito",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1904,7 +1904,7 @@ export const cie10Data = [
     "grupo": "Dermatitis numular",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1913,7 +1913,16 @@ export const cie10Data = [
     "grupo": "Eritema intertrigo",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
+    "severidad": ""
+  },
+  {
+    "codigo": "L30.8",
+    "descripcion": "Otras dermatitis especificadas",
+    "grupo": "Otras dermatitis especificadas",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1922,7 +1931,7 @@ export const cie10Data = [
     "grupo": "Dermatitis",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "dermatitis",
     "severidad": ""
   },
   {
@@ -1931,7 +1940,7 @@ export const cie10Data = [
     "grupo": "Psoriasis vulgar",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1940,7 +1949,7 @@ export const cie10Data = [
     "grupo": "Psoriasis pustulosa generalizada",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1949,7 +1958,7 @@ export const cie10Data = [
     "grupo": "Pustulosis palmoplantar",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1958,7 +1967,7 @@ export const cie10Data = [
     "grupo": "Psoriasis guttata",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1967,7 +1976,7 @@ export const cie10Data = [
     "grupo": "Artropatia psoriasica",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1976,7 +1985,7 @@ export const cie10Data = [
     "grupo": "Otras psoriasis",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1985,7 +1994,7 @@ export const cie10Data = [
     "grupo": "Psoriasis",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -1994,7 +2003,7 @@ export const cie10Data = [
     "grupo": "Pitiriasis rosada",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -2003,7 +2012,7 @@ export const cie10Data = [
     "grupo": "Liquen plano",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "papuloescamoso",
     "severidad": ""
   },
   {
@@ -2021,7 +2030,7 @@ export const cie10Data = [
     "grupo": "Urticaria idiopatica",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2030,7 +2039,7 @@ export const cie10Data = [
     "grupo": "Urticaria debida al calor y al frio",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2039,7 +2048,7 @@ export const cie10Data = [
     "grupo": "Urticaria dermatografica",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2048,7 +2057,7 @@ export const cie10Data = [
     "grupo": "Urticaria de contacto",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2057,7 +2066,7 @@ export const cie10Data = [
     "grupo": "Urticaria",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2066,7 +2075,7 @@ export const cie10Data = [
     "grupo": "Urticaria",
     "sistema": "Dermatología",
     "tipo": "agudo",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2075,7 +2084,7 @@ export const cie10Data = [
     "grupo": "Eritema multiforme no flictenular",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2084,7 +2093,7 @@ export const cie10Data = [
     "grupo": "Eritema multiforme flictenular",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2093,7 +2102,7 @@ export const cie10Data = [
     "grupo": "Eritema multiforme",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "urticaria",
     "severidad": ""
   },
   {
@@ -2138,7 +2147,7 @@ export const cie10Data = [
     "grupo": "Una encarnada",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2147,7 +2156,7 @@ export const cie10Data = [
     "grupo": "Alopecia areata",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2156,7 +2165,7 @@ export const cie10Data = [
     "grupo": "Alopecia androgenica",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2165,7 +2174,7 @@ export const cie10Data = [
     "grupo": "Efluvio telogeno",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2174,7 +2183,7 @@ export const cie10Data = [
     "grupo": "Hirsutismo",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2183,7 +2192,7 @@ export const cie10Data = [
     "grupo": "Acne vulgar",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2192,7 +2201,7 @@ export const cie10Data = [
     "grupo": "Acne conglobata",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2201,7 +2210,7 @@ export const cie10Data = [
     "grupo": "Acne infantil",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2210,7 +2219,7 @@ export const cie10Data = [
     "grupo": "Acne excoriado",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2219,7 +2228,7 @@ export const cie10Data = [
     "grupo": "Acne",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2228,7 +2237,7 @@ export const cie10Data = [
     "grupo": "Dermatitis perioral",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2237,7 +2246,7 @@ export const cie10Data = [
     "grupo": "Rosacea",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2246,7 +2255,7 @@ export const cie10Data = [
     "grupo": "Quiste epidermico",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2255,7 +2264,7 @@ export const cie10Data = [
     "grupo": "Quiste tricodermico",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2264,7 +2273,7 @@ export const cie10Data = [
     "grupo": "Quiste folicular cutáneo NE",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2273,7 +2282,7 @@ export const cie10Data = [
     "grupo": "Acne queloide",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2282,7 +2291,7 @@ export const cie10Data = [
     "grupo": "Hidradenitis supurativa",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2291,7 +2300,7 @@ export const cie10Data = [
     "grupo": "Foliculitis",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "anexos cutáneos",
     "severidad": ""
   },
   {
@@ -2345,7 +2354,7 @@ export const cie10Data = [
     "grupo": "Callos y callosidades",
     "sistema": "Dermatología",
     "tipo": "crónico",
-    "subtipo": "dermatológico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -2364,7 +2373,7 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatológico",
-    "severidad": ""
+    "severidad": "grado i"
   },
   {
     "codigo": "L89.1",
@@ -2373,7 +2382,7 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatológico",
-    "severidad": ""
+    "severidad": "grado ii"
   },
   {
     "codigo": "L89.2",
@@ -2382,12 +2391,21 @@ export const cie10Data = [
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatológico",
-    "severidad": ""
+    "severidad": "grado iii"
   },
   {
     "codigo": "L89.3",
     "descripcion": "Ulcera de decubito grado IV",
     "grupo": "Ulcera de decubito grado IV",
+    "sistema": "Dermatología",
+    "tipo": "crónico",
+    "subtipo": "dermatológico",
+    "severidad": "grado iv"
+  },
+  {
+    "codigo": "L89.9",
+    "descripcion": "Úlcera por presión no especificada",
+    "grupo": "Úlcera por presión",
     "sistema": "Dermatología",
     "tipo": "crónico",
     "subtipo": "dermatológico",
@@ -2453,7 +2471,61 @@ export const cie10Data = [
     "grupo": "Gastroenteritis y colitis infecciosa NE",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
+    "codigo": "I84.0",
+    "descripcion": "Hemorroides internas trombosadas",
+    "grupo": "Hemorroides internas trombosadas",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
+    "severidad": ""
+  },
+  {
+    "codigo": "I84.1",
+    "descripcion": "Hemorroides internas con otra complicación",
+    "grupo": "Hemorroides internas con otra complicación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
+    "severidad": ""
+  },
+  {
+    "codigo": "I84.2",
+    "descripcion": "Hemorroides internas sin complicación",
+    "grupo": "Hemorroides internas sin complicación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
+    "severidad": "sin complicación"
+  },
+  {
+    "codigo": "I84.3",
+    "descripcion": "Hemorroides externas trombosadas",
+    "grupo": "Hemorroides externas trombosadas",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
+    "severidad": ""
+  },
+  {
+    "codigo": "I84.5",
+    "descripcion": "Hemorroides externas sin complicación",
+    "grupo": "Hemorroides externas sin complicación",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
+    "severidad": "sin complicación"
+  },
+  {
+    "codigo": "I84.9",
+    "descripcion": "Hemorroides no especificadas",
+    "grupo": "Hemorroides",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -2471,8 +2543,8 @@ export const cie10Data = [
     "grupo": "Varices esofagicas sin hemorragia",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "venoso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K02.1",
@@ -2480,7 +2552,7 @@ export const cie10Data = [
     "grupo": "Caries de la dentina",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2489,7 +2561,7 @@ export const cie10Data = [
     "grupo": "Caries dental",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2498,7 +2570,7 @@ export const cie10Data = [
     "grupo": "Pulpitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2507,7 +2579,7 @@ export const cie10Data = [
     "grupo": "Absceso periapical con fistula",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2516,7 +2588,7 @@ export const cie10Data = [
     "grupo": "Absceso periapical sin fistula",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2525,7 +2597,7 @@ export const cie10Data = [
     "grupo": "Gingivitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2534,7 +2606,7 @@ export const cie10Data = [
     "grupo": "Gingivitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2543,7 +2615,16 @@ export const cie10Data = [
     "grupo": "Periodontitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K08.1",
+    "descripcion": "Pérdida de dientes por extracción o enfermedad periodontal",
+    "grupo": "Pérdida de dientes por extracción o",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2552,7 +2633,16 @@ export const cie10Data = [
     "grupo": "Estomatitis aftosa",
     "sistema": "Digestivo",
     "tipo": "recurrente",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K12.1",
+    "descripcion": "Otras formas de estomatitis",
+    "grupo": "Otras formas de estomatitis",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2561,7 +2651,16 @@ export const cie10Data = [
     "grupo": "Celulitis y absceso de la boca",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
+    "severidad": ""
+  },
+  {
+    "codigo": "K13.0",
+    "descripcion": "Enfermedades de los labios",
+    "grupo": "Enfermedades de los labios",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -2570,7 +2669,7 @@ export const cie10Data = [
     "grupo": "Esofagitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2579,7 +2678,7 @@ export const cie10Data = [
     "grupo": "Esofagitis eosinofílica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2588,7 +2687,7 @@ export const cie10Data = [
     "grupo": "Esofagitis NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2597,7 +2696,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por reflujo gastroesofagico con",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2606,7 +2705,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por reflujo gastroesofagico sin",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2615,7 +2714,7 @@ export const cie10Data = [
     "grupo": "Ulcera del esofago",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2624,7 +2723,7 @@ export const cie10Data = [
     "grupo": "Úlcera esofágica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "esofágico",
     "severidad": ""
   },
   {
@@ -2642,7 +2741,7 @@ export const cie10Data = [
     "grupo": "Ulcera gastrica con perforacion",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2651,8 +2750,8 @@ export const cie10Data = [
     "grupo": "Ulcera gastrica sin hemorragia ni perforacion",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K25.4",
@@ -2669,7 +2768,7 @@ export const cie10Data = [
     "grupo": "Úlcera gástrica con perforación",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2687,8 +2786,8 @@ export const cie10Data = [
     "grupo": "Ulcera gastrica sin hemorragia ni perforacion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K25.9",
@@ -2696,7 +2795,7 @@ export const cie10Data = [
     "grupo": "Ulcera gastrica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2714,8 +2813,8 @@ export const cie10Data = [
     "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K26.4",
@@ -2732,7 +2831,7 @@ export const cie10Data = [
     "grupo": "Úlcera duodenal con perforación",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2741,8 +2840,8 @@ export const cie10Data = [
     "grupo": "Ulcera duodenal sin hemorragia ni perforacion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K26.9",
@@ -2750,7 +2849,7 @@ export const cie10Data = [
     "grupo": "Ulcera duodenal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2759,8 +2858,8 @@ export const cie10Data = [
     "grupo": "Úlcera péptica sin hemorragia ni perforación",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K27.7",
@@ -2768,8 +2867,8 @@ export const cie10Data = [
     "grupo": "Úlcera péptica sin hemorragia ni perforación",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "ulceroso",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K27.9",
@@ -2777,7 +2876,7 @@ export const cie10Data = [
     "grupo": "Ulcera peptica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "ulceroso",
     "severidad": ""
   },
   {
@@ -2795,8 +2894,8 @@ export const cie10Data = [
     "grupo": "Gastritis sin hemorragia",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "gástrico",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K29.1",
@@ -2804,7 +2903,7 @@ export const cie10Data = [
     "grupo": "Otras gastritis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2813,7 +2912,7 @@ export const cie10Data = [
     "grupo": "Gastritis alcohólica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2822,7 +2921,7 @@ export const cie10Data = [
     "grupo": "Gastritis superficial",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2831,7 +2930,7 @@ export const cie10Data = [
     "grupo": "Gastritis atrofica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2840,7 +2939,7 @@ export const cie10Data = [
     "grupo": "Gastritis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2849,7 +2948,7 @@ export const cie10Data = [
     "grupo": "Otras gastritis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2858,7 +2957,7 @@ export const cie10Data = [
     "grupo": "Gastritis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2867,8 +2966,8 @@ export const cie10Data = [
     "grupo": "Gastritis NE sin hemorragia",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "gástrico",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K29.8",
@@ -2876,7 +2975,7 @@ export const cie10Data = [
     "grupo": "Duodenitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2885,7 +2984,7 @@ export const cie10Data = [
     "grupo": "Gastroduodenitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2894,7 +2993,7 @@ export const cie10Data = [
     "grupo": "Dispepsia",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2903,7 +3002,7 @@ export const cie10Data = [
     "grupo": "Gastroparesia",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "gástrico",
     "severidad": ""
   },
   {
@@ -2912,7 +3011,7 @@ export const cie10Data = [
     "grupo": "Apendicitis con peritonitis generalizada",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2921,7 +3020,7 @@ export const cie10Data = [
     "grupo": "Apendicitis con peritonitis generalizada NE",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2930,7 +3029,7 @@ export const cie10Data = [
     "grupo": "Apendicitis con peritonitis localizada",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2939,7 +3038,7 @@ export const cie10Data = [
     "grupo": "Apendicitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2948,7 +3047,7 @@ export const cie10Data = [
     "grupo": "Apendicitis con otro tipo de peritonitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2957,7 +3056,7 @@ export const cie10Data = [
     "grupo": "Apendicitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2966,7 +3065,7 @@ export const cie10Data = [
     "grupo": "Apendicitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "apendicular",
     "severidad": ""
   },
   {
@@ -2975,7 +3074,7 @@ export const cie10Data = [
     "grupo": "Hernia inguinal bilateral con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -2984,7 +3083,7 @@ export const cie10Data = [
     "grupo": "Hernia inguinal unilateral con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -2993,7 +3092,7 @@ export const cie10Data = [
     "grupo": "Hernia inguinal unilateral",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3002,7 +3101,7 @@ export const cie10Data = [
     "grupo": "Hernia inguinal NE sin obstrucción ni gangrena",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3011,7 +3110,7 @@ export const cie10Data = [
     "grupo": "Hernia femoral unilateral",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3020,7 +3119,7 @@ export const cie10Data = [
     "grupo": "Hernia umbilical con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3029,7 +3128,7 @@ export const cie10Data = [
     "grupo": "Hernia umbilical sin obstruccion ni gangrena",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3038,7 +3137,7 @@ export const cie10Data = [
     "grupo": "Hernia ventral con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3047,7 +3146,7 @@ export const cie10Data = [
     "grupo": "Hernia ventral sin obstruccion ni gangrena",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3056,7 +3155,7 @@ export const cie10Data = [
     "grupo": "Hernia diafragmatica con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3065,7 +3164,7 @@ export const cie10Data = [
     "grupo": "Hernia hiatal sin obstruccion ni gangrena",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3074,7 +3173,7 @@ export const cie10Data = [
     "grupo": "Hernia abdominal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "herniario",
     "severidad": ""
   },
   {
@@ -3083,7 +3182,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Crohn del intestino delgado",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3092,7 +3191,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Crohn del intestino grueso",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3101,7 +3200,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Crohn",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3110,8 +3209,8 @@ export const cie10Data = [
     "grupo": "Enfermedad de Crohn NE sin complicaciones",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "inflamatorio intestinal",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K51.0",
@@ -3119,7 +3218,7 @@ export const cie10Data = [
     "grupo": "Colitis ulcerosa con pancolitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3128,7 +3227,7 @@ export const cie10Data = [
     "grupo": "Colitis ulcerativa NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3137,7 +3236,7 @@ export const cie10Data = [
     "grupo": "Colitis ulcerosa",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3146,8 +3245,8 @@ export const cie10Data = [
     "grupo": "Colitis ulcerativa NE sin complicaciones",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "inflamatorio intestinal",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "K52.1",
@@ -3155,7 +3254,7 @@ export const cie10Data = [
     "grupo": "Gastroenteritis y colitis toxicas",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3182,7 +3281,7 @@ export const cie10Data = [
     "grupo": "Gastroenteritis y colitis no infecciosa",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "inflamatorio intestinal",
     "severidad": ""
   },
   {
@@ -3191,7 +3290,7 @@ export const cie10Data = [
     "grupo": "Colitis isquémica NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3200,7 +3299,7 @@ export const cie10Data = [
     "grupo": "Ileo paralitico",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3209,7 +3308,7 @@ export const cie10Data = [
     "grupo": "Volvulo intestinal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3218,7 +3317,7 @@ export const cie10Data = [
     "grupo": "Adherencias intestinales con obstruccion",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3227,7 +3326,7 @@ export const cie10Data = [
     "grupo": "Otras obstrucciones intestinales y las",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3236,7 +3335,7 @@ export const cie10Data = [
     "grupo": "Ileo",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3245,7 +3344,7 @@ export const cie10Data = [
     "grupo": "Diverticulitis del colon con perforacion y",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3254,7 +3353,7 @@ export const cie10Data = [
     "grupo": "Diverticulosis del colon sin perforacion ni",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3263,7 +3362,7 @@ export const cie10Data = [
     "grupo": "Enfermedad diverticular intestino grueso sin",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3272,7 +3371,7 @@ export const cie10Data = [
     "grupo": "Enfermedad diverticular del intestino",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3281,7 +3380,7 @@ export const cie10Data = [
     "grupo": "Diverticulitis del intestino grueso NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3290,7 +3389,7 @@ export const cie10Data = [
     "grupo": "Sindrome del intestino irritable con diarrea",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3299,7 +3398,7 @@ export const cie10Data = [
     "grupo": "Síndrome de intestino irritable con",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3308,7 +3407,7 @@ export const cie10Data = [
     "grupo": "Sindrome del intestino irritable sin diarrea",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3317,7 +3416,7 @@ export const cie10Data = [
     "grupo": "Estrenimiento",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3326,7 +3425,7 @@ export const cie10Data = [
     "grupo": "Estreñimiento NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3335,7 +3434,7 @@ export const cie10Data = [
     "grupo": "Estreñimiento funcional",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3344,7 +3443,7 @@ export const cie10Data = [
     "grupo": "Diarrea funcional",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3353,7 +3452,7 @@ export const cie10Data = [
     "grupo": "Fisura anal",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3362,7 +3461,16 @@ export const cie10Data = [
     "grupo": "Fisura anal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
+    "severidad": ""
+  },
+  {
+    "codigo": "K60.2",
+    "descripcion": "Fisura anal no especificada",
+    "grupo": "Fisura anal",
+    "sistema": "Digestivo",
+    "tipo": "crónico",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3371,7 +3479,7 @@ export const cie10Data = [
     "grupo": "Fistula anal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3380,7 +3488,7 @@ export const cie10Data = [
     "grupo": "Absceso anal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3389,7 +3497,7 @@ export const cie10Data = [
     "grupo": "Pólipo de colon",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3398,7 +3506,7 @@ export const cie10Data = [
     "grupo": "Hemorroides de segundo grado",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "hemorrágico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -3407,7 +3515,7 @@ export const cie10Data = [
     "grupo": "Hemorroides de tercer grado",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "hemorrágico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -3416,7 +3524,7 @@ export const cie10Data = [
     "grupo": "Hemorroides de cuarto grado",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "hemorrágico",
+    "subtipo": "hemorroides",
     "severidad": ""
   },
   {
@@ -3425,7 +3533,7 @@ export const cie10Data = [
     "grupo": "Trombosis venosa perianal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -3434,7 +3542,7 @@ export const cie10Data = [
     "grupo": "Peritonitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "peritoneal",
     "severidad": ""
   },
   {
@@ -3443,7 +3551,7 @@ export const cie10Data = [
     "grupo": "Peritonitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "peritoneal",
     "severidad": ""
   },
   {
@@ -3452,7 +3560,7 @@ export const cie10Data = [
     "grupo": "Higado graso alcoholico",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3461,7 +3569,7 @@ export const cie10Data = [
     "grupo": "Hepatitis alcoholica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -3470,7 +3578,7 @@ export const cie10Data = [
     "grupo": "Cirrosis hepatica alcoholica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3479,7 +3587,7 @@ export const cie10Data = [
     "grupo": "Hepatopatía alcohólica NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3488,7 +3596,7 @@ export const cie10Data = [
     "grupo": "Hepatitis toxica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -3497,7 +3605,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia hepatica y subaguda",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3506,7 +3614,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia hepática NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3515,7 +3623,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia hepatica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3524,7 +3632,7 @@ export const cie10Data = [
     "grupo": "Cirrosis del higado",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3533,7 +3641,7 @@ export const cie10Data = [
     "grupo": "Cirrosis hepática NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3542,7 +3650,7 @@ export const cie10Data = [
     "grupo": "Absceso hepático",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3551,7 +3659,7 @@ export const cie10Data = [
     "grupo": "Hepatitis autoinmune",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -3560,7 +3668,7 @@ export const cie10Data = [
     "grupo": "Esteatohepatitis no alcoholica",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -3569,7 +3677,7 @@ export const cie10Data = [
     "grupo": "Higado graso",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "hepático",
     "severidad": ""
   },
   {
@@ -3578,7 +3686,7 @@ export const cie10Data = [
     "grupo": "Colelitiasis con colecistitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3587,7 +3695,7 @@ export const cie10Data = [
     "grupo": "Colelitiasis con colecistitis con obstrucción",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3596,7 +3704,7 @@ export const cie10Data = [
     "grupo": "Colelitiasis con otra colecistitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3605,7 +3713,7 @@ export const cie10Data = [
     "grupo": "Colelitiasis sin colecistitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3614,7 +3722,7 @@ export const cie10Data = [
     "grupo": "Colelitiasis NE sin colecistitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3623,7 +3731,7 @@ export const cie10Data = [
     "grupo": "Calculo de conducto biliar con colangitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3632,7 +3740,7 @@ export const cie10Data = [
     "grupo": "Cálculo de la vía biliar con colecistitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3641,7 +3749,7 @@ export const cie10Data = [
     "grupo": "Calculo de conducto biliar sin colangitis ni",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3650,7 +3758,7 @@ export const cie10Data = [
     "grupo": "Colecistitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3659,7 +3767,7 @@ export const cie10Data = [
     "grupo": "Colecistitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3668,7 +3776,7 @@ export const cie10Data = [
     "grupo": "Colecistitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3677,7 +3785,7 @@ export const cie10Data = [
     "grupo": "Colangitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3686,7 +3794,7 @@ export const cie10Data = [
     "grupo": "Colangitis NE",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "biliar",
     "severidad": ""
   },
   {
@@ -3695,7 +3803,7 @@ export const cie10Data = [
     "grupo": "Pancreatitis biliar",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "pancreático",
     "severidad": ""
   },
   {
@@ -3704,7 +3812,7 @@ export const cie10Data = [
     "grupo": "Pancreatitis inducida por alcohol",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "pancreático",
     "severidad": ""
   },
   {
@@ -3713,7 +3821,7 @@ export const cie10Data = [
     "grupo": "Pancreatitis",
     "sistema": "Digestivo",
     "tipo": "agudo",
-    "subtipo": "digestivo",
+    "subtipo": "pancreático",
     "severidad": ""
   },
   {
@@ -3722,7 +3830,7 @@ export const cie10Data = [
     "grupo": "Pancreatitis inducida por alcohol",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "pancreático",
     "severidad": ""
   },
   {
@@ -3731,7 +3839,7 @@ export const cie10Data = [
     "grupo": "Otras pancreatitis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "pancreático",
     "severidad": ""
   },
   {
@@ -3740,7 +3848,7 @@ export const cie10Data = [
     "grupo": "Enfermedad celiaca",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "malabsorción",
     "severidad": ""
   },
   {
@@ -3749,7 +3857,7 @@ export const cie10Data = [
     "grupo": "Malabsorcion intestinal",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "malabsorción",
     "severidad": ""
   },
   {
@@ -3758,7 +3866,7 @@ export const cie10Data = [
     "grupo": "Hematemesis",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "malabsorción",
     "severidad": ""
   },
   {
@@ -3767,7 +3875,7 @@ export const cie10Data = [
     "grupo": "Melena",
     "sistema": "Digestivo",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "malabsorción",
     "severidad": ""
   },
   {
@@ -3785,7 +3893,7 @@ export const cie10Data = [
     "grupo": "Dolor abdominal NE",
     "sistema": "Digestivo",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -3794,7 +3902,7 @@ export const cie10Data = [
     "grupo": "Náuseas y vómitos NE",
     "sistema": "Digestivo",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -3803,7 +3911,7 @@ export const cie10Data = [
     "grupo": "Síndrome de deficiencia congénita de yodo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3812,7 +3920,7 @@ export const cie10Data = [
     "grupo": "Bocio difuso por deficiencia de yodo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3821,7 +3929,7 @@ export const cie10Data = [
     "grupo": "Bocio multinodular por deficiencia de yodo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3830,7 +3938,7 @@ export const cie10Data = [
     "grupo": "Bocio relacionado con deficiencia de yodo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3839,7 +3947,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo subclínico por deficiencia de",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3848,7 +3956,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo congénito con bocio difuso",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3857,7 +3965,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo congénito sin bocio",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3866,7 +3974,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo por fármacos y sustancias",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3875,7 +3983,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo postinfeccioso",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3884,7 +3992,7 @@ export const cie10Data = [
     "grupo": "Atrofia de tiroides adquirida",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3893,7 +4001,7 @@ export const cie10Data = [
     "grupo": "Coma mixedematoso",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3902,7 +4010,7 @@ export const cie10Data = [
     "grupo": "Otros hipotiroidismos especificados",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3911,7 +4019,7 @@ export const cie10Data = [
     "grupo": "Hipotiroidismo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3920,7 +4028,7 @@ export const cie10Data = [
     "grupo": "Bocio difuso no tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3929,7 +4037,7 @@ export const cie10Data = [
     "grupo": "Nódulo tiroideo solitario no tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3938,7 +4046,7 @@ export const cie10Data = [
     "grupo": "Bocio multinodular no tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3947,7 +4055,7 @@ export const cie10Data = [
     "grupo": "Bocio no tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3956,7 +4064,7 @@ export const cie10Data = [
     "grupo": "Hipertiroidismo con bocio difuso",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": "grave"
   },
   {
@@ -3965,7 +4073,7 @@ export const cie10Data = [
     "grupo": "Bocio difuso tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": "grave"
   },
   {
@@ -3974,7 +4082,7 @@ export const cie10Data = [
     "grupo": "Hipertiroidismo con nódulo tóxico solitario",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3983,7 +4091,7 @@ export const cie10Data = [
     "grupo": "Bocio nodular tóxico uninodular",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -3992,7 +4100,7 @@ export const cie10Data = [
     "grupo": "Hipertiroidismo con bocio multinodular tóxico",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4001,7 +4109,7 @@ export const cie10Data = [
     "grupo": "Crisis o tormenta tiroidea",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4010,7 +4118,7 @@ export const cie10Data = [
     "grupo": "Hipertiroidismo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4019,7 +4127,7 @@ export const cie10Data = [
     "grupo": "Hipertiroidismo NE",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4028,7 +4136,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4037,7 +4145,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis subaguda",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4046,7 +4154,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis con tirotoxicosis transitoria",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4055,7 +4163,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis autoinmune",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4064,7 +4172,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis inducida por fármacos",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4073,7 +4181,7 @@ export const cie10Data = [
     "grupo": "Tiroiditis",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4082,7 +4190,7 @@ export const cie10Data = [
     "grupo": "Trastorno de la tiroides",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "tiroideo",
     "severidad": ""
   },
   {
@@ -4091,7 +4199,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con cetoacidosis",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4100,7 +4208,7 @@ export const cie10Data = [
     "grupo": "DM tipo 1 con cetoacidosis sin coma",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4109,8 +4217,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.3",
@@ -4118,8 +4226,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.4",
@@ -4127,8 +4235,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.40",
@@ -4136,7 +4244,7 @@ export const cie10Data = [
     "grupo": "DM tipo 1 con neuropatía diabética",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -4145,8 +4253,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.6",
@@ -4154,7 +4262,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con otras",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4163,8 +4271,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.8",
@@ -4172,8 +4280,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E10.9",
@@ -4181,8 +4289,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 1 sin complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "E11.0",
@@ -4190,7 +4298,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con coma hiperosmolar",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4199,7 +4307,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con cetoacidosis",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4208,7 +4316,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con nefropatía",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "nefropático",
     "severidad": ""
   },
   {
@@ -4217,7 +4325,7 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con nefropatía diabética",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "nefropático",
     "severidad": ""
   },
   {
@@ -4226,7 +4334,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con retinopatía",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "retinopatía",
     "severidad": ""
   },
   {
@@ -4235,7 +4343,7 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con retinopatía diabética",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "retinopatía",
     "severidad": ""
   },
   {
@@ -4244,7 +4352,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con neuropatía",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -4253,7 +4361,7 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con neuropatía diabética",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -4262,8 +4370,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E11.51",
@@ -4271,8 +4379,8 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con complicaciones circulatorias",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E11.6",
@@ -4280,7 +4388,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con pie diabético",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "pie diabético",
     "severidad": ""
   },
   {
@@ -4289,7 +4397,7 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con hipoglicemia NE",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4298,7 +4406,7 @@ export const cie10Data = [
     "grupo": "DM tipo 2 con hiperglicemia",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4307,8 +4415,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E11.8",
@@ -4316,8 +4424,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 con complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "con complicación"
   },
   {
     "codigo": "E11.9",
@@ -4325,8 +4433,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus tipo 2 sin complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "E12.9",
@@ -4334,7 +4442,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus asociada a desnutrición",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4343,7 +4451,7 @@ export const cie10Data = [
     "grupo": "Otra diabetes mellitus especificada con",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo sobre crónico",
-    "subtipo": "metabólico",
+    "subtipo": "diabetes",
     "severidad": ""
   },
   {
@@ -4352,8 +4460,8 @@ export const cie10Data = [
     "grupo": "Otra diabetes mellitus especificada sin",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "E14.9",
@@ -4361,8 +4469,8 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus sin complicaciones",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "diabetes",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "E15",
@@ -4370,7 +4478,7 @@ export const cie10Data = [
     "grupo": "Coma hipoglucémico no diabético",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "hipoglucemia",
     "severidad": ""
   },
   {
@@ -4379,7 +4487,7 @@ export const cie10Data = [
     "grupo": "Hipoglucemia sin coma inducida por fármacos",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "hipoglucemia",
     "severidad": ""
   },
   {
@@ -4388,7 +4496,7 @@ export const cie10Data = [
     "grupo": "Otra hipoglucemia",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "hipoglucemia",
     "severidad": ""
   },
   {
@@ -4397,7 +4505,7 @@ export const cie10Data = [
     "grupo": "Hipoglucemia",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "hipoglucemia",
     "severidad": ""
   },
   {
@@ -4766,7 +4874,7 @@ export const cie10Data = [
     "grupo": "Kwashiorkor",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": ""
   },
   {
@@ -4775,7 +4883,7 @@ export const cie10Data = [
     "grupo": "Marasmo nutricional",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": ""
   },
   {
@@ -4784,7 +4892,7 @@ export const cie10Data = [
     "grupo": "Kwashiorkor marasmático",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": ""
   },
   {
@@ -4793,7 +4901,7 @@ export const cie10Data = [
     "grupo": "Desnutrición proteico-calórica",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": "grave"
   },
   {
@@ -4802,7 +4910,7 @@ export const cie10Data = [
     "grupo": "Desnutrición proteico-calórica",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": "moderado"
   },
   {
@@ -4811,7 +4919,7 @@ export const cie10Data = [
     "grupo": "Desnutrición proteico-calórica",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": "leve"
   },
   {
@@ -4820,7 +4928,7 @@ export const cie10Data = [
     "grupo": "Desnutrición proteico-calórica",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
     "severidad": ""
   },
   {
@@ -4829,7 +4937,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de vitamina A",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4838,7 +4946,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de tiamina",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4847,7 +4955,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de otras vitaminas del grupo B",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4856,7 +4964,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de vitamina B12",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4865,7 +4973,7 @@ export const cie10Data = [
     "grupo": "Raquitismo activo por deficiencia de vitamina",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4874,7 +4982,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de vitamina D",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4883,7 +4991,7 @@ export const cie10Data = [
     "grupo": "Deficiencia dietética de calcio",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4892,7 +5000,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de hierro",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4901,7 +5009,7 @@ export const cie10Data = [
     "grupo": "Deficiencia nutricional",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4910,7 +5018,7 @@ export const cie10Data = [
     "grupo": "Secuelas de marasmo",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -4919,7 +5027,7 @@ export const cie10Data = [
     "grupo": "Obesidad por exceso de calorías",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4928,7 +5036,7 @@ export const cie10Data = [
     "grupo": "Obesidad mórbida por exceso de calorías",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4937,7 +5045,7 @@ export const cie10Data = [
     "grupo": "Obesidad NE",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4946,7 +5054,7 @@ export const cie10Data = [
     "grupo": "Obesidad inducida por fármacos",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4955,7 +5063,7 @@ export const cie10Data = [
     "grupo": "Obesidad mórbida con hipoventilación alveolar",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4964,7 +5072,7 @@ export const cie10Data = [
     "grupo": "Otra obesidad especificada",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -4973,7 +5081,7 @@ export const cie10Data = [
     "grupo": "Obesidad",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -5175,6 +5283,15 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "E86",
+    "descripcion": "Depleción del volumen",
+    "grupo": "Depleción del volumen",
+    "sistema": "Endocrino/Metabólico",
+    "tipo": "crónico",
+    "subtipo": "metabólico",
+    "severidad": ""
+  },
+  {
     "codigo": "E86.0",
     "descripcion": "Deshidratación",
     "grupo": "Deshidratación",
@@ -5279,7 +5396,7 @@ export const cie10Data = [
     "grupo": "Gota idiopática",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -5288,7 +5405,7 @@ export const cie10Data = [
     "grupo": "Gota metabólica",
     "sistema": "Endocrino/Metabólico",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -5297,7 +5414,7 @@ export const cie10Data = [
     "grupo": "Diabetes mellitus gestacional",
     "sistema": "Endocrino/Metabólico",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "diabetes gestacional",
     "severidad": ""
   },
   {
@@ -5324,7 +5441,7 @@ export const cie10Data = [
     "grupo": "Examen médico general",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -5333,7 +5450,7 @@ export const cie10Data = [
     "grupo": "Control de salud de rutina del niño",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -5342,7 +5459,7 @@ export const cie10Data = [
     "grupo": "Examen preempleo",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -5351,7 +5468,7 @@ export const cie10Data = [
     "grupo": "Estado de infección asintomática por VIH",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -5360,7 +5477,7 @@ export const cie10Data = [
     "grupo": "Portador de hepatitis viral",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -5369,7 +5486,7 @@ export const cie10Data = [
     "grupo": "Necesidad de inmunización contra la hepatitis",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -5378,7 +5495,7 @@ export const cie10Data = [
     "grupo": "Necesidad de inmunización contra la influenza",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -5387,7 +5504,7 @@ export const cie10Data = [
     "grupo": "Consejo y asesoramiento general sobre la",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5396,7 +5513,7 @@ export const cie10Data = [
     "grupo": "Inserción de dispositivo anticonceptivo",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5405,7 +5522,7 @@ export const cie10Data = [
     "grupo": "Supervisión del uso de drogas anticonceptivas",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5414,7 +5531,7 @@ export const cie10Data = [
     "grupo": "Supervisión del uso de dispositivo",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5423,7 +5540,7 @@ export const cie10Data = [
     "grupo": "Supervisión de embarazo normal",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5432,7 +5549,7 @@ export const cie10Data = [
     "grupo": "Seguimiento postparto de rutina",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -5441,7 +5558,7 @@ export const cie10Data = [
     "grupo": "Atención de colostomía",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -5450,7 +5567,7 @@ export const cie10Data = [
     "grupo": "Prueba y ajuste de dispositivo protésico",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -5459,7 +5576,7 @@ export const cie10Data = [
     "grupo": "Asistencia y ajuste de marcapaso cardíaco",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -5477,7 +5594,7 @@ export const cie10Data = [
     "grupo": "Convalecencia consecutiva a cirugía",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -5540,7 +5657,7 @@ export const cie10Data = [
     "grupo": "Antecedente personal de tumor maligno",
     "sistema": "Factores de Salud",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "antecedente",
     "severidad": ""
   },
   {
@@ -5549,7 +5666,7 @@ export const cie10Data = [
     "grupo": "Várices escrotales",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "venoso",
     "severidad": ""
   },
   {
@@ -5558,7 +5675,7 @@ export const cie10Data = [
     "grupo": "Síndrome nefrítico",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "glomerular",
     "severidad": ""
   },
   {
@@ -5567,7 +5684,7 @@ export const cie10Data = [
     "grupo": "Síndrome nefrítico",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "glomerular",
     "severidad": ""
   },
   {
@@ -5576,7 +5693,7 @@ export const cie10Data = [
     "grupo": "Síndrome nefrótico",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "glomerular",
     "severidad": ""
   },
   {
@@ -5585,7 +5702,7 @@ export const cie10Data = [
     "grupo": "Síndrome nefrítico",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "glomerular",
     "severidad": ""
   },
   {
@@ -5594,7 +5711,7 @@ export const cie10Data = [
     "grupo": "Nefritis tubulointersticial",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5621,7 +5738,7 @@ export const cie10Data = [
     "grupo": "Nefritis tubulointersticial",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5630,7 +5747,7 @@ export const cie10Data = [
     "grupo": "Pielonefritis como o",
     "sistema": "Genitourinario",
     "tipo": "agudo sobre crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5639,7 +5756,7 @@ export const cie10Data = [
     "grupo": "Hidronefrosis con obstrucción por cálculos",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5648,7 +5765,7 @@ export const cie10Data = [
     "grupo": "Otras hidronefrosis y las",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5657,7 +5774,7 @@ export const cie10Data = [
     "grupo": "Absceso renal y perirrenal",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "túbulo-intersticial",
     "severidad": ""
   },
   {
@@ -5666,7 +5783,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia renal",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "renal",
     "severidad": ""
   },
   {
@@ -5675,8 +5792,8 @@ export const cie10Data = [
     "grupo": "Enfermedad renal estadio 1",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
-    "severidad": ""
+    "subtipo": "renal",
+    "severidad": "estadio 1"
   },
   {
     "codigo": "N18.2",
@@ -5684,8 +5801,8 @@ export const cie10Data = [
     "grupo": "Enfermedad renal estadio 2",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
-    "severidad": ""
+    "subtipo": "renal",
+    "severidad": "estadio 2"
   },
   {
     "codigo": "N18.3",
@@ -5693,8 +5810,8 @@ export const cie10Data = [
     "grupo": "Enfermedad renal estadio 3",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
-    "severidad": ""
+    "subtipo": "renal",
+    "severidad": "estadio 3"
   },
   {
     "codigo": "N18.4",
@@ -5702,8 +5819,8 @@ export const cie10Data = [
     "grupo": "Enfermedad renal estadio 4",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
-    "severidad": ""
+    "subtipo": "renal",
+    "severidad": "estadio 4"
   },
   {
     "codigo": "N18.5",
@@ -5711,8 +5828,8 @@ export const cie10Data = [
     "grupo": "Enfermedad renal estadio 5",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
-    "severidad": ""
+    "subtipo": "renal",
+    "severidad": "estadio 5"
   },
   {
     "codigo": "N18.9",
@@ -5720,7 +5837,7 @@ export const cie10Data = [
     "grupo": "Enfermedad renal",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "renal",
     "severidad": ""
   },
   {
@@ -5729,7 +5846,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia renal",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "renal",
     "severidad": ""
   },
   {
@@ -5738,7 +5855,7 @@ export const cie10Data = [
     "grupo": "Cálculo del riñón",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5747,7 +5864,7 @@ export const cie10Data = [
     "grupo": "Cálculo del uréter",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5756,7 +5873,7 @@ export const cie10Data = [
     "grupo": "Cálculo del riñón con cálculo del uréter",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5765,7 +5882,7 @@ export const cie10Data = [
     "grupo": "Cálculo urinario",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5774,7 +5891,7 @@ export const cie10Data = [
     "grupo": "Cálculo en la vejiga",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5783,7 +5900,7 @@ export const cie10Data = [
     "grupo": "Cólico renal",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "litiásico",
     "severidad": ""
   },
   {
@@ -5792,7 +5909,7 @@ export const cie10Data = [
     "grupo": "Poliuria secundaria",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "renal",
     "severidad": ""
   },
   {
@@ -5801,7 +5918,7 @@ export const cie10Data = [
     "grupo": "Trastorno renal NE",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "renal",
     "severidad": ""
   },
   {
@@ -5810,7 +5927,7 @@ export const cie10Data = [
     "grupo": "Cistitis",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5819,7 +5936,7 @@ export const cie10Data = [
     "grupo": "Cistitis sin hematuria",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5828,7 +5945,7 @@ export const cie10Data = [
     "grupo": "Cistitis intersticial",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5837,7 +5954,7 @@ export const cie10Data = [
     "grupo": "Cistitis intersticial sin hematuria",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5846,7 +5963,7 @@ export const cie10Data = [
     "grupo": "Otras cistitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5855,7 +5972,7 @@ export const cie10Data = [
     "grupo": "Trigonitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5864,7 +5981,7 @@ export const cie10Data = [
     "grupo": "Cistitis por irradiación",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5873,7 +5990,7 @@ export const cie10Data = [
     "grupo": "Cistitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5882,7 +5999,7 @@ export const cie10Data = [
     "grupo": "Cistitis NE con hematuria",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5891,7 +6008,7 @@ export const cie10Data = [
     "grupo": "Vejiga hiperactiva",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5900,7 +6017,7 @@ export const cie10Data = [
     "grupo": "Uretritis no específica",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5909,7 +6026,7 @@ export const cie10Data = [
     "grupo": "Otras uretritis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5918,7 +6035,7 @@ export const cie10Data = [
     "grupo": "Estenosis uretral NE",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5927,7 +6044,7 @@ export const cie10Data = [
     "grupo": "Infección de vías urinarias de sitio",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5936,7 +6053,7 @@ export const cie10Data = [
     "grupo": "Incontinencia urinaria por tensión",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5945,7 +6062,7 @@ export const cie10Data = [
     "grupo": "Otras incontinencias urinarias especificadas",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5954,7 +6071,7 @@ export const cie10Data = [
     "grupo": "Urgencia urinaria",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "vesical",
     "severidad": ""
   },
   {
@@ -5963,7 +6080,7 @@ export const cie10Data = [
     "grupo": "Hiperplasia benigna de la próstata",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -5972,7 +6089,7 @@ export const cie10Data = [
     "grupo": "Hiperplasia benigna de próstata sin síntomas",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -5981,7 +6098,7 @@ export const cie10Data = [
     "grupo": "Hiperplasia benigna de próstata con síntomas",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -5990,7 +6107,7 @@ export const cie10Data = [
     "grupo": "Prostatitis",
     "sistema": "Genitourinario",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -5999,7 +6116,16 @@ export const cie10Data = [
     "grupo": "Prostatitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
+    "severidad": ""
+  },
+  {
+    "codigo": "N41.2",
+    "descripcion": "Absceso de la próstata",
+    "grupo": "Absceso de la próstata",
+    "sistema": "Genitourinario",
+    "tipo": "crónico",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6008,7 +6134,7 @@ export const cie10Data = [
     "grupo": "Prostatodinia",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6017,7 +6143,7 @@ export const cie10Data = [
     "grupo": "Enfermedad inflamatoria de la próstata",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6026,7 +6152,7 @@ export const cie10Data = [
     "grupo": "Hidrocele",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6035,7 +6161,7 @@ export const cie10Data = [
     "grupo": "Torsión del testículo",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6044,7 +6170,7 @@ export const cie10Data = [
     "grupo": "Torsión de apéndice testicular",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6053,7 +6179,7 @@ export const cie10Data = [
     "grupo": "Orquitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6062,7 +6188,7 @@ export const cie10Data = [
     "grupo": "Epididimitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6071,7 +6197,7 @@ export const cie10Data = [
     "grupo": "Orquiepididimitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6080,7 +6206,7 @@ export const cie10Data = [
     "grupo": "Orquitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6089,7 +6215,7 @@ export const cie10Data = [
     "grupo": "Infertilidad masculina",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6098,7 +6224,7 @@ export const cie10Data = [
     "grupo": "Prepucio redundante",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6107,7 +6233,7 @@ export const cie10Data = [
     "grupo": "Balanopostitis",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6116,7 +6242,7 @@ export const cie10Data = [
     "grupo": "Disfunción eréctil de origen orgánico",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6125,7 +6251,7 @@ export const cie10Data = [
     "grupo": "Otros trastornos del pene NE",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prostático",
     "severidad": ""
   },
   {
@@ -6143,7 +6269,7 @@ export const cie10Data = [
     "grupo": "Mastopatía quística difusa",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "mamario",
     "severidad": ""
   },
   {
@@ -6152,7 +6278,7 @@ export const cie10Data = [
     "grupo": "Fibroadenosis de la mama",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "mamario",
     "severidad": ""
   },
   {
@@ -6161,7 +6287,7 @@ export const cie10Data = [
     "grupo": "Mastitis y trastornos inflamatorios de la mama",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "mamario",
     "severidad": ""
   },
   {
@@ -6170,7 +6296,7 @@ export const cie10Data = [
     "grupo": "Hipertrofia de la mama",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "mamario",
     "severidad": ""
   },
   {
@@ -6179,7 +6305,7 @@ export const cie10Data = [
     "grupo": "Masa en la mama",
     "sistema": "Genitourinario",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "mamario",
     "severidad": ""
   },
   {
@@ -6188,7 +6314,7 @@ export const cie10Data = [
     "grupo": "Cervicitis por clamidia",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -6201,12 +6327,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "N64.4",
+    "descripcion": "Mastodinia",
+    "grupo": "Mastodinia",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "mamario",
+    "severidad": ""
+  },
+  {
     "codigo": "N70.0",
     "descripcion": "Salpingitis y ooforitis aguda",
     "grupo": "Salpingitis y ooforitis",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6215,7 +6350,7 @@ export const cie10Data = [
     "grupo": "Salpingitis",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6224,7 +6359,7 @@ export const cie10Data = [
     "grupo": "Salpingitis y ooforitis",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6233,7 +6368,7 @@ export const cie10Data = [
     "grupo": "Salpingitis y ooforitis",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6242,7 +6377,7 @@ export const cie10Data = [
     "grupo": "Enfermedad inflamatoria del útero",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6251,7 +6386,7 @@ export const cie10Data = [
     "grupo": "Enfermedad inflamatoria del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6260,7 +6395,7 @@ export const cie10Data = [
     "grupo": "Enfermedad inflamatoria del cuello uterino",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6269,7 +6404,7 @@ export const cie10Data = [
     "grupo": "Enfermedad pélvica inflamatoria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6278,7 +6413,7 @@ export const cie10Data = [
     "grupo": "Quiste de la glándula de Bartholin",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6287,7 +6422,7 @@ export const cie10Data = [
     "grupo": "Absceso de la glándula de Bartholin",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6296,7 +6431,7 @@ export const cie10Data = [
     "grupo": "Vaginitis",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6305,7 +6440,16 @@ export const cie10Data = [
     "grupo": "Vaginitis subaguda y",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
+    "severidad": ""
+  },
+  {
+    "codigo": "N76.2",
+    "descripcion": "Vulvitis aguda",
+    "grupo": "Vulvitis",
+    "sistema": "Ginecología",
+    "tipo": "agudo",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6314,7 +6458,7 @@ export const cie10Data = [
     "grupo": "Absceso de la vulva",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "inflamatorio pélvico",
     "severidad": ""
   },
   {
@@ -6323,7 +6467,7 @@ export const cie10Data = [
     "grupo": "Endometriosis del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "endometriosis",
     "severidad": ""
   },
   {
@@ -6332,7 +6476,7 @@ export const cie10Data = [
     "grupo": "Endometriosis del ovario",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "endometriosis",
     "severidad": ""
   },
   {
@@ -6341,7 +6485,7 @@ export const cie10Data = [
     "grupo": "Endometriosis",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "endometriosis",
     "severidad": ""
   },
   {
@@ -6350,7 +6494,7 @@ export const cie10Data = [
     "grupo": "Cistocele",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prolapso",
     "severidad": ""
   },
   {
@@ -6359,7 +6503,7 @@ export const cie10Data = [
     "grupo": "Cistocele NE",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prolapso",
     "severidad": ""
   },
   {
@@ -6368,7 +6512,7 @@ export const cie10Data = [
     "grupo": "Prolapso uterovaginal incompleto",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prolapso",
     "severidad": ""
   },
   {
@@ -6377,7 +6521,7 @@ export const cie10Data = [
     "grupo": "Prolapso uterovaginal",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "prolapso",
     "severidad": ""
   },
   {
@@ -6386,7 +6530,7 @@ export const cie10Data = [
     "grupo": "Quiste folicular del ovario",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "ovárico",
     "severidad": ""
   },
   {
@@ -6395,7 +6539,7 @@ export const cie10Data = [
     "grupo": "Quiste del cuerpo amarillo",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "ovárico",
     "severidad": ""
   },
   {
@@ -6404,7 +6548,7 @@ export const cie10Data = [
     "grupo": "Otros quistes ováricos y los",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "ovárico",
     "severidad": ""
   },
   {
@@ -6413,7 +6557,7 @@ export const cie10Data = [
     "grupo": "Quiste ovárico NE",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "ovárico",
     "severidad": ""
   },
   {
@@ -6431,7 +6575,7 @@ export const cie10Data = [
     "grupo": "Pólipo del cuerpo del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "uterino",
     "severidad": ""
   },
   {
@@ -6440,7 +6584,7 @@ export const cie10Data = [
     "grupo": "Pólipo del cuello del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "uterino",
     "severidad": ""
   },
   {
@@ -6449,7 +6593,7 @@ export const cie10Data = [
     "grupo": "Hiperplasia de glándula endometrial",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "uterino",
     "severidad": ""
   },
   {
@@ -6458,7 +6602,7 @@ export const cie10Data = [
     "grupo": "Erosión y ectropión del cuello del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "cervical",
     "severidad": ""
   },
   {
@@ -6467,7 +6611,7 @@ export const cie10Data = [
     "grupo": "Displasia cervical",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "cervical",
     "severidad": "leve"
   },
   {
@@ -6476,7 +6620,7 @@ export const cie10Data = [
     "grupo": "Displasia cervical",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "cervical",
     "severidad": "moderado"
   },
   {
@@ -6485,7 +6629,25 @@ export const cie10Data = [
     "grupo": "Displasia del cuello del útero",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "cervical",
+    "severidad": ""
+  },
+  {
+    "codigo": "N89.8",
+    "descripcion": "Otro trastorno no inflamatorio especificado de la vagina",
+    "grupo": "Otro trastorno no inflamatorio especificado",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "vaginal",
+    "severidad": ""
+  },
+  {
+    "codigo": "N90.4",
+    "descripcion": "Leucoplasia de la vulva",
+    "grupo": "Leucoplasia de la vulva",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "vaginal",
     "severidad": ""
   },
   {
@@ -6494,7 +6656,7 @@ export const cie10Data = [
     "grupo": "Amenorrea primaria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6503,7 +6665,7 @@ export const cie10Data = [
     "grupo": "Amenorrea secundaria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6512,7 +6674,7 @@ export const cie10Data = [
     "grupo": "Amenorrea",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6521,7 +6683,7 @@ export const cie10Data = [
     "grupo": "Oligomenorrea primaria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6530,7 +6692,7 @@ export const cie10Data = [
     "grupo": "Oligomenorrea",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6539,7 +6701,7 @@ export const cie10Data = [
     "grupo": "Menstruación excesiva y frecuente con ciclo",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6548,7 +6710,16 @@ export const cie10Data = [
     "grupo": "Menstruación excesiva y frecuente con ciclo",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
+    "severidad": ""
+  },
+  {
+    "codigo": "N92.4",
+    "descripcion": "Hemorragia excesiva en el período premenopáusico",
+    "grupo": "Hemorragia excesiva en el período",
+    "sistema": "Ginecología",
+    "tipo": "crónico",
+    "subtipo": "hemorrágico",
     "severidad": ""
   },
   {
@@ -6557,7 +6728,7 @@ export const cie10Data = [
     "grupo": "Menstruación irregular",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6584,7 +6755,7 @@ export const cie10Data = [
     "grupo": "Dispareunia",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6593,7 +6764,7 @@ export const cie10Data = [
     "grupo": "Dispareunia",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6602,7 +6773,7 @@ export const cie10Data = [
     "grupo": "Síndrome de tensión premenstrual",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6611,7 +6782,7 @@ export const cie10Data = [
     "grupo": "Dismenorrea primaria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6620,7 +6791,7 @@ export const cie10Data = [
     "grupo": "Dismenorrea secundaria",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6629,7 +6800,7 @@ export const cie10Data = [
     "grupo": "Dismenorrea",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menstrual",
     "severidad": ""
   },
   {
@@ -6647,7 +6818,7 @@ export const cie10Data = [
     "grupo": "Estados menopáusicos y climatéricos femeninos",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menopausia",
     "severidad": ""
   },
   {
@@ -6656,7 +6827,7 @@ export const cie10Data = [
     "grupo": "Vaginitis atrófica posmenopáusica",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "menopausia",
     "severidad": ""
   },
   {
@@ -6665,7 +6836,7 @@ export const cie10Data = [
     "grupo": "Infertilidad femenina asociada con anovulación",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "infertilidad",
     "severidad": ""
   },
   {
@@ -6674,7 +6845,7 @@ export const cie10Data = [
     "grupo": "Infertilidad femenina",
     "sistema": "Ginecología",
     "tipo": "crónico",
-    "subtipo": "genitourinario",
+    "subtipo": "infertilidad",
     "severidad": ""
   },
   {
@@ -6683,7 +6854,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": "moderado"
   },
   {
@@ -6692,7 +6863,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": "grave"
   },
   {
@@ -6701,7 +6872,7 @@ export const cie10Data = [
     "grupo": "Eclampsia NE",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -6719,7 +6890,7 @@ export const cie10Data = [
     "grupo": "Útero con cicatriz de cesárea anterior",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -6728,7 +6899,7 @@ export const cie10Data = [
     "grupo": "Incompatibilidad Rh sin hidropesía fetal",
     "sistema": "Ginecología",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -6737,7 +6908,34 @@ export const cie10Data = [
     "grupo": "Examen ginecológico",
     "sistema": "Ginecología",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.3",
+    "descripcion": "Examen de pesquisa para tumor de la mama",
+    "grupo": "Examen de pesquisa para tumor de la mama",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "examen",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.2",
+    "descripcion": "Esterilización",
+    "grupo": "Esterilización",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "reproducción",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z30.9",
+    "descripcion": "Atención para la anticoncepción no especificada",
+    "grupo": "Atención para la anticoncepción",
+    "sistema": "Ginecología",
+    "tipo": "prevención",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -6746,7 +6944,7 @@ export const cie10Data = [
     "grupo": "Supervisión de embarazo normal",
     "sistema": "Ginecología",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -6755,7 +6953,7 @@ export const cie10Data = [
     "grupo": "Supervisión de embarazo normal",
     "sistema": "Ginecología",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -6773,7 +6971,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de hierro",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6782,7 +6980,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de vitamina B12 por",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6791,7 +6989,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de vitamina B12",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6800,7 +6998,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de folatos en la dieta",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6809,7 +7007,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de folatos",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6818,7 +7016,7 @@ export const cie10Data = [
     "grupo": "Anemia nutricional",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "carencial",
     "severidad": ""
   },
   {
@@ -6827,7 +7025,7 @@ export const cie10Data = [
     "grupo": "Anemia por deficiencia de glucosa-6-fosfato",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6836,7 +7034,7 @@ export const cie10Data = [
     "grupo": "Anemia hemolítica enzimática NE",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6845,7 +7043,7 @@ export const cie10Data = [
     "grupo": "Alfa talasemia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6854,7 +7052,7 @@ export const cie10Data = [
     "grupo": "Beta talasemia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6863,7 +7061,7 @@ export const cie10Data = [
     "grupo": "Talasemia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6872,7 +7070,7 @@ export const cie10Data = [
     "grupo": "Anemia drepanocítica con crisis",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6881,7 +7079,7 @@ export const cie10Data = [
     "grupo": "Anemia drepanocítica sin crisis",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6890,7 +7088,7 @@ export const cie10Data = [
     "grupo": "Esferocitosis hereditaria",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6899,7 +7097,7 @@ export const cie10Data = [
     "grupo": "Anemia hemolítica hereditaria",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6908,7 +7106,7 @@ export const cie10Data = [
     "grupo": "Anemia hemolítica autoinmune inducida por",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6917,7 +7115,7 @@ export const cie10Data = [
     "grupo": "Otras anemias hemolíticas autoinmunes",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6926,7 +7124,7 @@ export const cie10Data = [
     "grupo": "Anemia hemolítica adquirida",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "hemolítico",
     "severidad": ""
   },
   {
@@ -6935,7 +7133,7 @@ export const cie10Data = [
     "grupo": "Aplasia pura de glóbulos rojos adquirida",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6944,7 +7142,7 @@ export const cie10Data = [
     "grupo": "Anemia aplásica constitucional",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6953,7 +7151,7 @@ export const cie10Data = [
     "grupo": "Anemia aplásica inducida por fármacos",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6962,7 +7160,7 @@ export const cie10Data = [
     "grupo": "Anemia aplásica",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6980,7 +7178,7 @@ export const cie10Data = [
     "grupo": "Anemia en enfermedad neoplásica",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6989,7 +7187,7 @@ export const cie10Data = [
     "grupo": "Anemia en otras enfermedades",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -6998,7 +7196,7 @@ export const cie10Data = [
     "grupo": "Anemia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "anemia",
     "severidad": ""
   },
   {
@@ -7007,7 +7205,7 @@ export const cie10Data = [
     "grupo": "Coagulación intravascular diseminada",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7016,7 +7214,7 @@ export const cie10Data = [
     "grupo": "Deficiencia hereditaria del factor VIII",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7025,7 +7223,7 @@ export const cie10Data = [
     "grupo": "Deficiencia hereditaria del factor IX",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7034,7 +7232,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de von Willebrand",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7043,7 +7241,7 @@ export const cie10Data = [
     "grupo": "Deficiencia hereditaria de otros factores de",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7052,7 +7250,7 @@ export const cie10Data = [
     "grupo": "Deficiencia adquirida de factores de",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7061,7 +7259,7 @@ export const cie10Data = [
     "grupo": "Defecto de la coagulación",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7079,7 +7277,7 @@ export const cie10Data = [
     "grupo": "Defectos cualitativos de las plaquetas",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7088,7 +7286,7 @@ export const cie10Data = [
     "grupo": "Púrpura trombocitopénica idiopática",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7097,7 +7295,7 @@ export const cie10Data = [
     "grupo": "Otras trombocitopenias primarias",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7106,7 +7304,7 @@ export const cie10Data = [
     "grupo": "Trombocitopenia secundaria",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7115,7 +7313,7 @@ export const cie10Data = [
     "grupo": "Trombocitopenia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "coagulación",
     "severidad": ""
   },
   {
@@ -7133,7 +7331,7 @@ export const cie10Data = [
     "grupo": "Agranulocitosis y neutropenia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7142,7 +7340,7 @@ export const cie10Data = [
     "grupo": "Neutropenia NE",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7151,7 +7349,7 @@ export const cie10Data = [
     "grupo": "Eosinofilia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7160,7 +7358,7 @@ export const cie10Data = [
     "grupo": "Leucocitosis NE",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7169,7 +7367,7 @@ export const cie10Data = [
     "grupo": "Trastorno de los leucocitos",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7178,7 +7376,7 @@ export const cie10Data = [
     "grupo": "Hipoesplenismo",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7187,7 +7385,7 @@ export const cie10Data = [
     "grupo": "Hiperesplenismo",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7196,7 +7394,7 @@ export const cie10Data = [
     "grupo": "Esplenomegalia congestiva",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7205,7 +7403,7 @@ export const cie10Data = [
     "grupo": "Enfermedad del bazo",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7214,7 +7412,7 @@ export const cie10Data = [
     "grupo": "Eritrocitosis familiar",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7223,7 +7421,7 @@ export const cie10Data = [
     "grupo": "Policitemia secundaria",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "leucocitario",
     "severidad": ""
   },
   {
@@ -7250,7 +7448,7 @@ export const cie10Data = [
     "grupo": "Hipogammaglobulinemia hereditaria",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7259,7 +7457,7 @@ export const cie10Data = [
     "grupo": "Hipogammaglobulinemia no familiar",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7268,7 +7466,7 @@ export const cie10Data = [
     "grupo": "Inmunodeficiencia combinada",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7277,7 +7475,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Wiskott-Aldrich",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7286,7 +7484,7 @@ export const cie10Data = [
     "grupo": "Inmunodeficiencia variable común",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7295,7 +7493,7 @@ export const cie10Data = [
     "grupo": "Inmunodeficiencia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7304,7 +7502,7 @@ export const cie10Data = [
     "grupo": "Sarcoidosis",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7313,7 +7511,7 @@ export const cie10Data = [
     "grupo": "Crioglobulinemia",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7322,7 +7520,7 @@ export const cie10Data = [
     "grupo": "Trastorno del mecanismo inmunitario",
     "sistema": "Hematología",
     "tipo": "crónico",
-    "subtipo": "no especificado",
+    "subtipo": "inmunitario",
     "severidad": ""
   },
   {
@@ -7331,7 +7529,7 @@ export const cie10Data = [
     "grupo": "Cólera debido a Vibrio cholerae 01",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7340,7 +7538,7 @@ export const cie10Data = [
     "grupo": "Cólera debido a Vibrio cholerae 01",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7349,7 +7547,7 @@ export const cie10Data = [
     "grupo": "Cólera",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7358,7 +7556,7 @@ export const cie10Data = [
     "grupo": "Fiebre tifoidea",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7367,7 +7565,7 @@ export const cie10Data = [
     "grupo": "Fiebre paratifoidea A",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7376,7 +7574,7 @@ export const cie10Data = [
     "grupo": "Enteritis debida a Salmonella",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7385,7 +7583,7 @@ export const cie10Data = [
     "grupo": "Septicemia debida a Salmonella",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7394,7 +7592,7 @@ export const cie10Data = [
     "grupo": "Infección por Salmonella",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7403,7 +7601,7 @@ export const cie10Data = [
     "grupo": "Shigelosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7430,7 +7628,7 @@ export const cie10Data = [
     "grupo": "Enteritis debida a Yersinia enterocolitica",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7439,7 +7637,7 @@ export const cie10Data = [
     "grupo": "Enterocolitis debida a Clostridium difficile",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7475,7 +7673,7 @@ export const cie10Data = [
     "grupo": "Botulismo del adulto",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7493,7 +7691,7 @@ export const cie10Data = [
     "grupo": "Disentería amebiana",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "parasitario",
     "severidad": ""
   },
   {
@@ -7502,7 +7700,7 @@ export const cie10Data = [
     "grupo": "Amebiasis intestinal",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "parasitario",
     "severidad": ""
   },
   {
@@ -7511,7 +7709,7 @@ export const cie10Data = [
     "grupo": "Absceso amebiano del hígado",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "parasitario",
     "severidad": ""
   },
   {
@@ -7520,7 +7718,7 @@ export const cie10Data = [
     "grupo": "Amebiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "parasitario",
     "severidad": ""
   },
   {
@@ -7529,7 +7727,7 @@ export const cie10Data = [
     "grupo": "Giardiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7538,7 +7736,7 @@ export const cie10Data = [
     "grupo": "Criptosporidiosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7547,7 +7745,7 @@ export const cie10Data = [
     "grupo": "Enfermedad intestinal por protozoarios",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7565,7 +7763,7 @@ export const cie10Data = [
     "grupo": "Gastroenteropatía por agente de Norwalk",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7583,7 +7781,7 @@ export const cie10Data = [
     "grupo": "Diarrea y gastroenteritis de presunto origen",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "intestinal",
     "severidad": ""
   },
   {
@@ -7601,7 +7799,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis del pulmón",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7610,7 +7808,7 @@ export const cie10Data = [
     "grupo": "Pleuresía tuberculosa",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7619,7 +7817,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis respiratoria",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7637,7 +7835,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis respiratoria",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7646,7 +7844,7 @@ export const cie10Data = [
     "grupo": "Meningitis tuberculosa",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7655,7 +7853,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis del sistema nervioso",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7664,7 +7862,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis de huesos y articulaciones",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7673,7 +7871,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis del aparato genitourinario",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7682,7 +7880,7 @@ export const cie10Data = [
     "grupo": "Linfadenopatía periférica tuberculosa",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7691,7 +7889,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis de intestinos",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7700,7 +7898,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis de la piel y el tejido subcutáneo",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7709,7 +7907,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis miliar de un solo sitio",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7718,7 +7916,7 @@ export const cie10Data = [
     "grupo": "Tuberculosis miliar",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -7790,7 +7988,7 @@ export const cie10Data = [
     "grupo": "Lepra",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7799,7 +7997,7 @@ export const cie10Data = [
     "grupo": "Listeriosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7808,7 +8006,7 @@ export const cie10Data = [
     "grupo": "Tétanos neonatal",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7817,7 +8015,7 @@ export const cie10Data = [
     "grupo": "Tétanos obstétrico",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7826,7 +8024,7 @@ export const cie10Data = [
     "grupo": "Otros tétanos",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7835,7 +8033,7 @@ export const cie10Data = [
     "grupo": "Difteria",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7844,7 +8042,7 @@ export const cie10Data = [
     "grupo": "Tos ferina debida a Bordetella pertussis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7853,7 +8051,7 @@ export const cie10Data = [
     "grupo": "Tos ferina",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7862,7 +8060,7 @@ export const cie10Data = [
     "grupo": "Tos ferina NE",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7871,7 +8069,7 @@ export const cie10Data = [
     "grupo": "Escarlatina",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7880,7 +8078,7 @@ export const cie10Data = [
     "grupo": "Fiebre escarlatina NE",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7889,7 +8087,7 @@ export const cie10Data = [
     "grupo": "Meningitis meningocócica",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7898,7 +8096,7 @@ export const cie10Data = [
     "grupo": "Meningococemia",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7907,7 +8105,7 @@ export const cie10Data = [
     "grupo": "Infección meningocócica",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7934,7 +8132,7 @@ export const cie10Data = [
     "grupo": "Septicemia debida a Staphylococcus aureus",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7961,7 +8159,7 @@ export const cie10Data = [
     "grupo": "Septicemia debida a otros organismos",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7979,7 +8177,7 @@ export const cie10Data = [
     "grupo": "Septicemia",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7988,7 +8186,7 @@ export const cie10Data = [
     "grupo": "Erisipela",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -7997,7 +8195,7 @@ export const cie10Data = [
     "grupo": "Gangrena gaseosa",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -8006,7 +8204,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de los legionarios",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -8015,7 +8213,7 @@ export const cie10Data = [
     "grupo": "Síndrome de choque tóxico",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -8051,7 +8249,7 @@ export const cie10Data = [
     "grupo": "Sífilis congénita",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8060,7 +8258,7 @@ export const cie10Data = [
     "grupo": "Sífilis genital primaria",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8069,7 +8267,7 @@ export const cie10Data = [
     "grupo": "Sífilis secundaria de piel y membranas mucosas",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8078,7 +8276,7 @@ export const cie10Data = [
     "grupo": "Sífilis precoz",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8087,7 +8285,7 @@ export const cie10Data = [
     "grupo": "Sífilis tardía",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8096,7 +8294,7 @@ export const cie10Data = [
     "grupo": "Sífilis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8105,7 +8303,7 @@ export const cie10Data = [
     "grupo": "Infección gonocócica del tracto",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8114,7 +8312,7 @@ export const cie10Data = [
     "grupo": "Infección gonocócica",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8123,7 +8321,7 @@ export const cie10Data = [
     "grupo": "Linfogranuloma por clamidias",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8132,7 +8330,7 @@ export const cie10Data = [
     "grupo": "Infección por clamidias del tracto",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8141,7 +8339,7 @@ export const cie10Data = [
     "grupo": "Infección genital por clamidia NE",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8150,7 +8348,7 @@ export const cie10Data = [
     "grupo": "Infección de transmisión sexual por clamidias",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8159,7 +8357,7 @@ export const cie10Data = [
     "grupo": "Chancro blando",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8204,7 +8402,7 @@ export const cie10Data = [
     "grupo": "Verrugas anogenitales",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8213,7 +8411,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de transmisión sexual",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "transmisión sexual",
     "severidad": ""
   },
   {
@@ -8312,7 +8510,7 @@ export const cie10Data = [
     "grupo": "Fiebre del dengue",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": ""
   },
   {
@@ -8321,7 +8519,7 @@ export const cie10Data = [
     "grupo": "Fiebre del dengue hemorrágico",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": ""
   },
   {
@@ -8330,7 +8528,7 @@ export const cie10Data = [
     "grupo": "Fiebre de Chikungunya",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "arbovirus",
     "severidad": ""
   },
   {
@@ -8357,7 +8555,7 @@ export const cie10Data = [
     "grupo": "Fiebre amarilla",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "arbovirus",
     "severidad": ""
   },
   {
@@ -8366,7 +8564,7 @@ export const cie10Data = [
     "grupo": "Dengue sin signos de alarma",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": ""
   },
   {
@@ -8375,7 +8573,7 @@ export const cie10Data = [
     "grupo": "Dengue con signos de alarma",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": ""
   },
   {
@@ -8384,7 +8582,7 @@ export const cie10Data = [
     "grupo": "Dengue",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": "grave"
   },
   {
@@ -8393,7 +8591,7 @@ export const cie10Data = [
     "grupo": "Dengue sin signos de alarma",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "dengue",
     "severidad": ""
   },
   {
@@ -8411,7 +8609,7 @@ export const cie10Data = [
     "grupo": "Eczema herpético",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "exantemático",
     "severidad": ""
   },
   {
@@ -8439,7 +8637,7 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
-    "severidad": ""
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B02.9",
@@ -8448,7 +8646,7 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
-    "severidad": ""
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B05.9",
@@ -8457,7 +8655,7 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
-    "severidad": ""
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B06.9",
@@ -8465,8 +8663,8 @@ export const cie10Data = [
     "grupo": "Rubéola sin complicaciones",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "exantemático",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B07",
@@ -8474,7 +8672,7 @@ export const cie10Data = [
     "grupo": "Verrugas víricas",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "exantemático",
     "severidad": ""
   },
   {
@@ -8483,7 +8681,7 @@ export const cie10Data = [
     "grupo": "Molusco contagioso",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "exantemático",
     "severidad": ""
   },
   {
@@ -8501,7 +8699,7 @@ export const cie10Data = [
     "grupo": "Hepatitis tipo A sin coma hepático",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8510,7 +8708,7 @@ export const cie10Data = [
     "grupo": "Hepatitis tipo B sin agente delta ni coma",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8519,7 +8717,7 @@ export const cie10Data = [
     "grupo": "Hepatitis tipo C",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8528,7 +8726,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8537,7 +8735,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral tipo B con agente delta",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8546,7 +8744,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral tipo B sin agente delta",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8555,7 +8753,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral tipo C",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8564,7 +8762,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8573,7 +8771,7 @@ export const cie10Data = [
     "grupo": "Hepatitis viral",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "hepatitis",
     "severidad": ""
   },
   {
@@ -8582,7 +8780,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por VIH con enfermedades",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -8591,7 +8789,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por VIH con tumores malignos",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -8600,7 +8798,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por VIH con otras enfermedades",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -8609,7 +8807,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por VIH con otras afecciones",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -8618,7 +8816,7 @@ export const cie10Data = [
     "grupo": "Enfermedad por VIH",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -8637,7 +8835,7 @@ export const cie10Data = [
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
-    "severidad": ""
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B27.9",
@@ -8661,6 +8859,15 @@ export const cie10Data = [
     "codigo": "B33.4",
     "descripcion": "Síndrome pulmonar por hantavirus",
     "grupo": "Síndrome pulmonar por hantavirus",
+    "sistema": "Infecciosas",
+    "tipo": "agudo",
+    "subtipo": "viral",
+    "severidad": ""
+  },
+  {
+    "codigo": "B34.2",
+    "descripcion": "Infección por coronavirus de sitio no especificado",
+    "grupo": "Infección por coronavirus de sitio",
     "sistema": "Infecciosas",
     "tipo": "agudo",
     "subtipo": "viral",
@@ -8726,7 +8933,7 @@ export const cie10Data = [
     "grupo": "Pitiriasis versicolor",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "micótico",
     "severidad": ""
   },
   {
@@ -8780,7 +8987,7 @@ export const cie10Data = [
     "grupo": "Histoplasmosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "micótico",
     "severidad": ""
   },
   {
@@ -8807,7 +9014,7 @@ export const cie10Data = [
     "grupo": "Aspergilosis pulmonar invasiva",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "micótico",
     "severidad": ""
   },
   {
@@ -8816,7 +9023,7 @@ export const cie10Data = [
     "grupo": "Aspergilosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "micótico",
     "severidad": ""
   },
   {
@@ -8825,7 +9032,7 @@ export const cie10Data = [
     "grupo": "Criptococosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "micótico",
     "severidad": ""
   },
   {
@@ -8843,7 +9050,7 @@ export const cie10Data = [
     "grupo": "Paludismo por Plasmodium falciparum",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8852,8 +9059,8 @@ export const cie10Data = [
     "grupo": "Paludismo por Plasmodium vivax sin",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "protozoario",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B52.9",
@@ -8861,8 +9068,8 @@ export const cie10Data = [
     "grupo": "Paludismo por Plasmodium malariae sin",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "protozoario",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "B53.0",
@@ -8870,7 +9077,7 @@ export const cie10Data = [
     "grupo": "Paludismo por Plasmodium ovale",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8879,7 +9086,7 @@ export const cie10Data = [
     "grupo": "Paludismo",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8888,7 +9095,7 @@ export const cie10Data = [
     "grupo": "Leishmaniasis visceral",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8897,7 +9104,7 @@ export const cie10Data = [
     "grupo": "Leishmaniasis cutánea",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8906,7 +9113,7 @@ export const cie10Data = [
     "grupo": "Leishmaniasis mucocutánea",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8915,7 +9122,7 @@ export const cie10Data = [
     "grupo": "Leishmaniasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8924,7 +9131,7 @@ export const cie10Data = [
     "grupo": "Tripanosomiasis africana",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8933,7 +9140,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Chagas con afección del corazón",
     "sistema": "Infecciosas",
     "tipo": "crónico",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8942,7 +9149,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Chagas",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8951,7 +9158,7 @@ export const cie10Data = [
     "grupo": "Oftalmopatía por Toxoplasma",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8960,7 +9167,7 @@ export const cie10Data = [
     "grupo": "Toxoplasmosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8969,7 +9176,7 @@ export const cie10Data = [
     "grupo": "Neumocistosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "protozoario",
     "severidad": ""
   },
   {
@@ -8978,7 +9185,7 @@ export const cie10Data = [
     "grupo": "Esquistosomiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -8987,7 +9194,7 @@ export const cie10Data = [
     "grupo": "Equinococosis del hígado por Echinococcus",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -8996,7 +9203,7 @@ export const cie10Data = [
     "grupo": "Equinococosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9005,7 +9212,7 @@ export const cie10Data = [
     "grupo": "Teniasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9014,7 +9221,7 @@ export const cie10Data = [
     "grupo": "Cisticercosis del sistema nervioso central",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9023,7 +9230,7 @@ export const cie10Data = [
     "grupo": "Cisticercosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9032,7 +9239,7 @@ export const cie10Data = [
     "grupo": "Infección por cestodos",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9041,7 +9248,7 @@ export const cie10Data = [
     "grupo": "Anquilostomiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9050,8 +9257,8 @@ export const cie10Data = [
     "grupo": "Ascariasis con complicaciones intestinales",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "con complicación",
-    "severidad": ""
+    "subtipo": "parasitario",
+    "severidad": "con complicación"
   },
   {
     "codigo": "B77.9",
@@ -9059,7 +9266,7 @@ export const cie10Data = [
     "grupo": "Ascariasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "parasitario",
     "severidad": ""
   },
   {
@@ -9068,7 +9275,7 @@ export const cie10Data = [
     "grupo": "Estrongiloidiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9077,7 +9284,7 @@ export const cie10Data = [
     "grupo": "Tricuriasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9086,7 +9293,7 @@ export const cie10Data = [
     "grupo": "Oxiuriasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9104,7 +9311,7 @@ export const cie10Data = [
     "grupo": "Helmintiasis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "helminto",
     "severidad": ""
   },
   {
@@ -9113,7 +9320,7 @@ export const cie10Data = [
     "grupo": "Pediculosis debida a Pediculus humanus capitis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "ectoparásito",
     "severidad": ""
   },
   {
@@ -9122,7 +9329,7 @@ export const cie10Data = [
     "grupo": "Pediculosis",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "ectoparásito",
     "severidad": ""
   },
   {
@@ -9140,7 +9347,7 @@ export const cie10Data = [
     "grupo": "Infestación",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "ectoparásito",
     "severidad": ""
   },
   {
@@ -9158,7 +9365,7 @@ export const cie10Data = [
     "grupo": "Secuelas de tuberculosis respiratoria y",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "tuberculosis",
     "severidad": ""
   },
   {
@@ -9194,7 +9401,7 @@ export const cie10Data = [
     "grupo": "COVID-19",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "covid",
     "severidad": ""
   },
   {
@@ -9203,7 +9410,7 @@ export const cie10Data = [
     "grupo": "COVID-19",
     "sistema": "Infecciosas",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "covid",
     "severidad": ""
   },
   {
@@ -9212,7 +9419,7 @@ export const cie10Data = [
     "grupo": "Síndrome del túnel del carpo NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -9221,7 +9428,7 @@ export const cie10Data = [
     "grupo": "Lesión del nervio ciático NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -9230,7 +9437,7 @@ export const cie10Data = [
     "grupo": "Síndrome del túnel del tarso NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -9239,7 +9446,7 @@ export const cie10Data = [
     "grupo": "Artritis piógena",
     "sistema": "Musculoesquelético",
     "tipo": "agudo",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis infecciosa",
     "severidad": ""
   },
   {
@@ -9248,7 +9455,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Reiter",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis infecciosa",
     "severidad": ""
   },
   {
@@ -9257,7 +9464,7 @@ export const cie10Data = [
     "grupo": "Artropatía reactiva",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis infecciosa",
     "severidad": ""
   },
   {
@@ -9266,7 +9473,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Felty",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9275,7 +9482,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide con compromiso de otros",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9284,7 +9491,7 @@ export const cie10Data = [
     "grupo": "Otras artritis reumatoides seropositivas",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9293,7 +9500,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide seropositiva",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9302,7 +9509,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide seronegativa",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9311,7 +9518,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide seronegativa",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9320,7 +9527,7 @@ export const cie10Data = [
     "grupo": "Poliartropatía inflamatoria",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9329,7 +9536,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9338,7 +9545,7 @@ export const cie10Data = [
     "grupo": "Otras artropatías psoriásicas",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9347,7 +9554,7 @@ export const cie10Data = [
     "grupo": "Artropatía psoriásica NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9356,7 +9563,7 @@ export const cie10Data = [
     "grupo": "Artritis juvenil reumatoide",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9365,7 +9572,7 @@ export const cie10Data = [
     "grupo": "Artritis reumatoide juvenil NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9374,7 +9581,7 @@ export const cie10Data = [
     "grupo": "Poliartritis juvenil seronegativa",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9383,7 +9590,7 @@ export const cie10Data = [
     "grupo": "Artritis juvenil",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9392,7 +9599,7 @@ export const cie10Data = [
     "grupo": "Gota idiopática",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9401,7 +9608,7 @@ export const cie10Data = [
     "grupo": "Gota debida a alteración de la función renal",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9410,7 +9617,7 @@ export const cie10Data = [
     "grupo": "Otras gotas secundarias",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9419,7 +9626,7 @@ export const cie10Data = [
     "grupo": "Artropatía por cristales",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9428,7 +9635,7 @@ export const cie10Data = [
     "grupo": "Artritis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artritis inflamatoria",
     "severidad": ""
   },
   {
@@ -9437,7 +9644,7 @@ export const cie10Data = [
     "grupo": "Artrosis primaria generalizada",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9446,7 +9653,7 @@ export const cie10Data = [
     "grupo": "Poliartrosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9455,7 +9662,7 @@ export const cie10Data = [
     "grupo": "Coxartrosis primaria bilateral",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9464,7 +9671,7 @@ export const cie10Data = [
     "grupo": "Otras coxartrosis primarias",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9473,7 +9680,7 @@ export const cie10Data = [
     "grupo": "Coxartrosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9482,7 +9689,7 @@ export const cie10Data = [
     "grupo": "Gonartrosis primaria bilateral",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9491,7 +9698,7 @@ export const cie10Data = [
     "grupo": "Otras gonartrosis primarias",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9500,7 +9707,7 @@ export const cie10Data = [
     "grupo": "Gonartrosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9509,7 +9716,7 @@ export const cie10Data = [
     "grupo": "Artrosis carpometacarpiana del pulgar",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9518,7 +9725,7 @@ export const cie10Data = [
     "grupo": "Artrosis primaria de otras articulaciones",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9527,7 +9734,7 @@ export const cie10Data = [
     "grupo": "Artrosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9536,7 +9743,7 @@ export const cie10Data = [
     "grupo": "Artrosis primaria NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "artrosis",
     "severidad": ""
   },
   {
@@ -9545,7 +9752,7 @@ export const cie10Data = [
     "grupo": "Hallux valgus adquirido",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9554,7 +9761,7 @@ export const cie10Data = [
     "grupo": "Hallux rigidus",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9563,7 +9770,7 @@ export const cie10Data = [
     "grupo": "Otros dedos del pie en martillo adquiridos",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9572,7 +9779,7 @@ export const cie10Data = [
     "grupo": "Pie plano adquirido",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9581,7 +9788,7 @@ export const cie10Data = [
     "grupo": "Otras deformidades adquiridas del tobillo y",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9590,7 +9797,7 @@ export const cie10Data = [
     "grupo": "Condromalacia de la rótula",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9599,7 +9806,7 @@ export const cie10Data = [
     "grupo": "Trastorno de menisco por desgarro o lesión",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9608,7 +9815,7 @@ export const cie10Data = [
     "grupo": "Derrame articular",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9617,7 +9824,7 @@ export const cie10Data = [
     "grupo": "Dolor en articulación",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9626,7 +9833,7 @@ export const cie10Data = [
     "grupo": "Rigidez articular no clasificada en otra parte",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -9635,7 +9842,7 @@ export const cie10Data = [
     "grupo": "Poliarteritis nodosa",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9644,7 +9851,7 @@ export const cie10Data = [
     "grupo": "Granulomatosis de Wegener",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9653,7 +9860,7 @@ export const cie10Data = [
     "grupo": "Arteritis de células gigantes con polimialgia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9662,7 +9869,7 @@ export const cie10Data = [
     "grupo": "Otras arteritis de células gigantes",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9671,7 +9878,7 @@ export const cie10Data = [
     "grupo": "Lupus eritematoso sistémico con compromiso de",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9680,7 +9887,7 @@ export const cie10Data = [
     "grupo": "Lupus eritematoso sistémico",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9689,7 +9896,7 @@ export const cie10Data = [
     "grupo": "Dermatomiositis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9698,7 +9905,7 @@ export const cie10Data = [
     "grupo": "Polimiositis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9707,7 +9914,7 @@ export const cie10Data = [
     "grupo": "Esclerosis sistémica progresiva",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9716,7 +9923,7 @@ export const cie10Data = [
     "grupo": "Esclerosis sistémica",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9725,7 +9932,7 @@ export const cie10Data = [
     "grupo": "Síndrome seco de Sjögren",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9734,7 +9941,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Sjögren NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9743,7 +9950,7 @@ export const cie10Data = [
     "grupo": "Polimialgia reumática",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9752,7 +9959,7 @@ export const cie10Data = [
     "grupo": "Compromiso sistémico del tejido conjuntivo",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sistémico",
     "severidad": ""
   },
   {
@@ -9761,7 +9968,7 @@ export const cie10Data = [
     "grupo": "Cifosis postural",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9770,7 +9977,7 @@ export const cie10Data = [
     "grupo": "Escoliosis idiopática juvenil",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9779,7 +9986,7 @@ export const cie10Data = [
     "grupo": "Otras escoliosis idiopáticas",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9788,7 +9995,7 @@ export const cie10Data = [
     "grupo": "Escoliosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9797,7 +10004,7 @@ export const cie10Data = [
     "grupo": "Osteocondrosis vertebral del adulto",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9806,7 +10013,7 @@ export const cie10Data = [
     "grupo": "Espondilolistesis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9815,7 +10022,7 @@ export const cie10Data = [
     "grupo": "Tortícolis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9824,7 +10031,7 @@ export const cie10Data = [
     "grupo": "Espondilitis anquilosante",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9833,7 +10040,7 @@ export const cie10Data = [
     "grupo": "Espondilitis anquilosante NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9842,7 +10049,7 @@ export const cie10Data = [
     "grupo": "Sacroiliitis no clasificada en otra parte",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9851,7 +10058,7 @@ export const cie10Data = [
     "grupo": "Espondilosis con mielopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9860,7 +10067,7 @@ export const cie10Data = [
     "grupo": "Espondilosis con radiculopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9869,7 +10076,7 @@ export const cie10Data = [
     "grupo": "Otras espondilosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9878,7 +10085,7 @@ export const cie10Data = [
     "grupo": "Espondiloartrosis cervical sin mielopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9887,7 +10094,7 @@ export const cie10Data = [
     "grupo": "Espondiloartrosis lumbar sin mielopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9896,7 +10103,7 @@ export const cie10Data = [
     "grupo": "Espondilosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9905,7 +10112,7 @@ export const cie10Data = [
     "grupo": "Estenosis espinal",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9914,7 +10121,7 @@ export const cie10Data = [
     "grupo": "Estenosis del canal lumbar",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9923,7 +10130,7 @@ export const cie10Data = [
     "grupo": "Trastorno de disco cervical con mielopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9932,7 +10139,7 @@ export const cie10Data = [
     "grupo": "Trastorno de disco cervical con radiculopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9941,7 +10148,7 @@ export const cie10Data = [
     "grupo": "Otros desplazamientos de disco cervical",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9950,7 +10157,7 @@ export const cie10Data = [
     "grupo": "Trastorno de disco cervical",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9959,7 +10166,7 @@ export const cie10Data = [
     "grupo": "Trastorno de disco lumbar con mielopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9968,7 +10175,7 @@ export const cie10Data = [
     "grupo": "Trastorno de disco lumbar con radiculopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9977,7 +10184,7 @@ export const cie10Data = [
     "grupo": "Hernia discal lumbar con radiculopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9986,7 +10193,7 @@ export const cie10Data = [
     "grupo": "Otros desplazamientos especificados de disco",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -9995,7 +10202,7 @@ export const cie10Data = [
     "grupo": "Otra degeneración especificada de disco",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10004,7 +10211,7 @@ export const cie10Data = [
     "grupo": "Síndrome cervicobraquial",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10013,7 +10220,7 @@ export const cie10Data = [
     "grupo": "Coccigodinia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10022,7 +10229,7 @@ export const cie10Data = [
     "grupo": "Radiculopatía",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10031,7 +10238,7 @@ export const cie10Data = [
     "grupo": "Cervicalgia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10040,7 +10247,7 @@ export const cie10Data = [
     "grupo": "Ciática",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10049,7 +10256,7 @@ export const cie10Data = [
     "grupo": "Lumbago con ciática",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10058,7 +10265,7 @@ export const cie10Data = [
     "grupo": "Lumbago",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10067,7 +10274,7 @@ export const cie10Data = [
     "grupo": "Lumbalgia baja NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10076,7 +10283,7 @@ export const cie10Data = [
     "grupo": "Dolor en columna dorsal",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10085,7 +10292,7 @@ export const cie10Data = [
     "grupo": "Dorsalgia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "columna",
     "severidad": ""
   },
   {
@@ -10094,7 +10301,7 @@ export const cie10Data = [
     "grupo": "Miositis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "muscular",
     "severidad": ""
   },
   {
@@ -10103,7 +10310,7 @@ export const cie10Data = [
     "grupo": "Contractura muscular",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "muscular",
     "severidad": ""
   },
   {
@@ -10112,7 +10319,7 @@ export const cie10Data = [
     "grupo": "Distensión muscular",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "muscular",
     "severidad": ""
   },
   {
@@ -10121,7 +10328,7 @@ export const cie10Data = [
     "grupo": "Espasmo muscular NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "muscular",
     "severidad": ""
   },
   {
@@ -10130,7 +10337,7 @@ export const cie10Data = [
     "grupo": "Dedo en gatillo",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sinovial",
     "severidad": ""
   },
   {
@@ -10139,7 +10346,7 @@ export const cie10Data = [
     "grupo": "Tenosinovitis de estiloides radial de De",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sinovial",
     "severidad": ""
   },
   {
@@ -10148,7 +10355,7 @@ export const cie10Data = [
     "grupo": "Sinovitis y tenosinovitis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sinovial",
     "severidad": ""
   },
   {
@@ -10157,7 +10364,7 @@ export const cie10Data = [
     "grupo": "Ganglión",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "sinovial",
     "severidad": ""
   },
   {
@@ -10166,7 +10373,7 @@ export const cie10Data = [
     "grupo": "Bursitis del olécranon",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10175,7 +10382,7 @@ export const cie10Data = [
     "grupo": "Bursitis prepatelar NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10184,7 +10391,7 @@ export const cie10Data = [
     "grupo": "Bursitis prerrotuliana",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10193,7 +10400,7 @@ export const cie10Data = [
     "grupo": "Bursitis trocantérea",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10202,7 +10409,7 @@ export const cie10Data = [
     "grupo": "Quiste sinovial del hueco poplíteo de Baker",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10211,7 +10418,7 @@ export const cie10Data = [
     "grupo": "Fibromatosis de la fascia palmar de Dupuytren",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10220,7 +10427,7 @@ export const cie10Data = [
     "grupo": "Fascitis plantar",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10229,7 +10436,7 @@ export const cie10Data = [
     "grupo": "Capsulitis adhesiva del hombro",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10238,7 +10445,7 @@ export const cie10Data = [
     "grupo": "Síndrome del manguito rotador",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10247,7 +10454,7 @@ export const cie10Data = [
     "grupo": "Tendinitis del bíceps",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10256,7 +10463,7 @@ export const cie10Data = [
     "grupo": "Tendinitis calcificante del hombro",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10265,7 +10472,7 @@ export const cie10Data = [
     "grupo": "Bursitis del hombro",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10274,7 +10481,7 @@ export const cie10Data = [
     "grupo": "Bursitis del hombro NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10283,7 +10490,7 @@ export const cie10Data = [
     "grupo": "Lesión del hombro",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10292,7 +10499,7 @@ export const cie10Data = [
     "grupo": "Tendinitis aquiliana",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10301,7 +10508,7 @@ export const cie10Data = [
     "grupo": "Tendinopatía del tendón de Aquiles",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10310,7 +10517,7 @@ export const cie10Data = [
     "grupo": "Epicondilitis medial",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10319,7 +10526,7 @@ export const cie10Data = [
     "grupo": "Epicondilitis lateral",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10328,7 +10535,7 @@ export const cie10Data = [
     "grupo": "Epicondilitis lateral",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10337,7 +10544,7 @@ export const cie10Data = [
     "grupo": "Epicondilitis medial",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10346,7 +10553,7 @@ export const cie10Data = [
     "grupo": "Espolón calcáneo",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10355,7 +10562,7 @@ export const cie10Data = [
     "grupo": "Reumatismo",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10364,7 +10571,16 @@ export const cie10Data = [
     "grupo": "Mialgia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
+    "severidad": ""
+  },
+  {
+    "codigo": "M79.2",
+    "descripcion": "Neuralgia y neuritis no especificadas",
+    "grupo": "Neuralgia y neuritis",
+    "sistema": "Musculoesquelético",
+    "tipo": "crónico",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10373,7 +10589,7 @@ export const cie10Data = [
     "grupo": "Paniculitis NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10382,7 +10598,7 @@ export const cie10Data = [
     "grupo": "Dolor en miembro",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10391,7 +10607,7 @@ export const cie10Data = [
     "grupo": "Fibromialgia",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "partes blandas",
     "severidad": ""
   },
   {
@@ -10400,7 +10616,7 @@ export const cie10Data = [
     "grupo": "Osteoporosis posmenopáusica con fractura",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10409,7 +10625,7 @@ export const cie10Data = [
     "grupo": "Fractura vertebral osteoporótica",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10418,7 +10634,7 @@ export const cie10Data = [
     "grupo": "Osteoporosis con fractura patológica",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10427,7 +10643,7 @@ export const cie10Data = [
     "grupo": "Osteoporosis posmenopáusica",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10436,7 +10652,7 @@ export const cie10Data = [
     "grupo": "Osteoporosis localizada NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10445,7 +10661,7 @@ export const cie10Data = [
     "grupo": "Osteoporosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10454,7 +10670,7 @@ export const cie10Data = [
     "grupo": "Osteomalacia del adulto NE",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10463,7 +10679,7 @@ export const cie10Data = [
     "grupo": "Fractura patológica no clasificada en otra",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10472,7 +10688,7 @@ export const cie10Data = [
     "grupo": "Fractura patológica por osteoporosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "óseo",
     "severidad": ""
   },
   {
@@ -10481,7 +10697,7 @@ export const cie10Data = [
     "grupo": "Otra osteomielitis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "osteomielitis",
     "severidad": ""
   },
   {
@@ -10490,7 +10706,7 @@ export const cie10Data = [
     "grupo": "Osteomielitis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "osteomielitis",
     "severidad": ""
   },
   {
@@ -10499,7 +10715,7 @@ export const cie10Data = [
     "grupo": "Necrosis aséptica idiopática del hueso",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "osteomielitis",
     "severidad": ""
   },
   {
@@ -10508,7 +10724,16 @@ export const cie10Data = [
     "grupo": "Osteonecrosis",
     "sistema": "Musculoesquelético",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "osteomielitis",
+    "severidad": ""
+  },
+  {
+    "codigo": "B02.2",
+    "descripcion": "Herpes zóster con compromiso neurológico",
+    "grupo": "Herpes zóster con compromiso neurológico",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "viral",
     "severidad": ""
   },
   {
@@ -10517,7 +10742,7 @@ export const cie10Data = [
     "grupo": "Meningitis neumocócica",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10535,7 +10760,7 @@ export const cie10Data = [
     "grupo": "Meningitis de causa",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10544,7 +10769,7 @@ export const cie10Data = [
     "grupo": "Encefalitis y encefalomielitis",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10553,7 +10778,7 @@ export const cie10Data = [
     "grupo": "Absceso y granuloma intracraneal",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10562,7 +10787,7 @@ export const cie10Data = [
     "grupo": "Flebitis y tromboflebitis intracraneal",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10571,7 +10796,7 @@ export const cie10Data = [
     "grupo": "Secuelas de enfermedad inflamatoria del SNC",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "meníngeo",
     "severidad": ""
   },
   {
@@ -10607,7 +10832,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Parkinson",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10616,7 +10841,7 @@ export const cie10Data = [
     "grupo": "Síndrome neuroléptico maligno",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10625,7 +10850,7 @@ export const cie10Data = [
     "grupo": "Parkinsonismo secundario inducido por fármacos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10634,7 +10859,7 @@ export const cie10Data = [
     "grupo": "Parkinsonismo secundario NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10643,7 +10868,7 @@ export const cie10Data = [
     "grupo": "Parálisis supranuclear progresiva",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10652,7 +10877,7 @@ export const cie10Data = [
     "grupo": "Distonía inducida por fármacos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10661,7 +10886,7 @@ export const cie10Data = [
     "grupo": "Otras distonías",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10670,7 +10895,7 @@ export const cie10Data = [
     "grupo": "Temblor esencial",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10679,7 +10904,7 @@ export const cie10Data = [
     "grupo": "Mioclonía",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10688,7 +10913,7 @@ export const cie10Data = [
     "grupo": "Otras coreas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10697,7 +10922,7 @@ export const cie10Data = [
     "grupo": "Síndrome de piernas inquietas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "extrapiramidal",
     "severidad": ""
   },
   {
@@ -10706,7 +10931,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Alzheimer de inicio temprano",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10715,7 +10940,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Alzheimer de inicio tardío",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10724,7 +10949,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Alzheimer",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10733,7 +10958,7 @@ export const cie10Data = [
     "grupo": "Atrofia cerebral circunscrita",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10742,7 +10967,7 @@ export const cie10Data = [
     "grupo": "Demencia frontotemporal NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10751,7 +10976,7 @@ export const cie10Data = [
     "grupo": "Degeneración del sistema nervioso por alcohol",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": ""
   },
   {
@@ -10760,7 +10985,7 @@ export const cie10Data = [
     "grupo": "Deterioro cognitivo",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "degenerativo",
     "severidad": "leve"
   },
   {
@@ -10769,7 +10994,7 @@ export const cie10Data = [
     "grupo": "Esclerosis múltiple",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "desmielinizante",
     "severidad": ""
   },
   {
@@ -10778,7 +11003,7 @@ export const cie10Data = [
     "grupo": "Neuromielitis óptica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "desmielinizante",
     "severidad": ""
   },
   {
@@ -10787,7 +11012,7 @@ export const cie10Data = [
     "grupo": "Mielitis transversa desmielinizante",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "desmielinizante",
     "severidad": ""
   },
   {
@@ -10796,7 +11021,7 @@ export const cie10Data = [
     "grupo": "Enfermedad desmielinizante del SNC",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "desmielinizante",
     "severidad": ""
   },
   {
@@ -10805,7 +11030,7 @@ export const cie10Data = [
     "grupo": "Epilepsia focal idiopática",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10814,7 +11039,7 @@ export const cie10Data = [
     "grupo": "Epilepsia localizada NE sin estado epiléptico",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10823,7 +11048,7 @@ export const cie10Data = [
     "grupo": "Epilepsia focal con crisis parciales simples",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10832,7 +11057,7 @@ export const cie10Data = [
     "grupo": "Epilepsia generalizada NE sin estado",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10841,7 +11066,7 @@ export const cie10Data = [
     "grupo": "Epilepsia focal con crisis parciales complejas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10850,7 +11075,7 @@ export const cie10Data = [
     "grupo": "Epilepsia generalizada idiopática",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10859,7 +11084,7 @@ export const cie10Data = [
     "grupo": "Epilepsia mioclónica juvenil",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10868,7 +11093,7 @@ export const cie10Data = [
     "grupo": "Otras epilepsias generalizadas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10877,7 +11102,7 @@ export const cie10Data = [
     "grupo": "Crisis epilépticas relacionadas con",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10886,7 +11111,7 @@ export const cie10Data = [
     "grupo": "Crisis de gran mal",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10895,7 +11120,7 @@ export const cie10Data = [
     "grupo": "Crisis de pequeño mal",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10904,7 +11129,7 @@ export const cie10Data = [
     "grupo": "Otras epilepsias",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10913,7 +11138,7 @@ export const cie10Data = [
     "grupo": "Epilepsia",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10922,7 +11147,7 @@ export const cie10Data = [
     "grupo": "Epilepsia NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10931,7 +11156,7 @@ export const cie10Data = [
     "grupo": "Estado de gran mal epiléptico",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10940,7 +11165,7 @@ export const cie10Data = [
     "grupo": "Estado de pequeño mal epiléptico",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10949,7 +11174,7 @@ export const cie10Data = [
     "grupo": "Estado epiléptico",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "epiléptico",
     "severidad": ""
   },
   {
@@ -10958,7 +11183,7 @@ export const cie10Data = [
     "grupo": "Migraña sin aura",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -10967,7 +11192,7 @@ export const cie10Data = [
     "grupo": "Migraña sin aura NE",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -10976,7 +11201,7 @@ export const cie10Data = [
     "grupo": "Migraña con aura",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -10985,7 +11210,7 @@ export const cie10Data = [
     "grupo": "Migraña con aura NE",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -10994,7 +11219,7 @@ export const cie10Data = [
     "grupo": "Estado migrañoso",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11003,7 +11228,7 @@ export const cie10Data = [
     "grupo": "Migraña",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11012,7 +11237,7 @@ export const cie10Data = [
     "grupo": "Otras migrañas",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11021,7 +11246,7 @@ export const cie10Data = [
     "grupo": "Migraña",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11030,7 +11255,7 @@ export const cie10Data = [
     "grupo": "Migraña NE",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11039,7 +11264,7 @@ export const cie10Data = [
     "grupo": "Migraña sin estado migrañoso",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11048,7 +11273,7 @@ export const cie10Data = [
     "grupo": "Cefalea en racimos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11057,7 +11282,7 @@ export const cie10Data = [
     "grupo": "Cefalea en racimos NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11066,7 +11291,7 @@ export const cie10Data = [
     "grupo": "Cefalea vascular no clasificada en otra parte",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11075,7 +11300,7 @@ export const cie10Data = [
     "grupo": "Cefalea de tipo tensional",
     "sistema": "Neurología",
     "tipo": "recurrente",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11084,7 +11309,7 @@ export const cie10Data = [
     "grupo": "Cefalea post-traumática NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11093,7 +11318,7 @@ export const cie10Data = [
     "grupo": "Cefalea tensional episódica NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11102,7 +11327,7 @@ export const cie10Data = [
     "grupo": "Cefalea tensional NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "cefalea",
     "severidad": ""
   },
   {
@@ -11111,7 +11336,7 @@ export const cie10Data = [
     "grupo": "Síndrome arterial vertebrobasilar",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11120,7 +11345,7 @@ export const cie10Data = [
     "grupo": "Síndrome de la arteria carótida",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11129,7 +11354,16 @@ export const cie10Data = [
     "grupo": "Amnesia global transitoria",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "neurológico",
+    "subtipo": "cerebrovascular",
+    "severidad": ""
+  },
+  {
+    "codigo": "G45.9",
+    "descripcion": "Ataque isquémico transitorio (AIT)",
+    "grupo": "Ataque isquémico transitorio",
+    "sistema": "Neurología",
+    "tipo": "agudo",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11138,7 +11372,7 @@ export const cie10Data = [
     "grupo": "Trastornos del inicio y mantenimiento del",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -11147,7 +11381,7 @@ export const cie10Data = [
     "grupo": "Trastornos por exceso de somnolencia",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -11156,7 +11390,25 @@ export const cie10Data = [
     "grupo": "Trastornos del ritmo circadiano del sueño",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "sueño",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.3",
+    "descripcion": "Apnea del sueño",
+    "grupo": "Apnea del sueño",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "sueño",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.33",
+    "descripcion": "Apnea obstructiva del sueño (adultos)",
+    "grupo": "Apnea obstructiva del sueño",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "obstructivo",
     "severidad": ""
   },
   {
@@ -11165,7 +11417,7 @@ export const cie10Data = [
     "grupo": "Narcolepsia y cataplejía",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -11174,7 +11426,16 @@ export const cie10Data = [
     "grupo": "Trastornos del movimiento relacionados con el",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "sueño",
+    "severidad": ""
+  },
+  {
+    "codigo": "G47.9",
+    "descripcion": "Trastorno del sueño no especificado",
+    "grupo": "Trastorno del sueño",
+    "sistema": "Neurología",
+    "tipo": "crónico",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -11183,7 +11444,7 @@ export const cie10Data = [
     "grupo": "Neuralgia del trigémino",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11192,7 +11453,7 @@ export const cie10Data = [
     "grupo": "Parálisis de Bell",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11201,7 +11462,7 @@ export const cie10Data = [
     "grupo": "Otros trastornos del nervio facial",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11210,7 +11471,7 @@ export const cie10Data = [
     "grupo": "Trastornos del nervio glosofaríngeo",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11219,7 +11480,7 @@ export const cie10Data = [
     "grupo": "Trastornos del plexo braquial",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11228,7 +11489,7 @@ export const cie10Data = [
     "grupo": "Trastornos del plexo lumbosacro",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11237,7 +11498,7 @@ export const cie10Data = [
     "grupo": "Radiculopatía cervical",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11246,7 +11507,7 @@ export const cie10Data = [
     "grupo": "Radiculopatía lumbosacra",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11255,7 +11516,7 @@ export const cie10Data = [
     "grupo": "Compresión de raíces por trastornos de disco",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11264,7 +11525,7 @@ export const cie10Data = [
     "grupo": "Síndrome del túnel carpiano",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11273,7 +11534,7 @@ export const cie10Data = [
     "grupo": "Otras lesiones del nervio mediano",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11282,7 +11543,7 @@ export const cie10Data = [
     "grupo": "Lesión del nervio cubital",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11291,7 +11552,7 @@ export const cie10Data = [
     "grupo": "Lesión del nervio ciático",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11300,7 +11561,7 @@ export const cie10Data = [
     "grupo": "Meralgia parestésica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11309,7 +11570,7 @@ export const cie10Data = [
     "grupo": "Meralgia parestésica NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11318,7 +11579,7 @@ export const cie10Data = [
     "grupo": "Lesión del nervio crural",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11327,7 +11588,7 @@ export const cie10Data = [
     "grupo": "Lesión del nervio ciático poplíteo externo",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11336,7 +11597,7 @@ export const cie10Data = [
     "grupo": "Mononeuropatía",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11345,7 +11606,7 @@ export const cie10Data = [
     "grupo": "Neuropatía hereditaria sensitivomotora",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11354,7 +11615,7 @@ export const cie10Data = [
     "grupo": "Neuropatía hereditaria y sensitiva NE",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11363,7 +11624,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Guillain-Barré",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropatía",
     "severidad": ""
   },
   {
@@ -11372,7 +11633,7 @@ export const cie10Data = [
     "grupo": "Polineuropatía inducida por fármacos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11381,7 +11642,7 @@ export const cie10Data = [
     "grupo": "Polineuropatía alcohólica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11390,7 +11651,7 @@ export const cie10Data = [
     "grupo": "Polineuropatía",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11399,7 +11660,7 @@ export const cie10Data = [
     "grupo": "Polineuropatía en enfermedades clasificadas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11408,7 +11669,7 @@ export const cie10Data = [
     "grupo": "Polineuropatía diabética",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11417,7 +11678,7 @@ export const cie10Data = [
     "grupo": "Miastenia gravis",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11426,7 +11687,7 @@ export const cie10Data = [
     "grupo": "Miastenia gravis con exacerbación",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11435,7 +11696,7 @@ export const cie10Data = [
     "grupo": "Miastenia congénita y del desarrollo",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11444,7 +11705,7 @@ export const cie10Data = [
     "grupo": "Distrofia muscular",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11453,7 +11714,7 @@ export const cie10Data = [
     "grupo": "Trastornos miotónicos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11462,7 +11723,7 @@ export const cie10Data = [
     "grupo": "Miopatías congénitas",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11471,7 +11732,7 @@ export const cie10Data = [
     "grupo": "Miopatía inducida por fármacos",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11480,7 +11741,7 @@ export const cie10Data = [
     "grupo": "Miopatía en enfermedades clasificadas en otra",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuromuscular",
     "severidad": ""
   },
   {
@@ -11489,7 +11750,7 @@ export const cie10Data = [
     "grupo": "Parálisis cerebral espástica cuadripléjica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11498,7 +11759,7 @@ export const cie10Data = [
     "grupo": "Parálisis cerebral espástica dipléjica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11507,7 +11768,7 @@ export const cie10Data = [
     "grupo": "Parálisis cerebral espástica hemipléjica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11516,7 +11777,7 @@ export const cie10Data = [
     "grupo": "Hemiplejía flácida",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11525,7 +11786,7 @@ export const cie10Data = [
     "grupo": "Hemiplejía espástica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11534,7 +11795,7 @@ export const cie10Data = [
     "grupo": "Paraplejía flácida",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11543,7 +11804,7 @@ export const cie10Data = [
     "grupo": "Paraplejía espástica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11552,7 +11813,7 @@ export const cie10Data = [
     "grupo": "Paraplejía",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11561,7 +11822,7 @@ export const cie10Data = [
     "grupo": "Tetraplejía espástica",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11570,7 +11831,7 @@ export const cie10Data = [
     "grupo": "Diplejía de miembros superiores",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11579,7 +11840,7 @@ export const cie10Data = [
     "grupo": "Síndrome de la cola de caballo",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "parálisis",
     "severidad": ""
   },
   {
@@ -11606,7 +11867,7 @@ export const cie10Data = [
     "grupo": "Neuropatía autonómica periférica idiopática",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "neurológico",
+    "subtipo": "neuropático",
     "severidad": ""
   },
   {
@@ -11750,7 +12011,7 @@ export const cie10Data = [
     "grupo": "Infarto cerebral",
     "sistema": "Neurología",
     "tipo": "agudo",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11768,7 +12029,7 @@ export const cie10Data = [
     "grupo": "Oclusión y estenosis de la arteria carótida",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11777,7 +12038,7 @@ export const cie10Data = [
     "grupo": "Aneurisma cerebral sin ruptura",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11786,7 +12047,7 @@ export const cie10Data = [
     "grupo": "Enfermedad cerebrovascular",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11804,7 +12065,7 @@ export const cie10Data = [
     "grupo": "Secuelas de infarto cerebral",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11813,7 +12074,7 @@ export const cie10Data = [
     "grupo": "Secuelas de ACV",
     "sistema": "Neurología",
     "tipo": "crónico",
-    "subtipo": "vascular",
+    "subtipo": "cerebrovascular",
     "severidad": ""
   },
   {
@@ -11831,7 +12092,7 @@ export const cie10Data = [
     "grupo": "Embarazo abdominal",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11840,7 +12101,7 @@ export const cie10Data = [
     "grupo": "Embarazo tubárico",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11849,7 +12110,7 @@ export const cie10Data = [
     "grupo": "Embarazo ectópico",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11858,7 +12119,7 @@ export const cie10Data = [
     "grupo": "Mola hidatiforme clásica",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11867,7 +12128,7 @@ export const cie10Data = [
     "grupo": "Mola hidatiforme",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11876,7 +12137,7 @@ export const cie10Data = [
     "grupo": "Huevo anembrionado y mola no hidatiforme",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11885,7 +12146,7 @@ export const cie10Data = [
     "grupo": "Aborto retenido",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11894,8 +12155,8 @@ export const cie10Data = [
     "grupo": "Aborto espontáneo incompleto sin complicación",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "aborto",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O03.9",
@@ -11903,8 +12164,8 @@ export const cie10Data = [
     "grupo": "Aborto espontáneo completo o sin complicación",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "aborto",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O06.9",
@@ -11912,8 +12173,8 @@ export const cie10Data = [
     "grupo": "Aborto sin complicación",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "aborto",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O08.0",
@@ -11921,7 +12182,7 @@ export const cie10Data = [
     "grupo": "Infección genital y pelviana consecutiva al",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "aborto",
     "severidad": ""
   },
   {
@@ -11939,7 +12200,7 @@ export const cie10Data = [
     "grupo": "Hipertensión esencial preexistente que",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -11948,7 +12209,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia sobreagregada a hipertensión",
     "sistema": "Obstetricia",
     "tipo": "crónico",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -11957,7 +12218,7 @@ export const cie10Data = [
     "grupo": "Hipertensión gestacional sin proteinuria",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -11966,7 +12227,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia a",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": "moderado"
   },
   {
@@ -11975,7 +12236,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": "grave"
   },
   {
@@ -11984,7 +12245,7 @@ export const cie10Data = [
     "grupo": "Síndrome HELLP",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -11993,7 +12254,7 @@ export const cie10Data = [
     "grupo": "Preeclampsia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -12002,7 +12263,7 @@ export const cie10Data = [
     "grupo": "Eclampsia en el embarazo",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -12011,7 +12272,7 @@ export const cie10Data = [
     "grupo": "Eclampsia durante el trabajo de parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -12020,7 +12281,7 @@ export const cie10Data = [
     "grupo": "Eclampsia en el puerperio",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -12029,7 +12290,7 @@ export const cie10Data = [
     "grupo": "Hipertensión materna",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hipertensivo gestacional",
     "severidad": ""
   },
   {
@@ -12038,7 +12299,7 @@ export const cie10Data = [
     "grupo": "Amenaza de aborto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hemorrágico",
     "severidad": ""
   },
   {
@@ -12056,7 +12317,7 @@ export const cie10Data = [
     "grupo": "Hiperémesis gravídica",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hiperémesis",
     "severidad": "leve"
   },
   {
@@ -12065,7 +12326,7 @@ export const cie10Data = [
     "grupo": "Hiperémesis gravídica con trastornos",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "hiperémesis",
     "severidad": ""
   },
   {
@@ -12123,12 +12384,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "O24.0",
+    "descripcion": "Diabetes mellitus tipo 1 preexistente en el embarazo",
+    "grupo": "Diabetes mellitus tipo 1 preexistente en el",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "diabetes gestacional",
+    "severidad": ""
+  },
+  {
     "codigo": "O24.9",
     "descripcion": "Diabetes mellitus no especificada en el embarazo",
     "grupo": "Diabetes mellitus en el embarazo",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "diabetes gestacional",
     "severidad": ""
   },
   {
@@ -12164,7 +12434,7 @@ export const cie10Data = [
     "grupo": "Embarazo doble",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12173,7 +12443,7 @@ export const cie10Data = [
     "grupo": "Embarazo triple",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12182,7 +12452,7 @@ export const cie10Data = [
     "grupo": "Embarazo múltiple",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12191,7 +12461,7 @@ export const cie10Data = [
     "grupo": "Atención materna por presentación de nalgas",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12200,7 +12470,7 @@ export const cie10Data = [
     "grupo": "Atención materna por situación fetal",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12209,7 +12479,7 @@ export const cie10Data = [
     "grupo": "Atención materna por desproporción fetopélvica",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12218,7 +12488,7 @@ export const cie10Data = [
     "grupo": "Atención materna por cicatriz uterina de",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12227,7 +12497,7 @@ export const cie10Data = [
     "grupo": "Atención materna por isoinmunización Rh",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12236,7 +12506,7 @@ export const cie10Data = [
     "grupo": "Atención materna por signos de hipoxia fetal",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12245,7 +12515,7 @@ export const cie10Data = [
     "grupo": "Atención materna por muerte intrauterina del",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12254,7 +12524,7 @@ export const cie10Data = [
     "grupo": "Atención materna por crecimiento fetal",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12263,7 +12533,7 @@ export const cie10Data = [
     "grupo": "Atención materna por crecimiento fetal",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12272,7 +12542,7 @@ export const cie10Data = [
     "grupo": "Polihidramnios",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12281,7 +12551,7 @@ export const cie10Data = [
     "grupo": "Oligohidramnios",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12290,7 +12560,7 @@ export const cie10Data = [
     "grupo": "Infección del saco amniótico y membranas",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12299,7 +12569,7 @@ export const cie10Data = [
     "grupo": "RPM con inicio del trabajo de parto dentro de",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12308,7 +12578,7 @@ export const cie10Data = [
     "grupo": "Ruptura prematura de membranas",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12317,7 +12587,7 @@ export const cie10Data = [
     "grupo": "Placenta mórbidamente adherente",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12326,8 +12596,8 @@ export const cie10Data = [
     "grupo": "Placenta previa sin hemorragia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "fetal",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O44.1",
@@ -12344,7 +12614,7 @@ export const cie10Data = [
     "grupo": "Desprendimiento de placenta con defecto de la",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12353,7 +12623,7 @@ export const cie10Data = [
     "grupo": "Desprendimiento prematuro de placenta",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12371,7 +12641,7 @@ export const cie10Data = [
     "grupo": "Falso trabajo de parto antes de las 37",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12380,7 +12650,7 @@ export const cie10Data = [
     "grupo": "Embarazo prolongado",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "fetal",
     "severidad": ""
   },
   {
@@ -12389,7 +12659,7 @@ export const cie10Data = [
     "grupo": "Amenaza de parto pretérmino sin parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12398,7 +12668,7 @@ export const cie10Data = [
     "grupo": "Trabajo de parto prematuro con parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12407,7 +12677,7 @@ export const cie10Data = [
     "grupo": "Fracaso de la inducción médica del trabajo de",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12416,7 +12686,7 @@ export const cie10Data = [
     "grupo": "Contracciones primarias inadecuadas",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12425,7 +12695,7 @@ export const cie10Data = [
     "grupo": "Contracciones uterinas hipertónicas e",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12434,7 +12704,7 @@ export const cie10Data = [
     "grupo": "Prolongación del primer periodo del trabajo",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12443,7 +12713,7 @@ export const cie10Data = [
     "grupo": "Prolongación del segundo periodo del trabajo",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12452,7 +12722,7 @@ export const cie10Data = [
     "grupo": "Parto obstruido por presentación fetal anómala",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12461,7 +12731,7 @@ export const cie10Data = [
     "grupo": "Trabajo de parto obstruido por desproporción",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12470,7 +12740,7 @@ export const cie10Data = [
     "grupo": "Trabajo de parto obstruido por distocia de",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12479,7 +12749,7 @@ export const cie10Data = [
     "grupo": "Parto complicado por anomalía de la",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12488,7 +12758,7 @@ export const cie10Data = [
     "grupo": "Parto complicado por prolapso del cordón",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12497,7 +12767,7 @@ export const cie10Data = [
     "grupo": "Parto complicado por circular de cordón con",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12506,7 +12776,7 @@ export const cie10Data = [
     "grupo": "Desgarro perineal de primer grado durante el",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12515,7 +12785,7 @@ export const cie10Data = [
     "grupo": "Desgarro perineal de segundo grado durante el",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12524,7 +12794,7 @@ export const cie10Data = [
     "grupo": "Desgarro perineal de tercer grado durante el",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12533,7 +12803,7 @@ export const cie10Data = [
     "grupo": "Desgarro perineal de cuarto grado durante el",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12542,7 +12812,7 @@ export const cie10Data = [
     "grupo": "Ruptura del útero antes del inicio del",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12551,7 +12821,7 @@ export const cie10Data = [
     "grupo": "Ruptura del útero durante el trabajo de parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12587,8 +12857,8 @@ export const cie10Data = [
     "grupo": "Retención de la placenta sin hemorragia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "parto",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O73.1",
@@ -12596,8 +12866,8 @@ export const cie10Data = [
     "grupo": "Retención de fragmentos placentarios sin",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "parto",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "O80",
@@ -12605,7 +12875,7 @@ export const cie10Data = [
     "grupo": "Parto único espontáneo",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12614,7 +12884,7 @@ export const cie10Data = [
     "grupo": "Parto único espontáneo en presentación",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12623,7 +12893,7 @@ export const cie10Data = [
     "grupo": "Parto único espontáneo sin otra especificación",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12632,7 +12902,16 @@ export const cie10Data = [
     "grupo": "Parto único con extractor al vacío",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
+    "severidad": ""
+  },
+  {
+    "codigo": "O82",
+    "descripcion": "Parto único por cesárea",
+    "grupo": "Parto único por cesárea",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12641,7 +12920,7 @@ export const cie10Data = [
     "grupo": "Parto por cesárea electiva",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12650,7 +12929,7 @@ export const cie10Data = [
     "grupo": "Parto por cesárea de emergencia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "parto",
     "severidad": ""
   },
   {
@@ -12668,7 +12947,7 @@ export const cie10Data = [
     "grupo": "Infección de herida quirúrgica obstétrica",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12677,7 +12956,7 @@ export const cie10Data = [
     "grupo": "Infección de las vías urinarias consecutiva",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12686,7 +12965,7 @@ export const cie10Data = [
     "grupo": "Trombosis venosa profunda en el puerperio",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12695,7 +12974,7 @@ export const cie10Data = [
     "grupo": "Embolia de líquido amniótico",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12704,7 +12983,16 @@ export const cie10Data = [
     "grupo": "Miocardiopatía en el puerperio",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
+    "severidad": ""
+  },
+  {
+    "codigo": "O91.0",
+    "descripcion": "Infección del pezón asociada con el parto",
+    "grupo": "Infección del pezón asociada con el parto",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12713,7 +13001,7 @@ export const cie10Data = [
     "grupo": "Absceso de la mama asociado con el parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12722,7 +13010,7 @@ export const cie10Data = [
     "grupo": "Mastitis no purulenta asociada con el parto",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12731,7 +13019,16 @@ export const cie10Data = [
     "grupo": "Hipogalactia",
     "sistema": "Obstetricia",
     "tipo": "agudo",
-    "subtipo": "obstétrico",
+    "subtipo": "puerperal",
+    "severidad": ""
+  },
+  {
+    "codigo": "O92.5",
+    "descripcion": "Supresión de la lactancia",
+    "grupo": "Supresión de la lactancia",
+    "sistema": "Obstetricia",
+    "tipo": "agudo",
+    "subtipo": "puerperal",
     "severidad": ""
   },
   {
@@ -12749,7 +13046,16 @@ export const cie10Data = [
     "grupo": "Embarazo confirmado",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z33",
+    "descripcion": "Estado de embarazo incidental",
+    "grupo": "Estado de embarazo incidental",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12758,7 +13064,7 @@ export const cie10Data = [
     "grupo": "Supervisión de primer embarazo normal",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12767,7 +13073,7 @@ export const cie10Data = [
     "grupo": "Supervisión de otro embarazo normal",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12776,7 +13082,7 @@ export const cie10Data = [
     "grupo": "Supervisión de primigesta añosa",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12785,7 +13091,7 @@ export const cie10Data = [
     "grupo": "Supervisión de primigesta muy joven",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12794,7 +13100,16 @@ export const cie10Data = [
     "grupo": "Supervisión de embarazo de alto riesgo",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z36",
+    "descripcion": "Pesquisas prenatales",
+    "grupo": "Pesquisas prenatales",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12803,7 +13118,16 @@ export const cie10Data = [
     "grupo": "Atención y examen inmediatamente después del",
     "sistema": "Obstetricia",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "reproducción",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z39.1",
+    "descripcion": "Atención de la madre lactante",
+    "grupo": "Atención de la madre lactante",
+    "sistema": "Obstetricia",
+    "tipo": "prevención",
+    "subtipo": "reproducción",
     "severidad": ""
   },
   {
@@ -12812,7 +13136,7 @@ export const cie10Data = [
     "grupo": "Orzuelo y otras inflamaciones profundas del",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12821,7 +13145,7 @@ export const cie10Data = [
     "grupo": "Orzuelo externo",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12830,7 +13154,7 @@ export const cie10Data = [
     "grupo": "Chalazión",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12839,7 +13163,7 @@ export const cie10Data = [
     "grupo": "Chalazión",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12848,7 +13172,7 @@ export const cie10Data = [
     "grupo": "Blefaritis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12857,7 +13181,7 @@ export const cie10Data = [
     "grupo": "Blefaritis NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12866,7 +13190,7 @@ export const cie10Data = [
     "grupo": "Entropión y triquiasis palpebral",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12875,7 +13199,7 @@ export const cie10Data = [
     "grupo": "Ectropión del párpado",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12884,7 +13208,7 @@ export const cie10Data = [
     "grupo": "Ptosis del párpado",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12893,7 +13217,7 @@ export const cie10Data = [
     "grupo": "Xantelasma del párpado",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12902,7 +13226,7 @@ export const cie10Data = [
     "grupo": "Dacrioadenitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12911,7 +13235,7 @@ export const cie10Data = [
     "grupo": "Síndrome de ojo seco",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12920,7 +13244,7 @@ export const cie10Data = [
     "grupo": "Dacriocistitis",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12929,7 +13253,7 @@ export const cie10Data = [
     "grupo": "Epífora",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12938,7 +13262,7 @@ export const cie10Data = [
     "grupo": "Epifora NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12947,7 +13271,7 @@ export const cie10Data = [
     "grupo": "Dacriocistitis",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12956,7 +13280,7 @@ export const cie10Data = [
     "grupo": "Dacriocistitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12965,7 +13289,7 @@ export const cie10Data = [
     "grupo": "Estenosis y obstrucción de las vías lagrimales",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12974,7 +13298,7 @@ export const cie10Data = [
     "grupo": "Celulitis orbitaria",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "párpado",
     "severidad": ""
   },
   {
@@ -12983,7 +13307,7 @@ export const cie10Data = [
     "grupo": "Conjuntivitis mucopurulenta",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13010,7 +13334,7 @@ export const cie10Data = [
     "grupo": "Otras conjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13019,7 +13343,7 @@ export const cie10Data = [
     "grupo": "Conjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13037,7 +13361,7 @@ export const cie10Data = [
     "grupo": "Conjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13046,7 +13370,7 @@ export const cie10Data = [
     "grupo": "Blefaroconjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13055,7 +13379,7 @@ export const cie10Data = [
     "grupo": "Conjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13064,7 +13388,7 @@ export const cie10Data = [
     "grupo": "Pterigión",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13073,7 +13397,7 @@ export const cie10Data = [
     "grupo": "Degeneraciones y depósitos conjuntivales",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "conjuntival",
     "severidad": ""
   },
   {
@@ -13091,7 +13415,7 @@ export const cie10Data = [
     "grupo": "Escleritis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13100,7 +13424,7 @@ export const cie10Data = [
     "grupo": "Episcleritis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13109,7 +13433,7 @@ export const cie10Data = [
     "grupo": "Úlcera de la córnea",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13118,7 +13442,7 @@ export const cie10Data = [
     "grupo": "Úlcera corneal NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13127,7 +13451,7 @@ export const cie10Data = [
     "grupo": "Queratitis superficial sin conjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13136,7 +13460,7 @@ export const cie10Data = [
     "grupo": "Queratoconjuntivitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13145,7 +13469,7 @@ export const cie10Data = [
     "grupo": "Queratitis intersticial y profunda",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13154,7 +13478,7 @@ export const cie10Data = [
     "grupo": "Queratitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13163,7 +13487,7 @@ export const cie10Data = [
     "grupo": "Cicatriz u opacidad corneal",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13172,7 +13496,7 @@ export const cie10Data = [
     "grupo": "Queratocono",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13181,7 +13505,7 @@ export const cie10Data = [
     "grupo": "Trastorno de córnea NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13190,7 +13514,7 @@ export const cie10Data = [
     "grupo": "Iridociclitis y subaguda",
     "sistema": "Oftalmología",
     "tipo": "agudo",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13199,7 +13523,7 @@ export const cie10Data = [
     "grupo": "Iridociclitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13208,7 +13532,7 @@ export const cie10Data = [
     "grupo": "Iridociclitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13217,7 +13541,7 @@ export const cie10Data = [
     "grupo": "Hifema",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "corneal",
     "severidad": ""
   },
   {
@@ -13226,7 +13550,7 @@ export const cie10Data = [
     "grupo": "Catarata senil incipiente",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13235,7 +13559,7 @@ export const cie10Data = [
     "grupo": "Catarata senil nuclear",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13244,7 +13568,7 @@ export const cie10Data = [
     "grupo": "Catarata senil",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13253,7 +13577,7 @@ export const cie10Data = [
     "grupo": "Catarata infantil",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13262,7 +13586,7 @@ export const cie10Data = [
     "grupo": "Catarata traumática",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13271,7 +13595,7 @@ export const cie10Data = [
     "grupo": "Catarata complicada",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13280,7 +13604,7 @@ export const cie10Data = [
     "grupo": "Catarata secundaria",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13289,7 +13613,7 @@ export const cie10Data = [
     "grupo": "Catarata",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13298,7 +13622,7 @@ export const cie10Data = [
     "grupo": "Afaquia",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13307,7 +13631,7 @@ export const cie10Data = [
     "grupo": "Luxación del cristalino",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13316,7 +13640,7 @@ export const cie10Data = [
     "grupo": "Catarata diabética",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "cristalino",
     "severidad": ""
   },
   {
@@ -13325,7 +13649,7 @@ export const cie10Data = [
     "grupo": "Coriorretinitis",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13334,7 +13658,7 @@ export const cie10Data = [
     "grupo": "Desprendimiento de retina con ruptura",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13343,7 +13667,7 @@ export const cie10Data = [
     "grupo": "Desprendimiento de retina sin rotura",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13352,7 +13676,7 @@ export const cie10Data = [
     "grupo": "Desprendimiento seroso de la retina",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13361,7 +13685,7 @@ export const cie10Data = [
     "grupo": "Desgarro de la retina sin desprendimiento",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13370,7 +13694,7 @@ export const cie10Data = [
     "grupo": "Otros desprendimientos de la retina",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13379,7 +13703,7 @@ export const cie10Data = [
     "grupo": "Oclusión arterial retiniana transitoria",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13388,7 +13712,7 @@ export const cie10Data = [
     "grupo": "Oclusión de la arteria central de la retina",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13397,7 +13721,7 @@ export const cie10Data = [
     "grupo": "Otras oclusiones vasculares retinianas",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13406,7 +13730,7 @@ export const cie10Data = [
     "grupo": "Retinopatía hipertensiva y cambios vasculares",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retinopatía",
     "severidad": ""
   },
   {
@@ -13415,7 +13739,7 @@ export const cie10Data = [
     "grupo": "Degeneración macular relacionada con la edad",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13424,7 +13748,7 @@ export const cie10Data = [
     "grupo": "Degeneración macular por edad NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retina",
     "severidad": ""
   },
   {
@@ -13442,7 +13766,7 @@ export const cie10Data = [
     "grupo": "Retinopatía diabética en DM clasificada en",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retinopatía",
     "severidad": ""
   },
   {
@@ -13451,7 +13775,7 @@ export const cie10Data = [
     "grupo": "Retinopatía diabética",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "retinopatía",
     "severidad": ""
   },
   {
@@ -13460,7 +13784,7 @@ export const cie10Data = [
     "grupo": "Sospecha de glaucoma",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13469,7 +13793,7 @@ export const cie10Data = [
     "grupo": "Glaucoma primario de ángulo abierto",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13478,7 +13802,7 @@ export const cie10Data = [
     "grupo": "Glaucoma primario de ángulo abierto",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13487,7 +13811,7 @@ export const cie10Data = [
     "grupo": "Glaucoma primario de ángulo cerrado",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13496,7 +13820,7 @@ export const cie10Data = [
     "grupo": "Glaucoma secundario a traumatismo ocular",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13505,7 +13829,7 @@ export const cie10Data = [
     "grupo": "Glaucoma secundario a inflamación ocular",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13514,7 +13838,7 @@ export const cie10Data = [
     "grupo": "Glaucoma",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "glaucoma",
     "severidad": ""
   },
   {
@@ -13532,7 +13856,7 @@ export const cie10Data = [
     "grupo": "Trastorno del vítreo",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "vítreo",
     "severidad": ""
   },
   {
@@ -13541,7 +13865,7 @@ export const cie10Data = [
     "grupo": "Neuritis óptica",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "nervio óptico",
     "severidad": ""
   },
   {
@@ -13550,7 +13874,7 @@ export const cie10Data = [
     "grupo": "Atrofia óptica",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "nervio óptico",
     "severidad": ""
   },
   {
@@ -13559,7 +13883,7 @@ export const cie10Data = [
     "grupo": "Parálisis del tercer par craneal",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13568,7 +13892,7 @@ export const cie10Data = [
     "grupo": "Estrabismo convergente concomitante",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13577,7 +13901,7 @@ export const cie10Data = [
     "grupo": "Estrabismo divergente concomitante",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13586,7 +13910,7 @@ export const cie10Data = [
     "grupo": "Estrabismo",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13595,7 +13919,7 @@ export const cie10Data = [
     "grupo": "Hipermetropía",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13604,7 +13928,7 @@ export const cie10Data = [
     "grupo": "Miopía",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13613,7 +13937,7 @@ export const cie10Data = [
     "grupo": "Astigmatismo",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13622,7 +13946,7 @@ export const cie10Data = [
     "grupo": "Anisometropía y aniseiconía",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13631,7 +13955,7 @@ export const cie10Data = [
     "grupo": "Presbicia",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "refracción",
     "severidad": ""
   },
   {
@@ -13640,7 +13964,7 @@ export const cie10Data = [
     "grupo": "Ambliopía ex anopsia",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13649,7 +13973,7 @@ export const cie10Data = [
     "grupo": "Diplopía",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13658,7 +13982,7 @@ export const cie10Data = [
     "grupo": "Deficiencia de la visión cromática",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13667,7 +13991,7 @@ export const cie10Data = [
     "grupo": "Ceguera de ambos ojos",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13676,7 +14000,7 @@ export const cie10Data = [
     "grupo": "Visión subnormal de ambos ojos",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13685,7 +14009,16 @@ export const cie10Data = [
     "grupo": "Ceguera de un ojo",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
+    "severidad": ""
+  },
+  {
+    "codigo": "H54.7",
+    "descripcion": "Pérdida visual no especificada",
+    "grupo": "Pérdida visual",
+    "sistema": "Oftalmología",
+    "tipo": "crónico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13694,7 +14027,7 @@ export const cie10Data = [
     "grupo": "Deficiencia visual NE",
     "sistema": "Oftalmología",
     "tipo": "crónico",
-    "subtipo": "oftalmológico",
+    "subtipo": "visual",
     "severidad": ""
   },
   {
@@ -13707,12 +14040,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "Z96.1",
+    "descripcion": "Presencia de lente intraocular",
+    "grupo": "Presencia de lente intraocular",
+    "sistema": "Oftalmología",
+    "tipo": "prevención",
+    "subtipo": "antecedente",
+    "severidad": ""
+  },
+  {
     "codigo": "C00.9",
     "descripcion": "Tumor maligno del labio, no especificado",
     "grupo": "Tumor maligno del labio",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13721,7 +14063,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la lengua",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13730,7 +14072,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del piso de la boca",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13739,7 +14081,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del paladar",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13748,7 +14090,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la glándula parótida",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13757,7 +14099,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la amígdala",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13766,7 +14108,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la orofaringe",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13775,7 +14117,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la nasofaringe",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "cabeza y cuello",
     "severidad": ""
   },
   {
@@ -13784,7 +14126,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del tercio inferior del esófago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13793,7 +14135,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del esófago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13802,7 +14144,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cardias gástrico",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13811,7 +14153,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cuerpo del estómago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13820,7 +14162,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del antro pilórico",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13829,7 +14171,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del estómago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13838,7 +14180,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del intestino delgado",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13847,7 +14189,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del ciego",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13856,7 +14198,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del colon ascendente",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13865,7 +14207,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del colon transverso",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13874,7 +14216,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del colon descendente",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13883,7 +14225,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del colon sigmoide",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13892,7 +14234,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del colon",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13901,7 +14243,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la unión rectosigmoidea",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13910,7 +14252,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del recto",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13919,7 +14261,7 @@ export const cie10Data = [
     "grupo": "Carcinoma hepatocelular",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13928,7 +14270,7 @@ export const cie10Data = [
     "grupo": "Carcinoma de vías biliares intrahepáticas",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13937,7 +14279,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del hígado",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13946,7 +14288,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la vesícula biliar",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13955,7 +14297,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de las vías biliares",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13964,7 +14306,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la cabeza del páncreas",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13973,7 +14315,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cuerpo del páncreas",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13982,7 +14324,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del páncreas",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -13991,7 +14333,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la laringe",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14000,7 +14342,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la tráquea",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14009,7 +14351,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del bronquio principal",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14018,7 +14360,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del lóbulo superior",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14027,7 +14369,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del lóbulo inferior",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14036,7 +14378,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del bronquio o del pulmón",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14045,7 +14387,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de bronquio y pulmón NE",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14054,7 +14396,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la pleura",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -14072,7 +14414,7 @@ export const cie10Data = [
     "grupo": "Melanoma maligno del tronco",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "piel",
     "severidad": ""
   },
   {
@@ -14081,7 +14423,7 @@ export const cie10Data = [
     "grupo": "Melanoma maligno de la piel",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "piel",
     "severidad": ""
   },
   {
@@ -14090,7 +14432,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la piel de la cara",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "piel",
     "severidad": ""
   },
   {
@@ -14099,7 +14441,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la piel",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "piel",
     "severidad": ""
   },
   {
@@ -14126,7 +14468,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la porción central de la mama",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "mama",
     "severidad": ""
   },
   {
@@ -14135,7 +14477,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cuadrante superior externo",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "mama",
     "severidad": ""
   },
   {
@@ -14144,7 +14486,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la mama",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "mama",
     "severidad": ""
   },
   {
@@ -14153,7 +14495,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la mama NE",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "mama",
     "severidad": ""
   },
   {
@@ -14162,7 +14504,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la vulva",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14171,7 +14513,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la vagina",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14180,7 +14522,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del endocérvix",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14189,7 +14531,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del exocérvix",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14198,7 +14540,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cuello del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14207,7 +14549,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del endometrio",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14216,7 +14558,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del cuerpo del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14225,7 +14567,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14234,7 +14576,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del ovario",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "ginecológico",
     "severidad": ""
   },
   {
@@ -14243,7 +14585,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la próstata",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "genital masculino",
     "severidad": ""
   },
   {
@@ -14252,7 +14594,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del testículo",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "genital masculino",
     "severidad": ""
   },
   {
@@ -14261,7 +14603,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del riñón",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -14270,7 +14612,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la pelvis renal",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -14279,7 +14621,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del uréter",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -14288,7 +14630,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la vejiga",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -14333,7 +14675,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la glándula tiroides",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -14342,7 +14684,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la glándula suprarrenal",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -14351,7 +14693,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno de la hipófisis",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -14423,7 +14765,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Hodgkin",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14432,7 +14774,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Hodgkin",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14441,7 +14783,7 @@ export const cie10Data = [
     "grupo": "Linfoma no Hodgkin folicular",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14450,7 +14792,7 @@ export const cie10Data = [
     "grupo": "Linfoma difuso de células B grandes",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14459,7 +14801,7 @@ export const cie10Data = [
     "grupo": "Linfoma no Hodgkin difuso",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14477,7 +14819,7 @@ export const cie10Data = [
     "grupo": "Linfoma no Hodgkin",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14486,7 +14828,7 @@ export const cie10Data = [
     "grupo": "Macroglobulinemia de Waldenström",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14495,7 +14837,7 @@ export const cie10Data = [
     "grupo": "Mieloma múltiple",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14504,7 +14846,7 @@ export const cie10Data = [
     "grupo": "Leucemia de células plasmáticas",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14513,7 +14855,7 @@ export const cie10Data = [
     "grupo": "Leucemia linfoblástica",
     "sistema": "Oncología",
     "tipo": "agudo",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14522,7 +14864,7 @@ export const cie10Data = [
     "grupo": "Leucemia linfocítica",
     "sistema": "Oncología",
     "tipo": "crónico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14531,7 +14873,7 @@ export const cie10Data = [
     "grupo": "Leucemia linfoide",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14540,7 +14882,7 @@ export const cie10Data = [
     "grupo": "Leucemia mieloide",
     "sistema": "Oncología",
     "tipo": "agudo",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14549,7 +14891,7 @@ export const cie10Data = [
     "grupo": "Leucemia mieloide",
     "sistema": "Oncología",
     "tipo": "crónico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14558,7 +14900,7 @@ export const cie10Data = [
     "grupo": "Leucemia mielomonocítica",
     "sistema": "Oncología",
     "tipo": "crónico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14567,7 +14909,7 @@ export const cie10Data = [
     "grupo": "Enfermedad mielodisplásica y",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14576,7 +14918,7 @@ export const cie10Data = [
     "grupo": "Leucemia de tipo celular",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14585,7 +14927,7 @@ export const cie10Data = [
     "grupo": "Tumor maligno del tejido linfático y",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -14594,7 +14936,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ del esófago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14603,7 +14945,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ del estómago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14612,7 +14954,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ del colon",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14621,7 +14963,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ de la unión rectosigmoidea",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14630,7 +14972,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ del bronquio y pulmón",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14639,7 +14981,7 @@ export const cie10Data = [
     "grupo": "Melanoma in situ",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14648,7 +14990,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ de la piel",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14657,7 +14999,7 @@ export const cie10Data = [
     "grupo": "Carcinoma intraductal in situ de la mama",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14666,7 +15008,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ de la mama",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14675,7 +15017,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ del cuello del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14684,7 +15026,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ de la próstata",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14693,7 +15035,7 @@ export const cie10Data = [
     "grupo": "Carcinoma in situ de la vejiga",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "in situ",
     "severidad": ""
   },
   {
@@ -14702,7 +15044,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la amígdala",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14711,7 +15053,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la glándula parótida",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14720,7 +15062,7 @@ export const cie10Data = [
     "grupo": "Pólipo o tumor benigno del ciego",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14729,7 +15071,7 @@ export const cie10Data = [
     "grupo": "Pólipo o tumor benigno del colon sigmoide",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14738,7 +15080,7 @@ export const cie10Data = [
     "grupo": "Pólipo adenomatoso del colon",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14747,7 +15089,7 @@ export const cie10Data = [
     "grupo": "Pólipo o tumor benigno del recto",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14756,7 +15098,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del estómago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14765,7 +15107,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del hígado",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14774,7 +15116,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del páncreas endocrino",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14783,7 +15125,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del bronquio y pulmón",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14792,7 +15134,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del hueso y cartílago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14801,7 +15143,7 @@ export const cie10Data = [
     "grupo": "Lipoma de piel y tejido subcutáneo del tronco",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14810,7 +15152,7 @@ export const cie10Data = [
     "grupo": "Lipoma",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14819,7 +15161,7 @@ export const cie10Data = [
     "grupo": "Hemangioma de cualquier sitio",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14828,7 +15170,7 @@ export const cie10Data = [
     "grupo": "Linfangioma de cualquier sitio",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14837,7 +15179,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del tejido conjuntivo",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14846,7 +15188,7 @@ export const cie10Data = [
     "grupo": "Nevo melanocítico",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14855,7 +15197,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la piel",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14864,7 +15206,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la mama",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14873,7 +15215,7 @@ export const cie10Data = [
     "grupo": "Leiomioma intramural del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14882,7 +15224,7 @@ export const cie10Data = [
     "grupo": "Leiomioma del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14891,7 +15233,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del útero",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14900,7 +15242,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del ovario",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14909,7 +15251,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la próstata",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14918,7 +15260,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del riñón",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14927,7 +15269,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de las meninges",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14936,7 +15278,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno del encéfalo",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14945,7 +15287,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la glándula tiroides",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14954,7 +15296,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la glándula suprarrenal",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14963,7 +15305,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de la hipófisis",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14972,7 +15314,7 @@ export const cie10Data = [
     "grupo": "Tumor benigno de los ganglios linfáticos",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "benigno",
     "severidad": ""
   },
   {
@@ -14981,7 +15323,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto del estómago",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -14990,7 +15332,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto del colon",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -14999,7 +15341,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto del recto",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15008,7 +15350,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto del ovario",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15017,7 +15359,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto de la vejiga",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15026,7 +15368,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto del encéfalo",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15035,7 +15377,7 @@ export const cie10Data = [
     "grupo": "Tumor de comportamiento incierto de la",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15044,7 +15386,7 @@ export const cie10Data = [
     "grupo": "Policitemia vera",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15053,7 +15395,7 @@ export const cie10Data = [
     "grupo": "Síndrome mielodisplásico",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15062,7 +15404,7 @@ export const cie10Data = [
     "grupo": "Enfermedad mieloproliferativa",
     "sistema": "Oncología",
     "tipo": "crónico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15075,12 +15417,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "D48.6",
+    "descripcion": "Tumor de comportamiento incierto de la mama",
+    "grupo": "Tumor de comportamiento incierto de la mama",
+    "sistema": "Oncología",
+    "tipo": "neoplásico",
+    "subtipo": "incierto",
+    "severidad": ""
+  },
+  {
     "codigo": "D48.9",
     "descripcion": "Tumor de comportamiento incierto, no especificado",
     "grupo": "Tumor de comportamiento incierto",
     "sistema": "Oncología",
     "tipo": "neoplásico",
-    "subtipo": "neoplásico",
+    "subtipo": "incierto",
     "severidad": ""
   },
   {
@@ -15089,7 +15440,7 @@ export const cie10Data = [
     "grupo": "Absceso del oído externo",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15098,7 +15449,7 @@ export const cie10Data = [
     "grupo": "Celulitis del oído externo",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15107,7 +15458,7 @@ export const cie10Data = [
     "grupo": "Otitis externa maligna",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15116,7 +15467,7 @@ export const cie10Data = [
     "grupo": "Otras otitis externas infecciosas",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15125,7 +15476,7 @@ export const cie10Data = [
     "grupo": "Colesteatoma del oído externo",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15134,7 +15485,7 @@ export const cie10Data = [
     "grupo": "Otitis externa",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15143,7 +15494,7 @@ export const cie10Data = [
     "grupo": "Otitis externa",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15152,7 +15503,7 @@ export const cie10Data = [
     "grupo": "Pericondritis del oído externo",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15161,7 +15512,7 @@ export const cie10Data = [
     "grupo": "Tapón de cerumen",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15170,7 +15521,7 @@ export const cie10Data = [
     "grupo": "Estenosis adquirida del conducto auditivo",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído externo",
     "severidad": ""
   },
   {
@@ -15179,7 +15530,7 @@ export const cie10Data = [
     "grupo": "Otitis media serosa",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15188,7 +15539,7 @@ export const cie10Data = [
     "grupo": "Otras otitis medias no supurativas",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15197,7 +15548,7 @@ export const cie10Data = [
     "grupo": "Otitis media serosa",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15206,7 +15557,7 @@ export const cie10Data = [
     "grupo": "Otitis media mucoide",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15215,7 +15566,7 @@ export const cie10Data = [
     "grupo": "Otitis media serosa NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15224,7 +15575,7 @@ export const cie10Data = [
     "grupo": "Otras otitis medias no supurativas",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15233,7 +15584,7 @@ export const cie10Data = [
     "grupo": "Otitis media no supurativa",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15242,7 +15593,7 @@ export const cie10Data = [
     "grupo": "Otitis media supurativa",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15251,7 +15602,7 @@ export const cie10Data = [
     "grupo": "Otitis media supurativa NE",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15260,7 +15611,7 @@ export const cie10Data = [
     "grupo": "Otitis media tubotimpánica supurativa",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15269,7 +15620,7 @@ export const cie10Data = [
     "grupo": "Otitis media supurativa aticoantral",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15278,7 +15629,7 @@ export const cie10Data = [
     "grupo": "Otras otitis medias supurativas",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15287,7 +15638,7 @@ export const cie10Data = [
     "grupo": "Otitis media supurativa NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15296,7 +15647,7 @@ export const cie10Data = [
     "grupo": "Otitis media supurativa",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15305,7 +15656,7 @@ export const cie10Data = [
     "grupo": "Otitis media",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15314,7 +15665,7 @@ export const cie10Data = [
     "grupo": "Salpingitis de la trompa de Eustaquio",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15323,7 +15674,7 @@ export const cie10Data = [
     "grupo": "Obstrucción de la trompa de Eustaquio",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15332,7 +15683,7 @@ export const cie10Data = [
     "grupo": "Mastoiditis",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15341,7 +15692,7 @@ export const cie10Data = [
     "grupo": "Mastoiditis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15350,7 +15701,7 @@ export const cie10Data = [
     "grupo": "Mastoiditis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15359,7 +15710,7 @@ export const cie10Data = [
     "grupo": "Colesteatoma del oído medio",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15368,7 +15719,7 @@ export const cie10Data = [
     "grupo": "Perforación central de la membrana timpánica",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15377,7 +15728,7 @@ export const cie10Data = [
     "grupo": "Perforación ática de la membrana timpánica",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15386,7 +15737,7 @@ export const cie10Data = [
     "grupo": "Perforación de la membrana timpánica",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15395,7 +15746,7 @@ export const cie10Data = [
     "grupo": "Miringitis",
     "sistema": "Otorrinolaringología",
     "tipo": "agudo",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15404,7 +15755,7 @@ export const cie10Data = [
     "grupo": "Miringitis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15413,7 +15764,7 @@ export const cie10Data = [
     "grupo": "Timpanoesclerosis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15422,7 +15773,7 @@ export const cie10Data = [
     "grupo": "Enfermedad adhesiva del oído medio",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15431,7 +15782,7 @@ export const cie10Data = [
     "grupo": "Discontinuidad y dislocación de los",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15440,7 +15791,7 @@ export const cie10Data = [
     "grupo": "Trastorno de oído medio y mastoideo NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído medio",
     "severidad": ""
   },
   {
@@ -15449,7 +15800,7 @@ export const cie10Data = [
     "grupo": "Otosclerosis que afecta la ventana oval",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15458,7 +15809,7 @@ export const cie10Data = [
     "grupo": "Otosclerosis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15467,7 +15818,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Ménière",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15476,7 +15827,7 @@ export const cie10Data = [
     "grupo": "Enfermedad de Ménière NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15485,7 +15836,7 @@ export const cie10Data = [
     "grupo": "Vértigo paroxístico posicional benigno",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15494,7 +15845,7 @@ export const cie10Data = [
     "grupo": "Neuronitis vestibular",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15503,7 +15854,7 @@ export const cie10Data = [
     "grupo": "Otros vértigos periféricos",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15512,7 +15863,7 @@ export const cie10Data = [
     "grupo": "Vértigo posicional paroxístico benigno",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15521,7 +15872,7 @@ export const cie10Data = [
     "grupo": "Vértigo de origen central",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15530,7 +15881,7 @@ export const cie10Data = [
     "grupo": "Trastorno de la función vestibular",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15539,7 +15890,7 @@ export const cie10Data = [
     "grupo": "Laberintitis",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15548,7 +15899,7 @@ export const cie10Data = [
     "grupo": "Laberintitis NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15557,7 +15908,7 @@ export const cie10Data = [
     "grupo": "Fístula del laberinto",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15566,7 +15917,7 @@ export const cie10Data = [
     "grupo": "Efectos del ruido sobre el oído interno",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "oído interno",
     "severidad": ""
   },
   {
@@ -15575,7 +15926,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia conductiva bilateral",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15584,7 +15935,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia conductiva unilateral con audición",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15593,7 +15944,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia conductiva",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15602,7 +15953,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia neurosensorial bilateral",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15611,7 +15962,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia neurosensorial unilateral",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15620,7 +15971,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia neurosensorial",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15629,7 +15980,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia mixta conductiva y neurosensorial",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15638,7 +15989,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia mixta conductiva y neurosensorial",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15647,7 +15998,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia ototóxica",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15656,7 +16007,7 @@ export const cie10Data = [
     "grupo": "Presbiacusia",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15665,7 +16016,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia súbita idiopática",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15674,7 +16025,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15683,7 +16034,7 @@ export const cie10Data = [
     "grupo": "Hipoacusia NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15692,7 +16043,7 @@ export const cie10Data = [
     "grupo": "Otalgia",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15701,7 +16052,7 @@ export const cie10Data = [
     "grupo": "Otalgia NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15710,7 +16061,7 @@ export const cie10Data = [
     "grupo": "Otorrea",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15719,7 +16070,7 @@ export const cie10Data = [
     "grupo": "Otorragia",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15728,7 +16079,7 @@ export const cie10Data = [
     "grupo": "Trastornos degenerativos y vasculares del oído",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15737,7 +16088,7 @@ export const cie10Data = [
     "grupo": "Tinnitus",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15746,7 +16097,7 @@ export const cie10Data = [
     "grupo": "Tinnitus NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15755,7 +16106,7 @@ export const cie10Data = [
     "grupo": "Otras percepciones auditivas anormales",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15764,7 +16115,7 @@ export const cie10Data = [
     "grupo": "Trastorno del oído",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "otológico",
+    "subtipo": "audición",
     "severidad": ""
   },
   {
@@ -15773,7 +16124,16 @@ export const cie10Data = [
     "grupo": "Colesteatoma de la cavidad posmastoidectomía",
     "sistema": "Otorrinolaringología",
     "tipo": "recurrente",
-    "subtipo": "otológico",
+    "subtipo": "audición",
+    "severidad": ""
+  },
+  {
+    "codigo": "J33.0",
+    "descripcion": "Pólipo de la cavidad nasal",
+    "grupo": "Pólipo de la cavidad nasal",
+    "sistema": "Otorrinolaringología",
+    "tipo": "crónico",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -15782,7 +16142,16 @@ export const cie10Data = [
     "grupo": "Parálisis de cuerdas vocales NE",
     "sistema": "Otorrinolaringología",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
+    "severidad": ""
+  },
+  {
+    "codigo": "B01.2",
+    "descripcion": "Neumonía debida a varicela",
+    "grupo": "Neumonía debida a varicela",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "viral",
     "severidad": ""
   },
   {
@@ -15791,7 +16160,25 @@ export const cie10Data = [
     "grupo": "Exantema súbito",
     "sistema": "Pediatría",
     "tipo": "agudo",
-    "subtipo": "infeccioso",
+    "subtipo": "exantemático",
+    "severidad": ""
+  },
+  {
+    "codigo": "B08.3",
+    "descripcion": "Eritema infeccioso",
+    "grupo": "Eritema infeccioso",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "exantemático",
+    "severidad": ""
+  },
+  {
+    "codigo": "B08.5",
+    "descripcion": "Faringitis vesicular enterovírica",
+    "grupo": "Faringitis vesicular enterovírica",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "exantemático",
     "severidad": ""
   },
   {
@@ -15800,7 +16187,34 @@ export const cie10Data = [
     "grupo": "Retardo del desarrollo por desnutrición",
     "sistema": "Pediatría",
     "tipo": "crónico",
-    "subtipo": "metabólico",
+    "subtipo": "desnutrición",
+    "severidad": ""
+  },
+  {
+    "codigo": "E54",
+    "descripcion": "Deficiencia de ácido ascórbico",
+    "grupo": "Deficiencia de ácido ascórbico",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "carencial",
+    "severidad": ""
+  },
+  {
+    "codigo": "F91.9",
+    "descripcion": "Trastorno de la conducta no especificado",
+    "grupo": "Trastorno de la conducta",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "infantil",
+    "severidad": ""
+  },
+  {
+    "codigo": "J21.8",
+    "descripcion": "Bronquiolitis aguda debida a otros virus especificados",
+    "grupo": "Bronquiolitis debida a otros virus",
+    "sistema": "Pediatría",
+    "tipo": "agudo",
+    "subtipo": "viral",
     "severidad": ""
   },
   {
@@ -15809,7 +16223,7 @@ export const cie10Data = [
     "grupo": "Erupción dentaria tardía NE",
     "sistema": "Pediatría",
     "tipo": "crónico",
-    "subtipo": "digestivo",
+    "subtipo": "oral",
     "severidad": ""
   },
   {
@@ -15822,12 +16236,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "L21.1",
+    "descripcion": "Dermatitis seborreica infantil",
+    "grupo": "Dermatitis seborreica infantil",
+    "sistema": "Pediatría",
+    "tipo": "crónico",
+    "subtipo": "dermatitis",
+    "severidad": ""
+  },
+  {
     "codigo": "P07.10",
     "descripcion": "Muy bajo peso al nacer NE — <1,500g",
     "grupo": "Muy bajo peso al nacer NE",
     "sistema": "Pediatría",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15836,7 +16259,7 @@ export const cie10Data = [
     "grupo": "Pretérmino NE",
     "sistema": "Pediatría",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15845,7 +16268,7 @@ export const cie10Data = [
     "grupo": "Insuficiencia respiratoria del recién nacido",
     "sistema": "Pediatría",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -15863,7 +16286,7 @@ export const cie10Data = [
     "grupo": "Retraso del desarrollo psicomotor NE",
     "sistema": "Pediatría",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -15872,7 +16295,7 @@ export const cie10Data = [
     "grupo": "Fallo de medro en lactante",
     "sistema": "Pediatría",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -15881,7 +16304,7 @@ export const cie10Data = [
     "grupo": "Visita de salud del lactante",
     "sistema": "Pediatría",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -15890,7 +16313,7 @@ export const cie10Data = [
     "grupo": "Control de salud del niño",
     "sistema": "Pediatría",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -15899,7 +16322,7 @@ export const cie10Data = [
     "grupo": "Examen durante el período de crecimiento",
     "sistema": "Pediatría",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -15908,7 +16331,7 @@ export const cie10Data = [
     "grupo": "Examen del estado de desarrollo del",
     "sistema": "Pediatría",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -15917,7 +16340,7 @@ export const cie10Data = [
     "grupo": "Inmunización / vacunación",
     "sistema": "Pediatría",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "exposición",
     "severidad": ""
   },
   {
@@ -15962,7 +16385,7 @@ export const cie10Data = [
     "grupo": "Bajo peso para la edad gestacional",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15971,7 +16394,7 @@ export const cie10Data = [
     "grupo": "Pequeño para la edad gestacional",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15980,7 +16403,7 @@ export const cie10Data = [
     "grupo": "Retardo del crecimiento fetal",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15989,7 +16412,7 @@ export const cie10Data = [
     "grupo": "Peso extremadamente bajo al nacer",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -15998,7 +16421,7 @@ export const cie10Data = [
     "grupo": "Otro peso bajo al nacer",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16007,7 +16430,7 @@ export const cie10Data = [
     "grupo": "Inmaturidad extrema",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16016,7 +16439,7 @@ export const cie10Data = [
     "grupo": "Otros recién nacidos pretérmino",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16025,7 +16448,7 @@ export const cie10Data = [
     "grupo": "Recién nacido excepcionalmente grande",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16034,7 +16457,7 @@ export const cie10Data = [
     "grupo": "RN grande para la edad gestacional",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16043,7 +16466,7 @@ export const cie10Data = [
     "grupo": "Recién nacido postérmino sin sobrepeso para",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "crecimiento",
     "severidad": ""
   },
   {
@@ -16079,7 +16502,7 @@ export const cie10Data = [
     "grupo": "Hipoxia intrauterina",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16088,7 +16511,7 @@ export const cie10Data = [
     "grupo": "Asfixia del nacimiento",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": "grave"
   },
   {
@@ -16097,7 +16520,7 @@ export const cie10Data = [
     "grupo": "Asfixia del nacimiento y",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": "moderado"
   },
   {
@@ -16106,7 +16529,7 @@ export const cie10Data = [
     "grupo": "Asfixia del nacimiento",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16115,7 +16538,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dificultad respiratoria del RN",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16124,7 +16547,7 @@ export const cie10Data = [
     "grupo": "Taquipnea transitoria del recién nacido",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16133,7 +16556,7 @@ export const cie10Data = [
     "grupo": "Neumonía congénita",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16142,7 +16565,7 @@ export const cie10Data = [
     "grupo": "Aspiración neonatal de meconio",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16151,7 +16574,7 @@ export const cie10Data = [
     "grupo": "Neumotórax originado en el periodo perinatal",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16160,7 +16583,7 @@ export const cie10Data = [
     "grupo": "Displasia broncopulmonar originada en el",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16169,7 +16592,7 @@ export const cie10Data = [
     "grupo": "Apnea del recién nacido",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16178,7 +16601,7 @@ export const cie10Data = [
     "grupo": "Hipertensión pulmonar persistente del recién",
     "sistema": "Perinatal",
     "tipo": "crónico",
-    "subtipo": "perinatal",
+    "subtipo": "respiratorio",
     "severidad": ""
   },
   {
@@ -16187,7 +16610,7 @@ export const cie10Data = [
     "grupo": "Infección citomegalovírica congénita",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "infeccioso",
     "severidad": ""
   },
   {
@@ -16214,7 +16637,7 @@ export const cie10Data = [
     "grupo": "Toxoplasmosis congénita",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "infeccioso",
     "severidad": ""
   },
   {
@@ -16223,7 +16646,7 @@ export const cie10Data = [
     "grupo": "Onfalitis del recién nacido",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "infeccioso",
     "severidad": ""
   },
   {
@@ -16232,7 +16655,7 @@ export const cie10Data = [
     "grupo": "Conjuntivitis y dacriocistitis neonatales",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "infeccioso",
     "severidad": ""
   },
   {
@@ -16259,7 +16682,7 @@ export const cie10Data = [
     "grupo": "Isoinmunización Rh del feto y del recién",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16268,7 +16691,7 @@ export const cie10Data = [
     "grupo": "Isoinmunización ABO del feto y del recién",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16277,7 +16700,7 @@ export const cie10Data = [
     "grupo": "Kernícterus",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16286,7 +16709,7 @@ export const cie10Data = [
     "grupo": "Ictericia neonatal asociada con el parto",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16295,7 +16718,7 @@ export const cie10Data = [
     "grupo": "Ictericia neonatal",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16304,7 +16727,7 @@ export const cie10Data = [
     "grupo": "Anemia de la prematuridad",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "hematológico",
     "severidad": ""
   },
   {
@@ -16313,7 +16736,7 @@ export const cie10Data = [
     "grupo": "Síndrome del RN de madre con diabetes",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -16322,7 +16745,7 @@ export const cie10Data = [
     "grupo": "Síndrome del recién nacido de madre diabética",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -16331,7 +16754,7 @@ export const cie10Data = [
     "grupo": "Hipoglucemia neonatal",
     "sistema": "Perinatal",
     "tipo": "congénito",
-    "subtipo": "perinatal",
+    "subtipo": "endocrino",
     "severidad": ""
   },
   {
@@ -16371,12 +16794,21 @@ export const cie10Data = [
     "severidad": ""
   },
   {
+    "codigo": "P92.9",
+    "descripcion": "Problema de alimentación del recién nacido no especificado",
+    "grupo": "Problema de alimentación del recién nacido",
+    "sistema": "Perinatal",
+    "tipo": "congénito",
+    "subtipo": "perinatal",
+    "severidad": ""
+  },
+  {
     "codigo": "Z00.00",
     "descripcion": "Examen médico general adulto sin hallazgos",
     "grupo": "Examen médico general adulto sin hallazgos",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16385,7 +16817,7 @@ export const cie10Data = [
     "grupo": "Examen médico general adulto con hallazgos",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16394,7 +16826,7 @@ export const cie10Data = [
     "grupo": "Examen de ojos y de la visión",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16403,7 +16835,7 @@ export const cie10Data = [
     "grupo": "Examen de oídos y de la audición",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16412,7 +16844,7 @@ export const cie10Data = [
     "grupo": "Examen de seguimiento consecutivo a",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16421,7 +16853,7 @@ export const cie10Data = [
     "grupo": "Cribado de infecciones de transmisión sexual",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16430,7 +16862,7 @@ export const cie10Data = [
     "grupo": "Cribado de VIH",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "viral",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -16439,7 +16871,16 @@ export const cie10Data = [
     "grupo": "Cribado de tuberculosis",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "tuberculosis",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z12.1",
+    "descripcion": "Examen de pesquisa para tumor del tracto intestinal",
+    "grupo": "Examen de pesquisa para tumor del tracto",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16448,7 +16889,7 @@ export const cie10Data = [
     "grupo": "Cribado de cáncer de colon y recto",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16457,7 +16898,7 @@ export const cie10Data = [
     "grupo": "Cribado de cáncer de mama",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16466,7 +16907,7 @@ export const cie10Data = [
     "grupo": "Cribado de cáncer de cuello uterino",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16475,7 +16916,7 @@ export const cie10Data = [
     "grupo": "Cribado de cáncer de próstata",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16484,7 +16925,7 @@ export const cie10Data = [
     "grupo": "Cribado de diabetes mellitus",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16493,7 +16934,7 @@ export const cie10Data = [
     "grupo": "Cribado de lipidemia",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16502,7 +16943,7 @@ export const cie10Data = [
     "grupo": "Cribado de enfermedad cardiovascular",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
     "severidad": ""
   },
   {
@@ -16511,7 +16952,16 @@ export const cie10Data = [
     "grupo": "Cribado",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "examen",
+    "severidad": ""
+  },
+  {
+    "codigo": "Z27.9",
+    "descripcion": "Necesidad de inmunización contra combinaciones no especificadas",
+    "grupo": "Necesidad de inmunización contra combinaciones",
+    "sistema": "Prevención",
+    "tipo": "prevención",
+    "subtipo": "vih",
     "severidad": ""
   },
   {
@@ -16556,7 +17006,7 @@ export const cie10Data = [
     "grupo": "Antecedente personal de tabaquismo",
     "sistema": "Prevención",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "antecedente",
     "severidad": ""
   },
   {
@@ -16565,7 +17015,7 @@ export const cie10Data = [
     "grupo": "Atención de vendajes y suturas",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16574,7 +17024,7 @@ export const cie10Data = [
     "grupo": "Sesión de radioterapia",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16583,7 +17033,7 @@ export const cie10Data = [
     "grupo": "Sesión de quimioterapia antineoplásica",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16592,7 +17042,7 @@ export const cie10Data = [
     "grupo": "Cuidados paliativos",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16601,7 +17051,7 @@ export const cie10Data = [
     "grupo": "Manejo del dolor",
     "sistema": "Procedimientos",
     "tipo": "crónico",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16610,7 +17060,7 @@ export const cie10Data = [
     "grupo": "Otro procedimiento de atención de la salud",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
+    "subtipo": "seguimiento",
     "severidad": ""
   },
   {
@@ -16619,25 +17069,7 @@ export const cie10Data = [
     "grupo": "Presencia de prótesis de articulación de",
     "sistema": "Procedimientos",
     "tipo": "prevención",
-    "subtipo": "preventivo",
-    "severidad": ""
-  },
-  {
-    "codigo": "G47.3",
-    "descripcion": "Apnea del sueño",
-    "grupo": "Apnea del sueño",
-    "sistema": "Respiratorio",
-    "tipo": "crónico",
-    "subtipo": "neurológico",
-    "severidad": ""
-  },
-  {
-    "codigo": "G47.33",
-    "descripcion": "Apnea obstructiva del sueño (adultos)",
-    "grupo": "Apnea obstructiva del sueño",
-    "sistema": "Respiratorio",
-    "tipo": "crónico",
-    "subtipo": "obstructivo",
+    "subtipo": "antecedente",
     "severidad": ""
   },
   {
@@ -16646,7 +17078,7 @@ export const cie10Data = [
     "grupo": "Rinofaringitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16655,7 +17087,7 @@ export const cie10Data = [
     "grupo": "Sinusitis maxilar",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16664,7 +17096,7 @@ export const cie10Data = [
     "grupo": "Sinusitis maxilar",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16673,7 +17105,7 @@ export const cie10Data = [
     "grupo": "Sinusitis frontal",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16682,7 +17114,7 @@ export const cie10Data = [
     "grupo": "Sinusitis frontal",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16691,7 +17123,7 @@ export const cie10Data = [
     "grupo": "Sinusitis etmoidal",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16700,7 +17132,7 @@ export const cie10Data = [
     "grupo": "Sinusitis esfenoidal",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16709,7 +17141,7 @@ export const cie10Data = [
     "grupo": "Pansinusitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16718,7 +17150,7 @@ export const cie10Data = [
     "grupo": "Pansinusitis NE",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16727,7 +17159,7 @@ export const cie10Data = [
     "grupo": "Sinusitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16745,7 +17177,7 @@ export const cie10Data = [
     "grupo": "Faringitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16772,7 +17204,7 @@ export const cie10Data = [
     "grupo": "Amigdalitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16781,7 +17213,7 @@ export const cie10Data = [
     "grupo": "Laringitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16790,7 +17222,7 @@ export const cie10Data = [
     "grupo": "Traqueítis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16799,7 +17231,7 @@ export const cie10Data = [
     "grupo": "Laringotraqueítis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16817,7 +17249,7 @@ export const cie10Data = [
     "grupo": "Epiglotitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16826,7 +17258,7 @@ export const cie10Data = [
     "grupo": "Laringofaringitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16835,7 +17267,7 @@ export const cie10Data = [
     "grupo": "Otras infecciones de las vías respiratorias",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16844,7 +17276,7 @@ export const cie10Data = [
     "grupo": "Infección de vías respiratorias superiores",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "vía aérea alta",
     "severidad": ""
   },
   {
@@ -16853,7 +17285,7 @@ export const cie10Data = [
     "grupo": "Influenza por virus de influenza zoonótica",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16862,7 +17294,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16871,7 +17303,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16880,7 +17312,7 @@ export const cie10Data = [
     "grupo": "Influenza con otras manifestaciones",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16889,7 +17321,7 @@ export const cie10Data = [
     "grupo": "Influenza con neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16898,7 +17330,7 @@ export const cie10Data = [
     "grupo": "Influenza con manifestaciones respiratorias",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16925,7 +17357,7 @@ export const cie10Data = [
     "grupo": "Neumonía por virus parainfluenza",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16961,7 +17393,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Streptococcus pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -16970,7 +17402,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Haemophilus influenzae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "viral",
+    "subtipo": "influenza",
     "severidad": ""
   },
   {
@@ -16979,7 +17411,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Klebsiella pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -16988,7 +17420,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Pseudomonas",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17024,7 +17456,7 @@ export const cie10Data = [
     "grupo": "Neumonía por Mycoplasma pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -17042,7 +17474,7 @@ export const cie10Data = [
     "grupo": "Neumonía por clamidias",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17051,7 +17483,7 @@ export const cie10Data = [
     "grupo": "Bronconeumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17060,7 +17492,16 @@ export const cie10Data = [
     "grupo": "Neumonía lobar",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
+    "severidad": ""
+  },
+  {
+    "codigo": "J18.2",
+    "descripcion": "Neumonía hipostática no especificada",
+    "grupo": "Neumonía hipostática",
+    "sistema": "Respiratorio",
+    "tipo": "agudo",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17069,7 +17510,7 @@ export const cie10Data = [
     "grupo": "Neumonía",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "neumonía",
     "severidad": ""
   },
   {
@@ -17078,7 +17519,7 @@ export const cie10Data = [
     "grupo": "Bronquitis por Mycoplasma pneumoniae",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bacteriano",
     "severidad": ""
   },
   {
@@ -17096,7 +17537,7 @@ export const cie10Data = [
     "grupo": "Bronquitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquial",
     "severidad": ""
   },
   {
@@ -17114,7 +17555,7 @@ export const cie10Data = [
     "grupo": "Bronquiolitis",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquial",
     "severidad": ""
   },
   {
@@ -17123,7 +17564,7 @@ export const cie10Data = [
     "grupo": "Infección de vías respiratorias inferiores",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquial",
     "severidad": ""
   },
   {
@@ -17139,6 +17580,15 @@ export const cie10Data = [
     "codigo": "J30.1",
     "descripcion": "Rinitis alérgica por polen",
     "grupo": "Rinitis alérgica por polen",
+    "sistema": "Respiratorio",
+    "tipo": "crónico",
+    "subtipo": "alérgico",
+    "severidad": ""
+  },
+  {
+    "codigo": "J30.2",
+    "descripcion": "Otra rinitis alérgica estacional",
+    "grupo": "Otra rinitis alérgica estacional",
     "sistema": "Respiratorio",
     "tipo": "crónico",
     "subtipo": "alérgico",
@@ -17177,7 +17627,7 @@ export const cie10Data = [
     "grupo": "Rinitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17186,7 +17636,7 @@ export const cie10Data = [
     "grupo": "Nasofaringitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17195,7 +17645,7 @@ export const cie10Data = [
     "grupo": "Faringitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17204,7 +17654,7 @@ export const cie10Data = [
     "grupo": "Sinusitis maxilar",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17213,7 +17663,7 @@ export const cie10Data = [
     "grupo": "Sinusitis frontal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17222,7 +17672,7 @@ export const cie10Data = [
     "grupo": "Sinusitis etmoidal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17231,7 +17681,7 @@ export const cie10Data = [
     "grupo": "Sinusitis esfenoidal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17240,7 +17690,7 @@ export const cie10Data = [
     "grupo": "Poliposis nasal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17249,7 +17699,7 @@ export const cie10Data = [
     "grupo": "Sinusitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17258,7 +17708,7 @@ export const cie10Data = [
     "grupo": "Pólipo nasal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17267,7 +17717,7 @@ export const cie10Data = [
     "grupo": "Desviación del tabique nasal",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17276,7 +17726,7 @@ export const cie10Data = [
     "grupo": "Hipertrofia de cornetes nasales",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "rinosinusal",
     "severidad": ""
   },
   {
@@ -17285,7 +17735,7 @@ export const cie10Data = [
     "grupo": "Amigdalitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17294,7 +17744,7 @@ export const cie10Data = [
     "grupo": "Amigdalitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17303,7 +17753,7 @@ export const cie10Data = [
     "grupo": "Hipertrofia de las amígdalas",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17312,7 +17762,7 @@ export const cie10Data = [
     "grupo": "Hipertrofia de las adenoides",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17321,7 +17771,7 @@ export const cie10Data = [
     "grupo": "Hipertrofia de amígdalas con hipertrofia de",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17330,7 +17780,7 @@ export const cie10Data = [
     "grupo": "Absceso periamigdalino",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17339,7 +17789,7 @@ export const cie10Data = [
     "grupo": "Laringitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17348,7 +17798,7 @@ export const cie10Data = [
     "grupo": "Otras enfermedades de cuerdas vocales",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "faríngeo",
     "severidad": ""
   },
   {
@@ -17357,7 +17807,7 @@ export const cie10Data = [
     "grupo": "Bronquitis como o",
     "sistema": "Respiratorio",
     "tipo": "agudo sobre crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquitis crónica",
     "severidad": ""
   },
   {
@@ -17366,7 +17816,7 @@ export const cie10Data = [
     "grupo": "Bronquitis simple",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquitis crónica",
     "severidad": ""
   },
   {
@@ -17375,7 +17825,7 @@ export const cie10Data = [
     "grupo": "Bronquitis mucopurulenta",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquitis crónica",
     "severidad": ""
   },
   {
@@ -17384,7 +17834,7 @@ export const cie10Data = [
     "grupo": "Bronquitis mixta simple y mucopurulenta",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquitis crónica",
     "severidad": ""
   },
   {
@@ -17393,7 +17843,7 @@ export const cie10Data = [
     "grupo": "Bronquitis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquitis crónica",
     "severidad": ""
   },
   {
@@ -17402,7 +17852,7 @@ export const cie10Data = [
     "grupo": "Enfisema pulmonar",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "enfisema",
     "severidad": ""
   },
   {
@@ -17411,7 +17861,7 @@ export const cie10Data = [
     "grupo": "EPOC con infección respiratoria de vías",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "epoc",
     "severidad": ""
   },
   {
@@ -17420,7 +17870,7 @@ export const cie10Data = [
     "grupo": "EPOC con exacerbación",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "epoc",
     "severidad": ""
   },
   {
@@ -17429,7 +17879,7 @@ export const cie10Data = [
     "grupo": "Otra enfermedad pulmonar obstructiva",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "obstructivo",
+    "subtipo": "epoc",
     "severidad": ""
   },
   {
@@ -17438,7 +17888,7 @@ export const cie10Data = [
     "grupo": "EPOC",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "epoc",
     "severidad": ""
   },
   {
@@ -17456,7 +17906,7 @@ export const cie10Data = [
     "grupo": "Asma no alérgica",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "alérgico",
+    "subtipo": "asmático",
     "severidad": ""
   },
   {
@@ -17465,7 +17915,7 @@ export const cie10Data = [
     "grupo": "Asma intermitente no complicada",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": "leve"
   },
   {
@@ -17474,7 +17924,7 @@ export const cie10Data = [
     "grupo": "Asma persistente no complicada",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": "leve"
   },
   {
@@ -17483,7 +17933,7 @@ export const cie10Data = [
     "grupo": "Asma persistente no complicada",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": "moderado"
   },
   {
@@ -17492,7 +17942,7 @@ export const cie10Data = [
     "grupo": "Asma persistente no complicada",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": "grave"
   },
   {
@@ -17501,7 +17951,7 @@ export const cie10Data = [
     "grupo": "Asma mixta",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": ""
   },
   {
@@ -17510,7 +17960,7 @@ export const cie10Data = [
     "grupo": "Asma",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": ""
   },
   {
@@ -17519,8 +17969,8 @@ export const cie10Data = [
     "grupo": "Asma NE sin complicaciones",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "sin complicación",
-    "severidad": ""
+    "subtipo": "asmático",
+    "severidad": "sin complicación"
   },
   {
     "codigo": "J46",
@@ -17528,7 +17978,7 @@ export const cie10Data = [
     "grupo": "Estado asmático",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "asmático",
     "severidad": "grave"
   },
   {
@@ -17537,7 +17987,7 @@ export const cie10Data = [
     "grupo": "Bronquiectasias",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquiectasia",
     "severidad": ""
   },
   {
@@ -17546,7 +17996,7 @@ export const cie10Data = [
     "grupo": "Bronquiectasias con infección",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "bronquiectasia",
     "severidad": ""
   },
   {
@@ -17555,7 +18005,7 @@ export const cie10Data = [
     "grupo": "Neumoconiosis de los mineros del carbón",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17564,7 +18014,7 @@ export const cie10Data = [
     "grupo": "Neumoconiosis por asbesto",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17573,7 +18023,7 @@ export const cie10Data = [
     "grupo": "Silicosis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17582,7 +18032,7 @@ export const cie10Data = [
     "grupo": "Neumoconiosis",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17591,7 +18041,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por hipersensibilidad",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17600,7 +18050,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por inhalación de gases",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17609,7 +18059,7 @@ export const cie10Data = [
     "grupo": "Neumonía aspirativa por alimento o vómito",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17618,7 +18068,7 @@ export const cie10Data = [
     "grupo": "Neumonitis por radiación",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17627,7 +18077,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dificultad respiratoria",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17636,7 +18086,7 @@ export const cie10Data = [
     "grupo": "Edema pulmonar",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17645,7 +18095,7 @@ export const cie10Data = [
     "grupo": "Edema pulmonar cardiogénico",
     "sistema": "Respiratorio",
     "tipo": "agudo",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17654,7 +18104,7 @@ export const cie10Data = [
     "grupo": "Fibrosis pulmonar intersticial",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17663,7 +18113,7 @@ export const cie10Data = [
     "grupo": "Enfermedad pulmonar intersticial",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "intersticial",
     "severidad": ""
   },
   {
@@ -17690,7 +18140,7 @@ export const cie10Data = [
     "grupo": "Derrame pleural no clasificado en otra parte",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "pleural",
     "severidad": ""
   },
   {
@@ -17699,7 +18149,7 @@ export const cie10Data = [
     "grupo": "Neumotórax espontáneo a tensión",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "pleural",
     "severidad": ""
   },
   {
@@ -17708,7 +18158,7 @@ export const cie10Data = [
     "grupo": "Neumotórax espontáneo",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "pleural",
     "severidad": ""
   },
   {
@@ -17717,7 +18167,7 @@ export const cie10Data = [
     "grupo": "Neumotórax",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "pleural",
     "severidad": ""
   },
   {
@@ -17726,7 +18176,7 @@ export const cie10Data = [
     "grupo": "Hemotórax",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "respiratorio",
+    "subtipo": "pleural",
     "severidad": ""
   },
   {
@@ -17771,7 +18221,7 @@ export const cie10Data = [
     "grupo": "Condición post COVID-19",
     "sistema": "Respiratorio",
     "tipo": "crónico",
-    "subtipo": "viral",
+    "subtipo": "covid",
     "severidad": ""
   },
   {
@@ -17780,7 +18230,7 @@ export const cie10Data = [
     "grupo": "Demencia en Alzheimer de inicio temprano",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17789,7 +18239,7 @@ export const cie10Data = [
     "grupo": "Demencia en Alzheimer de inicio tardío",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17798,7 +18248,7 @@ export const cie10Data = [
     "grupo": "Demencia en Alzheimer atípica o mixta",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17807,7 +18257,7 @@ export const cie10Data = [
     "grupo": "Demencia vascular de inicio",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17816,7 +18266,7 @@ export const cie10Data = [
     "grupo": "Demencia vascular por infartos múltiples",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17825,7 +18275,7 @@ export const cie10Data = [
     "grupo": "Demencia vascular mixta cortical y subcortical",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17834,7 +18284,7 @@ export const cie10Data = [
     "grupo": "Demencia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17843,7 +18293,7 @@ export const cie10Data = [
     "grupo": "Síndrome amnésico orgánico no inducido por",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17852,7 +18302,7 @@ export const cie10Data = [
     "grupo": "Delirium no superpuesto a demencia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17861,7 +18311,7 @@ export const cie10Data = [
     "grupo": "Delirium superpuesto a demencia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17870,7 +18320,7 @@ export const cie10Data = [
     "grupo": "Alucinosis orgánica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17879,7 +18329,7 @@ export const cie10Data = [
     "grupo": "Trastorno delirante orgánico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17888,7 +18338,7 @@ export const cie10Data = [
     "grupo": "Trastornos del humor orgánicos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17897,7 +18347,7 @@ export const cie10Data = [
     "grupo": "Depresión debida a enfermedad médica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17906,7 +18356,7 @@ export const cie10Data = [
     "grupo": "Trastorno orgánico de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17915,7 +18365,7 @@ export const cie10Data = [
     "grupo": "Trastorno mental orgánico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "orgánico",
     "severidad": ""
   },
   {
@@ -17924,7 +18374,7 @@ export const cie10Data = [
     "grupo": "Intoxicación por alcohol",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17933,7 +18383,7 @@ export const cie10Data = [
     "grupo": "Uso nocivo de alcohol",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17942,7 +18392,7 @@ export const cie10Data = [
     "grupo": "Trastorno por uso de alcohol",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": "leve"
   },
   {
@@ -17951,7 +18401,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dependencia del alcohol",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17960,7 +18410,7 @@ export const cie10Data = [
     "grupo": "Dependencia al alcohol",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": "grave"
   },
   {
@@ -17969,7 +18419,7 @@ export const cie10Data = [
     "grupo": "Síndrome de abstinencia de alcohol",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17978,7 +18428,7 @@ export const cie10Data = [
     "grupo": "Abstinencia de alcohol con delirium",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17987,7 +18437,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dependencia de opioides",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -17996,7 +18446,7 @@ export const cie10Data = [
     "grupo": "Uso nocivo de cannabinoides",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18005,7 +18455,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dependencia de cannabinoides",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18014,7 +18464,7 @@ export const cie10Data = [
     "grupo": "Dependencia de sedantes o hipnóticos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18023,7 +18473,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dependencia de cocaína",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18032,7 +18482,7 @@ export const cie10Data = [
     "grupo": "Dependencia de otros estimulantes",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18041,7 +18491,7 @@ export const cie10Data = [
     "grupo": "Intoxicación por alucinógenos",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18050,7 +18500,7 @@ export const cie10Data = [
     "grupo": "Síndrome de dependencia de tabaco",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18059,7 +18509,7 @@ export const cie10Data = [
     "grupo": "Dependencia al tabaco NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18068,7 +18518,7 @@ export const cie10Data = [
     "grupo": "Trastorno por uso de otras sustancias",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": "leve"
   },
   {
@@ -18077,7 +18527,7 @@ export const cie10Data = [
     "grupo": "Dependencia de múltiples drogas",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "por sustancia",
     "severidad": ""
   },
   {
@@ -18086,7 +18536,7 @@ export const cie10Data = [
     "grupo": "Esquizofrenia paranoide",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18095,7 +18545,7 @@ export const cie10Data = [
     "grupo": "Esquizofrenia hebefrénica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18104,7 +18554,7 @@ export const cie10Data = [
     "grupo": "Esquizofrenia indiferenciada",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18113,7 +18563,7 @@ export const cie10Data = [
     "grupo": "Esquizofrenia NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18122,7 +18572,7 @@ export const cie10Data = [
     "grupo": "Trastorno esquizotípico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18131,7 +18581,7 @@ export const cie10Data = [
     "grupo": "Trastorno delirante persistente",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18140,7 +18590,7 @@ export const cie10Data = [
     "grupo": "Trastorno psicótico polimorfo",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18149,7 +18599,7 @@ export const cie10Data = [
     "grupo": "Trastorno esquizoafectivo de tipo maníaco",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18158,7 +18608,7 @@ export const cie10Data = [
     "grupo": "Trastorno esquizoafectivo de tipo depresivo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18167,7 +18617,7 @@ export const cie10Data = [
     "grupo": "Trastorno esquizoafectivo NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18176,7 +18626,7 @@ export const cie10Data = [
     "grupo": "Otros trastornos psicóticos no orgánicos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18185,7 +18635,7 @@ export const cie10Data = [
     "grupo": "Psicosis no orgánica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "psicótico",
     "severidad": ""
   },
   {
@@ -18194,7 +18644,7 @@ export const cie10Data = [
     "grupo": "Episodio maníaco con síntomas psicóticos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18203,7 +18653,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio hipomaníaco actual",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18212,7 +18662,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio maníaco sin",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18221,7 +18671,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio maníaco con",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18230,7 +18680,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio depresivo o",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "moderado"
   },
   {
@@ -18239,7 +18689,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio depresivo sin",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "grave"
   },
   {
@@ -18248,7 +18698,7 @@ export const cie10Data = [
     "grupo": "Trastorno bipolar episodio mixto actual",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18257,7 +18707,7 @@ export const cie10Data = [
     "grupo": "Trastorno afectivo bipolar NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18266,7 +18716,7 @@ export const cie10Data = [
     "grupo": "Episodio depresivo",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "leve"
   },
   {
@@ -18275,7 +18725,7 @@ export const cie10Data = [
     "grupo": "Episodio depresivo",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "moderado"
   },
   {
@@ -18284,7 +18734,7 @@ export const cie10Data = [
     "grupo": "Episodio depresivo sin síntomas psicóticos",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "grave"
   },
   {
@@ -18293,7 +18743,7 @@ export const cie10Data = [
     "grupo": "Episodio depresivo con síntomas psicóticos",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "grave"
   },
   {
@@ -18302,7 +18752,7 @@ export const cie10Data = [
     "grupo": "Episodio depresivo NE",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18311,7 +18761,7 @@ export const cie10Data = [
     "grupo": "Trastorno depresivo episodio actual",
     "sistema": "Salud Mental",
     "tipo": "recurrente",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "leve"
   },
   {
@@ -18320,7 +18770,7 @@ export const cie10Data = [
     "grupo": "Trastorno depresivo episodio",
     "sistema": "Salud Mental",
     "tipo": "recurrente",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "moderado"
   },
   {
@@ -18329,7 +18779,7 @@ export const cie10Data = [
     "grupo": "Depresivo episodio sin psicosis",
     "sistema": "Salud Mental",
     "tipo": "recurrente",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": "grave"
   },
   {
@@ -18338,7 +18788,7 @@ export const cie10Data = [
     "grupo": "Trastorno depresivo",
     "sistema": "Salud Mental",
     "tipo": "recurrente",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18347,7 +18797,7 @@ export const cie10Data = [
     "grupo": "Trastorno depresivo NE",
     "sistema": "Salud Mental",
     "tipo": "recurrente",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18356,7 +18806,7 @@ export const cie10Data = [
     "grupo": "Ciclotimia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18365,7 +18815,7 @@ export const cie10Data = [
     "grupo": "Distimia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "afectivo",
     "severidad": ""
   },
   {
@@ -18374,7 +18824,7 @@ export const cie10Data = [
     "grupo": "Agorafobia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18383,7 +18833,7 @@ export const cie10Data = [
     "grupo": "Fobias sociales",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18392,7 +18842,7 @@ export const cie10Data = [
     "grupo": "Fobia social NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18401,7 +18851,7 @@ export const cie10Data = [
     "grupo": "Fobias específicas o aisladas",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18410,7 +18860,7 @@ export const cie10Data = [
     "grupo": "Fobia específica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18419,7 +18869,7 @@ export const cie10Data = [
     "grupo": "Trastorno de pánico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18428,7 +18878,7 @@ export const cie10Data = [
     "grupo": "Trastorno de ansiedad generalizada",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18437,7 +18887,7 @@ export const cie10Data = [
     "grupo": "Trastorno mixto ansioso-depresivo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18446,7 +18896,16 @@ export const cie10Data = [
     "grupo": "Trastorno mixto ansioso-depresivo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
+    "severidad": ""
+  },
+  {
+    "codigo": "F41.8",
+    "descripcion": "Otros trastornos de ansiedad especificados",
+    "grupo": "Otros trastornos de ansiedad especificados",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18455,7 +18914,7 @@ export const cie10Data = [
     "grupo": "Trastorno de ansiedad NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18464,7 +18923,7 @@ export const cie10Data = [
     "grupo": "TOC con predominio de pensamientos obsesivos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18473,7 +18932,7 @@ export const cie10Data = [
     "grupo": "TOC con predominio de actos compulsivos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18482,7 +18941,7 @@ export const cie10Data = [
     "grupo": "TOC con mezcla de pensamientos y actos",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18491,7 +18950,7 @@ export const cie10Data = [
     "grupo": "Trastorno obsesivo-compulsivo NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18500,7 +18959,7 @@ export const cie10Data = [
     "grupo": "Reacción a estrés",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18509,7 +18968,7 @@ export const cie10Data = [
     "grupo": "Trastorno de estrés postraumático",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18518,7 +18977,7 @@ export const cie10Data = [
     "grupo": "Trastorno de estrés postraumático",
     "sistema": "Salud Mental",
     "tipo": "agudo",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18527,7 +18986,7 @@ export const cie10Data = [
     "grupo": "TEPT",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18536,7 +18995,7 @@ export const cie10Data = [
     "grupo": "Trastornos de adaptación",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18545,7 +19004,7 @@ export const cie10Data = [
     "grupo": "Trastorno de adaptación NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18554,7 +19013,7 @@ export const cie10Data = [
     "grupo": "Trastorno de adaptación con ansiedad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18563,7 +19022,7 @@ export const cie10Data = [
     "grupo": "Amnesia disociativa",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18572,7 +19031,7 @@ export const cie10Data = [
     "grupo": "Trastornos disociativos motores",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18581,7 +19040,7 @@ export const cie10Data = [
     "grupo": "Trastorno de somatización",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18590,7 +19049,7 @@ export const cie10Data = [
     "grupo": "Trastorno somatomorfo indiferenciado",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18599,7 +19058,7 @@ export const cie10Data = [
     "grupo": "Trastorno hipocondríaco",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18608,7 +19067,7 @@ export const cie10Data = [
     "grupo": "Trastorno de dolor somatomorfo persistente",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "ansioso",
     "severidad": ""
   },
   {
@@ -18617,7 +19076,7 @@ export const cie10Data = [
     "grupo": "Anorexia nerviosa",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "alimentario",
     "severidad": ""
   },
   {
@@ -18626,7 +19085,7 @@ export const cie10Data = [
     "grupo": "Bulimia nerviosa",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "alimentario",
     "severidad": ""
   },
   {
@@ -18635,7 +19094,7 @@ export const cie10Data = [
     "grupo": "Hiperfagia asociada a alteraciones",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "alimentario",
     "severidad": ""
   },
   {
@@ -18644,7 +19103,7 @@ export const cie10Data = [
     "grupo": "Trastorno de la conducta alimentaria NE",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "alimentario",
     "severidad": ""
   },
   {
@@ -18653,7 +19112,7 @@ export const cie10Data = [
     "grupo": "Insomnio no orgánico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -18662,7 +19121,7 @@ export const cie10Data = [
     "grupo": "Trastorno no orgánico del ciclo sueño-vigilia",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -18671,7 +19130,7 @@ export const cie10Data = [
     "grupo": "Sonambulismo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -18680,7 +19139,16 @@ export const cie10Data = [
     "grupo": "Pesadillas",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "sueño",
+    "severidad": ""
+  },
+  {
+    "codigo": "F51.9",
+    "descripcion": "Trastorno no orgánico del sueño no especificado",
+    "grupo": "Trastorno no orgánico del sueño",
+    "sistema": "Salud Mental",
+    "tipo": "crónico",
+    "subtipo": "sueño",
     "severidad": ""
   },
   {
@@ -18689,7 +19157,7 @@ export const cie10Data = [
     "grupo": "Trastorno paranoide de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18698,7 +19166,7 @@ export const cie10Data = [
     "grupo": "Trastorno esquizoide de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18707,7 +19175,7 @@ export const cie10Data = [
     "grupo": "Trastorno disocial de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18716,7 +19184,7 @@ export const cie10Data = [
     "grupo": "Trastorno de inestabilidad emocional de",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18725,7 +19193,7 @@ export const cie10Data = [
     "grupo": "Trastorno histriónico de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18734,7 +19202,7 @@ export const cie10Data = [
     "grupo": "Trastorno anancástico de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18743,7 +19211,7 @@ export const cie10Data = [
     "grupo": "Trastorno ansioso de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18752,7 +19220,7 @@ export const cie10Data = [
     "grupo": "Trastorno dependiente de la personalidad",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18761,7 +19229,7 @@ export const cie10Data = [
     "grupo": "Ludopatía",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "personalidad",
     "severidad": ""
   },
   {
@@ -18770,7 +19238,7 @@ export const cie10Data = [
     "grupo": "Retraso mental",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "intelectual",
     "severidad": "leve"
   },
   {
@@ -18779,7 +19247,7 @@ export const cie10Data = [
     "grupo": "Retraso mental",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "intelectual",
     "severidad": "moderado"
   },
   {
@@ -18788,7 +19256,7 @@ export const cie10Data = [
     "grupo": "Retraso mental",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "intelectual",
     "severidad": "grave"
   },
   {
@@ -18797,7 +19265,7 @@ export const cie10Data = [
     "grupo": "Retraso mental profundo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "intelectual",
     "severidad": ""
   },
   {
@@ -18806,7 +19274,7 @@ export const cie10Data = [
     "grupo": "Trastorno específico de la pronunciación",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18815,7 +19283,7 @@ export const cie10Data = [
     "grupo": "Trastorno del lenguaje expresivo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18824,7 +19292,7 @@ export const cie10Data = [
     "grupo": "Trastorno de la comprensión del lenguaje",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18833,7 +19301,7 @@ export const cie10Data = [
     "grupo": "Trastorno específico de la lectura",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18842,7 +19310,7 @@ export const cie10Data = [
     "grupo": "Trastorno específico de la ortografía",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18851,7 +19319,7 @@ export const cie10Data = [
     "grupo": "Trastorno específico del cálculo",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18860,7 +19328,7 @@ export const cie10Data = [
     "grupo": "Trastorno específico del desarrollo motor",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18869,7 +19337,7 @@ export const cie10Data = [
     "grupo": "Autismo infantil",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18878,7 +19346,7 @@ export const cie10Data = [
     "grupo": "Autismo atípico",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18887,7 +19355,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Rett",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18896,7 +19364,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Asperger",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "desarrollo",
     "severidad": ""
   },
   {
@@ -18905,7 +19373,7 @@ export const cie10Data = [
     "grupo": "Trastorno de la actividad y la atención",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18914,7 +19382,7 @@ export const cie10Data = [
     "grupo": "Trastorno hipercinético disocial",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18923,7 +19391,7 @@ export const cie10Data = [
     "grupo": "TDAH",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18932,7 +19400,7 @@ export const cie10Data = [
     "grupo": "TDAH",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18941,7 +19409,7 @@ export const cie10Data = [
     "grupo": "Trastorno disocial limitado al contexto",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18950,7 +19418,7 @@ export const cie10Data = [
     "grupo": "Trastorno desafiante y oposicionista",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18959,7 +19427,7 @@ export const cie10Data = [
     "grupo": "Trastorno de ansiedad de separación en la",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18968,7 +19436,7 @@ export const cie10Data = [
     "grupo": "Síndrome de Gilles de la Tourette",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18977,7 +19445,7 @@ export const cie10Data = [
     "grupo": "Enuresis no orgánica",
     "sistema": "Salud Mental",
     "tipo": "crónico",
-    "subtipo": "mental",
+    "subtipo": "infantil",
     "severidad": ""
   },
   {
@@ -18986,7 +19454,7 @@ export const cie10Data = [
     "grupo": "Taquicardia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -18995,7 +19463,7 @@ export const cie10Data = [
     "grupo": "Palpitaciones",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19004,7 +19472,7 @@ export const cie10Data = [
     "grupo": "Palpitaciones",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19013,7 +19481,7 @@ export const cie10Data = [
     "grupo": "Soplo cardíaco",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19022,7 +19490,7 @@ export const cie10Data = [
     "grupo": "Presión arterial elevada",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19031,7 +19499,7 @@ export const cie10Data = [
     "grupo": "Epistaxis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19040,7 +19508,7 @@ export const cie10Data = [
     "grupo": "Hemoptisis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19049,7 +19517,7 @@ export const cie10Data = [
     "grupo": "Tos",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19058,7 +19526,7 @@ export const cie10Data = [
     "grupo": "Tos NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19067,7 +19535,7 @@ export const cie10Data = [
     "grupo": "Disnea",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19076,7 +19544,7 @@ export const cie10Data = [
     "grupo": "Disnea en reposo",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19085,7 +19553,7 @@ export const cie10Data = [
     "grupo": "Disnea de esfuerzo NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19094,7 +19562,7 @@ export const cie10Data = [
     "grupo": "Estridor",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19103,7 +19571,7 @@ export const cie10Data = [
     "grupo": "Sibilancias",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19112,7 +19580,7 @@ export const cie10Data = [
     "grupo": "Hiperventilación",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19121,7 +19589,7 @@ export const cie10Data = [
     "grupo": "Dolor de garganta",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19130,7 +19598,7 @@ export const cie10Data = [
     "grupo": "Dolor en el pecho al respirar",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19139,7 +19607,7 @@ export const cie10Data = [
     "grupo": "Dolor precordial",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19148,7 +19616,7 @@ export const cie10Data = [
     "grupo": "Dolor torácico",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19157,7 +19625,7 @@ export const cie10Data = [
     "grupo": "Dolor torácico NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19166,7 +19634,16 @@ export const cie10Data = [
     "grupo": "Hipoxemia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
+    "severidad": ""
+  },
+  {
+    "codigo": "R09.2",
+    "descripcion": "Paro respiratorio",
+    "grupo": "Paro respiratorio",
+    "sistema": "Síntomas y Signos",
+    "tipo": "síntoma",
+    "subtipo": "cardiorrespiratorio",
     "severidad": ""
   },
   {
@@ -19175,7 +19652,7 @@ export const cie10Data = [
     "grupo": "Abdomen",
     "sistema": "Síntomas y Signos",
     "tipo": "agudo",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19184,7 +19661,7 @@ export const cie10Data = [
     "grupo": "Dolor abdominal superior",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19193,7 +19670,7 @@ export const cie10Data = [
     "grupo": "Dolor pélvico y perineal",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19202,7 +19679,7 @@ export const cie10Data = [
     "grupo": "Dolor abdominal inferior",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19211,7 +19688,7 @@ export const cie10Data = [
     "grupo": "Dolor abdominal generalizado y",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19220,7 +19697,7 @@ export const cie10Data = [
     "grupo": "Náuseas y vómitos",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19229,7 +19706,7 @@ export const cie10Data = [
     "grupo": "Náuseas",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19238,7 +19715,7 @@ export const cie10Data = [
     "grupo": "Vómitos NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19247,7 +19724,7 @@ export const cie10Data = [
     "grupo": "Pirosis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19256,7 +19733,7 @@ export const cie10Data = [
     "grupo": "Disfagia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19265,7 +19742,7 @@ export const cie10Data = [
     "grupo": "Flatulencia y afecciones afines",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19274,7 +19751,7 @@ export const cie10Data = [
     "grupo": "Distensión abdominal",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19283,7 +19760,7 @@ export const cie10Data = [
     "grupo": "Incontinencia fecal",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19292,7 +19769,7 @@ export const cie10Data = [
     "grupo": "Hepatomegalia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19301,7 +19778,7 @@ export const cie10Data = [
     "grupo": "Esplenomegalia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19310,7 +19787,7 @@ export const cie10Data = [
     "grupo": "Ictericia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19319,7 +19796,7 @@ export const cie10Data = [
     "grupo": "Ascitis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19328,7 +19805,7 @@ export const cie10Data = [
     "grupo": "Masa o tumoración intraabdominal y pélvica",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19337,7 +19814,7 @@ export const cie10Data = [
     "grupo": "Cambio en los hábitos intestinales",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19346,7 +19823,7 @@ export const cie10Data = [
     "grupo": "Diarrea NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "digestivo",
     "severidad": ""
   },
   {
@@ -19355,7 +19832,7 @@ export const cie10Data = [
     "grupo": "Parestesia de la piel",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cutáneo",
     "severidad": ""
   },
   {
@@ -19364,7 +19841,7 @@ export const cie10Data = [
     "grupo": "Exantema y otras erupciones cutáneas",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cutáneo",
     "severidad": ""
   },
   {
@@ -19373,7 +19850,7 @@ export const cie10Data = [
     "grupo": "Masa o tumoración localizada",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cutáneo",
     "severidad": ""
   },
   {
@@ -19382,7 +19859,7 @@ export const cie10Data = [
     "grupo": "Cianosis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cutáneo",
     "severidad": ""
   },
   {
@@ -19391,7 +19868,7 @@ export const cie10Data = [
     "grupo": "Equimosis espontáneas",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cutáneo",
     "severidad": ""
   },
   {
@@ -19400,7 +19877,7 @@ export const cie10Data = [
     "grupo": "Temblor",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "neurológico",
     "severidad": ""
   },
   {
@@ -19409,7 +19886,7 @@ export const cie10Data = [
     "grupo": "Calambres musculares",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "neurológico",
     "severidad": ""
   },
   {
@@ -19418,7 +19895,7 @@ export const cie10Data = [
     "grupo": "Marcha atáxica",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "neurológico",
     "severidad": ""
   },
   {
@@ -19427,7 +19904,7 @@ export const cie10Data = [
     "grupo": "Dificultad para caminar",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "neurológico",
     "severidad": ""
   },
   {
@@ -19436,7 +19913,7 @@ export const cie10Data = [
     "grupo": "Disuria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19445,7 +19922,7 @@ export const cie10Data = [
     "grupo": "Hematuria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19454,7 +19931,7 @@ export const cie10Data = [
     "grupo": "Incontinencia urinaria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19463,7 +19940,7 @@ export const cie10Data = [
     "grupo": "Retención de orina",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19472,7 +19949,7 @@ export const cie10Data = [
     "grupo": "Anuria y oliguria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19481,7 +19958,7 @@ export const cie10Data = [
     "grupo": "Poliuria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19490,7 +19967,7 @@ export const cie10Data = [
     "grupo": "Frecuencia urinaria",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19499,7 +19976,7 @@ export const cie10Data = [
     "grupo": "Síntoma del tracto urinario NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "urinario",
     "severidad": ""
   },
   {
@@ -19508,7 +19985,7 @@ export const cie10Data = [
     "grupo": "Somnolencia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19517,7 +19994,7 @@ export const cie10Data = [
     "grupo": "Estupor",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19526,7 +20003,7 @@ export const cie10Data = [
     "grupo": "Coma",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19535,7 +20012,7 @@ export const cie10Data = [
     "grupo": "Desorientación",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19544,7 +20021,7 @@ export const cie10Data = [
     "grupo": "Otra amnesia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19553,7 +20030,7 @@ export const cie10Data = [
     "grupo": "Mareo y desvanecimiento",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19562,7 +20039,7 @@ export const cie10Data = [
     "grupo": "Anosmia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19571,7 +20048,7 @@ export const cie10Data = [
     "grupo": "Nerviosismo",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19580,7 +20057,7 @@ export const cie10Data = [
     "grupo": "Inquietud y agitación",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19589,7 +20066,7 @@ export const cie10Data = [
     "grupo": "Irritabilidad y enojo",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "cognitivo",
     "severidad": ""
   },
   {
@@ -19616,7 +20093,7 @@ export const cie10Data = [
     "grupo": "Fiebre",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19625,7 +20102,7 @@ export const cie10Data = [
     "grupo": "Cefalea",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19634,7 +20111,7 @@ export const cie10Data = [
     "grupo": "Cefalea NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19643,7 +20120,7 @@ export const cie10Data = [
     "grupo": "Dolor NE",
     "sistema": "Síntomas y Signos",
     "tipo": "crónico",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19652,7 +20129,7 @@ export const cie10Data = [
     "grupo": "Dolor",
     "sistema": "Síntomas y Signos",
     "tipo": "agudo",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19661,7 +20138,7 @@ export const cie10Data = [
     "grupo": "Dolor intratable",
     "sistema": "Síntomas y Signos",
     "tipo": "crónico",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19670,7 +20147,7 @@ export const cie10Data = [
     "grupo": "Otro dolor",
     "sistema": "Síntomas y Signos",
     "tipo": "crónico",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19679,7 +20156,7 @@ export const cie10Data = [
     "grupo": "Malestar general",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19688,7 +20165,7 @@ export const cie10Data = [
     "grupo": "Debilidad NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19697,7 +20174,7 @@ export const cie10Data = [
     "grupo": "Fatiga NE",
     "sistema": "Síntomas y Signos",
     "tipo": "crónico",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19706,7 +20183,7 @@ export const cie10Data = [
     "grupo": "Síncope y colapso",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19715,7 +20192,7 @@ export const cie10Data = [
     "grupo": "Convulsiones febriles",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19724,7 +20201,7 @@ export const cie10Data = [
     "grupo": "Otras convulsiones y las",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19733,7 +20210,7 @@ export const cie10Data = [
     "grupo": "Convulsiones NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19742,7 +20219,7 @@ export const cie10Data = [
     "grupo": "Choque",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19760,7 +20237,7 @@ export const cie10Data = [
     "grupo": "Adenomegalia localizada",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19769,7 +20246,7 @@ export const cie10Data = [
     "grupo": "Adenomegalia generalizada",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19778,7 +20255,7 @@ export const cie10Data = [
     "grupo": "Edema localizado",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19787,7 +20264,7 @@ export const cie10Data = [
     "grupo": "Edema generalizado",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19796,7 +20273,7 @@ export const cie10Data = [
     "grupo": "Edema NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19805,7 +20282,7 @@ export const cie10Data = [
     "grupo": "Hiperhidrosis",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19814,7 +20291,7 @@ export const cie10Data = [
     "grupo": "Anorexia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19823,7 +20300,7 @@ export const cie10Data = [
     "grupo": "Polidipsia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19832,7 +20309,7 @@ export const cie10Data = [
     "grupo": "Polifagia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19841,7 +20318,7 @@ export const cie10Data = [
     "grupo": "Dificultades en la alimentación",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19850,7 +20327,7 @@ export const cie10Data = [
     "grupo": "Pérdida anormal de peso",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19859,7 +20336,7 @@ export const cie10Data = [
     "grupo": "Caquexia",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19868,7 +20345,7 @@ export const cie10Data = [
     "grupo": "Otros síntomas y signos NE",
     "sistema": "Síntomas y Signos",
     "tipo": "síntoma",
-    "subtipo": "síntoma",
+    "subtipo": "general",
     "severidad": ""
   },
   {
@@ -19940,7 +20417,7 @@ export const cie10Data = [
     "grupo": "Lesión de menisco NE",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -19949,7 +20426,7 @@ export const cie10Data = [
     "grupo": "Cuerpo libre en articulación de rodilla NE",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -19958,7 +20435,7 @@ export const cie10Data = [
     "grupo": "Rigidez articular de hombro derecho NE",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -19967,7 +20444,7 @@ export const cie10Data = [
     "grupo": "Dolor de rodilla NE",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "musculoesquelético",
+    "subtipo": "articular",
     "severidad": ""
   },
   {
@@ -19976,7 +20453,7 @@ export const cie10Data = [
     "grupo": "Traumatismo superficial del cuero cabelludo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -19985,7 +20462,7 @@ export const cie10Data = [
     "grupo": "Abrasión cuero cabelludo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -19994,7 +20471,7 @@ export const cie10Data = [
     "grupo": "Herida del cuero cabelludo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20003,7 +20480,7 @@ export const cie10Data = [
     "grupo": "Herida de la mejilla y de la región",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20012,7 +20489,7 @@ export const cie10Data = [
     "grupo": "Herida del labio y de la cavidad bucal",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20021,7 +20498,7 @@ export const cie10Data = [
     "grupo": "Fractura de la bóveda del cráneo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20030,7 +20507,7 @@ export const cie10Data = [
     "grupo": "Fractura de la base del cráneo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20039,7 +20516,7 @@ export const cie10Data = [
     "grupo": "Fractura de los huesos de la nariz",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20048,7 +20525,7 @@ export const cie10Data = [
     "grupo": "Fractura del maxilar inferior",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20057,7 +20534,7 @@ export const cie10Data = [
     "grupo": "Luxación del maxilar",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20066,7 +20543,7 @@ export const cie10Data = [
     "grupo": "Traumatismo de conjuntiva y abrasión corneal",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20075,7 +20552,7 @@ export const cie10Data = [
     "grupo": "Contusión del globo ocular y del tejido",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20084,7 +20561,7 @@ export const cie10Data = [
     "grupo": "Concusión",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": "leve"
   },
   {
@@ -20093,7 +20570,7 @@ export const cie10Data = [
     "grupo": "Traumatismo intracraneal",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20102,7 +20579,7 @@ export const cie10Data = [
     "grupo": "Traumatismo de cabeza NE",
     "sistema": "Traumatismos",
     "tipo": "agudo",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20111,7 +20588,7 @@ export const cie10Data = [
     "grupo": "Traumatismo craneal NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cabeza",
     "severidad": ""
   },
   {
@@ -20120,7 +20597,7 @@ export const cie10Data = [
     "grupo": "Esguince y torcedura de columna cervical",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuello",
     "severidad": ""
   },
   {
@@ -20129,7 +20606,7 @@ export const cie10Data = [
     "grupo": "Esguince cervical",
     "sistema": "Traumatismos",
     "tipo": "agudo",
-    "subtipo": "traumático",
+    "subtipo": "cuello",
     "severidad": ""
   },
   {
@@ -20138,7 +20615,7 @@ export const cie10Data = [
     "grupo": "Traumatismo del cuello NE",
     "sistema": "Traumatismos",
     "tipo": "agudo",
-    "subtipo": "traumático",
+    "subtipo": "cuello",
     "severidad": ""
   },
   {
@@ -20147,7 +20624,7 @@ export const cie10Data = [
     "grupo": "Contusión del tórax",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tórax",
     "severidad": ""
   },
   {
@@ -20156,7 +20633,7 @@ export const cie10Data = [
     "grupo": "Fractura de vértebra torácica",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tórax",
     "severidad": ""
   },
   {
@@ -20165,7 +20642,7 @@ export const cie10Data = [
     "grupo": "Fractura de costilla",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tórax",
     "severidad": ""
   },
   {
@@ -20174,7 +20651,7 @@ export const cie10Data = [
     "grupo": "Fracturas múltiples de costillas",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tórax",
     "severidad": ""
   },
   {
@@ -20183,7 +20660,7 @@ export const cie10Data = [
     "grupo": "Traumatismo del tórax NE",
     "sistema": "Traumatismos",
     "tipo": "agudo",
-    "subtipo": "traumático",
+    "subtipo": "tórax",
     "severidad": ""
   },
   {
@@ -20192,7 +20669,7 @@ export const cie10Data = [
     "grupo": "Contusión de la región lumbosacra y de la",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "abdomen",
     "severidad": ""
   },
   {
@@ -20201,7 +20678,7 @@ export const cie10Data = [
     "grupo": "Contusión de la pared abdominal",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "abdomen",
     "severidad": ""
   },
   {
@@ -20210,7 +20687,7 @@ export const cie10Data = [
     "grupo": "Fractura de vértebra lumbar",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "abdomen",
     "severidad": ""
   },
   {
@@ -20219,7 +20696,7 @@ export const cie10Data = [
     "grupo": "Distensión musculatura lumbar",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "abdomen",
     "severidad": ""
   },
   {
@@ -20228,7 +20705,7 @@ export const cie10Data = [
     "grupo": "Traumatismo abdomen NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "abdomen",
     "severidad": ""
   },
   {
@@ -20237,7 +20714,7 @@ export const cie10Data = [
     "grupo": "Fractura de la clavícula",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20246,7 +20723,7 @@ export const cie10Data = [
     "grupo": "Fractura de clavícula NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20255,7 +20732,7 @@ export const cie10Data = [
     "grupo": "Fractura clavícula NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20264,7 +20741,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis superior del húmero",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20273,7 +20750,7 @@ export const cie10Data = [
     "grupo": "Fractura húmero proximal NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20282,7 +20759,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis del húmero",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20291,7 +20768,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis inferior del húmero",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20300,7 +20777,7 @@ export const cie10Data = [
     "grupo": "Luxación de la articulación del hombro",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20309,7 +20786,7 @@ export const cie10Data = [
     "grupo": "Esguince y torcedura de la articulación del",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20318,7 +20795,7 @@ export const cie10Data = [
     "grupo": "Traumatismo del tendón del manguito rotador",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20327,7 +20804,7 @@ export const cie10Data = [
     "grupo": "Fractura de fisis de húmero",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "hombro",
     "severidad": ""
   },
   {
@@ -20336,7 +20813,7 @@ export const cie10Data = [
     "grupo": "Contusión del codo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20345,7 +20822,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis superior del cúbito",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20354,7 +20831,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis del cúbito",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20363,7 +20840,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis del radio",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20372,7 +20849,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis inferior del radio",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20381,7 +20858,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis distal del radio NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20390,7 +20867,7 @@ export const cie10Data = [
     "grupo": "Fractura radio distal NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20399,7 +20876,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis inferior del cúbito y",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20408,7 +20885,7 @@ export const cie10Data = [
     "grupo": "Fractura de cúbito NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20417,7 +20894,7 @@ export const cie10Data = [
     "grupo": "Luxación del codo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "antebrazo",
     "severidad": ""
   },
   {
@@ -20426,7 +20903,7 @@ export const cie10Data = [
     "grupo": "Contusión de dedos de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20435,7 +20912,7 @@ export const cie10Data = [
     "grupo": "Herida de dedos de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20444,7 +20921,7 @@ export const cie10Data = [
     "grupo": "Herida de la muñeca y de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20453,7 +20930,7 @@ export const cie10Data = [
     "grupo": "Fractura del hueso escafoides de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20462,7 +20939,7 @@ export const cie10Data = [
     "grupo": "Fractura del escafoides carpiano NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20471,7 +20948,7 @@ export const cie10Data = [
     "grupo": "Fractura de escafoides",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20480,7 +20957,7 @@ export const cie10Data = [
     "grupo": "Fractura de otros huesos metacarpianos",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20489,7 +20966,7 @@ export const cie10Data = [
     "grupo": "Fractura de dedo de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20498,7 +20975,7 @@ export const cie10Data = [
     "grupo": "Luxación de dedo de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20507,7 +20984,7 @@ export const cie10Data = [
     "grupo": "Esguince y torcedura de la muñeca",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20516,7 +20993,7 @@ export const cie10Data = [
     "grupo": "Esguince y torcedura de dedos de la mano",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "mano",
     "severidad": ""
   },
   {
@@ -20525,7 +21002,7 @@ export const cie10Data = [
     "grupo": "Contusión de la cadera",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20534,7 +21011,7 @@ export const cie10Data = [
     "grupo": "Fractura del cuello del fémur",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20543,7 +21020,7 @@ export const cie10Data = [
     "grupo": "Fractura del cuello del fémur NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20552,7 +21029,7 @@ export const cie10Data = [
     "grupo": "Fractura de cuello de fémur",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20561,7 +21038,7 @@ export const cie10Data = [
     "grupo": "Fractura pertrocanteriana del fémur",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20570,7 +21047,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis del fémur",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cadera",
     "severidad": ""
   },
   {
@@ -20579,7 +21056,7 @@ export const cie10Data = [
     "grupo": "Contusión de la rodilla",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20588,7 +21065,7 @@ export const cie10Data = [
     "grupo": "Herida de la pierna",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20597,7 +21074,7 @@ export const cie10Data = [
     "grupo": "Fractura de la rótula",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20606,7 +21083,7 @@ export const cie10Data = [
     "grupo": "Fractura de rótula NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20615,7 +21092,7 @@ export const cie10Data = [
     "grupo": "Fractura de rótula",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20624,7 +21101,7 @@ export const cie10Data = [
     "grupo": "Fractura de la epífisis superior de la tibia",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20633,7 +21110,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis de la tibia",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20642,7 +21119,7 @@ export const cie10Data = [
     "grupo": "Fractura de la diáfisis tibial NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20651,7 +21128,7 @@ export const cie10Data = [
     "grupo": "Fractura de tibia",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20660,7 +21137,7 @@ export const cie10Data = [
     "grupo": "Fractura del peroné solamente",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20669,7 +21146,7 @@ export const cie10Data = [
     "grupo": "Fractura de peroné",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20678,7 +21155,7 @@ export const cie10Data = [
     "grupo": "Fractura del maléolo interno",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20687,7 +21164,7 @@ export const cie10Data = [
     "grupo": "Fractura del maléolo externo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20696,7 +21173,7 @@ export const cie10Data = [
     "grupo": "Luxación de la rótula",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20705,7 +21182,7 @@ export const cie10Data = [
     "grupo": "Desgarro reciente de menisco de la rodilla",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20714,7 +21191,7 @@ export const cie10Data = [
     "grupo": "Esguince de ligamentos laterales de la rodilla",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20723,7 +21200,16 @@ export const cie10Data = [
     "grupo": "Esguince que compromete ligamento cruzado de",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
+    "severidad": ""
+  },
+  {
+    "codigo": "S83.6",
+    "descripcion": "Esguince de otras partes de la rodilla",
+    "grupo": "Esguince de otras partes de la rodilla",
+    "sistema": "Traumatismos",
+    "tipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20732,7 +21218,7 @@ export const cie10Data = [
     "grupo": "Traumatismo del tendón de Aquiles",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20741,7 +21227,7 @@ export const cie10Data = [
     "grupo": "Desgarro del tendón de Aquiles",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "pierna",
     "severidad": ""
   },
   {
@@ -20750,7 +21236,7 @@ export const cie10Data = [
     "grupo": "Contusión del tobillo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20759,7 +21245,7 @@ export const cie10Data = [
     "grupo": "Herida de otras partes del pie",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20768,7 +21254,7 @@ export const cie10Data = [
     "grupo": "Fractura del calcáneo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20777,7 +21263,7 @@ export const cie10Data = [
     "grupo": "Fractura de hueso del metatarso",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20786,7 +21272,7 @@ export const cie10Data = [
     "grupo": "Luxación de la articulación del tobillo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20795,7 +21281,7 @@ export const cie10Data = [
     "grupo": "Esguince y torcedura del tobillo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20804,7 +21290,7 @@ export const cie10Data = [
     "grupo": "Esguince del tobillo NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20813,7 +21299,7 @@ export const cie10Data = [
     "grupo": "Esguince de tobillo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20822,7 +21308,7 @@ export const cie10Data = [
     "grupo": "Esguince de tobillo NE",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tobillo",
     "severidad": ""
   },
   {
@@ -20858,7 +21344,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en la córnea",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20867,7 +21353,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en el oído",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20876,7 +21362,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en el orificio nasal",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20885,7 +21371,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en vías respiratorias",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20894,7 +21380,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en el esófago",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20903,7 +21389,7 @@ export const cie10Data = [
     "grupo": "Cuerpo extraño en tubo digestivo",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "cuerpo extraño",
     "severidad": ""
   },
   {
@@ -20912,7 +21398,7 @@ export const cie10Data = [
     "grupo": "Quemadura de primer grado de la cabeza y del",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20921,7 +21407,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado de la cabeza y del",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20930,7 +21416,7 @@ export const cie10Data = [
     "grupo": "Quemadura de primer grado del tronco",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20939,7 +21425,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado del tronco",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20948,7 +21434,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado de hombro y",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20957,7 +21443,7 @@ export const cie10Data = [
     "grupo": "Quemadura de primer grado de la muñeca y de",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20966,7 +21452,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado de la muñeca y de",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20975,7 +21461,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado de cadera y",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20984,7 +21470,7 @@ export const cie10Data = [
     "grupo": "Quemadura de segundo grado del tobillo y del",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -20993,7 +21479,7 @@ export const cie10Data = [
     "grupo": "Quemadura de región del cuerpo y grado",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "quemadura",
     "severidad": ""
   },
   {
@@ -21011,7 +21497,7 @@ export const cie10Data = [
     "grupo": "Envenenamiento por derivados del 4-aminofenol",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "intoxicación",
     "severidad": ""
   },
   {
@@ -21020,7 +21506,7 @@ export const cie10Data = [
     "grupo": "Envenenamiento por antiinflamatorios no",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "intoxicación",
     "severidad": ""
   },
   {
@@ -21029,7 +21515,7 @@ export const cie10Data = [
     "grupo": "Envenenamiento por benzodiazepinas",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "intoxicación",
     "severidad": ""
   },
   {
@@ -21038,7 +21524,7 @@ export const cie10Data = [
     "grupo": "Envenenamiento por antidepresivos tricíclicos",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "intoxicación",
     "severidad": ""
   },
   {
@@ -21047,7 +21533,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico del etanol",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21056,7 +21542,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico del monóxido de carbono",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21065,7 +21551,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico de plaguicidas organofosforados",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21074,7 +21560,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico de sustancia nociva ingerida",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21083,7 +21569,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico del veneno de serpiente",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21092,7 +21578,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico del veneno de escorpión",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21101,7 +21587,7 @@ export const cie10Data = [
     "grupo": "Efecto tóxico del veneno de arañas",
     "sistema": "Traumatismos",
     "tipo": "traumático",
-    "subtipo": "traumático",
+    "subtipo": "tóxico",
     "severidad": ""
   },
   {
@@ -21191,7 +21677,7 @@ export const cie10Data = [
     "grupo": "Secuelas de traumatismo intracraneal",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "traumático",
+    "subtipo": "secuela",
     "severidad": ""
   },
   {
@@ -21200,7 +21686,7 @@ export const cie10Data = [
     "grupo": "Secuelas de fractura del brazo",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "traumático",
+    "subtipo": "secuela",
     "severidad": ""
   },
   {
@@ -21209,7 +21695,7 @@ export const cie10Data = [
     "grupo": "Secuelas de otras fracturas del miembro",
     "sistema": "Traumatismos",
     "tipo": "crónico",
-    "subtipo": "traumático",
+    "subtipo": "secuela",
     "severidad": ""
   }
 ];

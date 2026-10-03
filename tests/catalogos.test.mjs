@@ -18,5 +18,16 @@ test("los catálogos conservan el tamaño de la versión anterior", () => {
   assert.equal(porCodigo.get("N30.2").tipo, "crónico");
   assert.equal(porCodigo.get("N70.1").sistema, "Ginecología");
   assert.equal(porCodigo.get("J42").tipo, "crónico");
+  assert.equal(porCodigo.get("I10").subtipo, "hipertensivo");
+  assert.equal(porCodigo.get("J45.9").subtipo, "asmático");
+  assert.equal(porCodigo.get("J45.1").subtipo, "asmático");
+  assert.equal(porCodigo.get("K80.2").subtipo, "biliar");
+  assert.equal(porCodigo.get("K29.00").subtipo, "gástrico");
+  assert.equal(porCodigo.get("K29.0").subtipo, "hemorrágico");
+  assert.equal(porCodigo.get("E11.9").subtipo, "diabetes");
+  assert.equal(porCodigo.get("N18.3").severidad, "estadio 3");
+  assert.equal(porCodigo.get("O82").tipo, "agudo");
+  assert.equal(porCodigo.get("A97.0").subtipo, "dengue");
+  assert.equal(porCodigo.get("F32.2").severidad, "grave");
   assert.equal(new Set(cie10Data.map((dx) => dx.codigo)).size, cie10Data.length);
 });
