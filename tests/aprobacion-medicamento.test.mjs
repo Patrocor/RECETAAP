@@ -34,3 +34,16 @@ test("hay tres modelos de receta seleccionables", () => {
   assert.match(app, /modeloReceta/);
   assert.match(css, /\.receta-modelo-card/);
 });
+
+test("el aviso de cargar esquema previo se oculta después de cargar", () => {
+  assert.match(app, /esquemaPrevioCargado/);
+  assert.match(app, /aviso-esquema-previo/);
+  assert.match(app, /draft\.esquemaPrevioCargado = clavePrevia/);
+  assert.match(app, /draft\.esquemaPrevioCargado !== clavePrevia/);
+});
+
+test("el PDF clásico usa un diseño premium sin marca de agua LR", () => {
+  assert.match(app, /const oro = \[184, 149, 92\]/);
+  assert.match(app, /RECETA MÉDICA/);
+  assert.doesNotMatch(app, /doc\.setFontSize\(36\);/);
+});

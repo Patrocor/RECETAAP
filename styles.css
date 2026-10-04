@@ -1016,7 +1016,7 @@ svg.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--bg);
+  background: #f4f7fb;
   color: #0b1f33;
   padding: 18px 20px calc(18px + env(safe-area-inset-bottom));
   box-sizing: border-box;
@@ -1159,8 +1159,8 @@ svg.logo {
 }
 
 .desk-status-card {
-  background: var(--card);
-  color: var(--ink);
+  background: #ffffff;
+  color: #0b1f33;
   border: 1px solid rgba(18, 54, 82, 0.08);
   border-radius: 20px;
   padding: 16px;
@@ -1174,7 +1174,7 @@ svg.logo {
 button.desk-status-card {
   cursor: pointer;
   border: 1px solid rgba(18, 54, 82, 0.08);
-  background: var(--card);
+  background: #ffffff;
   transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1273,7 +1273,7 @@ button.desk-status-card:active {
 .desk-rail-dock {
   display: flex;
   gap: 6px;
-  background: var(--card);
+  background: #ffffff;
   border: 1px solid rgba(18, 54, 82, 0.08);
   border-radius: 18px;
   padding: 6px;
@@ -3678,11 +3678,6 @@ input:focus, select:focus, textarea:focus {
   forced-color-adjust: none;
 }
 
-:root[data-theme="dark"] .desk-home,
-:root[data-theme="dark"] .desk-home .desk-panel,
-:root[data-theme="dark"] .desk-home .desk-action-card,
-:root[data-theme="dark"] .desk-home .desk-status-card,
-:root[data-theme="dark"] .desk-home .desk-rail-dock,
 :root[data-theme="dark"] .shell-flow,
 :root[data-theme="dark"] .shell-desk,
 :root[data-theme="dark"] .app,
@@ -3691,24 +3686,67 @@ input:focus, select:focus, textarea:focus {
   forced-color-adjust: none;
 }
 
-:root[data-theme="dark"] .desk-home .desk-panel,
-:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary),
-:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-title,
-:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-arrow,
-:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-desc,
-:root[data-theme="dark"] .desk-rail-dock button,
-:root[data-theme="dark"] .desk-stat-num,
-:root[data-theme="dark"] .desk-stat-label {
-  color: var(--ink);
+.desk-home,
+.desk-home .desk-panel,
+.desk-home .desk-action-card,
+.desk-home .desk-status-card,
+.desk-home .desk-rail-dock,
+.desk-home .desk-stat-item {
+  color-scheme: light !important;
+  forced-color-adjust: none;
 }
 
-:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-desc,
-:root[data-theme="dark"] .desk-stat-label,
-:root[data-theme="dark"] .desk-rail-dock button {
-  color: var(--ink-soft);
+.desk-home .desk-panel {
+  background: #f4f7fb !important;
+  color: #0b1f33 !important;
 }
 
-:root[data-theme="dark"] .desk-action-card:not(.primary) .desk-action-icon,
+.desk-home .desk-action-card:not(.primary) {
+  background: #ffffff !important;
+  color: #0b1f33 !important;
+  border-color: #123652 !important;
+}
+
+.desk-home .desk-action-card:not(.primary) .desk-action-title,
+.desk-home .desk-action-card:not(.primary) .desk-action-arrow {
+  color: #0b1f33 !important;
+}
+
+.desk-home .desk-action-card:not(.primary) .desk-action-desc {
+  color: #1f3346 !important;
+}
+
+.desk-home .desk-status-card,
+.desk-home button.desk-status-card {
+  background: #ffffff !important;
+  color: #0b1f33 !important;
+}
+
+.desk-home .desk-status-title,
+.desk-home .desk-stat-num,
+.desk-home .desk-status-action {
+  color: #0b1f33 !important;
+}
+
+.desk-home .desk-status-text,
+.desk-home .desk-stat-label {
+  color: #3d4758 !important;
+}
+
+.desk-home .desk-rail-dock {
+  background: #ffffff !important;
+}
+
+.desk-home .desk-rail-dock button {
+  color: #1f3346 !important;
+}
+
+.desk-home .desk-action-card:not(.primary) .desk-action-icon {
+  background: #123652 !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="dark"] .patient-mark,
 :root[data-theme="dark"] .patient-mark,
 :root[data-theme="dark"] .exam-kind,
 :root[data-theme="dark"] .empty-mark,

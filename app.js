@@ -241,6 +241,7 @@ function emptyDraft() {
     medicamentos: [],
     examenes: [],
     indicacionesGenerales: "",
+    esquemaPrevioCargado: "",
   };
 }
 
@@ -573,6 +574,7 @@ function loadDraft() {
       ? raw.examenes.map(sanitizeExam).filter(Boolean).slice(0, 30)
       : [];
     base.screen = WIZARD.some((step) => step.id === raw.screen) ? raw.screen : "paciente";
+    base.esquemaPrevioCargado = cleanText(raw.esquemaPrevioCargado, 80);
     return base;
   } catch {
     return emptyDraft();
@@ -1480,11 +1482,12 @@ function viewPaciente() {
     (draft.pacienteNombre && item.nombre && item.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase())
   ));
   const previa = atencionesPasadas[0];
+  const clavePrevia = previa ? [previa.id || "", previa.dni || "", previa.cuando || "", previa.tipo || ""].join("|") : "";
   let avisoPrevia = null;
-  if (previa) {
+  if (previa && draft.esquemaPrevioCargado !== clavePrevia) {
     const esReceta = previa.tipo === "receta";
     const desc = [previa.cie10, previa.diagnostico, esReceta ? `${previa.medicamentos?.length || 0} medicamentos` : `${previa.examenes?.length || 0} exámenes`].filter(Boolean).join(" · ");
-    avisoPrevia = el("div", { class: "desk-status-card", style: "margin-top: 10px;" }, [
+    avisoPrevia = el("div", { class: "desk-status-card aviso-esquema-previo", style: "margin-top: 10px;" }, [
       el("span", { class: "desk-status-badge blue" }, [
         el("span", { class: "desk-status-dot" }),
         document.createTextNode(`Atención previa (${fechaLegible(previa.cuando)})`),
@@ -1508,6 +1511,7 @@ function viewPaciente() {
           if (previa.examenes?.length) {
             draft.examenes = previa.examenes.map((e) => ({ ...e, id: Date.now() + Math.random() }));
           }
+          draft.esquemaPrevioCargado = clavePrevia;
           saveDraft();
           render();
         },
@@ -3969,49 +3973,51 @@ function dibujarReceta(doc, top, alto) {
 function dibujarRecetaClasica(doc, top, alto) {
   const x = 8;
   const ancho = 194;
-  const tinta = [18, 54, 82];
-  const fondo = [215, 228, 240];
-  doc.setDrawColor(...tinta);
-  doc.setLineWidth(0.45);
-  doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
-  doc.setFillColor(...fondo);
-  doc.roundedRect(x, top, ancho, 16, 2.4, 2.4, "F");
-  doc.rect(x, top + 10, ancho, 6, "F");
-  doc.setDrawColor(...tinta);
-  doc.line(x, top + 16, x + ancho, top + 16);
+  const tinta = [14, 42, 68];
+  const oro = [184, 149, 92];
+  const papel = [252, 250, 246];
+  const banda = [236, 242, 247];
+
+  doc.setFillColor(...papel);
+  doc.roundedRect(x, top, ancho, alto, 2.2, 2.2, "F");
+  doc.setFillColor(...tinta);
+  doc.rect(x, top, ancho, 22, "F");
+  doc.setFillColor(...oro);
+  doc.rect(x, top + 22, ancho, 1.1, "F");
 
   doc.setFillColor(255, 255, 255);
-  doc.roundedRect(x + 4, top + 2.2, 14, 11.6, 1.4, 1.4, "FD");
+  doc.roundedRect(x + 6, top + 4.2, 13.5, 13.5, 1.6, 1.6, "F");
   doc.setFont("times", "bold");
-  doc.setFontSize(13);
-  doc.setTextColor(...tinta);
-  doc.text("LR", x + 11, top + 10, { align: "center" });
-
-  const nombre = (perfil.nombre || "").toUpperCase();
   doc.setFontSize(11);
-  const titulo = doc.splitTextToSize(nombre, 128)[0] || "";
-  doc.text(titulo, x + ancho / 2, top + 7.2, { align: "center" });
+  doc.setTextColor(...tinta);
+  doc.text("LR", x + 12.75, top + 12.8, { align: "center" });
+
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("times", "bold");
+  doc.setFontSize(12);
+  const nombre = doc.splitTextToSize((perfil.nombre || "Médico tratante").toUpperCase(), 132)[0] || "";
+  doc.text(nombre, x + 24, top + 10);
   doc.setFont("times", "normal");
   doc.setFontSize(8);
-  const credencial = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  |  ").toUpperCase();
-  doc.text(doc.splitTextToSize(credencial, 128)[0] || "", x + ancho / 2, top + 12.4, { align: "center" });
+  doc.setTextColor(226, 234, 241);
+  const credencial = [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase();
+  doc.text(doc.splitTextToSize(credencial, 132)[0] || "", x + 24, top + 16.2);
+  doc.setFont("times", "bold");
+  doc.setFontSize(8);
+  doc.setTextColor(...oro);
+  doc.text("RECETA MÉDICA", x + ancho - 7, top + 10, { align: "right" });
+  doc.setFont("times", "normal");
+  doc.setFontSize(7);
+  doc.setTextColor(214, 224, 233);
+  doc.text("½ página A4", x + ancho - 7, top + 16, { align: "right" });
 
-  const cx = x + ancho - 12;
-  const cy = top + 8.2;
-  doc.setLineWidth(0.35);
-  doc.circle(cx, cy - 4.2, 1.15);
-  doc.line(cx, cy - 3, cx, cy + 4.2);
-  doc.line(cx - 2.4, cy + 4.2, cx, cy + 2);
-  doc.line(cx + 2.4, cy + 4.2, cx, cy + 2);
-  doc.line(cx, cy - 2.2, cx + 2.1, cy - 0.6);
-  doc.line(cx + 2.1, cy - 0.6, cx, cy + 1);
-  doc.line(cx, cy + 1, cx - 2.1, cy + 2.5);
-
-  let y = top + 22;
-  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 4, y, 128);
-  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 136, y, 54);
-  y += 6.4;
-  campoReceta(doc, "Edad:", draft.pacienteEdad, x + 4, y, 28);
+  doc.setFillColor(...banda);
+  doc.rect(x, top + 23.1, ancho, 22, "F");
+  let y = top + 29;
+  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 6, y, 124);
+  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 136, y, 58);
+  y += 6.2;
+  campoReceta(doc, "Edad:", draft.pacienteEdad, x + 6, y, 26);
   doc.setFont("times", "bold");
   doc.setFontSize(8);
   doc.setTextColor(...tinta);
@@ -4021,59 +4027,53 @@ function dibujarRecetaClasica(doc, top, alto) {
   casilla(doc, x + 52, y - 2.5, draft.pacienteSexo === "M");
   doc.text("F", x + 58, y);
   casilla(doc, x + 61.5, y - 2.5, draft.pacienteSexo === "F");
-  campoReceta(doc, "DNI:", draft.pacienteDNI, x + 70, y, 52);
-  campoReceta(doc, "H. Clínica:", draft.pacienteDNI, x + 126, y, 64);
-  y += 6.4;
-  campoReceta(doc, "Diagnóstico:", draft.diagnostico, x + 4, y, 128);
-  campoReceta(doc, "CIE-10:", draft.cie10, x + 136, y, 54);
+  campoReceta(doc, "DNI:", draft.pacienteDNI, x + 72, y, 48);
+  campoReceta(doc, "CIE-10:", draft.cie10, x + 136, y, 58);
+  y += 6.2;
+  campoReceta(doc, "Diagnóstico:", draft.diagnostico, x + 6, y, 188);
 
-  const colTop = y + 4;
-  const colAlto = alto - (colTop - top) - 16;
-  const colAncho = 92;
-  doc.setDrawColor(...tinta);
-  doc.setLineWidth(0.35);
-  doc.roundedRect(x + 3, colTop, colAncho, colAlto, 1.6, 1.6);
-  doc.roundedRect(x + 99, colTop, colAncho, colAlto, 1.6, 1.6);
+  const colTop = top + 48;
+  const colAlto = alto - 64;
+  const colAncho = 90;
+  doc.setDrawColor(198, 212, 224);
+  doc.setLineWidth(0.25);
+  doc.line(x + 101, colTop + 2, x + 101, colTop + colAlto - 4);
   doc.setFont("times", "bolditalic");
   doc.setFontSize(12);
+  doc.setTextColor(...tinta);
   doc.text("Rp/", x + 7, colTop + 6);
   doc.setFont("times", "bold");
-  doc.setFontSize(11);
-  doc.text("Indicaciones:", x + 103, colTop + 6);
+  doc.setFontSize(10);
+  doc.setTextColor(...oro);
+  doc.text("Indicaciones", x + 108, colTop + 6);
+  doc.setDrawColor(...oro);
+  doc.setLineWidth(0.35);
+  doc.line(x + 7, colTop + 8, x + 38, colTop + 8);
+  doc.line(x + 108, colTop + 8, x + 148, colTop + 8);
 
-  doc.setFont("times", "bold");
-  doc.setFontSize(36);
-  doc.setTextColor(232, 239, 246);
-  doc.text("LR", x + ancho / 2, colTop + colAlto / 2 + 4, { align: "center" });
-
-  doc.setDrawColor(186, 204, 220);
-  doc.setLineWidth(0.15);
-  const primera = colTop + 12;
-  const ultima = colTop + colAlto - 4;
-  for (let linea = primera; linea <= ultima; linea += 4.5) {
-    doc.line(x + 6, linea, x + 3 + colAncho - 3, linea);
-    doc.line(x + 102, linea, x + 99 + colAncho - 3, linea);
-  }
-
-  lineasColumna(doc, recetaLineasMedicamentos(), x + 6, primera - 1.5, colAncho - 8, ultima - 2);
-  lineasColumna(doc, recetaLineasNotas(), x + 102, primera - 1.5, colAncho - 8, ultima - 2);
+  lineasColumna(doc, recetaLineasMedicamentos(), x + 7, colTop + 13, colAncho - 4, colTop + colAlto - 3);
+  lineasColumna(doc, recetaLineasNotas(), x + 108, colTop + 13, colAncho - 4, colTop + colAlto - 3);
 
   const pie = top + alto - 8;
+  doc.setDrawColor(...oro);
+  doc.setLineWidth(0.4);
+  doc.line(x + 6, pie - 10, x + ancho - 6, pie - 10);
   doc.setFont("times", "bold");
   doc.setFontSize(8);
   doc.setTextColor(...tinta);
-  doc.text("Próximo control:", x + 6, pie);
+  doc.text("Próximo control", x + 6, pie);
   doc.setFont("times", "normal");
-  doc.text(fechaGuion(draft.proximoControl), x + 34, pie);
-  doc.setDrawColor(168, 188, 208);
-  doc.line(x + 34, pie + 1.1, x + 78, pie + 1.1);
-  recetaPonerFirma(doc, x + 137, pie - 19);
-  doc.line(x + 124, pie - 6, x + 186, pie - 6);
-  doc.setFont("times", "bold");
-  doc.text("Firma y Sello", x + 155, pie, { align: "center" });
+  doc.text(fechaGuion(draft.proximoControl) || "Según evolución clínica", x + 34, pie);
+  recetaPonerFirma(doc, x + 140, pie - 20);
   doc.setDrawColor(...tinta);
-  doc.setLineWidth(0.45);
-  doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
+  doc.setLineWidth(0.3);
+  doc.line(x + 128, pie - 5, x + 190, pie - 5);
+  doc.setFont("times", "italic");
+  doc.setFontSize(7.5);
+  doc.text("Firma y sello médico", x + 159, pie, { align: "center" });
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.7);
+  doc.roundedRect(x, top, ancho, alto, 2.2, 2.2);
 }
 
 function dibujarRecetaLineal(doc, top, alto) {
@@ -4083,18 +4083,22 @@ function dibujarRecetaLineal(doc, top, alto) {
   doc.setDrawColor(...tinta);
   doc.setLineWidth(0.45);
   doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
-  doc.setFillColor(18, 54, 82);
-  doc.rect(x, top, ancho, 18, "F");
+  doc.setFillColor(14, 42, 68);
+  doc.rect(x, top, ancho, 20, "F");
+  doc.setFillColor(184, 149, 92);
+  doc.rect(x, top + 20, ancho, 1.1, "F");
   doc.setTextColor(255, 255, 255);
   doc.setFont("times", "bold");
   doc.setFontSize(13);
-  doc.text((perfil.nombre || "MÉDICO TRATANTE").toUpperCase(), x + 6, top + 8);
+  doc.text((perfil.nombre || "MÉDICO TRATANTE").toUpperCase(), x + 6, top + 8.5);
   doc.setFont("times", "normal");
   doc.setFontSize(8);
-  doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase(), x + 6, top + 14);
+  doc.setTextColor(226, 234, 241);
+  doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase(), x + 6, top + 15);
   doc.setFont("times", "bold");
-  doc.setFontSize(10);
-  doc.text("RECETA  ·  ½ A4", x + ancho - 6, top + 11, { align: "right" });
+  doc.setFontSize(8);
+  doc.setTextColor(184, 149, 92);
+  doc.text("RECETA MÉDICA", x + ancho - 6, top + 12, { align: "right" });
 
   let y = top + 26;
   campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 6, y, 120);
