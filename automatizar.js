@@ -89,10 +89,63 @@ export function indicacionesAutomaticas(draft) {
     let line = med.nombre || "";
     if (pauta) line += `: ${pauta}.`;
     if (med.indicaciones) line += ` ${med.indicaciones}`;
+    if (draft?.fechaFin) line += ` (hasta el ${draft.fechaFin})`;
     if (line) lines.push(line);
   }
   if (draft?.diagnostico) lines.push("Control según evolución.");
   return lines.join("\n").slice(0, 800);
+}
+
+/** Calcula la duración máxima en días de una lista de medicamentos */
+export function duracionMaximaTratamiento(medicamentos) {
+  let maxDias = 0;
+  for (const m of medicamentos || []) {
+    const d = diasDe(m?.duracion);
+    if (d > maxDias) maxDias = d;
+  }
+  return maxDias ? (maxDias === 1 ? "1 día" : `${maxDias} días`) : "";
+}
+
+/** Calcula la fecha estimada de término del tratamiento según fecha de inicio y días. */
+export function fechaFinTratamiento(fechaInicio, duracion) {
+  const dias = diasDe(duracion);
+  if (!dias || !/^\d{4}-\d{2}-\d{2}$/.test(fechaInicio || "")) return "";
+  const [y, m, d] = fechaInicio.split("-").map(Number);
+  const fin = new Date(y, m - 1, d + dias);
+  return fin.toLocaleDateString("es-PE", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).replace(/\./g, "").replace(/ de /g, " ");
+}
+
+/**
+ * Calculadora de dosificación pediátrica por peso (mg/kg/día).
+ * Retorna dosis en mg por toma y volumen en mL o gotas según la concentración.
+ */
+export function calcularDosisPediatrica(pesoKg, mgPorKgDia, tomasPorDia, concMg, concMl = 1) {
+  const peso = Number(pesoKg);
+  const mgDia = Number(mgPorKgDia);
+  const tomas = Number(tomasPorDia);
+  const cMg = Number(concMg);
+  const cMl = Number(concMl) || 1;
+
+  if (!peso || peso <= 0 || !mgDia || mgDia <= 0 || !tomas || tomas <= 0 || !cMg || cMg <= 0) {
+    return null;
+  }
+
+  const dosisTotalDiaMg = peso * mgDia;
+  const dosisTomaMg = Number((dosisTotalDiaMg / tomas).toFixed(1));
+  const mlPorToma = Number(((dosisTomaMg * cMl) / cMg).toFixed(1));
+  const gotasPorToma = Math.round(mlPorToma * 20); // 20 gotas ≈ 1 mL estándar
+
+  return {
+    dosisTomaMg,
+    mlPorToma,
+    gotasPorToma,
+    dosisTotalDiaMg: Number(dosisTotalDiaMg.toFixed(1)),
+    resumen: `${mlPorToma} mL (${gotasPorToma} gotas) cada toma [${dosisTomaMg} mg]`,
+  };
 }
 
 const AINES_LIST = [

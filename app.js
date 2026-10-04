@@ -16,7 +16,26 @@ import {
   indicacionesAutomaticas,
   pacientePorDni,
   verificarAlertaSeguridad,
+  duracionMaximaTratamiento,
+  fechaFinTratamiento,
+  calcularDosisPediatrica,
 } from "./automatizar.js";
+import {
+  TX_FRECUENTES_KEY,
+  EXAM_PACKS_KEY,
+  PRESETS_TRATAMIENTOS,
+  PRESETS_EXAM_PACKS,
+  TOP_DIAGNOSTICOS,
+  PRESETS_PEDIATRICOS,
+  obtenerTratamientosFrecuentes,
+  guardarTratamientoFrecuente,
+  eliminarTratamientoFrecuente,
+  obtenerPacksExamenes,
+  guardarPackExamenes,
+  eliminarPackExamenes,
+  aplicarTratamientoADraft,
+  aplicarPackExamenesADraft,
+} from "./frecuentes.js";
 import {
   actualizarAcceso,
   crearAcceso,
@@ -239,6 +258,21 @@ let afterPerfil = "inicio";
 let origenExamenes = "receta";
 let origenPrevia = "receta";
 let ultimoEmitido = null;
+let modalActivo = null; // "tx-frecuentes" | "guardar-tx" | "calc-pediatrica" | "packs-examenes" | "guardar-pack"
+let calcState = {
+  presetId: "paracetamol-gotas",
+  pesoKg: "12",
+  mgKgDia: "45",
+  tomasDia: "3",
+  frecuencia: "Cada 8 horas",
+  duracion: "3 días",
+  concMg: "100",
+  concMl: "1",
+  nombreMed: "Paracetamol",
+  presentacion: "100 mg / 1 mL gotas",
+  via: "Vía oral",
+  indicacion: "Administrar en caso de fiebre > 38°C o dolor.",
+};
 
 const root = document.getElementById("app");
 
@@ -331,6 +365,16 @@ function icono(nombre) {
     trazo("M12 2v13");
   } else if (nombre === "whatsapp") {
     trazo("M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z");
+  } else if (nombre === "bookmark") {
+    trazo("M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z");
+  } else if (nombre === "calc") {
+    trazo("M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z");
+    trazo("M8 9h8");
+    trazo("M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01M16 17h.01");
+  } else if (nombre === "layers") {
+    trazo("M12 2L2 7l10 5 10-5-10-5z");
+    trazo("M2 17l10 5 10-5");
+    trazo("M2 12l10 5 10-5");
   } else {
     trazo("M5 7h14");
     trazo("M9 7V5h6v2");
@@ -513,6 +557,7 @@ function render() {
     footer(),
   ]);
   if (dialog) shell.append(dialogNode());
+  if (modalActivo) shell.append(modalNode());
   root.replaceChildren(shell);
   if (formError) showError(formError);
 }
@@ -1581,6 +1626,31 @@ function viewDiagnostico() {
     search,
     el("div", { id: "dx-suggest", class: "suggestions" }),
   ]));
+
+  // Fila de Diagnósticos Rápidos (Top CIE-10) con selección a 1 toque
+  const chipsTop = TOP_DIAGNOSTICOS.map((top) => {
+    const isActive = draft.cie10 === top.codigo;
+    return el("button", {
+      type: "button",
+      class: `dx-quick-chip${isActive ? " is-active" : ""}`,
+      onclick: () => {
+        draft.cie10 = top.codigo;
+        draft.diagnostico = top.descripcion;
+        draft.dxQuery = "";
+        saveDraft();
+        goto("diagnostico");
+      },
+    }, [
+      el("strong", { text: top.codigo }),
+      el("span", { text: top.titulo }),
+    ]);
+  });
+
+  section.append(el("div", { class: "dx-rapidos-section" }, [
+    el("span", { class: "dx-rapidos-label", text: "Diagnósticos frecuentes" }),
+    el("div", { class: "dx-rapidos-scroll" }, chipsTop),
+  ]));
+
   if (draft.diagnostico) {
     section.append(el("article", { class: "item" }, [
       el("div", { class: "item-top" }, [
@@ -1628,8 +1698,37 @@ function viewMedicamentos() {
     }
   }
 
+  // Barra de herramientas: Tx frecuentes, Calculadora pediátrica y Guardar actual
+  const toolbar = el("div", { class: "med-toolbar" }, [
+    el("button", {
+      type: "button",
+      class: "btn-tool is-tx",
+      onclick: () => abrirModal("tx-frecuentes"),
+    }, [
+      icono("bookmark"),
+      el("span", { text: "Tx frecuentes" }),
+    ]),
+    el("button", {
+      type: "button",
+      class: "btn-tool is-calc",
+      onclick: () => abrirModal("calc-pediatrica"),
+    }, [
+      icono("calc"),
+      el("span", { text: "Calc. Pediátrica" }),
+    ]),
+    items.length ? el("button", {
+      type: "button",
+      class: "btn-tool is-save",
+      onclick: () => abrirModal("guardar-tx"),
+    }, [
+      icono("check"),
+      el("span", { text: "Guardar como Tx" }),
+    ]) : null,
+  ].filter(Boolean));
+
   return el("section", { class: "screen stack" }, [
     bannerAlerta,
+    toolbar,
     items.length ? null : vacioLista("Todavía no hay medicamentos.", () => openComposer("med")),
     ...items,
     items.length ? botonMas("Agregar medicamento", () => openComposer("med")) : null,
@@ -1802,6 +1901,35 @@ function resumenOrdenExamenes() {
 }
 
 function viewOrdenExamenes() {
+  const packs = obtenerPacksExamenes();
+  const packChips = packs.slice(0, 4).map((pack) => {
+    return el("button", {
+      type: "button",
+      class: "pack-quick-chip",
+      title: pack.descripcion,
+      onclick: () => {
+        aplicarPackExamenesADraft(draft, pack);
+        saveDraft();
+        render();
+      },
+    }, [
+      el("span", { text: "+ " + pack.nombre.split("/")[0].trim() }),
+    ]);
+  });
+
+  const packsBar = el("div", { class: "packs-quick-bar" }, [
+    el("div", { class: "packs-quick-header" }, [
+      el("span", { class: "packs-quick-title", text: "Packs frecuentes de exámenes" }),
+      el("button", {
+        type: "button",
+        class: "btn-subtle",
+        style: "padding: 3px 8px; font-size: 11px; flex: none;",
+        onclick: () => abrirModal("packs-examenes"),
+      }, ["Ver todos / Guardar"]),
+    ]),
+    el("div", { class: "pack-chips-row" }, packChips),
+  ]);
+
   return el("section", { class: "screen stack exam-order" }, [
     errorSlot(),
     resumenPacienteOrden(),
@@ -1809,6 +1937,7 @@ function viewOrdenExamenes() {
       el("h2", { text: examTipo === "Laboratorio" ? "Exámenes de laboratorio" : "Imágenes y otros estudios" }),
       el("p", { text: "Busca, selecciona y revisa la preparación antes de generar la orden." }),
     ]),
+    packsBar,
     selectorTipoExamen(),
     resumenOrdenExamenes(),
     composer === "exam" ? viewExamComposer() : viewExamenes(),
@@ -1929,7 +2058,25 @@ function viewIndicaciones() {
   });
   const lista = el("div", { id: "rec-list", class: "chips recs" });
   queueMicrotask(() => pintarRecomendaciones(area));
+
+  // Cálculo automático de fecha de término del tratamiento según la duración máxima de fármacos
+  let cardFin = null;
+  const duracionMax = duracionMaximaTratamiento(draft.medicamentos);
+  if (duracionMax && draft.fechaAtencion) {
+    const fechaFin = fechaFinTratamiento(draft.fechaAtencion, duracionMax);
+    if (fechaFin) {
+      cardFin = el("div", { class: "tx-fin-card" }, [
+        el("div", { class: "tx-fin-info" }, [
+          el("span", { class: "tx-fin-label", text: "Término del tratamiento prescrito" }),
+          el("strong", { class: "tx-fin-date", text: `Hasta el ${fechaFin}` }),
+        ]),
+        el("span", { class: "tx-fin-badge", text: `(${duracionMax})` }),
+      ]);
+    }
+  }
+
   return el("section", { class: "screen stack" }, [
+    cardFin,
     el("button", { type: "button", class: "add-btn", onclick: () => completarIndicaciones(area) }, ["Completar"]),
     field("Control", "proximo-control", draft.proximoControl, "date", "", (input) => {
       draft.proximoControl = /^\d{4}-\d{2}-\d{2}$/.test(input.value) ? input.value : "";
@@ -1938,7 +2085,7 @@ function viewIndicaciones() {
     el("label", { class: "field", text: "Recomendaciones" }, [buscar]),
     lista,
     el("label", { class: "field", text: "Indicaciones" }, [area]),
-  ]);
+  ].filter(Boolean));
 }
 
 function pintarRecomendaciones(area) {
@@ -2232,10 +2379,19 @@ function textoWhatsAppReceta(emitido) {
     `*Paciente:* ${emitido.pacienteNombre}`,
     emitido.pacienteDNI ? `*DNI:* ${emitido.pacienteDNI}` : "",
     emitido.diagnostico ? `*Diagnóstico:* ${emitido.diagnostico}` : "",
-    `*Fecha:* ${fechaLegible(emitido.fechaAtencion)}`,
-    "",
-    "*Rp/ Prescripción:*",
+    `*Fecha de emisión:* ${fechaLegible(emitido.fechaAtencion)}`,
   ];
+
+  const durMax = duracionMaximaTratamiento(emitido.medicamentos);
+  if (durMax && emitido.fechaAtencion) {
+    const fin = fechaFinTratamiento(emitido.fechaAtencion, durMax);
+    if (fin) {
+      lineas.push(`*Término del tratamiento:* ${fin} (${durMax})`);
+    }
+  }
+
+  lineas.push("");
+  lineas.push("*Rp/ Prescripción:*");
   (emitido.medicamentos || []).forEach((m, idx) => {
     lineas.push(`${idx + 1}. *${m.nombre}* (${m.presentacion || ""})`);
     const pauta = [`Cant: ${m.cantidad}`, m.dosis, m.frecuencia, m.duracion, m.via].filter(Boolean).join(" - ");
@@ -3005,6 +3161,484 @@ function dialogNode() {
         el("button", { type: "button", class: "btn ghost", onclick: () => finishDialog(false) }, ["Cancelar"]),
         el("button", { type: "button", class: "btn", onclick: () => finishDialog(true) }, [dialog.confirmLabel]),
       ]),
+    ]),
+  ]);
+}
+
+function abrirModal(tipo) {
+  modalActivo = tipo;
+  if (tipo === "calc-pediatrica") {
+    const edadNum = Number(draft.pacienteEdad);
+    if (edadNum && edadNum <= 14 && (!calcState.pesoKg || calcState.pesoKg === "12")) {
+      const pesoAprox = Math.max(3, Math.min(60, Math.round(edadNum * 2 + 8)));
+      calcState.pesoKg = String(pesoAprox);
+    }
+  }
+  render();
+}
+
+function cerrarModal() {
+  modalActivo = null;
+  render();
+}
+
+function modalNode() {
+  let content = null;
+  if (modalActivo === "tx-frecuentes") content = modalTxFrecuentes();
+  else if (modalActivo === "guardar-tx") content = modalGuardarTx();
+  else if (modalActivo === "calc-pediatrica") content = modalCalcPediatrica();
+  else if (modalActivo === "packs-examenes") content = modalPacksExamenes();
+  else if (modalActivo === "guardar-pack") content = modalGuardarPack();
+
+  if (!content) return null;
+  return el("div", {
+    class: "modal-backdrop",
+    onclick: (e) => {
+      if (e.target && e.target.classList && e.target.classList.contains("modal-backdrop")) {
+        cerrarModal();
+      }
+    },
+  }, [content]);
+}
+
+function modalTxFrecuentes() {
+  const lista = obtenerTratamientosFrecuentes();
+  const search = el("input", {
+    type: "search",
+    placeholder: "Buscar por esquema, fármaco o diagnóstico...",
+    value: txQuery,
+    class: "field-input",
+    style: "width: 100%; margin-bottom: 8px;",
+  });
+  search.addEventListener("input", () => {
+    txQuery = cleanText(search.value, 60);
+    actualizarListaTx();
+  });
+
+  const contLista = el("div", { class: "tx-list", id: "tx-cards-container" });
+
+  const actualizarListaTx = () => {
+    const q = (txQuery || "").toLowerCase().trim();
+    const filtrados = lista.filter((tx) => {
+      if (!q) return true;
+      const texto = `${tx.nombre} ${tx.categoria} ${tx.diagnostico} ${tx.cie10} ${(tx.medicamentos || []).map((m) => m.nombre).join(" ")}`.toLowerCase();
+      return texto.includes(q);
+    });
+
+    const cards = filtrados.map((tx) => {
+      const medRows = (tx.medicamentos || []).map((m) =>
+        el("div", { class: "tx-med-row" }, [
+          el("strong", { text: `${m.nombre} (${m.presentacion || ""})` }),
+          el("span", { text: `: ${m.dosis}, ${m.frecuencia} x ${m.duracion}. Cant: ${m.cantidad}` }),
+        ])
+      );
+
+      return el("article", { class: "tx-card" }, [
+        el("div", { class: "tx-top-row" }, [
+          el("div", {}, [
+            el("h4", { class: "tx-card-title", text: tx.nombre }),
+            tx.diagnostico ? el("p", { class: "tx-dx-text", text: `Dx: ${tx.cie10 ? tx.cie10 + " — " : ""}${tx.diagnostico}` }) : null,
+          ]),
+          el("span", { class: "tx-badge", text: tx.categoria || "Esquema" }),
+        ]),
+        el("div", { class: "tx-meds-box" }, medRows),
+        el("div", { class: "tx-card-actions" }, [
+          tx.esPersonalizado ? el("button", {
+            type: "button",
+            class: "btn-subtle is-danger",
+            style: "padding: 6px 10px; font-size: 12px; flex: none;",
+            onclick: () => {
+              eliminarTratamientoFrecuente(localStorage, tx.id);
+              abrirModal("tx-frecuentes");
+            },
+          }, ["Eliminar"]) : null,
+          el("button", {
+            type: "button",
+            class: "btn-subtle is-primary",
+            style: "padding: 6px 14px; font-size: 13px; font-weight: 700; flex: none;",
+            onclick: () => {
+              aplicarTratamientoADraft(draft, tx);
+              saveDraft();
+              cerrarModal();
+            },
+          }, ["Aplicar a receta"]),
+        ].filter(Boolean)),
+      ]);
+    });
+
+    contLista.replaceChildren(...(cards.length ? cards : [
+      el("p", { class: "muted", style: "text-align: center; padding: 20px;", text: "No se encontraron tratamientos con ese término." }),
+    ]));
+  };
+
+  actualizarListaTx();
+
+  return el("div", { class: "modal-window" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Tratamientos Frecuentes" }),
+        el("p", { text: "Aplica esquemas terapéuticos predefinidos con un solo toque." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body" }, [
+      search,
+      contLista,
+    ]),
+    el("div", { class: "modal-footer" }, [
+      draft.medicamentos.length > 0 ? el("button", {
+        type: "button",
+        class: "btn-subtle",
+        onclick: () => abrirModal("guardar-tx"),
+      }, ["Guardar receta actual como Tx"]) : null,
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cerrar"]),
+    ].filter(Boolean)),
+  ]);
+}
+
+function modalGuardarTx() {
+  const nombreInput = el("input", {
+    type: "text",
+    placeholder: "Ej: Esquema HTA Amlodipino + Losartán",
+    value: draft.diagnostico || "",
+    maxlength: "100",
+    class: "field-input",
+    style: "width: 100%;",
+  });
+  const catInput = el("input", {
+    type: "text",
+    placeholder: "Ej: Medicina General, Pediatría, Respiratorio",
+    value: "Medicina General",
+    maxlength: "60",
+    class: "field-input",
+    style: "width: 100%;",
+  });
+
+  const resumenMeds = draft.medicamentos.map((m) =>
+    el("div", { class: "tx-med-row" }, [
+      el("strong", { text: `${m.nombre} (${m.presentacion || ""})` }),
+      el("span", { text: ` — ${m.dosis}, ${m.frecuencia} x ${m.duracion}` }),
+    ])
+  );
+
+  return el("div", { class: "modal-window" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Guardar como Tratamiento Frecuente" }),
+        el("p", { text: "Guarda la combinación actual para usarla en futuros pacientes." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body" }, [
+      el("label", { class: "field", text: "Nombre del esquema" }, [nombreInput]),
+      el("label", { class: "field", text: "Categoría" }, [catInput]),
+      el("div", { class: "tx-meds-box" }, [
+        el("span", { style: "font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase;", text: `Medicamentos en el esquema (${draft.medicamentos.length})` }),
+        ...resumenMeds,
+      ]),
+    ]),
+    el("div", { class: "modal-footer" }, [
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cancelar"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        onclick: () => {
+          const nombre = cleanText(nombreInput.value, 100);
+          if (!nombre) {
+            showError("Por favor ingresa un nombre para el tratamiento.");
+            render();
+            return;
+          }
+          guardarTratamientoFrecuente(localStorage, {
+            nombre,
+            categoria: cleanText(catInput.value, 60) || "Personalizado",
+            cie10: draft.cie10 || "",
+            diagnostico: draft.diagnostico || "",
+            medicamentos: draft.medicamentos,
+            indicacionesGenerales: draft.indicacionesGenerales || "",
+          });
+          cerrarModal();
+        },
+      }, ["Guardar esquema"]),
+    ]),
+  ]);
+}
+
+function modalCalcPediatrica() {
+  const presets = PRESETS_PEDIATRICOS;
+  const actual = presets.find((p) => p.id === calcState.presetId) || presets[0];
+
+  const select = el("select", { class: "field-input", style: "width: 100%;" }, presets.map((p) =>
+    el("option", { value: p.id, text: p.nombre })
+  ));
+  select.value = actual.id;
+
+  const pesoInput = el("input", {
+    type: "number",
+    step: "0.5",
+    min: "2",
+    max: "80",
+    placeholder: "Ej: 14.5",
+    value: calcState.pesoKg,
+    class: "field-input",
+    style: "width: 100%;",
+  });
+
+  const resultadoBox = el("div", { class: "calc-result-box" });
+
+  const recalcular = () => {
+    const pId = select.value;
+    const elegido = presets.find((p) => p.id === pId) || presets[0];
+    calcState.presetId = elegido.id;
+    calcState.farmaco = elegido.farmaco;
+    calcState.presentacion = elegido.presentacion;
+    calcState.via = elegido.via;
+    calcState.frecuencia = elegido.frecuencia;
+    calcState.duracion = elegido.duracion;
+    calcState.concMg = String(elegido.concMg);
+    calcState.concMl = String(elegido.concMl);
+    calcState.indicacion = elegido.indicacion;
+    calcState.mgKgDia = String(elegido.mgKgDia);
+    calcState.tomasDia = String(elegido.tomasDia);
+    calcState.pesoKg = pesoInput.value;
+
+    const res = calcularDosisPediatrica(
+      calcState.pesoKg,
+      calcState.mgKgDia,
+      calcState.tomasDia,
+      calcState.concMg,
+      calcState.concMl
+    );
+
+    if (!res) {
+      resultadoBox.replaceChildren(
+        el("p", { class: "muted", style: "margin: 0; text-align: center; padding: 8px;", text: "Ingresa el peso en kg para calcular la dosificación exacta." })
+      );
+      return;
+    }
+
+    const metricas = [
+      el("div", { class: "calc-stat" }, [
+        el("span", { class: "calc-stat-val", text: `${res.mlPorToma} mL` }),
+        el("span", { class: "calc-stat-lbl", text: "Volumen por toma" }),
+      ]),
+      elegido.unidad === "gotas" ? el("div", { class: "calc-stat" }, [
+        el("span", { class: "calc-stat-val", text: `${res.gotasPorToma} gotas` }),
+        el("span", { class: "calc-stat-lbl", text: "Gotas aprox (20 gtt/mL)" }),
+      ]) : el("div", { class: "calc-stat" }, [
+        el("span", { class: "calc-stat-val", text: `${res.dosisTomaMg} mg` }),
+        el("span", { class: "calc-stat-lbl", text: "Dosis mg por toma" }),
+      ]),
+      el("div", { class: "calc-stat" }, [
+        el("span", { class: "calc-stat-val", text: `${res.dosisTotalDiaMg} mg/d` }),
+        el("span", { class: "calc-stat-lbl", text: `Total día (${calcState.mgKgDia} mg/kg)` }),
+      ]),
+      el("div", { class: "calc-stat" }, [
+        el("span", { class: "calc-stat-val", text: elegido.frecuencia }),
+        el("span", { class: "calc-stat-lbl", text: `${elegido.tomasDia} tomas por día` }),
+      ]),
+    ];
+
+    resultadoBox.replaceChildren(
+      el("div", { class: "calc-result-header", text: "Dosificación calculada" }),
+      el("div", { class: "calc-grid" }, metricas),
+      el("div", { class: "calc-summary-text", text: `Pauta calculada: ${res.mlPorToma} mL ${elegido.unidad === "gotas" ? `(${res.gotasPorToma} gotas) ` : ""}${elegido.frecuencia} por ${elegido.duracion}.` })
+    );
+  };
+
+  select.addEventListener("change", recalcular);
+  pesoInput.addEventListener("input", recalcular);
+  recalcular();
+
+  return el("div", { class: "modal-window" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Calculadora Pediátrica de Dosis" }),
+        el("p", { text: "Cálculo milimétrico por peso en suspensiones y gotas pediátricas." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body calc-box" }, [
+      el("div", { class: "calc-field-group" }, [
+        el("label", { text: "Fármaco pediátrico común" }),
+        select,
+      ]),
+      el("div", { class: "calc-field-group" }, [
+        el("label", { text: "Peso del niño en kilogramos (kg)" }),
+        pesoInput,
+      ]),
+      resultadoBox,
+    ]),
+    el("div", { class: "modal-footer" }, [
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cancelar"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        onclick: () => {
+          const res = calcularDosisPediatrica(
+            calcState.pesoKg,
+            calcState.mgKgDia,
+            calcState.tomasDia,
+            calcState.concMg,
+            calcState.concMl
+          );
+          if (!res) {
+            showError("Ingresa un peso válido para calcular.");
+            render();
+            return;
+          }
+          const elegido = presets.find((p) => p.id === select.value) || presets[0];
+          const nuevoMed = {
+            id: `med-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+            nombre: elegido.farmaco,
+            presentacion: elegido.presentacion,
+            via: elegido.via,
+            dosis: elegido.unidad === "gotas"
+              ? `${res.gotasPorToma} gotas (${res.mlPorToma} mL)`
+              : `${res.mlPorToma} mL (${res.dosisTomaMg} mg)`,
+            frecuencia: elegido.frecuencia,
+            duracion: elegido.duracion,
+            cantidad: "1 frasco",
+            indicaciones: `${elegido.indicacion} (Peso: ${calcState.pesoKg} kg · ${res.dosisTomaMg} mg/toma).`,
+          };
+          draft.medicamentos = [...draft.medicamentos, nuevoMed];
+          saveDraft();
+          cerrarModal();
+        },
+      }, ["Agregar a la receta"]),
+    ]),
+  ]);
+}
+
+function modalPacksExamenes() {
+  const packs = obtenerPacksExamenes();
+  const cont = el("div", { class: "tx-list" });
+
+  const pintarPacks = () => {
+    const cards = packs.map((pack) => {
+      const items = (pack.examenes || []).map((ex) =>
+        el("span", { class: `pack-exam-chip ${ex.tipo === "Laboratorio" ? "lab" : "img"}` }, [
+          el("strong", { text: ex.nombre }),
+        ])
+      );
+
+      return el("article", { class: "tx-card" }, [
+        el("div", { class: "tx-top-row" }, [
+          el("div", {}, [
+            el("h4", { class: "tx-card-title", text: pack.nombre }),
+            pack.descripcion ? el("p", { class: "tx-dx-text", text: pack.descripcion }) : null,
+          ]),
+          el("span", { class: "tx-badge", text: `${(pack.examenes || []).length} pruebas` }),
+        ]),
+        el("div", { class: "pack-items-list" }, items),
+        el("div", { class: "tx-card-actions" }, [
+          pack.esPersonalizado ? el("button", {
+            type: "button",
+            class: "btn-subtle is-danger",
+            style: "padding: 6px 10px; font-size: 12px; flex: none;",
+            onclick: () => {
+              eliminarPackExamenes(localStorage, pack.id);
+              abrirModal("packs-examenes");
+            },
+          }, ["Eliminar"]) : null,
+          el("button", {
+            type: "button",
+            class: "btn-subtle is-primary",
+            style: "padding: 6px 14px; font-size: 13px; font-weight: 700; flex: none;",
+            onclick: () => {
+              aplicarPackExamenesADraft(draft, pack);
+              saveDraft();
+              cerrarModal();
+            },
+          }, ["Aplicar a la orden"]),
+        ].filter(Boolean)),
+      ]);
+    });
+    cont.replaceChildren(...cards);
+  };
+  pintarPacks();
+
+  return el("div", { class: "modal-window" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Packs de Exámenes Frecuentes" }),
+        el("p", { text: "Perfiles clínicos de laboratorio e imágenes prearmados." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body" }, [cont]),
+    el("div", { class: "modal-footer" }, [
+      draft.examenes.length > 0 ? el("button", {
+        type: "button",
+        class: "btn-subtle",
+        onclick: () => abrirModal("guardar-pack"),
+      }, ["Guardar orden actual como Pack"]) : null,
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cerrar"]),
+    ].filter(Boolean)),
+  ]);
+}
+
+function modalGuardarPack() {
+  const nombreInput = el("input", {
+    type: "text",
+    placeholder: "Ej: Perfil Reumatológico, Chequeo Anual",
+    value: "",
+    maxlength: "100",
+    class: "field-input",
+    style: "width: 100%;",
+  });
+  const descInput = el("input", {
+    type: "text",
+    placeholder: "Ej: Evaluación de artralgias e inflamación",
+    value: "",
+    maxlength: "160",
+    class: "field-input",
+    style: "width: 100%;",
+  });
+
+  const resumenExamenes = draft.examenes.map((e) =>
+    el("div", { class: "tx-med-row" }, [
+      el("strong", { text: e.nombre }),
+      el("span", { class: "muted", text: ` [${e.tipo || "Estudio"}]` }),
+    ])
+  );
+
+  return el("div", { class: "modal-window" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Guardar como Pack de Exámenes" }),
+        el("p", { text: "Crea un perfil reutilizable con los exámenes seleccionados." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body" }, [
+      el("label", { class: "field", text: "Nombre del pack" }, [nombreInput]),
+      el("label", { class: "field", text: "Descripción" }, [descInput]),
+      el("div", { class: "tx-meds-box" }, [
+        el("span", { style: "font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase;", text: `Exámenes en la orden (${draft.examenes.length})` }),
+        ...resumenExamenes,
+      ]),
+    ]),
+    el("div", { class: "modal-footer" }, [
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cancelar"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        onclick: () => {
+          const nombre = cleanText(nombreInput.value, 100);
+          if (!nombre) {
+            showError("Por favor ingresa un nombre para el pack.");
+            render();
+            return;
+          }
+          guardarPackExamenes(localStorage, {
+            nombre,
+            descripcion: cleanText(descInput.value, 160) || "Pack personalizado",
+            examenes: draft.examenes,
+          });
+          cerrarModal();
+        },
+      }, ["Guardar pack"]),
     ]),
   ]);
 }

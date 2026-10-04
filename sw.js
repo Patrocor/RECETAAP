@@ -6,6 +6,7 @@ const STATIC_ASSETS = [
   "./app.js",
   "./catalogos.js",
   "./automatizar.js",
+  "./frecuentes.js",
   "./sanitize.js",
   "./auth.js",
   "./marcas.js",
