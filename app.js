@@ -258,7 +258,9 @@ let afterPerfil = "inicio";
 let origenExamenes = "receta";
 let origenPrevia = "receta";
 let ultimoEmitido = null;
+let txQuery = "";
 let modalActivo = null; // "tx-frecuentes" | "guardar-tx" | "calc-pediatrica" | "packs-examenes" | "guardar-pack"
+let itemAGuardarTx = null; // Puede ser un item del historial o emitido
 let calcState = {
   presetId: "paracetamol-gotas",
   pesoKg: "12",
@@ -1719,7 +1721,7 @@ function viewMedicamentos() {
     items.length ? el("button", {
       type: "button",
       class: "btn-tool is-save",
-      onclick: () => abrirModal("guardar-tx"),
+      onclick: () => abrirGuardarTx(null),
     }, [
       icono("check"),
       el("span", { text: "Guardar como Tx" }),
@@ -2356,7 +2358,13 @@ function viewHistorial() {
             class: "btn-subtle is-primary",
             onclick: () => rePrescribirHistorial(item),
           }, [esReceta ? "Repetir receta" : "Repetir orden"]),
-        ]),
+          esReceta && (item.medicamentos || []).length ? el("button", {
+            type: "button",
+            class: "btn-subtle is-tx-save",
+            title: "Guardar este esquema como protocolo reutilizable para futuros pacientes",
+            onclick: () => abrirGuardarTx(item),
+          }, ["Guardar Tx"]) : null,
+        ].filter(Boolean)),
       ]);
     })) : el("div", { class: "empty-state" }, [
       el("div", { class: "empty-icon" }, [icono("clock")]),
@@ -2471,7 +2479,16 @@ function viewListo() {
         icono("share"),
         el("span", { text: "Compartir con otras apps" }),
       ]),
-    ]),
+      emitido && (emitido.medicamentos || []).length ? el("button", {
+        type: "button",
+        class: "btn-subtle is-tx-save",
+        style: "padding: 12px; font-weight: 700; border-radius: 14px; font-size: 13.5px; display: flex; align-items: center; justify-content: center; gap: 8px;",
+        onclick: () => abrirGuardarTx(emitido),
+      }, [
+        icono("bookmark"),
+        el("span", { text: "Guardar esquema de este paciente como Tx frecuente" }),
+      ]) : null,
+    ].filter(Boolean)),
 
     el("div", { style: "display: flex; gap: 10px; width: 100%; margin-top: 8px;" }, [
       el("button", {
@@ -3296,28 +3313,38 @@ function modalTxFrecuentes() {
   ]);
 }
 
+function abrirGuardarTx(origenItem = null) {
+  itemAGuardarTx = origenItem;
+  abrirModal("guardar-tx");
+}
+
 function modalGuardarTx() {
+  const fuente = itemAGuardarTx || draft;
+  const esItemHistorial = Boolean(itemAGuardarTx && itemAGuardarTx.nombre);
+  const nombreSugerido = fuente.diagnostico || (esItemHistorial ? `Protocolo ${fuente.nombre}` : "");
+  const meds = fuente.medicamentos || [];
+
   const nombreInput = el("input", {
     type: "text",
     placeholder: "Ej: Esquema HTA Amlodipino + Losartán",
-    value: draft.diagnostico || "",
+    value: nombreSugerido,
     maxlength: "100",
     class: "field-input",
     style: "width: 100%;",
   });
   const catInput = el("input", {
     type: "text",
-    placeholder: "Ej: Medicina General, Pediatría, Respiratorio",
-    value: "Medicina General",
+    placeholder: "Ej: Medicina General, Pediatría, Cardiología",
+    value: "Protocolos Personalizados",
     maxlength: "60",
     class: "field-input",
     style: "width: 100%;",
   });
 
-  const resumenMeds = draft.medicamentos.map((m) =>
+  const resumenMeds = meds.map((m) =>
     el("div", { class: "tx-med-row" }, [
       el("strong", { text: `${m.nombre} (${m.presentacion || ""})` }),
-      el("span", { text: ` — ${m.dosis}, ${m.frecuencia} x ${m.duracion}` }),
+      el("span", { text: ` — ${m.dosis || ""}, ${m.frecuencia || ""} x ${m.duracion || ""}` }),
     ])
   );
 
@@ -3325,15 +3352,15 @@ function modalGuardarTx() {
     el("div", { class: "modal-header" }, [
       el("div", { class: "modal-title-group" }, [
         el("h2", { text: "Guardar como Tratamiento Frecuente" }),
-        el("p", { text: "Guarda la combinación actual para usarla en futuros pacientes." }),
+        el("p", { text: esItemHistorial ? `Guardar el esquema de ${fuente.nombre} como protocolo reutilizable.` : "Guarda este protocolo para aplicarlo rápidamente en futuros pacientes." }),
       ]),
       el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
     ]),
     el("div", { class: "modal-body" }, [
-      el("label", { class: "field", text: "Nombre del esquema" }, [nombreInput]),
+      el("label", { class: "field", text: "Nombre del protocolo / esquema" }, [nombreInput]),
       el("label", { class: "field", text: "Categoría" }, [catInput]),
       el("div", { class: "tx-meds-box" }, [
-        el("span", { style: "font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase;", text: `Medicamentos en el esquema (${draft.medicamentos.length})` }),
+        el("span", { style: "font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase;", text: `Medicamentos en el protocolo (${meds.length})` }),
         ...resumenMeds,
       ]),
     ]),
@@ -3351,15 +3378,18 @@ function modalGuardarTx() {
           }
           guardarTratamientoFrecuente(localStorage, {
             nombre,
-            categoria: cleanText(catInput.value, 60) || "Personalizado",
-            cie10: draft.cie10 || "",
-            diagnostico: draft.diagnostico || "",
-            medicamentos: draft.medicamentos,
-            indicacionesGenerales: draft.indicacionesGenerales || "",
+            categoria: cleanText(catInput.value, 60) || "Protocolos Personalizados",
+            cie10: fuente.cie10 || "",
+            diagnostico: fuente.diagnostico || "",
+            medicamentos: meds,
+            indicacionesGenerales: fuente.indicacionesGenerales || "",
           });
+          itemAGuardarTx = null;
           cerrarModal();
+          showError("¡Protocolo guardado con éxito en Tratamientos Frecuentes!");
+          render();
         },
-      }, ["Guardar esquema"]),
+      }, ["Guardar protocolo"]),
     ]),
   ]);
 }

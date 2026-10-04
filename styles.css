@@ -2102,6 +2102,19 @@ input:focus, select:focus, textarea:focus {
 .btn-subtle.is-danger {
   color: var(--danger);
 }
+.btn-subtle.is-tx-save {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+:root[data-theme="dark"] .btn-subtle.is-tx-save,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .btn-subtle.is-tx-save {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+}
 .btn-subtle:hover { opacity: 0.9; }
 
 .empty-state {

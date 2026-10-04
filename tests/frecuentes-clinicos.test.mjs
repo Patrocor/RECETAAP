@@ -291,6 +291,7 @@ test("código de app.js y styles.css integran la suite completa de herramientas 
   assert.match(stylesCss, /\.med-toolbar/);
   assert.match(stylesCss, /\.btn-tool\.is-tx/);
   assert.match(stylesCss, /\.btn-tool\.is-calc/);
+  assert.match(stylesCss, /\.btn-subtle\.is-tx-save/);
   assert.match(stylesCss, /\.dx-rapidos-section/);
   assert.match(stylesCss, /\.dx-quick-chip/);
   assert.match(stylesCss, /\.packs-quick-bar/);
@@ -300,3 +301,77 @@ test("código de app.js y styles.css integran la suite completa de herramientas 
   assert.match(stylesCss, /\.modal-window/);
   assert.match(stylesCss, /\.calc-result-box/);
 });
+
+test("el usuario puede grabar el esquema o protocolo de cualquier paciente para reutilizarlo a futuro", () => {
+  const mockStorage = crearMockStorage();
+
+  // Simular un paciente atendido con su prescripción personalizada
+  const pacienteAtendido = {
+    nombre: "María Elena García",
+    dni: "44556677",
+    diagnostico: "Migraña episódica con aura",
+    cie10: "G43.1",
+    medicamentos: [
+      {
+        nombre: "Sumatriptán",
+        presentacion: "50 mg tableta",
+        via: "Vía oral",
+        dosis: "50 mg",
+        frecuencia: "Según necesidad",
+        duracion: "3 días",
+        cantidad: "6 tabletas",
+        indicaciones: "Tomar al inicio de la fase de cefalea. No repetir antes de 2 horas.",
+      },
+      {
+        nombre: "Naproxeno",
+        presentacion: "500 mg tableta",
+        via: "Vía oral",
+        dosis: "500 mg",
+        frecuencia: "Cada 12 horas",
+        duracion: "3 días",
+        cantidad: "6 tabletas",
+        indicaciones: "Tomar con alimentos junto al triptán.",
+      },
+    ],
+    indicacionesGenerales: "Reposo en habitación oscura y silenciosa. Evitar quesos madurados y chocolate.",
+  };
+
+  // El médico decide guardar este protocolo clínico personalizado
+  const txGuardado = guardarTratamientoFrecuente(mockStorage, {
+    nombre: "Protocolo Migraña con Aura",
+    categoria: "Neurología",
+    cie10: pacienteAtendido.cie10,
+    diagnostico: pacienteAtendido.diagnostico,
+    medicamentos: pacienteAtendido.medicamentos,
+    indicacionesGenerales: pacienteAtendido.indicacionesGenerales,
+  });
+
+  assert.ok(txGuardado);
+  assert.equal(txGuardado.nombre, "Protocolo Migraña con Aura");
+  assert.equal(txGuardado.categoria, "Neurología");
+  assert.equal(txGuardado.medicamentos.length, 2);
+  assert.equal(txGuardado.esPersonalizado, true);
+
+  // Al atender a un nuevo paciente futuro, el protocolo está disponible en la lista de Tx frecuentes
+  const listaActualizada = obtenerTratamientosFrecuentes(mockStorage);
+  const hallado = listaActualizada.find((t) => t.id === txGuardado.id);
+  assert.ok(hallado);
+  assert.equal(hallado.nombre, "Protocolo Migraña con Aura");
+
+  // Y se puede aplicar instantáneamente al nuevo borrador
+  const nuevoPacienteDraft = {
+    pacienteNombre: "Pedro Mendoza",
+    diagnostico: "",
+    cie10: "",
+    medicamentos: [],
+    indicacionesGenerales: "",
+  };
+
+  aplicarTratamientoADraft(nuevoPacienteDraft, hallado);
+  assert.equal(nuevoPacienteDraft.diagnostico, "Migraña episódica con aura");
+  assert.equal(nuevoPacienteDraft.cie10, "G43.1");
+  assert.equal(nuevoPacienteDraft.medicamentos.length, 2);
+  assert.equal(nuevoPacienteDraft.medicamentos[0].nombre, "Sumatriptán");
+  assert.ok(nuevoPacienteDraft.indicacionesGenerales.includes("habitación oscura"));
+});
+
