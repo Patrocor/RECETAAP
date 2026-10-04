@@ -194,6 +194,11 @@ const emptyPerfil = () => ({
   telefono: "",
   email: "",
   firmaSello: "",
+  rubricaAjuste: {
+    offsetX: 0,
+    offsetY: 0,
+    escala: 1,
+  },
   tema: "auto",
 });
 
@@ -405,6 +410,17 @@ function botonMas(label, onclick) {
   }, [icono("plus")]);
 }
 
+function sanitizeRubricaAjuste(ajuste) {
+  const x = Number(ajuste?.offsetX);
+  const y = Number(ajuste?.offsetY);
+  const esc = Number(ajuste?.escala);
+  return {
+    offsetX: Number.isFinite(x) ? Math.max(-40, Math.min(40, Math.round(x))) : 0,
+    offsetY: Number.isFinite(y) ? Math.max(-30, Math.min(30, Math.round(y))) : 0,
+    escala: Number.isFinite(esc) ? Math.max(0.6, Math.min(1.8, Math.round(esc * 100) / 100)) : 1,
+  };
+}
+
 function loadPerfil() {
   try {
     const raw = JSON.parse(localStorage.getItem(PERFIL_KEY) || "null");
@@ -416,6 +432,7 @@ function loadPerfil() {
       telefono: cleanText(raw.telefono, 20),
       email: cleanText(raw.email, 120),
       firmaSello: typeof raw.firmaSello === "string" && raw.firmaSello.startsWith("data:image/") ? raw.firmaSello : "",
+      rubricaAjuste: sanitizeRubricaAjuste(raw.rubricaAjuste),
       tema: ["auto", "light", "dark"].includes(raw.tema) ? raw.tema : "auto",
     };
   } catch {
@@ -642,10 +659,10 @@ function footer() {
       }, ["Volver a editar"]),
       el("button", {
         type: "button",
-        class: "btn",
+        class: "btn is-primary btn-aprobar-documento",
         disabled: busy,
         onclick: esReceta ? generarPDF : generarOrdenExamenes,
-      }, [busy ? "Generando…" : esReceta ? "Emitir PDF" : "Emitir orden"]),
+      }, [busy ? "Aprobando…" : esReceta ? "✓ Aprobar y Emitir Receta" : "✓ Aprobar y Emitir Orden"]),
     ]);
   }
   if (screen === "receta") {
@@ -1300,10 +1317,11 @@ function viewPerfil() {
   if (perfil.firmaSello) {
     const previewImg = document.createElement("img");
     previewImg.src = perfil.firmaSello;
-    previewImg.alt = "Sello y Firma";
+    previewImg.alt = "Rúbrica y Sello";
     previewImg.className = "firma-preview-img";
     firmaBox = el("div", { class: "firma-container has-firma" }, [
       previewImg,
+      el("p", { class: "muted", style: "font-size: 11.5px; margin: 0;", text: "Rúbrica/sello cargado. En la vista previa podrás acomodar su posición y tamaño exacto antes de aprobar el documento." }),
       el("div", { class: "firma-actions" }, [
         el("button", {
           type: "button",
@@ -1317,17 +1335,17 @@ function viewPerfil() {
             perfil.firmaSello = "";
             render();
           },
-        }, ["Quitar firma"]),
+        }, ["Quitar rúbrica"]),
       ]),
     ]);
   } else {
     firmaBox = el("div", { class: "firma-container" }, [
-      el("p", { class: "muted", text: "Sube una imagen de tu sello o firma manuscrita para que se incluya automáticamente en el PDF de recetas y órdenes." }),
+      el("p", { class: "muted", text: "Sube una imagen de tu rúbrica o sello médico (PNG/JPG). En la vista previa de la receta u orden de exámenes podrás acomodarla (moverla o escalarla) y luego aprobar el documento para emitirlo." }),
       el("button", {
         type: "button",
         class: "btn-subtle is-primary",
         onclick: () => fileInput.click(),
-      }, ["+ Subir foto de sello y firma"]),
+      }, ["+ Cargar rúbrica de firma o sello"]),
     ]);
   }
 
@@ -1351,7 +1369,7 @@ function viewPerfil() {
     field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111", null, { autocomplete: "tel", name: "tel", inputmode: "tel" }),
     field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe", null, { autocomplete: "email", name: "email" }),
     el("div", { class: "field-group" }, [
-      el("label", { class: "field-label", text: "Sello y Firma (opcional)" }),
+      el("label", { class: "field-label", text: "Rúbrica de la firma y sello médico" }),
       fileInput,
       firmaBox,
     ]),
@@ -2139,6 +2157,86 @@ function abrirPrevia(origen) {
   render();
 }
 
+function previewSignatureBox() {
+  const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
+  if (!perfil.firmaSello) {
+    return el("div", { class: "preview-signature-box" }, [
+      el("div", { class: "preview-signature-line" }),
+      el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
+      el("button", {
+        type: "button",
+        class: "btn-subtle",
+        style: "margin-top: 6px; font-size: 11px; padding: 4px 8px;",
+        onclick: () => openPerfil("previa"),
+      }, ["+ Agregar rúbrica"]),
+    ]);
+  }
+
+  const mover = (dx, dy) => {
+    perfil.rubricaAjuste = sanitizeRubricaAjuste({
+      offsetX: ajuste.offsetX + dx,
+      offsetY: ajuste.offsetY + dy,
+      escala: ajuste.escala,
+    });
+    savePerfil();
+    render();
+  };
+
+  const escalar = (factor) => {
+    perfil.rubricaAjuste = sanitizeRubricaAjuste({
+      offsetX: ajuste.offsetX,
+      offsetY: ajuste.offsetY,
+      escala: ajuste.escala + factor,
+    });
+    savePerfil();
+    render();
+  };
+
+  const resetear = () => {
+    perfil.rubricaAjuste = { offsetX: 0, offsetY: 0, escala: 1 };
+    savePerfil();
+    render();
+  };
+
+  return el("div", { class: "preview-signature-box rubrica-interactive" }, [
+    el("div", { class: "preview-rubrica-stage" }, [
+      el("img", {
+        src: perfil.firmaSello,
+        class: "preview-firma-img",
+        alt: "Rúbrica y Sello",
+        style: `transform: translate(${ajuste.offsetX}px, ${ajuste.offsetY}px) scale(${ajuste.escala}); transform-origin: center center;`,
+      }),
+    ]),
+    el("div", { class: "preview-signature-line" }),
+    el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
+    el("div", { class: "rubrica-controls-panel" }, [
+      el("div", { class: "rubrica-controls-label" }, [
+        el("span", { text: "Acomodar rúbrica:" }),
+        (ajuste.offsetX !== 0 || ajuste.offsetY !== 0 || ajuste.escala !== 1) ? el("button", {
+          type: "button",
+          class: "rubrica-reset-btn",
+          onclick: resetear,
+          title: "Restablecer posición y tamaño",
+        }, ["Reset"]) : null,
+      ]),
+      el("div", { class: "rubrica-dpad" }, [
+        el("button", { type: "button", class: "dpad-btn up", title: "Mover arriba", onclick: () => mover(0, -3) }, ["▲"]),
+        el("div", { class: "dpad-row" }, [
+          el("button", { type: "button", class: "dpad-btn left", title: "Mover a la izquierda", onclick: () => mover(-4, 0) }, ["◀"]),
+          el("button", { type: "button", class: "dpad-btn center", title: "Centrar", onclick: () => { perfil.rubricaAjuste.offsetX = 0; perfil.rubricaAjuste.offsetY = 0; savePerfil(); render(); } }, ["•"]),
+          el("button", { type: "button", class: "dpad-btn right", title: "Mover a la derecha", onclick: () => mover(4, 0) }, ["▶"]),
+        ]),
+        el("button", { type: "button", class: "dpad-btn down", title: "Mover abajo", onclick: () => mover(0, 3) }, ["▼"]),
+      ]),
+      el("div", { class: "rubrica-zoom-row" }, [
+        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Reducir tamaño", onclick: () => escalar(-0.1) }, ["A-"]),
+        el("span", { class: "rubrica-zoom-val", text: `${Math.round(ajuste.escala * 100)}%` }),
+        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Aumentar tamaño", onclick: () => escalar(0.1) }, ["A+"]),
+      ]),
+    ]),
+  ]);
+}
+
 function viewPrevia() {
   const esReceta = origenPrevia === "receta";
   if (esReceta) {
@@ -2190,12 +2288,7 @@ function viewPrevia() {
             el("strong", { text: "Próximo control: " }),
             el("span", { text: draft.proximoControl ? fechaLegible(draft.proximoControl) : "Según evolución clínica" }),
           ]),
-          el("div", { class: "preview-signature-box" }, [
-            perfil.firmaSello
-              ? el("img", { src: perfil.firmaSello, class: "preview-firma-img", alt: "Firma y sello" })
-              : el("div", { class: "preview-signature-line" }),
-            el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
-          ]),
+          previewSignatureBox(),
         ]),
       ]),
     ]);
@@ -2241,12 +2334,7 @@ function viewPrevia() {
           el("div", { class: "preview-control" }, [
             el("span", { class: "muted", text: "Validez: 30 días calendario" }),
           ]),
-          el("div", { class: "preview-signature-box" }, [
-            perfil.firmaSello
-              ? el("img", { src: perfil.firmaSello, class: "preview-firma-img", alt: "Firma y sello" })
-              : el("div", { class: "preview-signature-line" }),
-            el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
-          ]),
+          previewSignatureBox(),
         ]),
       ]),
     ]);
@@ -3017,6 +3105,7 @@ function savePerfilFromForm() {
     telefono: cleanText(document.getElementById("p-tel").value, 20),
     email: cleanText(document.getElementById("p-mail").value, 120),
     firmaSello: perfil.firmaSello || "",
+    rubricaAjuste: sanitizeRubricaAjuste(perfil.rubricaAjuste),
     tema: temaVal,
   };
   const email = validarEmail(nextPerfil.email);
@@ -3833,7 +3922,17 @@ function dibujarReceta(doc, top, alto) {
   doc.line(x + 34, pie + 1.1, x + 78, pie + 1.1);
   if (perfil.firmaSello) {
     try {
-      doc.addImage(perfil.firmaSello, "PNG", x + 137, pie - 19, 36, 12, undefined, "FAST");
+      const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
+      const baseW = 36;
+      const baseH = 12;
+      const w = baseW * ajuste.escala;
+      const h = baseH * ajuste.escala;
+      // Convertir desplazamiento de pixels a mm aproximados (aprox 0.26 mm por pixel en pantalla)
+      const offX = ajuste.offsetX * 0.26;
+      const offY = ajuste.offsetY * 0.26;
+      const posX = (x + 137 + (baseW - w) / 2) + offX;
+      const posY = (pie - 19 + (baseH - h) / 2) + offY;
+      doc.addImage(perfil.firmaSello, "PNG", posX, posY, w, h, undefined, "FAST");
     } catch {}
   }
   doc.line(x + 124, pie - 6, x + 186, pie - 6);
@@ -3957,7 +4056,16 @@ function generarOrdenExamenes() {
     }
     if (perfil.firmaSello) {
       try {
-        doc.addImage(perfil.firmaSello, "PNG", 139, y - 13, 36, 12, undefined, "FAST");
+        const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
+        const baseW = 36;
+        const baseH = 12;
+        const w = baseW * ajuste.escala;
+        const h = baseH * ajuste.escala;
+        const offX = ajuste.offsetX * 0.26;
+        const offY = ajuste.offsetY * 0.26;
+        const posX = (139 + (baseW - w) / 2) + offX;
+        const posY = (y - 13 + (baseH - h) / 2) + offY;
+        doc.addImage(perfil.firmaSello, "PNG", posX, posY, w, h, undefined, "FAST");
       } catch {}
     }
     doc.setDrawColor(130, 151, 168);
