@@ -2657,13 +2657,16 @@ input:focus, select:focus, textarea:focus {
 }
 .preview-rp-title {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
   gap: 6px;
 }
 .preview-rp-cant {
   font-size: 10.5px;
   color: #123652;
   font-weight: 700;
+  white-space: nowrap;
 }
 .preview-rp-pauta {
   margin: 2px 0 0;
@@ -2813,6 +2816,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .preview-paper-cuarto {
+  max-width: 320px;
   padding: 12px 14px;
 }
 

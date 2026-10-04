@@ -1460,7 +1460,7 @@ function viewPerfil() {
     temaSelector,
     el("div", { class: "field-group" }, [
       el("label", { class: "field-label", text: "Modelo de receta" }),
-      el("p", { class: "muted", text: "La receta ocupa ½ página A4. Laboratorio e imagen se emiten por separado en ¼ A4." }),
+      el("p", { class: "muted", text: "La receta ocupa ½ página A4. Laboratorio e imagen se emiten por separado en ¼ A4 vertical." }),
       selectorModeloReceta(),
     ]),
   ]);
@@ -2388,7 +2388,7 @@ function previewPapelOrden(tipo, items) {
       : [el("li", { text: "Sin estudios en esta orden" })]),
     el("div", { class: "preview-footer-grid" }, [
       el("div", { class: "preview-control" }, [
-        el("span", { class: "muted", text: "¼ página A4 · validez 30 días" }),
+        el("span", { class: "muted", text: "¼ A4 vertical · validez 30 días" }),
       ]),
       previewSignatureBox(),
     ]),
@@ -2449,7 +2449,7 @@ function viewPrevia() {
   }
 
   return el("section", { class: "screen preview-screen stack" }, [
-    el("p", { class: "eyebrow", text: "Cada orden completa se emite en ¼ de página A4" }),
+    el("p", { class: "eyebrow", text: "Cada orden completa se emite en ¼ A4 vertical" }),
     ...papeles,
   ]);
 }
@@ -3925,9 +3925,12 @@ function lineasColumna(doc, lineas, x, y, ancho, limite) {
 }
 
 function recetaLineasListado() {
-  return draft.medicamentos.map((med, index) => (
-    `${index + 1}. ${med.nombre} — ${med.presentacion} · ${med.cantidad}`
-  ));
+  const lineas = [];
+  draft.medicamentos.forEach((med, index) => {
+    lineas.push(`${index + 1}. ${med.nombre}  ${med.cantidad}`);
+    if (med.presentacion) lineas.push(med.presentacion);
+  });
+  return lineas;
 }
 
 function recetaLineasMedicamentos() {
@@ -4050,7 +4053,8 @@ function recetaPonerFirma(doc, posX, posY, baseW = 36, baseH = 12) {
 }
 
 const ALTO_RECETA = 148.5;
-const ALTO_ORDEN = 74.25;
+const ANCHO_ORDEN = 105;
+const ALTO_ORDEN = 148.5;
 
 function dibujarReceta(doc, top, alto) {
   const modelo = modeloRecetaId(perfil.modeloReceta);
@@ -4170,7 +4174,7 @@ function dibujarRecetaInstitucional(doc, top, alto) {
 function dibujarOrdenCuarto(doc, tipo, items) {
   const x = 0;
   const top = 0;
-  const ancho = 210;
+  const ancho = ANCHO_ORDEN;
   const alto = ALTO_ORDEN;
   const { tinta, oro, papel, banda, suave } = paletaDocumento();
   const esLab = tipo === "Laboratorio";
@@ -4178,57 +4182,59 @@ function dibujarOrdenCuarto(doc, tipo, items) {
 
   doc.setFillColor(...papel);
   doc.rect(x, top, ancho, alto, "F");
-  dibujarMarcaAgua(doc, x, top + 16, ancho, alto - 24);
+  dibujarMarcaAgua(doc, x, top + 36, ancho, alto - 56);
   doc.setFillColor(...tinta);
-  doc.rect(x, top, ancho, 14, "F");
+  doc.rect(x, top, ancho, 22, "F");
   doc.setFillColor(...oro);
-  doc.rect(x, top + 14, ancho, 0.7, "F");
+  doc.rect(x, top + 22, ancho, 0.8, "F");
 
   doc.setTextColor(255, 255, 255);
   doc.setFont("times", "bold");
-  doc.setFontSize(10);
-  doc.text((perfil.nombre || "Médico tratante").toUpperCase(), x + 7, top + 6.2);
+  doc.setFontSize(8.4);
+  const nombre = doc.splitTextToSize((perfil.nombre || "Médico tratante").toUpperCase(), 74)[0] || "";
+  doc.text(nombre, x + 5, top + 7.2);
   doc.setFont("times", "italic");
-  doc.setFontSize(7);
-  doc.setTextColor(226, 234, 241);
-  doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase(), x + 7, top + 10.8);
-  doc.setFont("times", "bold");
-  doc.setFontSize(7.2);
-  doc.setTextColor(...oro);
-  doc.text(titulo, x + ancho - 22, top + 6.2, { align: "right" });
-  doc.setFont("times", "normal");
   doc.setFontSize(6.4);
+  doc.setTextColor(226, 234, 241);
+  doc.text(doc.splitTextToSize([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase(), 74)[0] || "", x + 5, top + 12);
+  doc.setFont("times", "bold");
+  doc.setFontSize(6.6);
+  doc.setTextColor(...oro);
+  doc.text(titulo, x + 5, top + 17.4);
+  doc.setFont("times", "normal");
+  doc.setFontSize(5.8);
   doc.setTextColor(214, 224, 233);
-  doc.text("¼ página A4", x + ancho - 22, top + 10.6, { align: "right" });
-  dibujarLogoDerecha(doc, x + ancho - 18.5, top + 1.4, tinta);
+  doc.text("¼ A4 vertical", x + 5, top + 20.6);
+  dibujarLogoDerecha(doc, x + ancho - 16.8, top + 4.2, tinta);
 
   doc.setFillColor(...banda);
-  doc.rect(x, top + 14.7, ancho, 10.4, "F");
-  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 7, top + 18.4, 118);
-  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 130, top + 18.4, 72);
-  campoReceta(doc, "Dx:", [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "), x + 7, top + 23.4, 195);
+  doc.rect(x, top + 22.8, ancho, 18, "F");
+  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 5, top + 27.4, 95);
+  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 5, top + 32.6, 46);
+  campoReceta(doc, "DNI:", draft.pacienteDNI, x + 54, top + 32.6, 46);
+  campoReceta(doc, "Dx:", [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "), x + 5, top + 37.8, 95);
 
   const lineas = items.map((ex, index) => {
     const extra = [ex.grupo, ex.indicaciones].filter(Boolean).join(" · ");
     return extra ? `${index + 1}. ${ex.nombre} — ${extra}` : `${index + 1}. ${ex.nombre}`;
   });
-  textoAdaptado(doc, lineas, x + 7, top + 29.5, 140, top + alto - 8, {
-    maxSize: items.length > 6 ? 7 : 8.2,
+  textoAdaptado(doc, lineas, x + 5, top + 46, 95, top + alto - 18, {
+    maxSize: items.length > 8 ? 7 : 8,
     minSize: 5.6,
     color: tinta,
   });
 
-  const pie = top + alto - 4.6;
-  recetaPonerFirma(doc, x + 160, pie - 14, 28, 9);
+  const pie = top + alto - 6;
+  recetaPonerFirma(doc, x + 52, pie - 16, 28, 9);
   doc.setDrawColor(...tinta);
   doc.setLineWidth(0.25);
-  doc.line(x + 152, pie - 3, x + 202, pie - 3);
+  doc.line(x + 48, pie - 4, x + 100, pie - 4);
   doc.setFont("times", "italic");
-  doc.setFontSize(6.4);
+  doc.setFontSize(6.2);
   doc.setTextColor(...suave);
-  doc.text("Firma y sello", x + 177, pie, { align: "center" });
+  doc.text("Firma y sello", x + 74, pie, { align: "center" });
   doc.setFont("times", "normal");
-  doc.text("Validez 30 días", x + 7, pie);
+  doc.text("Validez 30 días", x + 5, pie);
 }
 
 function validarEmisionDocumento() {

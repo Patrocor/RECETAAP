@@ -8,7 +8,7 @@ const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 test("la receta lista a la izquierda solo medicamento, concentración y cantidad", () => {
   assert.match(app, /function recetaLineasListado\(/);
   assert.match(app, /function recetaLineasIndicaciones\(/);
-  assert.match(app, /\$\{med\.nombre\} — \$\{med\.presentacion\} · \$\{med\.cantidad\}/);
+  assert.match(app, /\$\{index \+ 1\}\. \$\{med\.nombre\}  \$\{med\.cantidad\}/);
   assert.match(app, /textoAdaptado\(doc, recetaLineasListado\(\)/);
   assert.match(app, /textoAdaptado\(doc, recetaLineasIndicaciones\(\)/);
   const listado = app.slice(app.indexOf("function recetaLineasListado"), app.indexOf("function recetaLineasMedicamentos"));
@@ -29,7 +29,9 @@ test("las indicaciones de la receta llevan toma, horario y recomendaciones", () 
 });
 
 test("laboratorio e imagen se emiten por separado en un cuarto de A4", () => {
-  assert.match(app, /const ALTO_ORDEN = 74.25/);
+  assert.match(app, /const ANCHO_ORDEN = 105/);
+  assert.match(app, /const ALTO_ORDEN = 148.5/);
+  assert.match(app, /¼ A4 vertical/);
   assert.match(app, /function dibujarOrdenCuarto\(/);
   assert.match(app, /function generarOrdenLaboratorio\(/);
   assert.match(app, /function generarOrdenImagenes\(/);
