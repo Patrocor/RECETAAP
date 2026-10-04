@@ -17,10 +17,10 @@ test("el check para agregar el medicamento está junto a la cantidad calculada",
 });
 
 test("la receta PDF es un solo ejemplar de media página A4", () => {
-  assert.match(app, /const alto = 142/);
-  assert.match(app, /dibujarReceta\(doc, 8, alto\)/);
+  assert.match(app, /const ALTO_RECETA = 148.5/);
+  assert.match(app, /dibujarReceta\(doc, 0, alto\)/);
   assert.doesNotMatch(app, /dibujarReceta\(doc, 150/);
-  assert.match(app, /Media página A4 · un solo ejemplar/);
+  assert.match(app, /½ página A4 · un solo ejemplar/);
 });
 
 test("hay tres modelos de receta seleccionables", () => {
@@ -42,8 +42,9 @@ test("el aviso de cargar esquema previo se oculta después de cargar", () => {
   assert.match(app, /draft\.esquemaPrevioCargado !== clavePrevia/);
 });
 
-test("el PDF clásico usa un diseño premium sin marca de agua LR", () => {
-  assert.match(app, /const oro = \[184, 149, 92\]/);
+test("el PDF clásico usa un diseño premium con logo a la derecha y marca de agua", () => {
+  assert.match(app, /function dibujarMarcaAgua\(/);
+  assert.match(app, /function dibujarLogoDerecha\(/);
   assert.match(app, /RECETA MÉDICA/);
   assert.doesNotMatch(app, /doc\.setFontSize\(36\);/);
 });

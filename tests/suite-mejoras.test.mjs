@@ -72,7 +72,7 @@ test("soporte PWA offline incluye manifest válido, sw.js y metadatos en index.h
   assert.equal(manifest.display, "standalone");
   assert.ok(Array.isArray(manifest.icons) && manifest.icons.length > 0);
 
-  assert.match(sw, /recetapp-v7/);
+  assert.match(sw, /recetapp-v8/);
   assert.match(sw, /caches\.open/);
   assert.match(sw, /self\.addEventListener\("fetch"/);
 

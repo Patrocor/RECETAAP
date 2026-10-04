@@ -2719,6 +2719,125 @@ input:focus, select:focus, textarea:focus {
   flex: 1;
 }
 
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: min(560px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.doc-action {
+  min-width: 92px;
+  min-height: 64px;
+  padding: 8px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  forced-color-adjust: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.doc-action .ico {
+  width: 22px;
+  height: 22px;
+}
+
+.doc-action.is-emit {
+  background: #123652 !important;
+  color: #ffffff !important;
+  border-color: #123652 !important;
+}
+
+.doc-action.is-ghost,
+.doc-action.is-preview {
+  background: var(--card) !important;
+  color: var(--ink) !important;
+}
+
+.doc-action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.preview-mark {
+  position: absolute;
+  inset: 28% 0 auto;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 86px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #123652;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.preview-header-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.preview-header-end {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.preview-header-end .logo {
+  width: 42px;
+  height: 34px;
+}
+
+.preview-rp-conc {
+  margin: 2px 0 0;
+  color: #3b5368;
+  font-size: 11px;
+}
+
+.preview-paper-mitad,
+.preview-paper-cuarto {
+  position: relative;
+}
+
+.preview-paper-cuarto {
+  padding: 12px 14px;
+}
+
+.preview-paper-mitad .preview-header,
+.preview-paper-cuarto .preview-header {
+  background: #123652;
+  color: #ffffff;
+  margin: -20px -18px 12px;
+  padding: 14px 18px 12px;
+  border: 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.preview-paper-cuarto .preview-header {
+  margin: -12px -14px 10px;
+  padding: 10px 14px 8px;
+}
+
+.preview-paper-mitad .preview-doctor-name,
+.preview-paper-cuarto .preview-doctor-name,
+.preview-paper-mitad .preview-doctor-sub,
+.preview-paper-cuarto .preview-doctor-sub {
+  color: #ffffff;
+}
+
 /* --- Sello y Firma en Perfil --- */
 .firma-container {
   border: 1.5px dashed var(--line);
@@ -3860,6 +3979,13 @@ input[readonly] {
 
 :root[data-theme="dark"] .order-link small {
   color: var(--ink-soft);
+}
+
+:root[data-theme="dark"] .doc-action.is-ghost,
+:root[data-theme="dark"] .doc-action.is-preview {
+  background: var(--card) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
 }
 
 :root[data-theme="dark"] .dpad-btn,

@@ -9,7 +9,10 @@ test("la receta y la orden de exámenes son flujos separados", () => {
   assert.doesNotMatch(app, /fold\("examenes"/);
   assert.match(app, /Solicitar exámenes/);
   assert.match(app, /function generarOrdenExamenes\(\)/);
-  assert.match(app, /Orden_examenes_/);
+  assert.match(app, /function generarOrdenLaboratorio\(\)/);
+  assert.match(app, /function generarOrdenImagenes\(\)/);
+  assert.match(app, /Orden_laboratorio_/);
+  assert.match(app, /Orden_imagenes_/);
   assert.doesNotMatch(app, /Examen: \$\{ex\.nombre\}/);
 });
 
