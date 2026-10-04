@@ -59,8 +59,10 @@ test("vista previa antes de emitir y pantalla de listo con WhatsApp y Web Share"
 
 test("modo oscuro adaptativo configurado con variables CSS y selector de tema", () => {
   assert.match(css, /:root\[data-theme="dark"\]/);
+  assert.match(css, /:root\[data-theme="light"\]/);
   assert.match(css, /@media \(prefers-color-scheme: dark\)/);
   assert.match(app, /function aplicarTema\(/);
+  assert.match(app, /function resolverTema\(/);
   assert.match(app, /tema: "auto"/);
 });
 
@@ -70,7 +72,7 @@ test("soporte PWA offline incluye manifest válido, sw.js y metadatos en index.h
   assert.equal(manifest.display, "standalone");
   assert.ok(Array.isArray(manifest.icons) && manifest.icons.length > 0);
 
-  assert.match(sw, /recetapp-v3/);
+  assert.match(sw, /recetapp-v4/);
   assert.match(sw, /caches\.open/);
   assert.match(sw, /self\.addEventListener\("fetch"/);
 

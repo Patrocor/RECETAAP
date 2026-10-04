@@ -1,6 +1,6 @@
 :root {
-  --ink: #131b3a;
-  --ink-soft: #5c6578;
+  --ink: #0b1f33;
+  --ink-soft: #3d4758;
   --line: rgba(19, 27, 58, 0.12);
   --bg: #f3f5fb;
   --card: #ffffff;
@@ -29,7 +29,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --ink: #f0f4f8;
-    --ink-soft: #94a3b8;
+    --ink-soft: #c5d0dc;
     --line: rgba(255, 255, 255, 0.14);
     --bg: #090e1a;
     --card: #121a2d;
@@ -46,9 +46,24 @@
   }
 }
 
+html {
+  color-scheme: light;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ink: #0b1f33;
+  --ink-soft: #3d4758;
+  --line: rgba(19, 27, 58, 0.12);
+  --bg: #f3f5fb;
+  --card: #ffffff;
+  --card-subtle: #f8fafc;
+}
+
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --ink: #f0f4f8;
-  --ink-soft: #94a3b8;
+  --ink-soft: #c5d0dc;
   --line: rgba(255, 255, 255, 0.14);
   --bg: #090e1a;
   --card: #121a2d;
@@ -279,7 +294,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .fold {
   flex: none;
-  background: white;
+  background: var(--card);
+  color: var(--ink);
   border-radius: 14px;
   box-shadow: var(--shadow);
   min-height: 0;
@@ -414,7 +430,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .shell-desk {
   max-width: none;
   width: 100%;
-  background: #f4f7fb;
+  background: var(--bg);
 }
 
 .shell-desk .desk:not(.desk-lock) {
@@ -517,7 +533,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .desk-card {
   margin-top: -18px;
-  background: white;
+  background: var(--card);
+  color: var(--ink);
   border-radius: 20px;
   padding: 16px;
   box-shadow: 0 18px 40px rgba(18, 54, 82, 0.12);
@@ -561,7 +578,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   padding: 12px 16px;
   border: 1px solid rgba(18, 54, 82, 0.1);
   border-radius: 16px;
-  background: white;
+  background: var(--card);
+  color: var(--ink);
   text-align: left;
   cursor: pointer;
 }
@@ -642,7 +660,7 @@ button.desk-status-card:focus-visible,
   margin: 0;
   padding: 0;
   gap: clamp(14px, 3.2vh, 40px) 0;
-  background: #f4f7fb;
+  background: var(--bg);
 }
 
 .desk-lock > * { animation: none; }
@@ -703,7 +721,8 @@ button.desk-status-card:focus-visible,
   justify-content: center;
   min-height: 0;
   width: 100%;
-  background: #f4f7fb;
+  background: var(--bg);
+  color: var(--ink);
   padding: 8px 0 4px;
 }
 
@@ -887,7 +906,7 @@ svg.logo {
 .shell-desk .footer {
   display: flex;
   justify-content: center;
-  background: #f4f7fb;
+  background: var(--bg);
   border-top: 0;
 }
 
@@ -896,6 +915,7 @@ svg.logo {
   min-height: 48px;
   border-radius: 16px;
   background: #123652;
+  color: #ffffff;
 }
 
 .shell-desk .desk-lock .btn {
@@ -996,7 +1016,7 @@ svg.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f4f7fb;
+  background: var(--bg);
   color: #0b1f33;
   padding: 18px 20px calc(18px + env(safe-area-inset-bottom));
   box-sizing: border-box;
@@ -1139,7 +1159,8 @@ svg.logo {
 }
 
 .desk-status-card {
-  background: white;
+  background: var(--card);
+  color: var(--ink);
   border: 1px solid rgba(18, 54, 82, 0.08);
   border-radius: 20px;
   padding: 16px;
@@ -1153,7 +1174,7 @@ svg.logo {
 button.desk-status-card {
   cursor: pointer;
   border: 1px solid rgba(18, 54, 82, 0.08);
-  background: white;
+  background: var(--card);
   transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1252,7 +1273,7 @@ button.desk-status-card:active {
 .desk-rail-dock {
   display: flex;
   gap: 6px;
-  background: white;
+  background: var(--card);
   border: 1px solid rgba(18, 54, 82, 0.08);
   border-radius: 18px;
   padding: 6px;
@@ -1308,7 +1329,9 @@ button.desk-status-card:active {
 .shell-flow {
   max-width: none;
   width: 100%;
-  background: #f4f7fb;
+  background: var(--bg);
+  color: var(--ink);
+  color-scheme: inherit;
 }
 
 .shell-flow .top {
@@ -1351,7 +1374,7 @@ button.desk-status-card:active {
 .shell-flow .footer {
   display: flex;
   justify-content: center;
-  background: #f4f7fb;
+  background: var(--bg);
   border-top: 0;
   padding-bottom: calc(12px + env(safe-area-inset-bottom));
 }
@@ -1360,13 +1383,14 @@ button.desk-status-card:active {
   min-height: 52px;
   border-radius: 16px;
   background: #123652;
+  color: #ffffff;
 }
 
 .shell-flow .footer .btn.ghost {
-  background: white;
-  color: #123652;
+  background: var(--card);
+  color: var(--ink);
   box-shadow: none;
-  border: 1px solid rgba(18, 54, 82, 0.16);
+  border: 1px solid var(--line);
 }
 
 .shell-flow input,
@@ -1451,6 +1475,7 @@ button.desk-status-card:active {
   font-size: 26px;
   letter-spacing: -0.03em;
   line-height: 1.15;
+  color: var(--ink);
 }
 
 .lede {
@@ -1622,7 +1647,7 @@ input:focus, select:focus, textarea:focus {
 
 .chips button, .link, .text-danger, .add-btn {
   border: 0;
-  background: white;
+  background: var(--card);
   cursor: pointer;
 }
 
@@ -1677,7 +1702,8 @@ input:focus, select:focus, textarea:focus {
   z-index: 20;
   max-height: min(420px, calc(100dvh - 250px));
   overflow: auto;
-  background: white;
+  background: var(--card);
+  color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow-lg);
@@ -1758,6 +1784,7 @@ input:focus, select:focus, textarea:focus {
 
 .item, .review {
   background: var(--card);
+  color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 10px 12px;
@@ -1956,9 +1983,10 @@ input:focus, select:focus, textarea:focus {
   align-items: center;
   gap: 12px;
   padding: 15px;
-  border: 1px dashed rgba(18, 54, 82, 0.22);
+  border: 1px dashed var(--line);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--card);
+  color: var(--ink);
 }
 
 .empty-mark {
@@ -1978,11 +2006,13 @@ input:focus, select:focus, textarea:focus {
   display: block;
   margin-bottom: 3px;
   font-size: 14px;
+  color: var(--ink);
 }
 
 .empty.exam-empty p {
   font-size: 12px;
   line-height: 1.4;
+  color: var(--ink-soft);
 }
 
 .empty.exam-empty .icon-add {
@@ -2211,8 +2241,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 .btn.ghost:hover:not(:disabled) {
-  background: white;
-  border-color: rgba(19, 27, 58, 0.22);
+  background: var(--card);
+  border-color: var(--line);
   color: var(--ink);
   box-shadow: var(--shadow-sm);
 }
@@ -3470,5 +3500,174 @@ input:focus, select:focus, textarea:focus {
   background: #0d655e !important;
   box-shadow: 0 8px 22px rgba(15, 118, 110, 0.38) !important;
 }
+
+/* Contraste clínico en toda la app: tinta y superficies siempre emparejadas. */
+.shell,
+.main,
+.screen,
+.board,
+.item,
+.review,
+.field,
+.empty,
+.empty-state,
+.dialog,
+.modal-window,
+.suggestions,
+.pack-quick-chip,
+.dx-quick-chip,
+.historial-card,
+.tx-card,
+.profile-row,
+.secondary-card {
+  color: var(--ink);
+}
+
+.lede,
+.muted,
+.profile-sub,
+.empty p,
+.empty-state p,
+.dialog p,
+.order-heading p,
+.order-summary,
+.exam-guidance,
+.desk-draft-sub,
+.desk-draft-label,
+.fold-sum {
+  color: var(--ink-soft);
+}
+
+.empty.exam-empty strong,
+.order-heading h2,
+.order-summary strong,
+.item h3,
+.review h2,
+.dialog h2 {
+  color: var(--ink);
+}
+
+.preview-paper,
+.preview-paper * {
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+
+.preview-paper {
+  background: #ffffff;
+  color: #123652;
+}
+
+:root[data-theme="light"] .desk-home,
+:root[data-theme="light"] .desk-home .desk-panel,
+:root[data-theme="light"] .desk-home .desk-action-card,
+:root[data-theme="light"] .desk-home .desk-status-card,
+:root[data-theme="light"] .desk-home .desk-rail-dock,
+:root[data-theme="light"] .shell-flow,
+:root[data-theme="light"] .shell-desk {
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+
+:root[data-theme="dark"] .desk-home,
+:root[data-theme="dark"] .desk-home .desk-panel,
+:root[data-theme="dark"] .desk-home .desk-action-card,
+:root[data-theme="dark"] .desk-home .desk-status-card,
+:root[data-theme="dark"] .desk-home .desk-rail-dock,
+:root[data-theme="dark"] .shell-flow,
+:root[data-theme="dark"] .shell-desk,
+:root[data-theme="dark"] .app,
+:root[data-theme="dark"] body {
+  color-scheme: dark;
+  forced-color-adjust: none;
+}
+
+:root[data-theme="dark"] .desk-home .desk-panel,
+:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary),
+:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-title,
+:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-arrow,
+:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-desc,
+:root[data-theme="dark"] .desk-rail-dock button,
+:root[data-theme="dark"] .desk-stat-num,
+:root[data-theme="dark"] .desk-stat-label {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .desk-home .desk-action-card:not(.primary) .desk-action-desc,
+:root[data-theme="dark"] .desk-stat-label,
+:root[data-theme="dark"] .desk-rail-dock button {
+  color: var(--ink-soft);
+}
+
+:root[data-theme="dark"] .desk-action-card:not(.primary) .desk-action-icon,
+:root[data-theme="dark"] .patient-mark,
+:root[data-theme="dark"] .exam-kind,
+:root[data-theme="dark"] .empty-mark,
+:root[data-theme="dark"] .tab-count,
+:root[data-theme="dark"] .exam-guidance,
+:root[data-theme="dark"] .order-link {
+  background: var(--card-subtle);
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .exam-guidance {
+  color: var(--ink-soft);
+}
+
+:root[data-theme="dark"] .exam-guidance strong,
+:root[data-theme="dark"] .order-summary strong,
+:root[data-theme="dark"] .order-link strong,
+:root[data-theme="dark"] .order-link small {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .order-link {
+  background: var(--card);
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] .dpad-btn,
+:root[data-theme="dark"] .rubrica-zoom-btn {
+  background: var(--card) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+:root[data-theme="dark"] .rubrica-zoom-val {
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shell-flow,
+  :root:not([data-theme="light"]) .shell-desk,
+  :root:not([data-theme="light"]) .empty.exam-empty,
+  :root:not([data-theme="light"]) .btn.ghost,
+  :root:not([data-theme="light"]) .fold,
+  :root:not([data-theme="light"]) .item,
+  :root:not([data-theme="light"]) .review,
+  :root:not([data-theme="light"]) .search-anchor .suggestions {
+    background: var(--card);
+    color: var(--ink);
+  }
+
+  :root:not([data-theme="light"]) .shell-flow,
+  :root:not([data-theme="light"]) .shell-desk {
+    background: var(--bg);
+  }
+
+  :root:not([data-theme="light"]) .lede,
+  :root:not([data-theme="light"]) .order-heading p,
+  :root:not([data-theme="light"]) .empty p,
+  :root:not([data-theme="light"]) .empty.exam-empty p {
+    color: var(--ink-soft);
+  }
+
+  :root:not([data-theme="light"]) .order-heading h2,
+  :root:not([data-theme="light"]) .empty.exam-empty strong,
+  :root:not([data-theme="light"]) .screen h2 {
+    color: var(--ink);
+  }
+}
+
 
 

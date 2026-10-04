@@ -440,15 +440,43 @@ function loadPerfil() {
   }
 }
 
+function sistemaPrefiereOscuro() {
+  return typeof window !== "undefined"
+    && typeof window.matchMedia === "function"
+    && window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+function resolverTema(tema) {
+  if (tema === "dark" || tema === "light") return tema;
+  return sistemaPrefiereOscuro() ? "dark" : "light";
+}
+
+function aplicarColorScheme(resolved) {
+  if (typeof document === "undefined") return;
+  document.documentElement.setAttribute("data-theme", resolved);
+  document.documentElement.style.colorScheme = resolved;
+}
+
+let temaMediaBound = false;
+
+function observarTemaSistema() {
+  if (temaMediaBound || typeof window === "undefined" || typeof window.matchMedia !== "function") return;
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  const onChange = () => {
+    if ((perfil?.tema || "auto") === "auto") aplicarTema("auto");
+  };
+  if (typeof media.addEventListener === "function") {
+    media.addEventListener("change", onChange);
+  } else if (typeof media.addListener === "function") {
+    media.addListener(onChange);
+  }
+  temaMediaBound = true;
+}
+
 function aplicarTema(tema) {
   if (typeof document === "undefined") return;
-  if (tema === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else if (tema === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-  }
+  aplicarColorScheme(resolverTema(tema));
+  observarTemaSistema();
 }
 
 function sanitizeMed(item) {
