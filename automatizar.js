@@ -94,3 +94,95 @@ export function indicacionesAutomaticas(draft) {
   if (draft?.diagnostico) lines.push("Control según evolución.");
   return lines.join("\n").slice(0, 800);
 }
+
+const AINES_LIST = [
+  "ibuprofeno",
+  "naproxeno",
+  "ketorolaco",
+  "diclofenaco",
+  "ketoprofeno",
+  "meloxicam",
+  "celecoxib",
+  "etoricoxib",
+  "piroxicam",
+  "tenoxicam",
+  "indometacina",
+  "clonixinato de lisina",
+  "dexketoprofeno",
+  "nimesulida",
+  "aspirina",
+  "acido acetilsalicilico",
+];
+
+export function esAineTexto(texto) {
+  const t = String(texto || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  if (/\baine\b/.test(t)) return true;
+  return AINES_LIST.some((aine) => t.includes(aine));
+}
+
+export function esViaSistemica(via) {
+  const v = String(via || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  if (!v) return true;
+  if (/topica|oftalmica|otica|gel|crema|unguento/.test(v)) return false;
+  return /oral|intramuscular|intravenosa|sublingual|rectal|subcutanea/.test(v);
+}
+
+export function verificarAlertaSeguridad(nuevoMed, listaActual, editId = null) {
+  if (!nuevoMed || !nuevoMed.nombre) return null;
+  const nombreNuevo = String(nuevoMed.nombre || "").trim();
+  const otros = (listaActual || []).filter((m) => m && m.id !== editId);
+  if (!otros.length) return null;
+
+  const sinAcento = (s) =>
+    String(s || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+  const raizFarmaco = (s) => {
+    const norm = sinAcento(s)
+      .replace(/\b(\d+(?:\.\d+)?\s*(?:mg|g|mcg|ml|%)\b.*)/g, "")
+      .trim();
+    const palabras = norm.split(/\s+/).filter(Boolean);
+    return palabras[0] || norm;
+  };
+
+  const nombreNorm = sinAcento(nombreNuevo);
+  const raizNuevo = raizFarmaco(nombreNuevo);
+  const viaNuevaSistemica = esViaSistemica(nuevoMed.via);
+  const esAineNuevo = esAineTexto(nombreNorm) || esAineTexto(nuevoMed.presentacion);
+
+  for (const item of otros) {
+    const itemNorm = sinAcento(item.nombre);
+    const raizItem = raizFarmaco(item.nombre);
+    const esMismoPrincipio =
+      nombreNorm === itemNorm ||
+      (nombreNorm.length >= 6 && itemNorm.includes(nombreNorm)) ||
+      (itemNorm.length >= 6 && nombreNorm.includes(itemNorm)) ||
+      (raizNuevo && raizItem && raizNuevo.length >= 4 && raizNuevo === raizItem);
+
+    if (esMismoPrincipio) {
+      return {
+        tipo: "duplicidad",
+        titulo: "Duplicidad de principio activo",
+        mensaje: `Ya agregaste ${item.nombre}. Evita prescribir el mismo fármaco dos veces o verifica la dosis acumulada.`,
+      };
+    }
+    const esAineItem = esAineTexto(itemNorm) || esAineTexto(item.presentacion);
+    const viaItemSistemica = esViaSistemica(item.via);
+    if (esAineNuevo && esAineItem && viaNuevaSistemica && viaItemSistemica) {
+      return {
+        tipo: "aine",
+        titulo: "Alerta: Asociación de AINEs",
+        mensaje: `Ya prescribiste ${item.nombre}. Combinar dos AINEs sistémicos no mejora la analgesia y multiplica el riesgo de hemorragia digestiva y daño renal.`,
+      };
+    }
+  }
+  return null;
+}

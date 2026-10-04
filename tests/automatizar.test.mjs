@@ -9,6 +9,9 @@ import {
   nombreDesdeReniec,
   indicacionesAutomaticas,
   unidadDe,
+  esAineTexto,
+  esViaSistemica,
+  verificarAlertaSeguridad,
 } from "../automatizar.js";
 
 test("la cantidad sale de frecuencia, duración y presentación", () => {
@@ -69,4 +72,33 @@ test("el módulo nuevo no interpreta HTML", () => {
   const source = readFileSync(new URL("../automatizar.js", import.meta.url), "utf8");
   assert.equal(source.includes("innerHTML"), false);
   assert.equal(source.includes("insertAdjacentHTML"), false);
+});
+
+test("las alertas clínicas detectan duplicidad de principios activos y de AINEs", () => {
+  const lista = [
+    { id: 1, nombre: "Paracetamol", presentacion: "500 mg tabletas", via: "Vía oral" },
+    { id: 2, nombre: "Ibuprofeno", presentacion: "400 mg tabletas", via: "Vía oral" },
+  ];
+
+  // 1. Duplicidad de principio activo
+  const alertaDuplicado = verificarAlertaSeguridad({ nombre: "Paracetamol", presentacion: "1 g tabletas", via: "Vía oral" }, lista);
+  assert.ok(alertaDuplicado);
+  assert.equal(alertaDuplicado.tipo, "duplicidad");
+
+  // 2. Duplicidad de AINEs sistémicos (Ketorolaco + Ibuprofeno)
+  const alertaAine = verificarAlertaSeguridad({ nombre: "Ketorolaco", presentacion: "30 mg ampolla IM", via: "Vía intramuscular" }, lista);
+  assert.ok(alertaAine);
+  assert.equal(alertaAine.tipo, "aine");
+
+  // 3. AINE tópico no detona alerta sistémica (Diclofenaco gel)
+  const alertaGel = verificarAlertaSeguridad({ nombre: "Diclofenaco gel 1%", presentacion: "50 g gel", via: "Vía tópica" }, lista);
+  assert.equal(alertaGel, null);
+
+  // 4. Fármaco de otra familia no detona alerta (Amoxicilina)
+  const alertaAntibiotico = verificarAlertaSeguridad({ nombre: "Amoxicilina", presentacion: "500 mg cápsulas", via: "Vía oral" }, lista);
+  assert.equal(alertaAntibiotico, null);
+
+  // 5. Editando el mismo ítem no se alerta a sí mismo
+  const alertaAuto = verificarAlertaSeguridad({ id: 1, nombre: "Paracetamol", via: "Vía oral" }, lista, 1);
+  assert.equal(alertaAuto, null);
 });

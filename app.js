@@ -15,6 +15,7 @@ import {
   dosisReferencia,
   indicacionesAutomaticas,
   pacientePorDni,
+  verificarAlertaSeguridad,
 } from "./automatizar.js";
 import {
   actualizarAcceso,
@@ -31,6 +32,7 @@ const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
 const DRAFT_KEY = "recetapp.borrador";
 const ULTIMA_KEY = "recetapp.ultima";
+const HISTORIAL_KEY = "recetapp.historial";
 
 const WIZARD = [
   { id: "paciente", titulo: "Paciente" },
@@ -172,6 +174,8 @@ const emptyPerfil = () => ({
   especialidad: "",
   telefono: "",
   email: "",
+  firmaSello: "",
+  tema: "auto",
 });
 
 function emptyDraft() {
@@ -233,6 +237,8 @@ let busy = false;
 let formError = "";
 let afterPerfil = "inicio";
 let origenExamenes = "receta";
+let origenPrevia = "receta";
+let ultimoEmitido = null;
 
 const root = document.getElementById("app");
 
@@ -299,6 +305,32 @@ function icono(nombre) {
     trazo("M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4");
     trazo("M16 17l5-5-5-5");
     trazo("M21 12H9");
+  } else if (nombre === "clock") {
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", "12");
+    circle.setAttribute("cy", "12");
+    circle.setAttribute("r", "9");
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", "currentColor");
+    circle.setAttribute("stroke-width", "1.8");
+    svg.append(circle);
+    trazo("M12 7v5l3 3");
+  } else if (nombre === "eye") {
+    trazo("M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z");
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", "12");
+    circle.setAttribute("cy", "12");
+    circle.setAttribute("r", "3");
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", "currentColor");
+    circle.setAttribute("stroke-width", "1.8");
+    svg.append(circle);
+  } else if (nombre === "share") {
+    trazo("M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8");
+    trazo("M16 6l-4-4-4 4");
+    trazo("M12 2v13");
+  } else if (nombre === "whatsapp") {
+    trazo("M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z");
   } else {
     trazo("M5 7h14");
     trazo("M9 7V5h6v2");
@@ -337,9 +369,22 @@ function loadPerfil() {
       especialidad: cleanText(raw.especialidad, 80),
       telefono: cleanText(raw.telefono, 20),
       email: cleanText(raw.email, 120),
+      firmaSello: typeof raw.firmaSello === "string" && raw.firmaSello.startsWith("data:image/") ? raw.firmaSello : "",
+      tema: ["auto", "light", "dark"].includes(raw.tema) ? raw.tema : "auto",
     };
   } catch {
     return emptyPerfil();
+  }
+}
+
+function aplicarTema(tema) {
+  if (typeof document === "undefined") return;
+  if (tema === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else if (tema === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
   }
 }
 
@@ -494,6 +539,12 @@ function header() {
   } else if (screen === "listo") {
     title = "Listo";
     onBack = () => goto("inicio");
+  } else if (screen === "historial") {
+    title = "Historial";
+    onBack = () => goto("inicio");
+  } else if (screen === "previa") {
+    title = "Vista previa";
+    onBack = () => goto(origenPrevia || "receta");
   } else if (index >= 0) {
     if (composer === "med") title = "Medicamento";
     else if (composer === "exam") title = "Examen";
@@ -533,32 +584,80 @@ function header() {
 }
 
 function footer() {
-  if (screen === "inicio" || screen === "listo" || screen === "admin") return null;
+  if (screen === "inicio" || screen === "listo" || screen === "admin" || screen === "historial") return null;
+  if (screen === "previa") {
+    const esReceta = origenPrevia === "receta";
+    return el("footer", { class: "footer footer-split" }, [
+      el("button", {
+        type: "button",
+        class: "btn ghost",
+        onclick: () => goto(origenPrevia || "receta"),
+      }, ["Volver a editar"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy,
+        onclick: esReceta ? generarPDF : generarOrdenExamenes,
+      }, [busy ? "Generando…" : esReceta ? "Emitir PDF" : "Emitir orden"]),
+    ]);
+  }
   if (screen === "receta") {
     const agregando = composer === "med";
-    const button = el("button", {
-      type: "button",
-      class: agregando ? "btn has-icon" : "btn",
-      disabled: busy,
-      "aria-label": agregando ? "Agregar" : (busy ? "Generando…" : "Generar PDF"),
-      onclick: composer === "med" ? commitMed : generarPDF,
-    });
-    if (agregando) button.append(icono("check"));
-    else button.textContent = busy ? "Generando…" : "Generar PDF";
-    return el("footer", { class: "footer" }, [button]);
+    if (agregando) {
+      const button = el("button", {
+        type: "button",
+        class: "btn has-icon",
+        disabled: busy,
+        "aria-label": "Agregar",
+        onclick: commitMed,
+      });
+      button.append(icono("check"));
+      return el("footer", { class: "footer" }, [button]);
+    }
+    return el("footer", { class: "footer footer-split" }, [
+      el("button", {
+        type: "button",
+        class: "btn ghost",
+        disabled: busy || !draft.medicamentos.length,
+        onclick: () => abrirPrevia("receta"),
+      }, ["Vista previa"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy,
+        "aria-label": busy ? "Generando…" : "Generar PDF",
+        onclick: generarPDF,
+      }, [busy ? "Generando…" : "Generar PDF"]),
+    ]);
   }
   if (screen === "examenes") {
     const agregando = composer === "exam";
-    const button = el("button", {
-      type: "button",
-      class: agregando ? "btn has-icon" : "btn",
-      disabled: busy || (!agregando && !draft.examenes.length),
-      "aria-label": agregando ? "Agregar" : (busy ? "Generando…" : "Generar orden PDF"),
-      onclick: agregando ? commitExam : generarOrdenExamenes,
-    });
-    if (agregando) button.append(icono("check"));
-    else button.textContent = busy ? "Generando…" : "Generar orden PDF";
-    return el("footer", { class: "footer" }, [button]);
+    if (agregando) {
+      const button = el("button", {
+        type: "button",
+        class: "btn has-icon",
+        disabled: busy,
+        "aria-label": "Agregar",
+        onclick: commitExam,
+      });
+      button.append(icono("check"));
+      return el("footer", { class: "footer" }, [button]);
+    }
+    return el("footer", { class: "footer footer-split" }, [
+      el("button", {
+        type: "button",
+        class: "btn ghost",
+        disabled: busy || !draft.examenes.length,
+        onclick: () => abrirPrevia("examenes"),
+      }, ["Vista previa"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy || !draft.examenes.length,
+        "aria-label": busy ? "Generando…" : "Generar orden PDF",
+        onclick: generarOrdenExamenes,
+      }, [busy ? "Generando…" : "Generar orden PDF"]),
+    ]);
   }
   if (screen === "login") return null;
   let label = "Continuar";
@@ -594,6 +693,8 @@ function view() {
   if (screen === "inicio") return viewInicio();
   if (screen === "perfil") return viewPerfil();
   if (screen === "listo") return viewListo();
+  if (screen === "historial") return viewHistorial();
+  if (screen === "previa") return viewPrevia();
   if (screen === "paciente") return viewPaciente();
   if (screen === "diagnostico") return viewDiagnostico();
   if (screen === "medicamentos") return composer === "med" ? viewMedComposer() : viewMedicamentos();
@@ -906,6 +1007,29 @@ function leerUltima() {
   }
 }
 
+function leerHistorial() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(HISTORIAL_KEY) || "[]");
+    return Array.isArray(raw) ? raw : [];
+  } catch {
+    return [];
+  }
+}
+
+function guardarHistorialItem(item) {
+  try {
+    const list = leerHistorial();
+    const filtrada = list.filter((i) => !(i.dni && i.dni === item.dni && i.cuando === item.cuando && i.tipo === item.tipo));
+    filtrada.unshift(item);
+    localStorage.setItem(HISTORIAL_KEY, JSON.stringify(filtrada.slice(0, 15)));
+  } catch {}
+}
+
+function borrarHistorial() {
+  localStorage.removeItem(HISTORIAL_KEY);
+  render();
+}
+
 function guardarUltima() {
   localStorage.setItem(ULTIMA_KEY, JSON.stringify({
     nombre: draft.pacienteNombre,
@@ -915,6 +1039,22 @@ function guardarUltima() {
     diagnostico: [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "),
     cuando: draft.fechaAtencion || todayISO(),
   }));
+  guardarHistorialItem({
+    id: String(Date.now()),
+    tipo: draft.examenes.length && !draft.medicamentos.length ? "orden" : "receta",
+    nombre: draft.pacienteNombre,
+    dni: draft.pacienteDNI,
+    edad: draft.pacienteEdad,
+    sexo: draft.pacienteSexo,
+    diagnostico: draft.diagnostico,
+    cie10: draft.cie10,
+    cuando: draft.fechaAtencion || todayISO(),
+    hora: draft.horaAtencion || nowTime(),
+    medicamentos: draft.medicamentos.map((m) => ({ ...m })),
+    examenes: draft.examenes.map((e) => ({ ...e })),
+    indicacionesGenerales: draft.indicacionesGenerales,
+    proximoControl: draft.proximoControl,
+  });
 }
 
 async function repetirPaciente(entrada) {
@@ -1012,7 +1152,12 @@ function viewInicio() {
     ]);
   }
 
+  const historialItems = leerHistorial();
   const rail = [
+    el("button", { type: "button", onclick: () => goto("historial") }, [
+      icono("clock"),
+      el("span", { text: historialItems.length ? `Historial (${historialItems.length})` : "Historial" }),
+    ]),
     el("button", { type: "button", onclick: () => openPerfil("inicio") }, [
       icono("user"),
       el("span", { text: "Perfil" }),
@@ -1073,6 +1218,84 @@ function viewInicio() {
 }
 
 function viewPerfil() {
+  const fileInput = el("input", {
+    type: "file",
+    id: "p-firma-file",
+    accept: "image/png,image/jpeg,image/webp",
+    style: "display: none;",
+  });
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const img = new Image();
+      img.onload = () => {
+        const maxW = 400;
+        const maxH = 200;
+        const scale = Math.min(1, maxW / img.width, maxH / img.height);
+        const w = Math.round(img.width * scale);
+        const h = Math.round(img.height * scale);
+        const canvas = document.createElement("canvas");
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, w, h);
+        perfil.firmaSello = canvas.toDataURL("image/png");
+        render();
+      };
+      img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  let firmaBox;
+  if (perfil.firmaSello) {
+    const previewImg = document.createElement("img");
+    previewImg.src = perfil.firmaSello;
+    previewImg.alt = "Sello y Firma";
+    previewImg.className = "firma-preview-img";
+    firmaBox = el("div", { class: "firma-container has-firma" }, [
+      previewImg,
+      el("div", { class: "firma-actions" }, [
+        el("button", {
+          type: "button",
+          class: "btn-subtle",
+          onclick: () => fileInput.click(),
+        }, ["Cambiar imagen"]),
+        el("button", {
+          type: "button",
+          class: "btn-subtle is-danger",
+          onclick: () => {
+            perfil.firmaSello = "";
+            render();
+          },
+        }, ["Quitar firma"]),
+      ]),
+    ]);
+  } else {
+    firmaBox = el("div", { class: "firma-container" }, [
+      el("p", { class: "muted", text: "Sube una imagen de tu sello o firma manuscrita para que se incluya automáticamente en el PDF de recetas y órdenes." }),
+      el("button", {
+        type: "button",
+        class: "btn-subtle is-primary",
+        onclick: () => fileInput.click(),
+      }, ["+ Subir foto de sello y firma"]),
+    ]);
+  }
+
+  const temaSelector = selectField(
+    "Tema visual",
+    "p-tema",
+    ["Automático (según dispositivo)", "Claro", "Oscuro"],
+    perfil.tema === "dark" ? "Oscuro" : perfil.tema === "light" ? "Claro" : "Automático (según dispositivo)",
+    (val) => {
+      const code = val === "Oscuro" ? "dark" : val === "Claro" ? "light" : "auto";
+      perfil.tema = code;
+      aplicarTema(code);
+    }
+  );
+
   return el("section", { class: "screen stack" }, [
     errorSlot(),
     field("Nombre", "p-nombre", perfil.nombre, "text", "", null, { autocomplete: "name", name: "name" }),
@@ -1080,6 +1303,12 @@ function viewPerfil() {
     field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general", null, { autocomplete: "organization-title", name: "organization-title" }),
     field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111", null, { autocomplete: "tel", name: "tel", inputmode: "tel" }),
     field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe", null, { autocomplete: "email", name: "email" }),
+    el("div", { class: "field-group" }, [
+      el("label", { class: "field-label", text: "Sello y Firma (opcional)" }),
+      fileInput,
+      firmaBox,
+    ]),
+    temaSelector,
   ]);
 }
 
@@ -1125,6 +1354,46 @@ function viewPaciente() {
       paintPacSuggestions();
     }, { autocomplete: "name", name: "name", list: "lista-nombres" });
   nombrePaciente.classList.add("search-anchor");
+  const atencionesPasadas = leerHistorial().filter((item) => (
+    (draft.pacienteDNI && item.dni === draft.pacienteDNI) ||
+    (draft.pacienteNombre && item.nombre && item.nombre.toLowerCase() === draft.pacienteNombre.toLowerCase())
+  ));
+  const previa = atencionesPasadas[0];
+  let avisoPrevia = null;
+  if (previa) {
+    const esReceta = previa.tipo === "receta";
+    const desc = [previa.cie10, previa.diagnostico, esReceta ? `${previa.medicamentos?.length || 0} medicamentos` : `${previa.examenes?.length || 0} exámenes`].filter(Boolean).join(" · ");
+    avisoPrevia = el("div", { class: "desk-status-card", style: "margin-top: 10px;" }, [
+      el("span", { class: "desk-status-badge blue" }, [
+        el("span", { class: "desk-status-dot" }),
+        document.createTextNode(`Atención previa (${fechaLegible(previa.cuando)})`),
+      ]),
+      el("p", { class: "desk-status-text", text: desc || "Prescripción anterior disponible." }),
+      el("button", {
+        type: "button",
+        class: "btn-subtle is-primary",
+        onclick: async () => {
+          if (draft.medicamentos.length || draft.examenes.length) {
+            const ok = await ask("Cargar prescripción previa", "Se actualizarán el diagnóstico y los medicamentos con los de la atención anterior.", "Cargar");
+            if (!ok) return;
+          }
+          draft.diagnostico = previa.diagnostico || draft.diagnostico;
+          draft.cie10 = previa.cie10 || draft.cie10;
+          draft.proximoControl = previa.proximoControl || draft.proximoControl;
+          draft.indicacionesGenerales = previa.indicacionesGenerales || draft.indicacionesGenerales;
+          if (previa.medicamentos?.length) {
+            draft.medicamentos = previa.medicamentos.map((m) => ({ ...m, id: Date.now() + Math.random() }));
+          }
+          if (previa.examenes?.length) {
+            draft.examenes = previa.examenes.map((e) => ({ ...e, id: Date.now() + Math.random() }));
+          }
+          saveDraft();
+          render();
+        },
+      }, ["Cargar esquema previo"]),
+    ]);
+  }
+
   const section = el("section", { class: "screen stack" }, [
     dni,
     nombrePaciente,
@@ -1151,13 +1420,14 @@ function viewPaciente() {
         sexButton("F", "Femenino"),
       ]),
     ]),
+    avisoPrevia,
     el("datalist", { id: "lista-dni" }, gente.filter((paciente) => paciente.dni).map((paciente) => (
       el("option", { value: paciente.dni, label: paciente.nombre })
     ))),
     el("datalist", { id: "lista-nombres" }, gente.map((paciente) => (
       el("option", { value: paciente.nombre, label: paciente.dni || "" })
     ))),
-  ]);
+  ].filter(Boolean));
   queueMicrotask(() => {
     paintPacSuggestions();
     if (!enfocarDni) return;
@@ -1343,11 +1613,27 @@ function vacioLista(texto, onclick) {
 
 function viewMedicamentos() {
   const items = draft.medicamentos.map(medCard);
+  let bannerAlerta = null;
+  for (let i = 0; i < draft.medicamentos.length; i++) {
+    const alerta = verificarAlertaSeguridad(draft.medicamentos[i], draft.medicamentos, draft.medicamentos[i].id);
+    if (alerta) {
+      bannerAlerta = el("div", { class: `clinical-alert ${alerta.tipo}` }, [
+        el("div", { class: "alert-icon", text: "⚠️" }),
+        el("div", { class: "alert-body" }, [
+          el("strong", { text: alerta.titulo }),
+          el("p", { text: alerta.mensaje }),
+        ]),
+      ]);
+      break;
+    }
+  }
+
   return el("section", { class: "screen stack" }, [
+    bannerAlerta,
     items.length ? null : vacioLista("Todavía no hay medicamentos.", () => openComposer("med")),
     ...items,
     items.length ? botonMas("Agregar medicamento", () => openComposer("med")) : null,
-  ]);
+  ].filter(Boolean));
 }
 
 function quitarMedicamentoActual() {
@@ -1438,6 +1724,16 @@ function viewMedComposer() {
   }
   if (medForm.nombre) {
     section.append(medicamentoElegido(opciones));
+    const alerta = verificarAlertaSeguridad(medForm, draft.medicamentos, medEditId);
+    if (alerta) {
+      section.append(el("div", { class: `clinical-alert ${alerta.tipo}` }, [
+        el("div", { class: "alert-icon", text: "⚠️" }),
+        el("div", { class: "alert-body" }, [
+          el("strong", { text: alerta.titulo }),
+          el("p", { text: alerta.mensaje }),
+        ]),
+      ]));
+    }
     section.append(selectField("Frecuencia", "med-frecuencia", FRECUENCIAS, medForm.frecuencia, (value) => {
       medForm.frecuencia = FRECUENCIAS.includes(value) ? value : "";
       syncCantidad();
@@ -1688,14 +1984,352 @@ function viewRevision() {
   ]);
 }
 
+function abrirPrevia(origen) {
+  origenPrevia = origen || "receta";
+  screen = "previa";
+  render();
+}
+
+function viewPrevia() {
+  const esReceta = origenPrevia === "receta";
+  if (esReceta) {
+    const rpList = draft.medicamentos.map((med, idx) => el("div", { class: "preview-rp-item" }, [
+      el("div", { class: "preview-rp-title" }, [
+        el("strong", { text: `${idx + 1}. ${med.nombre}` }),
+        el("span", { class: "preview-rp-cant", text: med.cantidad }),
+      ]),
+      el("div", { class: "preview-rp-pauta", text: [med.presentacion, med.dosis, med.frecuencia, med.duracion, med.via].filter(Boolean).join(" · ") }),
+      med.indicaciones ? el("div", { class: "preview-rp-extra", text: med.indicaciones }) : null,
+    ]));
+
+    const indicaciones = [
+      ...String(draft.indicacionesGenerales || indicacionesAutomaticas(draft)).split("\n").map((l) => l.trim()).filter(Boolean),
+    ];
+
+    return el("section", { class: "screen preview-screen stack" }, [
+      el("div", { class: "preview-paper stack" }, [
+        el("div", { class: "preview-header" }, [
+          crearLogo(claveEspecialidad(perfil.especialidad)),
+          el("div", { style: "text-align: center; flex: 1;" }, [
+            el("div", { class: "preview-doctor-name", text: perfil.nombre ? `DR. ${(perfil.nombre).toUpperCase()}` : "DR. MÉDICO TRATANTE" }),
+            el("div", { class: "preview-doctor-sub", text: [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  |  ").toUpperCase() }),
+          ]),
+          el("div", { class: "preview-header-tag", text: "RECETA" }),
+        ]),
+        el("div", { class: "preview-patient-bar" }, [
+          el("div", { class: "preview-patient-name", text: draft.pacienteNombre || "Paciente no especificado" }),
+          el("div", { class: "preview-patient-sub", text: [
+            draft.pacienteDNI ? `DNI: ${draft.pacienteDNI}` : "",
+            draft.pacienteEdad ? `Edad: ${draft.pacienteEdad} años` : "",
+            draft.pacienteSexo ? `Sexo: ${draft.pacienteSexo}` : "",
+            `Fecha: ${fechaGuion(draft.fechaAtencion)}`,
+          ].filter(Boolean).join("   ·   ") }),
+          (draft.diagnostico || draft.cie10) ? el("div", { class: "preview-patient-dx", text: `Dx: ${[draft.cie10, draft.diagnostico].filter(Boolean).join(" — ")}` }) : null,
+        ]),
+        el("div", { class: "preview-body-grid" }, [
+          el("div", { class: "preview-col" }, [
+            el("div", { class: "preview-col-head", text: "Rp/ Medicamentos" }),
+            el("div", { class: "preview-rp-list" }, rpList.length ? rpList : [el("p", { class: "muted", text: "Sin medicamentos agregados" })]),
+          ]),
+          el("div", { class: "preview-col" }, [
+            el("div", { class: "preview-col-head", text: "Indicaciones y Cuidados" }),
+            el("ul", { class: "preview-notes" }, indicaciones.length ? indicaciones.map((ind) => el("li", { text: ind })) : [el("li", { text: "Seguir indicaciones médicas." })]),
+          ]),
+        ]),
+        el("div", { class: "preview-footer-grid" }, [
+          el("div", { class: "preview-control" }, [
+            el("strong", { text: "Próximo control: " }),
+            el("span", { text: draft.proximoControl ? fechaLegible(draft.proximoControl) : "Según evolución clínica" }),
+          ]),
+          el("div", { class: "preview-signature-box" }, [
+            perfil.firmaSello
+              ? el("img", { src: perfil.firmaSello, class: "preview-firma-img", alt: "Firma y sello" })
+              : el("div", { class: "preview-signature-line" }),
+            el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
+          ]),
+        ]),
+      ]),
+    ]);
+  } else {
+    const labs = draft.examenes.filter((e) => e.tipo === "Laboratorio");
+    const imgs = draft.examenes.filter((e) => e.tipo !== "Laboratorio");
+
+    return el("section", { class: "screen preview-screen stack" }, [
+      el("div", { class: "preview-paper stack" }, [
+        el("div", { class: "preview-header" }, [
+          crearLogo(claveEspecialidad(perfil.especialidad)),
+          el("div", { style: "text-align: center; flex: 1;" }, [
+            el("div", { class: "preview-doctor-name", text: perfil.nombre ? `DR. ${(perfil.nombre).toUpperCase()}` : "DR. MÉDICO TRATANTE" }),
+            el("div", { class: "preview-doctor-sub", text: [perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  |  ").toUpperCase() }),
+          ]),
+          el("div", { class: "preview-header-tag", text: "ORDEN" }),
+        ]),
+        el("div", { class: "preview-patient-bar" }, [
+          el("div", { class: "preview-patient-name", text: draft.pacienteNombre || "Paciente no especificado" }),
+          el("div", { class: "preview-patient-sub", text: [
+            draft.pacienteDNI ? `DNI: ${draft.pacienteDNI}` : "",
+            draft.pacienteEdad ? `Edad: ${draft.pacienteEdad} años` : "",
+            draft.pacienteSexo ? `Sexo: ${draft.pacienteSexo}` : "",
+            `Fecha: ${fechaLegible(draft.fechaAtencion)}`,
+          ].filter(Boolean).join("   ·   ") }),
+          (draft.diagnostico || draft.cie10) ? el("div", { class: "preview-patient-dx", text: `Dx: ${[draft.cie10, draft.diagnostico].filter(Boolean).join(" — ")}` }) : null,
+        ]),
+        labs.length ? el("div", { class: "preview-section stack" }, [
+          el("div", { class: "preview-col-head", text: "LABORATORIO CLÍNICO" }),
+          el("ul", { class: "preview-list" }, labs.map((ex) => el("li", {}, [
+            el("strong", { text: ex.nombre }),
+            ex.indicaciones ? el("span", { class: "muted", text: ` (${ex.indicaciones})` }) : null,
+          ]))),
+        ]) : null,
+        imgs.length ? el("div", { class: "preview-section stack" }, [
+          el("div", { class: "preview-col-head", text: "IMÁGENES Y OTROS ESTUDIOS" }),
+          el("ul", { class: "preview-list" }, imgs.map((ex) => el("li", {}, [
+            el("strong", { text: ex.nombre }),
+            ex.indicaciones ? el("span", { class: "muted", text: ` (${ex.indicaciones})` }) : null,
+          ]))),
+        ]) : null,
+        el("div", { class: "preview-footer-grid" }, [
+          el("div", { class: "preview-control" }, [
+            el("span", { class: "muted", text: "Validez: 30 días calendario" }),
+          ]),
+          el("div", { class: "preview-signature-box" }, [
+            perfil.firmaSello
+              ? el("img", { src: perfil.firmaSello, class: "preview-firma-img", alt: "Firma y sello" })
+              : el("div", { class: "preview-signature-line" }),
+            el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
+          ]),
+        ]),
+      ]),
+    ]);
+  }
+}
+
+function rePrescribirHistorial(item) {
+  draft = emptyDraft();
+  draft.pacienteNombre = item.nombre || "";
+  draft.pacienteDNI = item.dni || "";
+  draft.pacienteEdad = item.edad || "";
+  draft.pacienteSexo = item.sexo || "";
+  draft.diagnostico = item.diagnostico || "";
+  draft.cie10 = item.cie10 || "";
+  draft.fechaAtencion = todayISO();
+  draft.horaAtencion = nowTime();
+  if (item.tipo === "orden") {
+    draft.examenes = (item.examenes || []).map((e) => ({ ...e }));
+    origenExamenes = "inicio";
+    screen = "examenes";
+  } else {
+    draft.medicamentos = (item.medicamentos || []).map((m) => ({ ...m }));
+    draft.indicacionesGenerales = item.indicacionesGenerales || "";
+    draft.proximoControl = item.proximoControl || "";
+    screen = "receta";
+    panel = "medicamentos";
+  }
+  rememberPaciente();
+  saveDraft();
+  render();
+}
+
+function atenderPacienteHistorial(item) {
+  draft = emptyDraft();
+  draft.pacienteNombre = item.nombre || "";
+  draft.pacienteDNI = item.dni || "";
+  draft.pacienteEdad = item.edad || "";
+  draft.pacienteSexo = item.sexo || "";
+  draft.diagnostico = item.diagnostico || "";
+  draft.cie10 = item.cie10 || "";
+  draft.fechaAtencion = todayISO();
+  draft.horaAtencion = nowTime();
+  screen = "receta";
+  panel = "paciente";
+  rememberPaciente();
+  saveDraft();
+  render();
+}
+
+function confirmarBorrarHistorial() {
+  dialog = {
+    titulo: "¿Borrar historial?",
+    mensaje: "Se eliminarán las atenciones guardadas localmente en este navegador. Esta acción no se puede deshacer.",
+    confirmar: "Borrar todo",
+    onConfirm: () => {
+      borrarHistorial();
+      dialog = null;
+      render();
+    },
+    onCancel: () => {
+      dialog = null;
+      render();
+    },
+  };
+  render();
+}
+
+function viewHistorial() {
+  const lista = leerHistorial();
+  return el("section", { class: "screen stack" }, [
+    el("div", { class: "historial-header" }, [
+      el("h2", { style: "margin: 0; font-size: 17px; color: var(--ink);", text: `Atenciones recientes (${lista.length})` }),
+      lista.length ? el("button", {
+        type: "button",
+        class: "btn-subtle is-danger",
+        style: "flex: none; padding: 4px 10px; font-size: 12px;",
+        onclick: confirmarBorrarHistorial,
+      }, ["Limpiar"]) : null,
+    ]),
+    lista.length ? el("div", { class: "stack", style: "gap: 12px;" }, lista.map((item) => {
+      const esReceta = item.tipo !== "orden";
+      const itemsTexto = esReceta
+        ? (item.medicamentos || []).map((m) => `${m.nombre} — ${m.cantidad} (${m.frecuencia || "dosis única"})`).join(", ")
+        : (item.examenes || []).map((e) => `${e.nombre} [${e.tipo || "Estudio"}]`).join(", ");
+
+      return el("article", { class: "historial-card" }, [
+        el("div", { class: "historial-top" }, [
+          el("span", {
+            class: `historial-badge ${esReceta ? "blue" : "purple"}`,
+            text: esReceta ? "Receta" : "Orden",
+          }),
+          el("span", { class: "historial-date", text: [item.cuando ? fechaLegible(item.cuando) : "", item.hora].filter(Boolean).join(" · ") }),
+        ]),
+        el("h3", { class: "historial-paciente", text: item.nombre || "Paciente sin nombre" }),
+        el("div", { class: "historial-dx", text: [
+          item.dni ? `DNI: ${item.dni}` : "",
+          item.edad ? `${item.edad} años` : "",
+          item.diagnostico ? `Dx: ${item.cie10 ? item.cie10 + " — " : ""}${item.diagnostico}` : "",
+        ].filter(Boolean).join("   ·   ") }),
+        itemsTexto ? el("p", { class: "historial-items", text: itemsTexto }) : null,
+        el("div", { class: "historial-actions" }, [
+          el("button", {
+            type: "button",
+            class: "btn-subtle",
+            onclick: () => atenderPacienteHistorial(item),
+          }, ["Nueva atención"]),
+          el("button", {
+            type: "button",
+            class: "btn-subtle is-primary",
+            onclick: () => rePrescribirHistorial(item),
+          }, [esReceta ? "Repetir receta" : "Repetir orden"]),
+        ]),
+      ]);
+    })) : el("div", { class: "empty-state" }, [
+      el("div", { class: "empty-icon" }, [icono("clock")]),
+      el("h3", { style: "margin: 0; color: var(--ink);", text: "Sin atenciones registradas" }),
+      el("p", { class: "muted", style: "margin: 0; max-width: 280px; font-size: 13px;", text: "Las recetas y órdenes que emitas se guardarán aquí para re-prescribir con un solo toque." }),
+      el("button", {
+        type: "button",
+        class: "btn",
+        style: "margin-top: 10px;",
+        onclick: () => goto("inicio"),
+      }, ["Volver al inicio"]),
+    ]),
+  ]);
+}
+
+function textoWhatsAppReceta(emitido) {
+  const lineas = [
+    "*RECETA MÉDICA*",
+    `*Médico:* ${perfil.nombre || ""}${perfil.cmp ? ` (CMP ${perfil.cmp})` : ""}`,
+    `*Paciente:* ${emitido.pacienteNombre}`,
+    emitido.pacienteDNI ? `*DNI:* ${emitido.pacienteDNI}` : "",
+    emitido.diagnostico ? `*Diagnóstico:* ${emitido.diagnostico}` : "",
+    `*Fecha:* ${fechaLegible(emitido.fechaAtencion)}`,
+    "",
+    "*Rp/ Prescripción:*",
+  ];
+  (emitido.medicamentos || []).forEach((m, idx) => {
+    lineas.push(`${idx + 1}. *${m.nombre}* (${m.presentacion || ""})`);
+    const pauta = [`Cant: ${m.cantidad}`, m.dosis, m.frecuencia, m.duracion, m.via].filter(Boolean).join(" - ");
+    if (pauta) lineas.push(`   ${pauta}`);
+    if (m.indicaciones) lineas.push(`   _Indicación: ${m.indicaciones}_`);
+  });
+  if (emitido.indicacionesGenerales) {
+    lineas.push("");
+    lineas.push("*Indicaciones generales:*");
+    lineas.push(emitido.indicacionesGenerales);
+  }
+  if (emitido.proximoControl) {
+    lineas.push("");
+    lineas.push(`*Próximo control:* ${fechaLegible(emitido.proximoControl)}`);
+  }
+  return lineas.filter((l) => l !== "").join("\n");
+}
+
+function compartirWhatsApp() {
+  if (!ultimoEmitido) return;
+  const texto = textoWhatsAppReceta(ultimoEmitido);
+  const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+}
+
+async function compartirReceta() {
+  if (!ultimoEmitido) return;
+  const texto = textoWhatsAppReceta(ultimoEmitido);
+  const titulo = `Receta médica - ${ultimoEmitido.pacienteNombre}`;
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: titulo,
+        text: texto,
+      });
+    } catch {}
+  } else if (navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(texto);
+      showError("¡Copiado al portapapeles para compartir!");
+      render();
+    } catch {}
+  }
+}
+
 function viewListo() {
+  const emitido = ultimoEmitido;
+  const items = emitido?.medicamentos?.length
+    ? emitido.medicamentos.map((med) => `${med.nombre} — ${med.cantidad}, ${med.frecuencia}`)
+    : [];
+
   return el("section", { class: "screen stack home" }, [
     el("div", { class: "success-mark", text: "✓" }),
-    el("button", { type: "button", class: "cta", onclick: startNew }, [
-      el("span", { class: "cta-title", text: "Nueva receta" }),
+    el("h2", { style: "margin: 0; text-align: center; color: var(--ink); font-size: 20px;", text: "¡Receta emitida con éxito!" }),
+    el("p", { class: "muted", style: "text-align: center; margin: -4px 0 12px; font-size: 13.5px;", text: "El PDF se generó y guardó en tu dispositivo." }),
+
+    emitido ? el("div", { class: "listo-card" }, [
+      el("div", { class: "listo-patient", text: emitido.pacienteNombre }),
+      emitido.diagnostico ? el("div", { class: "listo-dx", text: `Diagnóstico: ${emitido.diagnostico}` }) : null,
+      items.length ? el("ul", { class: "listo-items" }, items.map((it) => el("li", { text: it }))) : null,
+    ]) : null,
+
+    el("div", { class: "listo-actions" }, [
+      el("button", {
+        type: "button",
+        class: "btn-whatsapp",
+        onclick: compartirWhatsApp,
+      }, [
+        icono("whatsapp"),
+        el("span", { text: "Enviar receta por WhatsApp" }),
+      ]),
+      el("button", {
+        type: "button",
+        class: "btn-share",
+        onclick: compartirReceta,
+      }, [
+        icono("share"),
+        el("span", { text: "Compartir con otras apps" }),
+      ]),
     ]),
-    el("button", { type: "button", class: "secondary-card", onclick: () => goto("inicio") }, [
-      el("div", { class: "profile-name", text: "Inicio" }),
+
+    el("div", { style: "display: flex; gap: 10px; width: 100%; margin-top: 8px;" }, [
+      el("button", {
+        type: "button",
+        class: "btn ghost",
+        style: "flex: 1;",
+        onclick: () => goto("inicio"),
+      }, ["Inicio"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        style: "flex: 1;",
+        onclick: startNew,
+      }, ["Nueva receta"]),
     ]),
   ]);
 }
@@ -2198,12 +2832,19 @@ function next() {
 }
 
 function savePerfilFromForm() {
+  const temaInput = document.getElementById("p-tema");
+  let temaVal = perfil.tema || "auto";
+  if (temaInput) {
+    temaVal = temaInput.value === "Oscuro" ? "dark" : temaInput.value === "Claro" ? "light" : "auto";
+  }
   const nextPerfil = {
     nombre: cleanText(document.getElementById("p-nombre").value, 120),
     cmp: cleanText(document.getElementById("p-cmp").value, 20),
     especialidad: cleanText(document.getElementById("p-esp").value, 80),
     telefono: cleanText(document.getElementById("p-tel").value, 20),
     email: cleanText(document.getElementById("p-mail").value, 120),
+    firmaSello: perfil.firmaSello || "",
+    tema: temaVal,
   };
   const email = validarEmail(nextPerfil.email);
   if (email) {
@@ -2211,6 +2852,7 @@ function savePerfilFromForm() {
     return;
   }
   perfil = nextPerfil;
+  aplicarTema(perfil.tema);
   savePerfil();
   leavePerfil(true);
 }
@@ -2525,6 +3167,11 @@ function dibujarReceta(doc, top, alto) {
   doc.text(fechaGuion(draft.proximoControl), x + 34, pie);
   doc.setDrawColor(168, 188, 208);
   doc.line(x + 34, pie + 1.1, x + 78, pie + 1.1);
+  if (perfil.firmaSello) {
+    try {
+      doc.addImage(perfil.firmaSello, "PNG", x + 137, pie - 19, 36, 12, undefined, "FAST");
+    } catch {}
+  }
   doc.line(x + 124, pie - 6, x + 186, pie - 6);
   doc.setFont("times", "bold");
   doc.text("Firma y Sello", x + 155, pie, { align: "center" });
@@ -2644,6 +3291,11 @@ function generarOrdenExamenes() {
     } else {
       y = Math.max(y + 8, 250);
     }
+    if (perfil.firmaSello) {
+      try {
+        doc.addImage(perfil.firmaSello, "PNG", 139, y - 13, 36, 12, undefined, "FAST");
+      } catch {}
+    }
     doc.setDrawColor(130, 151, 168);
     doc.line(126, y, 188, y);
     doc.setFont("times", "bold");
@@ -2709,6 +3361,18 @@ function generarPDF() {
     doc.text(`Generado localmente el ${generado}. Este PDF no incluye firma digital.`, 105, 294.6, { align: "center" });
     doc.save(`Receta_${fileSlug(draft.pacienteNombre)}.pdf`);
     guardarUltima();
+    ultimoEmitido = {
+      tipo: "receta",
+      pacienteNombre: draft.pacienteNombre,
+      pacienteDNI: draft.pacienteDNI,
+      pacienteEdad: draft.pacienteEdad,
+      pacienteSexo: draft.pacienteSexo,
+      diagnostico: [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "),
+      fechaAtencion: draft.fechaAtencion,
+      medicamentos: draft.medicamentos.map((m) => ({ ...m })),
+      indicacionesGenerales: draft.indicacionesGenerales,
+      proximoControl: draft.proximoControl,
+    };
     draft = emptyDraft();
     composer = null;
     sessionStorage.removeItem(DRAFT_KEY);
@@ -2722,6 +3386,10 @@ function generarPDF() {
 }
 
 async function boot() {
+  aplicarTema(perfil.tema);
+  if (typeof navigator !== "undefined" && "serviceWorker" in navigator && typeof location !== "undefined" && location.protocol !== "file:") {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  }
   const sesion = leerSesion();
   const nombre = String(sesion?.email || "").split("@")[0];
   if (/^[a-z0-9._-]{3,40}$/.test(nombre)) loginUsuario = nombre;

@@ -1,0 +1,19 @@
+{
+  "name": "RecetAPP - Prescripción Médica",
+  "short_name": "RecetAPP",
+  "description": "Prescripción médica, vademécum y órdenes de exámenes clínicos",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1428",
+  "theme_color": "#131b3a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
