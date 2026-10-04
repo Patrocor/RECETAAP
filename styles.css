@@ -1,6 +1,7 @@
 :root {
   --ink: #0b1f33;
   --ink-soft: #3d4758;
+  --on-ink: #ffffff;
   --line: rgba(19, 27, 58, 0.12);
   --bg: #f3f5fb;
   --card: #ffffff;
@@ -30,6 +31,7 @@
   :root:not([data-theme="light"]) {
     --ink: #f0f4f8;
     --ink-soft: #c5d0dc;
+    --on-ink: #0b1f33;
     --line: rgba(255, 255, 255, 0.14);
     --bg: #090e1a;
     --card: #121a2d;
@@ -54,6 +56,7 @@ html {
   color-scheme: light;
   --ink: #0b1f33;
   --ink-soft: #3d4758;
+  --on-ink: #ffffff;
   --line: rgba(19, 27, 58, 0.12);
   --bg: #f3f5fb;
   --card: #ffffff;
@@ -64,6 +67,7 @@ html {
   color-scheme: dark;
   --ink: #f0f4f8;
   --ink-soft: #c5d0dc;
+  --on-ink: #0b1f33;
   --line: rgba(255, 255, 255, 0.14);
   --bg: #090e1a;
   --card: #121a2d;
@@ -109,7 +113,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .top {
   padding: calc(10px + env(safe-area-inset-top)) 16px 8px;
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   box-shadow: 0 8px 20px rgba(19, 27, 58, 0.18);
 }
 
@@ -327,7 +331,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   background: rgba(18, 54, 82, 0.03);
 }
 
-.fold-title { font-weight: 700; }
+.fold-title { font-weight: 700; color: var(--ink); }
 .fold-sum {
   margin-left: auto;
   color: var(--ink-soft);
@@ -1332,6 +1336,7 @@ button.desk-status-card:active {
   background: var(--bg);
   color: var(--ink);
   color-scheme: inherit;
+  forced-color-adjust: none;
 }
 
 .shell-flow .top {
@@ -1580,7 +1585,7 @@ button.desk-status-card:active {
 
 .stack { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
 
-label.field { display: flex; flex-direction: column; gap: 3px; font-size: 12px; font-weight: 650; }
+label.field { display: flex; flex-direction: column; gap: 3px; font-size: 12px; font-weight: 650; color: var(--ink); }
 
 input, select, textarea {
   width: 100%;
@@ -1630,7 +1635,7 @@ input:focus, select:focus, textarea:focus {
 
 .segment button.is-on {
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   box-shadow: 0 2px 6px rgba(19, 27, 58, 0.2);
 }
 
@@ -1672,7 +1677,7 @@ input:focus, select:focus, textarea:focus {
 
 .chips button.is-on {
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   border-color: var(--ink);
   box-shadow: 0 2px 6px rgba(19, 27, 58, 0.2);
 }
@@ -1901,8 +1906,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 .exam-types button.is-on .tab-count {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: color-mix(in srgb, var(--on-ink) 18%, transparent);
+  color: var(--on-ink);
 }
 
 .order-summary {
@@ -2082,7 +2087,7 @@ input:focus, select:focus, textarea:focus {
 
 .add-btn.is-on {
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   border-style: solid;
   border-color: var(--ink);
   box-shadow: 0 4px 14px rgba(19, 27, 58, 0.25);
@@ -2205,7 +2210,7 @@ input:focus, select:focus, textarea:focus {
   border-radius: 14px;
   padding: 12px 16px;
   background: var(--accent);
-  color: white;
+  color: #ffffff;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
@@ -3611,6 +3616,31 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* Contraste clínico en toda la app: tinta y superficies siempre emparejadas. */
+html,
+body,
+.app,
+.shell,
+.shell-flow,
+.shell-desk,
+.board,
+.fold,
+.fold-head,
+.fold-body,
+.footer,
+.segment,
+.chips,
+.item,
+.review,
+.dialog,
+.btn,
+.add-btn,
+button,
+input,
+select,
+textarea {
+  forced-color-adjust: none;
+}
+
 .shell,
 .main,
 .screen,
@@ -3628,7 +3658,10 @@ input:focus, select:focus, textarea:focus {
 .historial-card,
 .tx-card,
 .profile-row,
-.secondary-card {
+.secondary-card,
+.fold,
+.fold-title,
+label.field {
   color: var(--ink);
 }
 
@@ -3643,7 +3676,8 @@ input:focus, select:focus, textarea:focus {
 .exam-guidance,
 .desk-draft-sub,
 .desk-draft-label,
-.fold-sum {
+.fold-sum,
+.order-link small {
   color: var(--ink-soft);
 }
 
@@ -3654,6 +3688,52 @@ input:focus, select:focus, textarea:focus {
 .review h2,
 .dialog h2 {
   color: var(--ink);
+}
+
+.segment button.is-on,
+.chips button.is-on,
+.add-btn.is-on {
+  background: var(--ink) !important;
+  color: var(--on-ink) !important;
+  border-color: var(--ink) !important;
+}
+
+.exam-types button.is-on .tab-count {
+  color: var(--on-ink) !important;
+}
+
+.shell-flow .footer .btn:not(.ghost),
+.shell-desk .footer .btn:not(.ghost),
+.shell-desk .btn:not(.ghost),
+.shell-flow .cta:not(.ghost) {
+  background: #123652 !important;
+  color: #ffffff !important;
+  forced-color-adjust: none;
+}
+
+.shell-flow .footer .btn.ghost,
+.footer .btn.ghost,
+.btn.ghost {
+  background: var(--card) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.shell-flow input,
+.shell-flow select,
+.shell-flow textarea,
+input,
+select,
+textarea {
+  background: var(--card);
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+}
+
+input[readonly] {
+  background: var(--card-subtle);
+  color: var(--ink-soft);
+  -webkit-text-fill-color: var(--ink-soft);
 }
 
 .preview-paper,
@@ -3681,7 +3761,10 @@ input:focus, select:focus, textarea:focus {
 :root[data-theme="dark"] .shell-flow,
 :root[data-theme="dark"] .shell-desk,
 :root[data-theme="dark"] .app,
-:root[data-theme="dark"] body {
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] .board,
+:root[data-theme="dark"] .fold,
+:root[data-theme="dark"] .footer {
   color-scheme: dark;
   forced-color-adjust: none;
 }
@@ -3747,12 +3830,14 @@ input:focus, select:focus, textarea:focus {
 }
 
 :root[data-theme="dark"] .patient-mark,
-:root[data-theme="dark"] .patient-mark,
 :root[data-theme="dark"] .exam-kind,
 :root[data-theme="dark"] .empty-mark,
 :root[data-theme="dark"] .tab-count,
 :root[data-theme="dark"] .exam-guidance,
-:root[data-theme="dark"] .order-link {
+:root[data-theme="dark"] .order-link,
+:root[data-theme="dark"] .success-mark,
+:root[data-theme="dark"] .avatar,
+:root[data-theme="dark"] .empty-icon {
   background: var(--card-subtle);
   color: var(--ink);
 }
@@ -3773,6 +3858,10 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--line);
 }
 
+:root[data-theme="dark"] .order-link small {
+  color: var(--ink-soft);
+}
+
 :root[data-theme="dark"] .dpad-btn,
 :root[data-theme="dark"] .rubrica-zoom-btn {
   background: var(--card) !important;
@@ -3782,6 +3871,25 @@ input:focus, select:focus, textarea:focus {
 
 :root[data-theme="dark"] .rubrica-zoom-val {
   color: var(--ink);
+}
+
+:root[data-theme="dark"] .historial-card,
+:root[data-theme="dark"] .tx-card,
+:root[data-theme="dark"] .profile-row,
+:root[data-theme="dark"] .listo-card,
+:root[data-theme="dark"] .receta-modelo-card:not(.is-on),
+:root[data-theme="dark"] .clinical-alert,
+:root[data-theme="dark"] .banner {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] .btn-subtle:not(.is-primary):not(.is-danger):not(.is-tx-save),
+:root[data-theme="dark"] .btn-tool:not(.is-tx):not(.is-calc):not(.is-save) {
+  background: var(--card-subtle);
+  color: var(--ink);
+  border-color: var(--line);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -3805,14 +3913,24 @@ input:focus, select:focus, textarea:focus {
   :root:not([data-theme="light"]) .lede,
   :root:not([data-theme="light"]) .order-heading p,
   :root:not([data-theme="light"]) .empty p,
-  :root:not([data-theme="light"]) .empty.exam-empty p {
+  :root:not([data-theme="light"]) .empty.exam-empty p,
+  :root:not([data-theme="light"]) .fold-sum {
     color: var(--ink-soft);
   }
 
   :root:not([data-theme="light"]) .order-heading h2,
   :root:not([data-theme="light"]) .empty.exam-empty strong,
-  :root:not([data-theme="light"]) .screen h2 {
+  :root:not([data-theme="light"]) .screen h2,
+  :root:not([data-theme="light"]) .fold-title,
+  :root:not([data-theme="light"]) label.field {
     color: var(--ink);
+  }
+
+  :root:not([data-theme="light"]) .segment button.is-on,
+  :root:not([data-theme="light"]) .chips button.is-on,
+  :root:not([data-theme="light"]) .add-btn.is-on {
+    background: var(--ink);
+    color: var(--on-ink);
   }
 }
 

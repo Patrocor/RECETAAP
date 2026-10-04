@@ -11,7 +11,7 @@ const tema = await readFile(new URL("../tema.js", import.meta.url), "utf8");
 test("el tema se resuelve a claro u oscuro antes de pintar y no deja data-theme vacío", () => {
   assert.match(html, /<script src="tema\.js"><\/script>/);
   assert.match(html, /name="color-scheme" content="light dark"/);
-  assert.match(html, /styles\.css\?v=6/);
+  assert.match(html, /styles\.css\?v=7/);
   assert.match(tema, /data-theme/);
   assert.match(tema, /prefers-color-scheme: dark/);
   assert.match(tema, /recetapp\.perfil/);
@@ -22,6 +22,8 @@ test("el tema se resuelve a claro u oscuro antes de pintar y no deja data-theme 
 });
 
 test("las superficies clínicas usan tokens y no blancos huérfanos sobre tinta invertida", () => {
+  assert.match(css, /--on-ink: #ffffff/);
+  assert.match(css, /--on-ink: #0b1f33/);
   assert.match(css, /\.shell-flow \{[\s\S]*?background: var\(--bg\);/);
   assert.match(css, /\.shell-flow \.footer \{[\s\S]*?background: var\(--bg\);/);
   assert.match(css, /\.shell-flow \.footer \.btn\.ghost \{[\s\S]*?color: var\(--ink\);/);
@@ -42,7 +44,13 @@ test("el bloqueo de contraste cubre flujos, vacíos, previa y modo oscuro", () =
   assert.match(css, /\.preview-paper/);
   assert.match(css, /:root\[data-theme="dark"\] \.exam-kind/);
   assert.match(css, /\.desk-home \.desk-action-card:not\(\.primary\) \{[\s\S]*?background: #ffffff !important;/);
-  assert.match(sw, /recetapp-v6/);
+  assert.match(css, /\.segment button\.is-on \{[\s\S]*?color: var\(--on-ink\)/);
+  assert.match(css, /\.chips button\.is-on \{[\s\S]*?color: var\(--on-ink\)/);
+  assert.match(css, /\.add-btn\.is-on \{[\s\S]*?color: var\(--on-ink\)/);
+  assert.match(css, /forced-color-adjust: none/);
+  assert.match(css, /\.shell-flow \.footer \.btn:not\(\.ghost\)[\s\S]*?background: #123652 !important;/);
+  assert.match(css, /\.shell-flow \.footer \.btn:not\(\.ghost\)[\s\S]*?color: #ffffff !important;/);
+  assert.match(sw, /recetapp-v7/);
   assert.match(sw, /tema\.js/);
 });
 
@@ -82,6 +90,8 @@ test("los pares de tinta y superficie cumplen contraste WCAG AA", () => {
     ["#f0f4f8", "#090e1a"],
     ["#c5d0dc", "#121a2d"],
     ["#c5d0dc", "#18233c"],
+    ["#0b1f33", "#f0f4f8"],
+    ["#ffffff", "#0b1f33"],
   ];
   for (const [foreground, background] of pairs) {
     assert.ok(
