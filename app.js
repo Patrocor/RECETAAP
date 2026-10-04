@@ -187,6 +187,24 @@ const MARCAS_PERU = [
   "Losapress", "Lipitor", "Zoloft", "Dalacin C", "Flagyl",
 ];
 
+const MODELOS_RECETA = [
+  {
+    id: "clasica",
+    nombre: "Clásica consultorio",
+    desc: "Dos columnas: Rp/ e indicaciones. Media página A4 para consultorio.",
+  },
+  {
+    id: "lineal",
+    nombre: "Lineal ambulatoria",
+    desc: "Medicamentos numerados y cuidados debajo. Más clara en farmacia.",
+  },
+  {
+    id: "institucional",
+    nombre: "Institucional",
+    desc: "Franja de cabecera y tabla de nombre, cantidad y pauta.",
+  },
+];
+
 const emptyPerfil = () => ({
   nombre: "",
   cmp: "",
@@ -200,7 +218,12 @@ const emptyPerfil = () => ({
     escala: 1,
   },
   tema: "auto",
+  modeloReceta: "clasica",
 });
+
+function modeloRecetaId(valor) {
+  return MODELOS_RECETA.some((modelo) => modelo.id === valor) ? valor : "clasica";
+}
 
 function emptyDraft() {
   return {
@@ -434,6 +457,7 @@ function loadPerfil() {
       firmaSello: typeof raw.firmaSello === "string" && raw.firmaSello.startsWith("data:image/") ? raw.firmaSello : "",
       rubricaAjuste: sanitizeRubricaAjuste(raw.rubricaAjuste),
       tema: ["auto", "light", "dark"].includes(raw.tema) ? raw.tema : "auto",
+      modeloReceta: modeloRecetaId(raw.modeloReceta),
     };
   } catch {
     return emptyPerfil();
@@ -694,17 +718,19 @@ function footer() {
     ]);
   }
   if (screen === "receta") {
-    const agregando = composer === "med";
-    if (agregando) {
-      const button = el("button", {
-        type: "button",
-        class: "btn has-icon",
-        disabled: busy,
-        "aria-label": "Agregar",
-        onclick: commitMed,
-      });
-      button.append(icono("check"));
-      return el("footer", { class: "footer" }, [button]);
+    if (composer === "med") {
+      return el("footer", { class: "footer" }, [
+        el("button", {
+          type: "button",
+          class: "btn ghost",
+          onclick: () => {
+            composer = null;
+            medEditId = null;
+            cambiandoMed = false;
+            render();
+          },
+        }, ["Cancelar"]),
+      ]);
     }
     return el("footer", { class: "footer footer-split" }, [
       el("button", {
@@ -757,9 +783,6 @@ function footer() {
   if (screen === "perfil") {
     label = "Guardar";
     action = savePerfilFromForm;
-  } else if (composer === "med") {
-    label = "Agregar";
-    action = commitMed;
   } else if (screen === "indicaciones") label = "Revisar";
   else if (screen === "revision") {
     label = busy ? "Generando…" : "Generar PDF";
@@ -1402,6 +1425,11 @@ function viewPerfil() {
       firmaBox,
     ]),
     temaSelector,
+    el("div", { class: "field-group" }, [
+      el("label", { class: "field-label", text: "Modelo de receta" }),
+      el("p", { class: "muted", text: "Todas ocupan media página A4 y generan un solo ejemplar." }),
+      selectorModeloReceta(),
+    ]),
   ]);
 }
 
@@ -2265,9 +2293,29 @@ function previewSignatureBox() {
   ]);
 }
 
+function selectorModeloReceta() {
+  const actual = modeloRecetaId(perfil.modeloReceta);
+  return el("div", { class: "receta-modelo-grid", role: "group", "aria-label": "Modelo de receta" }, MODELOS_RECETA.map((modelo) =>
+    el("button", {
+      type: "button",
+      class: `receta-modelo-card${actual === modelo.id ? " is-on" : ""}`,
+      "aria-pressed": actual === modelo.id ? "true" : "false",
+      onclick: () => {
+        perfil.modeloReceta = modelo.id;
+        savePerfil();
+        render();
+      },
+    }, [
+      el("strong", { text: modelo.nombre }),
+      el("small", { text: modelo.desc }),
+    ])
+  ));
+}
+
 function viewPrevia() {
   const esReceta = origenPrevia === "receta";
   if (esReceta) {
+    const modelo = modeloRecetaId(perfil.modeloReceta);
     const rpList = draft.medicamentos.map((med, idx) => el("div", { class: "preview-rp-item" }, [
       el("div", { class: "preview-rp-title" }, [
         el("strong", { text: `${idx + 1}. ${med.nombre}` }),
@@ -2281,8 +2329,51 @@ function viewPrevia() {
       ...String(draft.indicacionesGenerales || indicacionesAutomaticas(draft)).split("\n").map((l) => l.trim()).filter(Boolean),
     ];
 
+    const cuerpo = modelo === "institucional"
+      ? el("div", { class: "preview-table-wrap" }, [
+          el("table", { class: "preview-med-table" }, [
+            el("thead", {}, [el("tr", {}, [
+              el("th", { text: "#" }),
+              el("th", { text: "Medicamento" }),
+              el("th", { text: "Cant." }),
+              el("th", { text: "Pauta" }),
+            ])]),
+            el("tbody", {}, draft.medicamentos.length
+              ? draft.medicamentos.map((med, idx) => el("tr", {}, [
+                  el("td", { text: String(idx + 1) }),
+                  el("td", { text: `${med.nombre} · ${med.presentacion}` }),
+                  el("td", { text: med.cantidad }),
+                  el("td", { text: [med.dosis, med.frecuencia, med.duracion, med.via].filter(Boolean).join(" · ") }),
+                ]))
+              : [el("tr", {}, [el("td", { colspan: "4", text: "Sin medicamentos agregados" })])]),
+          ]),
+          el("div", { class: "preview-col-head", text: "Indicaciones y cuidados" }),
+          el("ul", { class: "preview-notes" }, indicaciones.length ? indicaciones.map((ind) => el("li", { text: ind })) : [el("li", { text: "Seguir indicaciones médicas." })]),
+        ])
+      : modelo === "lineal"
+        ? el("div", { class: "preview-lineal stack" }, [
+            el("div", { class: "preview-col-head", text: "Rp/" }),
+            el("div", { class: "preview-rp-list" }, rpList.length ? rpList : [el("p", { class: "muted", text: "Sin medicamentos agregados" })]),
+            el("div", { class: "preview-col-head", text: "Indicaciones y cuidados" }),
+            el("ul", { class: "preview-notes" }, indicaciones.length ? indicaciones.map((ind) => el("li", { text: ind })) : [el("li", { text: "Seguir indicaciones médicas." })]),
+          ])
+        : el("div", { class: "preview-body-grid" }, [
+            el("div", { class: "preview-col" }, [
+              el("div", { class: "preview-col-head", text: "Rp/ Medicamentos" }),
+              el("div", { class: "preview-rp-list" }, rpList.length ? rpList : [el("p", { class: "muted", text: "Sin medicamentos agregados" })]),
+            ]),
+            el("div", { class: "preview-col" }, [
+              el("div", { class: "preview-col-head", text: "Indicaciones y Cuidados" }),
+              el("ul", { class: "preview-notes" }, indicaciones.length ? indicaciones.map((ind) => el("li", { text: ind })) : [el("li", { text: "Seguir indicaciones médicas." })]),
+            ]),
+          ]);
+
     return el("section", { class: "screen preview-screen stack" }, [
-      el("div", { class: "preview-paper stack" }, [
+      el("div", { class: "receta-modelo-panel" }, [
+        el("p", { class: "eyebrow", text: "Modelo de receta · ½ página A4 · un solo ejemplar" }),
+        selectorModeloReceta(),
+      ]),
+      el("div", { class: `preview-paper stack is-${modelo}` }, [
         el("div", { class: "preview-header" }, [
           crearLogo(claveEspecialidad(perfil.especialidad)),
           el("div", { style: "text-align: center; flex: 1;" }, [
@@ -2301,16 +2392,7 @@ function viewPrevia() {
           ].filter(Boolean).join("   ·   ") }),
           (draft.diagnostico || draft.cie10) ? el("div", { class: "preview-patient-dx", text: `Dx: ${[draft.cie10, draft.diagnostico].filter(Boolean).join(" — ")}` }) : null,
         ]),
-        el("div", { class: "preview-body-grid" }, [
-          el("div", { class: "preview-col" }, [
-            el("div", { class: "preview-col-head", text: "Rp/ Medicamentos" }),
-            el("div", { class: "preview-rp-list" }, rpList.length ? rpList : [el("p", { class: "muted", text: "Sin medicamentos agregados" })]),
-          ]),
-          el("div", { class: "preview-col" }, [
-            el("div", { class: "preview-col-head", text: "Indicaciones y Cuidados" }),
-            el("ul", { class: "preview-notes" }, indicaciones.length ? indicaciones.map((ind) => el("li", { text: ind })) : [el("li", { text: "Seguir indicaciones médicas." })]),
-          ]),
-        ]),
+        cuerpo,
         el("div", { class: "preview-footer-grid" }, [
           el("div", { class: "preview-control" }, [
             el("strong", { text: "Próximo control: " }),
@@ -2910,7 +2992,19 @@ function cantidadField() {
     placeholder: "Se calcula sola",
     "aria-readonly": "true",
   });
-  return el("label", { class: "field", text: "Cantidad" }, [input]);
+  const check = el("button", {
+    type: "button",
+    class: "icon-add med-cantidad-check",
+    disabled: busy,
+    "aria-label": medEditId ? "Guardar medicamento" : "Agregar medicamento",
+    title: medEditId ? "Guardar medicamento" : "Agregar a la receta",
+    onclick: commitMed,
+  });
+  check.append(icono("check"));
+  return el("div", { class: "cantidad-row" }, [
+    el("label", { class: "field", text: "Cantidad calculada" }, [input]),
+    check,
+  ]);
 }
 
 function completarIndicaciones(area) {
@@ -3135,6 +3229,7 @@ function savePerfilFromForm() {
     firmaSello: perfil.firmaSello || "",
     rubricaAjuste: sanitizeRubricaAjuste(perfil.rubricaAjuste),
     tema: temaVal,
+    modeloReceta: modeloRecetaId(perfil.modeloReceta),
   };
   const email = validarEmail(nextPerfil.email);
   if (email) {
@@ -3837,7 +3932,41 @@ function lineasColumna(doc, lineas, x, y, ancho, limite) {
   }
 }
 
+function recetaLineasMedicamentos() {
+  const rp = [];
+  draft.medicamentos.forEach((med, index) => {
+    rp.push(`${index + 1}. ${med.nombre} — ${med.presentacion}`);
+    const pauta = [`Cant. ${med.cantidad}`, med.dosis, med.frecuencia, med.duracion, med.via].filter(Boolean).join(", ");
+    if (pauta) rp.push(pauta);
+    if (med.indicaciones) rp.push(med.indicaciones);
+  });
+  return rp;
+}
+
+function recetaLineasNotas() {
+  return String(draft.indicacionesGenerales || "").split("\n").map((linea) => linea.trim()).filter(Boolean);
+}
+
+function recetaPonerFirma(doc, posX, posY, baseW = 36, baseH = 12) {
+  if (!perfil.firmaSello) return;
+  try {
+    const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
+    const w = baseW * ajuste.escala;
+    const h = baseH * ajuste.escala;
+    const offX = ajuste.offsetX * 0.26;
+    const offY = ajuste.offsetY * 0.26;
+    doc.addImage(perfil.firmaSello, "PNG", posX + (baseW - w) / 2 + offX, posY + (baseH - h) / 2 + offY, w, h, undefined, "FAST");
+  } catch {}
+}
+
 function dibujarReceta(doc, top, alto) {
+  const modelo = modeloRecetaId(perfil.modeloReceta);
+  if (modelo === "lineal") return dibujarRecetaLineal(doc, top, alto);
+  if (modelo === "institucional") return dibujarRecetaInstitucional(doc, top, alto);
+  return dibujarRecetaClasica(doc, top, alto);
+}
+
+function dibujarRecetaClasica(doc, top, alto) {
   const x = 8;
   const ancho = 194;
   const tinta = [18, 54, 82];
@@ -3926,18 +4055,8 @@ function dibujarReceta(doc, top, alto) {
     doc.line(x + 102, linea, x + 99 + colAncho - 3, linea);
   }
 
-  const rp = [];
-  draft.medicamentos.forEach((med, index) => {
-    rp.push(`${index + 1}. ${med.nombre} — ${med.presentacion}`);
-    const pauta = [`Cant. ${med.cantidad}`, med.dosis, med.frecuencia, med.duracion, med.via].filter(Boolean).join(", ");
-    if (pauta) rp.push(pauta);
-    if (med.indicaciones) rp.push(med.indicaciones);
-  });
-  const notas = [
-    ...String(draft.indicacionesGenerales || "").split("\n").map((linea) => linea.trim()).filter(Boolean),
-  ];
-  lineasColumna(doc, rp, x + 6, primera - 1.5, colAncho - 8, ultima - 2);
-  lineasColumna(doc, notas, x + 102, primera - 1.5, colAncho - 8, ultima - 2);
+  lineasColumna(doc, recetaLineasMedicamentos(), x + 6, primera - 1.5, colAncho - 8, ultima - 2);
+  lineasColumna(doc, recetaLineasNotas(), x + 102, primera - 1.5, colAncho - 8, ultima - 2);
 
   const pie = top + alto - 8;
   doc.setFont("times", "bold");
@@ -3948,27 +4067,142 @@ function dibujarReceta(doc, top, alto) {
   doc.text(fechaGuion(draft.proximoControl), x + 34, pie);
   doc.setDrawColor(168, 188, 208);
   doc.line(x + 34, pie + 1.1, x + 78, pie + 1.1);
-  if (perfil.firmaSello) {
-    try {
-      const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
-      const baseW = 36;
-      const baseH = 12;
-      const w = baseW * ajuste.escala;
-      const h = baseH * ajuste.escala;
-      // Convertir desplazamiento de pixels a mm aproximados (aprox 0.26 mm por pixel en pantalla)
-      const offX = ajuste.offsetX * 0.26;
-      const offY = ajuste.offsetY * 0.26;
-      const posX = (x + 137 + (baseW - w) / 2) + offX;
-      const posY = (pie - 19 + (baseH - h) / 2) + offY;
-      doc.addImage(perfil.firmaSello, "PNG", posX, posY, w, h, undefined, "FAST");
-    } catch {}
-  }
+  recetaPonerFirma(doc, x + 137, pie - 19);
   doc.line(x + 124, pie - 6, x + 186, pie - 6);
   doc.setFont("times", "bold");
   doc.text("Firma y Sello", x + 155, pie, { align: "center" });
   doc.setDrawColor(...tinta);
   doc.setLineWidth(0.45);
   doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
+}
+
+function dibujarRecetaLineal(doc, top, alto) {
+  const x = 8;
+  const ancho = 194;
+  const tinta = [18, 54, 82];
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.45);
+  doc.roundedRect(x, top, ancho, alto, 2.4, 2.4);
+  doc.setFillColor(18, 54, 82);
+  doc.rect(x, top, ancho, 18, "F");
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("times", "bold");
+  doc.setFontSize(13);
+  doc.text((perfil.nombre || "MÉDICO TRATANTE").toUpperCase(), x + 6, top + 8);
+  doc.setFont("times", "normal");
+  doc.setFontSize(8);
+  doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  ·  ").toUpperCase(), x + 6, top + 14);
+  doc.setFont("times", "bold");
+  doc.setFontSize(10);
+  doc.text("RECETA  ·  ½ A4", x + ancho - 6, top + 11, { align: "right" });
+
+  let y = top + 26;
+  campoReceta(doc, "Paciente:", draft.pacienteNombre, x + 6, y, 120);
+  campoReceta(doc, "Fecha:", fechaGuion(draft.fechaAtencion), x + 132, y, 64);
+  y += 6.2;
+  campoReceta(doc, "Edad:", draft.pacienteEdad, x + 6, y, 28);
+  campoReceta(doc, "DNI:", draft.pacienteDNI, x + 40, y, 52);
+  campoReceta(doc, "Dx:", [draft.cie10, draft.diagnostico].filter(Boolean).join(" — "), x + 98, y, 98);
+  y += 8;
+  doc.setFont("times", "bolditalic");
+  doc.setFontSize(12);
+  doc.setTextColor(...tinta);
+  doc.text("Rp/", x + 6, y);
+  y += 5;
+  lineasColumna(doc, recetaLineasMedicamentos(), x + 8, y, 180, top + alto - 36);
+  y = Math.min(top + alto - 34, y + recetaLineasMedicamentos().length * 4.5 + 6);
+  doc.setFont("times", "bold");
+  doc.setFontSize(9);
+  doc.text("Indicaciones:", x + 6, y);
+  lineasColumna(doc, recetaLineasNotas(), x + 8, y + 5, 180, top + alto - 16);
+
+  const pie = top + alto - 8;
+  doc.setFont("times", "bold");
+  doc.setFontSize(8);
+  doc.setTextColor(...tinta);
+  doc.text("Próximo control:", x + 6, pie);
+  doc.setFont("times", "normal");
+  doc.text(fechaGuion(draft.proximoControl) || "Según evolución", x + 34, pie);
+  recetaPonerFirma(doc, x + 140, pie - 18);
+  doc.setDrawColor(168, 188, 208);
+  doc.line(x + 128, pie - 5, x + 188, pie - 5);
+  doc.setFont("times", "bold");
+  doc.text("Firma y Sello", x + 158, pie, { align: "center" });
+}
+
+function dibujarRecetaInstitucional(doc, top, alto) {
+  const x = 8;
+  const ancho = 194;
+  const tinta = [18, 54, 82];
+  doc.setFillColor(...tinta);
+  doc.roundedRect(x, top, ancho, alto, 2, 2, "S");
+  doc.rect(x, top, ancho, 20, "F");
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(12);
+  doc.text((perfil.nombre || "MÉDICO TRATANTE").toUpperCase(), x + 6, top + 8);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+  doc.text([perfil.especialidad, perfil.cmp ? `CMP ${perfil.cmp}` : ""].filter(Boolean).join("  |  ").toUpperCase(), x + 6, top + 14.5);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+  doc.text("RECETA MÉDICA", x + ancho - 6, top + 12, { align: "right" });
+
+  doc.setTextColor(...tinta);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(8);
+  let y = top + 27;
+  doc.text(`Paciente: ${draft.pacienteNombre || "—"}`, x + 6, y);
+  doc.setFont("helvetica", "normal");
+  doc.text([
+    draft.pacienteDNI ? `DNI ${draft.pacienteDNI}` : "",
+    draft.pacienteEdad ? `${draft.pacienteEdad} años` : "",
+    draft.pacienteSexo || "",
+    fechaGuion(draft.fechaAtencion),
+  ].filter(Boolean).join("  ·  "), x + 6, y + 5);
+  if (draft.diagnostico || draft.cie10) {
+    doc.setFont("helvetica", "italic");
+    doc.text(`Dx: ${[draft.cie10, draft.diagnostico].filter(Boolean).join(" — ")}`, x + 6, y + 10);
+  }
+
+  const tableTop = y + 14;
+  const cols = [x + 6, x + 16, x + 108, x + 138];
+  doc.setFillColor(232, 239, 246);
+  doc.rect(x + 4, tableTop, ancho - 8, 7, "F");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(7.5);
+  doc.setTextColor(...tinta);
+  doc.text("#", cols[0], tableTop + 5);
+  doc.text("MEDICAMENTO", cols[1], tableTop + 5);
+  doc.text("CANT.", cols[2], tableTop + 5);
+  doc.text("PAUTA", cols[3], tableTop + 5);
+
+  let rowY = tableTop + 12;
+  draft.medicamentos.forEach((med, index) => {
+    if (rowY > top + alto - 28) return;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8);
+    doc.text(String(index + 1), cols[0], rowY);
+    doc.text(doc.splitTextToSize(`${med.nombre} · ${med.presentacion}`, 88)[0] || "", cols[1], rowY);
+    doc.setFont("helvetica", "normal");
+    doc.text(doc.splitTextToSize(med.cantidad || "", 28)[0] || "", cols[2], rowY);
+    doc.text(doc.splitTextToSize([med.dosis, med.frecuencia, med.duracion].filter(Boolean).join(" · "), 56)[0] || "", cols[3], rowY);
+    rowY += 6;
+  });
+
+  rowY += 4;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(8);
+  doc.text("Indicaciones", x + 6, rowY);
+  lineasColumna(doc, recetaLineasNotas(), x + 6, rowY + 5, 180, top + alto - 16);
+
+  const pie = top + alto - 8;
+  recetaPonerFirma(doc, x + 140, pie - 18);
+  doc.setDrawColor(...tinta);
+  doc.line(x + 128, pie - 5, x + 188, pie - 5);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(8);
+  doc.text("Firma y sello", x + 158, pie, { align: "center" });
 }
 
 function generarOrdenExamenes() {
@@ -4145,13 +4379,16 @@ function generarPDF() {
   try {
     const doc = new jsPDF({ unit: "mm", format: "a4" });
     const alto = 142;
-    dibujarReceta(doc, 5, alto);
-    dibujarReceta(doc, 150, alto);
+    dibujarReceta(doc, 8, alto);
     doc.setDrawColor(180, 196, 214);
     doc.setLineDashPattern([0.7, 0.8], 0);
     doc.setLineWidth(0.2);
-    doc.line(12, 148.6, 198, 148.6);
+    doc.line(12, 154, 198, 154);
     doc.setLineDashPattern([], 0);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    doc.setTextColor(140);
+    doc.text("Media página A4 · un solo ejemplar", 105, 158.4, { align: "center" });
     doc.setFont("helvetica", "normal");
     doc.setFontSize(6.5);
     doc.setTextColor(110);

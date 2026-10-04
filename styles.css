@@ -3501,6 +3501,115 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 8px 22px rgba(15, 118, 110, 0.38) !important;
 }
 
+.cantidad-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52px;
+  align-items: end;
+  gap: 10px;
+}
+
+.med-cantidad-check {
+  width: 52px;
+  height: 48px;
+  border-radius: 14px;
+  background: #123652;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(18, 54, 82, 0.2);
+}
+
+.med-cantidad-check:hover {
+  background: #0d2a42;
+  color: #ffffff;
+}
+
+.receta-modelo-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.receta-modelo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.receta-modelo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.receta-modelo-card small {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.receta-modelo-card.is-on {
+  border-color: #123652;
+  background: #123652;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(18, 54, 82, 0.2);
+}
+
+.receta-modelo-card.is-on small {
+  color: #d7e4f0;
+}
+
+.preview-paper.is-institucional .preview-header {
+  background: #123652;
+  color: #ffffff;
+  margin: -20px -18px 12px;
+  padding: 14px 18px 12px;
+  border: 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.preview-paper.is-institucional .preview-doctor-name,
+.preview-paper.is-institucional .preview-doctor-sub {
+  color: #ffffff;
+}
+
+.preview-med-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.preview-med-table th,
+.preview-med-table td {
+  border-bottom: 1px solid #d5e0ea;
+  padding: 6px 5px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.preview-med-table th {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #123652;
+  background: #e8f0f7;
+}
+
+.preview-lineal {
+  border: 1px solid #a8bcd0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
 /* Contraste clínico en toda la app: tinta y superficies siempre emparejadas. */
 .shell,
 .main,

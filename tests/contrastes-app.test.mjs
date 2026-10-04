@@ -11,7 +11,7 @@ const tema = await readFile(new URL("../tema.js", import.meta.url), "utf8");
 test("el tema se resuelve a claro u oscuro antes de pintar y no deja data-theme vacío", () => {
   assert.match(html, /<script src="tema\.js"><\/script>/);
   assert.match(html, /name="color-scheme" content="light dark"/);
-  assert.match(html, /styles\.css\?v=4/);
+  assert.match(html, /styles\.css\?v=5/);
   assert.match(tema, /data-theme/);
   assert.match(tema, /prefers-color-scheme: dark/);
   assert.match(tema, /recetapp\.perfil/);
@@ -42,7 +42,7 @@ test("el bloqueo de contraste cubre flujos, vacíos, previa y modo oscuro", () =
   assert.match(css, /\.preview-paper/);
   assert.match(css, /:root\[data-theme="dark"\] \.exam-kind/);
   assert.match(css, /:root\[data-theme="dark"\] \.desk-home \.desk-action-card:not\(\.primary\)/);
-  assert.match(sw, /recetapp-v4/);
+  assert.match(sw, /recetapp-v5/);
   assert.match(sw, /tema\.js/);
 });
 
