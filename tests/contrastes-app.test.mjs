@@ -45,3 +45,48 @@ test("el bloqueo de contraste cubre flujos, vacíos, previa y modo oscuro", () =
   assert.match(sw, /recetapp-v4/);
   assert.match(sw, /tema\.js/);
 });
+
+function hex(value) {
+  const match = /^#([0-9a-f]{6})$/i.exec(value);
+  assert.ok(match, value);
+  return [
+    Number.parseInt(match[1].slice(0, 2), 16),
+    Number.parseInt(match[1].slice(2, 4), 16),
+    Number.parseInt(match[1].slice(4, 6), 16),
+  ];
+}
+
+function channel(value) {
+  const scaled = value / 255;
+  return scaled <= 0.04045 ? scaled / 12.92 : ((scaled + 0.055) / 1.055) ** 2.4;
+}
+
+function luminance(color) {
+  return 0.2126 * channel(color[0]) + 0.7152 * channel(color[1]) + 0.0722 * channel(color[2]);
+}
+
+function contrastRatio(foreground, background) {
+  const light = Math.max(luminance(hex(foreground)), luminance(hex(background)));
+  const dark = Math.min(luminance(hex(foreground)), luminance(hex(background)));
+  return (light + 0.05) / (dark + 0.05);
+}
+
+test("los pares de tinta y superficie cumplen contraste WCAG AA", () => {
+  const pairs = [
+    ["#0b1f33", "#ffffff"],
+    ["#0b1f33", "#f3f5fb"],
+    ["#3d4758", "#ffffff"],
+    ["#3d4758", "#f3f5fb"],
+    ["#ffffff", "#123652"],
+    ["#f0f4f8", "#121a2d"],
+    ["#f0f4f8", "#090e1a"],
+    ["#c5d0dc", "#121a2d"],
+    ["#c5d0dc", "#18233c"],
+  ];
+  for (const [foreground, background] of pairs) {
+    assert.ok(
+      contrastRatio(foreground, background) >= 4.5,
+      `${foreground} sobre ${background} = ${contrastRatio(foreground, background).toFixed(2)}`
+    );
+  }
+});
