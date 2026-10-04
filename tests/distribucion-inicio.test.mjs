@@ -30,12 +30,14 @@ test("el estilo de inicio equilibra la distribución y evita saltos huérfanos d
 });
 
 test("las tarjetas de inicio usan colores de contraste explícitos y no heredan tinta de modo oscuro", () => {
-  assert.match(css, /\.desk-action-card \{[\s\S]*?color: #123652;/);
-  assert.match(css, /\.desk-action-desc \{[\s\S]*?color: #3d5366;/);
+  assert.match(css, /\.desk-action-card \{[\s\S]*?color: #0b1f33;/);
+  assert.match(css, /\.desk-action-desc \{[\s\S]*?color: #1f3346;/);
   assert.match(css, /\.desk-action-card\.primary \.desk-action-desc \{[\s\S]*?color: #e8eef4;/);
   assert.match(css, /\.desk-home \.desk-date \{[\s\S]*?color: #e8eef4;/);
   assert.match(css, /\.desk-home \.desk-meta \{[\s\S]*?color: #ffffff;/);
   assert.match(css, /\.desk-rail-dock button \{[\s\S]*?color: #1f3346;/);
+  assert.match(css, /color-scheme: light;/);
+  assert.match(css, /\.desk-action-card:not\(\.primary\) \.desk-action-icon \{[\s\S]*?background: #123652;/);
 });
 
 test("la orden de exámenes guarda la última atención para continuidad en inicio", () => {

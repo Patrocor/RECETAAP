@@ -982,12 +982,22 @@ svg.logo {
   letter-spacing: 0.02em;
 }
 
+.desk-home,
+.desk-home .desk-panel,
+.desk-home .desk-action-card,
+.desk-home .desk-status-card,
+.desk-home .desk-rail-dock {
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+
 .desk-home .desk-panel {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #f4f7fb;
+  color: #0b1f33;
   padding: 18px 20px calc(18px + env(safe-area-inset-bottom));
   box-sizing: border-box;
   min-height: 0;
@@ -1017,11 +1027,17 @@ svg.logo {
   border-radius: 20px;
   text-align: left;
   cursor: pointer;
-  border: 1px solid rgba(18, 54, 82, 0.16);
+  border: 1.5px solid #123652;
   background: #ffffff;
-  color: #123652;
+  color: #0b1f33;
   box-shadow: 0 4px 14px rgba(18, 54, 82, 0.05);
   transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.desk-home .desk-action-card:not(.primary),
+.desk-home .desk-action-card:not(.primary) .desk-action-title,
+.desk-home .desk-action-card:not(.primary) .desk-action-arrow {
+  color: #0b1f33;
 }
 
 .desk-action-card:hover {
@@ -1072,8 +1088,8 @@ svg.logo {
 }
 
 .desk-action-card:not(.primary) .desk-action-icon {
-  background: #eef3f8;
-  color: #123652;
+  background: #123652;
+  color: #ffffff;
 }
 
 .desk-action-icon svg {
@@ -1100,7 +1116,11 @@ svg.logo {
   line-height: 1.35;
   margin-top: 3px;
   display: block;
-  color: #3d5366;
+  color: #1f3346;
+}
+
+.desk-home .desk-action-card:not(.primary) .desk-action-desc {
+  color: #1f3346;
 }
 
 .desk-action-card.primary .desk-action-desc {
@@ -1109,7 +1129,7 @@ svg.logo {
 
 .desk-action-arrow {
   font-size: 18px;
-  color: #3d5366;
+  color: #0b1f33;
   flex-shrink: 0;
   transition: transform 0.2s var(--ease-spring), color 0.2s ease;
 }

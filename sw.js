@@ -1,8 +1,9 @@
-const CACHE_NAME = "recetapp-v1";
+const CACHE_NAME = "recetapp-v3";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
+  "./styles.css?v=3",
   "./app.js",
   "./catalogos.js",
   "./automatizar.js",
@@ -30,10 +31,32 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+function isCodeRequest(url) {
+  return /\.(css|js)$/.test(url.pathname);
+}
+
+function isDocumentRequest(request, url) {
+  return request.mode === "navigate"
+    || url.pathname === "/"
+    || url.pathname.endsWith("/")
+    || url.pathname.endsWith("index.html");
+}
+
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
-  // No cachear APIs externas o dinámicas
   if (url.pathname.startsWith("/api/") || url.hostname.includes("supabase.co")) {
+    return;
+  }
+  if (isCodeRequest(url) || isDocumentRequest(event.request, url)) {
+    event.respondWith(
+      fetch(event.request).then((response) => {
+        if (response && response.status === 200 && (response.type === "basic" || response.type === "cors")) {
+          const toCache = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, toCache));
+        }
+        return response;
+      }).catch(() => caches.match(event.request))
+    );
     return;
   }
   event.respondWith(
