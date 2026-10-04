@@ -493,7 +493,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: #e8eef4;
 }
 
 .desk-name {
@@ -512,7 +512,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .desk-meta {
   margin: 8px 0 0;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.78);
+  color: #f4f7fb;
 }
 
 .desk-card {
@@ -954,7 +954,7 @@ svg.logo {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: #e8eef4;
 }
 
 .desk-home .desk-name {
@@ -974,11 +974,11 @@ svg.logo {
   gap: 6px;
   margin-top: 8px;
   padding: 4px 12px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   font-size: 12px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  color: #ffffff;
   letter-spacing: 0.02em;
 }
 
@@ -1017,8 +1017,9 @@ svg.logo {
   border-radius: 20px;
   text-align: left;
   cursor: pointer;
-  border: 1px solid rgba(18, 54, 82, 0.08);
-  background: white;
+  border: 1px solid rgba(18, 54, 82, 0.16);
+  background: #ffffff;
+  color: #123652;
   box-shadow: 0 4px 14px rgba(18, 54, 82, 0.05);
   transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -1091,21 +1092,30 @@ svg.logo {
   font-weight: 600;
   line-height: 1.2;
   display: block;
+  color: inherit;
 }
 
 .desk-action-desc {
   font-size: 12px;
-  line-height: 1.3;
+  line-height: 1.35;
   margin-top: 3px;
   display: block;
-  opacity: 0.8;
+  color: #3d5366;
+}
+
+.desk-action-card.primary .desk-action-desc {
+  color: #e8eef4;
 }
 
 .desk-action-arrow {
   font-size: 18px;
-  opacity: 0.6;
+  color: #3d5366;
   flex-shrink: 0;
-  transition: transform 0.2s var(--ease-spring), opacity 0.2s ease;
+  transition: transform 0.2s var(--ease-spring), color 0.2s ease;
+}
+
+.desk-action-card.primary .desk-action-arrow {
+  color: #ffffff;
 }
 
 .desk-status-card {
@@ -1173,7 +1183,7 @@ button.desk-status-card:active {
 
 .desk-status-text {
   font-size: 12.5px;
-  color: #5c6578;
+  color: #3d4758;
   margin: 0;
   line-height: 1.45;
 }
@@ -1213,7 +1223,7 @@ button.desk-status-card:active {
 .desk-stat-label {
   display: block;
   font-size: 10px;
-  color: #64748b;
+  color: #3d4758;
   margin-top: 2px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1236,7 +1246,7 @@ button.desk-status-card:active {
   border: 0;
   border-radius: 12px;
   background: transparent;
-  color: #5c6578;
+  color: #1f3346;
   font-size: 12.5px;
   font-weight: 650;
   cursor: pointer;
