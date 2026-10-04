@@ -288,7 +288,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .screen, .fold-body, .fold-chev, .fold-inner, .home > *, .desk > * { animation: none; transition: none; }
+  .screen, .fold-body, .fold-chev, .fold-inner, .home > *, .desk > *,
+  .desk-action-card, button.desk-status-card, .desk-rail-dock button { animation: none; transition: none; }
 }
 
 .shell-desk {
@@ -504,7 +505,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .desk-id:focus-visible,
 .desk-primary:focus-visible,
 .desk-draft:focus-visible,
-.desk-rail button:focus-visible {
+.desk-rail button:focus-visible,
+.desk-action-card:focus-visible,
+button.desk-status-card:focus-visible,
+.desk-rail-dock button:focus-visible {
   outline: 2px solid #9eb6ff;
   outline-offset: 2px;
 }
@@ -900,6 +904,11 @@ svg.logo {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.desk-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 54, 82, 0.08);
+}
+
 .desk-action-card:active {
   transform: scale(0.985);
 }
@@ -909,6 +918,11 @@ svg.logo {
   color: white;
   border: 0;
   box-shadow: 0 10px 24px rgba(18, 54, 82, 0.18);
+}
+
+.desk-action-card.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(18, 54, 82, 0.24);
 }
 
 .desk-action-icon {
@@ -972,12 +986,19 @@ svg.logo {
   text-align: left;
   display: block;
   width: 100%;
+  font-family: inherit;
 }
 
 button.desk-status-card {
   cursor: pointer;
   border: 1px solid rgba(18, 54, 82, 0.08);
+  background: white;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button.desk-status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(18, 54, 82, 0.07);
 }
 
 button.desk-status-card:active {
@@ -1100,8 +1121,13 @@ button.desk-status-card:active {
   stroke-width: 1.8;
 }
 
-.desk-rail-dock button:active {
+.desk-rail-dock button:hover {
   background: #f0f4f9;
+  color: #123652;
+}
+
+.desk-rail-dock button:active {
+  background: #e2ebf4;
   color: #123652;
 }
 

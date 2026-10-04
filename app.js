@@ -978,7 +978,7 @@ function viewInicio() {
     }, [
       el("span", { class: "desk-status-badge blue" }, [
         el("span", { class: "desk-status-dot" }),
-        document.createTextNode("Última receta emitida"),
+        document.createTextNode("Última atención emitida"),
       ]),
       el("p", { class: "desk-status-title", text: ultima.nombre || "Paciente" }),
       el("p", { class: "desk-status-text", text: detalleUltima || "Atención previa registrada." }),
@@ -2651,6 +2651,7 @@ function generarOrdenExamenes() {
     doc.setTextColor(...tinta);
     doc.text("Firma y Sello", 157, y + 5, { align: "center" });
     doc.save(`Orden_examenes_${fileSlug(draft.pacienteNombre)}.pdf`);
+    guardarUltima();
     composer = null;
     screen = origenExamenes === "inicio" ? "inicio" : "receta";
     if (screen === "receta") panel = "indicaciones";
