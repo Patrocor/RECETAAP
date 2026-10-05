@@ -27,7 +27,9 @@ test("la receta lleva marca de agua tenue en el centro de cada lado", () => {
   assert.match(app, /dibujarMarcaAgua\(doc, x \+ 111/);
   assert.match(app, /opacity: 0\.12/);
   assert.match(app, /tinta: \[186, 198, 208\]/);
-  assert.match(app, /dibujarLogoDerecha\(doc, logoX, top \+ 1\.2, tinta, logoW, logoH\)/);
+  assert.match(app, /const SELLO_LR_ANCHO = 15\.2/);
+  assert.match(app, /medidaSelloLR\(1\.25\)/);
+  assert.match(app, /dibujarLogoDerecha\(doc, logoX, top \+ \(headerH - logoH\) \/ 2, tinta, logoW, logoH\)/);
 });
 
 test("el PDF reservado deja pie para firma y guía de corte en A4", () => {

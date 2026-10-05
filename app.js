@@ -4180,6 +4180,13 @@ function textoAdaptado(doc, lineas, x, y, ancho, limite, opts = {}) {
   }
 }
 
+const SELLO_LR_ANCHO = 15.2;
+const SELLO_LR_ALTO = 16.6;
+
+function medidaSelloLR(escala = 1) {
+  return { w: SELLO_LR_ANCHO * escala, h: SELLO_LR_ALTO * escala };
+}
+
 function dibujarSelloLR(doc, x, y, w, h, {
   tinta = [18, 54, 82],
   fondo = [215, 228, 240],
@@ -4187,38 +4194,36 @@ function dibujarSelloLR(doc, x, y, w, h, {
   ekg = true,
   relleno = true,
 } = {}) {
-  const radio = Math.min(2.8, w * 0.12, h * 0.14);
+  const radio = Math.min(2.2, w * 0.14, h * 0.13);
   if (relleno) {
     doc.setFillColor(...fondo);
     doc.roundedRect(x, y, w, h, radio, radio, "F");
   }
   doc.setDrawColor(...oro);
-  doc.setLineWidth(Math.max(0.28, Math.min(0.55, h * 0.035)));
-  doc.roundedRect(x + 0.4, y + 0.4, w - 0.8, h - 0.8, Math.max(1, radio - 0.35), Math.max(1, radio - 0.35));
+  doc.setLineWidth(Math.max(0.28, Math.min(0.5, h * 0.032)));
+  doc.roundedRect(x + 0.35, y + 0.35, w - 0.7, h - 0.7, Math.max(1, radio - 0.3), Math.max(1, radio - 0.3));
   doc.setFont("times", "bold");
   const mmAPt = 2.83465;
-  doc.setFontSize(Math.max(9, (ekg ? h * 0.48 : h * 0.58) * mmAPt));
+  doc.setFontSize(Math.max(9, (ekg ? h * 0.5 : h * 0.6) * mmAPt));
   doc.setTextColor(...tinta);
-  doc.text("LR", x + w / 2, y + h * (ekg ? 0.58 : 0.68), { align: "center" });
+  doc.text("LR", x + w / 2, y + h * (ekg ? 0.57 : 0.66), { align: "center" });
   if (!ekg) return;
   const base = y + h * 0.84;
-  const left = x + w * 0.07;
-  const right = x + w * 0.93;
+  const left = x + w * 0.12;
+  const right = x + w * 0.88;
   const mid = x + w * 0.5;
-  const amp = h * 0.17;
+  const amp = h * 0.15;
   doc.setDrawColor(...oro);
-  doc.setLineWidth(Math.max(0.45, h * 0.038));
-  doc.line(left, base, mid - w * 0.16, base);
-  doc.line(mid - w * 0.16, base, mid - w * 0.08, base - amp);
-  doc.line(mid - w * 0.08, base - amp, mid + w * 0.02, base + amp * 0.9);
-  doc.line(mid + w * 0.02, base + amp * 0.9, mid + w * 0.13, base - amp * 0.38);
-  doc.line(mid + w * 0.13, base - amp * 0.38, right, base);
+  doc.setLineWidth(Math.max(0.4, h * 0.036));
+  doc.line(left, base, mid - w * 0.14, base);
+  doc.line(mid - w * 0.14, base, mid - w * 0.07, base - amp);
+  doc.line(mid - w * 0.07, base - amp, mid + w * 0.02, base + amp * 0.85);
+  doc.line(mid + w * 0.02, base + amp * 0.85, mid + w * 0.12, base - amp * 0.35);
+  doc.line(mid + w * 0.12, base - amp * 0.35, right, base);
 }
 
 function dibujarMarcaAgua(doc, x, y, w, h) {
-  const lado = Math.min(w, h);
-  const bw = Math.min(40, Math.max(24, lado * 0.72));
-  const bh = Math.min(32, Math.max(20, bw * 0.8));
+  const { w: bw, h: bh } = medidaSelloLR(1.25);
   const sx = x + (w - bw) / 2;
   const sy = y + (h - bh) / 2;
   try {
@@ -4241,7 +4246,7 @@ function dibujarMarcasAguaReceta(doc, x, topCuerpo, altoCuerpo) {
   dibujarMarcaAgua(doc, x + 111, topCuerpo, 93, altoCuerpo);
 }
 
-function dibujarLogoDerecha(doc, x, y, tinta, w = 30, h = 16.8) {
+function dibujarLogoDerecha(doc, x, y, tinta, w = SELLO_LR_ANCHO, h = SELLO_LR_ALTO) {
   dibujarSelloLR(doc, x, y, w, h, {
     tinta,
     fondo: [232, 239, 246],
@@ -4366,10 +4371,9 @@ function dibujarRecetaPremium(doc, top, alto, modelo = "clasica") {
   doc.setFillColor(...oro);
   doc.rect(x, top + headerH, ancho, 0.8, "F");
 
-  const logoW = 32;
-  const logoH = headerH - 2.4;
-  const logoX = x + ancho - 3.2 - logoW;
-  dibujarLogoDerecha(doc, logoX, top + 1.2, tinta, logoW, logoH);
+  const { w: logoW, h: logoH } = medidaSelloLR(1);
+  const logoX = x + ancho - 3.6 - logoW;
+  dibujarLogoDerecha(doc, logoX, top + (headerH - logoH) / 2, tinta, logoW, logoH);
 
   const textoAncho = logoX - margen - 28;
   doc.setTextColor(255, 255, 255);
@@ -4488,9 +4492,8 @@ function dibujarOrdenCuarto(doc, tipo, items) {
   doc.setFillColor(...oro);
   doc.rect(x, top + headerH, ancho, 0.7, "F");
 
-  const logoW = 22;
-  const logoH = headerH - 4.4;
-  dibujarLogoDerecha(doc, x + ancho - 3.2 - logoW, top + 2.2, tinta, logoW, logoH);
+  const { w: logoW, h: logoH } = medidaSelloLR(1);
+  dibujarLogoDerecha(doc, x + ancho - 3.2 - logoW, top + (headerH - logoH) / 2, tinta, logoW, logoH);
   doc.setTextColor(255, 255, 255);
   doc.setFont("times", "bold");
   doc.setFontSize(8);
