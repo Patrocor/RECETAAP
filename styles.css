@@ -2628,6 +2628,12 @@ input:focus, select:focus, textarea:focus {
   color: #4b6378;
   text-align: center;
 }
+.preview-pdf-note {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-align: center;
+}
 .preview-paper {
   background: #ffffff;
   color: #123652;
@@ -4260,7 +4266,18 @@ input[readonly] {
   color: var(--ink) !important;
 }
 
-:root[data-theme="dark"] .rubrica-zoom-val {
+:root[data-theme="dark"] .rubrica-zoom-val,
+:root[data-theme="dark"] .preview-pdf-meta,
+:root[data-theme="dark"] .preview-pdf-note,
+:root[data-theme="dark"] .preview-rubrica-hint,
+:root[data-theme="dark"] .rubrica-controls-label {
+  color: var(--ink);
+}
+
+:root[data-theme="dark"] .preview-signature-box,
+:root[data-theme="dark"] .rubrica-interactive {
+  background: var(--card);
+  border-color: var(--line);
   color: var(--ink);
 }
 

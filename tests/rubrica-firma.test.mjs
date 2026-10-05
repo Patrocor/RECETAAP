@@ -34,10 +34,11 @@ test("el botón de aprobar y emitir documento está disponible en la vista previ
 
 test("la generación de PDF aplica las coordenadas y escala ajustadas de la rúbrica", () => {
   assert.match(app, /const ajuste = sanitizeRubricaAjuste\(perfil\.rubricaAjuste\);/);
-  assert.match(app, /const w = baseW \* ajuste\.escala;/);
-  assert.match(app, /const h = baseH \* ajuste\.escala;/);
+  assert.match(app, /baseW \* ajuste\.escala/);
+  assert.match(app, /baseH \* ajuste\.escala/);
   assert.match(app, /const offX = ajuste\.offsetX \* 0\.26;/);
   assert.match(app, /const offY = ajuste\.offsetY \* 0\.26;/);
+  assert.match(app, /pageW - w - 3/);
 });
 
 test("los estilos css contienen soporte interactivo para el acomodo y aprobación de la rúbrica", () => {

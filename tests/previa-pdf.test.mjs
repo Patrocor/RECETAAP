@@ -29,6 +29,17 @@ test("el PDF reservado deja pie para firma y guía de corte en A4", () => {
   assert.match(app, /pdfOrden\(tipo, items, \{ hojaCompleta: true \}\)/);
 });
 
+test("cada producto abre solo su hoja y Aprobar pasa por la previa", () => {
+  assert.match(app, /const soloLab = origenPrevia === "laboratorio"/);
+  assert.match(app, /const soloImg = origenPrevia === "imagenes"/);
+  assert.match(app, /function hojaPreviaViva\(/);
+  assert.match(app, /onclick: doc\.previa/);
+  assert.doesNotMatch(app, /onclick: doc\.emitir/);
+  assert.match(app, /pageW - w - 3/);
+  assert.match(app, /Aprobar y Emitir Orden de laboratorio/);
+  assert.match(app, /Aprobar y Emitir Orden de imagen/);
+});
+
 test("CSP y cache permiten blob de previa y pdf.js", () => {
   assert.match(html, /frame-src 'self' blob:/);
   assert.match(html, /object-src 'self' blob:/);

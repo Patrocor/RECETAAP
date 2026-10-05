@@ -633,8 +633,8 @@ function tarjetasDocumentos() {
             type: "button",
             class: "doc-card-btn is-approve",
             disabled: busy || !doc.listo,
-            onclick: doc.emitir,
-          }, [icono("check"), el("span", { text: busy ? "Emitiendo…" : "Aprobar" })]),
+            onclick: doc.previa,
+          }, [icono("check"), el("span", { text: "Aprobar" })]),
         ]),
       ])
     )),
@@ -826,9 +826,9 @@ function footer() {
     const etiqueta = origenPrevia === "receta"
       ? "Aprobar y Emitir Receta"
       : origenPrevia === "laboratorio"
-        ? "Aprobar y Emitir Orden"
+        ? "Aprobar y Emitir Orden de laboratorio"
         : origenPrevia === "imagenes"
-          ? "Aprobar y Emitir Orden"
+          ? "Aprobar y Emitir Orden de imagen"
           : "Aprobar y Emitir Orden";
     return el("footer", { class: "footer" }, [
       el("div", { class: "doc-actions" }, [
@@ -2330,8 +2330,10 @@ function hojasPreviasDefinidas() {
   }
   const labs = examenesLaboratorio();
   const imgs = examenesImagenes();
+  const soloLab = origenPrevia === "laboratorio";
+  const soloImg = origenPrevia === "imagenes";
   const hojas = [];
-  if (origenPrevia !== "imagenes" && (labs.length || origenPrevia === "laboratorio")) {
+  if (soloLab || (!soloImg && labs.length)) {
     hojas.push({
       id: "previa-laboratorio",
       titulo: "Orden de laboratorio",
@@ -2340,7 +2342,7 @@ function hojasPreviasDefinidas() {
       construir: () => pdfOrden("Laboratorio", labs, { hojaCompleta: false }),
     });
   }
-  if (origenPrevia !== "laboratorio" && (imgs.length || origenPrevia === "imagenes")) {
+  if (soloImg || (!soloLab && imgs.length)) {
     hojas.push({
       id: "previa-imagenes",
       titulo: "Orden de imagen",
@@ -2352,10 +2354,10 @@ function hojasPreviasDefinidas() {
   if (!hojas.length) {
     hojas.push({
       id: "previa-orden",
-      titulo: origenPrevia === "laboratorio" ? "Orden de laboratorio" : "Orden de imagen",
+      titulo: soloLab ? "Orden de laboratorio" : "Orden de imagen",
       medida: "¼ A4 vertical · 105 × 148,5 mm",
       variante: "cuarto",
-      construir: () => pdfOrden(origenPrevia === "laboratorio" ? "Laboratorio" : "Imágenes", [], { hojaCompleta: false }),
+      construir: () => pdfOrden(soloLab ? "Laboratorio" : "Imágenes", [], { hojaCompleta: false }),
     });
   }
   return hojas;
@@ -2375,23 +2377,58 @@ function hojaPreviaPdf(hoja) {
         title: `Vista previa de ${hoja.titulo}`,
         hidden: true,
       }),
-      el("p", { class: "preview-pdf-status", id: `${hoja.id}-status`, text: "Generando vista previa real…" }),
+      el("p", { class: "preview-pdf-status", id: `${hoja.id}-status`, "aria-live": "polite", text: "Generando vista previa real…" }),
     ]),
   ]);
 }
 
+function nodosHojaPrevia(id) {
+  return {
+    stage: document.getElementById(`${id}-stage`),
+    canvas: document.getElementById(`${id}-canvas`),
+    frame: document.getElementById(`${id}-frame`),
+    status: document.getElementById(`${id}-status`),
+  };
+}
+
+function hojaPreviaViva(hoja, seq) {
+  return seq === previaPdfSeq && screen === "previa" && !!document.getElementById(`${hoja.id}-stage`);
+}
+
+function marcarEstadoHoja(nodos, texto) {
+  if (!nodos?.status) return;
+  nodos.status.hidden = false;
+  nodos.status.textContent = texto;
+}
+
+function ocultarEstadoHoja(nodos) {
+  if (!nodos?.status) return;
+  nodos.status.hidden = true;
+  nodos.status.textContent = "";
+}
+
 async function pintarPdfEnHoja(hoja, seq) {
-  const stage = document.getElementById(`${hoja.id}-stage`);
-  const canvas = document.getElementById(`${hoja.id}-canvas`);
-  const frame = document.getElementById(`${hoja.id}-frame`);
-  const status = document.getElementById(`${hoja.id}-status`);
-  if (!stage || !window.jspdf?.jsPDF) {
-    if (status) status.textContent = "No se pudo cargar el generador de PDF.";
+  const inicio = nodosHojaPrevia(hoja.id);
+  if (!inicio.stage || !window.jspdf?.jsPDF) {
+    marcarEstadoHoja(inicio, "No se pudo cargar el generador de PDF.");
     return;
   }
-  const doc = hoja.construir();
-  const blob = doc.output("blob");
-  const url = registrarPreviaPdfUrl(URL.createObjectURL(blob));
+  marcarEstadoHoja(inicio, "Generando vista previa real…");
+  if (inicio.canvas) inicio.canvas.hidden = true;
+  if (inicio.frame) {
+    inicio.frame.hidden = true;
+    inicio.frame.removeAttribute("src");
+  }
+
+  let doc;
+  try {
+    doc = hoja.construir();
+  } catch {
+    if (!hojaPreviaViva(hoja, seq)) return;
+    marcarEstadoHoja(nodosHojaPrevia(hoja.id), "No se pudo armar la vista previa.");
+    return;
+  }
+
   const pdfjs = window.pdfjsLib;
   if (pdfjs?.getDocument) {
     try {
@@ -2400,38 +2437,41 @@ async function pintarPdfEnHoja(hoja, seq) {
       }
       const data = doc.output("arraybuffer");
       const pdf = await pdfjs.getDocument({ data, disableWorker: true }).promise;
-      if (seq !== previaPdfSeq) return;
+      if (!hojaPreviaViva(hoja, seq)) return;
       const page = await pdf.getPage(1);
+      if (!hojaPreviaViva(hoja, seq)) return;
+      const vivos = nodosHojaPrevia(hoja.id);
       const base = page.getViewport({ scale: 1 });
-      const cssWidth = Math.max(160, stage.clientWidth || 320);
-      const cssHeight = Math.max(110, stage.clientHeight || Math.round(cssWidth * (base.height / base.width)));
+      const cssWidth = Math.max(160, vivos.stage.clientWidth || 320);
+      const cssHeight = Math.max(110, vivos.stage.clientHeight || Math.round(cssWidth * (base.height / base.width)));
       const ratio = window.devicePixelRatio || 1;
       const viewport = page.getViewport({ scale: Math.min(cssWidth / base.width, cssHeight / base.height) * ratio });
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      canvas.hidden = false;
-      canvas.style.width = "100%";
-      canvas.style.height = "100%";
-      canvas.style.objectFit = "contain";
-      await page.render({ canvasContext: canvas.getContext("2d", { alpha: false }), viewport }).promise;
-      if (seq !== previaPdfSeq) return;
-      frame.hidden = true;
-      frame.removeAttribute("src");
-      if (status) {
-        status.hidden = true;
-        status.textContent = "";
-      }
+      vivos.canvas.width = viewport.width;
+      vivos.canvas.height = viewport.height;
+      vivos.canvas.hidden = false;
+      vivos.canvas.style.width = "100%";
+      vivos.canvas.style.height = "100%";
+      vivos.canvas.style.objectFit = "contain";
+      await page.render({ canvasContext: vivos.canvas.getContext("2d", { alpha: false }), viewport }).promise;
+      if (!hojaPreviaViva(hoja, seq)) return;
+      const listos = nodosHojaPrevia(hoja.id);
+      listos.frame.hidden = true;
+      listos.frame.removeAttribute("src");
+      ocultarEstadoHoja(listos);
       return;
-    } catch {}
+    } catch (error) {
+      console.warn("No se pudo pintar la previa con PDF.js.", error);
+    }
   }
-  if (seq !== previaPdfSeq) return;
-  canvas.hidden = true;
-  frame.hidden = false;
-  frame.setAttribute("src", url);
-  if (status) {
-    status.hidden = true;
-    status.textContent = "";
-  }
+
+  if (!hojaPreviaViva(hoja, seq)) return;
+  const fallback = nodosHojaPrevia(hoja.id);
+  const url = registrarPreviaPdfUrl(URL.createObjectURL(doc.output("blob")));
+  if (!hojaPreviaViva(hoja, seq)) return;
+  fallback.canvas.hidden = true;
+  fallback.frame.hidden = false;
+  fallback.frame.setAttribute("src", url);
+  ocultarEstadoHoja(fallback);
 }
 
 function montarHojasPreviasPdf() {
@@ -2517,19 +2557,19 @@ function previewSignatureBox() {
           title: "Restablecer posición y tamaño",
         }, ["Reset"]),
       ]),
-      el("div", { class: "rubrica-dpad" }, [
-        el("button", { type: "button", class: "dpad-btn up", title: "Mover arriba", onclick: () => mover(0, -3) }, ["▲"]),
+      el("div", { class: "rubrica-dpad", role: "group", "aria-label": "Acomodar rúbrica" }, [
+        el("button", { type: "button", class: "dpad-btn up", title: "Mover arriba", "aria-label": "Mover rúbrica arriba", onclick: () => mover(0, -3) }, ["▲"]),
         el("div", { class: "dpad-row" }, [
-          el("button", { type: "button", class: "dpad-btn left", title: "Mover a la izquierda", onclick: () => mover(-4, 0) }, ["◀"]),
-          el("button", { type: "button", class: "dpad-btn center", title: "Centrar", onclick: () => { perfil.rubricaAjuste.offsetX = 0; perfil.rubricaAjuste.offsetY = 0; savePerfil(); refrescarPreviaPdf(); } }, ["•"]),
-          el("button", { type: "button", class: "dpad-btn right", title: "Mover a la derecha", onclick: () => mover(4, 0) }, ["▶"]),
+          el("button", { type: "button", class: "dpad-btn left", title: "Mover a la izquierda", "aria-label": "Mover rúbrica a la izquierda", onclick: () => mover(-4, 0) }, ["◀"]),
+          el("button", { type: "button", class: "dpad-btn center", title: "Centrar", "aria-label": "Centrar rúbrica", onclick: () => { perfil.rubricaAjuste.offsetX = 0; perfil.rubricaAjuste.offsetY = 0; savePerfil(); refrescarPreviaPdf(); } }, ["•"]),
+          el("button", { type: "button", class: "dpad-btn right", title: "Mover a la derecha", "aria-label": "Mover rúbrica a la derecha", onclick: () => mover(4, 0) }, ["▶"]),
         ]),
-        el("button", { type: "button", class: "dpad-btn down", title: "Mover abajo", onclick: () => mover(0, 3) }, ["▼"]),
+        el("button", { type: "button", class: "dpad-btn down", title: "Mover abajo", "aria-label": "Mover rúbrica abajo", onclick: () => mover(0, 3) }, ["▼"]),
       ]),
       el("div", { class: "rubrica-zoom-row" }, [
-        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Reducir tamaño", onclick: () => escalar(-0.1) }, ["A-"]),
+        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Reducir tamaño", "aria-label": "Reducir rúbrica", onclick: () => escalar(-0.1) }, ["A-"]),
         el("span", { id: "rubrica-zoom-val", class: "rubrica-zoom-val", text: `${Math.round(ajuste.escala * 100)}%` }),
-        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Aumentar tamaño", onclick: () => escalar(0.1) }, ["A+"]),
+        el("button", { type: "button", class: "btn-subtle rubrica-zoom-btn", title: "Aumentar tamaño", "aria-label": "Aumentar rúbrica", onclick: () => escalar(0.1) }, ["A+"]),
       ]),
     ]),
   ]);
@@ -2546,6 +2586,15 @@ function selectorModeloReceta() {
       onclick: () => {
         perfil.modeloReceta = modelo.id;
         savePerfil();
+        if (screen === "previa") {
+          document.querySelectorAll(".receta-modelo-card").forEach((card, index) => {
+            const activo = MODELOS_RECETA[index]?.id === modelo.id;
+            card.classList.toggle("is-on", activo);
+            card.setAttribute("aria-pressed", activo ? "true" : "false");
+          });
+          montarHojasPreviasPdf();
+          return;
+        }
         render();
       },
     }, [
@@ -2566,6 +2615,7 @@ function viewPrevia() {
         ])
       : el("p", { class: "eyebrow", text: "Vista previa real · cada orden se emite en ¼ A4 vertical" }),
     ...hojas.map((hoja) => hojaPreviaPdf(hoja)),
+    el("p", { class: "preview-pdf-note", text: "Al emitir, el archivo baja en A4 con marcas de corte. Aquí se ve solo la hoja útil para acomodar la rúbrica." }),
     previewSignatureBox(),
   ]);
 }
@@ -4185,11 +4235,15 @@ function recetaPonerFirma(doc, posX, posY, baseW = 36, baseH = 12) {
   if (!perfil.firmaSello) return;
   try {
     const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
-    const w = baseW * ajuste.escala;
-    const h = baseH * ajuste.escala;
+    const pageW = typeof doc.internal?.pageSize?.getWidth === "function" ? doc.internal.pageSize.getWidth() : 210;
+    const pageH = typeof doc.internal?.pageSize?.getHeight === "function" ? doc.internal.pageSize.getHeight() : 297;
+    const w = Math.max(8, Math.min(baseW * ajuste.escala, pageW - 8));
+    const h = Math.max(4, Math.min(baseH * ajuste.escala, 22));
     const offX = ajuste.offsetX * 0.26;
     const offY = ajuste.offsetY * 0.26;
-    doc.addImage(perfil.firmaSello, "PNG", posX + (baseW - w) / 2 + offX, posY + (baseH - h) / 2 + offY, w, h, undefined, "FAST");
+    const x = Math.max(3, Math.min(pageW - w - 3, posX + (baseW - w) / 2 + offX));
+    const y = Math.max(3, Math.min(pageH - h - 3, posY + (baseH - h) / 2 + offY));
+    doc.addImage(perfil.firmaSello, "PNG", x, y, w, h, undefined, "FAST");
   } catch {}
 }
 
