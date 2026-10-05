@@ -21,6 +21,15 @@ test("la previa construye el PDF real de la hoja, no un HTML aproximado", () => 
   assert.doesNotMatch(app, /function previewEncabezado\(/);
 });
 
+test("la receta lleva marca de agua tenue en el centro de cada lado", () => {
+  assert.match(app, /function dibujarMarcasAguaReceta\(/);
+  assert.match(app, /dibujarMarcaAgua\(doc, x \+ 6/);
+  assert.match(app, /dibujarMarcaAgua\(doc, x \+ 111/);
+  assert.match(app, /opacity: 0\.12/);
+  assert.match(app, /tinta: \[186, 198, 208\]/);
+  assert.match(app, /dibujarLogoDerecha\(doc, logoX, top \+ 1\.2, tinta, logoW, logoH\)/);
+});
+
 test("el PDF reservado deja pie para firma y guía de corte en A4", () => {
   assert.match(app, /const PIE_RECETA = 26/);
   assert.match(app, /const PIE_ORDEN = 28/);
