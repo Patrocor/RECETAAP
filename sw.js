@@ -1,9 +1,9 @@
-const CACHE_NAME = "recetapp-v10";
+const CACHE_NAME = "recetapp-v11";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./styles.css?v=10",
+  "./styles.css?v=11",
   "./app.js",
   "./tema.js",
   "./catalogos.js",
@@ -16,6 +16,7 @@ const STATIC_ASSETS = [
   "./icon.svg",
   "./logo.svg",
   "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js",
 ];
 
 self.addEventListener("install", (event) => {

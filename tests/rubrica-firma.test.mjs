@@ -22,7 +22,8 @@ test("la vista previa permite acomodar la rúbrica (posición d-pad X/Y, escala/
   assert.match(app, /rubrica-dpad/);
   assert.match(app, /rubrica-zoom-row/);
   assert.match(app, /rubrica-reset-btn/);
-  assert.match(app, /transform: translate\(/);
+  assert.match(app, /refrescarPreviaPdf/);
+  assert.match(app, /montarHojasPreviasPdf/);
 });
 
 test("el botón de aprobar y emitir documento está disponible en la vista previa", () => {
