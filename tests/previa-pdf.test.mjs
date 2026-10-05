@@ -25,8 +25,9 @@ test("la receta lleva marca de agua tenue en el centro de cada lado", () => {
   assert.match(app, /function dibujarMarcasAguaReceta\(/);
   assert.match(app, /dibujarMarcaAgua\(doc, x \+ 6/);
   assert.match(app, /dibujarMarcaAgua\(doc, x \+ 111/);
-  assert.match(app, /opacity: 0\.12/);
-  assert.match(app, /tinta: \[186, 198, 208\]/);
+  assert.match(app, /opacity: 0\.22/);
+  assert.match(app, /tinta: \[86, 108, 126\]/);
+  assert.match(app, /oro: \[184, 149, 92\]/);
   assert.match(app, /const SELLO_LR_ANCHO = 15\.2/);
   assert.match(app, /medidaSelloLR\(1\.25\)/);
   assert.match(app, /dibujarLogoDerecha\(doc, logoX, top \+ \(headerH - logoH\) \/ 2, tinta, logoW, logoH\)/);
