@@ -2617,6 +2617,11 @@ input:focus, select:focus, textarea:focus {
   color: #4b6378;
   text-align: center;
 }
+.preview-pdf-status[hidden],
+.preview-pdf-canvas[hidden],
+.preview-pdf-frame[hidden] {
+  display: none !important;
+}
 .preview-rubrica-hint {
   margin: 4px 0 0;
   font-size: 10.5px;
@@ -3898,17 +3903,17 @@ input:focus, select:focus, textarea:focus {
 
 .receta-modelo-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
 }
 
 .receta-modelo-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 2px;
   width: 100%;
-  padding: 12px 14px;
+  padding: 8px 8px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--card);
@@ -3920,8 +3925,15 @@ input:focus, select:focus, textarea:focus {
 
 .receta-modelo-card small {
   color: var(--ink-soft);
-  font-size: 12px;
-  line-height: 1.35;
+  font-size: 10px;
+  line-height: 1.25;
+  display: none;
+}
+.preview-screen .receta-modelo-card small {
+  display: none;
+}
+.preview-screen .receta-modelo-card strong {
+  font-size: 11px;
 }
 
 .receta-modelo-card.is-on {

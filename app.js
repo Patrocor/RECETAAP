@@ -2395,7 +2395,9 @@ async function pintarPdfEnHoja(hoja, seq) {
   const pdfjs = window.pdfjsLib;
   if (pdfjs?.getDocument) {
     try {
-      if (pdfjs.GlobalWorkerOptions) pdfjs.GlobalWorkerOptions.workerSrc = "";
+      if (pdfjs.GlobalWorkerOptions) {
+        pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      }
       const data = doc.output("arraybuffer");
       const pdf = await pdfjs.getDocument({ data, disableWorker: true }).promise;
       if (seq !== previaPdfSeq) return;
@@ -2415,7 +2417,10 @@ async function pintarPdfEnHoja(hoja, seq) {
       if (seq !== previaPdfSeq) return;
       frame.hidden = true;
       frame.removeAttribute("src");
-      if (status) status.hidden = true;
+      if (status) {
+        status.hidden = true;
+        status.textContent = "";
+      }
       return;
     } catch {}
   }
@@ -2423,7 +2428,10 @@ async function pintarPdfEnHoja(hoja, seq) {
   canvas.hidden = true;
   frame.hidden = false;
   frame.setAttribute("src", url);
-  if (status) status.hidden = true;
+  if (status) {
+    status.hidden = true;
+    status.textContent = "";
+  }
 }
 
 function montarHojasPreviasPdf() {
@@ -2533,6 +2541,7 @@ function selectorModeloReceta() {
     el("button", {
       type: "button",
       class: `receta-modelo-card${actual === modelo.id ? " is-on" : ""}`,
+      title: modelo.desc,
       "aria-pressed": actual === modelo.id ? "true" : "false",
       onclick: () => {
         perfil.modeloReceta = modelo.id;
@@ -2541,7 +2550,7 @@ function selectorModeloReceta() {
       },
     }, [
       el("strong", { text: modelo.nombre }),
-      el("small", { text: modelo.desc }),
+      el("small", { text: modelo.desc, title: modelo.desc }),
     ])
   ));
 }
@@ -4192,7 +4201,11 @@ const PIE_ORDEN = 28;
 
 function crearDocPdf(ancho, alto) {
   const jsPDF = window.jspdf.jsPDF;
-  return new jsPDF({ unit: "mm", format: [ancho, alto] });
+  return new jsPDF({
+    unit: "mm",
+    format: [ancho, alto],
+    orientation: ancho >= alto ? "landscape" : "portrait",
+  });
 }
 
 function dibujarGuiasCorte(doc, ancho, alto) {

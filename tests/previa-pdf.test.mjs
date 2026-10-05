@@ -8,6 +8,7 @@ const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const sw = await readFile(new URL("../sw.js", import.meta.url), "utf8");
 
 test("la previa construye el PDF real de la hoja, no un HTML aproximado", () => {
+  assert.match(app, /orientation: ancho >= alto \? "landscape" : "portrait"/);
   assert.match(app, /function pdfReceta\(/);
   assert.match(app, /function pdfOrden\(/);
   assert.match(app, /function montarHojasPreviasPdf\(/);
