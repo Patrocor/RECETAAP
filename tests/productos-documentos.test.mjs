@@ -41,13 +41,16 @@ test("laboratorio e imagen se emiten por separado en un cuarto de A4", () => {
 });
 
 test("previa y generar son iconos según el producto completado", () => {
-  assert.match(app, /function docAction\(/);
-  assert.match(app, /class: "doc-actions"/);
-  assert.match(app, /docAction\("eye", "Vista previa"/);
-  assert.match(app, /docAction\("doc", busy \? "Generando…" : "Generar receta"/);
-  assert.match(app, /docAction\("flask"/);
-  assert.match(app, /docAction\("layers"/);
-  assert.match(css, /\.doc-action/);
-  assert.match(css, /\.preview-mark/);
-  assert.match(css, /\.preview-header-end/);
+  assert.match(app, /function tarjetasDocumentos\(/);
+  assert.match(app, /function definicionesDocumentos\(/);
+  assert.match(app, /class: "doc-cards"/);
+  assert.match(app, /Receta médica/);
+  assert.match(app, /Laboratorio/);
+  assert.match(app, /Imagen/);
+  assert.match(app, /Vista previa/);
+  assert.match(app, /Aprobar/);
+  assert.match(app, /function dibujarSelloLR\(/);
+  assert.match(css, /\.doc-card/);
+  assert.match(css, /\.preview-mark-seal/);
+  assert.match(css, /\.preview-logo-seal/);
 });

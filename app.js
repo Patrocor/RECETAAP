@@ -562,6 +562,83 @@ function productosCompletos() {
   };
 }
 
+function definicionesDocumentos() {
+  const listo = productosCompletos();
+  const labs = examenesLaboratorio().length;
+  const imgs = examenesImagenes().length;
+  const meds = draft.medicamentos.length;
+  return [
+    {
+      id: "receta",
+      titulo: "Receta médica",
+      tamano: "½ A4 horizontal",
+      detalle: listo.receta
+        ? `${meds} medicamento${meds === 1 ? "" : "s"} listo${meds === 1 ? "" : "s"} para imprimir`
+        : "Completa el listado para habilitar la receta",
+      icono: "doc",
+      listo: listo.receta,
+      previa: () => abrirPrevia("receta"),
+      emitir: generarPDF,
+    },
+    {
+      id: "laboratorio",
+      titulo: "Laboratorio",
+      tamano: "¼ A4 vertical",
+      detalle: listo.laboratorio
+        ? `${labs} estudio${labs === 1 ? "" : "s"} de laboratorio`
+        : "Agrega análisis para emitir esta orden",
+      icono: "flask",
+      listo: listo.laboratorio,
+      previa: () => abrirPrevia("laboratorio"),
+      emitir: generarOrdenLaboratorio,
+    },
+    {
+      id: "imagenes",
+      titulo: "Imagen",
+      tamano: "¼ A4 vertical",
+      detalle: listo.imagenes
+        ? `${imgs} estudio${imgs === 1 ? "" : "s"} de imagen`
+        : "Agrega estudios para emitir esta orden",
+      icono: "layers",
+      listo: listo.imagenes,
+      previa: () => abrirPrevia("imagenes"),
+      emitir: generarOrdenImagenes,
+    },
+  ];
+}
+
+function tarjetasDocumentos() {
+  return el("section", { class: "doc-cards", "aria-label": "Documentos para emitir" }, [
+    el("p", { class: "doc-cards-kicker", text: "Emisión" }),
+    el("h3", { class: "doc-cards-title", text: "Genera cada documento por separado" }),
+    el("p", { class: "doc-cards-lead", text: "Vista previa y aprobación propias. Al imprimir, cada uno ocupa su tamaño." }),
+    el("div", { class: "doc-cards-grid" }, definicionesDocumentos().map((doc) =>
+      el("article", { class: `doc-card${doc.listo ? " is-ready" : ""}` }, [
+        el("div", { class: "doc-card-top" }, [
+          el("span", { class: "doc-card-icon", "aria-hidden": "true" }, [icono(doc.icono)]),
+          el("span", { class: "doc-card-size", text: doc.tamano }),
+        ]),
+        el("strong", { class: "doc-card-name", text: doc.titulo }),
+        el("p", { class: "doc-card-detail", text: doc.detalle }),
+        el("div", { class: "doc-card-actions" }, [
+          el("button", {
+            type: "button",
+            class: "doc-card-btn is-preview",
+            disabled: busy || !doc.listo,
+            onclick: doc.previa,
+          }, [icono("eye"), el("span", { text: "Vista previa" })]),
+          el("button", {
+            type: "button",
+            class: "doc-card-btn is-approve",
+            disabled: busy || !doc.listo,
+            onclick: doc.emitir,
+          }, [icono("check"), el("span", { text: busy ? "Emitiendo…" : "Aprobar" })]),
+        ]),
+      ])
+    )),
+  ]);
+}
+
 function sanitizeExam(item) {
   if (!item || typeof item !== "object") return null;
   const nombre = cleanText(item.nombre, 160);
@@ -771,13 +848,7 @@ function footer() {
         }, ["Cancelar"]),
       ]);
     }
-    const listo = productosCompletos();
-    return el("footer", { class: "footer" }, [
-      el("div", { class: "doc-actions" }, [
-        docAction("eye", "Vista previa", () => abrirPrevia("receta"), "ghost", !listo.receta),
-        docAction("doc", busy ? "Generando…" : "Generar receta", generarPDF, "emit", !listo.receta),
-      ]),
-    ]);
+    return null;
   }
   if (screen === "examenes") {
     const agregando = composer === "exam";
@@ -792,23 +863,7 @@ function footer() {
       button.append(icono("check"));
       return el("footer", { class: "footer" }, [button]);
     }
-    const listo = productosCompletos();
-    const acciones = [];
-    if (listo.laboratorio) {
-      acciones.push(docAction("eye", "Previa lab", () => abrirPrevia("laboratorio"), "ghost"));
-      acciones.push(docAction("flask", busy ? "Generando…" : "Generar lab", generarOrdenLaboratorio, "emit"));
-    }
-    if (listo.imagenes) {
-      acciones.push(docAction("eye", "Previa imagen", () => abrirPrevia("imagenes"), "ghost"));
-      acciones.push(docAction("layers", busy ? "Generando…" : "Generar imagen", generarOrdenImagenes, "emit"));
-    }
-    if (!acciones.length) {
-      acciones.push(docAction("eye", "Vista previa", () => abrirPrevia("examenes"), "ghost", true));
-      acciones.push(docAction("doc", "Generar orden", generarOrdenExamenes, "emit", true));
-    }
-    return el("footer", { class: "footer" }, [
-      el("div", { class: "doc-actions" }, acciones),
-    ]);
+    return null;
   }
   if (screen === "login") return null;
   let label = "Continuar";
@@ -2052,6 +2107,7 @@ function viewOrdenExamenes() {
     selectorTipoExamen(),
     resumenOrdenExamenes(),
     composer === "exam" ? viewExamComposer() : viewExamenes(),
+    composer === "exam" ? null : tarjetasDocumentos(),
   ]);
 }
 
@@ -2355,7 +2411,10 @@ function previewEncabezado(titulo) {
     ]),
     el("div", { class: "preview-header-end" }, [
       el("div", { class: "preview-header-tag", text: titulo }),
-      crearLogo(claveEspecialidad(perfil.especialidad)),
+      el("div", { class: "preview-logo-seal", "aria-hidden": "true" }, [
+        el("strong", { text: "LR" }),
+        el("span", { class: "preview-logo-ekg" }),
+      ]),
     ]),
   ]);
 }
@@ -2376,7 +2435,12 @@ function previewPacienteBar() {
 function previewPapelOrden(tipo, items) {
   const titulo = tipo === "Laboratorio" ? "LABORATORIO" : "IMAGEN";
   return el("div", { class: "preview-paper preview-paper-cuarto stack" }, [
-    el("div", { class: "preview-mark", "aria-hidden": "true", text: "LR" }),
+    el("div", { class: "preview-mark", "aria-hidden": "true" }, [
+      el("span", { class: "preview-mark-seal" }, [
+        el("strong", { text: "LR" }),
+        el("span", { class: "preview-logo-ekg" }),
+      ]),
+    ]),
     previewEncabezado(titulo),
     previewPacienteBar(),
     el("div", { class: "preview-col-head", text: tipo === "Laboratorio" ? "Estudios de laboratorio" : "Estudios de imagen" }),
@@ -2415,7 +2479,12 @@ function viewPrevia() {
         selectorModeloReceta(),
       ]),
       el("div", { class: `preview-paper preview-paper-mitad stack is-${modelo}` }, [
-        el("div", { class: "preview-mark", "aria-hidden": "true", text: "LR" }),
+        el("div", { class: "preview-mark", "aria-hidden": "true" }, [
+          el("span", { class: "preview-mark-seal" }, [
+            el("strong", { text: "LR" }),
+            el("span", { class: "preview-logo-ekg" }),
+          ]),
+        ]),
         previewEncabezado("RECETA"),
         previewPacienteBar(),
         el("div", { class: "preview-body-grid" }, [
@@ -3343,6 +3412,7 @@ function viewBoard() {
       ]),
       el("span", { class: "order-link-arrow", "aria-hidden": "true", text: "›" }),
     ]),
+    tarjetasDocumentos(),
   ]);
 }
 
@@ -4013,31 +4083,55 @@ function textoAdaptado(doc, lineas, x, y, ancho, limite, opts = {}) {
   }
 }
 
+function dibujarSelloLR(doc, x, y, w, h, { tinta = [18, 54, 82], fondo = [215, 228, 240], oro = [184, 149, 92], ekg = true } = {}) {
+  doc.setFillColor(...fondo);
+  doc.roundedRect(x, y, w, h, Math.min(2.4, w * 0.16), Math.min(2.4, h * 0.16), "F");
+  doc.setDrawColor(...tinta);
+  doc.setLineWidth(0.22);
+  doc.roundedRect(x + 0.45, y + 0.45, w - 0.9, h - 0.9, Math.min(2, w * 0.14), Math.min(2, h * 0.14));
+  doc.setFont("times", "bold");
+  doc.setFontSize(Math.max(7, h * 0.42));
+  doc.setTextColor(...tinta);
+  doc.text("LR", x + w / 2, y + h * (ekg ? 0.52 : 0.64), { align: "center" });
+  if (!ekg) return;
+  const base = y + h * 0.78;
+  const left = x + w * 0.14;
+  const right = x + w * 0.86;
+  const mid = x + w * 0.5;
+  doc.setDrawColor(...oro);
+  doc.setLineWidth(0.45);
+  doc.line(left, base, mid - w * 0.12, base);
+  doc.line(mid - w * 0.12, base, mid - w * 0.06, base - h * 0.1);
+  doc.line(mid - w * 0.06, base - h * 0.1, mid + w * 0.02, base + h * 0.12);
+  doc.line(mid + w * 0.02, base + h * 0.12, mid + w * 0.1, base - h * 0.04);
+  doc.line(mid + w * 0.1, base - h * 0.04, right, base);
+}
+
 function dibujarMarcaAgua(doc, x, y, w, h) {
   const cx = x + w / 2;
-  const cy = y + h / 2 + 4;
+  const cy = y + h / 2;
+  const bw = Math.min(54, w * 0.42);
+  const bh = Math.min(42, h * 0.38);
   try {
     doc.saveGraphicsState();
-    if (doc.GState) doc.setGState(new doc.GState({ opacity: 0.055 }));
+    if (doc.GState) doc.setGState(new doc.GState({ opacity: 0.07 }));
   } catch {}
-  doc.setFillColor(18, 54, 82);
-  doc.roundedRect(cx - 18, cy - 14, 36, 26, 3.2, 3.2, "F");
-  doc.setFont("times", "bold");
-  doc.setFontSize(18);
-  doc.setTextColor(255, 255, 255);
-  doc.text("LR", cx, cy + 3.2, { align: "center" });
+  doc.setDrawColor(18, 54, 82);
+  doc.setLineWidth(0.35);
+  doc.roundedRect(cx - bw / 2 - 4, cy - bh / 2 - 4, bw + 8, bh + 8, 4, 4);
+  dibujarSelloLR(doc, cx - bw / 2, cy - bh / 2, bw, bh, {
+    tinta: [18, 54, 82],
+    fondo: [215, 228, 240],
+    oro: [184, 149, 92],
+    ekg: true,
+  });
   try {
     doc.restoreGraphicsState();
   } catch {}
 }
 
 function dibujarLogoDerecha(doc, x, y, tinta) {
-  doc.setFillColor(255, 255, 255);
-  doc.roundedRect(x, y, 13.6, 13.6, 1.8, 1.8, "F");
-  doc.setFont("times", "bold");
-  doc.setFontSize(11);
-  doc.setTextColor(...tinta);
-  doc.text("LR", x + 6.8, y + 8.8, { align: "center" });
+  dibujarSelloLR(doc, x, y, 16.4, 13.4, { tinta, fondo: [215, 228, 240], oro: [184, 149, 92], ekg: true });
 }
 
 function recetaPonerFirma(doc, posX, posY, baseW = 36, baseH = 12) {

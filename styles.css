@@ -2774,17 +2774,191 @@ input:focus, select:focus, textarea:focus {
   cursor: not-allowed;
 }
 
+.doc-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.doc-cards-kicker {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.doc-cards-title {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.doc-cards-lead {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.doc-cards-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 14px 12px;
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.doc-card.is-ready {
+  border-color: rgba(18, 54, 82, 0.28);
+  box-shadow: var(--shadow-md);
+}
+
+.doc-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.doc-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #123652;
+  color: #ffffff;
+}
+
+.doc-card-icon .ico {
+  width: 18px;
+  height: 18px;
+}
+
+.doc-card-size {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #123652;
+  background: #e8f0f7;
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.doc-card-name {
+  font-size: 16px;
+}
+
+.doc-card-detail {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.doc-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.doc-card-btn {
+  min-height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  forced-color-adjust: none;
+}
+
+.doc-card-btn .ico {
+  width: 16px;
+  height: 16px;
+}
+
+.doc-card-btn.is-preview {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.doc-card-btn.is-approve {
+  background: #123652;
+  color: #ffffff;
+  border-color: #123652;
+}
+
+.doc-card-btn:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
 .preview-mark {
   position: absolute;
-  inset: 28% 0 auto;
-  text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 86px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #123652;
-  opacity: 0.06;
+  inset: 26% 0 auto;
+  display: grid;
+  place-items: center;
   pointer-events: none;
+  opacity: 0.09;
+}
+
+.preview-mark-seal,
+.preview-logo-seal {
+  display: grid;
+  place-items: center;
+  background: #d7e4f0;
+  color: #123652;
+  border: 1.5px solid #123652;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.preview-mark-seal {
+  width: 92px;
+  height: 72px;
+  border-radius: 18px;
+  font-size: 28px;
+}
+
+.preview-logo-seal {
+  width: 46px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 15px;
+  position: relative;
+}
+
+.preview-mark-seal strong,
+.preview-logo-seal strong {
+  line-height: 1;
+}
+
+.preview-logo-ekg {
+  display: block;
+  width: 58%;
+  height: 6px;
+  margin-top: 3px;
+  background:
+    linear-gradient(#b8955c, #b8955c) left center / 28% 1.5px no-repeat,
+    linear-gradient(#b8955c, #b8955c) 38% 20% / 10% 1.5px no-repeat,
+    linear-gradient(#b8955c, #b8955c) 52% 80% / 12% 1.5px no-repeat,
+    linear-gradient(#b8955c, #b8955c) right center / 28% 1.5px no-repeat;
 }
 
 .preview-header-copy {
@@ -3986,10 +4160,17 @@ input[readonly] {
 }
 
 :root[data-theme="dark"] .doc-action.is-ghost,
-:root[data-theme="dark"] .doc-action.is-preview {
+:root[data-theme="dark"] .doc-action.is-preview,
+:root[data-theme="dark"] .doc-card,
+:root[data-theme="dark"] .doc-card-btn.is-preview {
   background: var(--card) !important;
   color: var(--ink) !important;
   border-color: var(--line) !important;
+}
+
+:root[data-theme="dark"] .doc-card-size {
+  background: var(--card-subtle);
+  color: var(--ink);
 }
 
 :root[data-theme="dark"] .dpad-btn,
