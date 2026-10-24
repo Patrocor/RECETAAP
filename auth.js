@@ -2,10 +2,44 @@ const URL_BASE = "https://cwavdcpvcqlkyasezrzs.supabase.co";
 const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3YXZkY3B2Y3Fsa3lhc2V6cnpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2ODk0NzAsImV4cCI6MjA5MTI2NTQ3MH0.0_Sxsecx8OCokIMG0MZVM19TqkeMORPW6N_vv0y-cu0";
 const SESION_KEY = "recetapp.sesion";
 
+const USUARIO_RE = /^[a-z0-9._-]{3,40}$/;
+const CORREO_RE = /^[a-z0-9._%+-]{1,64}@[a-z0-9.-]+\.[a-z]{2,24}$/;
+
+export function correosDeUsuario(usuario) {
+  const raw = String(usuario || "").trim().toLowerCase();
+  if (!raw) return [];
+  if (raw.includes("@")) {
+    if (!CORREO_RE.test(raw)) return [];
+    const local = raw.slice(0, raw.indexOf("@"));
+    const lista = [raw];
+    if (!raw.endsWith("@recetapp.pe") && USUARIO_RE.test(local)) {
+      lista.push(`${local}@recetapp.pe`);
+    }
+    return lista;
+  }
+  if (!USUARIO_RE.test(raw)) return [];
+  return [`${raw}@recetapp.pe`];
+}
+
 export function emailDeUsuario(usuario) {
-  const nombre = String(usuario || "").trim().toLowerCase();
-  if (!/^[a-z0-9._-]{3,40}$/.test(nombre)) return "";
-  return `${nombre}@recetapp.pe`;
+  return correosDeUsuario(usuario)[0] || "";
+}
+
+export function mensajeDeAuth(detalle) {
+  const texto = String(detalle || "").toLowerCase();
+  if (/not confirmed|email_not_confirmed/.test(texto)) {
+    return "Confirma el correo antes de entrar.";
+  }
+  if (/too many|rate limit/.test(texto)) {
+    return "Demasiados intentos. Espera un momento.";
+  }
+  if (/failed to fetch|networkerror|load failed/.test(texto)) {
+    return "No se pudo conectar. Revisa tu conexión.";
+  }
+  if (/invalid.*(grant|credentials|login)|invalid_grant|invalid login/.test(texto)) {
+    return "Usuario o contraseña incorrectos.";
+  }
+  return "Usuario o contraseña incorrectos.";
 }
 
 export function accesoVigente(acceso, ahora = Date.now()) {
@@ -92,26 +126,46 @@ async function rest(path, { method = "GET", body } = {}) {
   return data;
 }
 
+async function buscarFilas(path) {
+  const filas = await rest(path);
+  return Array.isArray(filas) ? filas : [];
+}
+
 export async function entrar(usuario, password) {
-  const email = emailDeUsuario(usuario);
-  if (!email || !password) return { ok: false, error: "Escribe usuario y contraseña." };
+  const correos = correosDeUsuario(usuario);
+  const clave = String(password ?? "");
+  if (!correos.length || !clave) return { ok: false, error: "Escribe usuario y contraseña." };
   let data;
-  try {
-    data = await authFetch("/auth/v1/token?grant_type=password", { email, password });
-  } catch {
+  let detalle = "";
+  for (const email of correos) {
+    try {
+      data = await authFetch("/auth/v1/token?grant_type=password", { email, password: clave });
+      detalle = "";
+      break;
+    } catch (error) {
+      detalle = error?.message || "";
+    }
+  }
+  if (!data) {
     cerrarSesionLocal();
-    return { ok: false, error: "Usuario o contraseña incorrectos." };
+    return { ok: false, error: mensajeDeAuth(detalle) };
   }
   guardarSesion(data);
-  const nombre = email.slice(0, email.indexOf("@"));
+  const userId = data.user?.id || "";
+  const nombre = String(data.user?.email || correos[0]).split("@")[0];
   let filas = [];
   try {
-    filas = await rest(`user_access?username=eq.${encodeURIComponent(nombre)}&select=id,username,nombre,active,exp_at`);
+    if (userId) {
+      filas = await buscarFilas(`user_access?id=eq.${encodeURIComponent(userId)}&select=id,username,nombre,active,exp_at`);
+    }
+    if (!filas.length && nombre) {
+      filas = await buscarFilas(`user_access?username=eq.${encodeURIComponent(nombre)}&select=id,username,nombre,active,exp_at`);
+    }
   } catch {
     cerrarSesionLocal();
     return { ok: false, error: "No se pudo comprobar el acceso." };
   }
-  const acceso = Array.isArray(filas) ? filas[0] : null;
+  const acceso = filas[0] || null;
   const error = accesoVigente(acceso);
   if (error) {
     cerrarSesionLocal();
@@ -119,16 +173,21 @@ export async function entrar(usuario, password) {
   }
   let perfiles = [];
   try {
-    perfiles = await rest(`profiles?username=eq.${encodeURIComponent(nombre)}&select=id,username,nombre,is_admin`);
+    if (userId) {
+      perfiles = await buscarFilas(`profiles?id=eq.${encodeURIComponent(userId)}&select=id,username,nombre,is_admin`);
+    }
+    if (!perfiles.length) {
+      perfiles = await buscarFilas(`profiles?username=eq.${encodeURIComponent(nombre)}&select=id,username,nombre,is_admin`);
+    }
   } catch {
     perfiles = [];
   }
-  const perfil = Array.isArray(perfiles) ? perfiles[0] : null;
+  const perfil = perfiles[0] || null;
   return {
     ok: true,
     cuenta: {
       id: acceso.id,
-      userId: data.user?.id || "",
+      userId,
       username: acceso.username,
       nombre: acceso.nombre || perfil?.nombre || acceso.username,
       isAdmin: Boolean(perfil?.is_admin),

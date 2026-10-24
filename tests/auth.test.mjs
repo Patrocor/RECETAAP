@@ -1,12 +1,24 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { accesoVigente, emailDeUsuario } from "../auth.js";
+import { accesoVigente, correosDeUsuario, emailDeUsuario, mensajeDeAuth } from "../auth.js";
 
 test("el usuario se convierte en el correo interno", () => {
   assert.equal(emailDeUsuario(" Ana "), "ana@recetapp.pe");
   assert.equal(emailDeUsuario("a"), "");
-  assert.equal(emailDeUsuario("ana@otro.pe"), "");
+  assert.equal(emailDeUsuario("ana@otro.pe"), "ana@otro.pe");
+  assert.equal(emailDeUsuario("Ana@RecetAPP.pe"), "ana@recetapp.pe");
+  assert.deepEqual(correosDeUsuario("ana.r@gmail.com"), [
+    "ana.r@gmail.com",
+    "ana.r@recetapp.pe",
+  ]);
+  assert.deepEqual(correosDeUsuario("ana"), ["ana@recetapp.pe"]);
+});
+
+test("el error de acceso no oculta un fallo de red", () => {
+  assert.match(mensajeDeAuth("Invalid login credentials"), /contraseña/);
+  assert.match(mensajeDeAuth("Failed to fetch"), /conectar/);
+  assert.match(mensajeDeAuth("Email not confirmed"), /Confirma/);
 });
 
 test("el acceso vencido o suspendido no entra", () => {
@@ -30,6 +42,11 @@ test("la página puede hablar con el acceso y no interpreta HTML", () => {
   assert.equal(app.includes("api.decolecta.com"), false);
   assert.equal(app.includes("cuentaGuardada"), false);
   assert.match(app, /text: "Acceso"/);
+  assert.match(app, /leerCamposLogin/);
+  assert.match(app, /getElementById\("login-usuario"\)/);
+  assert.match(app, /getElementById\("login-clave"\)/);
+  assert.match(app, /type: "submit"/);
+  assert.match(page, /form-action 'self'/);
   assert.equal(auth.includes("innerHTML"), false);
   assert.equal(auth.includes("__ANON_KEY__"), false);
 });

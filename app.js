@@ -970,6 +970,13 @@ function presentarAcceso(section) {
   }, 1500);
 }
 
+function leerCamposLogin() {
+  const usuarioEl = document.getElementById("login-usuario");
+  const claveEl = document.getElementById("login-clave");
+  loginUsuario = cleanText(usuarioEl?.value ?? loginUsuario, 120);
+  loginClave = String(claveEl?.value ?? loginClave).slice(0, 80);
+}
+
 function viewLogin() {
   const usuario = el("input", {
     id: "login-usuario",
@@ -978,12 +985,16 @@ function viewLogin() {
     autocomplete: "username",
     autocapitalize: "none",
     spellcheck: "false",
-    maxlength: "40",
+    inputmode: "email",
+    maxlength: "120",
     value: loginUsuario,
+    placeholder: "Usuario o correo",
   });
-  usuario.addEventListener("input", () => {
-    loginUsuario = cleanText(usuario.value, 40);
-  });
+  const guardarUsuario = () => {
+    loginUsuario = cleanText(usuario.value, 120);
+  };
+  usuario.addEventListener("input", guardarUsuario);
+  usuario.addEventListener("change", guardarUsuario);
   const clave = el("input", {
     id: "login-clave",
     type: "password",
@@ -992,12 +1003,28 @@ function viewLogin() {
     maxlength: "80",
     value: loginClave,
   });
-  clave.addEventListener("input", () => {
+  const guardarClave = () => {
     loginClave = clave.value.slice(0, 80);
-  });
-  clave.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") enviarLogin();
-  });
+  };
+  clave.addEventListener("input", guardarClave);
+  clave.addEventListener("change", guardarClave);
+  const form = el("form", {
+    class: "desk-card stack",
+    autocomplete: "on",
+    onsubmit: (event) => {
+      event.preventDefault();
+      enviarLogin();
+    },
+  }, [
+    errorSlot(),
+    el("label", { class: "field", text: "Usuario" }, [usuario]),
+    el("label", { class: "field", text: "Contraseña" }, [clave]),
+    el("button", {
+      type: "submit",
+      class: "btn",
+      disabled: busy,
+    }, [busy ? "Ingresando…" : "Ingresar"]),
+  ]);
   const section = el("section", { class: "screen desk desk-lock" }, [
     el("div", { class: "desk-hero" }, [
       el("div", { class: "desk-hero-inner" }, [
@@ -1006,19 +1033,7 @@ function viewLogin() {
         el("h1", { class: "desk-name", text: "Acceso" }),
       ]),
     ]),
-    el("div", { class: "desk-panel" }, [
-      el("div", { class: "desk-card stack" }, [
-        errorSlot(),
-        el("label", { class: "field", text: "Usuario" }, [usuario]),
-        el("label", { class: "field", text: "Contraseña" }, [clave]),
-        el("button", {
-          type: "button",
-          class: "btn",
-          disabled: busy,
-          onclick: enviarLogin,
-        }, [busy ? "Ingresando…" : "Ingresar"]),
-      ]),
-    ]),
+    el("div", { class: "desk-panel" }, [form]),
   ]);
   queueMicrotask(() => presentarAcceso(section));
   return section;
@@ -1026,6 +1041,7 @@ function viewLogin() {
 
 async function enviarLogin() {
   if (busy) return;
+  leerCamposLogin();
   busy = true;
   showError("");
   render();
