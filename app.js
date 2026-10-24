@@ -1474,23 +1474,24 @@ function viewInicio() {
   const rail = [
     el("button", { type: "button", onclick: () => goto("historial") }, [
       icono("clock"),
-      el("span", { text: historialItems.length ? `Historial (${historialItems.length})` : "Historial" }),
+      el("span", { class: "dock-label", text: "Historial" }),
+      historialItems.length ? el("span", { class: "dock-count", text: String(historialItems.length) }) : null,
     ]),
     el("button", { type: "button", onclick: () => openPerfil("inicio") }, [
       icono("user"),
-      el("span", { text: "Perfil" }),
+      el("span", { class: "dock-label", text: "Perfil" }),
     ]),
     cuenta?.isAdmin ? el("button", { type: "button", onclick: abrirAdmin }, [
       icono("shield"),
-      el("span", { text: "Admin" }),
+      el("span", { class: "dock-label", text: "Admin" }),
     ]) : null,
     el("button", { type: "button", onclick: () => abrirModal("cambiar-clave") }, [
       icono("key"),
-      el("span", { text: "Contraseña" }),
+      el("span", { class: "dock-label", text: "Clave" }),
     ]),
     el("button", { type: "button", onclick: salirDeLaApp }, [
       icono("logout"),
-      el("span", { text: "Salir" }),
+      el("span", { class: "dock-label", text: "Salir" }),
     ]),
   ].filter(Boolean);
 

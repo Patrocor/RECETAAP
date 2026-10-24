@@ -991,7 +991,7 @@ svg.logo {
 .desk-home .desk-name {
   font-size: clamp(21px, 5.2vw, 28px);
   text-wrap: balance;
-  max-width: 320px;
+  max-width: min(320px, 100%);
   margin: 6px auto 0;
   line-height: 1.18;
   font-weight: 500;
@@ -1231,6 +1231,7 @@ button.desk-status-card:active {
   font-weight: 650;
   color: #131b3a;
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .desk-status-text {
@@ -1238,6 +1239,7 @@ button.desk-status-card:active {
   color: #3d4758;
   margin: 0;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .desk-status-action {
@@ -1283,30 +1285,58 @@ button.desk-status-card:active {
 
 .desk-rail-dock {
   display: flex;
-  gap: 6px;
+  gap: 2px;
   background: #ffffff;
   border: 1px solid rgba(18, 54, 82, 0.08);
   border-radius: 18px;
-  padding: 6px;
+  padding: 4px;
   box-shadow: 0 4px 16px rgba(18, 54, 82, 0.05);
   margin-top: auto;
+  width: 100%;
 }
 
 .desk-rail-dock button {
-  flex: 1;
-  min-height: 44px;
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 52px;
   border: 0;
   border-radius: 12px;
   background: transparent;
   color: #1f3346;
-  font-size: 12.5px;
+  font-size: 10.5px;
   font-weight: 650;
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 3px;
+  padding: 7px 2px 6px;
   transition: background 0.18s ease, color 0.18s ease, transform 0.15s var(--ease-spring);
+}
+
+.desk-rail-dock .dock-label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desk-rail-dock .dock-count {
+  position: absolute;
+  top: 4px;
+  right: 50%;
+  transform: translate(14px, 0);
+  min-width: 14px;
+  height: 14px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #123652;
+  color: #ffffff;
+  font-size: 9px;
+  line-height: 14px;
+  font-weight: 700;
 }
 
 .desk-rail-dock button svg {
@@ -1330,6 +1360,46 @@ button.desk-status-card:active {
   background: #e2ebf4;
   color: #123652;
   transform: translateY(0) scale(0.97);
+}
+
+@media (min-width: 840px) {
+  .desk-home-actions {
+    width: min(640px, 100%);
+  }
+
+  .desk-home .desk-name {
+    max-width: min(420px, 100%);
+  }
+
+  .desk-rail-dock {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .desk-rail-dock button {
+    flex-direction: row;
+    min-height: 48px;
+    font-size: 13px;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  .desk-rail-dock .dock-label {
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
+@media (max-width: 360px) {
+  .desk-home .desk-panel {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .desk-rail-dock button {
+    font-size: 9.5px;
+    min-height: 50px;
+  }
 }
 
 .desk-home .desk-primary {
@@ -1815,6 +1885,14 @@ input:focus, select:focus, textarea:focus {
 .exam-order {
   gap: 12px;
   padding-bottom: 6px;
+  flex: 1 0 auto;
+  min-height: min-content;
+}
+
+.exam-order > *,
+.exam-list,
+.doc-cards {
+  flex-shrink: 0;
 }
 
 .exam-order .item {
@@ -2347,6 +2425,35 @@ input:focus, select:focus, textarea:focus {
 
 @media (max-width: 480px) {
   body { background: var(--bg); }
+
+  .empty.exam-empty {
+    grid-template-columns: auto minmax(0, 1fr) 42px;
+    align-items: start;
+  }
+
+  .empty.exam-empty .icon-add {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    width: 42px;
+    height: 42px;
+  }
+
+  .packs-quick-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .packs-quick-title {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+
+  .receta-modelo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 370px) {
@@ -2356,18 +2463,14 @@ input:focus, select:focus, textarea:focus {
     gap: 2px;
   }
 
-  .empty.exam-empty {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-
-  .empty.exam-empty .icon-add {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-
   .exam-guidance {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+
+  .segment button {
+    font-size: 13px;
+    padding: 7px 2px;
   }
 }
 
@@ -2467,11 +2570,13 @@ input:focus, select:focus, textarea:focus {
   font-size: 16px;
   font-weight: 700;
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 .historial-dx {
   margin: 0;
   font-size: 13px;
   color: var(--ink-soft);
+  overflow-wrap: anywhere;
 }
 .historial-items {
   margin: 2px 0 0;
@@ -2484,6 +2589,7 @@ input:focus, select:focus, textarea:focus {
 }
 .historial-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 6px;
 }
@@ -3391,6 +3497,8 @@ input:focus, select:focus, textarea:focus {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 10px 12px;
+  min-width: 0;
+  max-width: 100%;
 }
 .packs-quick-header {
   display: flex;
@@ -3410,6 +3518,8 @@ input:focus, select:focus, textarea:focus {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x proximity;
   scrollbar-width: none;
+  min-width: 0;
+  max-width: 100%;
 }
 .pack-chips-row::-webkit-scrollbar { display: none; }
 .pack-quick-chip {
