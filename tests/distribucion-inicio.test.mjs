@@ -20,7 +20,14 @@ test("la pantalla de inicio incluye continuidad clínica y dock inferior de cuen
   assert.match(app, /icono\("user"\)/);
   assert.match(app, /icono\("logout"\)/);
   assert.match(app, /dock-label/);
-  assert.match(app, /text: "Clave"/);
+  assert.doesNotMatch(app, /dock-label", text: "Clave"/);
+});
+
+test("la contraseña se cambia desde el perfil, no desde el dock", () => {
+  assert.match(app, /function viewPerfil[\s\S]*abrirModal\("cambiar-clave"\)/);
+  assert.match(app, /perfil-clave-btn/);
+  assert.match(app, /Cambiar contraseña/);
+  assert.match(css, /\.perfil-clave-btn/);
 });
 
 test("el estilo de inicio equilibra la distribución y evita saltos huérfanos de texto", () => {
