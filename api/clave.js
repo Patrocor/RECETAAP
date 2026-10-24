@@ -22,15 +22,40 @@ function claveOk(password) {
   return typeof password === "string" && password.length >= 8 && password.length <= 80;
 }
 
+function errorDeOrigen(status, text, fallback) {
+  if (status >= 500 || /web server is down|error code 521/i.test(String(text || ""))) {
+    return "El servidor de acceso no responde. Restaura el proyecto en Supabase.";
+  }
+  return fallback;
+}
+
+async function leerRespuesta(response) {
+  const text = await response.text();
+  let data = null;
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = null;
+  }
+  return { text, data };
+}
+
 async function restAdmin(path) {
-  const response = await fetch(`${URL_BASE}/rest/v1/${path}`, {
-    headers: {
-      apikey: SERVICE_KEY,
-      Authorization: `Bearer ${SERVICE_KEY}`,
-    },
-  });
-  const data = await response.json().catch(() => []);
-  if (!response.ok) throw new Error("No se pudo comprobar el acceso.");
+  let response;
+  try {
+    response = await fetch(`${URL_BASE}/rest/v1/${path}`, {
+      headers: {
+        apikey: SERVICE_KEY,
+        Authorization: `Bearer ${SERVICE_KEY}`,
+      },
+    });
+  } catch (error) {
+    throw new Error(errorDeOrigen(502, error?.message, "El servidor de acceso no responde. Restaura el proyecto en Supabase."));
+  }
+  const { text, data } = await leerRespuesta(response);
+  if (!response.ok) {
+    throw new Error(errorDeOrigen(response.status, text, "No se pudo comprobar el acceso."));
+  }
   return Array.isArray(data) ? data : [];
 }
 
@@ -70,9 +95,9 @@ async function ponerClave(userId, password) {
     },
     body: JSON.stringify({ password, email_confirm: true }),
   });
+  const { text, data } = await leerRespuesta(response);
   if (!response.ok) {
-    const data = await response.json().catch(() => ({}));
-    throw new Error(data.msg || data.message || "No se pudo guardar la contraseña.");
+    throw new Error(errorDeOrigen(response.status, text, data?.msg || data?.message || "No se pudo guardar la contraseña."));
   }
 }
 

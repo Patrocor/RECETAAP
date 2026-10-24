@@ -1,9 +1,9 @@
-const CACHE_NAME = "recetapp-v13";
+const CACHE_NAME = "recetapp-v14";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./styles.css?v=13",
+  "./styles.css?v=14",
   "./app.js",
   "./tema.js",
   "./catalogos.js",
@@ -46,7 +46,7 @@ function isDocumentRequest(request, url) {
 
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
-  if (url.pathname.startsWith("/api/") || url.hostname.includes("supabase.co")) {
+  if (event.request.method !== "GET" || url.pathname.startsWith("/api/") || url.hostname.includes("supabase.co")) {
     return;
   }
   if (isCodeRequest(url) || isDocumentRequest(event.request, url)) {

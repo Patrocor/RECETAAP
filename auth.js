@@ -44,10 +44,12 @@ async function postClave(password, { usuario = "", token = "" } = {}) {
       body: JSON.stringify({ usuario, password }),
     });
     const data = await response.json().catch(() => ({}));
-    if (!response.ok) return { ok: false, error: data.error || "No se pudo guardar la contraseña." };
+    if (!response.ok) {
+      return { ok: false, error: mensajeDeRed(data.error) || data.error || "No se pudo guardar la contraseña." };
+    }
     return { ok: true };
-  } catch {
-    return { ok: false, error: "No se pudo conectar. Revisa tu conexión." };
+  } catch (error) {
+    return { ok: false, error: mensajeDeRed(error?.message) || "El servidor de acceso no responde. Restaura el proyecto en Supabase." };
   }
 }
 
@@ -67,16 +69,23 @@ export async function cambiarClave(password, usuario = "") {
   return postClave(password, { usuario, token: sesion.accessToken });
 }
 
+export function mensajeDeRed(detalle) {
+  const texto = String(detalle || "").toLowerCase();
+  if (/fetch failed|failed to fetch|networkerror|load failed|enotfound|econnreset|econnrefused|521|web server is down/.test(texto)) {
+    return "El servidor de acceso no responde. Restaura el proyecto en Supabase.";
+  }
+  return "";
+}
+
 export function mensajeDeAuth(detalle) {
+  const red = mensajeDeRed(detalle);
+  if (red) return red;
   const texto = String(detalle || "").toLowerCase();
   if (/not confirmed|email_not_confirmed/.test(texto)) {
     return "Confirma el correo antes de entrar.";
   }
   if (/too many|rate limit/.test(texto)) {
     return "Demasiados intentos. Espera un momento.";
-  }
-  if (/failed to fetch|networkerror|load failed/.test(texto)) {
-    return "No se pudo conectar. Revisa tu conexión.";
   }
   if (/invalid.*(grant|credentials|login)|invalid_grant|invalid login/.test(texto)) {
     return "Usuario o contraseña incorrectos.";
@@ -120,17 +129,31 @@ export function cerrarSesionLocal() {
 }
 
 async function authFetch(path, body) {
-  const response = await fetch(`${URL_BASE}${path}`, {
-    method: "POST",
-    headers: {
-      apikey: ANON_KEY,
-      Authorization: `Bearer ${ANON_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  const data = await response.json().catch(() => ({}));
+  let response;
+  try {
+    response = await fetch(`${URL_BASE}${path}`, {
+      method: "POST",
+      headers: {
+        apikey: ANON_KEY,
+        Authorization: `Bearer ${ANON_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+  } catch (error) {
+    throw new Error(mensajeDeAuth(error?.message || "fetch failed"));
+  }
+  const text = await response.text();
+  let data = {};
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    data = {};
+  }
   if (!response.ok) {
+    if (response.status >= 500 || /web server is down|error code 521/i.test(text)) {
+      throw new Error("El servidor de acceso está caído. Restaura el proyecto en Supabase.");
+    }
     const codigo = data.error_description || data.msg || data.error || data.message || "";
     throw new Error(codigo || "No se pudo iniciar sesión.");
   }

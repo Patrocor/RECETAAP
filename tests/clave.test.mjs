@@ -23,6 +23,7 @@ test("la API de clave no expone secretos y usa el rol de servicio", () => {
   assert.match(api, /process\.env\.SUPABASE_SERVICE_ROLE_KEY/);
   assert.match(api, /process\.env\.CLAVE_RESET_ABIERTO/);
   assert.match(api, /email_confirm: true/);
+  assert.match(api, /Restaura el proyecto en Supabase/);
   assert.equal(/eyJ[A-Za-z0-9._-]{20,}/.test(api), false);
   assert.equal(api.includes("innerHTML"), false);
   assert.equal(app.includes("SUPABASE_SERVICE_ROLE_KEY"), false);

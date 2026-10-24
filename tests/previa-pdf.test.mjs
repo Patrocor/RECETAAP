@@ -56,7 +56,7 @@ test("CSP y cache permiten blob de previa y pdf.js", () => {
   assert.match(html, /frame-src 'self' blob:/);
   assert.match(html, /object-src 'self' blob:/);
   assert.match(html, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
-  assert.match(sw, /recetapp-v13/);
+  assert.match(sw, /recetapp-v14/);
   assert.match(sw, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
   assert.match(css, /\.preview-pdf-sheet/);
   assert.match(css, /\.preview-pdf-stage/);

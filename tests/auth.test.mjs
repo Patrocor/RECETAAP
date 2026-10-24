@@ -22,7 +22,8 @@ test("la contraseña nueva pide 8 caracteres", () => {
 
 test("el error de acceso no oculta un fallo de red", () => {
   assert.match(mensajeDeAuth("Invalid login credentials"), /contraseña/);
-  assert.match(mensajeDeAuth("Failed to fetch"), /conectar/);
+  assert.match(mensajeDeAuth("Failed to fetch"), /Supabase/);
+  assert.match(mensajeDeAuth("fetch failed"), /Supabase/);
   assert.match(mensajeDeAuth("Email not confirmed"), /Confirma/);
 });
 
