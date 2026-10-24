@@ -47,7 +47,7 @@ test("cada producto abre solo su hoja y Aprobar pasa por la previa", () => {
   assert.match(app, /function hojaPreviaViva\(/);
   assert.match(app, /onclick: doc\.previa/);
   assert.doesNotMatch(app, /onclick: doc\.emitir/);
-  assert.match(app, /pageW - w - 3/);
+  assert.match(app, /cajaRubrica/);
   assert.match(app, /Aprobar y Emitir Orden de laboratorio/);
   assert.match(app, /Aprobar y Emitir Orden de imagen/);
 });
@@ -56,7 +56,8 @@ test("CSP y cache permiten blob de previa y pdf.js", () => {
   assert.match(html, /frame-src 'self' blob:/);
   assert.match(html, /object-src 'self' blob:/);
   assert.match(html, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
-  assert.match(sw, /recetapp-v17/);
+  assert.match(sw, /recetapp-v18/);
+  assert.match(sw, /rubrica\.js/);
   assert.match(sw, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
   assert.match(css, /\.preview-pdf-sheet/);
   assert.match(css, /\.preview-pdf-stage/);
