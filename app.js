@@ -48,6 +48,15 @@ import {
 } from "./auth.js";
 import { claveEspecialidad, crearLogo } from "./marcas.js";
 import { frasesRecomendadas } from "./recomendaciones.js";
+import {
+  cajaRubrica,
+  estiloPosicionRubrica,
+  layoutRubrica,
+  offsetsDesdePunto,
+  plantillaRubrica,
+  puntoDesdeEvento,
+  sanitizeRubricaAjuste,
+} from "./rubrica.js";
 
 const PERFIL_KEY = "recetapp.perfil";
 const PACIENTES_KEY = "recetapp.pacientes";
@@ -456,17 +465,6 @@ function botonMas(label, onclick) {
     title: label,
     onclick,
   }, [icono("plus")]);
-}
-
-function sanitizeRubricaAjuste(ajuste) {
-  const x = Number(ajuste?.offsetX);
-  const y = Number(ajuste?.offsetY);
-  const esc = Number(ajuste?.escala);
-  return {
-    offsetX: Number.isFinite(x) ? Math.max(-56, Math.min(56, Math.round(x))) : 0,
-    offsetY: Number.isFinite(y) ? Math.max(-40, Math.min(40, Math.round(y))) : 0,
-    escala: Number.isFinite(esc) ? Math.max(0.6, Math.min(1.8, Math.round(esc * 100) / 100)) : 1,
-  };
 }
 
 function loadPerfil() {
@@ -2446,7 +2444,7 @@ function hojasPreviasDefinidas() {
       titulo: "Receta médica",
       medida: "½ A4 · 210 × 148,5 mm",
       variante: "mitad",
-      construir: () => pdfReceta({ hojaCompleta: false }),
+      construir: () => pdfReceta({ hojaCompleta: false, firma: false }),
     }];
   }
   const labs = examenesLaboratorio();
@@ -2460,7 +2458,7 @@ function hojasPreviasDefinidas() {
       titulo: "Orden de laboratorio",
       medida: "¼ A4 vertical · 105 × 148,5 mm",
       variante: "cuarto",
-      construir: () => pdfOrden("Laboratorio", labs, { hojaCompleta: false }),
+      construir: () => pdfOrden("Laboratorio", labs, { hojaCompleta: false, firma: false }),
     });
   }
   if (soloImg || (!soloLab && imgs.length)) {
@@ -2469,7 +2467,7 @@ function hojasPreviasDefinidas() {
       titulo: "Orden de imagen",
       medida: "¼ A4 vertical · 105 × 148,5 mm",
       variante: "cuarto",
-      construir: () => pdfOrden("Imágenes", imgs, { hojaCompleta: false }),
+      construir: () => pdfOrden("Imágenes", imgs, { hojaCompleta: false, firma: false }),
     });
   }
   if (!hojas.length) {
@@ -2478,19 +2476,48 @@ function hojasPreviasDefinidas() {
       titulo: soloLab ? "Orden de laboratorio" : "Orden de imagen",
       medida: "¼ A4 vertical · 105 × 148,5 mm",
       variante: "cuarto",
-      construir: () => pdfOrden(soloLab ? "Laboratorio" : "Imágenes", [], { hojaCompleta: false }),
+      construir: () => pdfOrden(soloLab ? "Laboratorio" : "Imágenes", [], { hojaCompleta: false, firma: false }),
     });
   }
   return hojas;
 }
 
+function overlayRubricaViva(hoja) {
+  if (!perfil.firmaSello) return null;
+  const layout = layoutRubrica(hoja.variante, perfil.rubricaAjuste);
+  return el("img", {
+    class: "preview-rubrica-viva preview-firma-img",
+    src: perfil.firmaSello,
+    alt: "Rúbrica sobre el documento",
+    draggable: "false",
+    style: estiloPosicionRubrica(layout),
+  });
+}
+
 function hojaPreviaPdf(hoja) {
+  const viva = Boolean(perfil.firmaSello);
   return el("article", { class: `preview-paper preview-pdf-sheet is-${hoja.variante}`, "data-hoja": hoja.id }, [
     el("div", { class: "preview-pdf-meta" }, [
       el("strong", { text: hoja.titulo }),
       el("span", { text: hoja.medida }),
     ]),
-    el("div", { class: "preview-pdf-stage", id: `${hoja.id}-stage` }, [
+    el("div", {
+      class: `preview-pdf-stage${viva ? " is-rubrica-viva" : ""}`,
+      id: `${hoja.id}-stage`,
+      "data-variante": hoja.variante,
+      role: viva ? "application" : undefined,
+      "aria-label": viva ? "Toca el documento para colocar la rúbrica" : undefined,
+      onpointerdown: viva ? (evento) => iniciarArrastreRubrica(evento, hoja.variante) : undefined,
+      onpointermove: viva ? (evento) => continuarArrastreRubrica(evento, hoja.variante) : undefined,
+      onpointerup: viva ? soltarArrastreRubrica : undefined,
+      onpointercancel: viva ? soltarArrastreRubrica : undefined,
+      onclick: viva ? (evento) => {
+        if (rubricaArrastre) return;
+        const stage = evento.currentTarget;
+        if (!stage || evento.target?.closest?.("button, a, input, textarea")) return;
+        colocarRubricaEnHoja(stage, hoja.variante, evento.clientX, evento.clientY);
+      } : undefined,
+    }, [
       el("canvas", { class: "preview-pdf-canvas", id: `${hoja.id}-canvas`, hidden: true }),
       el("iframe", {
         class: "preview-pdf-frame",
@@ -2498,6 +2525,7 @@ function hojaPreviaPdf(hoja) {
         title: `Vista previa de ${hoja.titulo}`,
         hidden: true,
       }),
+      overlayRubricaViva(hoja),
       el("p", { class: "preview-pdf-status", id: `${hoja.id}-status`, "aria-live": "polite", text: "Generando vista previa real…" }),
     ]),
   ]);
@@ -2603,14 +2631,62 @@ function montarHojasPreviasPdf() {
   Promise.all(hojas.map((hoja) => pintarPdfEnHoja(hoja, seq))).catch(() => {});
 }
 
+function aplicarRubricaViva() {
+  const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
+  const zoom = document.getElementById("rubrica-zoom-val");
+  if (zoom) zoom.textContent = `${Math.round(ajuste.escala * 100)}%`;
+  document.querySelectorAll(".preview-pdf-stage[data-variante]").forEach((stage) => {
+    const img = stage.querySelector(".preview-rubrica-viva");
+    if (!img || !perfil.firmaSello) return;
+    img.setAttribute("style", estiloPosicionRubrica(layoutRubrica(stage.dataset.variante, ajuste)));
+    if (img.getAttribute("src") !== perfil.firmaSello) img.src = perfil.firmaSello;
+  });
+}
+
 function refrescarPreviaPdf() {
   if (screen !== "previa") {
     render();
     return;
   }
-  const zoom = document.getElementById("rubrica-zoom-val");
-  if (zoom) zoom.textContent = `${Math.round(sanitizeRubricaAjuste(perfil.rubricaAjuste).escala * 100)}%`;
-  montarHojasPreviasPdf();
+  aplicarRubricaViva();
+}
+
+function colocarRubricaEnHoja(stage, variante, clientX, clientY) {
+  const punto = puntoDesdeEvento(stage.getBoundingClientRect(), clientX, clientY, variante);
+  if (!punto) return;
+  perfil.rubricaAjuste = offsetsDesdePunto(variante, punto.xMm, punto.yMm, perfil.rubricaAjuste);
+  savePerfil();
+  aplicarRubricaViva();
+}
+
+let rubricaArrastre = null;
+
+function iniciarArrastreRubrica(evento, variante) {
+  if (evento.pointerType === "mouse" && evento.button !== 0) return;
+  const stage = evento.currentTarget;
+  if (!stage || evento.target?.closest?.("button, a, input, textarea")) return;
+  rubricaArrastre = { variante, pointerId: evento.pointerId };
+  stage.classList.add("is-dragging");
+  try {
+    stage.setPointerCapture(evento.pointerId);
+  } catch {}
+  colocarRubricaEnHoja(stage, variante, evento.clientX, evento.clientY);
+  evento.preventDefault();
+}
+
+function continuarArrastreRubrica(evento, variante) {
+  if (!rubricaArrastre || rubricaArrastre.pointerId !== evento.pointerId) return;
+  const stage = evento.currentTarget;
+  if (!stage) return;
+  colocarRubricaEnHoja(stage, variante, evento.clientX, evento.clientY);
+  evento.preventDefault();
+}
+
+function soltarArrastreRubrica(evento) {
+  if (!rubricaArrastre || (evento && rubricaArrastre.pointerId !== evento.pointerId)) return;
+  const stage = evento?.currentTarget;
+  stage?.classList.remove("is-dragging");
+  rubricaArrastre = null;
 }
 
 function previewSignatureBox() {
@@ -2619,7 +2695,7 @@ function previewSignatureBox() {
     return el("div", { class: "preview-signature-box rubrica-panel" }, [
       el("div", { class: "preview-signature-line" }),
       el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
-      el("p", { class: "preview-rubrica-hint", text: "La rúbrica se verá sobre el documento real al cargarla." }),
+      el("p", { class: "preview-rubrica-hint", text: "La rúbrica se verá en vivo sobre el documento al cargarla. Luego tócala para colocarla." }),
       el("button", {
         type: "button",
         class: "btn-subtle",
@@ -2658,16 +2734,8 @@ function previewSignatureBox() {
   };
 
   return el("div", { class: "preview-signature-box rubrica-interactive" }, [
-    el("div", { class: "preview-rubrica-stage" }, [
-      el("img", {
-        src: perfil.firmaSello,
-        class: "preview-firma-img",
-        alt: "Rúbrica y Sello",
-      }),
-    ]),
-    el("div", { class: "preview-signature-line" }),
     el("div", { class: "preview-signature-text", text: "Firma y Sello" }),
-    el("p", { class: "preview-rubrica-hint", text: "Muévela sobre la vista previa real del PDF." }),
+    el("p", { class: "preview-rubrica-hint", text: "Toca el documento para colocar la rúbrica al lado que elijas. También puedes arrastrarla." }),
     el("div", { class: "rubrica-controls-panel" }, [
       el("div", { class: "rubrica-controls-label" }, [
         el("span", { text: "Acomodar rúbrica:" }),
@@ -2736,7 +2804,7 @@ function viewPrevia() {
         ])
       : el("p", { class: "eyebrow", text: "Vista previa real · cada orden se emite en ¼ A4 vertical" }),
     ...hojas.map((hoja) => hojaPreviaPdf(hoja)),
-    el("p", { class: "preview-pdf-note", text: "Al emitir, el archivo baja en A4 con marcas de corte. Aquí se ve solo la hoja útil para acomodar la rúbrica." }),
+    el("p", { class: "preview-pdf-note", text: "Toca la hoja para colocar la rúbrica al lado que elijas. Al emitir, el archivo baja en A4 con marcas de corte." }),
     previewSignatureBox(),
   ]);
 }
@@ -4427,15 +4495,9 @@ function recetaPonerFirma(doc, posX, posY, baseW = 36, baseH = 12) {
   if (!perfil.firmaSello) return;
   try {
     const ajuste = sanitizeRubricaAjuste(perfil.rubricaAjuste);
-    const pageW = typeof doc.internal?.pageSize?.getWidth === "function" ? doc.internal.pageSize.getWidth() : 210;
-    const pageH = typeof doc.internal?.pageSize?.getHeight === "function" ? doc.internal.pageSize.getHeight() : 297;
-    const w = Math.max(8, Math.min(baseW * ajuste.escala, pageW - 8));
-    const h = Math.max(4, Math.min(baseH * ajuste.escala, 22));
-    const offX = ajuste.offsetX * 0.26;
-    const offY = ajuste.offsetY * 0.26;
-    const x = Math.max(3, Math.min(pageW - w - 3, posX + (baseW - w) / 2 + offX));
-    const y = Math.max(3, Math.min(pageH - h - 3, posY + (baseH - h) / 2 + offY));
-    doc.addImage(perfil.firmaSello, "PNG", x, y, w, h, undefined, "FAST");
+    const plantilla = plantillaRubrica(posX < 80 ? "cuarto" : "mitad");
+    const caja = cajaRubrica({ ...plantilla, posX, posY, baseW, baseH }, ajuste);
+    doc.addImage(perfil.firmaSello, "PNG", caja.x, caja.y, caja.w, caja.h, undefined, "FAST");
   } catch {}
 }
 
@@ -4483,13 +4545,13 @@ function dibujarGuiasCorte(doc, ancho, alto) {
   doc.text(etiqueta, Math.min(ancho, 210) / 2, alto + 6.2, { align: "center" });
 }
 
-function pdfReceta({ hojaCompleta = true } = {}) {
+function pdfReceta({ hojaCompleta = true, firma = true } = {}) {
   const jsPDF = window.jspdf.jsPDF;
   const doc = hojaCompleta
     ? new jsPDF({ unit: "mm", format: "a4" })
     : crearDocPdf(210, ALTO_RECETA);
   const alto = ALTO_RECETA;
-  dibujarReceta(doc, 0, alto);
+  dibujarReceta(doc, 0, alto, { firma });
   if (hojaCompleta) {
     dibujarGuiasCorte(doc, 210, ALTO_RECETA);
     doc.setFont("times", "normal");
@@ -4503,24 +4565,24 @@ function pdfReceta({ hojaCompleta = true } = {}) {
   return doc;
 }
 
-function pdfOrden(tipo, items, { hojaCompleta = true } = {}) {
+function pdfOrden(tipo, items, { hojaCompleta = true, firma = true } = {}) {
   const jsPDF = window.jspdf.jsPDF;
   const doc = hojaCompleta
     ? new jsPDF({ unit: "mm", format: "a4" })
     : crearDocPdf(ANCHO_ORDEN, ALTO_ORDEN);
-  dibujarOrdenCuarto(doc, tipo, items);
+  dibujarOrdenCuarto(doc, tipo, items, { firma });
   if (hojaCompleta) dibujarGuiasCorte(doc, ANCHO_ORDEN, ALTO_ORDEN);
   return doc;
 }
 
-function dibujarReceta(doc, top, alto) {
+function dibujarReceta(doc, top, alto, opts = {}) {
   const modelo = modeloRecetaId(perfil.modeloReceta);
-  if (modelo === "lineal") return dibujarRecetaLineal(doc, top, alto);
-  if (modelo === "institucional") return dibujarRecetaInstitucional(doc, top, alto);
-  return dibujarRecetaClasica(doc, top, alto);
+  if (modelo === "lineal") return dibujarRecetaLineal(doc, top, alto, opts);
+  if (modelo === "institucional") return dibujarRecetaInstitucional(doc, top, alto, opts);
+  return dibujarRecetaClasica(doc, top, alto, opts);
 }
 
-function dibujarRecetaPremium(doc, top, alto, modelo = "clasica") {
+function dibujarRecetaPremium(doc, top, alto, modelo = "clasica", opts = {}) {
   const x = 0;
   const ancho = 210;
   const { tinta, oro, papel, banda, suave } = paletaDocumento();
@@ -4618,7 +4680,7 @@ function dibujarRecetaPremium(doc, top, alto, modelo = "clasica") {
   doc.setFontSize(6.6);
   doc.setTextColor(...suave);
   doc.text("Validez 30 días", x + margen, pieTop + 18.4);
-  recetaPonerFirma(doc, x + 148, pieTop + 3, 46, 14);
+  if (opts.firma !== false) recetaPonerFirma(doc, x + 148, pieTop + 3, 46, 14);
   doc.setDrawColor(...tinta);
   doc.setLineWidth(0.28);
   doc.line(x + 146, pieTop + 18.5, x + 202, pieTop + 18.5);
@@ -4628,19 +4690,19 @@ function dibujarRecetaPremium(doc, top, alto, modelo = "clasica") {
   doc.text("Firma y sello médico", x + 174, pieTop + 22.2, { align: "center" });
 }
 
-function dibujarRecetaClasica(doc, top, alto) {
-  return dibujarRecetaPremium(doc, top, alto, "clasica");
+function dibujarRecetaClasica(doc, top, alto, opts) {
+  return dibujarRecetaPremium(doc, top, alto, "clasica", opts);
 }
 
-function dibujarRecetaLineal(doc, top, alto) {
-  return dibujarRecetaPremium(doc, top, alto, "lineal");
+function dibujarRecetaLineal(doc, top, alto, opts) {
+  return dibujarRecetaPremium(doc, top, alto, "lineal", opts);
 }
 
-function dibujarRecetaInstitucional(doc, top, alto) {
-  return dibujarRecetaPremium(doc, top, alto, "institucional");
+function dibujarRecetaInstitucional(doc, top, alto, opts) {
+  return dibujarRecetaPremium(doc, top, alto, "institucional", opts);
 }
 
-function dibujarOrdenCuarto(doc, tipo, items) {
+function dibujarOrdenCuarto(doc, tipo, items, opts = {}) {
   const x = 0;
   const top = 0;
   const ancho = ANCHO_ORDEN;
@@ -4712,7 +4774,7 @@ function dibujarOrdenCuarto(doc, tipo, items) {
   doc.setDrawColor(...oro);
   doc.setLineWidth(0.3);
   doc.line(x + margen, pieTop + 1, x + ancho - margen, pieTop + 1);
-  recetaPonerFirma(doc, x + 40, pieTop + 3, 52, 14);
+  if (opts.firma !== false) recetaPonerFirma(doc, x + 40, pieTop + 3, 52, 14);
   doc.setDrawColor(...tinta);
   doc.setLineWidth(0.25);
   doc.line(x + 36, pieTop + 18.5, x + 99, pieTop + 18.5);

@@ -18,7 +18,7 @@ test("el check para agregar el medicamento está junto a la cantidad calculada",
 
 test("la receta PDF es un solo ejemplar de media página A4", () => {
   assert.match(app, /const ALTO_RECETA = 148.5/);
-  assert.match(app, /dibujarReceta\(doc, 0, alto\)/);
+  assert.match(app, /dibujarReceta\(doc, 0, alto, \{ firma \}\)/);
   assert.doesNotMatch(app, /dibujarReceta\(doc, 150/);
   assert.match(app, /½ página A4 · un solo ejemplar/);
 });

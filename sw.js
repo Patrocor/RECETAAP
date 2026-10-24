@@ -1,9 +1,9 @@
-const CACHE_NAME = "recetapp-v17";
+const CACHE_NAME = "recetapp-v18";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./styles.css?v=17",
+  "./styles.css?v=18",
   "./app.js",
   "./tema.js",
   "./catalogos.js",
@@ -13,6 +13,7 @@ const STATIC_ASSETS = [
   "./auth.js",
   "./marcas.js",
   "./recomendaciones.js",
+  "./rubrica.js",
   "./icon.svg",
   "./logo.svg",
   "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",

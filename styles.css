@@ -2713,6 +2713,34 @@ input:focus, select:focus, textarea:focus {
   overflow: hidden;
   min-height: 140px;
 }
+.preview-pdf-stage.is-rubrica-viva {
+  cursor: grab;
+  touch-action: none;
+}
+.preview-pdf-stage.is-rubrica-viva.is-dragging {
+  cursor: grabbing;
+}
+.preview-pdf-stage.is-rubrica-viva .preview-pdf-canvas,
+.preview-pdf-stage.is-rubrica-viva .preview-pdf-frame {
+  pointer-events: none;
+}
+.preview-rubrica-viva {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  max-width: none;
+  max-height: none;
+  filter: drop-shadow(0 1px 2px rgba(18, 54, 82, 0.18));
+  outline: 1px dashed rgba(18, 54, 82, 0.35);
+  outline-offset: 2px;
+  transition: left 0.12s ease, top 0.12s ease, width 0.12s ease, height 0.12s ease, outline-color 0.12s ease;
+}
+.preview-pdf-stage.is-dragging .preview-rubrica-viva {
+  transition: none;
+  outline-color: rgba(18, 54, 82, 0.7);
+}
 .preview-pdf-sheet.is-mitad .preview-pdf-stage {
   aspect-ratio: 210 / 148.5;
 }
@@ -3915,6 +3943,10 @@ input:focus, select:focus, textarea:focus {
   user-select: none;
   pointer-events: none;
 }
+.preview-rubrica-viva.preview-firma-img {
+  max-width: none;
+  max-height: none;
+}
 .rubrica-controls-panel {
   margin-top: 8px;
   padding-top: 6px;
@@ -4425,6 +4457,10 @@ input[readonly] {
   background: var(--card);
   border-color: var(--line);
   color: var(--ink);
+}
+
+:root[data-theme="dark"] .preview-pdf-stage.is-rubrica-viva {
+  outline-color: #7ea0bc;
 }
 
 :root[data-theme="dark"] .historial-card,
