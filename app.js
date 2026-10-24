@@ -4396,12 +4396,12 @@ function dibujarMarcaAgua(doc, x, y, w, h) {
   const sy = y + (h - bh) / 2;
   try {
     doc.saveGraphicsState();
-    if (doc.GState) doc.setGState(new doc.GState({ opacity: 0.16 }));
+    if (doc.GState) doc.setGState(new doc.GState({ opacity: 0.09 }));
   } catch {}
   dibujarSelloLR(doc, sx, sy, bw, bh, {
-    tinta: [86, 108, 126],
-    fondo: [248, 249, 250],
-    oro: [204, 184, 140],
+    tinta: [118, 130, 140],
+    fondo: [250, 250, 250],
+    oro: [176, 168, 152],
     ekg: true,
   });
   try {

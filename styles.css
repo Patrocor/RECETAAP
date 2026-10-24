@@ -21,6 +21,9 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 20px;
+  --hero: #243848;
+  --hero-deep: #1a2833;
+  --hero-glow: rgba(215, 228, 240, 0.16);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -88,7 +91,7 @@ html {
 html, body { margin: 0; height: 100%; overflow: hidden; }
 
 body {
-  background: #0e1428;
+  background: var(--hero-deep);
   color: var(--ink);
 }
 
@@ -483,8 +486,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   padding: calc(22px + env(safe-area-inset-top)) 20px 32px;
   color: white;
   background:
-    radial-gradient(80% 90% at 100% 0%, rgba(215, 228, 240, 0.42), transparent 68%),
-    #123652;
+    radial-gradient(80% 90% at 100% 0%, var(--hero-glow), transparent 68%),
+    var(--hero);
 }
 
 .desk-mark {
@@ -703,7 +706,7 @@ button.desk-status-card:focus-visible,
   right: 0;
   top: -100dvh;
   bottom: 0;
-  background: #123652;
+  background: var(--hero);
 }
 
 .desk-lock .desk-hero::after {
@@ -715,7 +718,7 @@ button.desk-status-card:focus-visible,
   top: 0;
   height: 42vh;
   pointer-events: none;
-  background: radial-gradient(78% 100% at 100% 0%, rgba(215, 228, 240, 0.34), transparent 70%);
+  background: radial-gradient(78% 100% at 100% 0%, var(--hero-glow), transparent 70%);
 }
 
 .desk-panel {
@@ -964,8 +967,8 @@ svg.logo {
   margin: 0;
   padding: calc(20px + env(safe-area-inset-top)) 20px 22px;
   background:
-    radial-gradient(85% 100% at 50% 0%, rgba(215, 228, 240, 0.35), transparent 72%),
-    #123652;
+    radial-gradient(85% 100% at 50% 0%, var(--hero-glow), transparent 72%),
+    var(--hero);
 }
 
 .desk-home .desk-hero-inner,
@@ -1418,8 +1421,8 @@ button.desk-status-card:active {
 
 .shell-flow .top {
   background:
-    radial-gradient(80% 140% at 100% 0%, rgba(215, 228, 240, 0.28), transparent 62%),
-    #123652;
+    radial-gradient(80% 140% at 100% 0%, var(--hero-glow), transparent 62%),
+    var(--hero);
   padding: calc(14px + env(safe-area-inset-top)) 0 12px;
 }
 
