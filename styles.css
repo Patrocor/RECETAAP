@@ -832,6 +832,13 @@ svg.logo {
   font-size: 16px;
 }
 
+.desk-lock .link {
+  width: 100%;
+  min-height: 40px;
+  color: var(--accent);
+  background: transparent;
+}
+
 @keyframes logo-story {
   0% { opacity: 0; transform: translateY(6vh) scale(0.84); }
   28% { opacity: 1; transform: translateY(6vh) scale(1.85); }
@@ -2182,6 +2189,11 @@ input:focus, select:focus, textarea:focus {
   margin: 0;
   font-size: 13px;
   animation: banner-in 0.22s var(--ease-spring);
+}
+
+.banner.is-ok {
+  background: #ecfdf3;
+  color: var(--ok);
 }
 
 @keyframes banner-in {

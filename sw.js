@@ -1,9 +1,9 @@
-const CACHE_NAME = "recetapp-v12";
+const CACHE_NAME = "recetapp-v13";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./styles.css?v=12",
+  "./styles.css?v=13",
   "./app.js",
   "./tema.js",
   "./catalogos.js",

@@ -2,6 +2,9 @@
   "functions": {
     "api/dni.js": {
       "maxDuration": 10
+    },
+    "api/clave.js": {
+      "maxDuration": 10
     }
   }
 }

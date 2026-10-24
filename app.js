@@ -38,7 +38,9 @@ import {
 } from "./frecuentes.js";
 import {
   actualizarAcceso,
+  cambiarClave,
   crearAcceso,
+  definirClave,
   entrar,
   leerSesion,
   listarAccesos,
@@ -271,6 +273,9 @@ let adminAbierto = "";
 let adminQuery = "";
 let loginUsuario = "";
 let loginClave = "";
+let loginModo = "entrar";
+let loginClaveNueva = "";
+let loginClaveOtra = "";
 let composer = null;
 let medForm = emptyMedForm();
 let medEditId = null;
@@ -283,6 +288,7 @@ let dialog = null;
 let dialogResolver = null;
 let busy = false;
 let formError = "";
+let formErrorOk = false;
 let afterPerfil = "inicio";
 let origenExamenes = "receta";
 let origenPrevia = "receta";
@@ -290,7 +296,7 @@ let previoPdfUrls = [];
 let previaPdfSeq = 0;
 let ultimoEmitido = null;
 let txQuery = "";
-let modalActivo = null; // "tx-frecuentes" | "guardar-tx" | "calc-pediatrica" | "packs-examenes" | "guardar-pack"
+let modalActivo = null; // "tx-frecuentes" | "guardar-tx" | "calc-pediatrica" | "packs-examenes" | "guardar-pack" | "cambiar-clave"
 let itemAGuardarTx = null; // Puede ser un item del historial o emitido
 let calcState = {
   presetId: "paracetamol-gotas",
@@ -368,6 +374,8 @@ function icono(nombre) {
     trazo("M5.5 21a6.5 6.5 0 0 1 13 0");
   } else if (nombre === "shield") {
     trazo("M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z");
+  } else if (nombre === "key") {
+    trazo("M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.77-7.77zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4");
   } else if (nombre === "logout") {
     trazo("M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4");
     trazo("M16 17l5-5-5-5");
@@ -741,7 +749,7 @@ function render() {
   if (dialog) shell.append(dialogNode());
   if (modalActivo) shell.append(modalNode());
   root.replaceChildren(shell);
-  if (formError) showError(formError);
+  if (formError) showError(formError, formErrorOk);
   if (screen === "previa") requestAnimationFrame(() => requestAnimationFrame(montarHojasPreviasPdf));
   else liberarPreviasPdf();
 }
@@ -915,12 +923,14 @@ function errorSlot() {
   return el("p", { id: "form-error", class: "banner", role: "alert", hidden: true });
 }
 
-function showError(message) {
+function showError(message, ok = false) {
   formError = message || "";
+  formErrorOk = Boolean(ok && formError);
   const node = document.getElementById("form-error");
   if (!node) return;
   node.hidden = !formError;
   node.textContent = formError;
+  node.classList.toggle("is-ok", formErrorOk);
 }
 
 function fechaEscritorio() {
@@ -973,11 +983,31 @@ function presentarAcceso(section) {
 function leerCamposLogin() {
   const usuarioEl = document.getElementById("login-usuario");
   const claveEl = document.getElementById("login-clave");
+  const nuevaEl = document.getElementById("login-clave-nueva");
+  const otraEl = document.getElementById("login-clave-otra");
   loginUsuario = cleanText(usuarioEl?.value ?? loginUsuario, 120);
   loginClave = String(claveEl?.value ?? loginClave).slice(0, 80);
+  loginClaveNueva = String(nuevaEl?.value ?? loginClaveNueva).slice(0, 80);
+  loginClaveOtra = String(otraEl?.value ?? loginClaveOtra).slice(0, 80);
+}
+
+function campoClave(id, valor, name, autocomplete, onGuardar) {
+  const clave = el("input", {
+    id,
+    type: "password",
+    name,
+    autocomplete,
+    maxlength: "80",
+    value: valor,
+  });
+  const guardar = () => onGuardar(clave.value.slice(0, 80));
+  clave.addEventListener("input", guardar);
+  clave.addEventListener("change", guardar);
+  return clave;
 }
 
 function viewLogin() {
+  const resetear = loginModo === "clave";
   const usuario = el("input", {
     id: "login-usuario",
     type: "text",
@@ -995,42 +1025,52 @@ function viewLogin() {
   };
   usuario.addEventListener("input", guardarUsuario);
   usuario.addEventListener("change", guardarUsuario);
-  const clave = el("input", {
-    id: "login-clave",
-    type: "password",
-    name: "password",
-    autocomplete: "current-password",
-    maxlength: "80",
-    value: loginClave,
+  const clave = campoClave("login-clave", loginClave, "password", "current-password", (valor) => {
+    loginClave = valor;
   });
-  const guardarClave = () => {
-    loginClave = clave.value.slice(0, 80);
-  };
-  clave.addEventListener("input", guardarClave);
-  clave.addEventListener("change", guardarClave);
+  const nueva = campoClave("login-clave-nueva", loginClaveNueva, "new-password", "new-password", (valor) => {
+    loginClaveNueva = valor;
+  });
+  const otra = campoClave("login-clave-otra", loginClaveOtra, "new-password-confirm", "new-password", (valor) => {
+    loginClaveOtra = valor;
+  });
   const form = el("form", {
     class: "desk-card stack",
     autocomplete: "on",
     onsubmit: (event) => {
       event.preventDefault();
-      enviarLogin();
+      if (resetear) enviarNuevaClave();
+      else enviarLogin();
     },
   }, [
     errorSlot(),
     el("label", { class: "field", text: "Usuario" }, [usuario]),
-    el("label", { class: "field", text: "Contraseña" }, [clave]),
+    resetear ? el("label", { class: "field", text: "Nueva contraseña" }, [nueva]) : el("label", { class: "field", text: "Contraseña" }, [clave]),
+    resetear ? el("label", { class: "field", text: "Repite la contraseña" }, [otra]) : null,
     el("button", {
       type: "submit",
       class: "btn",
       disabled: busy,
-    }, [busy ? "Ingresando…" : "Ingresar"]),
+    }, [busy ? (resetear ? "Guardando…" : "Ingresando…") : (resetear ? "Guardar contraseña" : "Ingresar")]),
+    el("button", {
+      type: "button",
+      class: "link",
+      onclick: () => {
+        loginModo = resetear ? "entrar" : "clave";
+        loginClave = "";
+        loginClaveNueva = "";
+        loginClaveOtra = "";
+        showError("");
+        render();
+      },
+    }, [resetear ? "Volver a entrar" : "Nueva contraseña"]),
   ]);
   const section = el("section", { class: "screen desk desk-lock" }, [
     el("div", { class: "desk-hero" }, [
       el("div", { class: "desk-hero-inner" }, [
         deskMark(true),
         el("p", { class: "desk-date", text: fechaEscritorio() }),
-        el("h1", { class: "desk-name", text: "Acceso" }),
+        el("h1", { class: "desk-name", text: resetear ? "Clave" : "Acceso" }),
       ]),
     ]),
     el("div", { class: "desk-panel" }, [form]),
@@ -1055,7 +1095,34 @@ async function enviarLogin() {
   }
   cuenta = resultado.cuenta;
   loginClave = "";
+  loginModo = "entrar";
   screen = "inicio";
+  render();
+}
+
+async function enviarNuevaClave() {
+  if (busy) return;
+  leerCamposLogin();
+  if (loginClaveNueva !== loginClaveOtra) {
+    showError("Las contraseñas no coinciden.");
+    render();
+    return;
+  }
+  busy = true;
+  showError("");
+  render();
+  const resultado = await definirClave(loginUsuario, loginClaveNueva);
+  busy = false;
+  if (!resultado.ok) {
+    showError(resultado.error);
+    render();
+    return;
+  }
+  loginClave = "";
+  loginClaveNueva = "";
+  loginClaveOtra = "";
+  loginModo = "entrar";
+  showError("Contraseña lista. Entra con ella.", true);
   render();
 }
 
@@ -1111,6 +1178,14 @@ function viewAdmin() {
             class: "add-btn",
             onclick: () => cambiarAcceso(item, { exp_at: vence.value ? new Date(`${vence.value}T23:59:59`).toISOString() : null }),
           }, ["Guardar"]),
+          el("label", { class: "field", text: "Nueva contraseña" }, [
+            el("input", { id: `clave-${item.id}`, type: "password", maxlength: "80", autocomplete: "new-password" }),
+          ]),
+          el("button", {
+            type: "button",
+            class: "add-btn",
+            onclick: () => resetearClaveAcceso(item),
+          }, ["Cambiar contraseña"]),
         ] : []),
       ]),
     ]);
@@ -1167,6 +1242,23 @@ async function cambiarAcceso(item, cambios) {
   }
 }
 
+async function resetearClaveAcceso(item) {
+  if (busy) return;
+  const password = document.getElementById(`clave-${item.id}`)?.value || "";
+  busy = true;
+  render();
+  try {
+    const resultado = await cambiarClave(password, item.username);
+    if (!resultado.ok) throw new Error(resultado.error);
+    showError("Contraseña actualizada.", true);
+  } catch (error) {
+    showError(error.message || "No se pudo cambiar la contraseña.");
+  } finally {
+    busy = false;
+    if (screen === "admin") render();
+  }
+}
+
 async function agregarAcceso() {
   if (busy) return;
   busy = true;
@@ -1208,6 +1300,9 @@ async function salirDeLaApp() {
   cuenta = null;
   loginUsuario = "";
   loginClave = "";
+  loginClaveNueva = "";
+  loginClaveOtra = "";
+  loginModo = "entrar";
   screen = "login";
   render();
 }
@@ -1389,6 +1484,10 @@ function viewInicio() {
       icono("shield"),
       el("span", { text: "Admin" }),
     ]) : null,
+    el("button", { type: "button", onclick: () => abrirModal("cambiar-clave") }, [
+      icono("key"),
+      el("span", { text: "Contraseña" }),
+    ]),
     el("button", { type: "button", onclick: salirDeLaApp }, [
       icono("logout"),
       el("span", { text: "Salir" }),
@@ -3597,6 +3696,52 @@ function cerrarModal() {
   render();
 }
 
+function modalCambiarClave() {
+  const nueva = el("input", { id: "cuenta-clave-nueva", type: "password", maxlength: "80", autocomplete: "new-password" });
+  const otra = el("input", { id: "cuenta-clave-otra", type: "password", maxlength: "80", autocomplete: "new-password" });
+  return el("div", { class: "modal" }, [
+    el("div", { class: "modal-header" }, [
+      el("div", { class: "modal-title-group" }, [
+        el("h2", { text: "Nueva contraseña" }),
+        el("p", { text: "Queda lista para el próximo acceso." }),
+      ]),
+      el("button", { type: "button", class: "modal-close", onclick: cerrarModal }, ["✕"]),
+    ]),
+    el("div", { class: "modal-body stack" }, [
+      el("label", { class: "field", text: "Nueva contraseña" }, [nueva]),
+      el("label", { class: "field", text: "Repite la contraseña" }, [otra]),
+    ]),
+    el("div", { class: "modal-footer" }, [
+      el("button", { type: "button", class: "btn ghost", onclick: cerrarModal }, ["Cancelar"]),
+      el("button", {
+        type: "button",
+        class: "btn",
+        disabled: busy,
+        onclick: async () => {
+          const password = nueva.value.slice(0, 80);
+          if (password !== otra.value.slice(0, 80)) {
+            showError("Las contraseñas no coinciden.");
+            return;
+          }
+          if (busy) return;
+          busy = true;
+          render();
+          const resultado = await cambiarClave(password);
+          busy = false;
+          if (!resultado.ok) {
+            showError(resultado.error);
+            render();
+            return;
+          }
+          cerrarModal();
+          showError("Contraseña actualizada.", true);
+          render();
+        },
+      }, [busy ? "Guardando…" : "Guardar"]),
+    ]),
+  ]);
+}
+
 function modalNode() {
   let content = null;
   if (modalActivo === "tx-frecuentes") content = modalTxFrecuentes();
@@ -3604,6 +3749,7 @@ function modalNode() {
   else if (modalActivo === "calc-pediatrica") content = modalCalcPediatrica();
   else if (modalActivo === "packs-examenes") content = modalPacksExamenes();
   else if (modalActivo === "guardar-pack") content = modalGuardarPack();
+  else if (modalActivo === "cambiar-clave") content = modalCambiarClave();
 
   if (!content) return null;
   return el("div", {

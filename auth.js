@@ -25,6 +25,48 @@ export function emailDeUsuario(usuario) {
   return correosDeUsuario(usuario)[0] || "";
 }
 
+export function claveValida(password) {
+  const clave = String(password ?? "");
+  if (clave.length < 8) return "La contraseña debe tener al menos 8 caracteres.";
+  if (clave.length > 80) return "La contraseña es demasiado larga.";
+  return "";
+}
+
+async function postClave(password, { usuario = "", token = "" } = {}) {
+  const error = claveValida(password);
+  if (error) return { ok: false, error };
+  const headers = { "Content-Type": "application/json" };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  try {
+    const response = await fetch("/api/clave", {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ usuario, password }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) return { ok: false, error: data.error || "No se pudo guardar la contraseña." };
+    return { ok: true };
+  } catch {
+    return { ok: false, error: "No se pudo conectar. Revisa tu conexión." };
+  }
+}
+
+export async function definirClave(usuario, password) {
+  if (!String(usuario || "").trim()) return { ok: false, error: "Escribe el usuario." };
+  return postClave(password, { usuario });
+}
+
+export async function cambiarClave(password, usuario = "") {
+  let sesion;
+  try {
+    sesion = await tokenVigente();
+  } catch {
+    sesion = null;
+  }
+  if (!sesion?.accessToken) return { ok: false, error: "Inicia sesión de nuevo." };
+  return postClave(password, { usuario, token: sesion.accessToken });
+}
+
 export function mensajeDeAuth(detalle) {
   const texto = String(detalle || "").toLowerCase();
   if (/not confirmed|email_not_confirmed/.test(texto)) {
@@ -233,7 +275,8 @@ export async function actualizarAcceso(id, cambios) {
 export async function crearAcceso({ usuario, nombre, password, vence }) {
   const email = emailDeUsuario(usuario);
   if (!email) throw new Error("El usuario no es válido.");
-  if (!password || password.length < 6) throw new Error("La contraseña debe tener al menos 6 caracteres.");
+  const errorClave = claveValida(password);
+  if (errorClave) throw new Error(errorClave);
   const creado = await authFetch("/auth/v1/signup", { email, password });
   const userId = creado.user?.id || creado.id;
   if (!userId) throw new Error("No se pudo crear el usuario.");

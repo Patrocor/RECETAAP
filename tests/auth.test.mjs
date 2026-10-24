@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { accesoVigente, correosDeUsuario, emailDeUsuario, mensajeDeAuth } from "../auth.js";
+import { accesoVigente, claveValida, correosDeUsuario, emailDeUsuario, mensajeDeAuth } from "../auth.js";
 
 test("el usuario se convierte en el correo interno", () => {
   assert.equal(emailDeUsuario(" Ana "), "ana@recetapp.pe");
@@ -13,6 +13,11 @@ test("el usuario se convierte en el correo interno", () => {
     "ana.r@recetapp.pe",
   ]);
   assert.deepEqual(correosDeUsuario("ana"), ["ana@recetapp.pe"]);
+});
+
+test("la contraseña nueva pide 8 caracteres", () => {
+  assert.match(claveValida("1234567"), /8 caracteres/);
+  assert.equal(claveValida("recetapp1"), "");
 });
 
 test("el error de acceso no oculta un fallo de red", () => {
@@ -41,11 +46,14 @@ test("la página puede hablar con el acceso y no interpreta HTML", () => {
   assert.match(app, /\/api\/dni\?numero=/);
   assert.equal(app.includes("api.decolecta.com"), false);
   assert.equal(app.includes("cuentaGuardada"), false);
-  assert.match(app, /text: "Acceso"/);
+  assert.match(app, /resetear \? "Clave" : "Acceso"/);
   assert.match(app, /leerCamposLogin/);
   assert.match(app, /getElementById\("login-usuario"\)/);
   assert.match(app, /getElementById\("login-clave"\)/);
   assert.match(app, /type: "submit"/);
+  assert.match(app, /Nueva contraseña/);
+  assert.match(app, /definirClave/);
+  assert.match(app, /cambiarClave/);
   assert.match(page, /form-action 'self'/);
   assert.equal(auth.includes("innerHTML"), false);
   assert.equal(auth.includes("__ANON_KEY__"), false);
