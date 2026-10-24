@@ -19,6 +19,8 @@ test("la pantalla de inicio incluye continuidad clínica y dock inferior de cuen
   assert.match(app, /desk-rail-dock/);
   assert.match(app, /icono\("user"\)/);
   assert.match(app, /icono\("logout"\)/);
+  assert.match(app, /dock-label/);
+  assert.match(app, /text: "Clave"/);
 });
 
 test("el estilo de inicio equilibra la distribución y evita saltos huérfanos de texto", () => {
@@ -27,6 +29,11 @@ test("el estilo de inicio equilibra la distribución y evita saltos huérfanos d
   assert.match(css, /\.desk-rail-dock/);
   assert.match(css, /\.desk-main-actions/);
   assert.match(css, /\.desk-status-card/);
+  assert.match(css, /\.desk-rail-dock button \{[\s\S]*?flex-direction: column;/);
+  assert.match(css, /\.desk-rail-dock \.dock-label/);
+  const columnAt = css.search(/\.desk-rail-dock button \{[\s\S]*?flex-direction: column;/);
+  const desktopAt = css.lastIndexOf("flex-direction: row;");
+  assert.ok(columnAt >= 0 && desktopAt > columnAt, "el dock de escritorio debe ganar a la columna móvil");
 });
 
 test("las tarjetas de inicio usan colores de contraste explícitos y no heredan tinta de modo oscuro", () => {
