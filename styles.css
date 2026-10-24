@@ -3251,6 +3251,27 @@ input:focus, select:focus, textarea:focus {
 .field-group {
   margin-bottom: 12px;
 }
+.perfil-clave {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.perfil-clave .muted {
+  margin: 0 0 10px;
+  font-size: 12.5px;
+}
+.perfil-clave-btn {
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  justify-content: center;
+}
+.perfil-clave-btn .ico {
+  width: 18px;
+  height: 18px;
+}
 .field-label {
   font-size: 12px;
   font-weight: 650;

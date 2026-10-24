@@ -1485,10 +1485,6 @@ function viewInicio() {
       icono("shield"),
       el("span", { class: "dock-label", text: "Admin" }),
     ]) : null,
-    el("button", { type: "button", onclick: () => abrirModal("cambiar-clave") }, [
-      icono("key"),
-      el("span", { class: "dock-label", text: "Clave" }),
-    ]),
     el("button", { type: "button", onclick: salirDeLaApp }, [
       icono("logout"),
       el("span", { class: "dock-label", text: "Salir" }),
@@ -1627,6 +1623,15 @@ function viewPerfil() {
     field("Especialidad", "p-esp", perfil.especialidad, "text", "Medicina general", null, { autocomplete: "organization-title", name: "organization-title" }),
     field("Teléfono", "p-tel", perfil.telefono, "tel", "999000111", null, { autocomplete: "tel", name: "tel", inputmode: "tel" }),
     field("Correo", "p-mail", perfil.email, "email", "ana@ejemplo.pe", null, { autocomplete: "email", name: "email" }),
+    el("div", { class: "field-group perfil-clave" }, [
+      el("label", { class: "field-label", text: "Contraseña de acceso" }),
+      el("p", { class: "muted", text: "Cámbiala para el próximo ingreso." }),
+      el("button", {
+        type: "button",
+        class: "btn-subtle perfil-clave-btn",
+        onclick: () => abrirModal("cambiar-clave"),
+      }, [icono("key"), el("span", { text: "Cambiar contraseña" })]),
+    ]),
     el("div", { class: "field-group" }, [
       el("label", { class: "field-label", text: "Rúbrica de la firma y sello médico" }),
       fileInput,
