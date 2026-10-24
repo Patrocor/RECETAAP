@@ -25,9 +25,9 @@ test("la receta lleva marca de agua tenue en el centro de cada lado", () => {
   assert.match(app, /function dibujarMarcasAguaReceta\(/);
   assert.match(app, /dibujarMarcaAgua\(doc, x \+ 6/);
   assert.match(app, /dibujarMarcaAgua\(doc, x \+ 111/);
-  assert.match(app, /opacity: 0\.16/);
-  assert.match(app, /tinta: \[86, 108, 126\]/);
-  assert.match(app, /oro: \[204, 184, 140\]/);
+  assert.match(app, /opacity: 0\.09/);
+  assert.match(app, /tinta: \[118, 130, 140\]/);
+  assert.match(app, /oro: \[176, 168, 152\]/);
   assert.match(app, /const SELLO_LR_ANCHO = 15\.2/);
   assert.match(app, /medidaSelloLR\(1\.25\)/);
   assert.match(app, /dibujarLogoDerecha\(doc, logoX, top \+ \(headerH - logoH\) \/ 2, tinta, logoW, logoH\)/);
@@ -56,7 +56,7 @@ test("CSP y cache permiten blob de previa y pdf.js", () => {
   assert.match(html, /frame-src 'self' blob:/);
   assert.match(html, /object-src 'self' blob:/);
   assert.match(html, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
-  assert.match(sw, /recetapp-v16/);
+  assert.match(sw, /recetapp-v17/);
   assert.match(sw, /pdf\.js\/3\.11\.174\/pdf\.min\.js/);
   assert.match(css, /\.preview-pdf-sheet/);
   assert.match(css, /\.preview-pdf-stage/);

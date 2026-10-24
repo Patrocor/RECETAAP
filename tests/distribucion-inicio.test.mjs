@@ -43,6 +43,14 @@ test("el estilo de inicio equilibra la distribución y evita saltos huérfanos d
   assert.ok(columnAt >= 0 && desktopAt > columnAt, "el dock de escritorio debe ganar a la columna móvil");
 });
 
+test("los fondos de acceso e inicio usan un navy más tenue", () => {
+  assert.match(css, /--hero: #243848;/);
+  assert.match(css, /--hero-deep: #1a2833;/);
+  assert.match(css, /--hero-glow: rgba\(215, 228, 240, 0\.16\)/);
+  assert.match(css, /\.desk-home \.desk-hero \{[\s\S]*?var\(--hero\)/);
+  assert.match(css, /\.desk-lock \.desk-hero::before \{[\s\S]*?var\(--hero\)/);
+});
+
 test("las tarjetas de inicio usan colores de contraste explícitos y no heredan tinta de modo oscuro", () => {
   assert.match(css, /\.desk-action-card \{[\s\S]*?color: #0b1f33;/);
   assert.match(css, /\.desk-action-desc \{[\s\S]*?color: #1f3346;/);
